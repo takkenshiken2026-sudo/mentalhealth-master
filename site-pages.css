@@ -591,7 +591,7 @@ body:has(.terms-idx-main) {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 8px 14px;
 }
-.q-year-section .q-year-list a {
+.q-year-section .q-year-list > li > a {
   display: block;
   padding: 8px 12px;
   background: #fff;
@@ -603,7 +603,7 @@ body:has(.terms-idx-main) {
   color: var(--ink);
   box-shadow: var(--sh);
 }
-.q-year-section .q-year-list a:hover {
+.q-year-section .q-year-list > li > a:hover {
   border-color: var(--border2);
   background: var(--bg2);
 }
@@ -660,6 +660,12 @@ body:has(.terms-idx-main) {
   border-radius: 999px;
   font-size: var(--fs-small);
   color: var(--ink);
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.q-index-chip:hover {
+  background: var(--bg3);
+  border-color: var(--border2);
 }
 .q-index-chip b {
   font-weight: 700;
@@ -721,7 +727,7 @@ body:has(.terms-idx-main) {
   color: var(--text2);
   line-height: 1.45;
 }
-.q-year-section .q-year-list a {
+.q-year-section .q-year-list > li > a {
   min-height: 56px;
 }
 
@@ -748,42 +754,208 @@ body:has(.q-index-main) {
   flex-direction: column;
   gap: 0;
 }
-.q-index-main .q-index-years .q-year-section .q-year-list li {
+.q-index-main .hide,
+.q-index-main .q-year-section.hide {
+  display: none !important;
+}
+.q-index-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  padding: 14px 16px 12px;
+  margin-bottom: 20px;
+}
+.q-index-toolbar-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.q-index-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--fs-small);
+  color: var(--text2);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 10px;
+}
+.q-index-pill--hit {
+  color: var(--ink);
+  font-weight: 600;
+}
+.q-index-search input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: var(--r2);
+  border: 1.5px solid var(--border2);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+}
+.q-index-search input:focus {
+  border-color: rgba(0, 0, 0, 0.35);
+}
+.q-index-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+.q-index-filter-chip {
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid var(--border2);
+  background: var(--bg);
+  color: var(--text2);
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  line-height: 1.3;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.q-index-filter-chip:hover {
+  background: var(--bg2);
+  color: var(--text);
+}
+.q-index-filter-chip.on {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+.q-index-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+.q-index-jump-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text2);
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: var(--r);
+}
+.q-index-jump-link:hover {
+  color: var(--ink);
+  background: var(--bg2);
+}
+.q-index-empty {
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  border-radius: var(--r);
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  font-size: var(--fs-sub);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.q-index-main .q-index-years .q-year-section .q-year-list li.q-year-list-item {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
   min-width: 0;
   border-bottom: 1px solid var(--border);
 }
-.q-index-main .q-index-years .q-year-section .q-year-list li:last-child {
+.q-index-main .q-index-years .q-year-section .q-year-list li.q-year-list-item:last-child {
   border-bottom: none;
 }
-.q-index-main .q-index-years .q-year-section .q-year-list a {
-  display: block;
+.q-index-main .q-index-years .q-year-section .q-year-list li.q-year-list-item:hover {
+  background: var(--bg2);
+}
+.q-index-main .q-index-years .q-year-section .q-year-list > li > a.q-year-list-link {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   padding: 12px 14px;
   min-height: auto;
+  min-width: 0;
   border: none;
   border-radius: 0;
   box-shadow: none;
   background: transparent;
+  text-decoration: none;
+  color: inherit;
 }
-.q-index-main .q-index-years .q-year-section .q-year-list a:hover {
-  background: var(--bg2);
-  border-color: transparent;
+.q-index-main .q-index-years .q-year-section .q-year-list > li > a.q-year-list-link:hover {
+  background: transparent;
+}
+.q-index-main .q-year-list-no {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3.4em;
+  margin-bottom: 0;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--bg3);
+  font-size: 12px;
+  line-height: 1.3;
 }
 .q-index-main .q-year-list-cat {
+  flex: 1 1 auto;
+  display: block;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
-.q-index-main .q-year-list-app {
-  display: block;
-  padding: 0 14px 10px;
-  margin-top: -4px;
+.q-index-main .q-year-list-app-btn {
+  flex: 0 0 auto;
+  align-self: center;
+  margin: 8px 12px 8px 0;
+  padding: 7px 12px;
+  border: 1px solid var(--border2);
+  border-radius: var(--r);
+  background: #fff;
   font-size: 12px;
-  font-weight: 500;
-  color: var(--text2);
-}
-.q-index-main .q-year-list-app a {
-  text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s;
+}
+.q-index-main .q-year-list-app-btn:hover {
+  background: var(--bg3);
+  border-color: var(--ink);
+}
+.q-index-year-count {
+  font-size: var(--fs-caption);
+  color: var(--text3);
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .q-index-main .q-index-years .q-year-section .q-year-list > li > a.q-year-list-link {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .q-index-main .q-year-list-app-btn {
+    margin: 0 12px 10px;
+    align-self: flex-start;
+  }
 }
 
 .glos-static-intro {

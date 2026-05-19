@@ -107,6 +107,24 @@ def ensure_sitemap_entry(url: str) -> None:
     SITEMAP.write_text(text.replace("</urlset>", block + "</urlset>"), encoding="utf-8")
 
 
+def list_item_html(q: dict, fid: str) -> str:
+    num = int(q.get("num") or 0)
+    preview = stem_preview(q.get("text", ""))
+    static_href = f"y2026/q{num:02d}/index.html"
+    search_blob = html.escape(f"第{num}問 {preview}", quote=True)
+    return (
+        f'<li class="q-year-list-item" data-field="{html.escape(fid)}" '
+        f'data-num="{num}" data-search="{search_blob}">'
+        f'<a class="q-year-list-link" href="{html.escape(static_href)}">'
+        f'<span class="q-year-list-no">第{num}問</span>'
+        f'<span class="q-year-list-cat">{html.escape(preview)}</span>'
+        f"</a>"
+        f'<a class="q-year-list-app-btn" href="../index.html" '
+        f'aria-label="第{num}問をアプリで演習">アプリ</a>'
+        f"</li>"
+    )
+
+
 def build_html(questions: list[dict], base_url: str) -> str:
     by_field: dict[str, list[dict]] = {}
     for q in questions:
@@ -118,34 +136,18 @@ def build_html(questions: list[dict], base_url: str) -> str:
     known_ids = {f["id"] for f in fields()}
     field_order = [f["id"] for f in fields()] + sorted(k for k in by_field if k not in known_ids)
 
-    category_counts: dict[str, int] = {}
-    for fid, items in by_field.items():
-        category_counts[field_label(fid)] = len(items)
-
     sections: list[str] = []
     for fid in field_order:
         items = by_field.get(fid)
         if not items:
             continue
-        links = []
-        for q in items:
-            num = int(q.get("num") or 0)
-            preview = stem_preview(q.get("text", ""))
-            static_href = f"y2026/q{num:02d}/index.html"
-            links.append(
-                "<li>"
-                f'<a href="{html.escape(static_href)}">'
-                f'<span class="q-year-list-no">第{num}問</span>'
-                f'<span class="q-year-list-cat">{html.escape(preview)}</span>'
-                "</a>"
-                f' <span class="q-year-list-app">(<a href="../index.html">アプリ</a>)</span>'
-                "</li>"
-            )
+        links = [list_item_html(q, fid) for q in items]
         sections.append(
-            f'<section class="q-index-year-card q-year-section">'
+            f'<section id="q-index-field-{html.escape(fid)}" '
+            f'class="q-index-year-card q-year-section" data-field="{html.escape(fid)}">'
             '<div class="q-index-year-head">'
             f"<h2>{html.escape(field_label(fid))}</h2>"
-            f"<span>{len(items)}問</span>"
+            f'<span class="q-index-year-count">{len(items)}問</span>'
             f"</div>"
             f'<ol class="q-year-list">{"".join(links)}</ol>'
             f"</section>"
@@ -153,10 +155,32 @@ def build_html(questions: list[dict], base_url: str) -> str:
 
     sections_html = "".join(sections)
 
-    chips = "".join(
-        f'<span class="q-index-chip">{html.escape(cat)}<b>{count}</b></span>'
-        for cat, count in sorted(category_counts.items())
-    )
+    chips: list[str] = []
+    filter_chips: list[str] = [
+        '<button type="button" class="q-index-filter-chip on" data-field="all">すべて</button>'
+    ]
+    jump_links: list[str] = []
+    for f in fields():
+        fid = str(f["id"])
+        name = str(f.get("name") or fid)
+        count = len(by_field.get(fid, []))
+        if not count:
+            continue
+        chips.append(
+            f'<a class="q-index-chip" href="#q-index-field-{html.escape(fid)}">'
+            f"{html.escape(name)}<b>{count}</b></a>"
+        )
+        filter_chips.append(
+            f'<button type="button" class="q-index-filter-chip" data-field="{html.escape(fid)}">'
+            f"{html.escape(name)}</button>"
+        )
+        jump_links.append(
+            f'<a class="q-index-jump-link" href="#q-index-field-{html.escape(fid)}">'
+            f"{html.escape(name)}</a>"
+        )
+    chips_html = "".join(chips)
+    filter_chips_html = "".join(filter_chips)
+    jump_links_html = "".join(jump_links)
 
     rel_path = Path("q/index.html")
     total = len(questions)
@@ -179,7 +203,7 @@ def build_html(questions: list[dict], base_url: str) -> str:
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:url" content="{html.escape(public_url(base_url, "q/index.html"))}">
 {HEAD_FONTS}
-<link rel="stylesheet" href="../site-pages.css?v=20260519-q-index">
+<link rel="stylesheet" href="../site-pages.css?v=20260520-q-index-ux">
 <link rel="stylesheet" href="../site-theme.css">
 </head>
 <body>
@@ -190,20 +214,92 @@ def build_html(questions: list[dict], base_url: str) -> str:
   <section class="q-index-hero">
     <p class="q-index-kicker">Past Questions</p>
     <h1 class="q-h1">過去問・演習問題一覧</h1>
-    <p class="q-index-lead">{html.escape(exam_name())}向けの演習問題を分野別に整理しています。各問の<strong>静的解説ページ</strong>（設問・解説）と<strong><a href="../index.html">学習アプリ</a></strong>（記録・絞り込み）の両方を利用できます。</p>
+    <p class="q-index-lead">{html.escape(exam_name())}向けの演習問題を分野別に整理しています。<strong>設問文をクリック</strong>で静的解説へ、<strong><a href="../index.html">アプリ</a></strong>で演習・記録ができます。</p>
     <div class="q-index-stats" aria-label="収録状況">
       <span><b>{total}</b>問</span>
       <span><b>{len(by_field)}</b>分野</span>
     </div>
-    <div class="q-index-chips" aria-label="分野別件数">{chips}</div>
+    <div class="q-index-chips" aria-label="分野へジャンプ">{chips_html}</div>
     <p class="q-index-hero-action"><a href="../index.html">アプリで演習を始める</a></p>
   </section>
+  <div class="q-index-toolbar" role="search" aria-label="問題の検索と絞り込み">
+    <div class="q-index-toolbar-meta">
+      <span class="q-index-pill">全 <span id="q-index-total">{total}</span> 問</span>
+      <span class="q-index-pill q-index-pill--hit" id="q-index-hit" hidden></span>
+    </div>
+    <div class="q-index-search">
+      <label class="visually-hidden" for="q-index-q">問題を検索</label>
+      <input id="q-index-q" type="search" inputmode="search" autocomplete="off" placeholder="キーワード・問題番号（例：ストレスチェック、42、第42問）">
+    </div>
+    <div class="q-index-filter" aria-label="分野で絞り込み">{filter_chips_html}</div>
+    <nav class="q-index-jump" aria-label="分野へジャンプ">{jump_links_html}</nav>
+  </div>
+  <p id="q-index-empty" class="q-index-empty hide" role="status">該当する問題がありません。検索語や分野フィルタを変えてください。</p>
   <section class="q-index-years" aria-label="分野別の問題一覧">
     {sections_html}
   </section>
 </main>
 {site_page_footer(rel_path, current="q", wide=True)}
 {site_page_wrap_close()}
+<script>
+(() => {{
+  const q = document.getElementById('q-index-q');
+  const hitEl = document.getElementById('q-index-hit');
+  const emptyEl = document.getElementById('q-index-empty');
+  const filterBtns = Array.from(document.querySelectorAll('.q-index-filter-chip[data-field]'));
+  const sections = Array.from(document.querySelectorAll('.q-year-section[data-field]'));
+  let activeField = 'all';
+  function norm(s) {{
+    return (s || '').toString().trim().toLowerCase();
+  }}
+  function matchItem(li, query) {{
+    if (!query) return true;
+    const search = norm(li.dataset.search);
+    const num = String(li.dataset.num || '');
+    if (search.includes(query)) return true;
+    if (query === num || query === `第${{num}}問` || query === `第${{num}}`) return true;
+    const digits = query.replace(/\\D/g, '');
+    return Boolean(digits && num === digits);
+  }}
+  function apply() {{
+    const query = norm(q?.value);
+    let shown = 0;
+    sections.forEach((sec) => {{
+      const fid = sec.dataset.field || '';
+      const fieldOk = activeField === 'all' || fid === activeField;
+      const items = Array.from(sec.querySelectorAll('.q-year-list-item'));
+      let anyInSec = 0;
+      items.forEach((li) => {{
+        const ok = fieldOk && matchItem(li, query);
+        li.classList.toggle('hide', !ok);
+        if (ok) {{
+          anyInSec++;
+          shown++;
+        }}
+      }});
+      sec.classList.toggle('hide', !anyInSec);
+    }});
+    if (hitEl) {{
+      const filtering = Boolean(query) || activeField !== 'all';
+      hitEl.hidden = !filtering;
+      hitEl.textContent = filtering ? `表示：${{shown}}件` : '';
+    }}
+    if (emptyEl) {{
+      emptyEl.classList.toggle('hide', shown > 0);
+    }}
+  }}
+  q?.addEventListener('input', apply);
+  filterBtns.forEach((btn) => {{
+    btn.addEventListener('click', () => {{
+      filterBtns.forEach((b) => b.classList.remove('on'));
+      btn.classList.add('on');
+      activeField = btn.dataset.field || 'all';
+      apply();
+    }});
+  }});
+  apply();
+}})();
+</script>
 </body>
 </html>
 """
