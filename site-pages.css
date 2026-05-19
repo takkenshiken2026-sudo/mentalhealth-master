@@ -1154,7 +1154,7 @@ a:hover {
 }
 .site-page-breadcrumb .q-breadcrumb a,
 .site-page-header-crumb .q-breadcrumb a {
-  color: var(--text2);
+  color: var(--ink);
   text-decoration: none;
 }
 .site-page-breadcrumb .q-breadcrumb a:hover,
@@ -1232,7 +1232,7 @@ a:hover {
   display: none;
 }
 .site-page-nav a {
-  color: var(--text2);
+  color: var(--ink);
   text-decoration: none;
 }
 .site-page-nav a:hover {
@@ -1260,9 +1260,10 @@ a:hover {
 }
 .site-page-lead {
   font-size: 15px;
-  color: var(--text2);
+  font-weight: 500;
+  color: var(--text);
   margin-bottom: 28px;
-  line-height: 1.65;
+  line-height: 1.75;
 }
 .site-page-section {
   background: var(--bg);
@@ -1282,8 +1283,9 @@ a:hover {
 }
 .site-page-section p {
   margin-bottom: 12px;
-  color: var(--text2);
+  color: var(--text);
   font-size: 15px;
+  line-height: 1.75;
 }
 .site-page-section p:last-child {
   margin-bottom: 0;
@@ -1291,8 +1293,9 @@ a:hover {
 .site-page-section ul,
 .site-page-section ol {
   margin: 0 0 12px 1.1em;
-  color: var(--text2);
+  color: var(--text);
   font-size: 15px;
+  line-height: 1.75;
 }
 .site-page-section li {
   margin-bottom: 6px;
@@ -1302,11 +1305,12 @@ a:hover {
 }
 .site-page-note {
   font-size: 13px;
-  color: var(--text3);
+  color: var(--text2);
   background: var(--bg2);
   border-radius: var(--r);
   padding: 12px 14px;
   margin-top: 8px;
+  line-height: 1.7;
 }
 .article-card-grid {
   display: grid;
@@ -1661,23 +1665,23 @@ a:hover {
 }
 .site-page-footer-links a {
   white-space: nowrap;
-  color: var(--text3);
-  font-weight: 600;
+  color: var(--ink);
+  font-weight: 700;
   text-decoration: none;
 }
 .site-page-footer-links a:hover {
-  color: var(--text2);
+  color: var(--text);
   text-decoration: underline;
 }
 .site-page-footer-links a[aria-current="page"] {
-  color: var(--text2);
+  color: var(--text);
   text-decoration: none;
   cursor: default;
 }
 .site-page-footer-copy {
   flex: 0 0 auto;
   font-size: 12px;
-  color: var(--text3);
+  color: var(--text2);
   white-space: nowrap;
 }
 .site-page-footer-sep {
