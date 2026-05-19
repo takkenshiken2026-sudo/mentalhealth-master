@@ -46,7 +46,10 @@ def footer_href(rel_path: Path, site_rel: str) -> str:
     if parent.as_posix() == "q" and site_rel == "q/index.html":
         return "index.html"
     if site_rel == "terms/index.html" and parts and parts[0] == "terms":
-        return "index.html"
+        if len(parts) == 1:
+            return "index.html"
+        prefix = "/".join([".."] * (len(parts) - 1))
+        return f"{prefix}/index.html"
     if len(parts) >= 3 and parts[0] == "q" and parts[1] == "past" and site_rel == "q/index.html":
         prefix = "/".join([".."] * (len(parts) - 1))
         return prefix + "/index.html"

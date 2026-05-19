@@ -26,6 +26,7 @@ if str(ROOT) not in sys.path:
 from tools.html_footer import (
     ROBOTS_INDEX_FOLLOW,
     breadcrumb_html,
+    footer_href,
     site_page_footer,
     site_page_header,
     site_page_wrap_close,
@@ -155,6 +156,18 @@ def rel_to_root(rel_file: Path) -> str:
     return "/".join([".."] * depth) + "/index.html"
 
 
+def peer_href(rel_path: Path, target_href_rel: str) -> str:
+    """terms/ 配下のページ同士。target_href_rel は terms/ からの相対（例 stress/index.html）。"""
+    parent = rel_path.parent
+    parts = parent.parts
+    if not parts or parts[0] != "terms":
+        return target_href_rel
+    if len(parts) == 1:
+        return target_href_rel
+    prefix = "/".join([".."] * (len(parts) - 1))
+    return f"{prefix}/{target_href_rel}"
+
+
 def rel_css(rel_file: Path) -> str:
     depth = len(rel_file.parent.parts)
     return "/".join([".."] * depth) + "/site-pages.css?v=20260515-topgray"
@@ -253,11 +266,12 @@ def make_term_lookup(entries: list[dict]) -> dict[str, str]:
     return lookup
 
 
-def related_terms_html(related: str, term_lookup: dict[str, str]) -> str:
+def related_terms_html(related: str, term_lookup: dict[str, str], rel_path: Path) -> str:
     items: list[str] = []
     for label in split_semicolon(related):
         href = term_lookup.get(label) or term_lookup.get(lookup_key(label))
         if href:
+            href = peer_href(rel_path, href)
             items.append(f'<a class="related-link" href="{html.escape(href)}">{html.escape(label)}</a>')
         else:
             items.append(f'<span class="related-link related-link-static">{html.escape(label)}</span>')
@@ -370,7 +384,7 @@ def build_term_html(entry: dict, rel_path: Path, base_url: str, term_lookup: dic
     theme_href = rel_theme_css(rel_path)
 
     tags_list = split_semicolon(tags)
-    rel_html = related_terms_html(related, term_lookup)
+    rel_html = related_terms_html(related, term_lookup, rel_path)
 
     def text_paragraphs(body: str) -> str:
         if not body.strip():
@@ -559,7 +573,7 @@ def build_term_html(entry: dict, rel_path: Path, base_url: str, term_lookup: dic
     next_links = (
         '<div class="related-box" aria-labelledby="term-next-title"><div id="term-next-title" class="related-box-title">次に確認するページ</div>'
         '<div class="related-links">'
-        '<a class="related-link" href="index.html">用語解説一覧へ戻る</a>'
+        f'<a class="related-link" href="{html.escape(footer_href(rel_path, "terms/index.html"))}">用語解説一覧へ戻る</a>'
         f'<a class="related-link" href="{html.escape(root_idx)}#glossary">アプリ内の用語解説を開く</a>'
         f'<a class="related-link" href="{html.escape(root_idx)}#past">過去問演習で確認する</a>'
         "</div></div>"
