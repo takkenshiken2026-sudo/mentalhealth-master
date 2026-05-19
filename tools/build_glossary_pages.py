@@ -170,7 +170,7 @@ def peer_href(rel_path: Path, target_href_rel: str) -> str:
 
 def rel_css(rel_file: Path) -> str:
     depth = len(rel_file.parent.parts)
-    return "/".join([".."] * depth) + "/site-pages.css?v=20260519-terms-list"
+    return "/".join([".."] * depth) + "/site-pages.css?v=20260519-terms-2col"
 
 
 def rel_theme_css(rel_file: Path) -> str:
@@ -828,7 +828,7 @@ def build_terms_index(entries: list[dict], base_url: str) -> str:
 {ld_json}
 </script>
 {HEAD_FONTS}
-<link rel="stylesheet" href="../site-pages.css?v=20260519-terms-list">
+<link rel="stylesheet" href="../site-pages.css?v=20260519-terms-2col">
 <link rel="stylesheet" href="../site-theme.css">
 </head>
 <body>

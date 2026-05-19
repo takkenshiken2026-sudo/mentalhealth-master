@@ -143,7 +143,7 @@ def build_html(questions: list[dict], base_url: str) -> str:
             )
         sections.append(
             f'<section class="q-index-year-card q-year-section">'
-            f'<motion.div class="q-index-year-head">'
+            '<div class="q-index-year-head">'
             f"<h2>{html.escape(field_label(fid))}</h2>"
             f"<span>{len(items)}問</span>"
             f"</div>"
@@ -151,13 +151,7 @@ def build_html(questions: list[dict], base_url: str) -> str:
             f"</section>"
         )
 
-    # fix accidental motion tag
-    sections_html = (
-        "".join(sections)
-        .replace("<motion.div class=", "<motion.div class=")
-        .replace("<motion.div", "<div")
-        .replace("</motion.div>", "</div>")
-    )
+    sections_html = "".join(sections)
 
     chips = "".join(
         f'<span class="q-index-chip">{html.escape(cat)}<b>{count}</b></span>'
@@ -185,13 +179,13 @@ def build_html(questions: list[dict], base_url: str) -> str:
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:url" content="{html.escape(public_url(base_url, "q/index.html"))}">
 {HEAD_FONTS}
-<link rel="stylesheet" href="../site-pages.css">
+<link rel="stylesheet" href="../site-pages.css?v=20260519-q-index">
 <link rel="stylesheet" href="../site-theme.css">
 </head>
 <body>
 {site_page_wrap_open()}
-{site_page_header(rel_path, current="q")}
-<main class="q-static-main">
+{site_page_header(rel_path, current="q", wide=True)}
+<main class="q-static-main q-index-main">
   {breadcrumb_html(rel_path, [("トップ", "index.html"), ("過去問一覧", None)])}
   <section class="q-index-hero">
     <p class="q-index-kicker">Past Questions</p>
@@ -208,7 +202,7 @@ def build_html(questions: list[dict], base_url: str) -> str:
     {sections_html}
   </section>
 </main>
-{site_page_footer(rel_path, current="q")}
+{site_page_footer(rel_path, current="q", wide=True)}
 {site_page_wrap_close()}
 </body>
 </html>

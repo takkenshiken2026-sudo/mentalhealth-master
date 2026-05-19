@@ -114,6 +114,12 @@ a:hover {
   padding: 24px 20px 40px;
 }
 /* 用語索引（terms/index.html） */
+.site-page-wrap:has(.terms-idx-main) {
+  background: #fff;
+}
+body:has(.terms-idx-main) {
+  background: #fff;
+}
 .site-page-main.terms-idx-main {
   max-width: 840px;
   padding-top: 30px;
@@ -240,13 +246,14 @@ a:hover {
   list-style: none;
   margin: 0 0 12px;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 28px;
+  row-gap: 0;
 }
 .terms-idx-list li {
   margin: 0;
   border-bottom: 1px solid var(--border);
-}
-.terms-idx-list li:last-child {
-  border-bottom: none;
 }
 .terms-idx-list a {
   display: block;
@@ -255,7 +262,7 @@ a:hover {
   background: none;
   border: none;
   border-radius: 0;
-  padding: 10px 2px;
+  padding: 10px 4px;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.55;
@@ -282,6 +289,12 @@ a:hover {
 @media (max-width: 760px) {
   .terms-idx-search {
     min-width: 100%;
+  }
+}
+@media (max-width: 560px) {
+  .terms-idx-list {
+    grid-template-columns: 1fr;
+    column-gap: 0;
   }
 }
 .q-meta {
@@ -711,6 +724,68 @@ a:hover {
 .q-year-section .q-year-list a {
   min-height: 56px;
 }
+
+/* 過去問一覧（q/index.html） */
+.site-page-wrap:has(.q-index-main) {
+  background: #fff;
+}
+body:has(.q-index-main) {
+  background: #fff;
+}
+.q-static-main.q-index-main {
+  width: 100%;
+  max-width: var(--site-content-max);
+  flex: 1;
+}
+.q-static-main.q-index-main .site-page-header-crumb {
+  max-width: none;
+  width: auto;
+  margin: 0 0 16px;
+  padding: 0;
+}
+.q-index-main .q-index-years .q-year-section .q-year-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.q-index-main .q-index-years .q-year-section .q-year-list li {
+  min-width: 0;
+  border-bottom: 1px solid var(--border);
+}
+.q-index-main .q-index-years .q-year-section .q-year-list li:last-child {
+  border-bottom: none;
+}
+.q-index-main .q-index-years .q-year-section .q-year-list a {
+  display: block;
+  padding: 12px 14px;
+  min-height: auto;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+}
+.q-index-main .q-index-years .q-year-section .q-year-list a:hover {
+  background: var(--bg2);
+  border-color: transparent;
+}
+.q-index-main .q-year-list-cat {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.q-index-main .q-year-list-app {
+  display: block;
+  padding: 0 14px 10px;
+  margin-top: -4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text2);
+}
+.q-index-main .q-year-list-app a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--ink);
+}
+
 .glos-static-intro {
   font-size: var(--fs-sub);
   line-height: 1.65;
