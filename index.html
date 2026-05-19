@@ -255,10 +255,11 @@ body{font-family:var(--font);font-size:var(--fs-body);background:#f0f0f1;color:v
 .sidebar-overlay{display:none!important}
 .main{min-height:calc(100vh - 54px);padding-bottom:68px}
 .topbar{display:none!important}
-.page{display:none;padding:28px 20px;max-width:960px;margin:0 auto}
+.page{display:none!important;padding:28px 20px;max-width:960px;margin:0 auto}
 .page#page-quiz-start{max-width:1080px}
 .page.active{background:#ffffff;min-height:calc(100vh - 54px - 40px);border-left:1px solid var(--border);border-right:1px solid var(--border)}
-.page.active{display:block}
+.page.active{display:block!important}
+#page-quiz-start.page.active{min-height:0}
 h1,h2{font-weight:inherit;font-size:inherit;margin:0;padding:0}
 .page-title{font-size:var(--fs-title);font-weight:var(--fw-strong);margin-bottom:6px;letter-spacing:0;font-family:var(--font);line-height:1.3}
 .page-sub{font-size:var(--fs-sub);color:var(--text2);margin-bottom:22px;line-height:1.65}
@@ -809,6 +810,27 @@ details.rich-detail summary{display:none}
 .glos-diagram-badge{font-size:var(--fs-caption);background:var(--bg3);color:var(--text3);padding:2px 7px;border-radius:4px;border:1px solid var(--border);margin-top:6px;display:inline-block}
 .glos-static-intro{font-size:var(--fs-sub);line-height:1.65;color:var(--text2);margin-bottom:14px;padding:12px 14px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--border)}
 .glos-static-intro a{color:var(--sel);font-weight:600;text-decoration:underline}
+.glos-static-section{display:none}
+#page-glossary.active .glos-static-section{display:block}
+
+/* ===== SEO SITE LINKS（HTMLソース用・画面には非表示） ===== */
+.seo-site-links{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+.seo-site-links-title,
+.seo-site-links-list{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
 
 /* ===== GLOSSARY ===== */
 .glossary-toolbar{margin-bottom:18px}
@@ -872,6 +894,7 @@ a.glos-article-link:hover{color:var(--text);text-decoration-color:var(--ink)}
   .main{min-height:calc(100vh - 52px);padding-bottom:0}
   .page{padding:14px 14px calc(96px + env(safe-area-inset-bottom))}
   .page.active{min-height:calc(100vh - 52px)}
+  #page-quiz-start.page.active{min-height:0}
   .page-title{font-size:var(--fs-title);font-weight:var(--fw-strong)}
   .page-sub{font-size:var(--fs-sub);line-height:1.6;margin-bottom:18px}
   .section-label,h2.section-label{font-size:13px;letter-spacing:.04em}
@@ -1459,6 +1482,7 @@ body.is-solving .site-footer{display:none!important}
       </div>
 
       <div id="daily-status-wrap"></div>
+
     </div>
 
     <!-- 一問一答 -->
@@ -1751,22 +1775,6 @@ body.is-solving .site-footer{display:none!important}
 </div>
     </div>
 
-    <!-- クローラ・静的解析向けの常時表示リンク（SPA 内でも HTML として存在） -->
-    <nav class="seo-site-links" aria-label="サイト内主要コンテンツ">
-      <h2 class="seo-site-links-title">学習コンテンツ一覧</h2>
-      <ul class="seo-site-links-list">
-        <li><a href="articles/index.html">試験ガイド（概要・日程・学習法）</a></li>
-        <li><a href="articles/chapters/index.html">出題範囲7章ハブ</a></li>
-        <li><a href="terms/index.html">用語解説一覧（289語）</a></li>
-        <li><a href="q/index.html">演習問題・過去問一覧</a></li>
-        <li><a href="articles/pass-rate/index.html">合格率・難易度の見方</a></li>
-        <li><a href="articles/eligibility/index.html">受験資格と申込前チェック</a></li>
-        <li><a href="articles/past-questions-study/index.html">過去問・演習の使い方</a></li>
-        <li><a href="articles/exam-last-minute/index.html">直前対策チェックリスト</a></li>
-        <li><a href="about.html">このサイトについて</a></li>
-      </ul>
-    </nav>
-
     <!-- JS無効時のフォールバック (SEOクローラー向け静的コンテンツ) -->
     <noscript>
       <div style="max-width:860px;margin:40px auto;padding:0 20px;font-family:sans-serif;line-height:1.8">
@@ -1789,6 +1797,22 @@ body.is-solving .site-footer{display:none!important}
     </noscript>
 
   </main>
+
+  <!-- 検索エンジン向けリンク（HTMLに残す・画面には非表示） -->
+  <nav class="seo-site-links" aria-label="サイト内主要コンテンツ">
+    <h2 class="seo-site-links-title">学習コンテンツ一覧</h2>
+    <ul class="seo-site-links-list">
+      <li><a href="articles/index.html">試験ガイド（概要・日程・学習法）</a></li>
+      <li><a href="articles/chapters/index.html">出題範囲7章ハブ</a></li>
+      <li><a href="terms/index.html">用語解説一覧（289語）</a></li>
+      <li><a href="q/index.html">演習問題・過去問一覧</a></li>
+      <li><a href="articles/pass-rate/index.html">合格率・難易度の見方</a></li>
+      <li><a href="articles/eligibility/index.html">受験資格と申込前チェック</a></li>
+      <li><a href="articles/past-questions-study/index.html">過去問・演習の使い方</a></li>
+      <li><a href="articles/exam-last-minute/index.html">直前対策チェックリスト</a></li>
+      <li><a href="about.html">このサイトについて</a></li>
+    </ul>
+  </nav>
 
   <!-- FOOTER（main 外・1行。狭い幅は .site-footer-scroll で横スクロール） -->
   <footer class="site-footer" role="contentinfo">

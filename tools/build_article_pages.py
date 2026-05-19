@@ -64,7 +64,10 @@ def rel_prefix(rel_path: Path) -> str:
 
 
 def css_href(rel_path: Path, filename: str) -> str:
-    return rel_prefix(rel_path) + filename
+    base = rel_prefix(rel_path) + filename
+    if filename == "site-pages.css":
+        return base + "?v=20260519-articles"
+    return base
 
 
 def meta_description(text: str, limit: int = 155) -> str:
@@ -504,8 +507,8 @@ def build_index_html(articles: list[dict[str, str]]) -> str:
 </head>
 <body>
 {site_page_wrap_open()}
-{site_page_header(rel_path, current="articles")}
-<main class="site-page-main">
+{site_page_header(rel_path, current="articles", wide=True)}
+<main class="site-page-main article-index-main">
   {breadcrumb_html(rel_path, [("トップ", "index.html"), ("試験ガイド", None)])}
   <h1>試験ガイド</h1>
   <p class="site-page-lead">{html.escape(exam_name())}の概要、試験対策、過去問活用、用語整理などの記事をまとめています。記事数が増えても、検索とジャンル絞り込みで目的の記事を探せます。</p>
@@ -534,10 +537,6 @@ def build_index_html(articles: list[dict[str, str]]) -> str:
       {"".join(article_cards)}
     </div>
     <p id="article-index-empty" class="article-index-empty hide">条件に合う記事がありません。検索語を短くするか、ジャンルを「すべて」に戻してください。</p>
-  </section>
-  <section class="site-page-section" aria-labelledby="sec-template-note">
-    <h2 id="sec-template-note">共通テンプレの増やし方</h2>
-    <p>試験概要、受験資格、日程・申込、合格率・難易度、出題範囲、独学対策、過去問活用、直前対策、当日の持ち物、合格後の手続きなどをジャンルとして追加できます。</p>
   </section>
 </main>
 {site_page_footer(rel_path, current="articles")}
