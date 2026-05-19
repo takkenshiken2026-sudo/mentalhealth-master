@@ -113,9 +113,9 @@ a:hover {
   margin: 0 auto;
   padding: 24px 20px 40px;
 }
-/* 用語索引（terms/index.html）— 二衛マスター /terms と同型のレイアウト */
+/* 用語索引（terms/index.html） */
 .site-page-main.terms-idx-main {
-  max-width: 860px;
+  max-width: 840px;
   padding-top: 30px;
 }
 .term-page-crumb {
@@ -133,7 +133,7 @@ a:hover {
   color: var(--text);
 }
 .terms-idx-lead {
-  max-width: 720px;
+  max-width: 840px;
   font-size: 15.5px;
   color: var(--text2);
   margin-bottom: 18px;
@@ -213,11 +213,11 @@ a:hover {
   border-color: var(--ink);
 }
 .terms-idx-panel {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: var(--sh);
-  padding: 24px 26px 20px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
   margin-top: 18px;
 }
 .terms-idx-cat {
@@ -238,33 +238,34 @@ a:hover {
 }
 .terms-idx-list {
   list-style: none;
-  columns: initial;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 9px 10px;
   margin: 0 0 12px;
   padding: 0;
 }
 .terms-idx-list li {
-  break-inside: avoid;
   margin: 0;
+  border-bottom: 1px solid var(--border);
+}
+.terms-idx-list li:last-child {
+  border-bottom: none;
 }
 .terms-idx-list a {
   display: block;
   text-decoration: none;
   color: var(--ink);
-  background: #fafafa;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 9px 11px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  padding: 10px 2px;
   font-weight: 600;
   font-size: 14px;
   line-height: 1.55;
+  transition: color 0.15s;
 }
 .terms-idx-list a:hover {
-  background: var(--bg2);
-  border-color: var(--border2);
-  text-decoration: none;
+  color: var(--sel);
+  background: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 .terms-idx-panel-footer {
   margin-top: 18px;
@@ -279,15 +280,8 @@ a:hover {
   display: none !important;
 }
 @media (max-width: 760px) {
-  .terms-idx-list {
-    columns: 1;
-  }
   .terms-idx-search {
     min-width: 100%;
-  }
-  .terms-idx-panel {
-    padding: 18px 16px 16px;
-    border-radius: 12px;
   }
 }
 .q-meta {

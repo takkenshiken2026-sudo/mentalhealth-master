@@ -23,6 +23,8 @@ def main() -> int:
     py = sys.executable
     run([py, "tools/enrich_glossary_terms_phase3.py"])
     run([py, "tools/populate_guide_articles_extra.py"])
+    run([py, "tools/populate_guide_articles_batch20.py"])
+    run([py, "tools/populate_guide_articles_batch10.py"])
     run([py, "tools/build_article_pages.py"])
     run([py, "tools/build_glossary_pages.py"])
     run([py, "tools/build_chapter_hub_pages.py"])
