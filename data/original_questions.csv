@@ -1,0 +1,2 @@
+question_no,type,category,stem,choice_1,choice_2,choice_3,choice_4,correct,explanation
+1,single,基礎・役割,（オリジナル問題CSVのプレースホルダー。既存 eisei1-master-data.js を上書きしないよう FULL ビルド注意）,選択肢1,選択肢2,選択肢3,選択肢4,1,プレースホルダー行です。

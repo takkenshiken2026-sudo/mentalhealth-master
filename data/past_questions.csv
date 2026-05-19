@@ -1,0 +1,2 @@
+exam_year,exam_wareki,question_no,type,category,stem,choice_1,choice_2,choice_3,choice_4,correct,is_invalidated,explanation
+2026,サンプル,1,single,基礎・役割,（過去問CSVのプレースホルダー。本番データ投入前に置き換えてください）,選択肢1,選択肢2,選択肢3,選択肢4,1,FALSE,プレースホルダー行です。

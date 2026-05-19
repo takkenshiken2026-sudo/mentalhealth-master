@@ -1,0 +1,25 @@
+:root {
+  --ink: #333333;
+  --sel: #333333;
+  --accent: #333333;
+  --accent-text: #ffffff;
+  --bg: #ffffff;
+  --bg2: #f4f4f5;
+  --page-bg: #f0f0f1;
+  --text: #121212;
+  --text2: #555555;
+  --border: rgba(0, 0, 0, 0.09);
+  --r2: 10px;
+  --site-nav-w: 1080px;
+  --site-content-w: 1080px;
+  --site-readable-w: min(860px, 1080px);
+}
+body {
+  background: var(--page-bg);
+}
+.site-page-mark,
+.terms-idx-chip.on,
+.gcat-btn.active {
+  background: var(--accent);
+  color: var(--accent-text);
+}

@@ -11,22 +11,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./site-pages.css">
+  <link rel="stylesheet" href="./site-theme.css">
 </head>
 <body>
   <div class="site-page-wrap">
-    <header class="site-page-header">
+<header class="site-page-header">
       <div class="site-page-header-inner">
         <a class="site-page-brand" href="index.html">
-          <span class="site-page-mark" title="サービス略称">M</span>
+          <span class="site-page-mark" title="サービス略称（差し替え）">M</span>
           <span class="site-page-brand-text">
             <span class="site-page-brand-name">メンタルヘルス二種マスター</span>
-            <span class="site-page-brand-sub">メンタルヘルス二種マスター</span>
+            <span class="site-page-brand-sub">メンタルヘルス・マネジメント検定II種</span>
           </span>
         </a>
-        <nav class="site-page-nav" aria-label="ページ内の他文書">
+        <nav class="site-page-nav" aria-label="サイト内ナビゲーション">
           <a href="index.html">トップ</a>
           <a href="about.html">このサイトについて</a>
           <a href="terms/index.html">用語集</a>
+          <a href="articles/index.html">試験ガイド</a>
+          <a href="q/index.html">過去問一覧</a>
           <a href="related-sites.html" aria-current="page">関連リンク</a>
           <a href="privacy.html">プライバシー</a>
         </nav>
@@ -49,7 +52,7 @@
         <h2 id="sec-official">試験・資格（公式・準公式）</h2>
         <ul>
           <li>
-            <a href="https://example.com/" target="_blank" rel="noopener noreferrer">メンタルヘルス・マネジメント検定 公式サイト</a>
+            <a href="https://www.mental-health.ne.jp/about/" target="_blank" rel="noopener noreferrer">メンタルヘルス・マネジメント検定 公式サイト</a>
             … 試験日程・要項・合格者発表、受験要項や合格発表など、試験に関する公式情報の中心です。
           </li>
           <li>
@@ -75,24 +78,25 @@
         </p>
       </section>
     </main>
-
-    <footer class="site-page-footer">
+<footer class="site-page-footer">
       <div class="site-page-footer-inner">
         <div class="site-page-footer-links">
           <a href="index.html">トップ</a>
           <a href="about.html">このサイトについて</a>
           <a href="terms/index.html">用語集</a>
           <a href="articles/index.html">試験ガイド</a>
-          <a href="related-sites.html" aria-current="page">関連リンク</a>
+          <a href="q/index.html">過去問一覧</a>
+          <a href="related-sites.html">関連リンク</a>
           <a href="privacy.html">プライバシー</a>
           <a href="https://mentalhealth-master.jp/" target="_blank" rel="noopener noreferrer">お問い合わせ</a>
         </div>
-        <span>© 2026 メンタルヘルス二種マスター学習支援・mentalhealth-master.jp</span>
+        <span class="site-page-footer-sep" aria-hidden="true"></span>
+        <span class="site-page-footer-copy">© 2026 メンタルヘルス二種マスター学習支援・mentalhealth-master.jp</span>
       </div>
     </footer>
+<!-- GA4: tools/html_footer.analytics_snippet（測定IDは GA4_MEASUREMENT_ID） -->
+<script>window.__GA4_MEASUREMENT_ID__="G-KRCW0FBHM8";</script>
+<script defer src="site-analytics.js"></script>
   </div>
-  <!-- GA4: tools/html_footer.analytics_snippet（測定IDは GA4_MEASUREMENT_ID） -->
-  <script>window.__GA4_MEASUREMENT_ID__="G-KRCW0FBHM8";</script>
-  <script defer src="site-analytics.js"></script>
 </body>
 </html>
