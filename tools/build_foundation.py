@@ -30,9 +30,10 @@ def main() -> int:
     print("- site-config.json → site-config.js, site-theme.css, robots.txt")
     print("- data/*.csv ready for guide/glossary generators")
     print()
-    print("Next: expand guide_articles.csv content, then run:")
-    print("  EXAM_SITE_FULL_BUILD=1 python3 tools/build_all.py")
-    print("  (WARNING: FULL build regenerates quiz JS and all SEO/term HTML)")
+    print("Next: SEO pages (terms, guides, past q static) without touching quiz JS:")
+    print("  python3 tools/build_seo_pipeline.py")
+    print("  or: python3 tools/build_all.py")
+    print("Full (WARNING: regenerates quiz JS): EXAM_SITE_FULL_BUILD=1 python3 tools/build_all.py")
     return 0
 
 

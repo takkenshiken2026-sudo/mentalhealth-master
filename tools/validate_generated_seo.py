@@ -88,7 +88,11 @@ class GeneratedSeoValidator:
 
     def pages(self) -> list[Path]:
         article_pages = sorted((ROOT / "articles").glob("*/index.html"))
-        term_pages = sorted((ROOT / "terms").glob("g-*.html"))
+        article_pages = [
+            p for p in article_pages if "chapters" not in p.relative_to(ROOT).parts
+        ]
+        term_pages = sorted((ROOT / "terms").glob("*/index.html"))
+        term_pages = [p for p in term_pages if p.parent.name != "terms"]
         return article_pages + term_pages
 
     def run(self) -> int:

@@ -9,7 +9,12 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
+import sys
+
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 CSV_PATH = ROOT / "data" / "glossary_terms.csv"
 
 from tools.term_url_slug import load_legacy_map, url_slug_for  # noqa: E402

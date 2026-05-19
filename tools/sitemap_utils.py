@@ -45,9 +45,6 @@ def collect_sitemap_urls(base: str) -> list[str]:
     if (TERMS_DIR / "index.html").is_file():
         urls.append(public_url(base, "terms/index.html"))
 
-    for p in sorted(TERMS_DIR.glob("g-*.html")):
-        urls.append(public_url(base, p.relative_to(ROOT).as_posix()))
-
     for p in sorted(TERMS_DIR.iterdir()):
         if p.is_dir() and (p / "index.html").is_file():
             rel = (p / "index.html").relative_to(ROOT).as_posix()
