@@ -14,9 +14,35 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from tools.site_config import category_to_field_map
+from tools.build_glossary_pages import lookup_key, make_term_lookup
+from tools.site_config import category_to_field_map, guide_genre_labels
+
+
+def split_semicolon(value: str) -> list[str]:
+    return [x.strip() for x in value.split(";") if x.strip()]
 
 DATA_DIR = ROOT / "data"
+
+# Guide rows with this tag in `tags` are counted as affiliate articles (production target: 10).
+AFFILIATE_TAG = "アフィリエイト"
+AFFILIATE_TARGET_COUNT = 10
+AFFILIATE_GENRES = frozenset(
+    {"独学対策", "学習計画", "過去問活用", "直前・当日", "試験概要", "受験・申込"}
+)
+AFFILIATE_PR_MARKERS = ("アフィリエイト", "広告", "PR", "プロモーション")
+
+# Must not appear in published section headings / body (guide_articles.csv).
+OPERATOR_CONTENT_FRAGMENTS: list[tuple[str, str]] = [
+    ("記事を増やす", "編集者向け見出し"),
+    ("テンプレの増やし", "編集者向け見出し"),
+    ("共通テンプレ", "運用説明"),
+    ("差し替え時の注意", "サンプル差し替え指示"),
+    ("このテンプレートでは", "テンプレ説明の本文"),
+    ("glossary_terms.csv", "CSV運用の説明"),
+    ("guide_articles.csv", "CSV運用の説明"),
+    ("related_terms に", "CSV列名の説明"),
+    ("term_detail_body", "CSV列名の説明"),
+]
 
 
 @dataclass
@@ -156,9 +182,18 @@ class Validator:
             self.require_text(path, row, idx, "stem")
             self.require_text(path, row, idx, "explanation")
             self.validate_choices_and_correct(path, row, idx, allow_invalidated=True)
+            related = self.norm(row.get("related_links"))
+            if related:
+                for token in split_semicolon(related):
+                    if ":" not in token:
+                        self.warn(
+                            path,
+                            idx,
+                            f"related_links の形式を確認してください（例: guide:slug:ラベル）: {token!r}",
+                        )
 
-    def validate_original_questions(self) -> None:
-        path = DATA_DIR / "original_questions.csv"
+    def validate_practice_questions(self) -> None:
+        path = DATA_DIR / "practice_questions.csv"
         required = {
             "question_no",
             "type",
@@ -185,8 +220,8 @@ class Validator:
             self.require_text(path, row, idx, "explanation")
             self.validate_choices_and_correct(path, row, idx, allow_invalidated=False)
 
-    def validate_ichimon(self) -> None:
-        path = DATA_DIR / "past_questions_marubatsu_all_explanations.csv"
+    def validate_ichimon_questions(self) -> None:
+        path = DATA_DIR / "ichimon_questions.csv"
         required = {"id", "question", "answer", "explanation", "category"}
         _, rows = self.read_csv(path, required)
         seen: set[str] = set()
@@ -220,6 +255,18 @@ class Validator:
             "explanation",
         }
         _, rows = self.read_csv(path, required)
+        entries: list[dict[str, str]] = []
+        for row in rows:
+            term = self.norm(row.get("term"))
+            if term:
+                entries.append(
+                    {
+                        "term": term,
+                        "reading": self.norm(row.get("reading")),
+                        "slug_file": "g-dummy.html",
+                    }
+                )
+        term_lookup = make_term_lookup(entries)
         seen: set[tuple[str, str]] = set()
         for idx, row in enumerate(rows, start=2):
             term = self.require_text(path, row, idx, "term")
@@ -248,6 +295,16 @@ class Validator:
             ):
                 if col in row and self.norm(row.get(col)) and len(self.norm(row.get(col))) < 12:
                     self.warn(path, idx, f"{col} は詳細記事用の任意列です。本文としては短めです")
+            related_raw = self.norm(row.get("related_terms"))
+            if related_raw:
+                for label in split_semicolon(related_raw):
+                    if term_lookup.get(label) or term_lookup.get(lookup_key(label)):
+                        continue
+                    self.warn(
+                        path,
+                        idx,
+                        f"related_terms の {label!r} は用語ページにリンク化されません（登録済み用語名に直すと内部リンクになります）",
+                    )
 
     def validate_guide_articles(self) -> None:
         path = DATA_DIR / "guide_articles.csv"
@@ -262,7 +319,16 @@ class Validator:
             "section_1_body",
         }
         _, rows = self.read_csv(path, required)
+        if len(rows) < 100:
+            self.warn(
+                path,
+                None,
+                f"試験ガイドは本番テンプレート標準で100本以上を推奨します（現在 {len(rows)} 本）。"
+                " docs/guide-article-catalog.md の記事カタログを参照してください。",
+            )
+        slugs: set[str] = {self.norm(r.get("slug")) for r in rows if self.norm(r.get("slug"))}
         seen: set[str] = set()
+        affiliate_count = 0
         for idx, row in enumerate(rows, start=2):
             slug = self.require_text(path, row, idx, "slug")
             if slug:
@@ -271,13 +337,33 @@ class Validator:
                 seen.add(slug)
                 if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", slug):
                     self.error(path, idx, f"slug は半角英数字とハイフンで入力してください: {slug}")
-            self.require_text(path, row, idx, "genre")
+            genre = self.require_text(path, row, idx, "genre")
+            if genre and genre not in guide_genre_labels():
+                allowed = "、".join(guide_genre_labels())
+                self.error(
+                    path,
+                    idx,
+                    f"genre は site-config.json の guideArticleGenres に定義したラベルにしてください（許可: {allowed}）。現在: {genre!r}",
+                )
             self.require_text(path, row, idx, "title")
             self.require_text(path, row, idx, "meta_description")
             self.require_text(path, row, idx, "lead")
             self.require_int(path, row, idx, "priority", min_value=1)
             self.require_text(path, row, idx, "section_1_heading")
             self.require_text(path, row, idx, "section_1_body")
+            for n in range(1, 8):
+                for kind in ("heading", "body"):
+                    col = f"section_{n}_{kind}"
+                    value = self.norm(row.get(col))
+                    if not value:
+                        continue
+                    for fragment, reason in OPERATOR_CONTENT_FRAGMENTS:
+                        if fragment in value:
+                            self.error(
+                                path,
+                                idx,
+                                f"{col} に公開禁止の文言「{fragment}」: {reason}",
+                            )
             for col in ("author_name", "fact_checked_at", "primary_sources", "original_note", "action_items"):
                 if col in row and not self.norm(row.get(col)):
                     self.warn(path, idx, f"{col} はSEO品質確認用の推奨列です")
@@ -295,19 +381,83 @@ class Validator:
                     self.warn(path, idx, f"faq_{n}_question は質問文として入力してください: {q}")
                 if a and re.fullmatch(r"[a-z0-9][a-z0-9-]*:.+", a):
                     self.warn(path, idx, f"faq_{n}_answer に related_links らしき値が入っています: {a}")
+                for fragment, reason in OPERATOR_CONTENT_FRAGMENTS:
+                    if (q and fragment in q) or (a and fragment in a):
+                        self.error(
+                            path,
+                            idx,
+                            f"faq_{n} に公開禁止の文言「{fragment}」: {reason}",
+                        )
             related = self.norm(row.get("related_links"))
             if related:
-                for item in [x.strip() for x in related.split(";") if x.strip()]:
+                for item in split_semicolon(related):
                     target = item.split(":", 1)[0].strip()
                     if target.startswith(("http://", "https://")):
                         continue
-                    if target and target not in seen and not re.fullmatch(r"[a-z0-9][a-z0-9-]*", target):
-                        self.warn(path, idx, f"related_links の内部リンク先 slug 形式を確認してください: {target}")
+                    if not target:
+                        continue
+                    if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", target):
+                        self.error(
+                            path,
+                            idx,
+                            f"related_links の内部 slug 形式が不正です: {target!r}",
+                        )
+                        continue
+                    if target not in slugs:
+                        self.error(
+                            path,
+                            idx,
+                            f"related_links の slug が guide_articles.csv に存在しません: {target!r}",
+                        )
+            tags = split_semicolon(self.norm(row.get("tags")))
+            if AFFILIATE_TAG in tags:
+                affiliate_count += 1
+                if genre and genre not in AFFILIATE_GENRES:
+                    self.warn(
+                        path,
+                        idx,
+                        f"アフィリエイト記事の genre は通常 {sorted(AFFILIATE_GENRES)} のいずれかにしてください（現在: {genre!r}）",
+                    )
+                lead = self.norm(row.get("lead"))
+                if lead and not any(marker in lead for marker in AFFILIATE_PR_MARKERS):
+                    self.warn(
+                        path,
+                        idx,
+                        "アフィリエイト記事の lead に広告・PR（アフィリエイト）である旨を含めてください",
+                    )
+                internal_related = 0
+                if related:
+                    for item in split_semicolon(related):
+                        target = item.split(":", 1)[0].strip()
+                        if target and not target.startswith(("http://", "https://")):
+                            internal_related += 1
+                if internal_related < 2:
+                    self.warn(
+                        path,
+                        idx,
+                        "アフィリエイト記事の related_links には、試験ガイド・無料コンテンツへ向ける内部 slug を2件以上推奨します",
+                    )
+
+        if affiliate_count < AFFILIATE_TARGET_COUNT:
+            self.warn(
+                path,
+                None,
+                f"アフィリエイト記事は本番テンプレート標準で{AFFILIATE_TARGET_COUNT}本を目安にしてください"
+                f"（tags に「{AFFILIATE_TAG}」を含む行: 現在 {affiliate_count} 本）。"
+                " docs/guide-article-catalog.md の「アフィリエイト記事（10本目安）」を参照してください。",
+            )
+        elif affiliate_count > 18:
+            self.warn(
+                path,
+                None,
+                f"アフィリエイト記事が {affiliate_count} 本あります（目安は{AFFILIATE_TARGET_COUNT}本前後）。"
+                " 検索意図の重複と更新負荷がないか確認してください。",
+            )
 
     def run(self) -> int:
         self.validate_past_questions()
-        self.validate_original_questions()
-        self.validate_ichimon()
+        self.validate_practice_questions()
+        self.validate_ichimon_questions()
         self.validate_glossary()
         self.validate_guide_articles()
 

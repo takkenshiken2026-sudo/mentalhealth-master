@@ -15,23 +15,20 @@ for f in \
   site-config.js \
   site-pages.css \
   site-theme.css \
+  site-q-index.js \
+  site-terms-index.js \
   site-analytics.js \
   CNAME \
   robots.txt \
   sitemap.xml \
   .nojekyll \
-  eisei1-master-data.js \
-  eisei1-data-glossary.js \
-  eisei1-data-original.js \
-  eisei1-data-ichimon.js \
-  exam-site-data.js \
-  exam-site-data-glossary.js \
-  exam-site-data-original.js \
-  exam-site-data-ichimon.js
+  exam-site-data-past.js \
+  exam-site-data-practice.js \
+  exam-site-data-ichimondou.js
 do
   if [[ ! -e "$f" ]]; then
     echo "prepare_public_site.sh: 必須ファイルがありません: $f" >&2
-    echo "先に python3 tools/csv_to_exam_site_master.py と各生成スクリプトを実行してください。" >&2
+    echo "先に python3 tools/csv_to_exam_site_past_js.py と各生成スクリプトを実行してください。" >&2
     exit 1
   fi
   cp "$f" "$OUT/"
@@ -39,6 +36,12 @@ done
 for d in articles q terms; do
   if [[ -d "$ROOT/$d" ]]; then
     cp -R "$ROOT/$d" "$OUT/"
+  fi
+done
+# サイト固有 SPA データ（例: 賃管マスターの eisei1-*.js）。無ければスキップ。
+for f in eisei1-*.js; do
+  if [[ -f "$ROOT/$f" ]]; then
+    cp "$ROOT/$f" "$OUT/"
   fi
 done
 n="$(find "$OUT" -type f | wc -l | tr -d ' ')"

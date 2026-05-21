@@ -30,6 +30,9 @@ from tools.site_config import (  # noqa: E402
     clean_origin,
     exam_name,
     external_links,
+    guide_article_genres,
+    guide_genre_order_index,
+    guide_genre_style_by_label,
     primary_external_link,
 )
 
@@ -64,10 +67,7 @@ def rel_prefix(rel_path: Path) -> str:
 
 
 def css_href(rel_path: Path, filename: str) -> str:
-    base = rel_prefix(rel_path) + filename
-    if filename == "site-pages.css":
-        return base + "?v=20260519-articles"
-    return base
+    return rel_prefix(rel_path) + filename
 
 
 def meta_description(text: str, limit: int = 155) -> str:
@@ -88,7 +88,9 @@ def paragraphs(text: str) -> str:
 
 
 def list_or_paragraph(text: str) -> str:
-    """本文は段落のみ。箇条書きは CSV 側で「・」行＋空行、または HTML 不要の prose で書く。"""
+    items = split_semicolon(apply_vars(text))
+    if len(items) >= 2:
+        return "<ul>" + "".join(f"<li>{html.escape(item)}</li>" for item in items) + "</ul>"
     return paragraphs(text)
 
 
@@ -162,30 +164,78 @@ def faq_html(items: list[dict[str, str]]) -> str:
     return f'<section class="seo-article-section" aria-labelledby="article-sec-faq"><h2 id="article-sec-faq">よくある質問</h2>{body}</section>'
 
 
-def parse_related_links(value: str, by_slug: dict[str, dict[str, str]], rel_path: Path) -> str:
+def parse_related_links(
+    value: str,
+    by_slug: dict[str, dict[str, str]],
+    article: dict[str, str] | None = None,
+) -> str:
     links: list[str] = []
-    prefix = rel_prefix(rel_path)
+    seen: set[str] = set()
     for item in split_semicolon(value):
         target, label = item, item
         if ":" in item:
             target, label = [x.strip() for x in item.split(":", 1)]
         if not target:
             continue
-        if target in by_slug:
-            href = f"{prefix}articles/{html.escape(target)}/"
-            text = label or by_slug[target]["title"]
-            links.append(f'<a class="related-link" href="{href}">{html.escape(apply_vars(text))}</a>')
-        elif target.endswith(".html"):
-            href = f"{prefix}{html.escape(target)}"
-            links.append(f'<a class="related-link" href="{href}">{html.escape(apply_vars(label or target))}</a>')
+        if target in by_slug and target not in seen:
+            seen.add(target)
+            href = f"../{html.escape(target)}/"
+            text_label = label or by_slug[target]["title"]
+            links.append(f'<a class="related-link" href="{href}">{html.escape(apply_vars(text_label))}</a>')
         elif target.startswith(("http://", "https://")):
-            text = label or target
+            text_label = label or target
             links.append(
-                f'<a class="related-link" href="{html.escape(target)}" target="_blank" rel="noopener noreferrer">{html.escape(apply_vars(text))}</a>'
+                f'<a class="related-link" href="{html.escape(target)}" target="_blank" rel="noopener noreferrer">{html.escape(apply_vars(text_label))}</a>'
             )
+    if len(links) < 2 and article:
+        genre = apply_vars(article.get("genre", ""))
+        tags = set(split_semicolon(apply_vars(article.get("tags", ""))))
+        current_slug = article.get("slug", "")
+        candidates: list[tuple[int, dict[str, str]]] = []
+        for other in by_slug.values():
+            other_slug = other.get("slug", "")
+            if not other_slug or other_slug == current_slug or other_slug in seen:
+                continue
+            score = 0
+            if genre and apply_vars(other.get("genre", "")) == genre:
+                score += 2
+            other_tags = set(split_semicolon(apply_vars(other.get("tags", ""))))
+            score += len(tags & other_tags)
+            try:
+                score += max(0, 3 - abs(int(article.get("priority") or 9999) - int(other.get("priority") or 9999)) // 10)
+            except ValueError:
+                pass
+            if score > 0:
+                candidates.append((score, other))
+        candidates.sort(key=lambda x: (-x[0], int(x[1].get("priority") or 9999)))
+        for _, other in candidates:
+            slug = other["slug"]
+            if slug in seen:
+                continue
+            seen.add(slug)
+            links.append(
+                f'<a class="related-link" href="../{html.escape(slug)}/">'
+                f"{html.escape(apply_vars(other['title']))}</a>"
+            )
+            if len(links) >= 2:
+                break
+        for slug in ("exam-overview", "study-plan", "past-question-strategy", "glossary-how-to"):
+            if len(links) >= 2:
+                break
+            if slug in by_slug and slug not in seen and slug != current_slug:
+                seen.add(slug)
+                links.append(
+                    f'<a class="related-link" href="../{html.escape(slug)}/">'
+                    f"{html.escape(apply_vars(by_slug[slug]['title']))}</a>"
+                )
     if not links:
         return ""
-    return '<div class="related-box"><div class="related-box-title">関連記事</div><div class="related-links">' + "".join(links) + "</div></div>"
+    return (
+        '<div class="related-box"><div class="related-box-title">関連記事</div><div class="related-links">'
+        + "".join(links)
+        + "</div></div>"
+    )
+
 
 
 def parse_source_links(value: str) -> list[dict[str, str]]:
@@ -210,7 +260,6 @@ def quality_panel_html(article: dict[str, str]) -> str:
     reviewer = apply_vars(article.get("reviewer_name", ""))
     reviewer_profile = apply_vars(article.get("reviewer_profile", ""))
     fact_checked_at = apply_vars(article.get("fact_checked_at", ""))
-    original_note = apply_vars(article.get("original_note", ""))
     sources = parse_source_links(article.get("primary_sources", ""))
 
     rows: list[str] = []
@@ -231,8 +280,6 @@ def quality_panel_html(article: dict[str, str]) -> str:
             else:
                 source_items.append(f"<li>{label}</li>")
         rows.append(f'<tr><th>主な参照元</th><td><ul class="quality-source-list">{"".join(source_items)}</ul></td></tr>')
-    if original_note:
-        rows.append(f"<tr><th>独自メモ</th><td>{html.escape(original_note)}</td></tr>")
     if not rows:
         return ""
     return (
@@ -289,7 +336,7 @@ def build_article_html(article: dict[str, str], by_slug: dict[str, dict[str, str
     faqs = faq_items(article)
     faq_section = faq_html(faqs)
     toc = toc_html(article, bool(faqs))
-    related = parse_related_links(article.get("related_links", ""), by_slug, rel_path)
+    related = parse_related_links(article.get("related_links", ""), by_slug, article)
     quality_panel = quality_panel_html(article)
     action_box = action_box_html(article)
     author = apply_vars(article.get("author_name", ""))
@@ -400,18 +447,35 @@ def build_article_html(article: dict[str, str], by_slug: dict[str, dict[str, str
 """
 
 
+def sort_articles_for_index(articles: list[dict[str, str]]) -> list[dict[str, str]]:
+    order = guide_genre_order_index()
+    return sorted(
+        articles,
+        key=lambda a: (
+            order.get(apply_vars(a.get("genre", "")), 999),
+            int(a.get("priority") or 9999),
+        ),
+    )
+
+
 def build_index_html(articles: list[dict[str, str]]) -> str:
     rel_path = Path("articles/index.html")
+    articles = sort_articles_for_index(articles)
+    genre_styles = guide_genre_style_by_label()
     by_genre: dict[str, list[dict[str, str]]] = {}
     for article in articles:
         by_genre.setdefault(apply_vars(article.get("genre", "試験ガイド")), []).append(article)
-    for group in by_genre.values():
-        group.sort(key=lambda x: int(x.get("priority") or 9999))
     genre_counts = {genre: len(group) for genre, group in by_genre.items()}
     genre_chips = ['<button type="button" class="article-index-chip on" data-genre="all">すべて</button>']
-    for genre, count in genre_counts.items():
+    for genre_def in guide_article_genres():
+        genre = genre_def["label"]
+        count = genre_counts.get(genre, 0)
+        if count == 0:
+            continue
+        style = genre_styles.get(genre, "meta")
         genre_chips.append(
-            f'<button type="button" class="article-index-chip" data-genre="{html.escape(genre, quote=True)}">'
+            f'<button type="button" class="article-index-chip" data-genre="{html.escape(genre, quote=True)}" '
+            f'data-genre-style="{html.escape(style, quote=True)}">'
             f"{html.escape(genre)}<span>{count}</span></button>"
         )
     article_cards: list[str] = []
@@ -419,11 +483,13 @@ def build_index_html(articles: list[dict[str, str]]) -> str:
         title_text = apply_vars(article["title"])
         desc_text = meta_description(apply_vars(article.get("meta_description") or article.get("lead") or title_text), 130)
         genre = apply_vars(article.get("genre", "試験ガイド"))
+        style = genre_styles.get(genre, "meta")
         tags = " / ".join(split_semicolon(apply_vars(article.get("tags", ""))))
         search_text = " ".join([title_text, desc_text, genre, tags, apply_vars(article.get("lead", ""))])
         article_cards.append(
             '<article class="article-index-card" '
             f'data-genre="{html.escape(genre, quote=True)}" '
+            f'data-genre-style="{html.escape(style, quote=True)}" '
             f'data-search="{html.escape(search_text, quote=True)}">'
             f'<a class="article-index-card-link" href="{html.escape(article["slug"])}/">'
             f'<span class="article-index-card-genre">{html.escape(genre)}</span>'
@@ -466,16 +532,9 @@ def build_index_html(articles: list[dict[str, str]]) -> str:
   apply();
 })();
 </script>"""
-    official_links = external_links() or [primary_external_link()]
-    official_items = "".join(
-        f'<li><a href="{html.escape(link["url"])}" target="_blank" rel="noopener noreferrer">{html.escape(link["label"])}</a>'
-        + (f' … {html.escape(link.get("description", ""))}' if link.get("description") else "")
-        + "</li>"
-        for link in official_links
-    )
     canonical = public_url("articles/index.html")
     title = f"試験ガイド｜{brand_name()}（{exam_name()}）"
-    desc = f"{exam_name()}の試験概要、試験対策、過去問活用、用語整理に関するSEO記事テンプレートです。"
+    desc = f"{exam_name()}の試験概要、受験・申込、学習計画、過去問活用、用語整理などの記事一覧です。"
     item_list = [
         {"@type": "ListItem", "position": i, "name": apply_vars(a["title"]), "item": public_url(f"articles/{a['slug']}/")}
         for i, a in enumerate(articles, start=1)
@@ -507,15 +566,11 @@ def build_index_html(articles: list[dict[str, str]]) -> str:
 </head>
 <body>
 {site_page_wrap_open()}
-{site_page_header(rel_path, current="articles", wide=True)}
-<main class="site-page-main article-index-main">
+{site_page_header(rel_path, current="articles")}
+<main class="site-page-main">
   {breadcrumb_html(rel_path, [("トップ", "index.html"), ("試験ガイド", None)])}
   <h1>試験ガイド</h1>
-  <p class="site-page-lead">{html.escape(exam_name())}の概要、試験対策、過去問活用、用語整理などの記事をまとめています。記事数が増えても、検索とジャンル絞り込みで目的の記事を探せます。</p>
-  <section class="site-page-section" aria-labelledby="sec-official">
-    <h2 id="sec-official">まず見る公式情報</h2>
-    <ul>{official_items}</ul>
-  </section>
+  <p class="site-page-lead">{html.escape(exam_name())}の制度理解から学習計画・演習・直前対策まで、受験フェーズ別の記事をまとめています。検索とジャンル絞り込みで目的の記事を探せます。</p>
   <section class="article-index-panel" aria-labelledby="article-index-heading">
     <div class="article-index-head">
       <div>

@@ -31,7 +31,7 @@ window.SITE_CONFIG = {
         "key": "about"
       },
       {
-        "label": "用語集",
+        "label": "用語解説",
         "href": "terms/index.html",
         "key": "terms"
       },
@@ -68,7 +68,7 @@ window.SITE_CONFIG = {
         "key": "about"
       },
       {
-        "label": "用語集",
+        "label": "用語解説",
         "href": "terms/index.html",
         "key": "terms"
       },

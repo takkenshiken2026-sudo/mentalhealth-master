@@ -79,6 +79,11 @@ class GeneratedSeoValidator:
 
         if "<th>更新方針</th>" in text or "update_policy" in text:
             self.error(path, "公開ページに更新方針を表示しないでください")
+        if "<th>独自メモ</th>" in text:
+            self.error(path, "公開ページの表に独自メモを表示しないでください（CSV内部用）")
+        for internal_row in ("検索意図", "記事種別"):
+            if f"<th>{internal_row}</th>" in text:
+                self.error(path, f"公開ページの表に {internal_row} を表示しないでください")
 
         if "quality-source-list" not in text:
             self.error(path, "主な参照元は quality-source-list のリストで表示してください")
@@ -87,12 +92,16 @@ class GeneratedSeoValidator:
             self.warn(path, "本番サイトでは example.com の公式リンクを実URLに差し替えてください")
 
     def pages(self) -> list[Path]:
-        article_pages = sorted((ROOT / "articles").glob("*/index.html"))
-        article_pages = [
-            p for p in article_pages if "chapters" not in p.relative_to(ROOT).parts
-        ]
-        term_pages = sorted((ROOT / "terms").glob("*/index.html"))
-        term_pages = [p for p in term_pages if p.parent.name != "terms"]
+        article_pages = sorted(
+            p
+            for p in (ROOT / "articles").glob("*/index.html")
+            if p.parent.name != "chapters"
+        )
+        term_pages = sorted(
+            p
+            for p in (ROOT / "terms").glob("*.html")
+            if p.name != "index.html"
+        )
         return article_pages + term_pages
 
     def run(self) -> int:

@@ -1,8 +1,14 @@
 :root {
-  --ink: #333333;
   --sel: #333333;
   --accent: #333333;
   --accent-text: #ffffff;
+  --accent-soft: color-mix(in srgb, #333333 11%, #ffffff);
+  --accent-soft-mid: color-mix(in srgb, #333333 18%, #ffffff);
+  --accent-border: color-mix(in srgb, #333333 26%, #ffffff);
+  --accent-emphasis: color-mix(in srgb, #333333 42%, #333333);
+  --accent-hover-surface: color-mix(in srgb, #333333 7%, #ffffff);
+  --accent-hover-border: color-mix(in srgb, #333333 30%, #e4e4e6);
+  --accent-shadow: color-mix(in srgb, #333333 12%, transparent);
   --bg: #ffffff;
   --bg2: #f4f4f5;
   --page-bg: #f0f0f1;
@@ -17,9 +23,13 @@
 body {
   background: var(--page-bg);
 }
-.site-page-mark,
-.terms-idx-chip.on,
-.gcat-btn.active {
+.site-page-mark {
   background: var(--accent);
   color: var(--accent-text);
+}
+.terms-idx-chip.on,
+.gcat-btn.active {
+  background: var(--accent-soft);
+  border-color: var(--accent-border);
+  color: var(--accent-emphasis);
 }

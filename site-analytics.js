@@ -7,6 +7,9 @@
     if (typeof window !== "undefined" && window.__GA4_MEASUREMENT_ID__ != null) {
       raw = String(window.__GA4_MEASUREMENT_ID__).trim();
     }
+    if (!raw && typeof window !== "undefined" && window.SITE_CONFIG && window.SITE_CONFIG.ga4MeasurementId != null) {
+      raw = String(window.SITE_CONFIG.ga4MeasurementId).trim();
+    }
   } catch (_e) {}
   if (!raw) raw = DEFAULT_MID;
   var MID = /^G-[A-Za-z0-9]+$/.test(raw) ? raw : "";

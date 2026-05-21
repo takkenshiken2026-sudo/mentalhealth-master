@@ -15,8 +15,8 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from tools.html_footer import (  # noqa: E402
-    ROBOTS_INDEX_FOLLOW,
     breadcrumb_html,
+    footer_href,
     site_page_footer,
     site_page_header,
     site_page_wrap_close,
@@ -92,7 +92,7 @@ def load_terms() -> list[dict]:
         out.append(
             {
                 "term": term,
-                "href": f"../../terms/{norm(row.get('url_slug')) or 'index'}/index.html",
+                "url_slug": norm(row.get("url_slug")) or "index",
                 "blob": " ".join(
                     [
                         term,
@@ -142,15 +142,20 @@ def build_hub(ch: dict, terms: list[dict], rel_path: Path, base: str) -> str:
     desc = ch["summary"] + f" {exam_name()}の出題範囲に沿って用語と演習へ進めます。"
     chapter_terms = terms_for_chapter(ch, terms)
     term_lis = "\n".join(
-        f'      <li><a href="{html.escape(t["href"])}">{html.escape(t["term"])}</a></li>'
+        f'      <li><a href="{html.escape(footer_href(rel_path, "terms/" + t["url_slug"] + "/index.html"))}">{html.escape(t["term"])}</a></li>'
         for t in chapter_terms
     )
+    q_index = footer_href(rel_path, "q/index.html")
+    subjects = footer_href(rel_path, "articles/subjects/index.html")
+    terms_index = footer_href(rel_path, "terms/index.html")
+    study_plan = footer_href(rel_path, "articles/study-plan/index.html")
+    exam_last = footer_href(rel_path, "articles/exam-last-minute/index.html")
     page_header = site_page_header(rel_path, current="articles")
     page_breadcrumb = breadcrumb_html(
         rel_path,
         [
-            ("トップ", "../../index.html"),
-            ("試験ガイド", "../index.html"),
+            ("トップ", "index.html"),
+            ("試験ガイド", "articles/index.html"),
             (ch["title"], None),
         ],
     )
@@ -169,7 +174,7 @@ def build_hub(ch: dict, terms: list[dict], rel_path: Path, base: str) -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
-<meta name="robots" content="{ROBOTS_INDEX_FOLLOW}">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="{html.escape(canonical)}">
 {HEAD_FONTS}
 <link rel="stylesheet" href="{rel_css(rel_path)}">
@@ -188,21 +193,21 @@ def build_hub(ch: dict, terms: list[dict], rel_path: Path, base: str) -> str:
     <p class="article-lead">{html.escape(ch["summary"])}</p>
     <section class="seo-article-section">
       <h2>この章で押さえること</h2>
-      <p>公式テキストの該当章を読んだあと、下の用語と<a href="../../q/index.html">演習問題一覧</a>で理解度を確認してください。試験全体の流れは<a href="../subjects/index.html">出題範囲と7章</a>も参照してください。</p>
+      <p>公式テキストの該当章を読んだあと、下の用語と<a href="{html.escape(q_index)}">演習問題一覧</a>で理解度を確認してください。試験全体の流れは<a href="{html.escape(subjects)}">出題範囲と7章</a>も参照してください。</p>
     </section>
     <section class="seo-article-section">
       <h2>関連用語（{len(chapter_terms)}件）</h2>
       <ul class="terms-idx-list">
 {term_lis}
       </ul>
-      <p><a href="../../terms/index.html">用語集一覧へ</a></p>
+      <p><a href="{html.escape(terms_index)}">用語集一覧へ</a></p>
     </section>
     <section class="seo-action-box">
       <h2>次のステップ</h2>
       <ul>
-        <li><a href="../../q/index.html">分野別の演習問題</a>で選択肢に慣れる</li>
-        <li><a href="../study-plan/index.html">学習計画</a>で章の優先順位を決める</li>
-        <li><a href="../exam-last-minute/index.html">直前対策チェックリスト</a>で最終確認</li>
+        <li><a href="{html.escape(q_index)}">分野別の演習問題</a>で選択肢に慣れる</li>
+        <li><a href="{html.escape(study_plan)}">学習計画</a>で章の優先順位を決める</li>
+        <li><a href="{html.escape(exam_last)}">直前対策チェックリスト</a>で最終確認</li>
       </ul>
     </section>
   </article>
@@ -240,9 +245,11 @@ def main() -> int:
     page_header = site_page_header(rel, current="articles")
     page_breadcrumb = breadcrumb_html(
         rel,
-        [("トップ", "../../index.html"), ("試験ガイド", "../index.html"), ("7章ハブ", None)],
+        [("トップ", "index.html"), ("試験ガイド", "articles/index.html"), ("7章ハブ", None)],
     )
     page_footer = site_page_footer(rel, current="articles")
+    subjects_hub = footer_href(rel, "articles/subjects/index.html")
+    q_hub = footer_href(rel, "q/index.html")
     index_html = f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -250,7 +257,7 @@ def main() -> int:
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>出題範囲7章ハブ｜{html.escape(brand_name())}</title>
 <meta name="description" content="{exam_name()}の出題範囲7章ごとの学習入口。章別に用語と演習問題へ進めます。">
-<meta name="robots" content="{ROBOTS_INDEX_FOLLOW}">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="{html.escape(canonical)}">
 {HEAD_FONTS}
 <link rel="stylesheet" href="{rel_css(rel)}">
@@ -266,7 +273,7 @@ def main() -> int:
   <ul class="chapter-hub-list">
 {lis}
   </ul>
-  <p><a href="../subjects/index.html">出題範囲の全体像</a> · <a href="../../q/index.html">演習問題一覧</a></p>
+  <p><a href="{html.escape(subjects_hub)}">出題範囲の全体像</a> · <a href="{html.escape(q_hub)}">演習問題一覧</a></p>
 </main>
 {page_footer}
 {site_page_wrap_close()}

@@ -49,8 +49,8 @@ def main() -> int:
         "background": "#eef2f7",
     }
     stress["fields"] = [
-        {"id": "law", "name": "法令・制度", "aliases": ["法令・制度", "関連法令"], "legacyGlossaryCat": "lawN"},
-        {"id": "rights", "name": "契約・実務", "aliases": ["契約・実務", "実務"], "legacyGlossaryCat": "rightsN"},
+        {"id": "law", "name": "法令・制度", "aliases": ["法令・制度", "関連法令"], "legacyGlossaryCat": "law"},
+        {"id": "rights", "name": "契約・実務", "aliases": ["契約・実務", "実務"], "legacyGlossaryCat": "rights"},
         {"id": "limit", "name": "設備・その他", "aliases": ["設備・その他", "その他"], "legacyGlossaryCat": "limit"},
         {"id": "accounting", "name": "会計・税務", "aliases": ["会計・税務"], "legacyGlossaryCat": "accounting"},
         {"id": "safety", "name": "安全管理", "aliases": ["安全管理"], "legacyGlossaryCat": "safety"},
