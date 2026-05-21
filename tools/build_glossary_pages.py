@@ -199,7 +199,21 @@ def split_semicolon(s: str) -> list[str]:
 
 
 TERMS_INDEX_CSS_VER = "20260521-terms-tools-fix"
-TERMS_INDEX_JS_VER = "20260521-terms-3col"
+TERMS_INDEX_JS_VER = "20260521-terms-snippet"
+TERMS_INDEX_SEARCH_PLACEHOLDER = "例：ストレスチェック、ラインケア、うつ病…"
+
+# CSV enrich 時の分野テンプレ（一覧の定義抜粋には出さない）
+_GENERIC_SNIPPET_SUFFIXES = (
+    "に関わる用語です。",
+    "を整理する際に使われます。",
+    "と関係します。",
+    "を確認します。",
+    "を確認するために使われます。",
+    "を考える場面で出てきます。",
+    "につながる経営課題として捉えます。",
+    "を説明する際に使われます。",
+    "を検討します。",
+)
 
 
 def parse_term_tags(raw: str) -> list[str]:
@@ -216,6 +230,40 @@ def sort_terms_index_entries(entries: list[dict]) -> list[dict]:
     )
 
 
+def _is_generic_index_snippet(text: str, term: str) -> bool:
+    t = (text or "").strip()
+    if not t or not term or not t.startswith(term):
+        return False
+    return any(t.endswith(suffix) for suffix in _GENERIC_SNIPPET_SUFFIXES)
+
+
+def terms_index_snippet(entry: dict) -> str:
+    """一覧・検索用の定義抜粋。enrich テンプレ文は definition から実義を拾う。"""
+    term = (entry.get("term") or "").strip()
+    short = (entry.get("short_def") or "").strip()
+    definition = (entry.get("definition") or "").strip()
+
+    if definition:
+        m = re.search(r"まず「([^」]+)」", definition)
+        if m:
+            clause = m.group(1).strip()
+            if clause and not _is_generic_index_snippet(clause, term):
+                if clause.startswith(term):
+                    return clause if clause.endswith("。") else f"{clause}。"
+                body = clause.rstrip("。")
+                return f"{term}は、{body}。" if body else short
+
+    if short and not _is_generic_index_snippet(short, term):
+        return short
+
+    if definition:
+        for part in re.split(r"(?<=[。！？])", definition):
+            part = part.strip()
+            if part and part != short and not _is_generic_index_snippet(part, term):
+                return part[:200]
+    return short
+
+
 def render_terms_index_tbody(entries: list[dict]) -> str:
     """JS 未実行時も一覧が見えるよう、全件の tbody をサーバー側で生成する（1語1行・3列）。"""
     items = sort_terms_index_entries(entries)
@@ -230,7 +278,7 @@ def render_terms_index_tbody(entries: list[dict]) -> str:
             if reading
             else ""
         )
-        short_def = html.escape(item.get("short_def") or "")
+        short_def = html.escape(terms_index_snippet(item))
         rows.append(
             "<tr class=\"terms-idx-table-row\">"
             f'<td class="terms-idx-td-term" data-label="用語（よみ）"{href_attr} tabindex="0">'
@@ -247,11 +295,12 @@ def render_terms_index_tbody(entries: list[dict]) -> str:
 
 def terms_index_item_dict(entry: dict) -> dict:
     tags = parse_term_tags(entry.get("tags") or "")
+    snippet = terms_index_snippet(entry)
     search_bits = [
         entry["term"],
         entry.get("reading") or "",
         entry.get("category") or "",
-        entry.get("short_def") or "",
+        snippet,
         *tags,
     ]
     return {
@@ -259,7 +308,7 @@ def terms_index_item_dict(entry: dict) -> dict:
         "reading": entry.get("reading") or "",
         "category": entry.get("category") or "",
         "tags": tags,
-        "shortDef": entry.get("short_def") or "",
+        "shortDef": snippet,
         "href": entry["slug_file"],
         "fieldHub": entry.get("field_hub") or "",
         "search": " ".join(x for x in search_bits if x),
@@ -270,7 +319,7 @@ def build_terms_list_item(entry: dict) -> str:
     href = html.escape(entry["slug_file"])
     term = html.escape(entry["term"])
     reading = html.escape(entry.get("reading") or "")
-    snippet = html.escape(entry.get("short_def") or "")
+    snippet = html.escape(terms_index_snippet(entry))
     reading_html = (
         f'<span class="terms-idx-reading">{reading}</span>' if reading else ""
     )
@@ -1102,7 +1151,7 @@ def build_terms_index(entries: list[dict], base_url: str) -> str:
     <div class="terms-index-tools">
       <label class="terms-index-search" for="terms-idx-q">
         <span>用語検索</span>
-        <input id="terms-idx-q" type="search" inputmode="search" autocomplete="off" placeholder="例：過去問、合格基準、復習…">
+        <input id="terms-idx-q" type="search" inputmode="search" autocomplete="off" placeholder="{html.escape(TERMS_INDEX_SEARCH_PLACEHOLDER, quote=True)}">
       </label>
       <div class="terms-idx-chips" aria-label="分野フィルタ">
 {chips_html}
