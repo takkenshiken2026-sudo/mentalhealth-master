@@ -272,18 +272,12 @@ def render_terms_index_tbody(entries: list[dict]) -> str:
     for item in items:
         href = html.escape(item["slug_file"])
         href_attr = f' data-entry-href="{href}"'
-        reading = item.get("reading") or ""
-        reading_html = (
-            f'<span class="terms-idx-reading">{html.escape(reading)}</span>'
-            if reading
-            else ""
-        )
         short_def = html.escape(terms_index_snippet(item))
         rows.append(
             "<tr class=\"terms-idx-table-row\">"
-            f'<td class="terms-idx-td-term" data-label="用語（よみ）"{href_attr} tabindex="0">'
+            f'<td class="terms-idx-td-term" data-label="用語"{href_attr} tabindex="0">'
             f'<div class="terms-idx-term-cell"><a href="{href}">{html.escape(item["term"])}</a>'
-            f"{reading_html}</div></td>"
+            "</div></td>"
             f'<td class="terms-idx-td-cat" data-label="分野"{href_attr}>'
             f'{html.escape(item.get("category") or "")}</td>'
             f'<td class="terms-idx-td-snippet" data-label="定義（抜粋）"{href_attr}>'
@@ -318,11 +312,7 @@ def terms_index_item_dict(entry: dict) -> dict:
 def build_terms_list_item(entry: dict) -> str:
     href = html.escape(entry["slug_file"])
     term = html.escape(entry["term"])
-    reading = html.escape(entry.get("reading") or "")
     snippet = html.escape(terms_index_snippet(entry))
-    reading_html = (
-        f'<span class="terms-idx-reading">{reading}</span>' if reading else ""
-    )
     snippet_html = (
         f'<span class="terms-idx-snippet">{snippet}</span>' if snippet else ""
     )
@@ -333,7 +323,7 @@ def build_terms_list_item(entry: dict) -> str:
         f'    <li class="terms-idx-item" data-search="{search_attr}">'
         f'<a href="{href}">'
         f'<span class="terms-idx-item-main">'
-        f'<span class="terms-idx-term">{term}</span>{reading_html}'
+        f'<span class="terms-idx-term">{term}</span>'
         f"</span>{snippet_html}</a></li>"
     )
 
@@ -564,7 +554,7 @@ def faq_items_for_term(term: str, reading: str, short_def: str, definition: str,
     return [
         {
             "question": f"{term}とは何ですか？",
-            "answer": f"{term}（{reading}）とは、{short_def.rstrip('。')}。{definition}",
+            "answer": f"{term}とは、{short_def.rstrip('。')}。{definition}",
         },
         {
             "question": f"{term}は試験でどう押さえればよいですか？",
@@ -635,7 +625,7 @@ def build_term_html(
 
     title = f"{article_title or term + 'とは？意味・根拠・試験ポイント'}｜{brand_name()}"
     desc = meta_description(
-        f"{term}（{reading}）の意味、法令・根拠、試験で押さえるポイントを{exam_name()}向けに整理。{short_def or definition}"
+        f"{term}の意味、法令・根拠、試験で押さえるポイントを{exam_name()}向けに整理。{short_def or definition}"
     )
     canonical = public_url(base_url, f"terms/{slug_file}")
     root_idx = rel_to_root(rel_path)
@@ -836,8 +826,6 @@ def build_term_html(
         "inDefinedTermSet": public_url(base_url, "terms/index.html"),
         "dateModified": updated,
     }
-    if reading:
-        defined_term["alternateName"] = reading
     if category:
         defined_term["category"] = category
     defined_term["author"] = {"@type": "Organization", "name": brand_name() + "編集部"}
@@ -924,7 +912,7 @@ def build_term_html(
       <span class="meta-updated">{meta_line}</span>
     </div>
     <h1 class="article-title">{html.escape(article_title or term + 'とは？意味・根拠・試験ポイントを整理')}</h1>
-    <p class="article-lead"><strong>{html.escape(term)}</strong>{f"（{html.escape(reading)}）" if reading else ""}について、定義・根拠・試験での押さえ方をまとめます。{html.escape(article_lead or lead)}</p>
+    <p class="article-lead"><strong>{html.escape(term)}</strong>について、定義・根拠・試験での押さえ方をまとめます。{html.escape(article_lead or lead)}</p>
     {toc_html}
     {quality_html}
     {can_do_html}
@@ -1168,7 +1156,7 @@ def build_terms_index(entries: list[dict], base_url: str) -> str:
       <div class="terms-idx-table-wrap">
         <table class="terms-idx-table">
           <thead><tr>
-            <th scope="col" class="terms-idx-th-term">用語（よみ）</th>
+            <th scope="col" class="terms-idx-th-term">用語</th>
             <th scope="col" class="terms-idx-th-cat">分野</th>
             <th scope="col" class="terms-idx-th-def">定義（抜粋）</th>
           </tr></thead>

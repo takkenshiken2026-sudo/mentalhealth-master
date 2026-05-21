@@ -111,11 +111,8 @@
 
   function rowHtml(item, query) {
     const hrefAttr = ` data-entry-href="${escapeHtml(item.href)}"`;
-    const reading = item.reading
-      ? `<span class="terms-idx-reading">${highlightText(item.reading, query)}</span>`
-      : '';
     return `<tr class="terms-idx-table-row">
-<td class="terms-idx-td-term" data-label="用語（よみ）"${hrefAttr} tabindex="0"><div class="terms-idx-term-cell"><a href="${escapeHtml(item.href)}">${highlightText(item.term, query)}</a>${reading}</div></td>
+<td class="terms-idx-td-term" data-label="用語"${hrefAttr} tabindex="0"><div class="terms-idx-term-cell"><a href="${escapeHtml(item.href)}">${highlightText(item.term, query)}</a></div></td>
 <td class="terms-idx-td-cat" data-label="分野"${hrefAttr}>${escapeHtml(item.category)}</td>
 <td class="terms-idx-td-snippet" data-label="定義（抜粋）"${hrefAttr}>${item.shortDef ? highlightText(item.shortDef, query) : ''}</td>
 </tr>`;

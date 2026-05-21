@@ -2407,11 +2407,6 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
   align-items: baseline;
   gap: 6px 10px;
 }
-.terms-idx-reading {
-  font-size: var(--fs-caption);
-  color: var(--text3);
-  font-weight: 500;
-}
 .terms-idx-snippet {
   display: block;
   width: 100%;
@@ -2604,11 +2599,6 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
 .terms-idx-td-term a:hover {
   text-decoration: underline;
 }
-.terms-idx-reading {
-  color: var(--text3);
-  font-size: var(--fs-caption);
-  line-height: 1.4;
-}
 .terms-idx-td-cat {
   color: var(--text2);
   font-weight: 600;
@@ -2625,9 +2615,6 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
   flex-wrap: wrap;
   align-items: baseline;
   gap: 2px 8px;
-}
-.terms-index-large .terms-idx-reading {
-  font-size: var(--fs-caption);
 }
 /* 定義2行クリップ（table-cell を維持） */
 .terms-index-large .terms-idx-td-snippet {
@@ -2829,11 +2816,6 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
   }
   .terms-idx-table-duo .terms-idx-slot-b.terms-idx-td-term:not(.terms-idx-cell-empty) {
     border-top: 10px solid color-mix(in srgb, var(--bg2) 70%, var(--bg));
-  }
-  .terms-idx-table-duo .terms-idx-reading::before {
-    content: "よみ：";
-    color: var(--text3);
-    margin-right: 2px;
   }
   .terms-idx-table-duo .terms-idx-td-cat::before {
     content: "分野：";
@@ -4283,10 +4265,6 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
   }
   .terms-idx-table:not(.terms-idx-table-duo) .terms-idx-td-term a {
     color: var(--accent-emphasis);
-  }
-  .terms-idx-table:not(.terms-idx-table-duo) .terms-idx-reading::before {
-    content: "よみ：";
-    color: var(--text3);
   }
   .terms-idx-table:not(.terms-idx-table-duo) .terms-idx-td-cat::before {
     content: "分野：";
