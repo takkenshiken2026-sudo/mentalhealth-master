@@ -15,7 +15,6 @@
 
   const q = document.getElementById('q-index-q');
   const chips = $$('.q-index-chip-btn[data-cat]');
-  const tagChips = $$('.q-index-tag-btn[data-tag]');
   const statusChips = $$('.q-index-status-btn[data-status]');
   const viewBtns = $$('.q-index-view-btn[data-view]');
   const hit = document.getElementById('q-index-hit');
@@ -34,7 +33,6 @@
   const catMount = document.getElementById('q-index-cat-mount');
 
   let activeCat = 'all';
-  let activeTag = 'all';
   let activeStatus = 'all';
   let activeView = 'year';
   let page = 1;
@@ -90,16 +88,13 @@
   function itemVisible(item) {
     const tokens = parseSearchTokens(q?.value || '');
     const catOk = activeCat === 'all' || item.category === activeCat;
-    const tagOk =
-      activeTag === 'all' || (item.tags || []).some((t) => norm(t) === norm(activeTag));
-    return catOk && tagOk && matchesSearch(item, tokens) && matchesStatus(item);
+    return catOk && matchesSearch(item, tokens) && matchesStatus(item);
   }
 
   function hasActiveFilters() {
     return (
       !!(q?.value || '').trim() ||
       activeCat !== 'all' ||
-      activeTag !== 'all' ||
       activeStatus !== 'all'
     );
   }
@@ -149,53 +144,34 @@
       .join('');
   }
 
-  function noteCell(item) {
-    const badges = [];
-    if (item.exempt) badges.push('<span class="q-year-table-badge">免除</span>');
-    if (item.invalidated)
-      badges.push('<span class="q-year-table-badge q-year-table-badge-warn">無効</span>');
-    return badges.length ? badges.join('') : '—';
-  }
-
-  function glossaryCell(item) {
-    const links = item.glossary || [];
-    if (!links.length) return '—';
-    return links
-      .map(
-        (g) =>
-          `<a class="q-glossary-link" href="${escapeHtml(g.href)}" onclick="event.stopPropagation()">${escapeHtml(g.label)}</a>`
-      )
-      .join(' ');
-  }
-
   function tagBadges(item) {
-    return (item.tags || [])
-      .map((t) => `<span class="q-tag-badge">${escapeHtml(t)}</span>`)
-      .join('');
+    const tags = item.tags || [];
+    return tags.length
+      ? tags.map((tag) => `<span class="q-tag-badge">${escapeHtml(tag)}</span>`).join('')
+      : '—';
+  }
+
+  function actionLinks(item) {
+    return `<a class="q-row-link" href="${escapeHtml(item.href)}" onclick="event.stopPropagation()">解説</a> <a class="q-row-link q-row-link-app" href="../index.html#past-play-${item.appId}" onclick="event.stopPropagation()">演習</a>`;
   }
 
   function rowHtml(item, query) {
     const preview = item.preview
       ? highlightText(item.preview, query)
       : '<span class="q-year-table-desc--empty">問題文は各ページで確認できます</span>';
-    const appHref = `../index.html#past-play-${item.appId}`;
     return `<tr class="q-year-table-row" tabindex="0" data-app-id="${item.appId}" data-href="${escapeHtml(item.href)}" data-category="${escapeHtml(item.category)}">
 <td class="q-year-table-no" data-label="問"><a href="${escapeHtml(item.href)}" onclick="event.stopPropagation()">第${item.qno}問</a></td>
 <td class="q-year-table-cat" data-label="分野">${escapeHtml(item.category)}</td>
-<td class="q-year-table-tags" data-label="タグ">${tagBadges(item) || '—'}</td>
+<td class="q-year-table-tags" data-label="タグ">${tagBadges(item)}</td>
 <td class="q-year-table-desc" data-label="問題文">${preview}</td>
-<td class="q-year-table-gloss" data-label="用語">${glossaryCell(item)}</td>
-<td class="q-year-table-note" data-label="備考">${noteCell(item)}</td>
-<td class="q-year-table-action" data-label="操作">
-<a class="q-row-link" href="${escapeHtml(item.href)}" onclick="event.stopPropagation()">解説</a>
-<a class="q-row-link q-row-link-app" href="${escapeHtml(appHref)}" onclick="event.stopPropagation()">演習</a>
-</td></tr>`;
+<td class="q-year-table-action" data-label="操作">${actionLinks(item)}</td>
+</tr>`;
   }
 
   function tableHead() {
     return `<thead><tr>
 <th scope="col">問</th><th scope="col">分野</th><th scope="col">タグ</th>
-<th scope="col">問題文（抜粋）</th><th scope="col">用語</th><th scope="col">備考</th><th scope="col">操作</th>
+<th scope="col">問題文（抜粋）</th><th scope="col">操作</th>
 </tr></thead>`;
   }
 
@@ -225,7 +201,6 @@
     const query = (q?.value || '').trim();
     if (query) tags.push({ type: 'q', label: `検索: ${query}` });
     if (activeCat !== 'all') tags.push({ type: 'cat', label: activeCat });
-    if (activeTag !== 'all') tags.push({ type: 'tag', label: `タグ: ${activeTag}` });
     if (activeStatus !== 'all') {
       const labels = {
         wrong: '不正解のみ',
@@ -257,10 +232,6 @@
           activeCat = 'all';
           chips.forEach((b) => b.classList.toggle('on', (b.dataset.cat || 'all') === 'all'));
         }
-        if (t === 'tag') {
-          activeTag = 'all';
-          tagChips.forEach((b) => b.classList.toggle('on', (b.dataset.tag || 'all') === 'all'));
-        }
         if (t === 'status') {
           activeStatus = 'all';
           statusChips.forEach((b) => b.classList.toggle('on', (b.dataset.status || 'all') === 'all'));
@@ -277,7 +248,6 @@
       const query = (q?.value || '').trim();
       if (query) params.set('q', query);
       if (activeCat !== 'all') params.set('cat', activeCat);
-      if (activeTag !== 'all') params.set('tag', activeTag);
       if (activeStatus !== 'all') params.set('status', activeStatus);
       if (page > 1) params.set('page', String(page));
       const qs = params.toString();
@@ -290,12 +260,10 @@
     const params = new URLSearchParams(location.search);
     if (params.has('q') && q) q.value = params.get('q') || '';
     activeCat = params.get('cat') || 'all';
-    activeTag = params.get('tag') || 'all';
     activeStatus = params.get('status') || 'all';
     activeView = 'year';
     page = Math.max(1, parseInt(params.get('page') || '1', 10) || 1);
     chips.forEach((b) => b.classList.toggle('on', (b.dataset.cat || 'all') === activeCat));
-    tagChips.forEach((b) => b.classList.toggle('on', (b.dataset.tag || 'all') === activeTag));
     statusChips.forEach((b) => b.classList.toggle('on', (b.dataset.status || 'all') === activeStatus));
   }
 
@@ -439,11 +407,9 @@ ${items.map((it) => rowHtml(it, query)).join('')}
   function resetAll() {
     if (q) q.value = '';
     activeCat = 'all';
-    activeTag = 'all';
     activeStatus = 'all';
     page = 1;
     chips.forEach((b) => b.classList.toggle('on', (b.dataset.cat || 'all') === 'all'));
-    tagChips.forEach((b) => b.classList.toggle('on', (b.dataset.tag || 'all') === 'all'));
     statusChips.forEach((b) => b.classList.toggle('on', (b.dataset.status || 'all') === 'all'));
     apply();
     q?.focus();
@@ -503,15 +469,6 @@ ${items.map((it) => rowHtml(it, query)).join('')}
       chips.forEach((b) => b.classList.remove('on'));
       btn.classList.add('on');
       activeCat = btn.dataset.cat || 'all';
-      page = 1;
-      apply();
-    });
-  });
-  tagChips.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      tagChips.forEach((b) => b.classList.remove('on'));
-      btn.classList.add('on');
-      activeTag = btn.dataset.tag || 'all';
       page = 1;
       apply();
     });

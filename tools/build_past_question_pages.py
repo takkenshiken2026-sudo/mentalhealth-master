@@ -241,26 +241,6 @@ def build_index_table_row(page: dict) -> str:
         if preview
         else '<span class="q-year-table-desc--empty">問題文は各ページで確認できます</span>'
     )
-    tag_html = "".join(
-        f'<span class="q-tag-badge">{html.escape(t)}</span>' for t in (page.get("tags") or [])
-    )
-    gloss = page.get("glossary_links") or []
-    gloss_html = (
-        " ".join(
-            f'<a class="q-glossary-link" href="{html.escape(g["href"])}" onclick="event.stopPropagation()">'
-            f"{html.escape(g['label'])}</a>"
-            for g in gloss
-        )
-        if gloss
-        else "—"
-    )
-    badges = []
-    if page.get("is_exempt"):
-        badges.append('<span class="q-year-table-badge">免除</span>')
-    if page.get("is_invalidated"):
-        badges.append('<span class="q-year-table-badge q-year-table-badge-warn">無効</span>')
-    note_cell = "".join(badges) if badges else "—"
-    app_href = html.escape(f"../index.html#past-play-{page['app_id']}")
     return (
         '<tr class="q-year-table-row" tabindex="0"'
         f' data-app-id="{page["app_id"]}"'
@@ -268,14 +248,8 @@ def build_index_table_row(page: dict) -> str:
         f' data-category="{html.escape(page["category"], quote=True)}">'
         f'<td class="q-year-table-no" data-label="問"><a href="{href}">{html.escape(label)}</a></td>'
         f'<td class="q-year-table-cat" data-label="分野">{html.escape(page["category"])}</td>'
-        f'<td class="q-year-table-tags" data-label="タグ">{tag_html or "—"}</td>'
         f'<td class="q-year-table-desc" data-label="問題文">{preview_cell}</td>'
-        f'<td class="q-year-table-gloss" data-label="用語">{gloss_html}</td>'
-        f'<td class="q-year-table-note" data-label="備考">{note_cell}</td>'
-        f'<td class="q-year-table-action" data-label="操作">'
-        f'<a class="q-row-link" href="{href}">解説</a> '
-        f'<a class="q-row-link q-row-link-app" href="{app_href}">演習</a>'
-        "</td></tr>"
+        "</tr>"
     )
 
 
@@ -337,21 +311,24 @@ def parse_explanation_choices(raw: str) -> dict[int, str]:
 
 
 CATEGORY_STUDY_HINTS: dict[str, str] = {
-    "法令・制度": (
-        "試験制度は年度で見直されることがあります。受験要項や公式発表を定期的に確認し、"
-        "関連用語は用語解説で意味を押さえてから過去問に戻ると定着しやすくなります。"
+    "基礎・役割": (
+        "管理監督者の役割・法令の趣旨・ストレスの基礎知識は、用語の定義と"
+        "「誰が・何を・どこまで」がセットで出題されます。間違えた肢は正答との"
+        "違い（根拠法令・対象範囲・責任の所在）をメモし、関連用語から解き直すと定着します。"
     ),
-    "契約・実務": (
-        "実務・学習法の問題は「何が学習として適切か」を問う形式が多いです。"
-        "間違えた問題は復習リストに残し、用語の意味を確認しながら解き直してください。"
+    "職場環境・配慮": (
+        "職場の配慮・リスク要因の問題は、具体策と「誰が担うか」を対にして覚えると得点しやすくなります。"
+        "数値基準や手順は表に整理し、同年の過去問で実務イメージを補強してください。"
     ),
-    "設備・その他": (
-        "数字・期限・例外は表や比較で整理すると復習効率が上がります。"
-        "分野横断の用語は用語解説の分野別一覧から関連語をたどると理解が深まります。"
+    "相談・連携・復職": (
+        "面談・医療連携・復職支援は手順と禁止事項（やってはいけないこと）の区別が重要です。"
+        "正答肢のキーワードを用語解説で確認してから、同分野の過去問に戻ると理解が深まります。"
     ),
 }
 
-DEFAULT_WRONG_CHOICE_NOTE = "問題文の趣旨・試験制度の基本に照らすと誤りです。"
+DEFAULT_WRONG_CHOICE_NOTE = (
+    "正答肢の論点・解説の根拠と照らすと、この記述は設問が求める内容と一致しません。"
+)
 
 
 def split_legacy_explanation(exp: str) -> tuple[str, str]:
@@ -864,8 +841,8 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
             f'<div class="q-year-table-wrap" id="year-body-{y}">'
             f'<table class="q-year-table" aria-labelledby="year-{y}-heading">'
             "<thead><tr>"
-            '<th scope="col">問</th><th scope="col">分野</th><th scope="col">タグ</th>'
-            '<th scope="col">問題文（抜粋）</th><th scope="col">用語</th><th scope="col">備考</th><th scope="col">操作</th>'
+            '<th scope="col">問</th><th scope="col">分野</th>'
+            '<th scope="col">問題文（抜粋）</th>'
             "</tr></thead>"
             f"<tbody>{rows_html}</tbody>"
             "</table></div></section>"
@@ -978,8 +955,8 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
           <div class="q-year-table-wrap">
             <table class="q-year-table">
               <thead><tr>
-                <th scope="col">問</th><th scope="col">分野</th><th scope="col">タグ</th>
-                <th scope="col">問題文（抜粋）</th><th scope="col">用語</th><th scope="col">備考</th><th scope="col">操作</th>
+                <th scope="col">問</th><th scope="col">分野</th>
+                <th scope="col">問題文（抜粋）</th>
               </tr></thead>
               <tbody id="q-index-flat-body"></tbody>
             </table>
