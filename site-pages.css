@@ -18,6 +18,10 @@
   --fs-body: 16px;
   --fs-h2: 19px;
   --fs-title: 24px;
+  /* 過去問静的ページ（個別・一覧） */
+  --fs-q-page-title: 20px;
+  --fs-q-section: 18px;
+  --fs-q-subhead: 15px;
   --sel: #333333;
   --accent: #333333;
   --accent-text: #ffffff;
@@ -660,7 +664,7 @@ a.site-page-brand:hover {
 }
 .q-meta-line {
   margin: 0 0 8px;
-  font-size: var(--fs-caption);
+  font-size: var(--fs-small);
   font-weight: 700;
   color: var(--text2);
 }
@@ -672,20 +676,20 @@ a.site-page-brand:hover {
   line-height: 1.75;
 }
 .q-meta code {
-  font-size: var(--fs-caption);
+  font-size: var(--fs-small);
   background: var(--bg2);
   padding: 2px 6px;
   border-radius: 4px;
 }
 .q-h1 {
-  font-size: var(--fs-h2);
+  font-size: var(--fs-q-page-title);
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.45;
 }
 .q-h2 {
-  font-size: var(--fs-body);
-  font-weight: 600;
+  font-size: var(--fs-q-section);
+  font-weight: 700;
   margin: 0 0 10px;
   color: var(--ink);
 }
@@ -721,8 +725,22 @@ a.site-page-brand:hover {
 .site-page-wrap .q-static-main .q-hub-links {
   margin-bottom: 18px;
 }
+/* 過去問ページ表示時 — 共通シェルの極小文字を 12px 以上に */
+body:has(.q-static-main) .topnav-logo-sub,
+body.q-index-page .topnav-logo-sub {
+  font-size: var(--fs-caption);
+}
+body:has(.q-static-main) .site-footer-legal a,
+body.q-index-page .site-footer-legal a {
+  font-size: var(--fs-caption);
+}
+body:has(.q-static-main) .site-footer-copy,
+body.q-index-page .site-footer-copy {
+  font-size: var(--fs-caption);
+}
 .q-stem,
 .q-exp {
+  font-size: var(--fs-body);
   white-space: normal;
   word-break: break-word;
 }
@@ -742,7 +760,7 @@ a.site-page-brand:hover {
   border-top: none;
 }
 .q-exp-h3 {
-  font-size: var(--fs-sub);
+  font-size: var(--fs-q-subhead);
   font-weight: 700;
   margin: 0 0 8px;
   color: var(--ink);
@@ -787,10 +805,11 @@ a.site-page-brand:hover {
   margin: 4px 0;
   color: var(--text);
   font-weight: 600;
+  font-size: var(--fs-body);
 }
 .q-exp-choice-note {
   display: block;
-  font-size: var(--fs-caption);
+  font-size: var(--fs-small);
   color: var(--text2);
 }
 .q-related .related-box {
@@ -800,6 +819,9 @@ a.site-page-brand:hover {
   background: transparent;
   max-width: none;
   width: 100%;
+}
+.q-related .related-link {
+  font-size: var(--fs-small);
 }
 .q-related .related-links,
 .q-related-list {
@@ -823,7 +845,7 @@ a.site-page-brand:hover {
   border-radius: var(--r);
   text-decoration: none;
   color: var(--text);
-  font-size: var(--fs-sub);
+  font-size: var(--fs-small);
   border: 1px solid var(--border);
   transition: background 0.15s, border-color 0.15s;
 }
@@ -845,7 +867,7 @@ a.site-page-brand:hover {
 .q-badge {
   display: inline-block;
   padding: 4px 10px;
-  font-size: var(--fs-caption);
+  font-size: var(--fs-small);
   font-weight: 600;
   border-radius: var(--r);
   background: var(--bg2);
@@ -884,7 +906,7 @@ a.site-page-brand:hover {
   margin-bottom: 8px;
 }
 .q-opt-num {
-  font-weight: 600;
+  font-weight: 700;
   margin-right: 4px;
 }
 .q-answer strong {
@@ -1415,8 +1437,8 @@ a.site-page-brand:hover {
   border: 1px solid var(--border);
   background: var(--bg);
   box-shadow: var(--sh);
-  font-size: 18px;
-  font-weight: 800;
+  font-size: var(--fs-q-section);
+  font-weight: 700;
   color: var(--ink);
   cursor: pointer;
   opacity: 0;
@@ -1446,13 +1468,13 @@ a.site-page-brand:hover {
   border-radius: 999px;
   background: var(--bg2);
   border: 1px solid var(--border);
-  font-size: 10px;
+  font-size: var(--fs-caption);
   font-weight: 700;
   line-height: 1.2;
   color: var(--text2);
 }
 .q-year-table-gloss {
-  font-size: var(--fs-caption);
+  font-size: var(--fs-small);
   min-width: 88px;
 }
 .q-glossary-link {
@@ -1623,11 +1645,11 @@ a.site-page-brand:hover {
   width: 1%;
   color: var(--text);
   font-weight: 700;
-  font-size: var(--fs-caption);
+  font-size: var(--fs-small);
 }
 .q-year-table-desc {
   color: var(--text2);
-  font-size: var(--fs-caption);
+  font-size: var(--fs-small);
   line-height: 1.55;
   min-width: 200px;
 }
@@ -1638,7 +1660,7 @@ a.site-page-brand:hover {
   white-space: nowrap;
   width: 1%;
   color: var(--text3);
-  font-size: var(--fs-caption);
+  font-size: var(--fs-small);
 }
 .q-year-table-badge {
   display: inline-flex;
@@ -1648,8 +1670,8 @@ a.site-page-brand:hover {
   background: var(--bg);
   border: 1px solid var(--border);
   color: var(--text2);
-  font-size: 10px;
-  font-weight: 800;
+  font-size: var(--fs-caption);
+  font-weight: 700;
   line-height: 1.2;
 }
 .q-year-table-badge-warn {
@@ -1665,7 +1687,7 @@ a.site-page-brand:hover {
 .q-year-table-action a {
   color: var(--accent-emphasis);
   font-weight: 700;
-  font-size: var(--fs-caption);
+  font-size: var(--fs-small);
   text-decoration: none;
 }
 .q-year-table-action a:hover {
@@ -3311,7 +3333,7 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
 .past-index-head p {
   margin: 0;
   color: var(--ink);
-  font-size: var(--fs-sub);
+  font-size: var(--fs-small);
 }
 .past-index-hit {
   flex: 0 0 auto;
@@ -3321,7 +3343,7 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent-emphasis);
-  font-size: var(--fs-caption);
+  font-size: var(--fs-small);
   font-weight: 700;
   padding: 6px 10px;
 }
@@ -4131,8 +4153,8 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
   .q-year-table td::before {
     content: attr(data-label);
     color: var(--text3);
-    font-size: 10px;
-    font-weight: 800;
+    font-size: var(--fs-caption);
+    font-weight: 700;
     letter-spacing: 0.06em;
   }
   .q-year-table-no::before,

@@ -22,6 +22,8 @@ def main() -> int:
     run([py, "tools/apply_site_config.py"])
     run([py, "tools/csv_to_exam_site_past_js.py"])
     run([py, "tools/csv_to_exam_site_ichimondou_js.py"])
+    run([py, "tools/validate_ichimon_statements.py"])
+    run([py, "tools/csv_to_eisei_ichimon_js.py"])
     run([py, "tools/build_past_question_pages.py"])
     run([py, "tools/build_article_pages.py"])
     run([py, "tools/build_glossary_pages.py"])

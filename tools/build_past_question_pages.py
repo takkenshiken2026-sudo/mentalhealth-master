@@ -137,7 +137,7 @@ def page_meta_description(page: dict) -> str:
     return meta_description(lead + "選択肢と解説を掲載しています。", 155)
 
 
-Q_INDEX_CSS_VER = "20260521-index-layout"
+Q_INDEX_CSS_VER = "20260521-q-type-scale"
 
 GLOSSARY_CSV = ROOT / "data" / "glossary_terms.csv"
 
