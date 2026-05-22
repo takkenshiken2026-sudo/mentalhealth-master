@@ -183,7 +183,7 @@ def build_hub(ch: dict, terms: list[dict], rel_path: Path, base: str) -> str:
 {json.dumps(ld, ensure_ascii=False, indent=2)}
 </script>
 </head>
-<body class="site-page">
+<body class="chapter-hub-page">
 {site_page_wrap_open()}
 {page_header}
 {page_breadcrumb}
@@ -263,7 +263,7 @@ def main() -> int:
 <link rel="stylesheet" href="{rel_css(rel)}">
 <link rel="stylesheet" href="{rel_theme_css(rel)}">
 </head>
-<body class="site-page">
+<body class="chapter-hub-page">
 {site_page_wrap_open()}
 {page_header}
 {page_breadcrumb}

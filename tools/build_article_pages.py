@@ -418,7 +418,7 @@ def build_article_html(article: dict[str, str], by_slug: dict[str, dict[str, str
 <link rel="stylesheet" href="{html.escape(css_href(rel_path, "site-pages.css"))}">
 <link rel="stylesheet" href="{html.escape(css_href(rel_path, "site-theme.css"))}">
 </head>
-<body>
+<body class="guide-article-page">
 {site_page_wrap_open()}
 {site_page_header(rel_path, current="articles")}
 <main class="seo-article-main">
@@ -564,7 +564,7 @@ def build_index_html(articles: list[dict[str, str]]) -> str:
 <link rel="stylesheet" href="../site-pages.css">
 <link rel="stylesheet" href="../site-theme.css">
 </head>
-<body>
+<body class="articles-index-page">
 {site_page_wrap_open()}
 {site_page_header(rel_path, current="articles")}
 <main class="site-page-main">

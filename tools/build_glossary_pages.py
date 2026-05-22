@@ -928,7 +928,7 @@ def build_term_html(
 <link rel="stylesheet" href="{html.escape(css_href)}">
 <link rel="stylesheet" href="{html.escape(theme_href)}">
 </head>
-<body>
+<body class="term-article-page">
 {site_page_wrap_open()}
 {page_header}
 <main class="seo-article-main">
@@ -1028,7 +1028,7 @@ def build_field_hub_html(
 <link rel="stylesheet" href="{html.escape(rel_css(rel_path))}">
 <link rel="stylesheet" href="{html.escape(rel_theme_css(rel_path))}">
 </head>
-<body>
+<body class="terms-field-hub-page">
 {site_page_wrap_open()}
 {page_header}
 <main class="site-page-main terms-idx-main">

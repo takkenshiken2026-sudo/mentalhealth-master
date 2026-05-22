@@ -4336,3 +4336,383 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
     min-width: calc(50% - 4px);
   }
 }
+/* === サイトページ種 タイポグラフィ・文字色 ===
+   用語・過去問4種 + 試験ガイド記事/一覧、用語分野ハブ、静的、7章ハブ
+   site-theme.css の --text 上書きもここで吸収（#121212 に統一） */
+.terms-index-page,
+.term-article-page,
+.q-index-page,
+.q-static-page,
+.guide-article-page,
+.articles-index-page,
+.terms-field-hub-page,
+.site-static-page,
+.chapter-hub-page {
+  --text: #121212;
+  --ink: #333333;
+  --text2: #555555;
+  --text3: #999999;
+  --on-dark: #ffffff;
+}
+
+.terms-index-page .site-page-header-crumb .q-breadcrumb,
+.term-article-page .site-page-header-crumb .q-breadcrumb,
+.q-index-page .site-page-header-crumb .q-breadcrumb,
+.q-static-page .site-page-header-crumb .q-breadcrumb,
+.guide-article-page .site-page-header-crumb .q-breadcrumb,
+.articles-index-page .site-page-header-crumb .q-breadcrumb,
+.terms-field-hub-page .site-page-header-crumb .q-breadcrumb,
+.site-static-page .site-page-header-crumb .q-breadcrumb,
+.chapter-hub-page .site-page-header-crumb .q-breadcrumb {
+  font-size: var(--fs-small);
+  color: var(--text3);
+}
+.terms-index-page .site-page-header-crumb .q-breadcrumb a,
+.term-article-page .site-page-header-crumb .q-breadcrumb a,
+.q-index-page .site-page-header-crumb .q-breadcrumb a,
+.q-static-page .site-page-header-crumb .q-breadcrumb a,
+.guide-article-page .site-page-header-crumb .q-breadcrumb a,
+.articles-index-page .site-page-header-crumb .q-breadcrumb a,
+.terms-field-hub-page .site-page-header-crumb .q-breadcrumb a,
+.site-static-page .site-page-header-crumb .q-breadcrumb a,
+.chapter-hub-page .site-page-header-crumb .q-breadcrumb a {
+  color: var(--text3);
+}
+.terms-index-page .site-page-header-crumb .q-breadcrumb a:hover,
+.term-article-page .site-page-header-crumb .q-breadcrumb a:hover,
+.q-index-page .site-page-header-crumb .q-breadcrumb a:hover,
+.q-static-page .site-page-header-crumb .q-breadcrumb a:hover,
+.guide-article-page .site-page-header-crumb .q-breadcrumb a:hover,
+.articles-index-page .site-page-header-crumb .q-breadcrumb a:hover,
+.terms-field-hub-page .site-page-header-crumb .q-breadcrumb a:hover,
+.site-static-page .site-page-header-crumb .q-breadcrumb a:hover,
+.chapter-hub-page .site-page-header-crumb .q-breadcrumb a:hover {
+  color: var(--text2);
+}
+.terms-index-page .site-page-header-crumb .q-breadcrumb li[aria-current="page"],
+.term-article-page .site-page-header-crumb .q-breadcrumb li[aria-current="page"],
+.q-index-page .site-page-header-crumb .q-breadcrumb li[aria-current="page"],
+.q-static-page .site-page-header-crumb .q-breadcrumb li[aria-current="page"],
+.guide-article-page .site-page-header-crumb .q-breadcrumb li[aria-current="page"],
+.articles-index-page .site-page-header-crumb .q-breadcrumb li[aria-current="page"],
+.terms-field-hub-page .site-page-header-crumb .q-breadcrumb li[aria-current="page"],
+.site-static-page .site-page-header-crumb .q-breadcrumb li[aria-current="page"],
+.chapter-hub-page .site-page-header-crumb .q-breadcrumb li[aria-current="page"] {
+  color: var(--text2);
+  font-weight: 500;
+}
+
+.terms-index-page .site-page-main > h1,
+.q-index-page .site-page-main > h1 {
+  color: var(--text);
+  font-size: var(--fs-title);
+}
+.terms-index-page .site-page-lead,
+.q-index-page .site-page-lead {
+  color: var(--ink);
+  font-size: var(--fs-body);
+  font-weight: 500;
+}
+.terms-index-page .terms-index-head h2,
+.q-index-page .past-index-head h2 {
+  color: var(--text);
+  font-size: var(--fs-h2);
+}
+.terms-index-page .terms-index-head p,
+.q-index-page .past-index-head p {
+  color: var(--ink);
+  font-size: var(--fs-sub);
+}
+.terms-index-page .terms-index-hit,
+.q-index-page .past-index-hit {
+  font-size: var(--fs-caption);
+}
+.terms-index-page .terms-index-search,
+.q-index-page .past-index-search {
+  color: var(--text2);
+  font-size: var(--fs-small);
+}
+.terms-index-page .terms-index-search input,
+.q-index-page .past-index-search input {
+  color: var(--ink);
+  font-size: var(--fs-body);
+}
+.terms-index-page .terms-index-tools .terms-idx-chip,
+.terms-index-page .terms-index-tools .terms-idx-reset {
+  font-size: var(--fs-caption);
+}
+.terms-index-page .terms-idx-chip b {
+  font-size: var(--fs-tiny);
+}
+.terms-index-page .terms-idx-table thead th {
+  color: var(--on-dark);
+}
+.terms-index-page .terms-idx-table td {
+  color: var(--ink);
+  font-size: var(--fs-sub);
+}
+.terms-index-page .terms-idx-td-term a {
+  color: var(--ink);
+}
+.terms-index-page .terms-idx-td-cat {
+  color: var(--text2);
+  font-size: var(--fs-caption);
+}
+.terms-index-page .terms-idx-td-snippet {
+  color: var(--text2);
+  font-size: var(--fs-sub);
+}
+.terms-index-page .terms-idx-page-title {
+  font-size: var(--fs-title);
+  color: var(--text);
+}
+
+.term-article-page .article-title,
+.guide-article-page .article-title {
+  color: var(--text);
+  font-size: var(--fs-title);
+}
+.term-article-page .meta-updated,
+.guide-article-page .meta-updated {
+  color: var(--text3);
+  font-size: var(--fs-caption);
+}
+.term-article-page .article-lead,
+.guide-article-page .article-lead {
+  color: var(--ink);
+  font-size: var(--fs-body);
+}
+.term-article-page .article-body h2,
+.guide-article-page .article-body h2 {
+  color: var(--text);
+  font-size: var(--fs-h2);
+}
+.term-article-page .article-body h3,
+.guide-article-page .article-body h3 {
+  color: var(--ink);
+  font-size: var(--fs-body);
+}
+.term-article-page .article-body p,
+.term-article-page .article-body li,
+.guide-article-page .article-body p,
+.guide-article-page .article-body li {
+  color: var(--ink);
+  font-size: var(--fs-body);
+}
+.term-article-page .article-body th,
+.guide-article-page .article-body th {
+  color: var(--on-dark);
+}
+.term-article-page .article-body td,
+.guide-article-page .article-body td {
+  color: var(--text);
+  font-size: var(--fs-sub);
+}
+.term-article-page .seo-toc h2,
+.guide-article-page .seo-toc h2 {
+  color: var(--text);
+  font-size: var(--fs-h2);
+}
+.term-article-page .seo-toc a,
+.guide-article-page .seo-toc a {
+  color: var(--ink);
+  font-size: var(--fs-sub);
+}
+
+.q-index-page .q-year-table thead th {
+  color: var(--on-dark);
+}
+.q-index-page .q-year-table td {
+  color: var(--ink);
+  font-size: var(--fs-sub);
+}
+.q-index-page .q-year-table-cat {
+  color: var(--text2);
+  font-size: var(--fs-caption);
+}
+.q-index-page .q-year-table-desc {
+  color: var(--text2);
+  font-size: var(--fs-caption);
+}
+.q-index-page .q-year-table-badge {
+  font-size: var(--fs-tiny);
+}
+.q-index-page .q-index-chips-label,
+.q-index-page .past-index-tools .q-index-chips-label {
+  color: var(--text2);
+  font-size: var(--fs-caption);
+}
+.q-index-page .q-index-filter-opt,
+.q-index-page .past-index-tools .q-index-filter-opt {
+  font-size: var(--fs-caption);
+}
+.q-index-page .q-index-year-head h2 {
+  color: var(--text);
+  font-size: var(--fs-h2);
+}
+
+.q-static-page .q-static-main {
+  color: var(--ink);
+}
+.q-static-page .q-h1 {
+  color: var(--text);
+  font-size: var(--fs-h2);
+}
+.q-static-page .q-page-lead,
+.q-static-page .q-stem,
+.q-static-page .q-exp,
+.q-static-page .q-exp-section p,
+.q-static-page .q-opts,
+.q-static-page .q-exp-choice-list li {
+  color: var(--ink);
+  font-size: var(--fs-body);
+}
+.q-static-page .q-meta,
+.q-static-page .q-meta-line {
+  color: var(--text2);
+  font-size: var(--fs-caption);
+}
+.q-static-page .q-h2 {
+  color: var(--ink);
+  font-size: var(--fs-body);
+}
+.q-static-page .q-exp-h3 {
+  color: var(--ink);
+  font-size: var(--fs-sub);
+}
+.q-static-page .q-badge,
+.q-static-page .q-exp-choice-note {
+  font-size: var(--fs-caption);
+  color: var(--text2);
+}
+.q-static-page .q-static-footer {
+  color: var(--text3);
+  font-size: var(--fs-caption);
+}
+.q-static-page .q-static-footer-nav a {
+  color: var(--text2);
+  font-size: var(--fs-small);
+}
+
+/* 試験ガイド一覧 */
+.articles-index-page .site-page-main > h1 {
+  color: var(--text);
+  font-size: var(--fs-title);
+}
+.articles-index-page .site-page-lead {
+  color: var(--ink);
+  font-size: var(--fs-body);
+  font-weight: 500;
+}
+.articles-index-page .article-index-head h2 {
+  color: var(--text);
+  font-size: var(--fs-h2);
+}
+.articles-index-page .article-index-head p {
+  color: var(--ink);
+  font-size: var(--fs-sub);
+}
+.articles-index-page .article-index-search {
+  color: var(--text2);
+  font-size: var(--fs-small);
+}
+.articles-index-page .article-index-search input {
+  color: var(--ink);
+  font-size: var(--fs-body);
+}
+.articles-index-page .article-index-chip {
+  font-size: var(--fs-caption);
+}
+.articles-index-page .article-index-card h2 {
+  color: var(--text);
+  font-size: var(--fs-h2);
+}
+.articles-index-page .article-index-card p {
+  color: var(--ink);
+  font-size: var(--fs-sub);
+}
+.articles-index-page .article-index-card-tags {
+  color: var(--text2);
+  font-size: var(--fs-caption);
+}
+.articles-index-page .article-index-empty {
+  color: var(--ink);
+  font-size: var(--fs-sub);
+}
+
+/* 用語分野ハブ */
+.terms-field-hub-page .terms-idx-page-title {
+  color: var(--text);
+  font-size: var(--fs-title);
+}
+.terms-field-hub-page .terms-idx-lead {
+  color: var(--ink);
+  font-size: var(--fs-body);
+}
+.terms-field-hub-page .terms-idx-list a {
+  color: var(--ink);
+  font-size: var(--fs-sub);
+}
+
+/* 静的ページ（about / privacy / related-sites） */
+.site-static-page .site-page-main > h1 {
+  color: var(--text);
+  font-size: var(--fs-title);
+}
+.site-static-page .site-page-lead {
+  color: var(--ink);
+  font-size: var(--fs-body);
+  font-weight: 500;
+}
+.site-static-page .site-page-section h2 {
+  color: var(--text);
+  font-size: var(--fs-h2);
+}
+.site-static-page .site-page-section p,
+.site-static-page .site-page-section li {
+  color: var(--ink);
+  font-size: var(--fs-body);
+}
+.site-static-page .site-page-section th {
+  color: var(--on-dark);
+}
+.site-static-page .site-page-section td {
+  color: var(--text);
+  font-size: var(--fs-sub);
+}
+.site-static-page .site-page-note {
+  color: var(--text2);
+  font-size: var(--fs-small);
+}
+
+/* 7章ハブ（mentalhealth-master 等） */
+.chapter-hub-page .article-title {
+  color: var(--text);
+  font-size: var(--fs-title);
+}
+.chapter-hub-page .article-lead {
+  color: var(--ink);
+  font-size: var(--fs-body);
+}
+.chapter-hub-page .seo-article-section h2 {
+  color: var(--text);
+  font-size: var(--fs-h2);
+}
+.chapter-hub-page .seo-article-section p,
+.chapter-hub-page .seo-article-section li {
+  color: var(--ink);
+  font-size: var(--fs-body);
+}
+.chapter-hub-page .terms-idx-list a,
+.chapter-hub-page .chapter-hub-list a {
+  color: var(--ink);
+  font-size: var(--fs-sub);
+}
+.chapter-hub-page .seo-action-box h2 {
+  color: var(--text);
+  font-size: var(--fs-h2);
+}
+.chapter-hub-page .seo-action-box li {
+  color: var(--ink);
+  font-size: var(--fs-body);
+}

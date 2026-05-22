@@ -754,7 +754,7 @@ def build_question_html(
 {json.dumps(json_ld, ensure_ascii=False, indent=2)}
 </script>
 </head>
-<body>
+<body class="q-static-page">
 {site_page_wrap_open()}
 {site_header}
 <main class="q-static-main">
