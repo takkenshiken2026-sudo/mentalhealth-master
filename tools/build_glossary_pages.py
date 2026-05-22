@@ -442,6 +442,7 @@ def guide_related_link_items(
     guides: list[dict[str, str]],
     *,
     limit: int = 3,
+    term_count: int | None = None,
 ) -> list[str]:
     if not guides:
         return []
@@ -455,9 +456,12 @@ def guide_related_link_items(
             slug = g["slug"]
             if slug not in seen:
                 seen.add(slug)
+                title = g["title"]
+                if term_count is not None and "289語" in title:
+                    title = title.replace("289語", f"{term_count}語")
                 picked.append(
                     f'<a class="related-link" href="{html.escape(footer_href(rel_path, f"articles/{slug}/index.html"))}">'
-                    f"{html.escape(g['title'])}</a>"
+                    f"{html.escape(title)}</a>"
                 )
         if len(picked) >= limit:
             return picked
@@ -468,9 +472,12 @@ def guide_related_link_items(
         if not g or slug in seen:
             continue
         seen.add(slug)
+        title = g["title"]
+        if term_count is not None and "289語" in title:
+            title = title.replace("289語", f"{term_count}語")
         picked.append(
             f'<a class="related-link" href="{html.escape(footer_href(rel_path, f"articles/{slug}/index.html"))}">'
-            f"{html.escape(g['title'])}</a>"
+            f"{html.escape(title)}</a>"
         )
     return picked
 
@@ -480,6 +487,9 @@ def next_links_html(
     field_hub: str | None,
     category: str,
     guide_links: list[str],
+    *,
+    practice_question: str = "",
+    practice_question_label: str = "",
 ) -> str:
     links = [
         f'<a class="related-link" href="{html.escape(footer_href(rel_path, "terms/index.html"))}">用語解説一覧へ戻る</a>',
@@ -488,6 +498,13 @@ def next_links_html(
         links.append(
             f'<a class="related-link" href="{html.escape(footer_href(rel_path, f"terms/{field_hub}/index.html"))}">'
             f"{html.escape(category)}の用語一覧</a>"
+        )
+    pq = norm(practice_question)
+    if pq and re.fullmatch(r"y\d{4}/q\d{1,3}", pq):
+        label = norm(practice_question_label) or "関連する演習問題"
+        links.append(
+            f'<a class="related-link" href="{html.escape(footer_href(rel_path, f"q/past/{pq}/index.html"))}">'
+            f"{html.escape(label)}</a>"
         )
     links.append(
         f'<a class="related-link" href="{html.escape(footer_href(rel_path, "index.html"))}#past">過去問演習で確認する</a>'
@@ -602,6 +619,8 @@ def build_term_html(
     term_lookup: dict[str, str],
     entries: list[dict],
     guides: list[dict[str, str]],
+    *,
+    term_count: int,
 ) -> str:
     term = entry["term"]
     reading = entry["reading"]
@@ -622,6 +641,8 @@ def build_term_html(
     memory_tip = norm(entry.get("memory_tip"))
     example_question = norm(entry.get("example_question"))
     example_answer = norm(entry.get("example_answer"))
+    practice_question = norm(entry.get("practice_question"))
+    practice_question_label = norm(entry.get("practice_question_label"))
 
     title = f"{article_title or term + 'とは？意味・根拠・試験ポイント'}｜{brand_name()}"
     desc = meta_description(
@@ -637,7 +658,7 @@ def build_term_html(
     rel_html = related_terms_html(
         rel_path, related, term_lookup, current=entry, entries=entries
     )
-    guide_links = guide_related_link_items(rel_path, category, guides)
+    guide_links = guide_related_link_items(rel_path, category, guides, term_count=term_count)
 
     def text_paragraphs(body: str) -> str:
         if not body.strip():
@@ -814,7 +835,14 @@ def build_term_html(
         f"<ol>{toc_links}</ol></nav>"
     )
 
-    next_links = next_links_html(rel_path, field_hub or None, category, guide_links)
+    next_links = next_links_html(
+        rel_path,
+        field_hub or None,
+        category,
+        guide_links,
+        practice_question=practice_question,
+        practice_question_label=practice_question_label,
+    )
 
     official_links_ld = external_links() or [primary_external_link()]
     defined_term: dict = {
@@ -1239,6 +1267,8 @@ def main() -> int:
                 "faq_2_answer": norm(row.get("faq_2_answer")),
                 "faq_3_question": norm(row.get("faq_3_question")),
                 "faq_3_answer": norm(row.get("faq_3_answer")),
+                "practice_question": norm(row.get("practice_question")),
+                "practice_question_label": norm(row.get("practice_question_label")),
                 "slug_file": slug_file,
                 "field_hub": field_hub_slug(norm(row.get("category"))),
             }
@@ -1246,6 +1276,7 @@ def main() -> int:
 
     term_lookup = make_term_lookup(entries)
     guides = load_guide_slugs()
+    term_count = len(entries)
 
     TERMS_DIR.mkdir(parents=True, exist_ok=True)
     for stale in TERMS_DIR.glob("*.html"):
@@ -1259,7 +1290,10 @@ def main() -> int:
         out_file = TERMS_DIR / e["slug_file"]
         out_file.parent.mkdir(parents=True, exist_ok=True)
         rel_path = out_file.relative_to(ROOT)
-        out_file.write_text(build_term_html(e, rel_path, base, term_lookup, entries, guides), encoding="utf-8")
+        out_file.write_text(
+            build_term_html(e, rel_path, base, term_lookup, entries, guides, term_count=term_count),
+            encoding="utf-8",
+        )
 
     by_cat: dict[str, list[dict]] = {}
     for e in entries:

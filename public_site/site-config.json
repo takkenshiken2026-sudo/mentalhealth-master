@@ -1,0 +1,96 @@
+{
+  "brandName": "メンタルヘルス二種マスター",
+  "brandMark": "M",
+  "examName": "メンタルヘルス・マネジメント検定II種",
+  "siteOrigin": "https://mentalhealth-master.jp",
+  "contactUrl": "https://mentalhealth-master.jp/",
+  "ga4MeasurementId": "G-KRCW0FBHM8",
+  "copyright": "",
+  "footerDisclaimer": "学習用のコンテンツです。出題・法令の正確な内容は公式情報で必ず確認してください。",
+  "officialOrganization": "公益財団法人 日本産業衛生協会",
+  "theme": {
+    "accent": "#333333",
+    "accentText": "#ffffff",
+    "background": "#f0f0f1",
+    "surface": "#ffffff",
+    "surfaceAlt": "#f4f4f5",
+    "text": "#121212",
+    "textMuted": "#555555",
+    "border": "rgba(0, 0, 0, 0.09)",
+    "radius": "10px",
+    "navWidth": "1080px",
+    "contentWidth": "1080px"
+  },
+  "navigation": {
+    "header": [
+      {"label": "トップ", "href": "index.html", "key": "top"},
+      {"label": "このサイトについて", "href": "about.html", "key": "about"},
+      {"label": "用語解説", "href": "terms/index.html", "key": "terms"},
+      {"label": "試験ガイド", "href": "articles/index.html", "key": "articles"},
+      {"label": "過去問一覧", "href": "q/index.html", "key": "q"},
+      {"label": "関連リンク", "href": "related-sites.html", "key": "related"},
+      {"label": "プライバシー", "href": "privacy.html", "key": "privacy"}
+    ],
+    "footer": [
+      {"label": "トップ", "href": "index.html", "key": "top"},
+      {"label": "このサイトについて", "href": "about.html", "key": "about"},
+      {"label": "用語解説", "href": "terms/index.html", "key": "terms"},
+      {"label": "試験ガイド", "href": "articles/index.html", "key": "articles"},
+      {"label": "過去問一覧", "href": "q/index.html", "key": "q"},
+      {"label": "関連リンク", "href": "related-sites.html", "key": "related"},
+      {"label": "プライバシー", "href": "privacy.html", "key": "privacy"},
+      {"label": "お問い合わせ", "href": "__CONTACT__", "key": "contact"}
+    ]
+  },
+  "guideArticleGenres": [
+    {"id": "overview", "label": "試験概要", "phase": "制度を知る", "style": "overview", "hint": "試験の全体像・公式情報の見方・サイトの使い方"},
+    {"id": "application", "label": "受験・申込", "phase": "制度を知る", "style": "institution", "hint": "受験資格・日程・手数料・申込手続き・免除"},
+    {"id": "pass-stats", "label": "合格・難易度", "phase": "制度を知る", "style": "institution", "hint": "合格率・合格点・難易度・統計の読み方"},
+    {"id": "exam-scope", "label": "出題・形式", "phase": "制度を知る", "style": "institution", "hint": "出題範囲・科目構成・試験形式"},
+    {"id": "study-plan", "label": "学習計画", "phase": "学習を設計する", "style": "study", "hint": "学習期間・週間表・働きながら・初学者向け"},
+    {"id": "self-study", "label": "独学対策", "phase": "学習を設計する", "style": "study", "hint": "独学の進め方・教材選び・継続"},
+    {"id": "past-questions", "label": "過去問活用", "phase": "演習と定着", "style": "practice", "hint": "過去問・模試・一問一答・解き直し"},
+    {"id": "field-study", "label": "分野別対策", "phase": "演習と定着", "style": "practice", "hint": "分野ごとの基礎・頻出・ラインケア・ハラスメント等"},
+    {"id": "glossary-study", "label": "用語整理", "phase": "演習と定着", "style": "practice", "hint": "用語集の使い方・混同語・数字"},
+    {"id": "review-weak", "label": "復習・苦手克服", "phase": "演習と定着", "style": "practice", "hint": "復習サイクル・間違いノート・苦手分野"},
+    {"id": "final-prep", "label": "直前・当日", "phase": "直前と当日", "style": "final", "hint": "直前1〜2週間・当日の持ち物・会場"},
+    {"id": "cautions", "label": "注意点・更新", "phase": "横断", "style": "meta", "hint": "誤解・制度変更・合格後手続き・再受験"}
+  ],
+  "fields": [
+    {
+      "id": "law",
+      "name": "基礎・役割",
+      "aliases": ["基礎・役割", "メンタルヘルスケアの意義と管理監督者の役割", "ストレスおよびメンタルヘルスに関する基礎知識"],
+      "legacyGlossaryCat": "lawN"
+    },
+    {
+      "id": "rights",
+      "name": "職場環境・配慮",
+      "aliases": ["職場環境・配慮", "職場環境等の評価および改善の方法", "個々の労働者への配慮"],
+      "legacyGlossaryCat": "rightsN"
+    },
+    {
+      "id": "limit",
+      "name": "相談・連携・復職",
+      "aliases": ["相談・連携・復職", "労働者からの相談への対応", "社内外資源との連携", "心の健康問題をもつ復職者への支援の方法"],
+      "legacyGlossaryCat": "limit"
+    }
+  ],
+  "externalLinks": [
+    {
+      "label": "試験のご紹介（公式）",
+      "url": "https://www.mental-health.ne.jp/about/",
+      "description": "対象者、出題内容、合格基準などの公式情報です。"
+    },
+    {
+      "label": "公開試験 受験要項（公式）",
+      "url": "https://www.mental-health.ne.jp/guide/",
+      "description": "試験日程、申込期間、受験料、持ち物などを確認できます。"
+    },
+    {
+      "label": "公式テキスト（公式）",
+      "url": "https://www.mental-health.ne.jp/text/",
+      "description": "出題準拠テキストと改訂情報を確認できます。"
+    }
+  ]
+}

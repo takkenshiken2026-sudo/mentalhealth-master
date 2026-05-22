@@ -24,6 +24,9 @@ READABLE_OVERRIDES: dict[str, str] = {
     "SNRI": "snri",
     "ILO（国際労働機関）": "ilo",
     "NPO（民間非営利組織）": "npo",
+    "NIOSHモデル": "niosh-model",
+    "JD-Rモデル": "jd-r-model",
+    "4つのケア": "four-types-of-care",
 }
 
 
