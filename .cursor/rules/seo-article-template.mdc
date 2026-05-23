@@ -12,7 +12,7 @@ Use this rule when editing exam-site SEO articles, term pages, article CSVs, gen
 
 ## Content volume
 
-- Production: **100+ guide articles** (`data/guide_articles.csv`), **~10 affiliate articles** (`tags` must include `アフィリエイト`; under `articles/`, linked from other guides), **300+ glossary terms** (`data/glossary_terms.csv`). Bundled samples are dev-only. Genre whitelist: `site-config.json` → `guideArticleGenres` (12 labels). Affiliate rules: `docs/seo-article-guidelines.md`. Slug examples: `docs/guide-article-catalog.md`. New row: `python3 tools/scaffold_guide_article.py` — see `docs/guide-article-template.md`.
+- Production: **100+ guide articles** (`data/guide_articles.csv`), **~10 affiliate articles** (`tags` must include `アフィリエイト`; under `articles/`, linked from other guides), **300+ glossary terms** (`data/glossary_terms.csv`). Bundled samples are dev-only. Genre whitelist: `site-config.json` → `guideArticleGenres` (12 labels). Affiliate rules: `docs/seo-article-guidelines.md` + `docs/affiliate/`. Slug examples: `docs/guide-article-catalog.md`. New row: `python3 tools/scaffold_guide_article.py` — see `docs/guide-article-template.md`. Affiliate from theme: `python3 tools/scaffold_affiliate_article.py` — see `docs/affiliate/auto-create-workflow.md`.
 
 ## Article structure
 

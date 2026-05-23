@@ -1,17 +1,64 @@
 /**
- * 過去問一覧 q/index.html — 絞り込み・表示モード・アプリ連携
- * 再生成: python3 tools/build_past_question_pages.py
+ * 問題一覧（過去問 / 実践演習 / 一問一答）— 絞り込み・アプリ連携
+ * 設定: #q-index-config（未指定時は過去問 q/index.html 相当）
  */
 (() => {
   'use strict';
 
   const PAGE_SIZE = 50;
 
+  const DEFAULT_CONFIG = {
+    variant: 'past',
+    groupBy: 'year',
+    groupPrefix: 'year',
+    groupLabel: '年度',
+    searchInputLabel: '過去問検索',
+    searchPlaceholder: '例：第1問、分野名、問題文…',
+    emptyTitle: '条件に一致する過去問がありません',
+    emptyHint: '検索語を短くするか、分野・学習状況を「すべて」に戻してお試しください。',
+    appLinkTemplate: '../index.html#past-play-{id}',
+    appLinkLabel: '演習',
+    rowLabelField: 'qno',
+    statusFilters: ['wrong', 'bookmark', 'exempt', 'invalid'],
+    answerKind: 'choice',
+  };
+
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
+  function categoryOrderIndex(cat) {
+    const order = CONFIG.categoryOrder || [];
+    const i = order.indexOf(cat);
+    return i >= 0 ? i : order.length;
+  }
+
+  function sortCategoryNames(cats) {
+    return cats.slice().sort((a, b) => {
+      const da = categoryOrderIndex(a);
+      const db = categoryOrderIndex(b);
+      if (da !== db) return da - db;
+      return String(a).localeCompare(String(b), 'ja');
+    });
+  }
+
+  const configEl = document.getElementById('q-index-config');
+  const CONFIG = configEl
+    ? { ...DEFAULT_CONFIG, ...JSON.parse(configEl.textContent || '{}') }
+    : DEFAULT_CONFIG;
+
   const dataEl = document.getElementById('q-index-data');
-  const ITEMS = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+  const ITEMS_RAW = dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+  const ITEMS = CONFIG.categoryOrder?.length
+    ? ITEMS_RAW.slice().sort((a, b) => {
+        const ca = categoryOrderIndex(a.category);
+        const cb = categoryOrderIndex(b.category);
+        if (ca !== cb) return ca - cb;
+        if (CONFIG.rowLabelField === 'id') {
+          return String(a.appId).localeCompare(String(b.appId), 'ja');
+        }
+        return (a.qno || 0) - (b.qno || 0);
+      })
+    : ITEMS_RAW;
 
   const q = document.getElementById('q-index-q');
   const chips = $$('.q-index-chip-btn[data-cat]');
@@ -23,7 +70,7 @@
   const activeFilters = document.getElementById('q-index-active-filters');
   const toolbar = document.querySelector('.past-index-tools');
   const yearRow = document.getElementById('q-index-year-row');
-  const jumpLinks = $$('.q-index-year-link[data-year]');
+  const jumpLinks = $$('.q-index-year-link[data-year], .q-index-year-link[data-group]');
   const topBtn = document.getElementById('q-index-top');
   const pagBar = document.getElementById('q-index-pagination');
   const yearView = document.getElementById('q-index-view-year');
@@ -80,7 +127,12 @@
     if (activeStatus === 'bookmark') return !!appData.bookmarks[id];
     if (activeStatus === 'wrong') {
       const a = appData.answers[id];
-      return a && a.ans != null && Number(a.ans) !== Number(item.correct);
+      if (!a || a.ans == null) return false;
+      if (CONFIG.answerKind === 'marubatsu') {
+        const userMaru = Number(a.ans) === 0;
+        return userMaru !== item.correctAnswer;
+      }
+      return Number(a.ans) !== Number(item.correct);
     }
     return true;
   }
@@ -97,6 +149,12 @@
       activeCat !== 'all' ||
       activeStatus !== 'all'
     );
+  }
+
+  function syncFiltersDrawer() {
+    const details = document.querySelector('.q-index-filters-more');
+    if (!details || !window.matchMedia('(max-width: 760px)').matches) return;
+    if (hasActiveFilters()) details.open = true;
   }
 
   function escapeHtml(s) {
@@ -151,16 +209,26 @@
       : '—';
   }
 
+  function rowLabel(item) {
+    if (CONFIG.rowLabelField === 'id') return item.label || String(item.appId);
+    return `第${item.qno}問`;
+  }
+
   function actionLinks(item) {
-    return `<a class="q-row-link" href="${escapeHtml(item.href)}" onclick="event.stopPropagation()">解説</a> <a class="q-row-link q-row-link-app" href="../index.html#past-play-${item.appId}" onclick="event.stopPropagation()">演習</a>`;
+    const appHref = (CONFIG.appLinkTemplate || '').replace('{id}', encodeURIComponent(item.appId));
+    const appLabel = escapeHtml(CONFIG.appLinkLabel || '演習');
+    const appLink = appHref
+      ? ` <a class="q-row-link q-row-link-app" href="${escapeHtml(appHref)}" onclick="event.stopPropagation()">${appLabel}</a>`
+      : '';
+    return `<a class="q-row-link" href="${escapeHtml(item.href)}" onclick="event.stopPropagation()">解説</a>${appLink}`;
   }
 
   function rowHtml(item, query) {
     const preview = item.preview
       ? highlightText(item.preview, query)
       : '<span class="q-year-table-desc--empty">問題文は各ページで確認できます</span>';
-    return `<tr class="q-year-table-row" tabindex="0" data-app-id="${item.appId}" data-href="${escapeHtml(item.href)}" data-category="${escapeHtml(item.category)}">
-<td class="q-year-table-no" data-label="問"><a href="${escapeHtml(item.href)}" onclick="event.stopPropagation()">第${item.qno}問</a></td>
+    return `<tr class="q-year-table-row" tabindex="0" data-app-id="${escapeHtml(String(item.appId))}" data-href="${escapeHtml(item.href)}" data-category="${escapeHtml(item.category)}">
+<td class="q-year-table-no" data-label="問"><a href="${escapeHtml(item.href)}" onclick="event.stopPropagation()">${escapeHtml(rowLabel(item))}</a></td>
 <td class="q-year-table-cat" data-label="分野">${escapeHtml(item.category)}</td>
 <td class="q-year-table-tags" data-label="タグ">${tagBadges(item)}</td>
 <td class="q-year-table-desc" data-label="問題文">${preview}</td>
@@ -256,6 +324,38 @@
     }, 200);
   }
 
+  function availableCategories() {
+    return new Set(ITEMS.map((item) => item.category).filter(Boolean));
+  }
+
+  function allowedStatusValues() {
+    return new Set(['all', ...(CONFIG.statusFilters || [])]);
+  }
+
+  function sanitizeFiltersFromUrl() {
+    let changed = false;
+    const cats = availableCategories();
+    if (activeCat !== 'all' && ITEMS.length && !cats.has(activeCat)) {
+      activeCat = 'all';
+      changed = true;
+    }
+    if (activeStatus !== 'all' && !allowedStatusValues().has(activeStatus)) {
+      activeStatus = 'all';
+      changed = true;
+    }
+    if ((activeStatus === 'wrong' || activeStatus === 'bookmark') && !appData) {
+      activeStatus = 'all';
+      changed = true;
+    }
+    if (changed) {
+      chips.forEach((b) => b.classList.toggle('on', (b.dataset.cat || 'all') === activeCat));
+      statusChips.forEach((b) =>
+        b.classList.toggle('on', (b.dataset.status || 'all') === activeStatus)
+      );
+      syncUrl();
+    }
+  }
+
   function readUrl() {
     const params = new URLSearchParams(location.search);
     if (params.has('q') && q) q.value = params.get('q') || '';
@@ -263,8 +363,7 @@
     activeStatus = params.get('status') || 'all';
     activeView = 'year';
     page = Math.max(1, parseInt(params.get('page') || '1', 10) || 1);
-    chips.forEach((b) => b.classList.toggle('on', (b.dataset.cat || 'all') === activeCat));
-    statusChips.forEach((b) => b.classList.toggle('on', (b.dataset.status || 'all') === activeStatus));
+    sanitizeFiltersFromUrl();
   }
 
   function visibleItems() {
@@ -303,17 +402,39 @@
     });
   }
 
+  function categorySlug(key) {
+    return (
+      String(key)
+        .replace(/[^0-9A-Za-z\u4e00-\u9fff]+/g, '-')
+        .replace(/^-+|-+$/g, '') || 'other'
+    );
+  }
+
+  function groupBlockId(key) {
+    const prefix = CONFIG.groupPrefix || 'year';
+    if (CONFIG.groupBy === 'category') {
+      return `${prefix}-${categorySlug(key)}`;
+    }
+    return `${prefix}-${key}`;
+  }
+
   function applyYearView(visible, query) {
-    const ids = new Set(visible.map((x) => x.appId));
-    const byYear = {};
-    visible.forEach((item) => {
-      byYear[item.year] = (byYear[item.year] || 0) + 1;
-    });
+    if (!ITEMS.length) {
+      if (yearView) {
+        $$('.q-index-year-block', yearView).forEach((block) => {
+          block.classList.remove('hide');
+          $$('.q-year-table-row', block).forEach((row) => row.classList.remove('hide'));
+        });
+      }
+      bindRows(yearView);
+      return;
+    }
+    const ids = new Set(visible.map((x) => String(x.appId)));
     $$('.q-index-year-block', yearView).forEach((block) => {
       const rows = $$('.q-year-table-row', block);
       let shown = 0;
       rows.forEach((row) => {
-        const id = Number(row.dataset.appId);
+        const id = row.dataset.appId;
         const ok = ids.has(id);
         row.classList.toggle('hide', !ok);
         if (ok) shown++;
@@ -326,14 +447,13 @@
       }
     });
     jumpLinks.forEach((link) => {
-      const y = link.dataset.year;
-      const block = document.getElementById(`year-${y}`);
+      const key = link.dataset.group || link.dataset.year;
+      const block = document.getElementById(groupBlockId(key));
       const hidden = !block || block.classList.contains('hide');
       link.classList.toggle('hide', hidden);
       if (hidden) link.setAttribute('tabindex', '-1');
       else link.removeAttribute('tabindex');
     });
-    // highlight previews in year view
     $$('.q-year-table-desc', yearView).forEach((cell) => {
       const row = cell.closest('tr');
       if (!row || row.classList.contains('hide')) return;
@@ -354,10 +474,12 @@
       groups[item.category] = groups[item.category] || [];
       groups[item.category].push(item);
     });
-    const html = Object.keys(groups)
-      .sort()
+    const html = sortCategoryNames(Object.keys(groups))
       .map((cat) => {
-        const items = groups[cat].sort((a, b) => b.year - a.year || a.qno - b.qno);
+        const items = groups[cat].sort((a, b) => {
+          if (CONFIG.rowLabelField === 'id') return String(a.appId).localeCompare(String(b.appId));
+          return (b.year - a.year) || (a.qno - b.qno);
+        });
         return `<section class="q-index-cat-block"><h2 class="q-index-cat-heading">${escapeHtml(cat)} <span>${items.length}問</span></h2>
 <div class="q-year-table-wrap"><table class="q-year-table">${tableHead()}<tbody>
 ${items.map((it) => rowHtml(it, query)).join('')}
@@ -396,6 +518,7 @@ ${items.map((it) => rowHtml(it, query)).join('')}
     if (empty) empty.classList.toggle('hide', shown !== 0);
     renderPagination(shown, Math.max(1, Math.ceil(shown / PAGE_SIZE)));
     renderActiveFilters();
+    syncFiltersDrawer();
     syncReset();
     if (syncUrlFlag) syncUrl();
   }
@@ -417,11 +540,9 @@ ${items.map((it) => rowHtml(it, query)).join('')}
 
   function initYearCollapse() {
     const blocks = $$('.q-index-year-block', yearView);
-    const years = blocks.map((b) => Number(b.id.replace('year-', ''))).sort((a, b) => b - a);
-    const openSet = new Set(years.slice(0, 2));
+    const openSet = new Set(blocks.slice(0, 2).map((b) => b.id));
     blocks.forEach((block) => {
-      const y = Number(block.id.replace('year-', ''));
-      const open = openSet.has(y);
+      const open = openSet.has(block.id);
       block.classList.toggle('is-collapsed', !open);
       const btn = $('.q-index-year-toggle', block);
       if (btn) {
@@ -438,15 +559,19 @@ ${items.map((it) => rowHtml(it, query)).join('')}
     const links = jumpLinks.filter((a) => !a.classList.contains('hide'));
     if (!links.length) return;
     const blocks = links
-      .map((a) => document.getElementById(`year-${a.dataset.year}`))
+      .map((a) => {
+        const key = a.dataset.group || a.dataset.year;
+        return document.getElementById(groupBlockId(key));
+      })
       .filter(Boolean);
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((en) => {
           if (!en.isIntersecting) return;
-          const id = en.target.id.replace('year-', '');
+          const blockId = en.target.id;
           links.forEach((a) => {
-            const active = a.dataset.year === id;
+            const key = a.dataset.group || a.dataset.year;
+            const active = groupBlockId(key) === blockId;
             a.classList.toggle('is-current', active);
             a.classList.toggle('on', active);
           });
@@ -522,6 +647,8 @@ ${items.map((it) => rowHtml(it, query)).join('')}
   );
 
   readUrl();
+  chips.forEach((b) => b.classList.toggle('on', (b.dataset.cat || 'all') === activeCat));
+  statusChips.forEach((b) => b.classList.toggle('on', (b.dataset.status || 'all') === activeStatus));
   ensureYearLayout();
   initYearCollapse();
   initJumpSpy();

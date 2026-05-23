@@ -23,8 +23,70 @@ DEFAULT_CSV = ROOT / "data" / "past_questions.csv"
 CIRC = "①②③④⑤"
 MIN_WRONG_NOTE_LEN = 36
 
+# 賃貸不動産経営管理士（分野名で explanation_point を付与）
+CHINTAIKAN_STUDY_HINTS: dict[str, str] = {
+    "賃貸住宅管理業法": (
+        "業法は「誰が・何を・どこまで」がセットで問われます。"
+        "正答肢の義務主体と手続の流れをメモし、似た制度（登録・重要事項・維持保全）との違いを表に整理してから、"
+        "同年・前後年度の過去問で定着を確認してください。"
+    ),
+    "民法・借地借家法": (
+        "借地借家・民法改正の問題は、権利関係の主体と効果の発生時期を一文で説明できるかが要点です。"
+        "間違えた肢は「誰に・いつ・どの効果が及ぶか」で正答と対比し、関連用語から解き直してください。"
+    ),
+    "賃貸借契約": (
+        "契約条項・個人情報・原状回復などは、条文の趣旨と実務上の判断基準の両方が問われます。"
+        "数字・期限・例外は一覧表にし、他の選択肢との差分を意識して復習してください。"
+    ),
+    "賃貸借契約実務": (
+        "実務問題は「適切な対応か」「義務の範囲か」を区別する設問が多いです。"
+        "正答のキーワードを押さえたうえで、誤答肢がどの要件を満たさないかを具体的に書き出すと定着します。"
+    ),
+    "賃貸不動産経営": (
+        "経営・管理の意義や役割の問題は、貸主・借主・管理者の視点の違いがポイントです。"
+        "「最も不適切」形式では、一見正しそうな肢こそ正答になりやすいので、設問文の条件を再確認してください。"
+    ),
+    "管理実務": (
+        "管理実務は手続の順序と義務の主体が問われやすいです。"
+        "間違えた問題は復習リストに残し、同分野の用語とセットで解き直してください。"
+    ),
+    "建物・設備": (
+        "設備・維持保全は数値基準・点検周期・責任の所在がセットで出題されます。"
+        "表や比較で整理し、他選択肢がどの要件（数値・主体・手続）とずれているかを確認してください。"
+    ),
+    "会計・税金・保険": (
+        "税務・会計は計算の前提と課税関係者・時期の取り違えに注意です。"
+        "正答の根拠数字をメモし、誤答肢がどの前提を誤っているかを明示して復習してください。"
+    ),
+    "会計税務": (
+        "税務・会計は計算の前提と課税関係者・時期の取り違えに注意です。"
+        "正答の根拠数字をメモし、誤答肢がどの前提を誤っているかを明示して復習してください。"
+    ),
+    "サブリース": (
+        "サブリースは貸主・転貸人・借主の関係と契約上の効果の区別が要点です。"
+        "各主体の権利義務を図示し、誤答肢がどの関係を取り違えているかを確認してください。"
+    ),
+    "原状回復": (
+        "原状回復は費用負担・範囲・特約の有無が問われやすいです。"
+        "正答肢の要件（通常損耗との区別など）を押さえ、他肢との差分を条文・実務の両面で整理してください。"
+    ),
+    "賃料管理・督促": (
+        "賃料・督促は手続の順序と法的効果（催告・解除等）の対応が重要です。"
+        "タイムラインで整理し、誤答肢がどの段階・要件を誤っているかを確認してください。"
+    ),
+    "関連法令": (
+        "関連法令は本試験の主たる論点と位置づけの違いが問われます。"
+        "根拠法令名と趣旨をセットで覚え、誤答肢の引用法令が設問条件と合うかを照合してください。"
+    ),
+    "政策課題・社会情勢": (
+        "政策・社会情勢は制度の目的と最新の論点の組み合わせが出題されます。"
+        "公式の考え方・用語の定義を確認したうえで、他肢が趣旨とずれていないかを見直してください。"
+    ),
+}
+
 # メンタルヘルスII種など（分野名で explanation_point を付与）
 CATEGORY_STUDY_HINTS: dict[str, str] = {
+    **CHINTAIKAN_STUDY_HINTS,
     "基礎・役割": (
         "管理監督者の役割・法令の趣旨・ストレスの基礎知識は、用語の定義と"
         "「誰が・何を・どこまで」がセットで出題されます。間違えた肢は正答との"
@@ -129,6 +191,47 @@ def extract_paren_number_clauses(exp: str) -> dict[int, str]:
             clause += "（単独の記述としては妥当な場合がありますが、設問全体の正答かどうかは他肢と比較して判断してください。）"
         if len(clause) > len(out.get(n, "")):
             out[n] = clause
+    return out
+
+
+def extract_choice_verdict_clauses(
+    exp: str, correct: int, *, inappropriate: bool
+) -> dict[int, str]:
+    """「選択肢2は不適切」「○×判定でも選択肢4は不適切」など賃管CSV向け。"""
+    out: dict[int, str] = {}
+    verdict_re = (
+        r"(適切|不適切|誤り|誤っている|誤って|誤|正しい|正しくない|妥当|違反[^、。]{0,12})"
+    )
+    for m in re.finditer(rf"選択肢\s*([1-5])\s*は\s*{verdict_re}", exp):
+        n = int(m.group(1))
+        verdict = norm(m.group(2))
+        if n == correct:
+            continue
+        if verdict.startswith(("適切", "正しい", "妥当")):
+            if inappropriate:
+                out[n] = (
+                    f"解説では選択肢{n}は「{verdict}」と整理されています。"
+                    f"本問は最も不適切・誤っている記述を選ぶ形式のため、"
+                    f"単独では妥当に見える記述でも正答にはなりません。"
+                )
+        else:
+            out[n] = (
+                f"解説では選択肢{n}は「{verdict}」と整理されています。"
+                f"設問が問う正答（{correct}）と照合し、この記述がなぜ正答でないかを確認してください。"
+            )
+    for m in re.finditer(
+        rf"(?:○×判定|参照用)[^。]*選択肢\s*([1-5])\s*は\s*{verdict_re}",
+        exp,
+    ):
+        n = int(m.group(1))
+        verdict = norm(m.group(2))
+        if n == correct:
+            continue
+        if not verdict.startswith(("適切", "正しい", "妥当")):
+            out[n] = (
+                f"参照用の○×整理では選択肢{n}は「{verdict}」です。"
+                f"本問の正答（{correct}）と照らし、記述のどこが設問条件とずれるかを確認してください。"
+            )
     return out
 
 
@@ -464,7 +567,13 @@ def build_row_fields(row: dict) -> tuple[str, str, str]:
         return "", "", "", CATEGORY_STUDY_HINTS.get(cat, "")
 
     stem = norm(row.get("stem"))
+    inappropriate = stem_asks_inappropriate(stem)
     markers = extract_marker_clauses(exp)
+    for n, clause in extract_choice_verdict_clauses(
+        exp, correct, inappropriate=inappropriate
+    ).items():
+        if clause and (n not in markers or len(clause) > len(markers.get(n, ""))):
+            markers[n] = clause
     paren_markers = extract_paren_number_clauses(exp)
     for n, clause in paren_markers.items():
         if clause and (n not in markers or len(clause) > len(markers.get(n, ""))):
@@ -530,7 +639,6 @@ def build_row_fields(row: dict) -> tuple[str, str, str]:
         )
 
     category = norm(row.get("category"))
-    inappropriate = stem_asks_inappropriate(stem)
 
     for n in wrong_nums:
         if len(wrong_map[n]) < MIN_WRONG_NOTE_LEN:
@@ -605,11 +713,15 @@ def main() -> int:
     for row in rows:
         choices_field, correct_body, summary, point = build_row_fields(row)
         if choices_field:
-            avg = sum(len(p.split(":", 1)[1]) for p in choices_field.split(";")) / max(
-                choices_field.count(";") + 1, 1
-            )
-            if avg < MIN_WRONG_NOTE_LEN:
-                short += 1
+            note_lens = [
+                len(p.split(":", 1)[1])
+                for p in choices_field.split(";")
+                if ":" in p
+            ]
+            if note_lens:
+                avg = sum(note_lens) / len(note_lens)
+                if avg < MIN_WRONG_NOTE_LEN:
+                    short += 1
         if not args.dry_run:
             row["explanation_choices"] = choices_field
             row["explanation_correct"] = correct_body

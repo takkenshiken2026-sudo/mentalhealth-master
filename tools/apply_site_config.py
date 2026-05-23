@@ -81,11 +81,20 @@ def replace_all(text: str) -> str:
         text = text.replace(src, dst)
 
     marker = '<script src="./site-config.js"></script>'
-    if (ROOT / "index.html").name and marker not in text and "<head>" in text and "site-analytics.js" in text:
-        text = text.replace(
-            '<script defer src="./site-analytics.js"></script>',
-            marker + '\n<script defer src="./site-analytics.js"></script>',
-        )
+    if "site-config.js" not in text and "site-analytics.js" in text:
+        for old, new_block in (
+            (
+                '<script defer src="./site-analytics.js"></script>',
+                marker + '\n<script defer src="./site-analytics.js"></script>',
+            ),
+            (
+                '<script defer src="site-analytics.js"></script>',
+                '<script src="site-config.js"></script>\n<script defer src="site-analytics.js"></script>',
+            ),
+        ):
+            if old in text:
+                text = text.replace(old, new_block, 1)
+                break
     return text
 
 
@@ -144,18 +153,20 @@ def replace_static_chrome(text: str, path: Path) -> str:
 def ensure_index_theme(text: str) -> str:
     if "site-theme.css" in text:
         return text
-    if '<script src="site-config.js"></script>' in text:
-        return text.replace(
-            '<script src="site-config.js"></script>',
-            '<link rel="stylesheet" href="site-theme.css">\n<script src="site-config.js"></script>',
-            1,
-        )
-    if '<script src="./site-config.js"></script>' in text:
-        return text.replace(
-            '<script src="./site-config.js"></script>',
-            '<link rel="stylesheet" href="./site-theme.css">\n  <script src="./site-config.js"></script>',
-            1,
-        )
+    theme_link = '<link rel="stylesheet" href="site-theme.css">'
+    for needle, repl in (
+        ('<script src="site-config.js"></script>', theme_link + '\n<script src="site-config.js"></script>'),
+        ('<script src="./site-config.js"></script>', theme_link + '\n  <script src="./site-config.js"></script>'),
+        ('<script defer src="site-analytics.js"></script>', theme_link + '\n<script defer src="site-analytics.js"></script>'),
+        (
+            '<script defer src="./site-analytics.js"></script>',
+            theme_link + '\n<script defer src="./site-analytics.js"></script>',
+        ),
+    ):
+        if needle in text:
+            return text.replace(needle, repl, 1)
+    if "</head>" in text:
+        return text.replace("</head>", f"  {theme_link}\n</head>", 1)
     return text
 
 
@@ -174,16 +185,20 @@ def update_index_shell_footer(text: str) -> str:
 
 def update_index_brand_mark(text: str) -> str:
     mark = html.escape(brand_mark())
+
+    def _inject_mark(m: re.Match[str]) -> str:
+        return f"{m.group(1)}{mark}{m.group(3)}"
+
     text = re.sub(
         r'(<div class="topnav-logo-mark"[^>]*>)(.*?)(</div>)',
-        rf"\1{mark}\3",
+        _inject_mark,
         text,
         count=1,
         flags=re.S,
     )
     text = re.sub(
         r'(<span class="site-footer-logo-mark"[^>]*>)(.*?)(</span>)',
-        rf"\1{mark}\3",
+        _inject_mark,
         text,
         count=1,
         flags=re.S,

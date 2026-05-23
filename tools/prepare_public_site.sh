@@ -38,11 +38,18 @@ for d in articles q terms; do
     cp -R "$ROOT/$d" "$OUT/"
   fi
 done
-# サイト固有 SPA データ（例: 賃管マスターの eisei1-*.js）。無ければスキップ。
-for f in eisei1-*.js; do
+# サイト固有 SPA データ（eisei1 / eisei2 など）。無ければスキップ。
+for f in eisei1-*.js eisei2-*.js; do
   if [[ -f "$ROOT/$f" ]]; then
     cp "$ROOT/$f" "$OUT/"
   fi
 done
+if [[ -f "$ROOT/privacy-terms.html" ]]; then
+  cp "$ROOT/privacy-terms.html" "$OUT/"
+fi
+if [[ -f "$ROOT/docs/glossary-article-slugs.json" ]]; then
+  mkdir -p "$OUT/docs"
+  cp "$ROOT/docs/glossary-article-slugs.json" "$OUT/docs/"
+fi
 n="$(find "$OUT" -type f | wc -l | tr -d ' ')"
 echo "prepare_public_site.sh: $OUT に $n ファイルを配置しました。"

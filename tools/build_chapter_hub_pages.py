@@ -24,6 +24,8 @@ from tools.html_footer import (  # noqa: E402
 )
 from tools.site_config import brand_name, clean_origin, exam_name
 
+from tools.build_glossary_pages import norm, term_slug  # noqa: E402
+
 GLOSSARY_CSV = ROOT / "data" / "glossary_terms.csv"
 OUT_ROOT = ROOT / "articles" / "chapters"
 BASE_DEFAULT = clean_origin()
@@ -78,21 +80,27 @@ CHAPTERS = [
 ]
 
 
-def norm(s: str | None) -> str:
-    return (s or "").strip()
-
-
 def load_terms() -> list[dict]:
+    used_slugs: dict[str, str] = {}
     rows = list(csv.DictReader(GLOSSARY_CSV.read_text(encoding="utf-8-sig").splitlines()))
     out = []
     for row in rows:
         term = norm(row.get("term"))
         if not term:
             continue
+        legacy_slug = norm(row.get("slug")) or norm(row.get("url_slug"))
+        if legacy_slug:
+            slug_file = f"{legacy_slug}.html"
+            if slug_file in used_slugs:
+                slug_file = term_slug(term, used_slugs) + ".html"
+            else:
+                used_slugs[slug_file] = term
+        else:
+            slug_file = term_slug(term, used_slugs) + ".html"
         out.append(
             {
                 "term": term,
-                "url_slug": norm(row.get("url_slug")) or "index",
+                "slug_file": slug_file,
                 "blob": " ".join(
                     [
                         term,
@@ -142,7 +150,7 @@ def build_hub(ch: dict, terms: list[dict], rel_path: Path, base: str) -> str:
     desc = ch["summary"] + f" {exam_name()}の出題範囲に沿って用語と演習へ進めます。"
     chapter_terms = terms_for_chapter(ch, terms)
     term_lis = "\n".join(
-        f'      <li><a href="{html.escape(footer_href(rel_path, "terms/" + t["url_slug"] + "/index.html"))}">{html.escape(t["term"])}</a></li>'
+        f'      <li><a href="{html.escape(footer_href(rel_path, "terms/" + t["slug_file"]))}">{html.escape(t["term"])}</a></li>'
         for t in chapter_terms
     )
     q_index = footer_href(rel_path, "q/index.html")

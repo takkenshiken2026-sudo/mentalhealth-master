@@ -59,6 +59,7 @@ class InternalLinkValidator:
             ROOT / "index.html",
             ROOT / "about.html",
             ROOT / "privacy.html",
+            ROOT / "privacy-terms.html",
             ROOT / "related-sites.html",
         ]
         for base in roots:
