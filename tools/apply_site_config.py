@@ -80,7 +80,7 @@ def replace_all(text: str) -> str:
     for src, dst in replacements:
         text = text.replace(src, dst)
 
-    marker = '<script src="./site-config.js"></script>'
+    marker = '<script defer src="./site-config.js"></script>'
     if "site-config.js" not in text and "site-analytics.js" in text:
         for old, new_block in (
             (
@@ -89,7 +89,7 @@ def replace_all(text: str) -> str:
             ),
             (
                 '<script defer src="site-analytics.js"></script>',
-                '<script src="site-config.js"></script>\n<script defer src="site-analytics.js"></script>',
+                '<script defer src="site-config.js"></script>\n<script defer src="site-analytics.js"></script>',
             ),
         ):
             if old in text:
@@ -155,8 +155,10 @@ def ensure_index_theme(text: str) -> str:
         return text
     theme_link = '<link rel="stylesheet" href="site-theme.css">'
     for needle, repl in (
-        ('<script src="site-config.js"></script>', theme_link + '\n<script src="site-config.js"></script>'),
-        ('<script src="./site-config.js"></script>', theme_link + '\n  <script src="./site-config.js"></script>'),
+        ('<script defer src="site-config.js"></script>', theme_link + '\n  <script defer src="site-config.js"></script>'),
+        ('<script src="site-config.js"></script>', theme_link + '\n  <script defer src="site-config.js"></script>'),
+        ('<script defer src="./site-config.js"></script>', theme_link + '\n  <script defer src="./site-config.js"></script>'),
+        ('<script src="./site-config.js"></script>', theme_link + '\n  <script defer src="./site-config.js"></script>'),
         ('<script defer src="site-analytics.js"></script>', theme_link + '\n<script defer src="site-analytics.js"></script>'),
         (
             '<script defer src="./site-analytics.js"></script>',

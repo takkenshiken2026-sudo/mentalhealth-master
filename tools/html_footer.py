@@ -154,7 +154,14 @@ def analytics_snippet(rel_path: Path) -> str:
     return (
         "<!-- GA4: tools/html_footer.analytics_snippet（測定IDは GA4_MEASUREMENT_ID） -->\n"
         f'<script>window.__GA4_MEASUREMENT_ID__="{mid}";</script>\n'
-        f'<script defer src="{src}"></script>'
+        f'<script defer src="{src}"></script>\n'
+        '<script>\n'
+        'if ("serviceWorker" in navigator) {\n'
+        '  window.addEventListener("load", function () {\n'
+        '    navigator.serviceWorker.register("/sw.js").catch(function () {});\n'
+        "  });\n"
+        "}\n"
+        "</script>"
     )
 
 

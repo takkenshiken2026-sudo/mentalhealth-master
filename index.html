@@ -1290,6 +1290,8 @@ body.is-solving .site-footer{display:none!important}
 .session-msg-extra{font-size:var(--fs-sub);color:var(--green);font-weight:600;margin-top:8px}
 </style>
 
+  <link rel="stylesheet" href="site-theme.css">
+  <script defer src="site-config.js"></script>
 </head>
 <body>
 
@@ -1765,7 +1767,7 @@ body.is-solving .site-footer{display:none!important}
 </article>
 <article class="glos-static-card" itemscope itemtype="https://schema.org/DefinedTerm">
   <h4 class="glos-static-term" itemprop="name">いつもと違う様子</h4>
-  <p class="glos-static-desc" itemprop="description">いつもと違う様子は、「いつもと違う様子試験で押さえる用語です。</p>
+  <p class="glos-static-desc" itemprop="description">いつもと違う様子は、「いつもと違う様子ことに関連する重要語です。</p>
 </article>
 </div>
 <div class="glos-cat-section" data-cat="limit">
@@ -1871,11 +1873,12 @@ function applyCsvImportedQuestions() {
   YEARS = Array.from(yset).sort(function (a, b) { return b - a; });
 }
 </script>
-<script src="eisei1-data-glossary.js"></script>
-<script src="eisei1-data-original.js"></script>
-<script src="eisei1-master-data.js"></script>
-<script src="eisei1-data-ichimon.js"></script>
+<script defer src="eisei1-data-glossary.js"></script>
+<script defer src="eisei1-data-original.js"></script>
+<script defer src="eisei1-master-data.js"></script>
+<script defer src="eisei1-data-ichimon.js"></script>
 <script>
+document.addEventListener('DOMContentLoaded', function () {
 
 (function enrichGlossaryPlaceholderDesc(){
   const PLACEHOLDER_SNIPPET='試験の頻出論点です。定義・比較表・具体例を公開サイトの解説記事で詳しく確認できます。';
@@ -6810,6 +6813,8 @@ window.addEventListener('load', function(){
   // 試験日は地域等で異なるため、日数カウント表示は廃止
 })();
 
+
+});
 </script>
 <!-- MISSION COMPLETE POPUP -->
 <div class="mission-popup-overlay" id="mission-popup-overlay" onclick="closeMissionPopup(event)">
@@ -7058,6 +7063,7 @@ window.addEventListener('load', function(){
 
 <!-- ===== 追加JavaScript ===== -->
 <script>
+document.addEventListener('DOMContentLoaded', function () {
 (function(){
 'use strict';
 
@@ -7640,11 +7646,18 @@ if(typeof getUserData==='function'){
 }
 
 })();
+
+});
 </script>
 <!-- GA4: tools/html_footer.analytics_snippet と同内容（トップ SPA） -->
 <script>window.__GA4_MEASUREMENT_ID__="G-KRCW0FBHM8";</script>
-<link rel="stylesheet" href="site-theme.css">
-<script src="site-config.js"></script>
 <script defer src="site-analytics.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("/sw.js").catch(function () {});
+  });
+}
+</script>
 </body>
 </html>

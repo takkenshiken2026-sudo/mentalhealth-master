@@ -18,6 +18,7 @@ def run(cmd: list[str]) -> None:
 
 def main() -> int:
     py = sys.executable
+    run([py, "tools/enrich_glossary_quality.py"])
     run([py, "tools/import_mentalhealth_past_to_practice_csv.py"])
     run([py, "tools/import_mentalhealth_marubatsu_to_ichimon_csv.py"])
     run([py, "tools/validate_csv.py"])
@@ -36,6 +37,7 @@ def main() -> int:
     run([py, "tools/validate_site_integration.py"])
     run([py, "tools/validate_internal_links.py"])
     run([py, "tools/validate_public_content.py"])
+    run([py, "tools/optimize_spa_index_performance.py"])
     run(["bash", "tools/prepare_public_site.sh"])
     return 0
 
