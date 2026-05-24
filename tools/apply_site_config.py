@@ -153,12 +153,12 @@ def replace_static_chrome(text: str, path: Path) -> str:
 def ensure_index_theme(text: str) -> str:
     if "site-theme.css" in text:
         return text
-    theme_link = '<link rel="stylesheet" href="site-theme.css">'
+    theme_link = (
+        '<link rel="preload" href="site-theme.css" as="style" '
+        'onload="this.onload=null;this.rel=\'stylesheet\'">\n'
+        '  <noscript><link rel="stylesheet" href="site-theme.css"></noscript>'
+    )
     for needle, repl in (
-        ('<script defer src="site-config.js"></script>', theme_link + '\n  <script defer src="site-config.js"></script>'),
-        ('<script src="site-config.js"></script>', theme_link + '\n  <script defer src="site-config.js"></script>'),
-        ('<script defer src="./site-config.js"></script>', theme_link + '\n  <script defer src="./site-config.js"></script>'),
-        ('<script src="./site-config.js"></script>', theme_link + '\n  <script defer src="./site-config.js"></script>'),
         ('<script defer src="site-analytics.js"></script>', theme_link + '\n<script defer src="site-analytics.js"></script>'),
         (
             '<script defer src="./site-analytics.js"></script>',

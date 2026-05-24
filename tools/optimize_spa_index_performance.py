@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""index.html SPA: defer データ JS・DOMContentLoaded 初期化・head へ theme/config・sw.js 生成。"""
+"""index.html SPA: 非ブロック資産読み込み・動的データJS・sw.js・Lighthouse向け調整。"""
 
 from __future__ import annotations
 
@@ -15,6 +15,84 @@ DATA_SCRIPTS = (
     "eisei1-master-data.js",
     "eisei1-data-ichimon.js",
 )
+LOAD_QUEUE = ("site-config.js", *DATA_SCRIPTS)
+
+ASYNC_THEME_LINK = """  <link rel="preload" href="site-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="site-theme.css"></noscript>
+"""
+
+def _data_bootstrap_html() -> str:
+    queue = ", ".join(repr(n) for n in LOAD_QUEUE)
+    return f"""<script id="mh-spa-asset-bootstrap">
+(function(){{
+  window.__SPA_DATA_READY__ = false;
+  function onSpaDataReady(fn) {{
+    if (window.__SPA_DATA_READY__) {{ fn(); return; }}
+    document.addEventListener("spa-data-ready", fn, {{ once: true }});
+  }}
+  window.onSpaDataReady = onSpaDataReady;
+  var queue = [{queue}];
+  function loadScript(src, done) {{
+    var s = document.createElement("script");
+    s.src = src;
+    s.onload = s.onerror = function () {{ done(); }};
+    document.head.appendChild(s);
+  }}
+  function loadChain(i) {{
+    if (i >= queue.length) {{
+      window.__SPA_DATA_READY__ = true;
+      document.dispatchEvent(new Event("spa-data-ready"));
+      return;
+    }}
+    loadScript(queue[i], function () {{ loadChain(i + 1); }});
+  }}
+  function scheduleLoad() {{
+    var run = function () {{ loadChain(0); }};
+    if (typeof requestIdleCallback === "function") {{
+      requestIdleCallback(run, {{ timeout: 2500 }});
+    }} else {{
+      setTimeout(run, 1);
+    }}
+  }}
+  if (document.readyState === "loading") {{
+    document.addEventListener("DOMContentLoaded", scheduleLoad, {{ once: true }});
+  }} else {{
+    scheduleLoad();
+  }}
+}})();
+</script>
+"""
+
+ANALYTICS_DEFER = """<script>window.__GA4_MEASUREMENT_ID__="G-KRCW0FBHM8";</script>
+<script>
+(function () {
+  function loadAnalytics() {
+    var s = document.createElement("script");
+    s.src = "site-analytics.js";
+    s.defer = true;
+    document.body.appendChild(s);
+  }
+  function schedule() {
+    if (typeof requestIdleCallback === "function") {
+      requestIdleCallback(loadAnalytics, { timeout: 4000 });
+    } else {
+      setTimeout(loadAnalytics, 1);
+    }
+  }
+  window.addEventListener("load", schedule, { once: true });
+})();
+</script>
+"""
+
+SW_REGISTER = """<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("/sw.js").catch(function () {});
+  });
+}
+</script>
+"""
+
 SW_ASSETS = (
     "/site-theme.css",
     "/site-pages.css",
@@ -23,21 +101,22 @@ SW_ASSETS = (
     *(f"/{name}" for name in DATA_SCRIPTS),
 )
 
-HEAD_INJECT = """  <link rel="stylesheet" href="site-theme.css">
-  <script defer src="site-config.js"></script>
-"""
-
-DOM_READY_OPEN = "document.addEventListener('DOMContentLoaded', function () {\n"
-DOM_READY_CLOSE = "\n});\n"
-
-MISSION_MARKER = "</script>\n<!-- MISSION COMPLETE POPUP -->"
-ICHIMON_APP = '<script defer src="eisei1-data-ichimon.js"></script>\n<script>\n'
-SECOND_SCRIPT_MARKER = "<!-- ===== 追加JavaScript ===== -->\n<script>\n"
+GOOGLE_FONTS_BLOCKING = (
+    '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700'
+    '&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">'
+)
+GOOGLE_FONTS_ASYNC = (
+    '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700'
+    '&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" '
+    'onload="this.media=\'all\'">\n'
+    '<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700'
+    '&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>'
+)
 
 
 def _cache_version() -> str:
     h = hashlib.sha256()
-    for name in (*DATA_SCRIPTS, "site-theme.css", "site-pages.css", "site-config.js", "site-analytics.js"):
+    for name in (*LOAD_QUEUE, "site-theme.css", "site-pages.css", "site-analytics.js"):
         p = ROOT / name
         if p.is_file():
             h.update(p.read_bytes())
@@ -90,67 +169,156 @@ self.addEventListener("fetch", (event) => {{
     print(f"Wrote sw.js (cache id mh-static-{version})")
 
 
+def _remove_data_script_tags(text: str) -> str:
+    for name in ("site-config.js", *DATA_SCRIPTS):
+        text = re.sub(rf'\n<script defer src="{re.escape(name)}"></script>', "", text)
+        text = re.sub(rf'\n<script src="{re.escape(name)}"></script>', "", text)
+    return text
+
+
+def _ensure_data_bootstrap(text: str) -> str:
+    if "mh-spa-asset-bootstrap" in text:
+        return text
+    marker = "</script>\n<script>\ndocument.addEventListener('DOMContentLoaded'"
+    insert_after = "</script>\n"
+    # applyCsvImportedQuestions ブロックの直後
+    anchor = "  YEARS = Array.from(yset).sort(function (a, b) { return b - a; });\n}\n</script>\n"
+    if anchor not in text:
+        return text
+    return text.replace(anchor, anchor + _data_bootstrap_html() + "\n", 1)
+
+
+def _wrap_dom_ready_with_data(text: str) -> str:
+    if "onSpaDataReady(function ()" in text:
+        return text
+    text = text.replace(
+        "document.addEventListener('DOMContentLoaded', function () {\n\n(function enrichGlossaryPlaceholderDesc",
+        "document.addEventListener('DOMContentLoaded', function () {\n  onSpaDataReady(function () {\n\n"
+        "(function enrichGlossaryPlaceholderDesc",
+        1,
+    )
+    text = text.replace(
+        "<!-- ===== 追加JavaScript ===== -->\n<script>\n"
+        "document.addEventListener('DOMContentLoaded', function () {\n(function(){",
+        "<!-- ===== 追加JavaScript ===== -->\n<script>\n"
+        "document.addEventListener('DOMContentLoaded', function () {\n  onSpaDataReady(function () {\n(function(){",
+        1,
+    )
+    text = text.replace(
+        "\n});\n</script>\n<!-- MISSION COMPLETE POPUP -->",
+        "\n  });\n});\n</script>\n<!-- MISSION COMPLETE POPUP -->",
+        1,
+    )
+    text = text.replace(
+        "\n});\n</script>\n<!-- GA4: tools/html_footer.analytics_snippet",
+        "\n  });\n});\n</script>\n<!-- GA4: tools/html_footer.analytics_snippet",
+        1,
+    )
+    return text
+
+
+def _fix_head_assets(text: str) -> str:
+    if GOOGLE_FONTS_BLOCKING in text and 'media="print"' not in text.split(GOOGLE_FONTS_BLOCKING, 1)[0][-200:]:
+        text = text.replace(GOOGLE_FONTS_BLOCKING, GOOGLE_FONTS_ASYNC, 1)
+    text = re.sub(
+        r'\n\s*<link rel="stylesheet" href="site-theme\.css">\n\s*'
+        r'<script defer src="site-config\.js"></script>\n',
+        "\n" + ASYNC_THEME_LINK,
+        text,
+        count=1,
+    )
+    text = re.sub(
+        r'\n\s*<link rel="stylesheet" href="site-theme\.css">\n',
+        "\n" + ASYNC_THEME_LINK,
+        text,
+        count=1,
+    )
+    if 'href="site-theme.css"' not in text.split("</head>", 1)[0]:
+        text = text.replace("</head>", "\n" + ASYNC_THEME_LINK + "</head>", 1)
+    text = re.sub(r'\n\s*<script defer src="site-config\.js"></script>\n(?=</head>)', "\n", text, count=1)
+    return text
+
+
+def _fix_tooltip_reflow(text: str) -> str:
+    old_block = """(function(){
+  const el=document.getElementById('g-tooltip');
+  document.addEventListener('mouseover',function(e){
+    const icon=e.target.closest('.tip-icon');
+    if(!icon) return;
+    const box=icon.parentElement.querySelector('.tip-box');
+    if(!box) return;
+    el.textContent=box.textContent;
+    el.style.display='block';
+  });
+  document.addEventListener('mousemove',function(e){
+    if(el.style.display==='none') return;
+    const x=e.clientX, y=e.clientY;
+    const w=el.offsetWidth, h=el.offsetHeight;
+    const vw=window.innerWidth, vh=window.innerHeight;
+    let left=x+12, top=y-h-10;
+    if(left+w>vw-8) left=x-w-12;
+    if(top<8) top=y+16;
+    el.style.left=left+'px';
+    el.style.top=top+'px';
+  });
+  document.addEventListener('mouseout',function(e){
+    if(e.target.closest('.tip-icon')) el.style.display='none';
+  });
+})();"""
+    new_block = """(function(){
+  const el=document.getElementById('g-tooltip');
+  var tipW=0, tipH=0;
+  document.addEventListener('mouseover',function(e){
+    const icon=e.target.closest('.tip-icon');
+    if(!icon) return;
+    const box=icon.parentElement.querySelector('.tip-box');
+    if(!box) return;
+    el.textContent=box.textContent;
+    el.style.display='block';
+    tipW=el.offsetWidth;
+    tipH=el.offsetHeight;
+  });
+  document.addEventListener('mousemove',function(e){
+    if(el.style.display==='none') return;
+    const x=e.clientX, y=e.clientY;
+    const vw=window.innerWidth;
+    let left=x+12, top=y-tipH-10;
+    if(left+tipW>vw-8) left=x-tipW-12;
+    if(top<8) top=y+16;
+    el.style.left=left+'px';
+    el.style.top=top+'px';
+  });
+  document.addEventListener('mouseout',function(e){
+    if(e.target.closest('.tip-icon')) el.style.display='none';
+  });
+})();"""
+    return text.replace(old_block, new_block, 1) if old_block in text else text
+
+
+def _fix_analytics(text: str) -> str:
+    text = re.sub(
+        r'<script>window\.__GA4_MEASUREMENT_ID__="[^"]*";</script>\n<script defer src="site-analytics\.js"></script>',
+        ANALYTICS_DEFER.strip(),
+        text,
+        count=1,
+    )
+    if 'register("/sw.js")' not in text:
+        text = text.replace("</body>", SW_REGISTER + "\n</body>", 1)
+    return text
+
+
 def optimize_index_html() -> bool:
     if not INDEX.is_file():
         print("index.html not found", file=__import__("sys").stderr)
         return False
     text = INDEX.read_text(encoding="utf-8")
     original = text
-
-    head, rest = text.split("</head>", 1)
-    if 'href="site-theme.css"' not in head:
-        text = head + HEAD_INJECT + "</head>" + rest
-
-    for name in DATA_SCRIPTS:
-        text = text.replace(f'<script src="{name}"></script>', f'<script defer src="{name}"></script>')
-
-    if ICHIMON_APP in text:
-        ich_idx = text.find(ICHIMON_APP)
-        after = text[ich_idx + len(ICHIMON_APP) : ich_idx + len(ICHIMON_APP) + 120]
-        if "DOMContentLoaded" not in after:
-            text = text.replace(ICHIMON_APP, ICHIMON_APP + DOM_READY_OPEN, 1)
-
-    if MISSION_MARKER in text and DOM_READY_CLOSE.strip() not in text[
-        max(0, text.find(MISSION_MARKER) - 200) : text.find(MISSION_MARKER)
-    ]:
-        text = text.replace(MISSION_MARKER, DOM_READY_CLOSE + MISSION_MARKER, 1)
-
-    if SECOND_SCRIPT_MARKER in text:
-        pos = text.find(SECOND_SCRIPT_MARKER)
-        if DOM_READY_OPEN not in text[pos : pos + len(SECOND_SCRIPT_MARKER) + 80]:
-            text = text.replace(SECOND_SCRIPT_MARKER, SECOND_SCRIPT_MARKER + DOM_READY_OPEN, 1)
-
-    ga4 = "<!-- GA4: tools/html_footer.analytics_snippet"
-    ga_idx = text.rfind(ga4)
-    if ga_idx > 0:
-        before_ga = text[:ga_idx]
-        last_script_end = before_ga.rfind("</script>")
-        tail = before_ga[max(0, last_script_end - 120) : last_script_end]
-        if last_script_end > 0 and "});" not in tail:
-            text = text[:last_script_end] + DOM_READY_CLOSE + text[last_script_end:]
-
-    text = re.sub(
-        r'\n<link rel="stylesheet" href="site-theme\.css">\n<script src="site-config\.js"></script>\n(?=<script defer src="site-analytics\.js">)',
-        "\n",
-        text,
-        count=1,
-    )
-
-    sw_register = """<script>
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function () {
-    navigator.serviceWorker.register("/sw.js").catch(function () {});
-  });
-}
-</script>
-"""
-    if 'register("/sw.js")' not in text:
-        text = text.replace(
-            '<script defer src="site-analytics.js"></script>\n</body>',
-            '<script defer src="site-analytics.js"></script>\n' + sw_register + "</body>",
-            1,
-        )
-
+    text = _remove_data_script_tags(text)
+    text = _ensure_data_bootstrap(text)
+    text = _wrap_dom_ready_with_data(text)
+    text = _fix_head_assets(text)
+    text = _fix_tooltip_reflow(text)
+    text = _fix_analytics(text)
     if text != original:
         INDEX.write_text(text, encoding="utf-8")
         print(f"Updated {INDEX.relative_to(ROOT)}")

@@ -84,7 +84,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 <style>
 :root {
   --bg:    #ffffff;
@@ -1289,9 +1290,8 @@ body.is-solving .site-footer{display:none!important}
 .session-msg-advice{font-size:var(--fs-sub);color:var(--text2);line-height:1.65}
 .session-msg-extra{font-size:var(--fs-sub);color:var(--green);font-weight:600;margin-top:8px}
 </style>
-
-  <link rel="stylesheet" href="site-theme.css">
-  <script defer src="site-config.js"></script>
+  <link rel="preload" href="site-theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="site-theme.css"></noscript>
 </head>
 <body>
 
@@ -1873,12 +1873,48 @@ function applyCsvImportedQuestions() {
   YEARS = Array.from(yset).sort(function (a, b) { return b - a; });
 }
 </script>
-<script defer src="eisei1-data-glossary.js"></script>
-<script defer src="eisei1-data-original.js"></script>
-<script defer src="eisei1-master-data.js"></script>
-<script defer src="eisei1-data-ichimon.js"></script>
+<script id="mh-spa-asset-bootstrap">
+(function(){
+  window.__SPA_DATA_READY__ = false;
+  function onSpaDataReady(fn) {
+    if (window.__SPA_DATA_READY__) { fn(); return; }
+    document.addEventListener("spa-data-ready", fn, { once: true });
+  }
+  window.onSpaDataReady = onSpaDataReady;
+  var queue = ['site-config.js', 'eisei1-data-glossary.js', 'eisei1-data-original.js', 'eisei1-master-data.js', 'eisei1-data-ichimon.js'];
+  function loadScript(src, done) {
+    var s = document.createElement("script");
+    s.src = src;
+    s.onload = s.onerror = function () { done(); };
+    document.head.appendChild(s);
+  }
+  function loadChain(i) {
+    if (i >= queue.length) {
+      window.__SPA_DATA_READY__ = true;
+      document.dispatchEvent(new Event("spa-data-ready"));
+      return;
+    }
+    loadScript(queue[i], function () { loadChain(i + 1); });
+  }
+  function scheduleLoad() {
+    var run = function () { loadChain(0); };
+    if (typeof requestIdleCallback === "function") {
+      requestIdleCallback(run, { timeout: 2500 });
+    } else {
+      setTimeout(run, 1);
+    }
+  }
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", scheduleLoad, { once: true });
+  } else {
+    scheduleLoad();
+  }
+})();
+</script>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+  onSpaDataReady(function () {
 
 (function enrichGlossaryPlaceholderDesc(){
   const PLACEHOLDER_SNIPPET='試験の頻出論点です。定義・比較表・具体例を公開サイトの解説記事で詳しく確認できます。';
@@ -6814,6 +6850,7 @@ window.addEventListener('load', function(){
 })();
 
 
+  });
 });
 </script>
 <!-- MISSION COMPLETE POPUP -->
@@ -6923,6 +6960,7 @@ window.addEventListener('load', function(){
 <script>
 (function(){
   const el=document.getElementById('g-tooltip');
+  var tipW=0, tipH=0;
   document.addEventListener('mouseover',function(e){
     const icon=e.target.closest('.tip-icon');
     if(!icon) return;
@@ -6930,14 +6968,15 @@ window.addEventListener('load', function(){
     if(!box) return;
     el.textContent=box.textContent;
     el.style.display='block';
+    tipW=el.offsetWidth;
+    tipH=el.offsetHeight;
   });
   document.addEventListener('mousemove',function(e){
     if(el.style.display==='none') return;
     const x=e.clientX, y=e.clientY;
-    const w=el.offsetWidth, h=el.offsetHeight;
-    const vw=window.innerWidth, vh=window.innerHeight;
-    let left=x+12, top=y-h-10;
-    if(left+w>vw-8) left=x-w-12;
+    const vw=window.innerWidth;
+    let left=x+12, top=y-tipH-10;
+    if(left+tipW>vw-8) left=x-tipW-12;
     if(top<8) top=y+16;
     el.style.left=left+'px';
     el.style.top=top+'px';
@@ -7064,6 +7103,7 @@ window.addEventListener('load', function(){
 <!-- ===== 追加JavaScript ===== -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
+  onSpaDataReady(function () {
 (function(){
 'use strict';
 
@@ -7647,11 +7687,29 @@ if(typeof getUserData==='function'){
 
 })();
 
+  });
 });
 </script>
 <!-- GA4: tools/html_footer.analytics_snippet と同内容（トップ SPA） -->
 <script>window.__GA4_MEASUREMENT_ID__="G-KRCW0FBHM8";</script>
-<script defer src="site-analytics.js"></script>
+<script>
+(function () {
+  function loadAnalytics() {
+    var s = document.createElement("script");
+    s.src = "site-analytics.js";
+    s.defer = true;
+    document.body.appendChild(s);
+  }
+  function schedule() {
+    if (typeof requestIdleCallback === "function") {
+      requestIdleCallback(loadAnalytics, { timeout: 4000 });
+    } else {
+      setTimeout(loadAnalytics, 1);
+    }
+  }
+  window.addEventListener("load", schedule, { once: true });
+})();
+</script>
 <script>
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
