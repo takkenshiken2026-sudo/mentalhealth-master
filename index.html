@@ -692,12 +692,7 @@ function applyCsvImportedQuestions() {
     loadScript(queue[i], function () { loadChain(i + 1); });
   }
   function scheduleLoad() {
-    var run = function () { loadChain(0); };
-    if (typeof requestIdleCallback === "function") {
-      requestIdleCallback(run, { timeout: 2500 });
-    } else {
-      setTimeout(run, 1);
-    }
+    loadChain(0);
   }
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", scheduleLoad, { once: true });
@@ -709,9 +704,6 @@ function applyCsvImportedQuestions() {
 
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  onSpaDataReady(function () {
-
 (function enrichGlossaryPlaceholderDesc(){
   const PLACEHOLDER_SNIPPET='試験の頻出論点です。定義・比較表・具体例を公開サイトの解説記事で詳しく確認できます。';
   const CAT_HINT={
@@ -2586,6 +2578,10 @@ function beginIchimondouSession() {
 }
 
 function startIchimondou() {
+  if(!window.__SPA_DATA_READY__){
+    onSpaDataReady(function(){ startIchimondou(); });
+    return;
+  }
   ichiState.active = false;
   ichiState.sourcePool = [];
   ichiState.questions = [];
@@ -2852,6 +2848,10 @@ function shareIchiResultToX(){
 }
 
 function gotoPage(id){
+  if(!window.__SPA_DATA_READY__){
+    onSpaDataReady(function(){ gotoPage(id); });
+    return;
+  }
   if(id==='ichimondou') syncIchiPageVisibility();
   if(id!=='quiz') showNextBtn(false, null);
   document.body.classList.toggle('is-solving', id==='quiz' || (id==='ichimondou' && ichiState.active));
@@ -5573,16 +5573,36 @@ function openPremium(){document.getElementById('premium-modal').classList.add('o
 function closePremium(){document.getElementById('premium-modal').classList.remove('open')}
 function mockUpgrade(){const u=getUserData();u.plan='premium';saveUser(u);closePremium();gotoPage('dash')}
 
-loadDB();
-// ゲストとしてまず入場
-(function(){
-  const guestEmail='__guest__';
-  if(!db[guestEmail]){db[guestEmail]={name:'ゲスト',plan:'free',answers:{},sessions:[],streak:0};saveDB();}
-  currentUser={email:guestEmail,name:'ゲスト'};
-  enterApp();
-  renderOrigPage();
-  gotoPage('quiz-start');
-})();
+function bootSpaApp(){
+  loadDB();
+  // ゲストとしてまず入場
+  (function(){
+    const guestEmail='__guest__';
+    if(!db[guestEmail]){db[guestEmail]={name:'ゲスト',plan:'free',answers:{},sessions:[],streak:0};saveDB();}
+    currentUser={email:guestEmail,name:'ゲスト'};
+    enterApp();
+    renderOrigPage();
+    gotoPage('quiz-start');
+  })();
+  // Supabaseセッションがあればログイン済みユーザーに切り替え
+  (async function(){
+    const session = _sb ? (await _sb.auth.getSession()).data.session : null;
+    const hash = location.hash || '';
+    if(hash.includes('type=recovery') || hash.includes('access_token=')){
+      showPasswordResetForm();
+    }
+    if(session){
+      const e=session.user.email;
+      const u=normalizeUserData(db[e]||{name:e,plan:'free',answers:{},sessions:[],bookmarks:{},streak:0});
+      if(!db[e]){db[e]=u;saveDB();}
+      currentUser={id:session.user.id,email:e,name:u.name};
+      await loadAnswersFromSupabase();
+      await loadMergeUserLearningSyncFromSupabase();
+      await syncUserLearningToSupabaseNow();
+      enterApp();
+    }
+  })();
+}
 // 用語ページが表示されたまま JS の初期化順で一覧が描画されなかった場合の再試行
 window.addEventListener('load', function(){
   var gp = document.getElementById('page-glossary');
@@ -5593,24 +5613,9 @@ window.addEventListener('load', function(){
     renderGlossary();
   }
 });
-// Supabaseセッションがあればログイン済みユーザーに切り替え
-(async function(){
-  const session = _sb ? (await _sb.auth.getSession()).data.session : null;
-  const hash = location.hash || '';
-  if(hash.includes('type=recovery') || hash.includes('access_token=')){
-    showPasswordResetForm();
-  }
-  if(session){
-    const e=session.user.email;
-    const u=normalizeUserData(db[e]||{name:e,plan:'free',answers:{},sessions:[],bookmarks:{},streak:0});
-    if(!db[e]){db[e]=u;saveDB();}
-    currentUser={id:session.user.id,email:e,name:u.name};
-    await loadAnswersFromSupabase();
-    await loadMergeUserLearningSyncFromSupabase();
-    await syncUserLearningToSupabaseNow();
-    enterApp();
-  }
-})();
+document.addEventListener('DOMContentLoaded', function () {
+  onSpaDataReady(bootSpaApp);
+});
 // ===== EXAM COUNTDOWN =====
 (function(){
   const DAILY_MSGS = [
@@ -5647,10 +5652,6 @@ window.addEventListener('load', function(){
   ];
   // 試験日は地域等で異なるため、日数カウント表示は廃止
 })();
-
-
-  });
-});
 </script>
 <!-- MISSION COMPLETE POPUP -->
 <div class="mission-popup-overlay" id="mission-popup-overlay" onclick="closeMissionPopup(event)">
@@ -5901,8 +5902,6 @@ window.addEventListener('load', function(){
 
 <!-- ===== 追加JavaScript ===== -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  onSpaDataReady(function () {
 (function(){
 'use strict';
 
@@ -6485,9 +6484,6 @@ if(typeof getUserData==='function'){
 }
 
 })();
-
-  });
-});
 </script>
 <!-- GA4: tools/html_footer.analytics_snippet と同内容（トップ SPA） -->
 <script>window.__GA4_MEASUREMENT_ID__="G-KRCW0FBHM8";</script>

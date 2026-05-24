@@ -49,12 +49,7 @@ def _data_bootstrap_html() -> str:
     loadScript(queue[i], function () {{ loadChain(i + 1); }});
   }}
   function scheduleLoad() {{
-    var run = function () {{ loadChain(0); }};
-    if (typeof requestIdleCallback === "function") {{
-      requestIdleCallback(run, {{ timeout: 2500 }});
-    }} else {{
-      setTimeout(run, 1);
-    }}
+    loadChain(0);
   }}
   if (document.readyState === "loading") {{
     document.addEventListener("DOMContentLoaded", scheduleLoad, {{ once: true }});
@@ -196,31 +191,32 @@ def _ensure_data_bootstrap(text: str) -> str:
     return text.replace(anchor, anchor + bootstrap, 1)
 
 
-def _wrap_dom_ready_with_data(text: str) -> str:
-    if "onSpaDataReady(function ()" in text:
+def _ensure_spa_boot_pattern(text: str) -> str:
+    """gotoPage 等をグローバルに保つため、全コードを onSpaDataReady で包まない。"""
+    if "function bootSpaApp()" in text and "onSpaDataReady(bootSpaApp)" in text:
         return text
+    # 旧パターン（全コードラップ）を解除
     text = text.replace(
-        "document.addEventListener('DOMContentLoaded', function () {\n\n(function enrichGlossaryPlaceholderDesc",
         "document.addEventListener('DOMContentLoaded', function () {\n  onSpaDataReady(function () {\n\n"
         "(function enrichGlossaryPlaceholderDesc",
-        1,
+        "(function enrichGlossaryPlaceholderDesc",
     )
     text = text.replace(
         "<!-- ===== 追加JavaScript ===== -->\n<script>\n"
-        "document.addEventListener('DOMContentLoaded', function () {\n(function(){",
-        "<!-- ===== 追加JavaScript ===== -->\n<script>\n"
-        "document.addEventListener('DOMContentLoaded', function () {\n  onSpaDataReady(function () {\n(function(){",
-        1,
+        "document.addEventListener('DOMContentLoaded', function () {\n  onSpaDataReady(function () {\n",
+        "<!-- ===== 追加JavaScript ===== -->\n<script>\n",
     )
-    text = text.replace(
-        "\n});\n</script>\n<!-- MISSION COMPLETE POPUP -->",
-        "\n  });\n});\n</script>\n<!-- MISSION COMPLETE POPUP -->",
-        1,
+    text = re.sub(
+        r"\n  \}\);\n\}\);\n</script>\n<!-- GA4:",
+        "\n</script>\n<!-- GA4:",
+        text,
+        count=1,
     )
-    text = text.replace(
-        "\n});\n</script>\n<!-- GA4: tools/html_footer.analytics_snippet",
-        "\n  });\n});\n</script>\n<!-- GA4: tools/html_footer.analytics_snippet",
-        1,
+    text = re.sub(
+        r"\n  \}\);\n\}\);\n</script>\n<!-- MISSION COMPLETE POPUP -->",
+        "\n</script>\n<!-- MISSION COMPLETE POPUP -->",
+        text,
+        count=1,
     )
     return text
 
@@ -380,7 +376,7 @@ def optimize_index_html() -> bool:
     text = _use_system_fonts(text)
     text = _externalize_spa_css(text)
     text = _ensure_data_bootstrap(text)
-    text = _wrap_dom_ready_with_data(text)
+    text = _ensure_spa_boot_pattern(text)
     text = _fix_head_assets(text)
     text = _fix_tooltip_reflow(text)
     text = _fix_chart_reflow(text)
