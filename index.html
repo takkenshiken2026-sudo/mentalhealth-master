@@ -680,7 +680,7 @@ function applyCsvImportedQuestions() {
   }
   window.onSpaDataReady = onSpaDataReady;
   var queue = ['site-config.js', 'eisei1-data-glossary.js', 'eisei1-data-original.js', 'eisei1-master-data.js', 'eisei1-data-ichimon.js'];
-  var assetVer = "33c0d182256d";
+  var assetVer = "6a73916a89eb";
   function loadScript(src, done) {
     var s = document.createElement("script");
     s.src = src + (src.indexOf("?") >= 0 ? "&" : "?") + "v=" + assetVer;
@@ -705,6 +705,7 @@ function applyCsvImportedQuestions() {
   }
 })();
 </script>
+
 
 
 <script>
@@ -1569,7 +1570,7 @@ function renderDailyStatus(){
   const calloutHTML = window._missionSpotlightPending
     ? `<div class="mission-callout"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v7"/><path d="M5 6l3 3 3-3"/><path d="M3 13h10"/></svg><span>今日のミッションはこれです。まず1つ、解いてみよう！</span></div>`
     : '';
-  wrap.innerHTML=`<div class="mission-card${spotlight}" id="today-mission-card">${calloutHTML}<div class="mode-card-header"><div class="mode-icon-wrap"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#444" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M8 3l5 5-5 5"/></svg></div><div class="mode-card-title">今日のミッション</div></div>${mHTML}</div>`;
+  wrap.innerHTML=`<div class="mission-card${spotlight}" id="today-mission-card">${calloutHTML}<div class="mode-card-header"><div class="mode-icon-wrap" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="#444" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2l1.5 3.5L13 6l-2.5 2.5.5 3.5L8 10.5 5 12l.5-3.5L3 6l3.5-.5z"/></svg></div><div class="mode-title-v2">今日のミッション</div></div>${mHTML}</div>`;
   if(window._missionSpotlightPending){
     window._missionSpotlightPending=false;
     setTimeout(()=>{
@@ -3955,6 +3956,7 @@ function drawMissionCert(){
   if(!canvas) return;
   const ctx = canvas.getContext('2d');
   const W = 720, H = 480;
+  const certFont = '"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", "Meiryo", sans-serif';
   canvas.width = W; canvas.height = H;
 
   const now = new Date();
@@ -4016,24 +4018,20 @@ function drawMissionCert(){
   ctx.strokeRect(40,72,W-80,46);
 
   ctx.fillStyle = '#e8d080';
-  ctx.font = 'bold 24px serif';
+  ctx.font = 'bold 24px ' + certFont;
   ctx.textAlign = 'center';
-  ctx.letterSpacing = '0.2em';
-  ctx.fillText('達　成　証　明　書', W/2, 105);
-  ctx.letterSpacing = '0';
+  ctx.fillText('達成証明書', W/2, 105);
 
   // トロフィー絵文字
-  ctx.font = '52px serif';
+  ctx.font = '52px ' + certFont;
   ctx.fillText('🏆', W/2, 175);
 
   // メインテキスト
   ctx.fillStyle = '#ffffff';
-  ctx.font = 'bold 32px sans-serif';
-  ctx.fillText('メンタルヘルス二種マスター', W/2, 210);
-  ctx.font = 'bold 15px sans-serif';
-  ctx.fillText('メンタルヘルス二種マスター', W/2, 238);
-  ctx.font = 'bold 28px sans-serif';
-  ctx.fillText('本日のミッション全完了', W/2, 278);
+  ctx.font = 'bold 22px ' + certFont;
+  ctx.fillText('メンタルヘルス二種マスター', W/2, 218);
+  ctx.font = 'bold 28px ' + certFont;
+  ctx.fillText('本日のミッション全完了', W/2, 268);
 
   // 区切り線
   const lineGrad = ctx.createLinearGradient(W/2-160,0,W/2+160,0);
@@ -4046,23 +4044,21 @@ function drawMissionCert(){
 
   // 日付（大きく）
   ctx.fillStyle = '#f0d060';
-  ctx.font = 'bold 42px sans-serif';
+  ctx.font = 'bold 36px ' + certFont;
   ctx.fillText(dateStr, W/2, 348);
   ctx.fillStyle = '#c8a030';
-  ctx.font = '20px sans-serif';
+  ctx.font = '18px ' + certFont;
   ctx.fillText(`（${weekDay}曜日）`, W/2, 378);
 
   // 下部のメッセージ
   ctx.fillStyle = 'rgba(255,255,255,0.5)';
-  ctx.font = '18px sans-serif';
+  ctx.font = '16px ' + certFont;
   ctx.fillText('継続が合格への最短距離', W/2, 417);
 
   // サイト名
   ctx.fillStyle = 'rgba(200,150,12,0.7)';
-  ctx.font = '16px sans-serif';
-  ctx.fillText('メンタルヘルス二種マスター', W/2, 452);
-  ctx.font = '13px sans-serif';
-  ctx.fillText('メンタルヘルス二種マスター', W/2, 472);
+  ctx.font = '14px ' + certFont;
+  ctx.fillText('mentalhealth-master.jp', W/2, 452);
 }
 
 function saveMissionCert(){
