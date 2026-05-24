@@ -44,6 +44,9 @@ for f in eisei1-*.js eisei2-*.js; do
     cp "$ROOT/$f" "$OUT/"
   fi
 done
+if [[ -f "$ROOT/spa-index.css" ]]; then
+  cp "$ROOT/spa-index.css" "$OUT/"
+fi
 if [[ -f "$ROOT/sw.js" ]]; then
   cp "$ROOT/sw.js" "$OUT/"
 fi
