@@ -651,6 +651,9 @@ var FIELDS = [
   { id: 'rights', name: '職場環境・配慮' },
   { id: 'limit', name: '相談・連携・復職' }
 ];
+var YEARS = [];
+var QUESTIONS = [];
+var BASE_QUESTIONS = [];
 function applyCsvImportedQuestions() {
   if (typeof CSV_IMPORTED_QUESTIONS === 'undefined' || !Array.isArray(CSV_IMPORTED_QUESTIONS)) return;
   var rows = CSV_IMPORTED_QUESTIONS;
@@ -665,6 +668,7 @@ function applyCsvImportedQuestions() {
     if (q.year != null && q.year !== '') yset.add(q.year);
   });
   YEARS = Array.from(yset).sort(function (a, b) { return b - a; });
+  if (typeof syncQuizStateYearsFromData === 'function') syncQuizStateYearsFromData();
 }
 </script>
 <script id="mh-spa-asset-bootstrap">
@@ -735,6 +739,19 @@ function applyCsvImportedQuestions() {
     ].join('\n');
   });
 })();
+
+// SPA core state（巨大スクリプト解析中のクリックでも参照エラーにならないよう先頭で var 初期化）
+var ichiState = {
+  sourcePool: [],
+  questions: [],
+  idx: 0,
+  score: 0,
+  attempts: 0,
+  answered: false,
+  fieldFilter: null,
+  active: false
+};
+var _nextFloatCallback = null;
 
 // ===== GLOSSARY UI（既定: eisei1-data-glossary.js。成功時は docs/glossary-terms-checklist.csv で上書き）=====
 let glosActiveCat = 'all';
@@ -1757,7 +1774,12 @@ function buildYearHistoryHTML(q){
 
 // ===== STATE =====
 let currentUser = null, db = {};
-let quizState = {mode:'past',fields:FIELDS.map(f=>f.id),years:[...YEARS],count:10,order:'seq',queue:[],idx:0,startTime:0,sessionResults:[],scoreReplayMode:false};
+let quizState = {mode:'past',fields:FIELDS.map(f=>f.id),years:[],count:10,order:'seq',queue:[],idx:0,startTime:0,sessionResults:[],scoreReplayMode:false};
+function syncQuizStateYearsFromData(){
+  if(typeof YEARS!=='undefined'&&Array.isArray(YEARS)&&YEARS.length){
+    quizState.years=[...YEARS];
+  }
+}
 
 // Storage: localStorage (works in real browsers / GitHub Pages)
 var _memStore = {};
@@ -2280,16 +2302,6 @@ function _updatePageMeta(id) {
 
 // ===== 一問一答 =====
 const FIELD_LABELS = {law: '基礎・役割', rights: '職場環境・配慮', limit: '相談・連携・復職'};
-let ichiState = {
-  sourcePool: [],
-  questions: [],
-  idx: 0,
-  score: 0,
-  attempts: 0,
-  answered: false,
-  fieldFilter: null,
-  active: false
-};
 
 function selectIchiField(el) {
   el.parentElement.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
@@ -3845,7 +3857,6 @@ function updateScoreReplayBackBtn(){
 }
 
 // ===== Floating Next Button =====
-let _nextFloatCallback = null;
 function showNextBtn(show, cb, label){
   const el = document.getElementById('btn-next-float');
   if(!el) return;
@@ -5574,6 +5585,7 @@ function closePremium(){document.getElementById('premium-modal').classList.remov
 function mockUpgrade(){const u=getUserData();u.plan='premium';saveUser(u);closePremium();gotoPage('dash')}
 
 function bootSpaApp(){
+  syncQuizStateYearsFromData();
   loadDB();
   // ゲストとしてまず入場
   (function(){
