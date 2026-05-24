@@ -1240,14 +1240,14 @@ def update_guide_glossary_count(term_count: int) -> bool:
 
 
 def main() -> int:
-    text = CSV_PATH.read_text(encoding="utf-8-sig")
-    reader = csv.DictReader(text.splitlines())
-    fieldnames = list(reader.fieldnames or [])
+    with CSV_PATH.open(encoding="utf-8-sig", newline="") as f:
+        reader = csv.DictReader(f)
+        fieldnames = list(reader.fieldnames or [])
+        rows = list(reader)
     for col in ("practice_question", "practice_question_label"):
         if col not in fieldnames:
             fieldnames.append(col)
 
-    rows = list(reader)
     top20 = patch_top20()
     enriched = enriched_terms(set(top20.keys()))
     pq_auto = build_auto_practice_q_full(rows, enriched)
@@ -1290,6 +1290,12 @@ def main() -> int:
         f"flat={n_flat}/{len(pq_auto)}, pq_total={pq_total}/{term_count}, "
         f"terms={term_count}, guide_updated={guide_ok}"
     )
+
+    from tools.rewrite_glossary_handcrafted import main as handcrafted_main
+    from tools.enrich_glossary_readability import main as readability_main
+
+    handcrafted_main()
+    readability_main()
     return 0
 
 

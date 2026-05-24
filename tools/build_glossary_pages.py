@@ -565,12 +565,38 @@ def faq_section_html(items: list[dict[str, str]]) -> str:
 
 def custom_faq_items(entry: dict, fallback: list[dict[str, str]]) -> list[dict[str, str]]:
     items: list[dict[str, str]] = []
-    for idx in range(1, 4):
+    for idx in range(1, 5):
         q = norm(entry.get(f"faq_{idx}_question"))
         a = norm(entry.get(f"faq_{idx}_answer"))
         if q and a:
             items.append({"question": q, "answer": a})
     return items or fallback
+
+
+def memory_tip_html(memory_tip: str) -> str:
+    memory_tip = norm(memory_tip)
+    if not memory_tip:
+        return ""
+    items: list[str] = []
+    if "\n" in memory_tip:
+        items = [x.strip() for x in memory_tip.splitlines() if x.strip()]
+    if len(items) < 2:
+        items = [x.strip() for x in re.split(r"(?=[①②③④⑤])", memory_tip) if x.strip()]
+    if len(items) >= 2:
+        return (
+            '<ol class="term-memory-list">'
+            + "".join(f"<li>{html.escape(x)}</li>" for x in items)
+            + "</ol>"
+        )
+    if memory_tip.count(";") >= 2:
+        items = [x.strip() for x in split_semicolon(memory_tip) if x.strip()]
+        if len(items) >= 2:
+            return (
+                '<ol class="term-memory-list">'
+                + "".join(f"<li>{html.escape(x)}</li>" for x in items)
+                + "</ol>"
+            )
+    return f"<blockquote><p>{html.escape(memory_tip).replace(chr(10), '<br>')}</p></blockquote>"
 
 
 def semicolon_list_html(value: str) -> str:
@@ -602,6 +628,7 @@ def build_term_html(
     article_title = norm(entry.get("article_title"))
     article_lead = norm(entry.get("article_lead"))
     term_detail_body = norm(entry.get("term_detail_body"))
+    key_summary = norm(entry.get("key_summary"))
     exam_points = norm(entry.get("exam_points"))
     common_mistakes = norm(entry.get("common_mistakes"))
     memory_tip = norm(entry.get("memory_tip"))
@@ -687,7 +714,7 @@ def build_term_html(
         points_html = '<ol class="term-point-list">' + "".join(f"<li>{html.escape(p)}</li>" for p in points) + "</ol>"
     detail_html = text_paragraphs(term_detail_body or definition)
     mistakes_html = text_paragraphs(common_mistakes)
-    memory_html = f"<blockquote><p>{html.escape(memory_tip)}</p></blockquote>" if memory_tip else ""
+    memory_html = memory_tip_html(memory_tip)
     example_html = ""
     if example_question or example_answer:
         example_html = (
@@ -766,7 +793,7 @@ def build_term_html(
     content_sections: list[str] = []
     body_toc_items: list[tuple[str, str]] = []
     for sec_id, label, body_html in [
-        ("summary", "まず押さえる要点", text_paragraphs(short_def)),
+        ("summary", "まず押さえる要点", text_paragraphs(key_summary or short_def)),
         ("points", "試験で押さえるポイント", points_html),
         ("definition", "定義と基本理解", detail_html),
         ("legal", "法令・根拠", legal_basis_html(legal)),
@@ -1212,8 +1239,8 @@ def sync_index_glossary_slug_map(entries: list[dict]) -> None:
 def load_glossary_rows() -> list[dict]:
     if not GLOSSARY_CSV.is_file():
         raise FileNotFoundError(str(GLOSSARY_CSV))
-    text = GLOSSARY_CSV.read_text(encoding="utf-8-sig")
-    return list(csv.DictReader(text.splitlines()))
+    with GLOSSARY_CSV.open(encoding="utf-8-sig", newline="") as f:
+        return list(csv.DictReader(f))
 
 
 def main() -> int:
@@ -1256,6 +1283,7 @@ def main() -> int:
                 "article_title": norm(row.get("article_title")),
                 "article_lead": norm(row.get("article_lead")),
                 "term_detail_body": norm(row.get("term_detail_body")),
+                "key_summary": norm(row.get("key_summary")),
                 "exam_points": norm(row.get("exam_points")),
                 "common_mistakes": norm(row.get("common_mistakes")),
                 "memory_tip": norm(row.get("memory_tip")),
@@ -1267,6 +1295,8 @@ def main() -> int:
                 "faq_2_answer": norm(row.get("faq_2_answer")),
                 "faq_3_question": norm(row.get("faq_3_question")),
                 "faq_3_answer": norm(row.get("faq_3_answer")),
+                "faq_4_question": norm(row.get("faq_4_question")),
+                "faq_4_answer": norm(row.get("faq_4_answer")),
                 "slug_file": slug_file,
                 "field_hub": field_hub_slug(norm(row.get("category"))),
             }
