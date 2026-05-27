@@ -39,8 +39,8 @@ PRACTICE_BOILERS = (
     "実務では、個人の努力だけでなく、職場の仕組みや環境をどう変えるかまで考えると理解が深まります。",
     "実務では、本人の安心感を保ちつつ、社内外の支援先とどのタイミングで連携するかを意識します。",
 )
-KEY_POINT_RE = re.compile(r"まず「([^」]+)」")
-PAST_Q_RE = re.compile(r"過去問・演習では「([^」]+)」")
+KEY_POINT_RE = re.compile(r"まず「(.+?)」という出題")
+PAST_Q_RE = re.compile(r"過去問・演習では「(.+?)」という形")
 LINECARE_RE = re.compile(r"ラインケアの視点では、([^。]+。)")
 RELATED_RE = re.compile(r"関連する用語として[、,]?([^。]+)もあわせて確認")
 GENERIC_LINECARE = "管理監督者が医学的判断を抱え込まず"
@@ -157,9 +157,10 @@ def is_broken_key_point(term: str, key_point: str) -> bool:
     kp = norm(key_point)
     if not kp or len(kp) < 8:
         return True
-    if kp == term or kp.startswith(f"{term}こと"):
+    if kp.count("「") != kp.count("」"):
         return True
-    if "「" in kp or "」" in kp:
+    plain = kp.replace("「", "").replace("」", "")
+    if plain == term or plain.startswith(f"{term}こと"):
         return True
     if "ことに関連する重要語" in kp:
         return True
@@ -204,10 +205,12 @@ def parse_source(term: str, text: str) -> SourceParts:
         p.extra_sents.append(sent)
 
     if not p.core:
-        if p.extra_sents:
-            p.core = p.extra_sents[0]
-        elif p.key_point and not is_broken_key_point(term, p.key_point):
+        if p.key_point and not is_broken_key_point(term, p.key_point):
             p.core = build_core_from_key_point(term, p.key_point)
+        elif p.extra_sents:
+            p.core = p.extra_sents[0]
+        elif p.past_exam and len(p.past_exam) >= 12:
+            p.core = f"{term}は、{p.past_exam.rstrip('。')}。" if not p.past_exam.startswith(term) else p.past_exam.rstrip("。") + "。"
         else:
             p.core = f"{term}は、メンタルヘルスII種で扱う重要語です。"
 

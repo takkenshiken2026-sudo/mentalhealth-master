@@ -18,8 +18,10 @@ from tools.rewrite_glossary_handcrafted import (  # noqa: E402
     KNOWN_DEFINITIONS,
     PastBundle,
     SourceParts,
+    build_core_from_key_point,
     build_past_bundle,
     find_past_row,
+    is_broken_key_point,
     load_checklist,
     load_past_index,
     norm,
@@ -60,13 +62,18 @@ def load_glossary_csv(path: Path) -> tuple[list[str], list[dict[str, str]]]:
         return list(reader.fieldnames or []), list(reader)
 
 
+GENERIC_FALLBACK = "メンタルヘルスII種で扱う重要語です"
+
+
 def is_broken_definition(term: str, text: str) -> bool:
     t = norm(text)
     if not t:
         return True
+    if GENERIC_FALLBACK in t:
+        return True
     if "ことに関連する重要語" in t:
         return True
-    if re.search(rf"^{re.escape(term)}は、{re.escape(term)}", t):
+    if re.match(rf"^{re.escape(term)}は、{re.escape(term)}(?:は|（|。|」)", t):
         return True
     if "「" in t and "」" not in t:
         return True
@@ -78,11 +85,20 @@ def is_broken_definition(term: str, text: str) -> bool:
 def core_definition(term: str, src: SourceParts, short: str) -> str:
     if term in KNOWN_DEFINITIONS:
         return KNOWN_DEFINITIONS[term]
-    if src.core and not is_broken_definition(term, src.core):
-        return src.core
-    if short and not is_broken_definition(term, short):
-        return short.rstrip("。") + "。"
-    return f"{term}は、メンタルヘルスII種で扱う重要語です。"
+    candidates: list[str] = []
+    if src.core:
+        candidates.append(src.core)
+    if src.key_point and not is_broken_key_point(term, src.key_point):
+        candidates.append(build_core_from_key_point(term, src.key_point))
+    if short:
+        candidates.append(short.rstrip("。") + "。")
+    if src.past_exam:
+        pe = src.past_exam.rstrip("。")
+        candidates.append(pe + "。" if pe.startswith(term) else f"{term}に関する要点は「{pe}」です。")
+    for cand in candidates:
+        if cand and not is_broken_definition(term, cand):
+            return cand.rstrip("。") + "。"
+    return f"{term}は、{GENERIC_FALLBACK.rstrip('。')}。"
 
 
 def strip_redundant(text: str) -> str:
