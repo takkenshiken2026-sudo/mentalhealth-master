@@ -705,9 +705,6 @@ function applyCsvImportedQuestions() {
   }
 })();
 </script>
-
-
-
 <script>
 (function enrichGlossaryPlaceholderDesc(){
   const PLACEHOLDER_SNIPPET='試験の頻出論点です。定義・比較表・具体例を公開サイトの解説記事で詳しく確認できます。';
@@ -6495,28 +6492,7 @@ if(typeof getUserData==='function'){
 </script>
 <!-- GA4: tools/html_footer.analytics_snippet と同内容（トップ SPA） -->
 <script>window.__GA4_MEASUREMENT_ID__="G-KRCW0FBHM8";</script>
-<script>
-(function () {
-  var loaded = false;
-  function loadAnalytics() {
-    if (loaded) return;
-    loaded = true;
-    var s = document.createElement("script");
-    s.src = "site-analytics.js";
-    s.defer = true;
-    document.body.appendChild(s);
-  }
-  function arm() {
-    loadAnalytics();
-  }
-  ["pointerdown", "keydown", "touchstart"].forEach(function (ev) {
-    document.addEventListener(ev, arm, { once: true, passive: true });
-  });
-  window.addEventListener("load", function () {
-    setTimeout(arm, 15000);
-  }, { once: true });
-})();
-</script>
+<script defer src="site-analytics.js"></script>
 <script>
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {

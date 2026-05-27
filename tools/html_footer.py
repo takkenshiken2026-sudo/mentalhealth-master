@@ -148,13 +148,19 @@ def footer_href(rel_path: Path, site_rel: str) -> str:
 
 
 def analytics_snippet(rel_path: Path) -> str:
-    """全静的ページ共通: フッター直後（</body> 直前想定）に置く GA4 タグ。相対パスで site-analytics.js を読む。"""
-    src = html.escape(footer_href(rel_path, "site-analytics.js"))
+    """全静的ページ共通: フッター直後（</body> 直前想定）に置く GA4 タグ。
+
+    site-config.js と site-analytics.js を相対パスで読み込み、sw.js を登録する。
+    本スニペット以外の場所で同じ src を再読込しないこと（重複防止）。
+    """
+    cfg_src = html.escape(footer_href(rel_path, "site-config.js"))
+    ga_src = html.escape(footer_href(rel_path, "site-analytics.js"))
     mid = html.escape(GA4_MEASUREMENT_ID)
     return (
         "<!-- GA4: tools/html_footer.analytics_snippet（測定IDは GA4_MEASUREMENT_ID） -->\n"
         f'<script>window.__GA4_MEASUREMENT_ID__="{mid}";</script>\n'
-        f'<script defer src="{src}"></script>\n'
+        f'<script defer src="{cfg_src}"></script>\n'
+        f'<script defer src="{ga_src}"></script>\n'
         '<script>\n'
         'if ("serviceWorker" in navigator) {\n'
         '  window.addEventListener("load", function () {\n'

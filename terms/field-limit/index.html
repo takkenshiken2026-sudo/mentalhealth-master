@@ -21,7 +21,7 @@
       "name": "相談・連携・復職の用語一覧｜メンタルヘルス二種マスター（メンタルヘルス・マネジメント検定II種）",
       "description": "メンタルヘルス・マネジメント検定II種の相談・連携・復職分野に関する用語を一覧し、各用語の解説記事へリンクします。",
       "url": "https://mentalhealth-master.jp/terms/field-limit/index.html",
-      "dateModified": "2026-05-24",
+      "dateModified": "2026-05-27",
       "inLanguage": "ja-JP"
     },
     {
@@ -188,7 +188,15 @@
   </footer>
 <!-- GA4: tools/html_footer.analytics_snippet（測定IDは GA4_MEASUREMENT_ID） -->
 <script>window.__GA4_MEASUREMENT_ID__="G-KRCW0FBHM8";</script>
+<script defer src="../../site-config.js"></script>
 <script defer src="../../site-analytics.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("/sw.js").catch(function () {});
+  });
+}
+</script>
 </div>
 </body>
 </html>

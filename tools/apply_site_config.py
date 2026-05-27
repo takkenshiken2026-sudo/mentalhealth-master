@@ -133,7 +133,12 @@ def replace_static_chrome(text: str, path: Path) -> str:
         flags=re.S,
     )
     text = re.sub(
-        r'\s*<footer class="(?:site-page-footer(?: site-page-footer--wide)?|site-footer)[^"]*".*?</footer>\s*(?:<!-- GA4:.*?-->\s*)?(?:<script>window\.__GA4_MEASUREMENT_ID__="[^"]*";</script>\s*)?(?:<script defer src="[^"]*site-analytics\.js"></script>\s*)?',
+        r'\s*<footer class="(?:site-page-footer(?: site-page-footer--wide)?|site-footer)[^"]*".*?</footer>'
+        r'(?:\s*(?:<!-- GA4:[^\n]*?-->'
+        r'|<script>\s*window\.__GA4_MEASUREMENT_ID__="[^"]*";\s*</script>'
+        r'|<script(?:\s+defer)?\s+src="[^"]*(?:site-analytics|site-config)\.js"></script>'
+        r'|<script>\s*if \("serviceWorker" in navigator\)[\s\S]*?</script>'
+        r'))*',
         "\n" + site_page_footer(rel_path, current=current),
         text,
         count=1,

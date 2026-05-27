@@ -107,7 +107,15 @@
   </footer>
 <!-- GA4: tools/html_footer.analytics_snippet（測定IDは GA4_MEASUREMENT_ID） -->
 <script>window.__GA4_MEASUREMENT_ID__="G-KRCW0FBHM8";</script>
+<script defer src="../../site-config.js"></script>
 <script defer src="../../site-analytics.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("/sw.js").catch(function () {});
+  });
+}
+</script>
 </div>
 <button type="button" class="q-index-top" id="q-index-top" aria-label="ページ上部へ">↑</button>
 <script type="application/json" id="q-index-config">{"variant": "ichimon", "groupBy": "category", "groupPrefix": "group", "groupLabel": "分野", "searchInputLabel": "一問一答検索", "searchPlaceholder": "例：2026-01-1、分野名、問題文…", "emptyTitle": "条件に一致する一問一答がありません", "emptyHint": "検索語を短くするか、分野・学習状況を「すべて」に戻してお試しください。", "appLinkTemplate": "../index.html#ichimondou", "appLinkLabel": "アプリで解く", "rowLabelField": "id", "statusFilters": ["wrong", "bookmark"], "answerKind": "marubatsu", "categoryOrder": ["基礎・役割", "メンタルヘルスケアの意義と管理監督者の役割", "ストレスおよびメンタルヘルスに関する基礎知識", "職場環境・配慮", "職場環境等の評価および改善の方法", "個々の労働者への配慮", "相談・連携・復職", "労働者からの相談への対応", "社内外資源との連携", "心の健康問題をもつ復職者への支援の方法"]}</script>

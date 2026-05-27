@@ -61,28 +61,7 @@ def _data_bootstrap_html() -> str:
 """
 
 ANALYTICS_ENGAGEMENT = """<script>window.__GA4_MEASUREMENT_ID__="G-KRCW0FBHM8";</script>
-<script>
-(function () {
-  var loaded = false;
-  function loadAnalytics() {
-    if (loaded) return;
-    loaded = true;
-    var s = document.createElement("script");
-    s.src = "site-analytics.js";
-    s.defer = true;
-    document.body.appendChild(s);
-  }
-  function arm() {
-    loadAnalytics();
-  }
-  ["pointerdown", "keydown", "touchstart"].forEach(function (ev) {
-    document.addEventListener(ev, arm, { once: true, passive: true });
-  });
-  window.addEventListener("load", function () {
-    setTimeout(arm, 15000);
-  }, { once: true });
-})();
-</script>
+<script defer src="site-analytics.js"></script>
 """
 
 SYSTEM_FONT = (
@@ -178,10 +157,10 @@ def _remove_data_script_tags(text: str) -> str:
 
 def _ensure_data_bootstrap(text: str) -> str:
     anchor = "  YEARS = Array.from(yset).sort(function (a, b) { return b - a; });\n}\n</script>\n"
-    bootstrap = _data_bootstrap_html() + "\n"
+    bootstrap = _data_bootstrap_html().rstrip() + "\n"
     if "mh-spa-asset-bootstrap" in text:
         return re.sub(
-            r'<script id="mh-spa-asset-bootstrap">[\s\S]*?</script>\n',
+            r'<script id="mh-spa-asset-bootstrap">[\s\S]*?</script>\n+',
             bootstrap,
             text,
             count=1,
@@ -357,7 +336,8 @@ def _fix_tooltip_reflow(text: str) -> str:
 def _fix_analytics(text: str) -> str:
     ga_block = re.compile(
         r'<script>window\.__GA4_MEASUREMENT_ID__="[^"]*";</script>\s*'
-        r"<script>\s*\(function \(\) \{[\s\S]*?\}\)\(\);\s*</script>",
+        r'(?:<script>\s*\(function \(\) \{[\s\S]*?\}\)\(\);\s*</script>'
+        r'|<script defer src="site-analytics\.js"></script>)',
         re.M,
     )
     text = ga_block.sub(ANALYTICS_ENGAGEMENT.strip(), text, count=1)

@@ -103,8 +103,15 @@
   </footer>
 <!-- GA4: tools/html_footer.analytics_snippet（測定IDは GA4_MEASUREMENT_ID） -->
 <script>window.__GA4_MEASUREMENT_ID__="G-KRCW0FBHM8";</script>
-<script defer src="site-analytics.js"></script><script src="site-config.js"></script>
+<script defer src="site-config.js"></script>
 <script defer src="site-analytics.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("/sw.js").catch(function () {});
+  });
+}
+</script>
   </div>
 </body>
 </html>

@@ -1293,9 +1293,13 @@ def main() -> int:
 
     from tools.rewrite_glossary_handcrafted import main as handcrafted_main
     from tools.enrich_glossary_readability import main as readability_main
+    from tools.enrich_glossary_pro_writer import main as glossary_pro_main
+    from tools.enrich_guide_pro_writer import main as guide_pro_main
 
     handcrafted_main()
     readability_main()
+    glossary_pro_main()
+    guide_pro_main()
     return 0
 
 

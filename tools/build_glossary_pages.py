@@ -713,7 +713,25 @@ def build_term_html(
     elif points:
         points_html = '<ol class="term-point-list">' + "".join(f"<li>{html.escape(p)}</li>" for p in points) + "</ol>"
     detail_html = text_paragraphs(term_detail_body or definition)
-    mistakes_html = text_paragraphs(common_mistakes)
+    mistakes_html = ""
+    if common_mistakes:
+        if common_mistakes.startswith("・") or "\n" in common_mistakes:
+            items = [x.strip().lstrip("・") for x in re.split(r"[\n]+", common_mistakes) if x.strip()]
+            if len(items) >= 2:
+                mistakes_html = (
+                    '<ul class="term-point-list">'
+                    + "".join(f"<li>{html.escape(x)}</li>" for x in items)
+                    + "</ul>"
+                )
+        if not mistakes_html and common_mistakes.count(";") >= 2:
+            items = split_semicolon(common_mistakes)
+            mistakes_html = (
+                '<ul class="term-point-list">'
+                + "".join(f"<li>{html.escape(x)}</li>" for x in items)
+                + "</ul>"
+            )
+        if not mistakes_html:
+            mistakes_html = text_paragraphs(common_mistakes)
     memory_html = memory_tip_html(memory_tip)
     example_html = ""
     if example_question or example_answer:
