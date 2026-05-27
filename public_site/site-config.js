@@ -3,7 +3,7 @@ window.SITE_CONFIG = {
   "brandMark": "M",
   "examName": "メンタルヘルス・マネジメント検定II種",
   "siteOrigin": "https://mentalhealth-master.jp",
-  "contactUrl": "https://mentalhealth-master.jp/",
+  "contactUrl": "https://forms.gle/N4ZcNRjLyxRbSwsv5",
   "ga4MeasurementId": "G-KRCW0FBHM8",
   "theme": {
     "accent": "#333333",
@@ -94,7 +94,7 @@ window.SITE_CONFIG = {
       },
       {
         "label": "お問い合わせ",
-        "href": "https://mentalhealth-master.jp/",
+        "href": "https://forms.gle/N4ZcNRjLyxRbSwsv5",
         "key": "contact"
       }
     ]

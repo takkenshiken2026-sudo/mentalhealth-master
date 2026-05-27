@@ -61,6 +61,14 @@ def replace_all(text: str) -> str:
         ("YOUR-DOMAIN.example", host),
         ("https://YOUR-DOMAIN.example", origin),
         ("https://example.com/contact", contact_url()),
+        (
+            'href="https://mentalhealth-master.jp/" target="_blank" rel="noopener noreferrer">お問い合わせフォーム',
+            f'href="{contact_url()}" target="_blank" rel="noopener noreferrer">お問い合わせフォーム',
+        ),
+        (
+            'href="https://mentalhealth-master.jp/" target="_blank" rel="noopener noreferrer">お問い合わせ',
+            f'href="{contact_url()}" target="_blank" rel="noopener noreferrer">お問い合わせ',
+        ),
         ("window.__GA4_MEASUREMENT_ID__=\"\"", f'window.__GA4_MEASUREMENT_ID__="{ga4_measurement_id()}"'),
         ('var DEFAULT_MID = "";', f'var DEFAULT_MID = "{ga4_measurement_id()}";'),
         ("一般社団法人 試験実施団体", official_organization()),
