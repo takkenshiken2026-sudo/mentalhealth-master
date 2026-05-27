@@ -23,6 +23,7 @@ from __future__ import annotations
 import csv
 import html
 import json
+import os
 import re
 import shutil
 import sys
@@ -938,16 +939,18 @@ def main() -> int:
     question_catalog = load_question_catalog(ROOT)
 
     past_root = Q_ROOT / "past"
-    if past_root.is_dir():
-        shutil.rmtree(past_root)
+    staging_root = Q_ROOT / f".past_build.{os.getpid()}"
+    if staging_root.is_dir():
+        shutil.rmtree(staging_root)
+    staging_root.mkdir(parents=True, exist_ok=True)
     for p, row in zip(pages, rows):
         rel = Path(p["rel_path"])
-        out_file = ROOT / rel
+        out_file = staging_root / rel.relative_to("q/past")
         out_file.parent.mkdir(parents=True, exist_ok=True)
         html_out = build_question_html(
             p,
             row,
-            out_file.relative_to(ROOT),
+            rel,
             base,
             all_pages=pages,
             glossary_lookup=glossary_lookup,
@@ -955,6 +958,9 @@ def main() -> int:
             question_catalog=question_catalog,
         )
         out_file.write_text(html_out, encoding="utf-8")
+    if past_root.is_dir():
+        shutil.rmtree(past_root)
+    staging_root.rename(past_root)
 
     q_index = ROOT / "q" / "index.html"
     q_index.parent.mkdir(parents=True, exist_ok=True)
