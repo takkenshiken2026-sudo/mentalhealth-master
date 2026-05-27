@@ -35,6 +35,11 @@ def guide_lastmod_by_slug() -> dict[str, str]:
     return out
 
 
+def is_public_path(rel: str) -> bool:
+    """Skip dot-directories (atomic build staging trees)."""
+    return not any(part.startswith(".") for part in Path(rel).parts)
+
+
 def add_file(entries: list[SitemapEntry], base: str, rel: str, lastmod: str | None = None) -> None:
     path = ROOT / rel
     if not path.is_file():
@@ -67,7 +72,10 @@ def collect_entries(base: str) -> list[SitemapEntry]:
         for path in sorted(qroot.rglob("index.html")):
             if path == qroot / "index.html":
                 continue
-            add_file(entries, base, path.relative_to(ROOT).as_posix())
+            rel = path.relative_to(ROOT).as_posix()
+            if not is_public_path(rel):
+                continue
+            add_file(entries, base, rel)
 
     terms_root = ROOT / "terms"
     if terms_root.is_dir():

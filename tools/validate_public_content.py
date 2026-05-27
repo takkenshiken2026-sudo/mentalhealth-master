@@ -47,6 +47,8 @@ PUBLIC_HTML_GLOBS = [
     "terms/g-*.html",
     "q/index.html",
     "q/past/**/index.html",
+    "q/practice/**/index.html",
+    "q/ichimon/**/index.html",
 ]
 
 SCRIPT_STYLE_RE = re.compile(
@@ -71,6 +73,8 @@ KNOWN_TYPO_PATTERNS: list[tuple[str, str]] = [
     ("精神保健福社士", "誤字（精神保健福祉士）"),
     ("ストレスチェックック", "誤字（ストレスチェック）"),
     ("メンタルヘルスス", "誤字（メンタルヘルス）"),
+    ("ことに関連する重要語", "用語定義の生成エラー"),
+    ("確認すると理解がつながります", "related_terms プレースホルダ"),
 ]
 
 

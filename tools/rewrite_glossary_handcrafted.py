@@ -153,6 +153,28 @@ def is_generic(s: str) -> bool:
     return bool(GENERIC_PREFIX_RE.match(s) or GENERIC_SHORT_DEF_RE.match(s))
 
 
+def is_broken_key_point(term: str, key_point: str) -> bool:
+    kp = norm(key_point)
+    if not kp or len(kp) < 8:
+        return True
+    if kp == term or kp.startswith(f"{term}こと"):
+        return True
+    if "「" in kp or "」" in kp:
+        return True
+    if "ことに関連する重要語" in kp:
+        return True
+    return False
+
+
+def build_core_from_key_point(term: str, key_point: str) -> str:
+    kp = key_point.rstrip("。")
+    if kp.startswith(f"{term}は") or kp.startswith(f"{term}（"):
+        return kp + "。"
+    if any(x in kp for x in ("とは", "制度", "義務", "検査", "協定", "です", "である", "指す", "意味", "方法")):
+        return kp + "。"
+    return f"{term}は、{kp}。"
+
+
 def parse_source(term: str, text: str) -> SourceParts:
     raw = norm(text)
     p = SourceParts()
@@ -184,10 +206,8 @@ def parse_source(term: str, text: str) -> SourceParts:
     if not p.core:
         if p.extra_sents:
             p.core = p.extra_sents[0]
-        elif p.key_point and any(x in p.key_point for x in ("とは", "制度", "義務", "検査", "協定")):
-            p.core = p.key_point.rstrip("。") + "。"
-        elif p.key_point:
-            p.core = f"{term}は、{p.key_point.rstrip('。')}ことに関連する重要語です。"
+        elif p.key_point and not is_broken_key_point(term, p.key_point):
+            p.core = build_core_from_key_point(term, p.key_point)
         else:
             p.core = f"{term}は、メンタルヘルスII種で扱う重要語です。"
 

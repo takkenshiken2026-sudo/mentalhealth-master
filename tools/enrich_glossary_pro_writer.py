@@ -60,12 +60,29 @@ def load_glossary_csv(path: Path) -> tuple[list[str], list[dict[str, str]]]:
         return list(reader.fieldnames or []), list(reader)
 
 
+def is_broken_definition(term: str, text: str) -> bool:
+    t = norm(text)
+    if not t:
+        return True
+    if "ことに関連する重要語" in t:
+        return True
+    if re.search(rf"^{re.escape(term)}は、{re.escape(term)}", t):
+        return True
+    if "「" in t and "」" not in t:
+        return True
+    if t.endswith("ことに関連する重要語です。"):
+        return True
+    return False
+
+
 def core_definition(term: str, src: SourceParts, short: str) -> str:
     if term in KNOWN_DEFINITIONS:
         return KNOWN_DEFINITIONS[term]
-    if src.core and "試験で押さえる用語" not in src.core:
+    if src.core and not is_broken_definition(term, src.core):
         return src.core
-    return short.rstrip("。") + "。"
+    if short and not is_broken_definition(term, short):
+        return short.rstrip("。") + "。"
+    return f"{term}は、メンタルヘルスII種で扱う重要語です。"
 
 
 def strip_redundant(text: str) -> str:
@@ -328,8 +345,11 @@ def enrich_row(
     past_row = find_past_row(term, norm(row.get("practice_question")), past_index)
     past = build_past_bundle(past_row)
     related = filter_related(norm(row.get("related_terms")), valid)
+    row["related_terms"] = ";".join(related)
     legal = norm(row.get("legal_basis"))
     short = norm(row.get("short_def")) or split_sents(src.core)[0]
+    if is_broken_definition(term, short):
+        short = split_sents(src.core)[0] if split_sents(src.core) else ""
 
     core = core_definition(term, src, short)
     row["short_def"] = split_sents(core)[0] if split_sents(core) else core
