@@ -17,6 +17,9 @@ for f in \
   site-theme.css \
   site-q-index.js \
   site-terms-index.js \
+  site-compare-index.js \
+  site-knowledge-hub-index.js \
+  site-priority-index.js \
   site-analytics.js \
   CNAME \
   robots.txt \
@@ -44,12 +47,6 @@ for f in eisei1-*.js eisei2-*.js; do
     cp "$ROOT/$f" "$OUT/"
   fi
 done
-if [[ -f "$ROOT/spa-index.css" ]]; then
-  cp "$ROOT/spa-index.css" "$OUT/"
-fi
-if [[ -f "$ROOT/sw.js" ]]; then
-  cp "$ROOT/sw.js" "$OUT/"
-fi
 if [[ -f "$ROOT/privacy-terms.html" ]]; then
   cp "$ROOT/privacy-terms.html" "$OUT/"
 fi

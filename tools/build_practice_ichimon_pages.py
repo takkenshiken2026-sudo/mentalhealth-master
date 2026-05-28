@@ -17,7 +17,6 @@ from __future__ import annotations
 import csv
 import html
 import json
-import os
 import re
 import shutil
 import sys
@@ -226,6 +225,7 @@ def build_practice_related_html(
     guides: list[dict[str, str]],
 ) -> str:
     from tools.build_glossary_pages import field_hub_slug
+    from tools.knowledge_hub_seo import field_hub_page_exists
 
     links: list[tuple[str, str]] = []
     seen: set[str] = set()
@@ -247,8 +247,10 @@ def build_practice_related_html(
     for gl in glossary_links_for_tags(page.get("tags") or [], glossary_lookup):
         add(rel_href(rel_path, normalize_glossary_href(gl["href"])), gl["label"])
 
-    hub = field_hub_slug(page.get("category") or "")
-    add(rel_href(rel_path, f"terms/{hub}/index.html"), f"{page.get('category', '')}の用語一覧")
+    cat = page.get("category") or ""
+    if field_hub_page_exists(cat):
+        hub = field_hub_slug(cat)
+        add(rel_href(rel_path, f"terms/{hub}/index.html"), f"{cat}の用語一覧")
 
     for href_rel, title in guide_links_for_page(page.get("category") or "", guides):
         add(rel_href(rel_path, href_rel), title)
@@ -277,6 +279,7 @@ def build_ichimon_related_html(
     guides: list[dict[str, str]],
 ) -> str:
     from tools.build_glossary_pages import field_hub_slug
+    from tools.knowledge_hub_seo import field_hub_page_exists
 
     links: list[tuple[str, str]] = []
     seen: set[str] = set()
@@ -299,8 +302,10 @@ def build_ichimon_related_html(
     for gl in glossary_links_for_tags(page.get("tags") or [], glossary_lookup):
         add(rel_href(rel_path, normalize_glossary_href(gl["href"])), gl["label"])
 
-    hub = field_hub_slug(page.get("category") or "")
-    add(rel_href(rel_path, f"terms/{hub}/index.html"), f"{page.get('category', '')}の用語一覧")
+    cat = page.get("category") or ""
+    if field_hub_page_exists(cat):
+        hub = field_hub_slug(cat)
+        add(rel_href(rel_path, f"terms/{hub}/index.html"), f"{cat}の用語一覧")
 
     for href_rel, title in guide_links_for_page(page.get("category") or "", guides):
         add(rel_href(rel_path, href_rel), title)
@@ -963,16 +968,6 @@ def _patch_index_rows_for_practice(pages: list[dict]) -> None:
         pg["app_id"] = PRACTICE_ID_BASE + pg["qno"]
 
 
-def _staging_root(mode: str) -> Path:
-    return Q_ROOT / f".{mode}_build.{os.getpid()}"
-
-
-def _publish_staged_tree(staging: Path, final_root: Path) -> None:
-    if final_root.is_dir():
-        shutil.rmtree(final_root)
-    staging.rename(final_root)
-
-
 def main() -> int:
     import argparse
 
@@ -985,6 +980,11 @@ def main() -> int:
     guides = load_guide_articles()
     question_catalog = load_question_catalog(ROOT)
 
+    for sub in ("practice", "ichimon"):
+        target = Q_ROOT / sub
+        if target.is_dir():
+            shutil.rmtree(target)
+
     practice_rows = load_practice_rows()
     practice_pages: list[dict] = []
     practice_rows_valid: list[dict] = []
@@ -995,19 +995,15 @@ def main() -> int:
         practice_rows_valid.append(row)
     _patch_index_rows_for_practice(practice_pages)
 
-    practice_staging = _staging_root("practice")
-    if practice_staging.is_dir():
-        shutil.rmtree(practice_staging)
-    practice_staging.mkdir(parents=True, exist_ok=True)
     for p, row in zip(practice_pages, practice_rows_valid):
         rel = Path(p["rel_path"])
-        out = practice_staging / rel.relative_to("q/practice")
+        out = ROOT / rel
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(
             build_practice_question_html(
                 p,
                 row,
-                rel,
+                out.relative_to(ROOT),
                 base,
                 all_pages=practice_pages,
                 glossary_lookup=glossary_lookup,
@@ -1018,7 +1014,9 @@ def main() -> int:
         )
 
     if practice_pages:
-        (practice_staging / "index.html").write_text(
+        idx = Q_ROOT / "practice" / "index.html"
+        idx.parent.mkdir(parents=True, exist_ok=True)
+        idx.write_text(
             build_mode_index(
                 mode="practice",
                 pages=practice_pages,
@@ -1027,7 +1025,6 @@ def main() -> int:
             ),
             encoding="utf-8",
         )
-    _publish_staged_tree(practice_staging, Q_ROOT / "practice")
 
     ichimon_rows = load_ichimon_rows()
     ichimon_pairs: list[tuple[dict, dict]] = []
@@ -1038,19 +1035,15 @@ def main() -> int:
     ichimon_rows = [r for _, r in ichimon_pairs]
     _patch_index_rows_for_ichimon(ichimon_pages)
 
-    ichimon_staging = _staging_root("ichimon")
-    if ichimon_staging.is_dir():
-        shutil.rmtree(ichimon_staging)
-    ichimon_staging.mkdir(parents=True, exist_ok=True)
     for p, row in zip(ichimon_pages, ichimon_rows):
         rel = Path(p["rel_path"])
-        out = ichimon_staging / rel.relative_to("q/ichimon")
+        out = ROOT / rel
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(
             build_ichimon_question_html(
                 p,
                 row,
-                rel,
+                out.relative_to(ROOT),
                 base,
                 all_pages=ichimon_pages,
                 glossary_lookup=glossary_lookup,
@@ -1061,7 +1054,9 @@ def main() -> int:
         )
 
     if ichimon_pages:
-        (ichimon_staging / "index.html").write_text(
+        idx = Q_ROOT / "ichimon" / "index.html"
+        idx.parent.mkdir(parents=True, exist_ok=True)
+        idx.write_text(
             build_mode_index(
                 mode="ichimon",
                 pages=ichimon_pages,
@@ -1070,7 +1065,6 @@ def main() -> int:
             ),
             encoding="utf-8",
         )
-    _publish_staged_tree(ichimon_staging, Q_ROOT / "ichimon")
 
     print(
         f"Wrote practice: {len(practice_pages)} pages"

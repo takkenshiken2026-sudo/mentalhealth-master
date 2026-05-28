@@ -23,7 +23,6 @@ from __future__ import annotations
 import csv
 import html
 import json
-import os
 import re
 import shutil
 import sys
@@ -401,6 +400,7 @@ def parse_related_link_tokens(
 ) -> list[tuple[str, str]]:
     """(相対href, ラベル)"""
     from tools.build_glossary_pages import field_hub_slug, lookup_key
+    from tools.knowledge_hub_seo import field_hub_page_exists
 
     items: list[tuple[str, str]] = []
     seen: set[str] = set()
@@ -454,11 +454,13 @@ def parse_related_link_tokens(
         elif kind == "practice":
             add(rel_href(rel_path, "index.html#past"), label or "アプリで演習する")
         elif kind == "field":
-            hub = field_hub_slug(page.get("category") or "")
-            add(
-                rel_href(rel_path, f"terms/{hub}/index.html"),
-                label or f"{page.get('category', '')}の用語一覧",
-            )
+            cat = page.get("category") or ""
+            if field_hub_page_exists(cat):
+                hub = field_hub_slug(cat)
+                add(
+                    rel_href(rel_path, f"terms/{hub}/index.html"),
+                    label or f"{cat}の用語一覧",
+                )
 
     return items
 
@@ -507,12 +509,15 @@ def build_related_links_html(
         add_auto(href, gl["label"])
 
     from tools.build_glossary_pages import field_hub_slug
+    from tools.knowledge_hub_seo import field_hub_page_exists
 
-    hub = field_hub_slug(page.get("category") or "")
-    add_auto(
-        rel_href(rel_path, f"terms/{hub}/index.html"),
-        f"{page.get('category', '')}の用語一覧",
-    )
+    cat = page.get("category") or ""
+    if field_hub_page_exists(cat):
+        hub = field_hub_slug(cat)
+        add_auto(
+            rel_href(rel_path, f"terms/{hub}/index.html"),
+            f"{cat}の用語一覧",
+        )
 
     for href_rel, title in guide_links_for_page(page.get("category") or "", guides):
         add_auto(rel_href(rel_path, href_rel), title)
@@ -939,18 +944,16 @@ def main() -> int:
     question_catalog = load_question_catalog(ROOT)
 
     past_root = Q_ROOT / "past"
-    staging_root = Q_ROOT / f".past_build.{os.getpid()}"
-    if staging_root.is_dir():
-        shutil.rmtree(staging_root)
-    staging_root.mkdir(parents=True, exist_ok=True)
+    if past_root.is_dir():
+        shutil.rmtree(past_root)
     for p, row in zip(pages, rows):
         rel = Path(p["rel_path"])
-        out_file = staging_root / rel.relative_to("q/past")
+        out_file = ROOT / rel
         out_file.parent.mkdir(parents=True, exist_ok=True)
         html_out = build_question_html(
             p,
             row,
-            rel,
+            out_file.relative_to(ROOT),
             base,
             all_pages=pages,
             glossary_lookup=glossary_lookup,
@@ -958,9 +961,6 @@ def main() -> int:
             question_catalog=question_catalog,
         )
         out_file.write_text(html_out, encoding="utf-8")
-    if past_root.is_dir():
-        shutil.rmtree(past_root)
-    staging_root.rename(past_root)
 
     q_index = ROOT / "q" / "index.html"
     q_index.parent.mkdir(parents=True, exist_ok=True)

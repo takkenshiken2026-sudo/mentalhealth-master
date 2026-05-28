@@ -61,14 +61,6 @@ def replace_all(text: str) -> str:
         ("YOUR-DOMAIN.example", host),
         ("https://YOUR-DOMAIN.example", origin),
         ("https://example.com/contact", contact_url()),
-        (
-            'href="https://mentalhealth-master.jp/" target="_blank" rel="noopener noreferrer">お問い合わせフォーム',
-            f'href="{contact_url()}" target="_blank" rel="noopener noreferrer">お問い合わせフォーム',
-        ),
-        (
-            'href="https://mentalhealth-master.jp/" target="_blank" rel="noopener noreferrer">お問い合わせ',
-            f'href="{contact_url()}" target="_blank" rel="noopener noreferrer">お問い合わせ',
-        ),
         ("window.__GA4_MEASUREMENT_ID__=\"\"", f'window.__GA4_MEASUREMENT_ID__="{ga4_measurement_id()}"'),
         ('var DEFAULT_MID = "";', f'var DEFAULT_MID = "{ga4_measurement_id()}";'),
         ("一般社団法人 試験実施団体", official_organization()),
@@ -88,7 +80,7 @@ def replace_all(text: str) -> str:
     for src, dst in replacements:
         text = text.replace(src, dst)
 
-    marker = '<script defer src="./site-config.js"></script>'
+    marker = '<script src="./site-config.js"></script>'
     if "site-config.js" not in text and "site-analytics.js" in text:
         for old, new_block in (
             (
@@ -97,7 +89,7 @@ def replace_all(text: str) -> str:
             ),
             (
                 '<script defer src="site-analytics.js"></script>',
-                '<script defer src="site-config.js"></script>\n<script defer src="site-analytics.js"></script>',
+                '<script src="site-config.js"></script>\n<script defer src="site-analytics.js"></script>',
             ),
         ):
             if old in text:
@@ -141,12 +133,7 @@ def replace_static_chrome(text: str, path: Path) -> str:
         flags=re.S,
     )
     text = re.sub(
-        r'\s*<footer class="(?:site-page-footer(?: site-page-footer--wide)?|site-footer)[^"]*".*?</footer>'
-        r'(?:\s*(?:<!-- GA4:[^\n]*?-->'
-        r'|<script>\s*window\.__GA4_MEASUREMENT_ID__="[^"]*";\s*</script>'
-        r'|<script(?:\s+defer)?\s+src="[^"]*(?:site-analytics|site-config)\.js"></script>'
-        r'|<script>\s*if \("serviceWorker" in navigator\)[\s\S]*?</script>'
-        r'))*',
+        r'\s*<footer class="(?:site-page-footer(?: site-page-footer--wide)?|site-footer)[^"]*".*?</footer>\s*(?:<!-- GA4:.*?-->\s*)?(?:<script>window\.__GA4_MEASUREMENT_ID__="[^"]*";</script>\s*)?(?:<script defer src="[^"]*site-analytics\.js"></script>\s*)?',
         "\n" + site_page_footer(rel_path, current=current),
         text,
         count=1,
@@ -166,12 +153,10 @@ def replace_static_chrome(text: str, path: Path) -> str:
 def ensure_index_theme(text: str) -> str:
     if "site-theme.css" in text:
         return text
-    theme_link = (
-        '<link rel="preload" href="site-theme.css" as="style" '
-        'onload="this.onload=null;this.rel=\'stylesheet\'">\n'
-        '  <noscript><link rel="stylesheet" href="site-theme.css"></noscript>'
-    )
+    theme_link = '<link rel="stylesheet" href="site-theme.css">'
     for needle, repl in (
+        ('<script src="site-config.js"></script>', theme_link + '\n<script src="site-config.js"></script>'),
+        ('<script src="./site-config.js"></script>', theme_link + '\n  <script src="./site-config.js"></script>'),
         ('<script defer src="site-analytics.js"></script>', theme_link + '\n<script defer src="site-analytics.js"></script>'),
         (
             '<script defer src="./site-analytics.js"></script>',
