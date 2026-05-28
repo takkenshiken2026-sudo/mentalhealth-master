@@ -9,6 +9,23 @@ from pathlib import Path
 from typing import Callable
 
 from tools.hub_faq_expand import expand_all as expand_short_faqs  # noqa: E402
+from tools.hub_premium_faq_auto import apply_all as apply_auto_premium  # noqa: E402
+from tools.hub_premium_faq_auto import discover_official_suffix  # noqa: E402
+
+
+def finalize_hub_rows(
+    rows: list[dict],
+    *,
+    apply_premium: Callable[[list[dict]], list[dict]] | None = None,
+    official_suffix: str | None = None,
+) -> list[dict]:
+    if apply_premium:
+        rows = apply_premium(rows)
+    suffix = official_suffix if official_suffix is not None else discover_official_suffix(
+        Path(__file__).resolve().parents[1]
+    )
+    rows = apply_auto_premium(rows, official_suffix=suffix)
+    return expand_short_faqs(rows)
 
 
 def merge_rows(*groups: list[dict]) -> list[dict]:
@@ -22,6 +39,9 @@ def merge_rows(*groups: list[dict]) -> list[dict]:
             seen.add(slug)
             out.append(row)
     return out
+
+
+merge = merge_rows  # backward compat for write_*_hub_data.py
 
 
 def write_csv(path: Path, header: list[str], rows: list[dict]) -> None:
@@ -46,6 +66,10 @@ def write_hub_csvs(
         comparisons = apply_premium(comparisons)
         numbers = apply_premium(numbers)
         mistakes = apply_premium(mistakes)
+    suffix = discover_official_suffix(data_dir.parent)
+    comparisons = apply_auto_premium(comparisons, official_suffix=suffix)
+    numbers = apply_auto_premium(numbers, official_suffix=suffix)
+    mistakes = apply_auto_premium(mistakes, official_suffix=suffix)
     comparisons = expand_short_faqs(comparisons)
     numbers = expand_short_faqs(numbers)
     mistakes = expand_short_faqs(mistakes)
