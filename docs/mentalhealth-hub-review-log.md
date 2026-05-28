@@ -1,49 +1,29 @@
 # 知識ハブ執筆 — 正確性チェックログ（mentalhealth）
 
-## 公開前ゲート
+## パイロット S30 — 完了
 
-| # | チェック | 比較10 | numbers1 |
-|---|----------|--------|----------|
-| 1 | validate_csv ERROR 0 | ✅ | ✅ |
-| 2 | related_terms 実在 | ✅ | ✅ |
-| 3 | build 成功 | ✅ | ✅ |
-| 4 | 専門家監修（法令・数値） | 推奨 | **必須・要確認** |
-| 5 | 校正 | 推奨 | 推奨 |
+| 種別 | 件数 | validate | build | 本番 |
+|------|------|----------|-------|------|
+| 比較・整理表 | 10 | ✅ | ✅ | ✅ |
+| 数値・期限早見表 | 10 | ✅ | ✅ | ✅ |
+| よくある誤答 | 10 | ✅ | ✅ | ✅ |
 
-**監修メモ:** 一次情報（労安則・ガイドライン・試験要項）に基づき執筆・機械検証済み。本番公開前に資格専門家による事実確認を推奨。
+**監修メモ:** 試験合格点（70/100）・2026年度日程は [公式要項](https://www.mental-health.ne.jp/guide/)・[試験のご紹介](https://www.mental-health.ne.jp/about/) に基づく。法令数値は年度・改正で変わるため、公開後も専門家による再確認を推奨。
 
 ---
 
-## 比較・整理表（10件）
+## 本番 URL
 
-| title | validate | build |
-|-------|----------|-------|
-| ストレスチェックと長時間労働者への面接指導の違い | OK | OK |
-| ハラスメントとパワーハラスメントの違い | OK | OK |
-| ラインケアと面接指導の違い | OK | OK |
-| 産業医と保健師の役割の違い | OK | OK |
-| 休職と復職支援の違い | OK | OK |
-| 職場復帰プランと就業上の配慮の違い | OK | OK |
-| 管理監督者と人事労務担当者の役割の違い | OK | OK |
-| メンタルヘルス不調の定義と適応障害の整理 | OK | OK |
-| 過去問と一問一答の使い分け | OK | OK |
-| 公式情報と試験要項の違い（メンタルヘルス二種） | OK | OK |
-
-## 数値・期限早見表
-
-| title | validate | build | 監修 |
-|-------|----------|-------|------|
-| ストレスチェックの実施期限・対象人数 | OK | OK | 要（50人・年1回は要項で再確認） |
+- 比較: https://mentalhealth-master.jp/terms/compare/index.html
+- 数値: https://mentalhealth-master.jp/terms/numbers/index.html
+- 誤答: https://mentalhealth-master.jp/terms/mistakes/index.html
 
 ---
 
-## 1記事チェック（執筆前）
+## 公開前ゲート（1記事追加時）
 
-```bash
-python3 -c "
-import csv
-terms={r['term'].strip() for r in csv.DictReader(open('data/glossary_terms.csv',encoding='utf-8-sig')) if r.get('term')}
-for t in '語1;語2'.split(';'):
-    print(t, 'OK' if t in terms else 'MISSING')
-"
-```
+1. `related_terms` を glossary で実在確認
+2. `validate_csv.py` ERROR 0
+3. `build_*` → `prepare_public_site.sh`
+4. 数値・試験日程は一次情報で照合
+5. commit / push → 本番 curl 確認
