@@ -164,7 +164,10 @@
     "s44-2shu-chokuzen-kijun": "s44-2shu-chokuzen-cycle",
     "s44-2shu-chokuzen-check": "s44-2shu-chokuzen-cycle",
     "s34-shudan-cycle": "s32-shudan-cycle",
-    "s34-stress-implementation": "s33-stress-rate"
+    "s34-stress-implementation": "s33-stress-rate",
+    "s33-fukki-step": "s32-fukki-step",
+    "s34-harassment-response": "s32-harassment-response",
+    "s34-exam-study-weeks": "s32-exam-study-weeks"
   },
   "mistakes": {
     "s35-kon-stress-reverse": "s35-kon-stress-kon",
@@ -248,6 +251,7 @@
     "s44-kon-2shu-chokuzen-nouse": "s44-kon-2shu-chokuzen-gokai",
     "s44-kon-2shu-chokuzen-zero": "s44-kon-2shu-chokuzen-gokai",
     "s32-kon-fukki-step": "s31-kon-fukki-step",
-    "s34-kon-line": "s32-kon-line-sangyoui"
+    "s34-kon-line": "s32-kon-line-sangyoui",
+    "s32-kon-youkou-old": "s31-kon-youkou-kyu"
   }
 }
