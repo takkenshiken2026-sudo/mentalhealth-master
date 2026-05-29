@@ -293,7 +293,6 @@ def build_all(*, base_url: str = BASE_DEFAULT) -> int:
         gl_lookup or term_lookup,
         entries or [sample_entry],
         guides,
-        by_term=by_term or {sample_entry["term"]: sample_entry},
     )
     banner = sample_banner_html(
         samples_href="samples/index.html",
