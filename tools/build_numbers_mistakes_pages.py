@@ -78,7 +78,9 @@ from tools.seo_utils import content_date_from_row, meta_updated_html  # noqa: E4
 from tools.site_config import brand_name, clean_origin, exam_name  # noqa: E402
 
 BASE_DEFAULT = clean_origin()
-HUB_INDEX_JS_VER = "20260527-knowledge-hub-index"
+HUB_INDEX_JS_VER = "20260529-knowledge-hub-index"
+HUB_INDEX_COL1 = "項目"
+HUB_INDEX_COL3 = "概要"
 
 
 @dataclass(frozen=True)
@@ -302,13 +304,13 @@ def render_index_tbody(spec: HubSpec, entries: list[dict]) -> str:
     for item in items:
         href = html.escape(hub_index_href(spec, item["slug_file"]))
         href_attr = f' data-entry-href="{href}"'
-        detail = html.escape(item.get(spec.index_detail_field) or item.get("summary") or "")
+        summary = html.escape(item.get("summary") or "")
         rows.append(
             f'<tr class="terms-idx-table-row {spec.index_table_class}-row">'
-            f'<td class="terms-idx-td-term {spec.index_table_class}-td-title" data-label="{html.escape(spec.index_col1)}"{href_attr} tabindex="0">'
+            f'<td class="terms-idx-td-term {spec.index_table_class}-td-title" data-label="{html.escape(HUB_INDEX_COL1)}"{href_attr} tabindex="0">'
             f'<div class="terms-idx-term-cell"><a href="{href}">{html.escape(item["title"])}</a></div></td>'
             f'<td class="terms-idx-td-cat" data-label="分野"{href_attr}>{html.escape(item.get("category") or "")}</td>'
-            f'<td class="terms-idx-td-snippet {spec.index_table_class}-td-detail" data-label="{html.escape(spec.index_col3)}"{href_attr}>{detail}</td>'
+            f'<td class="terms-idx-td-snippet {spec.index_table_class}-td-summary" data-label="{html.escape(HUB_INDEX_COL3)}"{href_attr}>{summary}</td>'
             "</tr>"
         )
     return "\n".join(rows)
@@ -601,7 +603,7 @@ def build_index_html(spec: HubSpec, entries: list[dict], base_url: str) -> str:
 <link rel="stylesheet" href="../../site-theme.css">
 <script>document.documentElement.classList.add("js");</script>
 </head>
-<body class="{shell_body_class(spec.index_body_class)}" {spec.data_total_attr}="{n_items}" data-hub-index-prefix="{prefix}" data-hub-base="{html.escape(hub_base, quote=True)}" data-hub-col1="{html.escape(spec.index_col1, quote=True)}" data-hub-col3="{html.escape(spec.index_col3, quote=True)}">
+<body class="{shell_body_class(spec.index_body_class)}" {spec.data_total_attr}="{n_items}" data-hub-index-prefix="{prefix}" data-hub-base="{html.escape(hub_base, quote=True)}" data-hub-col1="{html.escape(HUB_INDEX_COL1, quote=True)}" data-hub-col3="{html.escape(HUB_INDEX_COL3, quote=True)}">
 {site_page_wrap_open()}
 {page_header}
 <main class="site-page-main">
@@ -639,9 +641,9 @@ def build_index_html(spec: HubSpec, entries: list[dict], base_url: str) -> str:
       <div class="terms-idx-table-wrap">
         <table class="terms-idx-table {spec.index_table_class}">
           <thead><tr>
-            <th scope="col" class="terms-idx-th-term">{html.escape(spec.index_col1)}</th>
+            <th scope="col" class="terms-idx-th-term">{html.escape(HUB_INDEX_COL1)}</th>
             <th scope="col" class="terms-idx-th-cat">分野</th>
-            <th scope="col" class="terms-idx-th-def">{html.escape(spec.index_col3)}</th>
+            <th scope="col" class="terms-idx-th-def">{html.escape(HUB_INDEX_COL3)}</th>
           </tr></thead>
           <tbody id="{prefix}-flat-body">
 {tbody_html}
@@ -689,7 +691,7 @@ NUMBERS_SPEC = HubSpec(
     article_body_class="numbers-article-page",
     hub_label="数値・期限早見表",
     index_col1="項目",
-    index_col3="代表的な数値・期限",
+    index_col3="概要",
     index_detail_field="highlight",
     search_placeholder="例：8日、20%、30年、18歳…",
     js_prefix="numbers-idx",
@@ -722,8 +724,8 @@ MISTAKES_SPEC = HubSpec(
     index_body_class="mistakes-index-page",
     article_body_class="mistakes-article-page",
     hub_label="よくある誤答",
-    index_col1="パターン",
-    index_col3="混同しやすい点",
+    index_col1="項目",
+    index_col3="概要",
     index_detail_field="confusion_point",
     search_placeholder="例：35条、媒介、先取特権、税率…",
     js_prefix="mistakes-idx",
