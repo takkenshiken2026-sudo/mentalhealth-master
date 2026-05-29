@@ -79,7 +79,8 @@
     "s44-2shu-chokuzen-point": "s44-2shu-chokuzen-diff",
     "s44-2shu-chokuzen-kubun": "s44-2shu-chokuzen-diff",
     "s44-2shu-chokuzen-seido": "s44-2shu-chokuzen-diff",
-    "s44-2shu-chokuzen-hantei": "s44-2shu-chokuzen-diff"
+    "s44-2shu-chokuzen-hantei": "s44-2shu-chokuzen-diff",
+    "s33-stress-kaizen": "s31-stress-kumiai"
   },
   "numbers": {
     "s35-stress-meyasu": "s35-stress-num",
@@ -161,7 +162,9 @@
     "s44-2shu-chokuzen-freq": "s44-2shu-chokuzen-cycle",
     "s44-2shu-chokuzen-time": "s44-2shu-chokuzen-cycle",
     "s44-2shu-chokuzen-kijun": "s44-2shu-chokuzen-cycle",
-    "s44-2shu-chokuzen-check": "s44-2shu-chokuzen-cycle"
+    "s44-2shu-chokuzen-check": "s44-2shu-chokuzen-cycle",
+    "s34-shudan-cycle": "s32-shudan-cycle",
+    "s34-stress-implementation": "s33-stress-rate"
   },
   "mistakes": {
     "s35-kon-stress-reverse": "s35-kon-stress-kon",
@@ -243,6 +246,8 @@
     "s44-kon-2shu-chokuzen-omit": "s44-kon-2shu-chokuzen-gokai",
     "s44-kon-2shu-chokuzen-over": "s44-kon-2shu-chokuzen-gokai",
     "s44-kon-2shu-chokuzen-nouse": "s44-kon-2shu-chokuzen-gokai",
-    "s44-kon-2shu-chokuzen-zero": "s44-kon-2shu-chokuzen-gokai"
+    "s44-kon-2shu-chokuzen-zero": "s44-kon-2shu-chokuzen-gokai",
+    "s32-kon-fukki-step": "s31-kon-fukki-step",
+    "s34-kon-line": "s32-kon-line-sangyoui"
   }
 }
