@@ -102,10 +102,12 @@ CATEGORY_STUDY_HINTS: dict[str, str] = {
     ),
 }
 
+# 条文名・制度名のみ（「〜法」で終わる語、または固定の制度名）。部分一致の断片は除外する。
 LAW_RE = re.compile(
-    r"(?:労働[^\s、。]{2,24}法|[^\s、。]{2,12}法|36協定|ストレスチェック|"
+    r"(?:労働[^\s、。]{2,24}法|[^\s、。]{2,12}法|36協定|"
     r"メンタルヘルス不調者対応マニュアル|こころの耳)"
 )
+_GARBLED_LAW_PREFIX = re.compile(r"^[※の者ただし]")
 
 
 def norm(s: str | None) -> str:
@@ -371,15 +373,15 @@ def finalize_wrong_note(
 
     if len(re.findall(r"[①②③④⑤]", note)) >= 2:
         return (
-            f"（{n}）「{opt_short}」は、単独の記述としては法令上妥当な場合がありますが、"
-            f"本問で選ぶべき正答は（{correct}）「{correct_short}」です。"
+            f"（{n}）「{opt_short}」は記述自体としては正しい場合がありますが、"
+            f"本問で選ぶ正答は（{correct}）「{correct_short}」です。"
             f"問題文の条件と照らし、設問が問う論点に合う肢を選び直してください。"
         )
 
     if is_true_only_marker(note) or re.fullmatch(r"[①②③④⑤\s、,正）)（(・]+", note.replace(" ", "")):
         return (
-            f"（{n}）「{opt_short}」は、単独の記述としては法令上妥当な場合がありますが、"
-            f"本問で選ぶべき正答は（{correct}）「{correct_short}」です。"
+            f"（{n}）「{opt_short}」は記述自体としては正しい場合がありますが、"
+            f"本問で選ぶ正答は（{correct}）「{correct_short}」です。"
             f"問題文の条件（{stem[:48]}…）と照らし、設問が問う論点に合う肢を選び直してください。"
         )
 
@@ -440,7 +442,35 @@ def stem_asks_inappropriate(stem: str) -> bool:
 
 
 def law_terms(text: str) -> list[str]:
-    return list(dict.fromkeys(LAW_RE.findall(norm(text))))
+    out: list[str] = []
+    for term in LAW_RE.findall(norm(text)):
+        term = norm(term)
+        if len(term) < 4 or _GARBLED_LAW_PREFIX.search(term):
+            continue
+        if term.endswith("法") and len(term) < 5:
+            continue
+        if term not in out:
+            out.append(term)
+    return out
+
+
+def _law_basis_mismatch(opt: str, exp: str) -> str | None:
+    """選択肢と解説で根拠法令が明確に異なる場合のみ、一文を返す。"""
+    exp_laws = law_terms(exp)
+    opt_laws = law_terms(opt)
+    if not exp_laws or not opt_laws:
+        return None
+    wrong = [
+        l
+        for l in opt_laws
+        if l not in exp_laws and not any(l in e or e in l for e in exp_laws)
+    ]
+    if not wrong:
+        return None
+    return (
+        f"根拠法令の取り違えがあります。解説の要点は「{exp_laws[0]}」に関する内容ですが、"
+        f"（{opt[:40]}{'…' if len(opt) > 40 else ''}」は「{wrong[0]}」を根拠とする記述です。"
+    )
 
 
 def infer_contrast_note(
@@ -458,19 +488,22 @@ def infer_contrast_note(
 
     if stem_asks_inappropriate(stem):
         return (
-            f"（{n}）「{opt_short}」は、設問の趣旨では適切な記述・対応に当たることが多いです。"
-            f"本問は「最も不適切なもの」を選ぶ形式のため、正答は（{correct}）「{correct_short}」です。"
-            f"解説のポイント：{exp[:120]}{'…' if len(exp) > 120 else ''}"
+            f"（{n}）「{opt_short}」は、記述自体としては正しい内容に当たることが多いです。"
+            f"ただし本問は「最も不適切なもの」を選ぶ形式のため、正答は（{correct}）です。"
+            f"（{correct}）「{correct_short}」が他肢より問題のある記述である理由："
+            f"{exp[:120]}{'…' if len(exp) > 120 else ''}"
         )
 
-    exp_laws = law_terms(exp)
-    opt_laws = law_terms(opt)
-    wrong_laws = [l for l in opt_laws if l not in exp_laws and not any(l in e or e in l for e in exp_laws)]
-    if wrong_laws and exp_laws:
-        reasons.append(
-            f"根拠の記述が異なります。解説では「{exp_laws[0]}」が根拠ですが、"
-            f"（{n}）は「{wrong_laws[0]}」を根拠とする内容です。"
+    if re.search(r"含まれない|該当しない|対象外", stem):
+        return (
+            f"（{n}）「{opt_short}」は本問の論点では該当する項目です。"
+            f"設問は「含まれない／該当しないもの」を問うため、正答は（{correct}）「{correct_short}」です。"
+            f"{exp[:100]}{'…' if len(exp) > 100 else ''}"
         )
+
+    law_msg = _law_basis_mismatch(opt, exp)
+    if law_msg:
+        reasons.append(law_msg)
 
     if re.search(r"刑事罰|罰則|処罰", opt) and not re.search(r"刑事|罰則|処罰", exp):
         reasons.append(
@@ -513,13 +546,13 @@ def infer_contrast_note(
 
     if not reasons:
         reasons.append(
-            f"（{n}）の内容は、正答（{correct}）「{correct_short}」が示す論点とずれています。"
+            f"（{n}）「{opt_short}」は、正答（{correct}）「{correct_short}」が示す論点と一致しません。"
         )
 
     lead = " ".join(reasons[:2])
     return (
-        f"{lead} 解説の要点：{exp[:140]}{'…' if len(exp) > 140 else ''} "
-        f"正答（{correct}）との違いを確認し直してください。"
+        f"{lead} "
+        f"正答（{correct}）との違いを、解説の要点「{exp[:100]}{'…' if len(exp) > 100 else ''}」と照らして確認してください。"
     )
 
 

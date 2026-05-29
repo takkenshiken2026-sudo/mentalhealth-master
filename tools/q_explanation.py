@@ -108,8 +108,8 @@ def infer_wrong_choice_note(
 
     if mode == "least_appropriate" and _choice_sounds_positive(opt):
         parts.append(
-            f"「{opt}」は、単体では適切な学習法・正しい対応に当たります。"
-            "したがって「最も適切でないもの」として選ぶ正答にはなりません。"
+            f"「{opt}」は、記述自体としては正しい内容に当たることが多いです。"
+            "ただし本問は「最も適切でないもの」を選ぶ形式のため、この肢は正答にはなりません。"
         )
         if correct and correct_text:
             parts.append(
