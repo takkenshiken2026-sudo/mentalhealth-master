@@ -34,6 +34,7 @@ from tools.html_footer import (
     site_page_wrap_close,
     site_page_wrap_open,
 )
+from tools.knowledge_hub_tabs import knowledge_hub_tab_hrefs, knowledge_hub_tabs_html
 from tools.site_config import (
     brand_name,
     category_order,
@@ -802,6 +803,10 @@ def build_term_html(
     page_header = site_page_header(rel_path, current="terms")
     page_breadcrumb = breadcrumb_html(rel_path, crumb_items)
     page_footer = site_page_footer(rel_path, current="terms")
+    hub_tabs = knowledge_hub_tabs_html(
+        current="terms",
+        **knowledge_hub_tab_hrefs(here="terms"),
+    )
 
     updated = date.today().isoformat()
 
@@ -976,6 +981,7 @@ def build_term_html(
 {page_header}
 <main class="seo-article-main">
   {page_breadcrumb}
+  {hub_tabs}
   <article class="seo-article-card article-body">
     <div class="article-meta">
       <span class="meta-category">用語解説</span>
@@ -1029,6 +1035,10 @@ def build_field_hub_html(
     page_header = site_page_header(rel_path, current="terms")
     page_breadcrumb = breadcrumb_html(rel_path, crumb_items)
     page_footer = site_page_footer(rel_path, current="terms")
+    hub_tabs = knowledge_hub_tabs_html(
+        current="terms",
+        **knowledge_hub_tab_hrefs(here="field"),
+    )
     ld = {
         "@context": "https://schema.org",
         "@graph": [
@@ -1076,6 +1086,7 @@ def build_field_hub_html(
 {page_header}
 <main class="site-page-main terms-idx-main">
   {page_breadcrumb}
+  {hub_tabs}
   <h1 class="terms-idx-page-title">{html.escape(category)}の用語一覧</h1>
   <p class="terms-idx-lead">{html.escape(exam_name())}の{html.escape(category)}分野で押さえたい用語をまとめています。各リンクから用語の意味・試験ポイント・関連用語を確認できます。</p>
   <p class="terms-idx-lead"><a href="../index.html">用語解説一覧（全分野）</a>へ戻る</p>
@@ -1200,6 +1211,7 @@ def build_terms_index(entries: list[dict], base_url: str) -> str:
   {page_breadcrumb}
   <h1>用語解説</h1>
   <p class="site-page-lead">{html.escape(lead)}</p>
+  {knowledge_hub_tabs_html(current="terms", **knowledge_hub_tab_hrefs(here="terms"))}
   <section class="terms-index-panel" aria-labelledby="terms-index-heading">
     <div class="terms-index-head">
       <div>
