@@ -74,7 +74,8 @@ def topic_from_row(row: dict[str, str]) -> str:
             title = title[len(prefix) :].strip()
     if len(title) >= 4 and not title.startswith("メンタルヘルス"):
         return title
-    return slug.replace("-", " ")
+    from tools.guide_catalog_batch import topic_from_row as _catalog_topic_from_row
+    return _catalog_topic_from_row(row)
 
 
 def field_name_from_slug(slug: str) -> str | None:
