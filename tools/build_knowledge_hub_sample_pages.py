@@ -85,7 +85,7 @@ def build_samples_index(base_url: str) -> str:
     page_header = site_page_header(idx_path, current="terms", wide=True)
     page_footer = site_page_footer(idx_path, current="terms", wide=True)
     page_breadcrumb = breadcrumb_html(idx_path, [("トップ", "index.html"), ("執筆サンプル", None)])
-    tabs_html = knowledge_hub_tabs_html(current="terms", **knowledge_hub_tab_hrefs(here="samples"))
+    tabs_html = knowledge_hub_tabs_html(current="samples", **knowledge_hub_tab_hrefs(here="samples"))
 
     cards = [
         (

@@ -1073,7 +1073,7 @@ def build_field_hub_html(
     page_breadcrumb = breadcrumb_html(rel_path, crumb_items)
     page_footer = site_page_footer(rel_path, current="terms")
     hub_tabs = knowledge_hub_tabs_html(
-        current="terms",
+        current="field",
         **knowledge_hub_tab_hrefs(here="field"),
     )
     ld = {
