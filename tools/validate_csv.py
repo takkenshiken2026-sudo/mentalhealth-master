@@ -30,6 +30,7 @@ from tools.knowledge_hub_rules import (
     check_numbers_row,
     production_count_message,
 )
+from tools.related_links import parse_related_link_token
 from tools.site_config import category_to_field_map, guide_genre_labels
 from tools.term_diagram import DIAGRAM_ID_RE, diagram_id_exists
 
@@ -415,7 +416,7 @@ class Validator:
             related = self.norm(row.get("related_links"))
             if related:
                 for item in split_semicolon(related):
-                    target = item.split(":", 1)[0].strip()
+                    target, _label = parse_related_link_token(item)
                     if target.startswith(("http://", "https://")):
                         continue
                     if not target:
@@ -452,7 +453,7 @@ class Validator:
                 internal_related = 0
                 if related:
                     for item in split_semicolon(related):
-                        target = item.split(":", 1)[0].strip()
+                        target, _label = parse_related_link_token(item)
                         if target and not target.startswith(("http://", "https://")):
                             internal_related += 1
                 if internal_related < 2:
