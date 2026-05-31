@@ -22,6 +22,7 @@ FAQ_PAD = "本ページの表・関連用語とあわせ、過去問の正誤肢
 
 MIN_LEAD = 80
 MIN_FAQ = 100
+MIN_SUMMARY = 13
 MIN_MEMORY_TIP = 15
 MIN_COMMON_MISTAKES = 20
 MEMORY_TIP_PAD = "関連用語とセットで声に出して確認"
@@ -116,6 +117,33 @@ def enrich_faq_answer(answer: str, row: dict[str, str]) -> str:
     return result if len(result) >= len(text) else text
 
 
+def enrich_summary(row: dict[str, str]) -> str:
+    summary = (row.get("summary") or "").strip()
+    if len(summary) >= MIN_SUMMARY:
+        return summary
+
+    parts: list[str] = []
+    if summary:
+        parts.append(summary.rstrip("。"))
+
+    confusion = (row.get("confusion_point") or "").strip().rstrip("。")
+    if confusion and confusion not in summary:
+        parts.append(confusion)
+
+    if len(_join_sentences(parts)) < MIN_SUMMARY:
+        title = (row.get("title") or "").strip().rstrip("。")
+        if title and title not in summary:
+            parts.append(f"「{title}」を整理")
+
+    if len(_join_sentences(parts)) < MIN_SUMMARY:
+        points = split_semicolon(row.get("exam_points", ""))
+        if points and points[0] not in summary:
+            parts.append(points[0])
+
+    result = _join_sentences(parts)
+    return result or summary
+
+
 def enrich_memory_tip(row: dict[str, str]) -> str:
     tip = (row.get("memory_tip") or "").strip()
     if len(tip) >= MIN_MEMORY_TIP:
@@ -162,6 +190,7 @@ def enrich_common_mistakes(row: dict[str, str]) -> str:
 
 def enrich_row(row: dict[str, str]) -> dict[str, str]:
     row = dict(row)
+    row["summary"] = enrich_summary(row)
     row["article_lead"] = enrich_lead(row)
     row["memory_tip"] = enrich_memory_tip(row)
     row["common_mistakes"] = enrich_common_mistakes(row)
@@ -180,13 +209,15 @@ def enrich_csv(path: Path) -> int:
     changed = 0
     new_rows = []
     for row in rows:
+        old_summary = row.get("summary", "")
         old_lead = row.get("article_lead", "")
         old_tip = row.get("memory_tip", "")
         old_cm = row.get("common_mistakes", "")
         old_faqs = [row.get(f"faq_{i}_answer", "") for i in range(1, 5)]
         enriched = enrich_row(row)
         if (
-            enriched.get("article_lead") != old_lead
+            enriched.get("summary") != old_summary
+            or enriched.get("article_lead") != old_lead
             or enriched.get("memory_tip") != old_tip
             or enriched.get("common_mistakes") != old_cm
             or [enriched.get(f"faq_{i}_answer") for i in range(1, 5)] != old_faqs
