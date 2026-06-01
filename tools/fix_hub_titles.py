@@ -80,15 +80,53 @@ def fix_file(path: Path) -> int:
 
 
 def fix_site(root: Path) -> int:
-    total = 0
     data = root / "data"
+    rows_by: dict[str, tuple[list[str], list[dict[str, str]]]] = {}
     for name in HUB_FILES:
         path = data / name
         if path.is_file():
-            n = fix_file(path)
-            if n:
-                print(f"  {name}: {n} title tweaks")
-            total += n
+            rows_by[name] = _read(path)
+    total = 0
+    for name, (header, rows) in rows_by.items():
+        path = data / name
+        n = fix_file(path)
+        if n:
+            print(f"  {name}: {n} title tweaks")
+        total += n
+        rows_by[name] = _read(path)
+
+    entries: list[tuple[str, int, dict[str, str]]] = []
+    for name in HUB_FILES:
+        if name not in rows_by:
+            continue
+        _, rows = rows_by[name]
+        for i, row in enumerate(rows):
+            if (row.get("title") or "").strip():
+                entries.append((name, i, row))
+    cross = 0
+    for a in range(len(entries)):
+        f1, _, r1 = entries[a]
+        t1 = (r1.get("title") or "").strip()
+        for b in range(a + 1, len(entries)):
+            f2, _, r2 = entries[b]
+            t2 = (r2.get("title") or "").strip()
+            if SequenceMatcher(None, _title_key(t1), _title_key(t2)).ratio() < 0.88:
+                continue
+            for fname, row in ((f1, r1), (f2, r2)):
+                title = (row.get("title") or "").strip()
+                tag = _disambiguator(row, fname)
+                if tag and tag not in title:
+                    new_title = f"{title}｜{tag}"
+                    if new_title != title:
+                        row["title"] = new_title
+                        cross += 1
+    if cross:
+        for name in HUB_FILES:
+            if name in rows_by:
+                header, rows = rows_by[name]
+                _write(data / name, header, rows)
+        print(f"  cross-hub: {cross} title tweaks")
+    total += cross
     return total
 
 
