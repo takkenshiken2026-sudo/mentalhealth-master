@@ -134,5 +134,12 @@ window.SITE_CONFIG = {
       ],
       "legacyGlossaryCat": "limit"
     }
-  ]
+  ],
+  "paidMockExam": {
+    "url": "https://note.com/shikaku_master/n/n23b1be0a19d9",
+    "modeTitle": "予想模試（PDF・2回分）",
+    "modePurpose": "本番形式で実力確認したい",
+    "priceLabel": "¥590",
+    "footnote": "※ note で販売する有料コンテンツ（¥590）です。サイト内の無料演習とは別商品です。"
+  }
 };
