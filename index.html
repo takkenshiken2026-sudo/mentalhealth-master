@@ -6989,7 +6989,7 @@ function getPaidMockExamConfig(){
   const cfg=(window.SITE_CONFIG&&window.SITE_CONFIG.paidMockExam)||{};
   return {
     url: String(cfg.url||'https://note.com/shikaku_master/n/n23b1be0a19d9').trim(),
-    modeTitle: String(cfg.modeTitle||'予想模試（PDF・2回分）').trim(),
+    modeTitle: String(cfg.modeTitle||'予想模試（PDF・3回分）').trim(),
     modePurpose: String(cfg.modePurpose||'本番形式で実力確認したい').trim(),
     priceLabel: String(cfg.priceLabel||'¥590').trim(),
     footnote: String(cfg.footnote||'※ note で販売する有料コンテンツ（¥590）です。サイト内の無料演習とは別商品です。').trim(),
@@ -7032,7 +7032,7 @@ function renderScorePaidMockPromo(){
       <span class="score-paid-mock-strip-tag">有料</span>
       <span class="score-paid-mock-strip-body">
         <span class="score-paid-mock-strip-title">${escapeAttr(m.modeTitle)}</span>
-        <span class="score-paid-mock-strip-meta">PDF・2回 · ${escapeAttr(m.priceLabel)} · note</span>
+        <span class="score-paid-mock-strip-meta">PDF・3回 · ${escapeAttr(m.priceLabel)} · note</span>
       </span>
       <span class="score-paid-mock-strip-cta">詳細 ↗</span>
     </a>
