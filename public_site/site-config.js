@@ -134,5 +134,11 @@ window.SITE_CONFIG = {
       ],
       "legacyGlossaryCat": "limit"
     }
-  ]
+  ],
+  "paidMockExam": {
+    "url": "https://note.com/shikaku_master/n/n23b1be0a19d9",
+    "modeTitle": "予想模試（PDF・3回分）",
+    "modePurpose": "本番形式で実力確認したい",
+    "priceLabel": "¥590"
+  }
 };
