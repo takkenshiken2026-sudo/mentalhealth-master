@@ -1,9 +1,10 @@
+# GitHub Pages — build_all 経由（apply_site_config・validate 含む）
+# Settings → Pages → Source: GitHub Actions
 name: Deploy GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main, master]
   workflow_dispatch:
 
 permissions:
@@ -12,27 +13,41 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-mentalhealth-master
   cancel-in-progress: false
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build site
+        run: bash tools/ci_deploy_build.sh
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: public_site
+
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload static site
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - id: deployment
+        uses: actions/deploy-pages@v5
