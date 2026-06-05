@@ -16,14 +16,8 @@ if str(ROOT) not in sys.path:
 
 from tools.build_article_pages import resolve_guide_section_body, sanitize_guide_text  # noqa: E402
 from tools.editorial_quality import is_published_guide, norm  # noqa: E402
-from tools.guide_rewrite_rules import (  # noqa: E402
-    is_affiliate_row,
-    is_hand_rewritten,
-    rewrite_forbidden_hits,
-    rewrite_status,
-    slug_leaks_in_text,
-    tier_priority,
-)
+from tools.guide_rewrite_quality import prose_quality_status, revision_is_hand  # noqa: E402
+from tools.guide_rewrite_rules import rewrite_forbidden_hits, slug_leaks_in_text, tier_priority, is_affiliate_row  # noqa: E402
 
 PROSE_COLS = (
     "lead",
@@ -70,9 +64,7 @@ def audit_site(site_root: Path) -> list[dict[str, str]]:
         combined = "\n".join(p for p in parts if p)
         forbidden = rewrite_forbidden_hits(combined)
         leaks = slug_leaks_in_text(combined, slug)
-        status = rewrite_status(row, combined_text=combined)
-        if is_affiliate_row(row) and not is_hand_rewritten(row):
-            status = "affiliate_pending"
+        status = prose_quality_status(row, combined)
         rows.append(
             {
                 "site": site_name,
@@ -81,7 +73,7 @@ def audit_site(site_root: Path) -> list[dict[str, str]]:
                 "title": norm(row.get("title")),
                 "priority": tier_priority(row),
                 "status": status,
-                "hand_rewritten": "yes" if is_hand_rewritten(row) else "no",
+                "hand_rewritten": "yes" if revision_is_hand(row) else "no",
                 "affiliate": "yes" if is_affiliate_row(row) else "no",
                 "forbidden_count": str(len(forbidden)),
                 "forbidden_sample": forbidden[0][:40] if forbidden else "",
@@ -128,18 +120,26 @@ def main() -> int:
         print(f"wrote {len(all_rows)} rows -> {args.output}")
 
     needs = sum(1 for r in all_rows if r["status"] == "needs_rewrite")
-    done = sum(1 for r in all_rows if r["status"] == "done")
-    summary = {"total": len(all_rows), "needs_rewrite": needs, "done": done}
+    hand = sum(1 for r in all_rows if r["status"] == "hand_done")
+    auto = sum(1 for r in all_rows if r["status"] == "auto_pending")
+    summary = {"total": len(all_rows), "needs_rewrite": needs, "hand_done": hand, "auto_pending": auto}
     if args.json:
         print(json.dumps({"summary": summary, "rows": all_rows}, ensure_ascii=False, indent=2))
     else:
-        print(f"summary: total={summary['total']} needs_rewrite={needs} done={done}")
-        by_site: dict[str, int] = {}
+        print(
+            f"summary: total={summary['total']} hand_done={hand} "
+            f"auto_pending={auto} needs_rewrite={needs}"
+        )
+        by_site: dict[str, dict[str, int]] = {}
         for r in all_rows:
-            if r["status"] == "needs_rewrite":
-                by_site[r["site"]] = by_site.get(r["site"], 0) + 1
-        for site, n in sorted(by_site.items(), key=lambda x: -x[1]):
-            print(f"  {site}: {n}")
+            by_site.setdefault(r["site"], {})
+            st = r["status"]
+            by_site[r["site"]][st] = by_site[r["site"]].get(st, 0) + 1
+        for site in sorted(by_site):
+            c = by_site[site]
+            total = sum(c.values())
+            hd = c.get("hand_done", 0)
+            print(f"  {site}: hand_done={hd}/{total}")
 
     return 0
 
