@@ -19,7 +19,7 @@ from tools.build_article_pages import sanitize_guide_text  # noqa: E402
 from tools.editorial_quality import norm  # noqa: E402
 from tools.guide_article_rules import GUIDE_MIN_FAQ_ANSWER, GUIDE_MIN_SECTION_BODY  # noqa: E402
 from tools.guide_prose_patterns import scan_prose_text  # noqa: E402
-from tools.guide_rewrite_rules import rewrite_forbidden_hits  # noqa: E402
+from tools.guide_rewrite_rules import is_affiliate_row, rewrite_forbidden_hits  # noqa: E402
 from tools.guide_concrete_rewrite_rules import validate_concrete_rewrite  # noqa: E402
 from tools.guide_rewrite_quality import is_auto_prose_text, revision_is_hand  # noqa: E402
 from tools.strip_generic_guide_padding import strip_padding_from_text  # noqa: E402
@@ -72,6 +72,12 @@ def validate_rewrites(rewrites: dict[str, dict[str, str]], *, root: Path) -> lis
 
     for slug, patch in rewrites.items():
         prefix = f"{slug}:"
+        if slug.startswith("affiliate-") or is_affiliate_row({"tags": patch.get("tags", ""), "slug": slug}):
+            errors.append(
+                f"{prefix} アフィリエイト slug — 手書き batch 対象外。"
+                f" docs/affiliate/affiliate-article-rules.md を参照"
+            )
+            continue
         for key in REQUIRED_KEYS:
             if not norm(patch.get(key)):
                 errors.append(f"{prefix} missing {key}")
