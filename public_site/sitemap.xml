@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://mentalhealth-master.jp/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>https://mentalhealth-master.jp/about.html</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
@@ -818,11 +823,6 @@
   <url>
     <loc>https://mentalhealth-master.jp/articles/workplace-improvement/index.html</loc>
     <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/index.html</loc>
-    <lastmod>2026-06-10</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
