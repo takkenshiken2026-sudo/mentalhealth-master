@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://mentalhealth-master.jp/</loc>
-    <lastmod>2026-06-11</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
@@ -27,11 +27,6 @@
   </url>
   <url>
     <loc>https://mentalhealth-master.jp/articles/burnout-workplace/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/chapter1-basics-review/</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
   </url>
@@ -151,28 +146,13 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentalhealth-master.jp/articles/health-checkup-mental/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://mentalhealth-master.jp/articles/health-nurse-role/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/health-promotion-plan/</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://mentalhealth-master.jp/articles/index.html</loc>
     <lastmod>2026-06-12</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/mhfa-basics/</loc>
-    <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
@@ -221,17 +201,7 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentalhealth-master.jp/articles/problem-book-selection/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://mentalhealth-master.jp/articles/registration-after-pass/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/reschedule-and-absence/</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
   </url>
@@ -251,82 +221,7 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentalhealth-master.jp/articles/scope-vs-past-questions/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/score-gap-analysis/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/self-study-environment/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/self-study-mistakes/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/self-study-motivation/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/self-study-schedule/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/self-study-start/</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/self-study-without-school/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/simulation-exam-schedule/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://mentalhealth-master.jp/articles/stress-model/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/study-hours-myth/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/study-plan-1year/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/study-plan-3months/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/study-plan-6months/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/study-plan-beginner/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/study-plan-working/</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
   </url>
@@ -356,47 +251,12 @@
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentalhealth-master.jp/articles/syllabus-update-tracker/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://mentalhealth-master.jp/articles/textbook-selection/</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://mentalhealth-master.jp/articles/textbook-vs-past-questions/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
     <loc>https://mentalhealth-master.jp/articles/time-limit-strategy/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/time-management/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/timed-practice/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/weight-by-topic/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/work-experience-requirement/</loc>
-    <lastmod>2026-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://mentalhealth-master.jp/articles/work-life-balance/</loc>
     <lastmod>2026-06-06</lastmod>
     <changefreq>monthly</changefreq>
   </url>
