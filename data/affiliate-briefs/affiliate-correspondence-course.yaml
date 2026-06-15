@@ -1,0 +1,52 @@
+slug: affiliate-correspondence-course
+theme_key: correspondence-course
+search_intent: メンタルヘルス・マネジメント検定II種の通信講座を比較して選びたい
+title: メンタルヘルス・マネジメント検定II種の通信講座比較【2026年度版】
+layout: product-comparison
+asp_primary: mixed
+comparison_kind: courses
+comparison_title: 通信講座3選（比較）
+price_disclaimer: 受講料・開講時期は各公式ページで必ず最新情報を確認してください。
+products:
+  - rank: 1
+    offer_type: course
+    name: メンタルヘルス・マネジメント検定Ⅱ種合格コース 2026年度試験対応
+    provider: スタディング
+    billing_type: lump
+    affiliate_url: https://studying.jp/mental/itempage/course2-2026.html
+    image_file: mentalhealth-course-studying-2026.webp
+    for_who: 動画とカリキュラムでII種に特化して学びたい人
+    highlights:
+      - 2026年度試験対応のII種合格コース
+      - 独学の弱点補強に向く通信スタイル
+      - 公式テキストと併用しやすい
+  - rank: 2
+    offer_type: course
+    name: メンタルヘルス・マネジメント検定Ⅱ種対策講座
+    provider: 産業能率大学 総合研究所
+    billing_type: lump
+    affiliate_url: https://www.hj.sanno.ac.jp/distance-learning/course/B223-02.html
+    image_file: mentalhealth-course-sanno.webp
+    for_who: 大学系通信研修で計画的に進めたい管理職
+    highlights:
+      - 産業能率大学の通信研修コース
+      - ラインケアコース向けの体系学習
+      - 社内研修と併用しやすい
+  - rank: 3
+    offer_type: course
+    name: メンタルヘルス・マネジメント検定Ⅱ種・Ⅲ種講座
+    provider: キャリカレ
+    billing_type: lump
+    affiliate_url: https://www.c-c-j.com/course/psychology/management/
+    image_file: mentalhealth-course-caricare.webp
+    for_who: II種とIII種をまとめて受講したい人
+    highlights:
+      - II種・III種を1講座で学べる
+      - 通信で自分のペースを維持しやすい
+      - 独学教材との併用比較がしやすい
+related_links:
+  - correspondence-course-guide:通信講座の選び方
+  - self-study-start:独学の始め方
+  - affiliate-textbooks-recommend:おすすめテキスト
+  - affiliate-online-course-compare:オンライン講座の比較
+operator_note: 公式直リンク（A8未設定）。2026-06-12 ASIN/dp確定・手書きリライト反映。

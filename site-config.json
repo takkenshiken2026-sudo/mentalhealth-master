@@ -249,5 +249,47 @@
     "modePurpose": "本番形式で実力確認したい",
     "priceLabel": "¥590",
     "footnote": "※ note で販売する有料コンテンツ（¥590）です。サイト内の無料演習とは別商品です。"
+  },
+  "guideIndexPicks": {
+    "title": "おすすめのテキスト・問題集・通信講座",
+    "lead": "2026年度版の比較記事から、テキスト・問題集・講座の選び方へ。",
+    "leadsByHub": {
+      "articles": "2026年度版の比較記事から、テキスト・問題集・講座の選び方へ。",
+      "terms": "用語暗記と併用するテキスト・問題集の比較記事へ。",
+      "q": "無料演習と併用する問題集・講座の比較記事へ。"
+    },
+    "layout": "grid-3",
+    "items": [
+      {
+        "kind": "textbook",
+        "kindLabel": "テキスト",
+        "title": "おすすめテキスト3選【2026年度版】",
+        "description": "公式第6版·TACスッキリ·サクッとわかるの3冊を比較。7領域100問120分·70点を前提に1冊選びを解説します。",
+        "href": "affiliate-textbooks-recommend/",
+        "cta": "3冊を比較する",
+        "image": "images/affiliate/mentalhealth-book-450258021x.webp",
+        "imageAlt": "メンタルヘルス・マネジメント検定試験公式テキスト Ⅱ種 ラインケアコース 第6版 表紙"
+      },
+      {
+        "kind": "problem-book",
+        "kindLabel": "問題集",
+        "title": "おすすめ問題集3選【2025年度版】",
+        "description": "過去問2025·能率協会重要ポイント·TACスッキリの3冊を比較。テキスト第1周後の演習1冊の選び方をまとめます。",
+        "href": "affiliate-problem-books/",
+        "cta": "3冊を比較する",
+        "image": "images/affiliate/mentalhealth-book-450255121x.webp",
+        "imageAlt": "メンタルヘルス・マネジメント検定 II種 過去問題集 2025年度版 表紙"
+      },
+      {
+        "kind": "course",
+        "kindLabel": "通信講座",
+        "title": "通信講座比較【2026年度版】",
+        "description": "スタディング·産業能率大学·キャリカレの3講座を比較。独学テキストとの併用例と選び方を解説します。",
+        "href": "affiliate-correspondence-course/",
+        "cta": "3講座を比較する",
+        "image": "images/affiliate/mentalhealth-course-studying-2026.webp",
+        "imageAlt": "スタディング メンタルヘルス・マネジメント検定Ⅱ種合格コース"
+      }
+    ]
   }
 }

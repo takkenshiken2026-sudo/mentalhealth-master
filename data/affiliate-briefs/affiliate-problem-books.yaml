@@ -1,0 +1,67 @@
+slug: affiliate-problem-books
+theme_key: problem-books
+search_intent: メンタルヘルス・マネジメント検定II種の問題集・過去問を比較して選びたい
+title: メンタルヘルス・マネジメント検定II種のおすすめ問題集3選【2026年度版・過去問】
+layout: product-comparison
+asp_primary: amazon
+comparison_kind: books
+comparison_title: おすすめ問題集3選（比較）
+price_disclaimer: 価格・在庫・版情報は執筆時点（2026-06-12）のAmazon税込参考です。購入前に必ず販売ページでご確認ください。
+products:
+  - rank: 1
+    offer_type: book
+    name: メンタルヘルス・マネジメント検定試験 II種 ラインケアコース 過去問題集 2025年度版
+    publisher: 中央経済社
+    edition: 2025年度版
+    price_yen: 2530
+    price_note: Amazon税込参考・送料別
+    pages: 256
+    format: A5判
+    asin: 450255121X
+    image_file: mentalhealth-book-450255121x.webp
+    amazon_url: https://www.amazon.co.jp/dp/450255121X/ref=nosim?tag=ue083093-22
+    for_who: 過去問形式で本番に近い演習をしたい人
+    highlights:
+      - 直近10回分の過去問を7領域別に整理
+      - テキスト第1周後の演習1冊目候補
+      - 解説で出題傾向を把握しやすい
+  - rank: 2
+    offer_type: book
+    name: 改訂4版 メンタルヘルス・マネジメント検定試験II種 ラインケアコース 重要ポイント&問題集
+    publisher: 日本能率協会マネジメントセンター
+    edition: 改訂4版
+    price_yen: 2200
+    price_note: Amazon税込参考・送料別
+    pages: 256
+    format: A5判
+    asin: '4820729462'
+    image_file: mentalhealth-book-4820729462.webp
+    amazon_url: https://www.amazon.co.jp/dp/4820729462/ref=nosim?tag=ue083093-22
+    for_who: 要点整理と問題演習を短時間で回したい社会人
+    highlights:
+      - 重要ポイントの整理と問題が1冊
+      - 通勤学習向けのコンパクト構成
+      - 過去問集と役割分担して使いやすい
+  - rank: 3
+    offer_type: book
+    name: スッキリわかる メンタルヘルス・マネジメント検定試験Ⅱ種 テキスト&問題集 第2版
+    publisher: TAC出版
+    edition: 第2版
+    price_yen: 2200
+    price_note: Amazon税込参考・送料別
+    pages: 272
+    format: A5判
+    asin: '4813286305'
+    image_file: mentalhealth-book-4813286305.webp
+    amazon_url: https://www.amazon.co.jp/dp/4813286305/ref=nosim?tag=ue083093-22
+    for_who: テキスト併用型で演習量を確保したい初学者
+    highlights:
+      - 章末問題で理解度をその場で確認
+      - テキスト記事と縦串で使える
+      - 過去問集の前段階の演習にも向く
+related_links:
+  - past-question-strategy:過去問の使い方
+  - pass-score:合格点の目安
+  - affiliate-textbooks-recommend:おすすめテキスト
+  - study-plan:学習計画
+operator_note: Amazon tag=ue083093-22。450255121X / 4820729462 / 4813286305。2026-06-12 価格確認。

@@ -1,0 +1,52 @@
+slug: affiliate-online-course-compare
+theme_key: online-course-compare
+search_intent: メンタルヘルス・マネジメント検定II種のオンライン講座・動画学習を比較したい
+title: メンタルヘルス・マネジメント検定II種のオンライン講座比較【動画・通信2026】
+layout: product-comparison
+asp_primary: mixed
+comparison_kind: courses
+comparison_title: オンライン講座3選（比較）
+price_disclaimer: 受講料・キャンペーンは各公式ページで必ず最新情報を確認してください。
+products:
+  - rank: 1
+    offer_type: course
+    name: メンタルヘルス・マネジメント検定Ⅱ種合格コース 2026年度試験対応
+    provider: スタディング
+    billing_type: lump
+    affiliate_url: https://studying.jp/mental/itempage/course2-2026.html
+    image_file: mentalhealth-course-studying-2026.webp
+    for_who: 動画中心でII種に特化して学びたい人
+    highlights:
+      - 2026年度対応のII種コース
+      - スマホ視聴しやすいオンライン学習
+      - 独学テキストとの併用向き
+  - rank: 2
+    offer_type: course
+    name: メンタルヘルス・マネジメント検定Ⅱ種＋Ⅲ種ダブルチャレンジコース 2026年度試験対応
+    provider: スタディング
+    billing_type: lump
+    affiliate_url: https://studying.jp/mental/itempage/course2_3-2026.html
+    image_file: mentalhealth-course-studying-double.webp
+    for_who: II種合格後にIII種まで視野に入れたい人
+    highlights:
+      - II種とIII種を連続で学べる
+      - 2026年度試験対応
+      - 通信講座比較記事と役割分担して選べる
+  - rank: 3
+    offer_type: course
+    name: メンタルヘルス・マネジメント検定II種ラインケア完全対策
+    provider: Udemy
+    billing_type: lump
+    affiliate_url: https://www.udemy.com/course/mentalhealth-management-exam/
+    image_file: mentalhealth-course-udemy.webp
+    for_who: 買い切り動画で短時間に要点を押さえたい人
+    highlights:
+      - 動画講座でラインケア要点を学べる
+      - 通信講座より手軽に始めやすい
+      - テキスト第1周の補助教材にも使える
+related_links:
+  - correspondence-course-guide:通信講座の選び方
+  - self-study-start:独学の始め方
+  - affiliate-correspondence-course:通信講座の比較
+  - affiliate-textbooks-recommend:おすすめテキスト
+operator_note: Udemy・スタディング直リンク。2026-06-12 手書きリライト反映。
