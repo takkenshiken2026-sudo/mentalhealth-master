@@ -1,0 +1,66 @@
+slug: affiliate-cram-school
+theme_key: cram-school
+search_intent: メンタルヘルス・マネジメント検定II種の通学講座·予備校を比較して選びたい
+title: メンタルヘルス・マネジメント検定II種の通学講座·予備校の選び方【2026·日程固定3選】
+genre: 独学対策
+layout: product-comparison
+asp_primary: mixed
+comparison_kind: courses
+comparison_title: 日程固定型講座3選（比較）
+price_disclaimer: 受講料·開講時期·法人割引は各公式ページで必ず最新情報を確認してください。TACのII種講座は閉講済みです（2026-06-15時点）。
+products:
+  - rank: 1
+    offer_type: course
+    name: メンタルヘルス・マネジメント検定Ⅱ種合格コース 2026年度試験対応
+    provider: スタディング
+    billing_type: lump
+    price_yen: 26800
+    price_label: 26,800円（税込）
+    price_note: 短期合格セミナー1回·模試2回·Q&A10回込み
+    duration: 2027年4月30日まで
+    affiliate_url: https://studying.jp/mental/itempage/course2-2026.html
+    image_file: mentalhealth-course-studying-2026.webp
+    for_who: 全国からライブ日程·講師質問で学習リズムを固定したい管理職
+    highlights:
+      - 短期合格セミナー（ライブ）がコースに含まれる
+      - 模擬試験2回·学習Q&A10回で演習と質問を一体運用
+      - 通学代替として全国から受講しやすい
+  - rank: 2
+    offer_type: course
+    name: メンタルヘルス・マネジメント検定II種対策講座
+    provider: 産業能率大学 総合研究所
+    billing_type: lump
+    price_yen: 11000
+    price_label: 特別受講料11,000円（税込·企業経由）
+    price_note: 個人受講料は公式要確認·公式テキスト1冊付き
+    duration: 受講3か月·在籍6か月
+    affiliate_url: https://www.hj.sanno.ac.jp/distance-learning/course/B223-02.html
+    image_file: mentalhealth-course-sanno.webp
+    for_who: 会社研修と併用しリポート3回で計画学習したい管理職
+    highlights:
+      - 公式テキスト·ポイント集·過去問1回がセット
+      - Webリポート3回（応用1回）で実力測定
+      - 企業経由なら受講料を抑えやすい
+  - rank: 3
+    offer_type: course
+    name: メンタルヘルス・マネジメント(R)検定 II種ラインケアコース
+    provider: 日本マンパワー
+    billing_type: lump
+    price_yen: 14850
+    price_label: 14,850円（税込·一般）
+    price_note: 法人12,650円·受講期間2ヶ月·添削2回
+    duration: 2ヶ月
+    affiliate_url: https://www.nipponmanpower.co.jp/shop/g/gLMX/
+    image_file: mentalhealth-course-manpower.webp
+    for_who: 2ヶ月短期集中·紙テキスト+添削で締切を作りたい人
+    highlights:
+      - 2ヶ月の受講期限で学習ペースが明確
+      - Web添削2回で答案の癖を早期修正
+      - 法人経由で12,650円（税込）の場合あり
+related_links:
+  - self-study-start:独学の始め方
+  - study-plan-beginner:初学者向け学習計画
+  - affiliate-correspondence-course:通信講座の比較
+  - affiliate-online-course-compare:オンライン講座の比較
+  - affiliate-textbooks-recommend:おすすめテキスト
+operator_note: 公式直リンク3本。TAC II種講座は閉講。商工会議所1day対面は地域限定のため本比較から除外。2026-06-15 手書きリライト。

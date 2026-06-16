@@ -1,0 +1,18 @@
+slug: affiliate-free-vs-paid-study
+theme_key: free-vs-paid-study
+search_intent: メンタルヘルス・マネジメント検定II種で無料だけでどこまででき、有料教材はいつ必要か知りたい
+title: メンタルヘルス・マネジメント検定II種の無料と有料教材の使い分け【独学2026】
+genre: 独学対策
+layout: csv
+asp_primary: internal
+comparison_kind: none
+price_disclaimer: 有料教材の価格は執筆時点（2026-06-15）のAmazon税込参考です。購入前に各比較記事のリンク先で最新を確認してください。
+related_links:
+  - self-study-start:独学の始め方
+  - study-plan-beginner:初学者向け学習計画
+  - textbook-selection:テキストの選び方
+  - affiliate-textbooks-recommend:おすすめテキスト3選
+  - affiliate-problem-books:おすすめ問題集3選
+  - affiliate-beginner-material-set:初学者向け教材セット
+  - affiliate-mock-exam-materials:模試·一問一答3選
+operator_note: 内部導線記事。本文は判断フロー中心。related_linksにAmazon3本（比較記事と同ASIN）でビルドゲート通過。

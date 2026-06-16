@@ -1,0 +1,69 @@
+slug: affiliate-mock-exam-materials
+theme_key: mock-exam-materials
+search_intent: メンタルヘルス・マネジメント検定II種の模試・一問一答を比較して選びたい
+title: メンタルヘルス・マネジメント検定II種の模試・一問一答3選【過去問2025·速習·2026】
+layout: product-comparison
+asp_primary: amazon
+comparison_kind: books
+comparison_title: 模試・一問一答3選（比較）
+price_disclaimer: 価格・在庫は執筆時点（2026-06-15）のAmazon税込参考です。購入前に販売ページで最新版を確認してください。
+products:
+  - rank: 1
+    offer_type: book
+    name: メンタルヘルス・マネジメント検定試験 II種 ラインケアコース 過去問題集 2025年度版
+    publisher: 中央経済社
+    edition: 2025年度版
+    price_yen: 2530
+    price_note: Amazon税込参考・送料別
+    pages: 256
+    format: A5判
+    asin: 450255121X
+    image_file: mentalhealth-book-450255121x.webp
+    amazon_url: https://www.amazon.co.jp/dp/450255121X/ref=nosim?tag=ue083093-22
+    for_who: 100問120分の本番形式模試を厚く回したい人
+    highlights:
+      - 直近10回分を7領域別に整理
+      - 8〜9月の100問通し模試のメイン冊
+      - 70点ラインの得点源を作りやすい
+  - rank: 2
+    offer_type: book
+    name: サクッとわかる! メンタルヘルス・マネジメント検定Ⅱ種·Ⅲ種テキスト&問題集
+    publisher: ナツメ社
+    edition: 改訂版
+    price_yen: 2200
+    price_note: Amazon税込参考・送料別
+    pages: 256
+    format: A5判
+    asin: '4816373098'
+    image_file: mentalhealth-book-4816373098.webp
+    amazon_url: https://www.amazon.co.jp/dp/4816373098/ref=nosim?tag=ue083093-22
+    for_who: 通勤時間で短問·要点確認を増やしたい人
+    highlights:
+      - II·IIIを1冊でコンパクトに反復
+      - 模試前の弱点領域の短時間 drill
+      - おすすめテキスト3選の第3候補と縦串
+  - rank: 3
+    offer_type: book
+    name: 改訂4版 メンタルヘルス・マネジメント検定試験II種 ラインケアコース 重要ポイント&問題集
+    publisher: 日本能率協会マネジメントセンター
+    edition: 改訂4版
+    price_yen: 2200
+    price_note: Amazon税込参考・送料別
+    pages: 256
+    format: A5判
+    asin: '4820729462'
+    image_file: mentalhealth-book-4820729462.webp
+    amazon_url: https://www.amazon.co.jp/dp/4820729462/ref=nosim?tag=ue083093-22
+    for_who: 要点整理と模擬問題を短時間で往復したい社会人
+    highlights:
+      - 頻出論点の表形式整理
+      - 模試間の弱点領域の補助 drill
+      - 過去問2025と役割分担しやすい
+related_links:
+  - mock-exam-how-to:模試の活用法
+  - timed-practice:時間を計った演習
+  - past-questions-study:過去問の使い方
+  - affiliate-problem-books:おすすめ問題集
+  - affiliate-textbooks-recommend:おすすめテキスト
+  - pass-score:合格点の目安
+operator_note: Amazon tag=ue083093-22。450255121X / 4816373098 / 4820729462。2026-06-15 価格確認。

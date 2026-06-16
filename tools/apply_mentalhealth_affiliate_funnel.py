@@ -13,8 +13,6 @@ CSV_PATH = ROOT / "data" / "guide_articles.csv"
 AFFILIATE_TITLES = {
     "affiliate-textbooks-recommend": "メンタルヘルス・マネジメント検定II種のおすすめテキスト3選【2026年度版·独学】",
     "affiliate-problem-books": "メンタルヘルス・マネジメント検定II種のおすすめ問題集3選【2026年度版·過去問】",
-    "affiliate-online-course-compare": "メンタルヘルス・マネジメント検定II種のオンライン講座比較【動画·2026年度版】",
-    "affiliate-correspondence-course": "メンタルヘルス・マネジメント検定II種の通信講座比較【2026年度版·独学併用】",
 }
 
 BODY = {
@@ -24,12 +22,6 @@ BODY = {
     "affiliate-problem-books": (
         "演習1冊は、affiliate-problem-books で過去問2025·能率協会·TACの3冊を比較してから100問120分演習に組み込むと迷いが減ります。"
     ),
-    "affiliate-online-course-compare": (
-        "動画中心で始めたい場合は、affiliate-online-course-compare でスタディング·Udemyの学習設計を比較し、当サイト演習量は維持したまま1講座に絞ると続きやすいです。"
-    ),
-    "affiliate-correspondence-course": (
-        "週5時間未満が続く場合は、affiliate-correspondence-course でスタディング·産業能率大学·キャリカレを比較してから独学テキストと役割分担を決めると安全です。"
-    ),
 }
 
 GUIDE_AFFILIATE: dict[str, tuple[str, int]] = {
@@ -37,18 +29,12 @@ GUIDE_AFFILIATE: dict[str, tuple[str, int]] = {
     "self-study-guide": ("affiliate-textbooks-recommend", 2),
     "textbook-selection": ("affiliate-textbooks-recommend", 2),
     "problem-book-selection": ("affiliate-problem-books", 2),
-    "correspondence-course-guide": ("affiliate-correspondence-course", 2),
-    "self-study-start": ("affiliate-correspondence-course", 2),
     "study-plan": ("affiliate-textbooks-recommend", 2),
     "study-plan-3months": ("affiliate-textbooks-recommend", 2),
     "study-plan-6months": ("affiliate-textbooks-recommend", 2),
     "study-plan-1year": ("affiliate-textbooks-recommend", 2),
-    "study-plan-working": ("affiliate-correspondence-course", 2),
     "study-plan-beginner": ("affiliate-textbooks-recommend", 2),
     "first-30-days-plan": ("affiliate-textbooks-recommend", 2),
-    "balance-work-study": ("affiliate-correspondence-course", 2),
-    "self-study-without-school": ("affiliate-online-course-compare", 2),
-    "self-study-schedule": ("affiliate-correspondence-course", 2),
     "past-questions-study": ("affiliate-problem-books", 2),
     "past-questions-by-field": ("affiliate-problem-books", 2),
     "past-questions-review-cycle": ("affiliate-problem-books", 2),
@@ -57,17 +43,12 @@ GUIDE_AFFILIATE: dict[str, tuple[str, int]] = {
     "mock-exam-how-to": ("affiliate-problem-books", 2),
     "drill-volume-guide": ("affiliate-problem-books", 2),
     "final-day-checklist": ("affiliate-problem-books", 2),
-    "plateau-breakthrough": ("affiliate-correspondence-course", 2),
 }
 
 SECONDARY_AFFILIATE: dict[str, str] = {
     "overview": "affiliate-problem-books",
     "self-study-guide": "affiliate-problem-books",
     "textbook-selection": "affiliate-problem-books",
-    "correspondence-course-guide": "affiliate-online-course-compare",
-    "study-plan-working": "affiliate-online-course-compare",
-    "balance-work-study": "affiliate-textbooks-recommend",
-    "self-study-without-school": "affiliate-textbooks-recommend",
     "past-questions-study": "affiliate-textbooks-recommend",
     "final-day-checklist": "affiliate-textbooks-recommend",
 }

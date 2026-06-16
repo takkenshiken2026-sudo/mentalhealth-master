@@ -1163,7 +1163,7 @@ def main() -> int:
     buildable = [
         article
         for article in articles
-        if is_published_guide(article) and affiliate_article_is_buildable(article)
+        if is_published_guide(article) and affiliate_article_is_buildable(article, site_root=ROOT)
     ]
     skipped_affiliate = len(articles) - len(buildable)
     by_slug = {norm(a.get("slug")): a for a in buildable if norm(a.get("slug"))}

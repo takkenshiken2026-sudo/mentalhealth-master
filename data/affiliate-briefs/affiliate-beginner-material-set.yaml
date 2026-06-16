@@ -1,0 +1,79 @@
+slug: affiliate-beginner-material-set
+theme_key: beginner-material-set
+search_intent: メンタルヘルス・マネジメント検定II種初学者が最初に揃えるテキスト+問題集セットを比較したい
+title: メンタルヘルス・マネジメント検定II種の初学者向け教材セット3選【2026年度版·テキスト+問題集】
+genre: 学習計画
+layout: product-comparison
+asp_primary: amazon
+comparison_kind: books
+comparison_title: 初学者向け教材セット3選（比較）
+price_disclaimer: 価格·在庫は執筆時点（2026-06-15）のAmazon税込参考です。購入前に必ず販売ページで最新版を確認してください。
+products:
+  - rank: 1
+    offer_type: book
+    name: 公式正本2冊セット（第6版+過去問2025）
+    publisher: 中央経済社
+    edition: 2026年度版
+    price_yen: 6160
+    price_label: 約6,160円（2冊合計·税込参考）
+    price_note: 公式3,630円+過去問2,530円·送料別
+    pages: 0
+    format: A5判×2冊
+    asin: 450258021X
+    image_file: mentalhealth-book-450258021x.webp
+    amazon_url: https://www.amazon.co.jp/dp/450258021X/ref=nosim?tag=ue083093-22
+    workbook_name: メンタルヘルス・マネジメント検定試験 II種 ラインケアコース 過去問題集 2025年度版
+    workbook_amazon_url: https://www.amazon.co.jp/dp/450255121X/ref=nosim?tag=ue083093-22
+    for_who: 出題正本で7領域を体系的に学びたい初学者
+    highlights:
+      - 公式テキスト第6版と過去問2025の章対応が取りやすい
+      - 100問120分·70点の本番形式演習まで一本道
+      - 正本重視の初学者に最も失敗が少ない
+  - rank: 2
+    offer_type: book
+    name: TAC+過去問2冊セット（スッキリ+過去問2025）
+    publisher: TAC出版 / 中央経済社
+    edition: 2026年度版
+    price_yen: 4730
+    price_label: 約4,730円（2冊合計·税込参考）
+    price_note: TAC2,200円+過去問2,530円·送料別
+    pages: 272
+    format: A5判×2冊
+    asin: '4813286305'
+    image_file: mentalhealth-book-4813286305.webp
+    amazon_url: https://www.amazon.co.jp/dp/4813286305/ref=nosim?tag=ue083093-22
+    workbook_name: メンタルヘルス・マネジメント検定試験 II種 ラインケアコース 過去問題集 2025年度版
+    workbook_amazon_url: https://www.amazon.co.jp/dp/450255121X/ref=nosim?tag=ue083093-22
+    for_who: 予算を抑えつつイラスト解説で第1周したい人
+    highlights:
+      - 3セットの中で合計予算を抑えやすい
+      - TAC章末演習から過去問2025へつなげやすい
+      - 8月に公式第6版へ移行する段階投入も可能
+  - rank: 3
+    offer_type: book
+    name: サクッと+能率協会2冊セット（要点+演習）
+    publisher: ナツメ社 / 日本能率協会マネジメントセンター
+    edition: 改訂版
+    price_yen: 4400
+    price_label: 約4,400円（2冊合計·税込参考）
+    price_note: サクッと2,200円+能率協会2,200円·送料別
+    pages: 256
+    format: A5判×2冊
+    asin: '4816373098'
+    image_file: mentalhealth-book-4816373098.webp
+    amazon_url: https://www.amazon.co.jp/dp/4816373098/ref=nosim?tag=ue083093-22
+    workbook_name: 改訂4版 メンタルヘルス・マネジメント検定試験II種 ラインケアコース 重要ポイント&問題集
+    workbook_amazon_url: https://www.amazon.co.jp/dp/4820729462/ref=nosim?tag=ue083093-22
+    for_who: 通勤学習で要点整理と短問反復を進めたい人
+    highlights:
+      - II·III横断のコンパクトさで全体像を先に掴める
+      - 能率協会で模擬問題の反復量を確保しやすい
+      - 公式第6版購入前の予習セットにも向く
+related_links:
+  - study-plan:学習計画
+  - study-plan-beginner:初学者向け学習計画
+  - affiliate-textbooks-recommend:おすすめテキスト
+  - affiliate-problem-books:おすすめ問題集
+  - textbook-selection:テキストの選び方
+  - pass-score:合格点の目安
+operator_note: Amazon tag=ue083093-22。6 ASIN URL確定。合計 6,160 / 4,730 / 4,400円（税込参考）。
