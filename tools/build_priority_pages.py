@@ -22,7 +22,6 @@ REDIRECT_HTML = """<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta http-equiv="refresh" content="0;url={url}">
 <link rel="canonical" href="{url}">
-<meta name="robots" content="noindex, follow">
 <title>用語解説へ移動中…</title>
 <script>location.replace({url_js});</script>
 </head>
