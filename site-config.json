@@ -8,6 +8,16 @@
   "copyright": "",
   "footerDisclaimer": "学習用のコンテンツです。出題・法令の正確な内容は公式情報で必ず確認してください。",
   "officialOrganization": "公益財団法人 日本産業衛生協会",
+  "learningNavExtras": [
+    {
+      "id": "tnav-exam-dates",
+      "label": "試験日検索",
+      "href": "exam-dates/index.html",
+      "after": "tnav-glossary",
+      "icon": "calendar",
+      "pageCurrent": "exam-dates"
+    }
+  ],
   "theme": {
     "accent": "#4a6b5c",
     "accentText": "#ffffff",

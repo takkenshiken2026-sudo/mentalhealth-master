@@ -201,6 +201,10 @@ def collect_entries(base: str) -> list[SitemapEntry]:
         for path in sorted(terms_root.glob("g-*.html")):
             add_file(entries, base, path.relative_to(ROOT).as_posix(), csv_dates=csv_dates)
 
+    exam_dates = ROOT / "exam-dates" / "index.html"
+    if exam_dates.is_file():
+        add_file(entries, base, "exam-dates/index.html", csv_dates=csv_dates)
+
     return entries
 
 

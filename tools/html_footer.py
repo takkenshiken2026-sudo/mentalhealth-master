@@ -23,6 +23,7 @@ from tools.site_config import (
     exam_name,
     footer_disclaimer,
     ga4_measurement_id,
+    learning_nav_extras,
     learning_nav_label,
     navigation_items,
 )
@@ -109,6 +110,78 @@ LEARNING_NAV_ACTIVE_BY_PAGE: dict[str, str] = {
 
 # ヘッダー・フッターが同じ静的一覧を指す項目では、フッター側 aria-current を抑制（二重ハイライト防止）
 FOOTER_SUPPRESS_CURRENT_WHEN_HEADER: frozenset[str] = frozenset(LEARNING_NAV_ACTIVE_BY_PAGE.keys())
+
+LEARNING_NAV_ICON_CALENDAR = (
+    '<svg viewBox="0 0 16 16"><rect x="2.5" y="3" width="11" height="11" rx="1.5"/>'
+    '<path d="M2.5 6.5h11M5.5 1.5v3M10.5 1.5v3"/></svg>'
+)
+
+LEARNING_NAV_ICON_BY_NAME: dict[str, str] = {
+    "calendar": LEARNING_NAV_ICON_CALENDAR,
+}
+
+
+def _learning_nav_icon_for(extra: dict[str, str]) -> str:
+    icon = extra.get("icon") or "calendar"
+    return LEARNING_NAV_ICON_BY_NAME.get(icon, LEARNING_NAV_ICON_CALENDAR)
+
+
+def _base_learning_nav_items() -> list[tuple[str, str, str, str]]:
+    return list(LEARNING_NAV_ITEMS)
+
+
+def merged_learning_nav_items() -> list[tuple[str, str, str, str]]:
+    """LEARNING_NAV_ITEMS + site-config learningNavExtras（after で挿入位置指定）。"""
+    items = _base_learning_nav_items()
+    for extra in learning_nav_extras():
+        nav_id = extra["id"]
+        after = extra.get("after") or "tnav-glossary"
+        entry = (nav_id, extra["label"], extra["href"], _learning_nav_icon_for(extra))
+        insert_at = None
+        for i, (existing_id, *_rest) in enumerate(items):
+            if existing_id == after:
+                insert_at = i + 1
+                break
+        if insert_at is not None:
+            items.insert(insert_at, entry)
+        else:
+            items.append(entry)
+    return items
+
+
+def learning_nav_active_id(current: str | None) -> str | None:
+    if not current:
+        return None
+    for extra in learning_nav_extras():
+        if extra.get("pageCurrent") == current:
+            return extra["id"]
+    return LEARNING_NAV_ACTIVE_BY_PAGE.get(current)
+
+
+def index_learning_nav_extra_desktop_html(extra: dict[str, str]) -> str:
+    nav_id = extra["id"]
+    label = html.escape(extra["label"])
+    href = html.escape(extra["href"], quote=True)
+    icon = _learning_nav_icon_for(extra)
+    return (
+        f'        <a class="topnav-link" id="{html.escape(nav_id)}" href="{href}">\n'
+        f"          {icon}{label}\n"
+        f"        </a>"
+    )
+
+
+def index_learning_nav_extra_mobile_html(extra: dict[str, str]) -> str:
+    nav_id = extra["id"]
+    mnav_id = nav_id.replace("tnav-", "mnav-", 1) if nav_id.startswith("tnav-") else f"mnav-{nav_id}"
+    label = html.escape(extra["label"])
+    href = html.escape(extra["href"], quote=True)
+    icon = _learning_nav_icon_for(extra)
+    return (
+        f'      <a class="mobile-nav-item" id="{html.escape(mnav_id)}" href="{href}" '
+        f'onclick="closeMobileDrawer()">\n'
+        f"        {icon}{label}\n"
+        f"      </a>"
+    )
 
 
 def _in_q_section(rel_path: Path) -> bool:
@@ -299,9 +372,9 @@ def _learning_nav_href(rel_path: Path, dest: str) -> str:
 
 def _learning_nav_links(rel_path: Path, *, current: str | None = None) -> str:
     """静的ページ用: SPA 学習ナビ（用語解説は terms/index.html）。"""
-    active_id = LEARNING_NAV_ACTIVE_BY_PAGE.get(current or "")
+    active_id = learning_nav_active_id(current)
     links: list[str] = []
-    for nav_id, label, dest, icon in LEARNING_NAV_ITEMS:
+    for nav_id, label, dest, icon in merged_learning_nav_items():
         href = html.escape(_learning_nav_href(rel_path, dest))
         active = nav_id == active_id
         cls = "topnav-link active" if active else "topnav-link"

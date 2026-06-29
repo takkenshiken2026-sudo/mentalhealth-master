@@ -159,6 +159,33 @@ def learning_nav_label(nav_id: str, default: str) -> str:
     return learning_nav_label_overrides().get(nav_id, default)
 
 
+def learning_nav_extras() -> list[dict[str, str]]:
+    """SPA 学習ナビに追加するサイト固有リンク（例: 試験日検索）。"""
+    raw = CONFIG.get("learningNavExtras") or []
+    if not isinstance(raw, list):
+        return []
+    out: list[dict[str, str]] = []
+    for item in raw:
+        if not isinstance(item, dict):
+            continue
+        nav_id = str(item.get("id") or "").strip()
+        label = str(item.get("label") or "").strip()
+        href = str(item.get("href") or "").strip()
+        if not nav_id or not label or not href:
+            continue
+        out.append(
+            {
+                "id": nav_id,
+                "label": label,
+                "href": href,
+                "after": str(item.get("after") or "tnav-glossary").strip(),
+                "icon": str(item.get("icon") or "calendar").strip(),
+                "pageCurrent": str(item.get("pageCurrent") or "").strip(),
+            }
+        )
+    return out
+
+
 def official_organization() -> str:
     return str(CONFIG.get("officialOrganization") or "試験実施団体")
 
