@@ -20,10 +20,10 @@ products:
     asin: 450255121X
     image_file: mentalhealth-book-450255121x.webp
     amazon_url: https://www.amazon.co.jp/dp/450255121X/ref=nosim?tag=ue083093-22
-    for_who: 100問120分の本番形式模試を厚く回したい人
+    for_who: 50問120分の本番形式模試を厚く回したい人
     highlights:
       - 直近10回分を7領域別に整理
-      - 8〜9月の100問通し模試のメイン冊
+      - 8〜9月の50問通し模試のメイン冊
       - 70点ラインの得点源を作りやすい
   - rank: 2
     offer_type: book

@@ -1,3 +1,0 @@
-question_no,type,category,tags,stem,preamble,statement_a,statement_b,statement_c,statement_d,choice_1,choice_2,choice_3,choice_4,correct,explanation
-1,single,基礎・役割,確認,テンプレートの使い方に関する次の記述のうち、正しいものはどれか。,,,,,,data/past_questions.csv を編集して生成スクリプトを実行する。,生成済みJSだけを直接編集し続ける。,CSVの列名は自由に変えてよい。,ドメイン設定は不要である。,1,正解は1です。問題データはCSVを編集し、tools の変換スクリプトで JS と静的ページを再生成する想定です。
-2,single,職場環境・配慮,復習,復習機能の説明として正しいものはどれか。,,,,,,不正解やブックマークした問題をあとで見直せる。,正解した問題はすべて削除される。,履歴は必ずサーバーに送信される。,用語集とは連携できない。,1,正解は1です。テンプレートではブラウザ内の保存を基本に、不正解・ブックマーク・メモを復習へつなげます。

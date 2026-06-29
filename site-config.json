@@ -7,17 +7,7 @@
   "ga4MeasurementId": "G-KRCW0FBHM8",
   "copyright": "",
   "footerDisclaimer": "学習用のコンテンツです。出題・法令の正確な内容は公式情報で必ず確認してください。",
-  "officialOrganization": "公益財団法人 日本産業衛生協会",
-  "learningNavExtras": [
-    {
-      "id": "tnav-exam-dates",
-      "label": "試験日検索",
-      "href": "exam-dates/index.html",
-      "after": "tnav-glossary",
-      "icon": "calendar",
-      "pageCurrent": "exam-dates"
-    }
-  ],
+  "officialOrganization": "大阪商工会議所",
   "theme": {
     "accent": "#4a6b5c",
     "accentText": "#ffffff",
@@ -274,7 +264,7 @@
         "kind": "textbook",
         "kindLabel": "テキスト",
         "title": "おすすめテキスト3選【2026年度版】",
-        "description": "公式第6版·TACスッキリ·サクッとわかるの3冊を比較。7領域100問120分·70点を前提に1冊選びを解説します。",
+        "description": "公式第6版·TACスッキリ·サクッとわかるの3冊を比較。7領域50問120分·70点を前提に1冊選びを解説します。",
         "href": "affiliate-textbooks-recommend/",
         "cta": "3冊を比較する",
         "image": "images/affiliate/mentalhealth-book-450258021x.webp",
