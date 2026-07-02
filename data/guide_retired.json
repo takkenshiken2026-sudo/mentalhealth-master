@@ -19,8 +19,8 @@
     "cbt-computer-exam": "exam-format-overview",
     "compare-similar-qualifications": "study-plan",
     "confusing-terms": "glossary-how-to",
-    "difficulty-myths": "study-plan",
-    "eligibility-myths": "study-plan",
+    "difficulty-myths": "exam-difficulty",
+    "eligibility-myths": "exam-eligibility",
     "exam-day-time-allocation": "final-day-checklist",
     "exam-day-troubleshooting": "final-day-checklist",
     "fail-retry-plan": "study-plan",
@@ -104,7 +104,7 @@
     "timed-practice": "study-plan",
     "score-gap-analysis": "study-plan",
     "harassment-consultation": "study-plan",
-    "overview": "study-plan",
+    "overview": "exam-format-overview",
     "subjects": "study-plan",
     "self-study-guide": "study-plan"
   }
