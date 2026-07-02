@@ -18,6 +18,7 @@ from tools.exam_schedule_mhm_table import (  # noqa: E402
     exam_schedule_table_html,
     latest_fetched_at,
     load_schedule_rows,
+    upcoming_rows,
 )
 from tools.exam_schedule_page_content import (  # noqa: E402
     META_DESCRIPTION,
@@ -123,6 +124,55 @@ def related_links_html() -> str:
     )
 
 
+def next_round_event_entries(rows: list[dict[str, str]], canonical: str) -> list[dict]:
+    """直近の公開試験（最も早い開催日の回）を Event 構造化データで出力する。
+
+    「メンタルヘルスマネジメント検定 日程 2026」等のクエリで日付リッチリザルトの
+    対象になり得る。日付は要項準拠の exam_date_iso のみを使用し、本文には数値を
+    固定しないサイト方針は維持する（Event は公式 CSV 由来の確定データのみ）。
+    """
+    dated = [r for r in upcoming_rows(rows) if r.get("exam_date_iso", "").strip()]
+    if not dated:
+        return []
+    next_iso = min(r["exam_date_iso"].strip() for r in dated)
+    exam = exam_name()
+    events: list[dict] = []
+    for row in dated:
+        if row.get("exam_date_iso", "").strip() != next_iso:
+            continue
+        city = row.get("city", "").strip()
+        label = row.get("round_label", "").strip()
+        official = row.get("official_url", "").strip()
+        name = " ".join(part for part in [exam, label, "公開試験"] if part)
+        if city:
+            name = f"{name}（{city}）"
+        event = {
+            "@type": "Event",
+            "name": name,
+            "startDate": next_iso,
+            "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "url": canonical,
+            "location": {
+                "@type": "Place",
+                "name": f"{city}会場" if city else "公開試験会場",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": city or "日本",
+                    "addressCountry": "JP",
+                },
+            },
+        }
+        if official:
+            event["organizer"] = {
+                "@type": "Organization",
+                "name": "大阪商工会議所",
+                "url": official,
+            }
+        events.append(event)
+    return events
+
+
 def build_page_html() -> str:
     schedule_rows = load_schedule_rows()
     fact_checked = (latest_fetched_at(schedule_rows) or date.today().isoformat())[:10]
@@ -178,6 +228,8 @@ def build_page_html() -> str:
                 ],
             }
         )
+
+    graph.extend(next_round_event_entries(schedule_rows, canonical))
 
     json_ld = {"@context": "https://schema.org", "@graph": graph}
 
