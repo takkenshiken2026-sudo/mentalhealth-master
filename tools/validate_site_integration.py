@@ -31,6 +31,7 @@ from tools.index_spa_patch import (  # noqa: E402
     INDEX_NOSCRIPT_MARKER_START,
 )
 from tools.site_config import (  # noqa: E402
+    adsense_client_id,
     base_path,
     clean_origin,
     exam_name,
@@ -718,6 +719,45 @@ def _ga4_tracking(root: Path) -> list[Issue]:
     return issues
 
 
+_ADSENSE_SCRIPT_RE = re.compile(
+    r'<script\b[^>]*\bsrc=["\']https://pagead2\.googlesyndication\.com/pagead/js/adsbygoogle\.js\?client=(ca-pub-\d+)["\']',
+    re.I,
+)
+
+
+def _adsense_page_issues(root: Path, rel: str, expected: str) -> list[Issue]:
+    path = root / rel
+    if not path.is_file():
+        return []
+    text = path.read_text(encoding="utf-8")
+    if _is_guide_retire_redirect(text):
+        return []
+    head = text.split("</head>", 1)[0] if "</head>" in text else text
+    m = _ADSENSE_SCRIPT_RE.search(head)
+    if not m:
+        return [Issue(f"{rel}: AdSense スクリプトが <head> にありません")]
+    if m.group(1) != expected:
+        return [Issue(f"{rel}: AdSense client 不一致（期待 {expected!r}、実際 {m.group(1)!r}）")]
+    return []
+
+
+def _adsense_tracking(root: Path) -> list[Issue]:
+    """site-config.adsenseClientId があるとき全代表ページの <head> 注入を検証。"""
+    expected = adsense_client_id()
+    if not expected:
+        return []
+    issues: list[Issue] = []
+    for rel in ("index.html", "about.html", "privacy.html", "related-sites.html", "articles/index.html"):
+        issues.extend(_adsense_page_issues(root, rel, expected))
+    samples: list[str] = []
+    for pattern in ("articles/*/index.html", "terms/g-*.html", "q/practice/*/index.html"):
+        for path in sorted(root.glob(pattern))[:1]:
+            samples.append(str(path.relative_to(root)))
+    for rel in samples:
+        issues.extend(_adsense_page_issues(root, rel, expected))
+    return issues
+
+
 def _static_chrome(root: Path) -> list[Issue]:
     """docs/site-chrome.md — ヘッダー topnav 統一・旧 q-static-header 禁止。"""
     issues: list[Issue] = []
@@ -831,6 +871,7 @@ def main() -> int:
     issues.extend(_responsive_css_source(root))
     issues.extend(_viewport_and_static_css(root))
     issues.extend(_ga4_tracking(root))
+    issues.extend(_adsense_tracking(root))
     issues.extend(_static_page_site_leaks(root))
     issues.extend(_guide_index_picks(root))
 

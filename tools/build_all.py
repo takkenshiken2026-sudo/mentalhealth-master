@@ -48,6 +48,7 @@ def main() -> int:
     maybe_run_exam_schedule_page(py)
     run([py, "tools/build_glossary_pages.py"])
     run([py, "tools/build_hub_retire_redirects.py"])
+    run([py, "tools/inject_adsense_head.py"])
     run([py, "tools/build_sitemap.py"])
     run([py, "tools/validate_sitemap.py"])
     run([py, "tools/validate_generated_seo.py"])
