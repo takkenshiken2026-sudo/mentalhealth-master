@@ -517,7 +517,7 @@ def faq_items(
     items: list[dict[str, str]] = []
     slug = norm(article.get("slug"))
     affiliate = is_affiliate_article(article)
-    for idx in range(1, 4):
+    for idx in range(1, 5):
         q = apply_vars(article.get(f"faq_{idx}_question", ""))
         a = sanitize_guide_text(apply_vars(article.get(f"faq_{idx}_answer", "")), slug)
         if affiliate:
