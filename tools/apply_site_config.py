@@ -38,6 +38,7 @@ from tools.site_config import (
 from tools.html_footer import (
     index_learning_nav_extra_desktop_html,
     index_learning_nav_extra_mobile_html,
+    inject_adsense_head,
     site_page_footer,
     site_page_header,
     site_shell_footer,
@@ -676,6 +677,8 @@ def main() -> int:
             new = update_index_logo_styles(new)
             new = update_index_glossary_excerpt(new)
             new = sync_index_learning_nav_extras(new)
+        if path.suffix == ".html":
+            new = inject_adsense_head(new)
         if new != old:
             path.write_text(new, encoding="utf-8")
             print(f"Updated {path.relative_to(ROOT)}")

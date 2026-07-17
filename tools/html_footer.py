@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
-"""静的 HTML 用フッター（相対パス付き）と GA4 共通タグ。
+"""静的 HTML 用フッター（相対パス付き）と GA4 / AdSense 共通タグ。
 
 - 測定IDを変えるときは GA4_MEASUREMENT_ID と site-analytics.js 内の DEFAULT_MID を揃える。
 - 新規の手書き HTML では </body> 直前に analytics_snippet(Path('相対パス')) と同等の2行を置くか、
   生成ページでは site_page_footer の直後に analytics が付くので head に GA を書かない。
+- AdSense は site-config.json の adsenseClientId があるとき全ページ <head> に注入（inject_adsense_head）。
 - ヘッダー・フッターは index.html の topnav / site-footer と同型（site-pages.css の site-shell）。
 - ヘッダー・フッターの契約: docs/site-chrome.md（フッター遷移でヘッダー構造が変わらないこと）
 """
@@ -11,9 +12,11 @@
 from __future__ import annotations
 
 import html
+import re
 from pathlib import Path
 
 from tools.site_config import (
+    adsense_client_id,
     base_path,
     brand_logo_lines,
     brand_logo_size_class,
@@ -260,6 +263,47 @@ def ga4_head_snippet() -> str:
         f'gtag("config", "{mid}");\n'
         "</script>"
     )
+
+
+ADSENSE_HEAD_MARKER_START = "<!--ADSENSE_HEAD-->"
+ADSENSE_HEAD_MARKER_END = "<!--/ADSENSE_HEAD-->"
+
+_ADSENSE_BLOCK_RE = re.compile(
+    rf"{re.escape(ADSENSE_HEAD_MARKER_START)}[\s\S]*?{re.escape(ADSENSE_HEAD_MARKER_END)}\s*",
+    re.I,
+)
+_ADSENSE_LOOSE_SCRIPT_RE = re.compile(
+    r'<script\b[^>]*\bsrc=["\']https://pagead2\.googlesyndication\.com/pagead/js/adsbygoogle\.js[^"\']*["\'][^>]*>\s*</script>\s*',
+    re.I,
+)
+
+
+def adsense_head_snippet() -> str:
+    """生成 HTML の <head> 内用 AdSense タグ。未設定時は空文字。"""
+    client = adsense_client_id()
+    if not client:
+        return ""
+    if not re.fullmatch(r"ca-pub-\d+", client):
+        return ""
+    client_esc = html.escape(client, quote=True)
+    return (
+        f"{ADSENSE_HEAD_MARKER_START}\n"
+        f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={client_esc}"\n'
+        '     crossorigin="anonymous"></script>\n'
+        f"{ADSENSE_HEAD_MARKER_END}"
+    )
+
+
+def inject_adsense_head(html_text: str) -> str:
+    """<head> 内に AdSense スクリプトを冪等に注入（または未設定時に除去）。"""
+    snippet = adsense_head_snippet()
+    text = _ADSENSE_BLOCK_RE.sub("", html_text)
+    text = _ADSENSE_LOOSE_SCRIPT_RE.sub("", text)
+    if not snippet:
+        return text
+    if "</head>" not in text:
+        return text
+    return text.replace("</head>", f"{snippet}\n</head>", 1)
 
 
 def analytics_snippet(rel_path: Path) -> str:
