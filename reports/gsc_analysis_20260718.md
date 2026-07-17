@@ -29,17 +29,25 @@
 - /q/past/y2026/q26/（CTR26.5% / 順位3.71）ほか過去問ページが最も高CTR。過去問ハブへの内部リンク強化が有効。
 
 ## 本コミットで実施した修正
+ソースは `data/guide_articles.csv`。本番は `tools/build_all.py` が同CSVから
+`public_site/` を生成して GitHub Pages に配信するため、下記はすべてCSVに反映し、
+`build_all.py` で `public_site/`（本番成果物）まで再生成済み。
+
 1. **/articles/schedule/**（最大の0クリックページ）
-   - 本文冒頭に「次回の公開試験（直近の日程）」表を追加（第41回=2026年11月1日、第42回=2027年3月21日、一般申込期間つき／出典=公式受験要項リンク）。
-   - `meta description` / `og:description` を具体的な次回日程で書き換え。
-   - リード文・FAQ回答#1を具体日程に更新（構造化データと可視テキストを一致）。
+   - リード文（H1直下の第1段落）冒頭に具体的な次回日程を明示：
+     「次回公開試験は第41回＝2026年11月1日（日）（一般申込9月4日〜9月17日）、
+     その次は第42回＝2027年3月21日（日）」。
+   - `meta description` / `og:description` を同内容で書き換え（スニペット改善）。
+   - FAQ回答#1を具体日程に更新（FAQPage構造化データと可視テキストを一致）。
 2. **/articles/exam-schedule/**（日程詳細ページ、schedule からの誘導先）
-   - 同じ「次回の公開試験」表を追加し、架空の例示日付ではなく実日程を提示。
    - `meta description` / `og:description` を具体日程で書き換え。
-3. `data/guide_articles.csv`（ソース・オブ・トゥルース）の schedule / exam-schedule 行を上記に整合。
+3. `data/guide_articles.csv` の schedule / exam-schedule 行を上記に整合。
    - 日程データの出典: `data/exam_schedule_mhm.csv`（大阪商工会議所、fetched_at 2026-06-28）。
 
-いずれも「公式の受験要項が正本／最新は要確認」の注記を残し、公式ソースへリンク。編集方針（数値の非固定）を尊重しつつ、検索意図に具体的に答える形へ調整した。
+いずれも「公式の受験要項が正本／最新は要確認」の注記を残し、公式ソースへリンク。
+編集方針（数値の非固定）を尊重しつつ、検索意図（具体的な日付）に本文・スニペット・
+FAQで直接答える形へ調整した。日程更新時は `data/exam_schedule_mhm.csv` と
+CSV該当行を見直し、`build_all.py` を再実行する。
 
 ## 推奨する次アクション（編集判断が必要）
 1. exam-fees: title/meta は良好だが、本文最上部に「受験料 早見（II種=7,480円）」の小表を置き、スニペット化を狙う。
