@@ -38,6 +38,10 @@ do
   fi
   cp "$f" "$OUT/"
 done
+# AdSense 設定時のみ sync される（未設定サイトではスキップ）
+if [[ -f "$ROOT/ads.txt" ]]; then
+  cp "$ROOT/ads.txt" "$OUT/"
+fi
 for d in articles q terms; do
   if [[ -d "$ROOT/$d" ]]; then
     cp -R "$ROOT/$d" "$OUT/"
