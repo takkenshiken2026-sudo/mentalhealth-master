@@ -576,6 +576,27 @@ def write_crawler_files() -> None:
         f"Sitemap: {origin}/sitemap.xml\n",
         encoding="utf-8",
     )
+    write_ads_txt()
+
+
+def write_ads_txt() -> None:
+    """AdSense 用 ads.txt（未設定なら削除）。Google の seller ID は公式固定値。"""
+    path = ROOT / "ads.txt"
+    client = adsense_client_id()
+    if not client:
+        if path.is_file():
+            path.unlink()
+        return
+    pub = client.removeprefix("ca-") if client.startswith("ca-") else client
+    if not pub.startswith("pub-"):
+        if path.is_file():
+            path.unlink()
+        return
+    # f08c47fec0942fa0 = Google's certified seller ID (IAB ads.txt)
+    path.write_text(
+        f"google.com, {pub}, DIRECT, f08c47fec0942fa0\n",
+        encoding="utf-8",
+    )
 
 
 def sync_config_files() -> None:
@@ -586,4 +607,4 @@ def sync_config_files() -> None:
 
 if __name__ == "__main__":
     sync_config_files()
-    print("Synced site-config.js, CNAME, robots.txt from site-config.json")
+    print("Synced site-config.js, CNAME, robots.txt, ads.txt from site-config.json")

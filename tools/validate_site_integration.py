@@ -741,6 +741,18 @@ def _adsense_page_issues(root: Path, rel: str, expected: str) -> list[Issue]:
     return []
 
 
+def _ads_txt_issues(root: Path, client: str) -> list[Issue]:
+    """ルート ads.txt が AdSense publisher ID を宣言しているか。"""
+    path = root / "ads.txt"
+    if not path.is_file():
+        return [Issue("ads.txt がありません（AdSense の ads.txt 不明を防ぐため必須）")]
+    pub = client.removeprefix("ca-") if client.startswith("ca-") else client
+    text = path.read_text(encoding="utf-8")
+    if f"google.com, {pub}, DIRECT," not in text:
+        return [Issue(f"ads.txt: google.com, {pub}, DIRECT, … の行がありません")]
+    return []
+
+
 def _adsense_tracking(root: Path) -> list[Issue]:
     """site-config.adsenseClientId があるとき全代表ページの <head> 注入を検証。"""
     expected = adsense_client_id()
@@ -755,6 +767,7 @@ def _adsense_tracking(root: Path) -> list[Issue]:
             samples.append(str(path.relative_to(root)))
     for rel in samples:
         issues.extend(_adsense_page_issues(root, rel, expected))
+    issues.extend(_ads_txt_issues(root, expected))
     return issues
 
 
