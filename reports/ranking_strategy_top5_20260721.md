@@ -221,3 +221,43 @@
 
 > 今回のコード対応（申込日程・受験地一覧・受験料FAQ・「2種」併記）は全て**実ページ**に
 > 対して行い有効。退役スタブ（overview 等）は実体側（exam-format-overview）に反映した。
+
+---
+
+## 【重要な精緻化 2026-07-21】スタブ復活は「品質」で切り分けが必須
+
+上記「good-ranking スタブの復活」を実行するにあたり中身を精査した結果、**退役スタブは
+2種類**あることが判明した。一律の復活は誤り。
+
+- **タイプA＝低品質(archived)**: difficulty-myths / concurrent-exam-rules 等。
+  自動生成のボイラープレートで、section本文が複数節でほぼ同一・leadに関連記事タイトルが
+  流入するなど品質が低い。**退役は妥当。復活してはいけない**（低品質コンテンツの復活は逆効果）。
+  スタブの好順位(例 difficulty-myths 5.00)は「リダイレクトURLの順位」で中身の評価ではない。
+- **タイプB＝良質(published)なのに誤ってスタブ化**: 記事数削減campaignで
+  `guide_retired.json` に巻き込まれたが、手書き高品質・トピック独立のページ。
+  **これは復活が正解**（既に勝っているURLに中身が戻る）。
+
+### 実施：タイプBのうち page1・良質・独立トピックの5件を復活（可逆）
+
+| slug | スタブ順位 | 内容 |
+|---|---|---|
+| material-update-cycle | 4.24 | テキスト第5/6版の改訂差分確認 |
+| bookmark-review-method | 4.39 | 24時間・7日の間隔反復復習法 |
+| plateau-breakthrough | 5.25 | 2週間停滞を弱点20問で突破 |
+| free-materials-online | 6.25 | 無料教材のみで70点を目指す活用 |
+| score-gap-analysis | 7.59 | 70点まで領域別に得点差を回収 |
+
+`guide_retired.json` の redirects から除外し再ビルド（106→101件）。全件 noindex解除・
+sitemap掲載・自己canonical・内部リンク検証通過を確認。
+
+### 復活しなかったもの（判断の記録）
+- **overview**(8.87): 転送先 exam-format-overview が4.23で上位のため統合維持が正解。
+- **self-study-start**(20.52) / **first-30-days-plan**(11.1): page2以下で ≤5 目標への寄与小。
+- タイプA(低品質archived)全般: 退役維持。Search Console削除で消去を加速するのが筋。
+
+### 残る系統的レバー（コード外／中期）
+1. タイプA低品質スタブ・overview等は **Search Console の削除ツール＋URL再クロール申請**で
+   インデックス除去を加速（ユーザー操作）。
+2. **Cloudflare Pages 等への移行で301リダイレクト導入**すれば、スタブ残存(表示の26%希釈)を
+   構造的に解消できる（GitHub Pagesの根本制約の解消）。
+3. 被リンク獲得・E-E-A-T（「6〜10位の壁」の本質）。
