@@ -222,3 +222,23 @@ def question_meta_headline(
     if mode == "practice":
         return f"{ex}の{label} 第{qno}問"
     return f"{ex}の{label} {question_id}"
+
+
+def book_cta_section(book_href: str) -> str:
+    """演習ページ→問題集（Amazonアソシエイト）への文脈CTA。
+
+    収益化できる唯一の実在チャネルが Amazon 書籍のため、集客・学習意欲が最も高い
+    各問ページに native な1ブロックのみ設置する。既存クラス流用でCSS変更なし。
+    景表法・ステマ規制対応のプロモ表記を明記。
+    """
+    href = html.escape(book_href)
+    return (
+        '<section class="q-block q-book-cta" aria-labelledby="q-book-h">'
+        '<h2 id="q-book-h" class="q-h2">この問題の対策に使える教材</h2>'
+        "<p>演習と並行して、本番形式の問題集で得点力を固めるのが定番です。</p>"
+        f'<p><a class="related-link" href="{href}">'
+        "メンタルヘルス・マネジメント検定II種の問題集3選（2026年度版）→</a></p>"
+        '<p class="q-book-cta-note" style="font-size:.85em;opacity:.75;margin-top:.4em;">'
+        "※本リンクにはAmazonアソシエイト等のプロモーションを含みます。</p>"
+        "</section>"
+    )

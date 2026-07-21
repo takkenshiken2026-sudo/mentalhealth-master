@@ -427,6 +427,11 @@ def build_practice_question_html(
         ],
     )
     site_footer = site_page_footer(rel_path, current="practice")
+    from tools.q_page_seo import book_cta_section
+
+    book_cta_html = book_cta_section(
+        rel_href(rel_path, "articles/affiliate-problem-books/index.html")
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="ja">
@@ -477,6 +482,7 @@ def build_practice_question_html(
     {exp_html}
   </section>
   {similar_html}
+  {book_cta_html}
   {related_html}
   <p class="q-app-link"><a href="{html.escape(rel_href(rel_path, 'index.html#orig'))}">アプリで演習する</a></p>
 </main>
@@ -569,6 +575,11 @@ def build_ichimon_question_html(
         ],
     )
     site_footer = site_page_footer(rel_path, current="ichimon")
+    from tools.q_page_seo import book_cta_section
+
+    book_cta_html = book_cta_section(
+        rel_href(rel_path, "articles/affiliate-problem-books/index.html")
+    )
     exp_html = build_ichimon_explanation_html(page, row)
     robots_meta = ichimon_robots_meta(page["id"])
 
@@ -617,6 +628,7 @@ def build_ichimon_question_html(
     {exp_html}
   </section>
   {similar_html}
+  {book_cta_html}
   {related_html}
   <p class="q-app-link"><a href="{html.escape(rel_href(rel_path, 'index.html#ichimondou'))}">アプリで演習する</a></p>
 </main>

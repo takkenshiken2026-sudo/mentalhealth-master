@@ -697,17 +697,10 @@ def build_question_html(
     )
 
     # 過去問演習ページ→問題集（Amazonアソシエイト。収益化できる唯一の実在チャネル）への文脈CTA。
-    # 集客・学習意欲が最も高い面に、既存クラスを流用したnativeな1ブロックのみ設置する。
-    book_cta_href = rel_href(rel_path, "articles/affiliate-problem-books/index.html")
-    book_cta_html = (
-        '<section class="q-block q-book-cta" aria-labelledby="q-book-h">'
-        '<h2 id="q-book-h" class="q-h2">この問題の対策に使える教材</h2>'
-        "<p>過去問演習と並行して、本番形式の問題集で得点力を固めるのが定番です。</p>"
-        f'<p><a class="related-link" href="{html.escape(book_cta_href)}">'
-        "メンタルヘルス・マネジメント検定II種の問題集3選（2026年度版）→</a></p>"
-        '<p class="q-book-cta-note" style="font-size:.85em;opacity:.75;margin-top:.4em;">'
-        "※本リンクにはAmazonアソシエイト等のプロモーションを含みます。</p>"
-        "</section>"
+    from tools.q_page_seo import book_cta_section
+
+    book_cta_html = book_cta_section(
+        rel_href(rel_path, "articles/affiliate-problem-books/index.html")
     )
 
     json_ld = {
