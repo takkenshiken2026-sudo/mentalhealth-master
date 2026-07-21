@@ -39,7 +39,7 @@ def index_lead(mode: str) -> str:
     c = seo_copy()
     if mode == "past":
         return (
-            f"{ex}の過去問を年度別・分野別にまとめています。"
+            f"{ex}（「2種」とも表記）の過去問を年度別・分野別にまとめています。"
             f"{c['mockExam']}前の出題傾向の確認や、{c['studyModes']}の中心コンテンツとして使えます。"
             "検索と絞り込みで目的の問題を探し、解説ページで正誤と解説を確認できます。"
         )
@@ -61,7 +61,7 @@ def index_meta_description(mode: str, *, count: int) -> str:
     c = seo_copy()
     if mode == "past":
         base = (
-            f"{ex}の過去問{count}問を年度・分野別に掲載。"
+            f"{ex}（2種）の過去問{count}問を年度・分野別に掲載。"
             f"{c['mockExam']}対策・{c['studyModes']}の学習に対応。"
             "検索・絞り込みのあと解説ページへ。"
         )
@@ -139,7 +139,10 @@ def index_search_index_suffix() -> str:
 
 def index_h1(mode: str) -> str:
     """一覧ページの H1（試験名＋モード名を先頭に）。"""
-    return f"{exam_name()} {MODE_LABEL[mode]}"
+    ex = exam_name()
+    if mode == "past":
+        ex = f"{ex}（2種）"
+    return f"{ex} {MODE_LABEL[mode]}"
 
 
 def index_page_title(mode: str) -> str:
@@ -152,7 +155,10 @@ def index_page_title(mode: str) -> str:
         sub = f"{c['mockExam']}前の演習"
     else:
         sub = f"{c['mockExam']}前の確認"
-    return f"{exam_name()} {label}一覧｜{sub}｜{brand_name()}"
+    ex = exam_name()
+    if mode == "past":
+        ex = f"{ex}（2種）"
+    return f"{ex} {label}一覧｜{sub}｜{brand_name()}"
 
 
 def past_year_display(year: int, wareki: str = "") -> str:
