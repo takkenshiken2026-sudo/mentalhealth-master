@@ -72,3 +72,38 @@
 
 > 補足：SEO面（別レポート `ranking_strategy_top5_20260721.md`）で過去問の集客は
 > 強化中。集客が伸びるほど、上記の導線・収益化の不備が機会損失として拡大する。
+
+---
+
+## 【追記・確定 2026-07-21】有料講座のアフィリエイトプログラムは存在しない
+
+運営者確認：**有料講座・有料模試のアフィリエイトプログラムは持っていない**（オンスク含め無し）。
+よって講座系ページ（online-course-compare / correspondence-course / cram-school /
+retake-short-course / qualification-support-service）は**そもそも収益化手段が無く、
+売れないのは当然**。ページを作っても意味がない。
+
+### 収益化できるのは Amazon アソシエイト（書籍）のみ
+`tag=ue083093-22` の有効リンクを持つのは4briefのみ：
+
+| brief | 商品 | Amazonリンク | 記事status |
+|---|---|---|---|
+| affiliate-textbooks-recommend | おすすめテキスト3選 | 4 | published |
+| affiliate-problem-books | おすすめ問題集3選 | 4 | published |
+| affiliate-mock-exam-materials | 過去問題集3選（"模試"の実体） | 4 | **draft** |
+| affiliate-beginner-material-set | 初学者向け教材セット | 7 | **draft** |
+
+講座系5本は Amazonリンク0・ASP無しで、収益化不可。
+
+### 方針転換（Amazon書籍1本に集中）
+1. **講座・模試の"有料サービス"訴求は撤退**。該当ページは公開しない（or 純情報化）。
+   未追跡の講座リンクは削除して機会損失・不信を防ぐ。
+2. **Amazon書籍4本に集中**。うち有効リンクを持つ2 draft
+   （過去問題集・教材セット）は品質確認のうえ**公開してインベントリを増やす**。
+3. **導線の是正が最重要**：現状アフィリCTAはアフィリ記事内（低集客）にしか出ておらず、
+   高集客ページ（個別過去問300本＝top5・difficulty・schedule 等）に0。
+   - **個別過去問ページ→「過去問題集/問題集」**、**difficulty/独学→「テキスト」** など、
+     文脈に合うAmazon書籍CTAをテンプレ側で設置（`build_past_question_pages.py`
+     等）。集客・購買意図が最も高い面に置くのが転換の鍵。
+4. Amazonは単価・報酬率が低い（数%）。書籍アフィリは「大きく稼ぐ」より
+   「集客の副収益」と割り切り、①クリック率最大化（高集客面への設置）と
+   ②将来ちゃんとした講座ASPに加入できたら差し替え、の二段構えが現実的。
