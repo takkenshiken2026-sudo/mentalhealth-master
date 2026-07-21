@@ -173,3 +173,51 @@
 **(b) 内部リンクで難易度クラスターの主従を明確化（弱ページ→exam-difficultyへの導線追加）**
 といった非破壊の施策を先行し、被リンク施策と並行して2〜3週間の順位変動を観測してから
 統合の是非を判断するのが堅実。
+
+---
+
+## 【最重要・追記 2026-07-21】退役スタブが表示の26%を占め平均を希釈
+
+調査の結果、**GSCで「高表示なのに中位」だったページの多くが、実は退役リダイレクト
+スタブ**（`data/guide_retired.json` に登録、noindex＋canonical＋meta-refreshの
+600B程度のHTML）だと判明した。
+
+- **全表示の26.1%（884/3,383）が82個の退役スタブに流入**している。
+- スタブは設定上は適正（noindex・canonicalあり／sitemap除外済み／内部リンク0）。
+  つまり**コードのバグではない**。GitHub Pages は301を打てないため、Googleが
+  再クロールでnoindexを反映するまで旧URLが指標に残り続ける構造問題。
+
+### 特に問題：good-rankingページを退役させて捨てている
+
+| 退役スタブ | 表示 | スタブの順位 | 転送先 | 転送先の順位 |
+|---|---|---|---|---|
+| overview | 134 | 8.87 | exam-format-overview | 4.23 |
+| difficulty-myths | 73+24 | **5.00** | exam-difficulty | 10.22 |
+| concurrent-exam-rules | 53 | 6.49 | exam-eligibility | 8.19 |
+| bookmark-review-method | 33 | **4.39** | study-plan | — |
+| plateau-breakthrough | 28 | **5.25** | study-plan | — |
+| material-update-cycle | 25 | **4.24** | syllabus-how-to-read | — |
+
+- difficulty-myths(5.00) は**転送先 exam-difficulty(10.22) より上位**。良い順位の
+  コンテンツを、より低順位のページへ退役させてしまっている＝逆効果。
+- bookmark-review-method(4.39)・material-update-cycle(4.24)・plateau-breakthrough(5.25)
+  は**スタブのまま top5 圏**。URLは勝っているのに中身を配信していない。
+
+### 推奨アクション（判断が必要）
+
+1. **good-ranking・高表示スタブの復活（un-retire）を検討**：上表のように「スタブの
+   順位＜＝転送先」かつ表示が多いものは、`guide_retired.json` から外して実ページに
+   戻すと、既に勝っているURLに中身が戻り、平均順位に直接効く。**可逆**（jsonから
+   該当行を削除→`build_all.py` 再実行）。
+   - トレードオフ：退役は記事数削減・重複排除の方針（テンプレ標準50本）で行われた
+     もの。復活は本数を増やすため、対象は「順位・表示が明確に良い数件」に限定すべき。
+   - 復活する場合、退役中に生じた lead の文章崩れ（関連記事タイトルがリード文へ
+     流れ込む生成不具合）は要手直し。
+2. **本当に不要なスタブは Search Console の削除ツールで消す**（ユーザー操作）。
+   overview 等、転送先の方が上位なら転送先に一本化した方がよい。
+3. いずれも 301 が使えれば一発だが、GitHub Pages では不可。**Cloudflare Pages 等への
+   移行で 301 リダイレクトを導入**すれば、この26%問題は構造的に解消できる（中期の
+   インフラ判断）。
+
+> 今回のコード対応（申込日程・受験地一覧・受験料FAQ・「2種」併記）は全て**実ページ**に
+> 対して行い有効。退役スタブ（overview 等）は実体側（exam-format-overview）に反映した。
