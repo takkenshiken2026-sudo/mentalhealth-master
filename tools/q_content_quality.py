@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import re
 
-from tools.seo_utils import INDEX_ROBOTS_META
+from tools.seo_utils import NOINDEX_ROBOTS_META
 
 _ICHIMON_ID_NUMERIC = re.compile(r"^(\d{4})-(\d+)-(\d+)$")
 _ICHIMON_ID_KANA = re.compile(r"^(\d{4}-\d+)-([アイウエオ])$")
@@ -146,9 +146,16 @@ def ichimon_is_primary_seo_row(row_id: str) -> bool:
 
 
 def ichimon_robots_meta(row_id: str) -> str:
-    """一問一答の個別ページを検索インデックス対象にする（各 URL は一意の設問・解説）。"""
-    del row_id  # 個別 URL はすべて index, follow
-    return INDEX_ROBOTS_META
+    """一問一答の個別ページは noindex, follow（薄いテンプレート型の設問ページ）。
+
+    AdSense の「価値の低い広告枠（低価値コンテンツ）」判定を避けるため、
+    大量に生成される個別設問ページは検索インデックス対象から外し、
+    内部リンク（follow）とユーザー利用は維持する。用語集・記事など
+    実質的コンテンツは引き続き index, follow のまま。審査通過後に
+    再インデックスしたい場合はここを INDEX_ROBOTS_META に戻す。
+    """
+    del row_id  # 個別 URL はすべて noindex, follow
+    return NOINDEX_ROBOTS_META
 
 
 def ichimon_body_already_states_truth(body: str, *, is_true: bool) -> bool:

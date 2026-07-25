@@ -44,6 +44,10 @@ SITE_COPYRIGHT = copyright_text()
 
 # 静的ページ・生成 HTML 共通（Search Console / クローラ向け）
 ROBOTS_INDEX_FOLLOW = '<meta name="robots" content="index, follow">'
+# 薄いテンプレート型ページ（過去問・実践・一問一答の個別設問）向け。
+# 内部リンクは辿らせつつ検索インデックス対象から外し、AdSense の
+# 「価値の低い広告枠（低価値コンテンツ）」判定リスクを下げる。
+ROBOTS_NOINDEX_FOLLOW = '<meta name="robots" content="noindex, follow">'
 
 SITE_FOOTER_NAV = navigation_items("footer")
 
@@ -286,8 +290,11 @@ def adsense_head_snippet() -> str:
     if not re.fullmatch(r"ca-pub-\d+", client):
         return ""
     client_esc = html.escape(client, quote=True)
+    # google-adsense-account メタは AdSense の「サイトの確認」を確実にし、
+    # 審査キューでの確認待ち（ステータス「不明」）を避けるための冗長化。
     return (
         f"{ADSENSE_HEAD_MARKER_START}\n"
+        f'<meta name="google-adsense-account" content="{client_esc}">\n'
         f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={client_esc}"\n'
         '     crossorigin="anonymous"></script>\n'
         f"{ADSENSE_HEAD_MARKER_END}"

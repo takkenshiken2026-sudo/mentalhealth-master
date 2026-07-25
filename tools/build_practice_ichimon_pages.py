@@ -39,6 +39,7 @@ from tools.build_past_question_pages import (  # noqa: E402
     HEAD_FONTS,
     Q_INDEX_CSS_VER,
     ROBOTS_INDEX_FOLLOW,
+    ROBOTS_NOINDEX_FOLLOW,
     q_index_filter_chip_btn,
     build_stem_html,
     glossary_links_for_tags,
@@ -436,7 +437,7 @@ def build_practice_question_html(
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
-{ROBOTS_INDEX_FOLLOW}
+{ROBOTS_NOINDEX_FOLLOW}
 <link rel="canonical" href="{html.escape(canonical)}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{html.escape(title)}">
