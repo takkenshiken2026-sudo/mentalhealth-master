@@ -956,6 +956,29 @@ def _exam_points_look_low_quality(items: list[str]) -> bool:
     return False
 
 
+_POINT_REVIEW_SUFFIX_RE = re.compile(r"（(?:復習|再確認|再掲|要復習|復習用)）\s*$")
+
+
+def _dedupe_study_point_items(items: list[str]) -> list[str]:
+    """要点・試験ポイントの近似重複を除去する。
+
+    CSV の exam_points には同一文と「…（復習）」付きの再掲が別項目として
+    入っていることがあり、要点ボックス・試験で押さえるポイント欄で同じ文が
+    2 回表示されてしまう（低価値・重複コンテンツの原因）。末尾の「（復習）」
+    等の再掲マーカーだけを無視して正規化し、初出のみ残す。「（外部機関）」
+    のような意味のある括弧書きは対象にしない。
+    """
+    out: list[str] = []
+    seen: set[str] = set()
+    for item in items:
+        norm = _POINT_REVIEW_SUFFIX_RE.sub("", item.strip()).rstrip("。 ").replace(" ", "")
+        if not norm or norm in seen:
+            continue
+        seen.add(norm)
+        out.append(item)
+    return out
+
+
 def _glossary_study_point_items(entry: dict, *, max_items: int = 3) -> list[str]:
     """定義文から完結した学習要点を組み立てる（読点分割は使わない）。"""
     short_def = _norm(entry.get("short_def"))
@@ -971,6 +994,7 @@ def _glossary_study_point_items(entry: dict, *, max_items: int = 3) -> list[str]
     ):
         cleaned = [item.strip() for item in exam_points if len(item.strip()) >= 8]
         cleaned = [item for item in cleaned if not item.startswith("根拠：")]
+        cleaned = _dedupe_study_point_items(cleaned)
         if cleaned and not _exam_points_look_low_quality(cleaned):
             return cleaned[:max_items]
 
@@ -995,7 +1019,7 @@ def _glossary_study_point_items(entry: dict, *, max_items: int = 3) -> list[str]
         if len(items) >= max_items:
             break
 
-    return items[:max_items]
+    return _dedupe_study_point_items(items)[:max_items]
 
 
 def glossary_exam_points_items(entry: dict) -> list[str]:
