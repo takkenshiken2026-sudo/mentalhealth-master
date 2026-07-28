@@ -4,65 +4,66 @@ search_intent: メンタルヘルス・マネジメント検定II種の申込支
 title: メンタルヘルス・マネジメント検定II種の受験支援サービス比較【公式申込 vs 書類チェック vs 講座付帯】【2026】
 genre: 受験・申込
 layout: product-comparison
-asp_primary: mixed
+asp_primary: afb
 comparison_kind: services
 comparison_title: 受験支援3スタイル（比較）
 price_disclaimer: 受験料7,480円（税込参考）は要項PDFが正本です。申込期間·決済方法は公開試験ごとに異なります（要項で再確認）。
 products:
-  - rank: 1
-    offer_type: course
-    name: 検定試験センター公式Web申込
-    provider: メンタルヘルス・マネジメント検定試験センター
-    plan_name: 公開試験インターネット申込
-    price_yen: 7480
-    price_label: 7,480円（税込参考·II種）
-    price_note: 支援料なし·要項が正本
-    billing_type: lump
-    duration: 要項記載の申込期間
-    affiliate_url: https://www.mental-health.ne.jp/
-    image_file: mentalhealth-book-450258021x.webp
-    for_who: ネット申込に慣れており支援料を抑えたい管理監督者
-    highlights:
-      - 申込の正本·最も推奨される手続き
-      - 7,480円のみ（支援料なし）
-      - 受験資格·会場·決済を公式で完結
-  - rank: 2
-    offer_type: course
-    name: 書類チェック型サポート（第三者）
-    provider: 各社（要契約確認）
-    plan_name: 申込書·写真·II種選択のチェック
-    price_label: 7,480円+支援料（各社異なる）
-    price_note: 本人が最終申込·決済する前提
-    billing_type: lump
-    duration: 申込期間中
-    affiliate_url: https://www.mental-health.ne.jp/about/
-    image_file: mentalhealth-course-sanno.webp
-    for_who: 管理監督者資格·写真規格·郵送手順が不安な初受験者
-    highlights:
-      - 要項準拠の書類チェック
-      - 決済先が公式と一致するか要確認
-      - 非公式な申込代行勧誘に注意
-  - rank: 3
-    offer_type: course
-    name: 講座付帯申込フォロー（スタディング等）
-    provider: スタディング
-    plan_name: 申込リマインド+学習カリキュラム一体
-    price_yen: 26800
-    price_label: 講座26,800円+受験料7,480円
-    price_note: 教材同梱·申込督促付き
-    billing_type: lump
-    duration: 2027年4月30日まで
-    affiliate_url: https://studying.jp/mental/itempage/course2-2026.html
-    image_file: mentalhealth-course-studying-2026.webp
-    for_who: 学習と申込を同時期に進めたい管理職
-    highlights:
-      - 申込締切のリマインド付き
-      - 50問120分演習と並行しやすい
-      - 教材セット重複購入に注意
+- rank: 1
+  offer_type: course
+  name: 検定試験センター公式Web申込
+  provider: メンタルヘルス・マネジメント検定試験センター
+  plan_name: 公開試験インターネット申込
+  price_yen: 7480
+  price_label: 7,480円（税込参考·II種）
+  price_note: 支援料なし·要項が正本
+  billing_type: lump
+  duration: 要項記載の申込期間
+  affiliate_url: https://www.mental-health.ne.jp/
+  image_file: mentalhealth-book-450258021x.webp
+  for_who: ネット申込に慣れており支援料を抑えたい管理監督者
+  highlights:
+  - 申込の正本·最も推奨される手続き
+  - 7,480円のみ（支援料なし）
+  - 受験資格·会場·決済を公式で完結
+- rank: 2
+  offer_type: course
+  name: 書類チェック型サポート（第三者）
+  provider: 各社（要契約確認）
+  plan_name: 申込書·写真·II種選択のチェック
+  price_label: 7,480円+支援料（各社異なる）
+  price_note: 本人が最終申込·決済する前提
+  billing_type: lump
+  duration: 申込期間中
+  affiliate_url: https://www.mental-health.ne.jp/about/
+  image_file: mentalhealth-course-sanno.webp
+  for_who: 管理監督者資格·写真規格·郵送手順が不安な初受験者
+  highlights:
+  - 要項準拠の書類チェック
+  - 決済先が公式と一致するか要確認
+  - 非公式な申込代行勧誘に注意
+- rank: 3
+  offer_type: course
+  name: 講座付帯申込フォロー（スタディング等）
+  provider: スタディング
+  plan_name: 申込リマインド+学習カリキュラム一体
+  price_yen: 26800
+  price_label: 講座26,800円+受験料7,480円
+  price_note: 教材同梱·申込督促付き
+  billing_type: lump
+  duration: 2027年4月30日まで
+  image_file: mentalhealth-course-studying-2026.webp
+  for_who: 学習と申込を同時期に進めたい管理職
+  highlights:
+  - 申込締切のリマインド付き
+  - 50問120分演習と並行しやすい
+  - 教材セット重複購入に注意
+  afb_url: https://t.afi-b.com/visit.php?a=y7404W-g7355640_T&p=b981480C
 related_links:
-  - exam-application-flow:申込みの流れ
-  - application-deadline-checklist:申込締切前チェック
-  - exam-eligibility:受験資格
-  - exam-schedule:試験日程
-  - affiliate-correspondence-course:通信講座の比較
+- exam-application-flow:申込みの流れ
+- application-deadline-checklist:申込締切前チェック
+- exam-eligibility:受験資格
+- exam-schedule:試験日程
+- affiliate-correspondence-course:通信講座の比較
 operator_note: 公式正本明記·申込代行なし。related_linksに公式+スタディング。2026-06-15 手書きリライト。
+afb_pixel: https://t.afi-b.com/lead/y7404W/b981480C/g7355640_T

@@ -295,6 +295,31 @@ def default_price_disclaimer(brief: dict[str, Any]) -> str:
     )
 
 
+def affiliate_tracking_pixels_html(brief: dict[str, Any] | None) -> str:
+    """afb 等の 1x1 計測 pixel（訪問リンクとは別 URL）。比較 hub に1回だけ出す。"""
+    if not brief:
+        return ""
+    pixels: list[str] = []
+    top = norm(str(brief.get("afb_pixel") or brief.get("tracking_pixel") or ""))
+    if top:
+        pixels.append(top)
+    for product in brief_products(brief):
+        px = norm(str(product.get("afb_pixel") or product.get("tracking_pixel") or ""))
+        if px:
+            pixels.append(px)
+    seen: set[str] = set()
+    out: list[str] = []
+    for src in pixels:
+        if src in seen or not src.lower().startswith(("http://", "https://")):
+            continue
+        seen.add(src)
+        out.append(
+            f'<img src="{html.escape(src, quote=True)}" width="1" height="1" alt="" '
+            f'style="border:none;position:absolute;left:-9999px" loading="eager" decoding="async">'
+        )
+    return "".join(out)
+
+
 def affiliate_product_hub_html(
     brief: dict[str, Any],
     rel_path: Path,
@@ -310,6 +335,7 @@ def affiliate_product_hub_html(
         for product in products
     )
     table = comparison_table_html(brief, products)
+    pixels = affiliate_tracking_pixels_html(brief)
     return (
         '<section class="seo-article-section affiliate-product-hub" '
         f'data-comparison-kind="{html.escape(brief_comparison_kind(brief), quote=True)}" '
@@ -318,6 +344,7 @@ def affiliate_product_hub_html(
         f'<p class="affiliate-price-disclaimer">{html.escape(default_price_disclaimer(brief))}</p>'
         f"{table}"
         f'<div class="affiliate-product-grid" data-product-count="{len(products)}">{cards}</div>'
+        f"{pixels}"
         "</section>"
     )
 
