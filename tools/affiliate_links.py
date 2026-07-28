@@ -58,6 +58,9 @@ def is_trackable_asp_url(url: str) -> bool:
         return True
     if "a8.net" in lower or "px.a8.net" in lower:
         return True
+    # afb（株式会社フォーイット）: t.afi-b.com/visit.php 等。計測 pixel (…/lead/…) は別扱い。
+    if "afi-b.com" in lower:
+        return "/lead/" not in lower
     if "afb" in lower and (".afb." in lower or "afb.io" in lower or "affiliate-b" in lower):
         return True
     return False

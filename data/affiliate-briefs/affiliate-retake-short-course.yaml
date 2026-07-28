@@ -4,62 +4,63 @@ search_intent: メンタルヘルス・マネジメント検定II種の再受験
 title: メンタルヘルス・マネジメント検定II種の再受験者向け短期講座3選【2026·70点ギャップ】
 genre: 学習計画
 layout: product-comparison
-asp_primary: mixed
+asp_primary: afb
 comparison_kind: courses
 comparison_title: 再受験者向け短期講座3選（比較）
 price_disclaimer: 受講料·キャンペーンは各公式ページで必ず最新情報を確認してください。再受験は別途受験料7,480円が必要です（要項で再確認）。
 products:
-  - rank: 1
-    offer_type: course
-    name: メンタルヘルス・マネジメント検定Ⅱ種合格コース 2026年度試験対応
-    provider: スタディング
-    billing_type: lump
-    price_yen: 26800
-    price_label: 26,800円（税込）
-    price_note: 短期合格セミナー1回·模試2回·Q&A10回
-    duration: 2027年4月30日まで
-    affiliate_url: https://studying.jp/mental/itempage/course2-2026.html
-    image_file: mentalhealth-course-studying-2026.webp
-    for_who: 修正2領域にライブ講義と模試で集中したい再受験者
-    highlights:
-      - 短期合格セミナーで直前論点を圧縮復習
-      - 模擬試験2回で50問120分の再計測
-      - 初受験コースと同型で比較しやすい
-  - rank: 2
-    offer_type: course
-    name: メンタルヘルス・マネジメント(R)検定 II種ラインケアコース
-    provider: 日本マンパワー
-    billing_type: lump
-    price_yen: 14850
-    price_label: 14,850円（税込·一般）
-    price_note: 受講2ヶ月·Web添削2回
-    duration: 2ヶ月
-    affiliate_url: https://www.nipponmanpower.co.jp/shop/g/gLMX/
-    image_file: mentalhealth-course-manpower.webp
-    for_who: 11週以内に締切を作り添削で答案癖を直したい再受験者
-    highlights:
-      - 2ヶ月の受講期限で再挑戦ペースを固定
-      - 添削2回で誤答パターンを早期修正
-      - 法人経由12,650円の場合あり
-  - rank: 3
-    offer_type: course
-    name: メンタルヘルス・マネジメント検定II種ラインケア完全対策
-    provider: Udemy
-    billing_type: lump
-    price_label: セール価格は公式要確認
-    price_note: 買い切り動画·弱点領域の補強向け
-    duration: 買い切り
-    affiliate_url: https://www.udemy.com/course/mentalhealth-management-exam/
-    image_file: mentalhealth-course-udemy.webp
-    for_who: 修正1領域だけ動画で補強し予算を抑えたい再受験者
-    highlights:
-      - 弱点領域の再視聴に向く買い切り型
-      - 全面インプット不要なら最小コスト
-      - 問題集演習との併用向き
+- rank: 1
+  offer_type: course
+  name: メンタルヘルス・マネジメント検定Ⅱ種合格コース 2026年度試験対応
+  provider: スタディング
+  billing_type: lump
+  price_yen: 26800
+  price_label: 26,800円（税込）
+  price_note: 短期合格セミナー1回·模試2回·Q&A10回
+  duration: 2027年4月30日まで
+  image_file: mentalhealth-course-studying-2026.webp
+  for_who: 修正2領域にライブ講義と模試で集中したい再受験者
+  highlights:
+  - 短期合格セミナーで直前論点を圧縮復習
+  - 模擬試験2回で50問120分の再計測
+  - 初受験コースと同型で比較しやすい
+  afb_url: https://t.afi-b.com/visit.php?a=y7404W-g7355640_T&p=b981480C
+- rank: 2
+  offer_type: course
+  name: メンタルヘルス・マネジメント(R)検定 II種ラインケアコース
+  provider: 日本マンパワー
+  billing_type: lump
+  price_yen: 14850
+  price_label: 14,850円（税込·一般）
+  price_note: 受講2ヶ月·Web添削2回
+  duration: 2ヶ月
+  affiliate_url: https://www.nipponmanpower.co.jp/shop/g/gLMX/
+  image_file: mentalhealth-course-manpower.webp
+  for_who: 11週以内に締切を作り添削で答案癖を直したい再受験者
+  highlights:
+  - 2ヶ月の受講期限で再挑戦ペースを固定
+  - 添削2回で誤答パターンを早期修正
+  - 法人経由12,650円の場合あり
+- rank: 3
+  offer_type: course
+  name: メンタルヘルス・マネジメント検定II種ラインケア完全対策
+  provider: Udemy
+  billing_type: lump
+  price_label: セール価格は公式要確認
+  price_note: 買い切り動画·弱点領域の補強向け
+  duration: 買い切り
+  affiliate_url: https://www.udemy.com/course/mentalhealth-management-exam/
+  image_file: mentalhealth-course-udemy.webp
+  for_who: 修正1領域だけ動画で補強し予算を抑えたい再受験者
+  highlights:
+  - 弱点領域の再視聴に向く買い切り型
+  - 全面インプット不要なら最小コスト
+  - 問題集演習との併用向き
 related_links:
-  - retake-strategy:再受験戦略
-  - fail-retry-plan:不合格からの再受験計画
-  - retake-schedule-adjustment:再受験の日程調整
-  - affiliate-problem-books:おすすめ問題集3選
-  - affiliate-mock-exam-materials:模試·一問一答3選
+- retake-strategy:再受験戦略
+- fail-retry-plan:不合格からの再受験計画
+- retake-schedule-adjustment:再受験の日程調整
+- affiliate-problem-books:おすすめ問題集3選
+- affiliate-mock-exam-materials:模試·一問一答3選
 operator_note: 公式直リンク3本。TAC II種閉講のため短期講座は日程固定型3社で比較。2026-06-15 手書きリライト。
+afb_pixel: https://t.afi-b.com/lead/y7404W/b981480C/g7355640_T

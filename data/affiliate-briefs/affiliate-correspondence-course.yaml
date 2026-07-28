@@ -3,17 +3,20 @@ theme_key: correspondence-course
 search_intent: メンタルヘルス・マネジメント検定II種の通信講座を比較して選びたい
 title: メンタルヘルス・マネジメント検定II種の通信講座比較【2026年度版】
 layout: product-comparison
-asp_primary: mixed
+asp_primary: afb
 comparison_kind: courses
 comparison_title: 通信講座3選（比較）
 price_disclaimer: 受講料・開講時期は各公式ページで必ず最新情報を確認してください。
+afb_pixel: https://t.afi-b.com/lead/y7404W/b981480C/g7355640_T
 products:
   - rank: 1
     offer_type: course
     name: メンタルヘルス・マネジメント検定Ⅱ種合格コース 2026年度試験対応
     provider: スタディング
     billing_type: lump
-    affiliate_url: https://studying.jp/mental/itempage/course2-2026.html
+    price_yen: 26800
+    price_note: 税込参考・キャンペーン時は公式で要確認（2026-07-28確認）
+    afb_url: https://t.afi-b.com/visit.php?a=y7404W-g7355640_T&p=b981480C
     image_file: mentalhealth-course-studying-2026.webp
     for_who: 動画とカリキュラムでII種に特化して学びたい人
     highlights:
@@ -47,6 +50,11 @@ products:
 related_links:
   - correspondence-course-guide:通信講座の選び方
   - self-study-start:独学の始め方
+  - study-plan:勉強法
   - affiliate-textbooks-recommend:おすすめテキスト
   - affiliate-online-course-compare:オンライン講座の比較
-operator_note: 公式直リンク（A8未設定）。2026-06-12 ASIN/dp確定・手書きリライト反映。
+  - affiliate-problem-books:おすすめ問題集
+operator_note: >
+  スタディングは afb（2026-07-28）。産業能率大学・キャリカレは公式直リンクのみのため
+  公開はスタディング ASP 確定後も他社 ASP 未設定なら draft 維持可。
+  本サイトの公開優先は affiliate-online-course-compare。

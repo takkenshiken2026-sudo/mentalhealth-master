@@ -3,17 +3,21 @@ theme_key: online-course-compare
 search_intent: メンタルヘルス・マネジメント検定II種のオンライン講座・動画学習を比較したい
 title: メンタルヘルス・マネジメント検定II種のオンライン講座比較【動画・通信2026】
 layout: product-comparison
-asp_primary: mixed
+asp_primary: afb
 comparison_kind: courses
 comparison_title: オンライン講座3選（比較）
 price_disclaimer: 受講料・キャンペーンは各公式ページで必ず最新情報を確認してください。
+# afb（フォーイット）スタディング メンタルヘルス・マネジメント検定プログラム
+afb_pixel: https://t.afi-b.com/lead/y7404W/b981480C/g7355640_T
 products:
   - rank: 1
     offer_type: course
     name: メンタルヘルス・マネジメント検定Ⅱ種合格コース 2026年度試験対応
     provider: スタディング
     billing_type: lump
-    affiliate_url: https://studying.jp/mental/itempage/course2-2026.html
+    price_yen: 26800
+    price_note: 税込参考・キャンペーン時は公式で要確認（2026-07-28確認）
+    afb_url: https://t.afi-b.com/visit.php?a=y7404W-g7355640_T&p=b981480C
     image_file: mentalhealth-course-studying-2026.webp
     for_who: 動画中心でII種に特化して学びたい人
     highlights:
@@ -25,7 +29,9 @@ products:
     name: メンタルヘルス・マネジメント検定Ⅱ種＋Ⅲ種ダブルチャレンジコース 2026年度試験対応
     provider: スタディング
     billing_type: lump
-    affiliate_url: https://studying.jp/mental/itempage/course2_3-2026.html
+    price_yen: 26800
+    price_note: 税込参考・セット価格は公式で要確認（2026-07-28確認）
+    afb_url: https://t.afi-b.com/visit.php?a=y7404W-g7355640_T&p=b981480C
     image_file: mentalhealth-course-studying-double.webp
     for_who: II種合格後にIII種まで視野に入れたい人
     highlights:
@@ -37,6 +43,7 @@ products:
     name: メンタルヘルス・マネジメント検定II種ラインケア完全対策
     provider: Udemy
     billing_type: lump
+    # Udemy は ASP 未設定のため比較表のみ（CTAはスタディングへ）
     affiliate_url: https://www.udemy.com/course/mentalhealth-management-exam/
     image_file: mentalhealth-course-udemy.webp
     for_who: 買い切り動画で短時間に要点を押さえたい人
@@ -47,6 +54,11 @@ products:
 related_links:
   - correspondence-course-guide:通信講座の選び方
   - self-study-start:独学の始め方
-  - affiliate-correspondence-course:通信講座の比較
+  - study-plan:勉強法
   - affiliate-textbooks-recommend:おすすめテキスト
-operator_note: Udemy・スタディング直リンク。2026-06-12 手書きリライト反映。
+  - affiliate-problem-books:おすすめ問題集
+  - affiliate-correspondence-course:通信講座の比較
+operator_note: >
+  afb スタディング メンタルヘルス・マネジメント検定（a=y7404W-g7355640_T / p=b981480C）。
+  訪問URLは studying.jp/mental/ へ遷移。2026-07-28 設置。
+  Udemyは直リンクのみ（非トラッキング）のため CTA には出さない。
