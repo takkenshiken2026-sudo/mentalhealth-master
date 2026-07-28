@@ -252,15 +252,25 @@
     "footnote": "※ note で販売する有料コンテンツ（¥590）です。サイト内の無料演習とは別商品です。"
   },
   "guideIndexPicks": {
-    "title": "おすすめのテキスト・問題集・教材セット",
-    "lead": "2026年度版の比較記事から、テキスト・問題集・教材セットの選び方へ。",
+    "title": "おすすめの講座・テキスト・問題集",
+    "lead": "2026年度版の比較記事から、講座・テキスト・問題集の選び方へ。",
     "leadsByHub": {
-      "articles": "2026年度版の比較記事から、テキスト・問題集・教材セットの選び方へ。",
-      "terms": "用語暗記と併用するテキスト・問題集の比較記事へ。",
-      "q": "無料演習と併用する問題集・教材セットの比較記事へ。"
+      "articles": "2026年度版の比較記事から、講座・テキスト・問題集の選び方へ。",
+      "terms": "用語暗記と併用するテキスト・問題集・講座の比較記事へ。",
+      "q": "無料演習と併用する問題集・講座の比較記事へ。"
     },
-    "layout": "grid-2",
+    "layout": "grid-3",
     "items": [
+      {
+        "kind": "course",
+        "kindLabel": "講座",
+        "title": "オンライン講座比較【2026年度版】",
+        "description": "スタディングII種·II+IIIダブル·Udemyを比較。動画学習で7領域を補強する選び方を解説します。",
+        "href": "affiliate-online-course-compare/",
+        "cta": "講座を比較する",
+        "image": "images/affiliate/mentalhealth-course-studying-2026.webp",
+        "imageAlt": "スタディング メンタルヘルス・マネジメント検定Ⅱ種合格コースのイメージ"
+      },
       {
         "kind": "textbook",
         "kindLabel": "テキスト",
