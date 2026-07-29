@@ -20,7 +20,7 @@ globs:
 ## 設定
 
 `modeTitle` / `modePurpose` / `priceLabel` / `footnote` 必須。`scoreMeta`・`scoreLead` で結果画面文言をサイト別に。  
-任意: `bannerImage`（例: `images/paid-mock/mentalhealth-paid-mock-2026-banner.webp`）+ `bannerAlt` があると、トップのスタディング等アフィリエイトバナーと**横並び**表示し、結果画面 CTA も画像バナーにする。バナー画像があるときはモード一覧下への重複カードは出さない。
+任意: `bannerImage`（例: `images/paid-mock/mentalhealth-paid-mock-2026-banner.webp`）+ `bannerAlt` があると、弱点集中対策（04）の下でスタディング等アフィリエイトバナーと**横並び**表示し、結果画面 CTA も画像バナーにする。バナー画像があるときはモード一覧への重複カードは出さない。
 
 ## 作業フロー
 
