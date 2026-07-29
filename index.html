@@ -397,6 +397,11 @@ h2.section-label .tip-icon{width:13px;height:13px;font-size:9px}
 .mode-purpose-v2--paid{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .mode-paid-tag{font-size:10px;font-weight:700;background:var(--paid-mock-accent);color:var(--paid-mock-accent-text);padding:1px 7px;border-radius:999px;letter-spacing:.04em;line-height:1.5;flex-shrink:0}
 .mode-arrow-v2--ext{color:var(--text3);font-weight:400}
+.paid-mock-banner{display:block;margin-top:10px;border-radius:var(--r2);overflow:hidden;border:1px solid var(--border2);box-shadow:var(--sh);text-decoration:none;transition:box-shadow .15s,transform .15s,border-color .15s}
+.paid-mock-banner:hover{box-shadow:var(--sh2);border-color:var(--paid-mock-accent);transform:translateY(-1px)}
+.paid-mock-banner img{display:block;width:100%;height:auto;vertical-align:middle}
+.score-paid-mock-banner{margin-top:12px}
+.score-paid-mock-banner img{display:block;width:100%;height:auto;border-radius:var(--r2)}
 .mode-card{background:#fff;border:1.5px solid var(--border2);border-radius:var(--r2);padding:18px;cursor:pointer;transition:all .18s;box-shadow:var(--sh);position:relative;display:flex;flex-direction:column}
 .mode-card:hover{box-shadow:var(--sh2);border-color:var(--text2);transform:translateY(-1px)}
 .mode-card.selected{border-color:var(--ink);box-shadow:0 0 0 3px rgba(0,0,0,0.06)}
@@ -7375,7 +7380,19 @@ function getPaidMockExamConfig(){
     priceLabel: String(cfg.priceLabel||'¥590').trim(),
     scoreMeta: String(cfg.scoreMeta||'PDF').trim(),
     scoreLead: String(cfg.scoreLead||'本番形式の予想模試').trim(),
+    bannerImage: String(cfg.bannerImage||'').trim(),
+    bannerAlt: String(cfg.bannerAlt||'').trim(),
   };
+}
+
+function paidMockBannerHtml(m, extraClass){
+  if(!m.bannerImage) return '';
+  const label=`${m.modeTitle}（有料・note・${m.priceLabel}）`;
+  const alt=m.bannerAlt||label;
+  const cls=['paid-mock-banner', extraClass].filter(Boolean).join(' ');
+  return `<a class="${cls}" href="${escapeAttr(m.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}">`
+    +`<img src="${escapeAttr(m.bannerImage)}" alt="${escapeAttr(alt)}" width="1280" height="670" loading="lazy" decoding="async">`
+    +`</a>`;
 }
 
 function injectPaidMockExamCard(modeList){
@@ -7384,7 +7401,10 @@ function injectPaidMockExamCard(modeList){
   const wrapper=document.createElement('div');
   wrapper.id='paid-mock-inject';
   const label=`${m.modeTitle}（有料・note・${m.priceLabel}）`;
-  wrapper.innerHTML=`
+  if(m.bannerImage){
+    wrapper.innerHTML=paidMockBannerHtml(m);
+  }else{
+    wrapper.innerHTML=`
     <a class="mode-card-v2 mode-card-v2--paid" href="${escapeAttr(m.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}">
       <div class="mode-num-v2 mode-num-v2--paid">05</div>
       <div class="mode-body-v2">
@@ -7393,6 +7413,7 @@ function injectPaidMockExamCard(modeList){
       </div>
       <div class="mode-arrow-v2 mode-arrow-v2--ext" aria-hidden="true">↗</div>
     </a>`;
+  }
   modeList.appendChild(wrapper);
 }
 
@@ -7417,9 +7438,9 @@ function renderScorePaidMockPromo(opts){
   const label=`${m.modeTitle}（有料・note・${m.priceLabel}）`;
   const leadHtml=opts.leadHtml!=null?opts.leadHtml:scorePaidMockLeadHtml(m,opts.variant);
   wrap.hidden=false;
-  wrap.innerHTML=`
-    <p class="score-paid-mock-lead">${leadHtml}</p>
-    <a class="score-paid-mock-strip" href="${escapeAttr(m.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}">
+  const promo=m.bannerImage
+    ? paidMockBannerHtml(m, 'score-paid-mock-banner')
+    : `<a class="score-paid-mock-strip" href="${escapeAttr(m.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}">
       <span class="score-paid-mock-strip-tag">有料</span>
       <span class="score-paid-mock-strip-body">
         <span class="score-paid-mock-strip-title">${escapeAttr(m.modeTitle)}</span>
@@ -7427,6 +7448,9 @@ function renderScorePaidMockPromo(opts){
       </span>
       <span class="score-paid-mock-strip-cta">詳細 ↗</span>
     </a>`;
+  wrap.innerHTML=`
+    <p class="score-paid-mock-lead">${leadHtml}</p>
+    ${promo}`;
 }
 window.renderScorePaidMockPromo=renderScorePaidMockPromo;
 
