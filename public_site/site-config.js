@@ -143,5 +143,11 @@ window.SITE_CONFIG = {
     "bannerImage": "images/paid-mock/mentalhealth-mock-exam-2026.webp",
     "bannerAlt": "メンタルヘルス・マネジメント検定II種 2026年版 有料模試 PDF 590円・3回分入り（noteで購入）",
     "footnote": "※ note で販売する有料コンテンツ（¥590）です。サイト内の無料演習とは別商品です。"
+  },
+  "topAffiliateBanner": {
+    "url": "https://t.afi-b.com/visit.php?a=y7404W-g7355640_T&p=b981480C",
+    "image": "images/affiliate/studying-mental-ii-banner.webp",
+    "imageAlt": "スタディング メンタルヘルス・マネジメント検定II種 — スマホで最短合格を目指す（無料で講座を見る）",
+    "pixel": "https://t.afi-b.com/lead/y7404W/b981480C/g7355640_T"
   }
 };

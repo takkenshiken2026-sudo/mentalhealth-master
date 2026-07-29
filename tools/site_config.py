@@ -529,6 +529,22 @@ def paid_mock_exam() -> dict[str, str] | None:
     return out
 
 
+def top_affiliate_banner() -> dict[str, str] | None:
+    raw = CONFIG.get("topAffiliateBanner")
+    if not isinstance(raw, dict):
+        return None
+    url = str(raw.get("url") or "").strip()
+    image = str(raw.get("image") or "").strip()
+    if not url or not image:
+        return None
+    out: dict[str, str] = {"url": url, "image": image}
+    for key in ("imageAlt", "pixel"):
+        val = raw.get(key)
+        if val is not None and str(val).strip():
+            out[key] = str(val).strip()
+    return out
+
+
 def write_site_config_js() -> None:
     payload = {
         "brandName": brand_name(),
@@ -561,6 +577,9 @@ def write_site_config_js() -> None:
     pm = paid_mock_exam()
     if pm:
         payload["paidMockExam"] = pm
+    tab = top_affiliate_banner()
+    if tab:
+        payload["topAffiliateBanner"] = tab
     (ROOT / "site-config.js").write_text(
         "window.SITE_CONFIG = "
         + json.dumps(payload, ensure_ascii=False, indent=2)
