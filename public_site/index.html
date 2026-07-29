@@ -3980,7 +3980,7 @@ function gotoPage(id, opts){
   if(id==='dash')        { renderDash(); renderDashLevel(); setTimeout(()=>renderAnalytics(),50); }
   if(id==='review')      renderReview();
   if(id==='orig')        renderOrigPage();
-  if(id==='quiz-start')  { renderDailyStatus(); updateQuizStartModeStats(); }
+  if(id==='quiz-start')  { renderDailyStatus(); updateQuizStartModeStats(); renderTopAffiliateBanner(); }
   if(id==='past-config') buildYearGrid();
   try {
     if (typeof window.ga4PageView === "function") {
@@ -7548,6 +7548,7 @@ function init(){
   injectDashEnhancements();
   injectQuizStartEnhancements();
   injectReviewEnhancements();
+  renderTopAffiliateBanner();
   const activePage=document.querySelector('.page.active');
   if(activePage){
     const id=activePage.id.replace('page-','');
