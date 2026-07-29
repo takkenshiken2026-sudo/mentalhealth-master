@@ -402,7 +402,7 @@ h2.section-label .tip-icon{width:13px;height:13px;font-size:9px}
 .paid-mock-banner img{display:block;width:100%;height:auto;vertical-align:middle}
 .score-paid-mock-banner{margin-top:12px}
 .score-paid-mock-banner img{display:block;width:100%;height:auto;border-radius:var(--r2)}
-.top-promo-banners{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;margin:0 0 18px}
+.top-promo-banners{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;margin:14px 0 18px}
 .top-promo-banners--single{grid-template-columns:1fr}
 .top-promo-banners .paid-mock-banner,
 .top-promo-banners .top-affiliate-banner{margin:0}
@@ -1572,8 +1572,6 @@ body.is-solving .site-footer{display:none!important}
       <h2 class="page-title">「メンタルヘルス・マネジメント検定II種」の問題を解く</h2>
       <div class="page-sub">学習目的に合わせてモードを選んでください</div>
 
-      <div id="top-affiliate-banner-wrap" class="top-promo-banners" hidden></div>
-
       <div class="mode-list-v2">
         <div class="mode-card-v2" onclick="startIchimondou()">
           <div class="mode-num-v2">01</div>
@@ -1600,6 +1598,8 @@ body.is-solving .site-footer{display:none!important}
           <div class="mode-arrow-v2">›</div>
         </div>
       </div>
+
+      <div id="top-affiliate-banner-wrap" class="top-promo-banners" hidden></div>
 
       <div id="daily-status-wrap"></div>
     </div>
@@ -7380,7 +7380,7 @@ function injectQuizStartEnhancements(){
   }
   modeList.appendChild(weakCard);
 
-  // バナー画像がある場合はトップ横並び行に出す（モード一覧下への重複はしない）
+  // バナー画像がある場合は弱点集中対策の下（#top-affiliate-banner-wrap）で横並び表示
   const paidCfg=getPaidMockExamConfig();
   if(!startEl.querySelector('#paid-mock-inject') && paidCfg.url && !paidCfg.bannerImage){
     injectPaidMockExamCard(modeList);
@@ -7427,7 +7427,7 @@ function renderTopPromoBanners(){
       : '';
     parts.push(
       `<a class="top-affiliate-banner" href="${escapeAttr(url)}" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="${escapeAttr(alt)}">`
-      +`<img src="${escapeAttr(image)}" alt="${escapeAttr(alt)}" width="1200" height="480" loading="eager" decoding="async">`
+      +`<img src="${escapeAttr(image)}" alt="${escapeAttr(alt)}" width="1672" height="941" loading="eager" decoding="async">`
       +`</a>${pixelHtml}`
     );
   }
@@ -7449,7 +7449,7 @@ function paidMockBannerHtml(m, extraClass){
   const alt=m.bannerAlt||label;
   const cls=['paid-mock-banner', extraClass].filter(Boolean).join(' ');
   return `<a class="${cls}" href="${escapeAttr(m.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}">`
-    +`<img src="${escapeAttr(m.bannerImage)}" alt="${escapeAttr(alt)}" width="1280" height="670" loading="lazy" decoding="async">`
+    +`<img src="${escapeAttr(m.bannerImage)}" alt="${escapeAttr(alt)}" width="1672" height="941" loading="lazy" decoding="async">`
     +`</a>`;
 }
 
