@@ -402,10 +402,19 @@ h2.section-label .tip-icon{width:13px;height:13px;font-size:9px}
 .paid-mock-banner img{display:block;width:100%;height:auto;vertical-align:middle}
 .score-paid-mock-banner{margin-top:12px}
 .score-paid-mock-banner img{display:block;width:100%;height:auto;border-radius:var(--r2)}
+.top-promo-banners{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;margin:0 0 18px}
+.top-promo-banners--single{grid-template-columns:1fr}
+.top-promo-banners .paid-mock-banner,
+.top-promo-banners .top-affiliate-banner{margin:0}
+.top-promo-banners .paid-mock-banner img,
+.top-promo-banners .top-affiliate-banner img{width:100%;height:auto;vertical-align:middle}
 .top-affiliate-banner{display:block;margin:0 0 18px;border-radius:var(--r2);overflow:hidden;border:1px solid var(--border2);box-shadow:var(--sh);text-decoration:none;transition:box-shadow .15s,transform .15s,border-color .15s}
 .top-affiliate-banner:hover{box-shadow:var(--sh2);transform:translateY(-1px);border-color:#f60}
 .top-affiliate-banner img{display:block;width:100%;height:auto;vertical-align:middle}
 .top-affiliate-banner-pixel{position:absolute;left:-9999px;width:1px;height:1px;border:0}
+@media(max-width:700px){
+  .top-promo-banners{grid-template-columns:1fr;gap:10px}
+}
 .mode-card{background:#fff;border:1.5px solid var(--border2);border-radius:var(--r2);padding:18px;cursor:pointer;transition:all .18s;box-shadow:var(--sh);position:relative;display:flex;flex-direction:column}
 .mode-card:hover{box-shadow:var(--sh2);border-color:var(--text2);transform:translateY(-1px)}
 .mode-card.selected{border-color:var(--ink);box-shadow:0 0 0 3px rgba(0,0,0,0.06)}
@@ -1563,7 +1572,7 @@ body.is-solving .site-footer{display:none!important}
       <h2 class="page-title">「メンタルヘルス・マネジメント検定II種」の問題を解く</h2>
       <div class="page-sub">学習目的に合わせてモードを選んでください</div>
 
-      <div id="top-affiliate-banner-wrap" hidden></div>
+      <div id="top-affiliate-banner-wrap" class="top-promo-banners" hidden></div>
 
       <div class="mode-list-v2">
         <div class="mode-card-v2" onclick="startIchimondou()">
@@ -7371,7 +7380,9 @@ function injectQuizStartEnhancements(){
   }
   modeList.appendChild(weakCard);
 
-  if(!startEl.querySelector('#paid-mock-inject')){
+  // バナー画像がある場合はトップ横並び行に出す（モード一覧下への重複はしない）
+  const paidCfg=getPaidMockExamConfig();
+  if(!startEl.querySelector('#paid-mock-inject') && paidCfg.url && !paidCfg.bannerImage){
     injectPaidMockExamCard(modeList);
   }
 }
@@ -7392,26 +7403,44 @@ function getPaidMockExamConfig(){
 }
 
 function renderTopAffiliateBanner(){
+  renderTopPromoBanners();
+}
+
+function renderTopPromoBanners(){
   const wrap=document.getElementById('top-affiliate-banner-wrap');
   if(!wrap) return;
+  const parts=[];
+
+  const paid=getPaidMockExamConfig();
+  if(paid.url && paid.bannerImage){
+    parts.push(paidMockBannerHtml(paid));
+  }
+
   const cfg=(window.SITE_CONFIG&&window.SITE_CONFIG.topAffiliateBanner)||{};
   const url=String(cfg.url||'').trim();
   const image=String(cfg.image||'').trim();
-  if(!url||!image){
+  if(url && image){
+    const alt=String(cfg.imageAlt||'おすすめ講座').trim();
+    const pixel=String(cfg.pixel||'').trim();
+    const pixelHtml=pixel
+      ? `<img class="top-affiliate-banner-pixel" src="${escapeAttr(pixel)}" width="1" height="1" alt="" loading="eager" decoding="async">`
+      : '';
+    parts.push(
+      `<a class="top-affiliate-banner" href="${escapeAttr(url)}" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="${escapeAttr(alt)}">`
+      +`<img src="${escapeAttr(image)}" alt="${escapeAttr(alt)}" width="1200" height="480" loading="eager" decoding="async">`
+      +`</a>${pixelHtml}`
+    );
+  }
+
+  if(!parts.length){
     wrap.hidden=true;
+    wrap.className='top-promo-banners';
     wrap.innerHTML='';
     return;
   }
-  const alt=String(cfg.imageAlt||'おすすめ講座').trim();
-  const pixel=String(cfg.pixel||'').trim();
-  const pixelHtml=pixel
-    ? `<img class="top-affiliate-banner-pixel" src="${escapeAttr(pixel)}" width="1" height="1" alt="" loading="eager" decoding="async">`
-    : '';
   wrap.hidden=false;
-  wrap.innerHTML=`
-    <a class="top-affiliate-banner" href="${escapeAttr(url)}" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="${escapeAttr(alt)}">
-      <img src="${escapeAttr(image)}" alt="${escapeAttr(alt)}" width="1200" height="480" loading="eager" decoding="async">
-    </a>${pixelHtml}`;
+  wrap.className='top-promo-banners'+(parts.length===1?' top-promo-banners--single':'');
+  wrap.innerHTML=parts.join('');
 }
 
 function paidMockBannerHtml(m, extraClass){
