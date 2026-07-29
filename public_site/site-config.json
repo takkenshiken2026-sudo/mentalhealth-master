@@ -249,7 +249,9 @@
     "modeTitle": "予想模試（PDF・3回分）",
     "modePurpose": "本番形式で実力確認したい",
     "priceLabel": "¥590",
-    "footnote": "※ note で販売する有料コンテンツ（¥590）です。サイト内の無料演習とは別商品です。"
+    "footnote": "※ note で販売する有料コンテンツ（¥590）です。サイト内の無料演習とは別商品です。",
+    "bannerImage": "images/paid-mock/mentalhealth-mock-exam-2026.webp",
+    "bannerAlt": "メンタルヘルス・マネジメント検定II種 2026年版 有料模試 PDF 590円・3回分入り（noteで購入）"
   },
   "guideIndexPicks": {
     "title": "おすすめの講座・テキスト・問題集",
