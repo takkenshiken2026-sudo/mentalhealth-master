@@ -39,6 +39,7 @@ from tools.html_footer import (
 from tools.guide_index_picks_ui import build_guide_index_picks_html
 from tools.knowledge_hub_tabs import knowledge_hub_tab_hrefs, knowledge_hub_tabs_html
 from tools.seo_utils import (
+    NOINDEX_ROBOTS_META,
     content_date_from_row,
     json_ld_date_modified,
     latest_content_date,
@@ -867,7 +868,12 @@ def build_term_html(
     )
 
     updated = content_date_from_row(entry)
-    robots_meta = robots_meta_for_slug(slug_file)
+    # 用語詳細ページはCSVから機械生成した学習用リファレンスであり、同一構成の
+    # 大量ページとして検索エンジンに「量産コンテンツ」と評価されるのを避けるため
+    # noindex とする（アプリ／サイト内では引き続き全用語を閲覧・利用可能）。
+    # 用語一覧（terms/index.html）と分野ハブ（terms/field-*/）は index のまま。
+    robots_meta = NOINDEX_ROBOTS_META
+    _ = robots_meta_for_slug  # 既存インポート維持（一覧・ハブ側で利用）
 
     quality_html = (
         '<section class="seo-quality-panel" aria-labelledby="quality-panel-title">'
