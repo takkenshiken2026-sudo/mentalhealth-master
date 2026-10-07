@@ -665,6 +665,13 @@ details.rich-detail summary{display:none}
 .score-paid-mock-strip-badge{display:inline-block;margin-left:7px;font-size:10px;font-weight:700;color:var(--paid-mock-accent);background:var(--paid-mock-accent-soft);border:1px solid var(--paid-mock-accent-border);border-radius:999px;padding:1px 8px;letter-spacing:.03em;vertical-align:middle}
 .top-paid-mock{display:flex;flex-direction:column;gap:9px}
 .top-paid-mock .score-paid-mock-lead{margin-bottom:0}
+.top-affiliate-cta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;border:1px solid var(--accent-border);border-radius:var(--r2);background:var(--accent-soft);text-decoration:none;color:inherit;box-shadow:0 2px 10px var(--accent-shadow);transition:border-color .15s,box-shadow .15s,transform .15s}
+.top-affiliate-cta:hover{border-color:var(--accent);box-shadow:0 4px 14px var(--accent-shadow);transform:translateY(-1px)}
+.top-affiliate-cta-tag{font-size:var(--fs-tiny);font-weight:700;background:var(--accent);color:var(--accent-text);padding:3px 8px;border-radius:4px;flex-shrink:0;letter-spacing:.04em}
+.top-affiliate-cta-body{flex:1;min-width:160px}
+.top-affiliate-cta-title{display:block;font-size:var(--fs-body);font-weight:700;color:var(--text);margin-bottom:2px;line-height:1.35}
+.top-affiliate-cta-meta{font-size:var(--fs-caption);color:var(--text2)}
+.top-affiliate-cta-link{font-size:var(--fs-sub);font-weight:700;color:var(--accent-emphasis);flex-shrink:0;white-space:nowrap}
 
 /* ===== DASHBOARD ===== */
 .stat-row{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:18px}
@@ -7455,20 +7462,38 @@ function renderTopPromoBanners(){
     parts.push(`<div class="top-paid-mock">${lead}${paidMockStripListHtml(paid.items)}</div>`);
   }
 
+  // スタディング等の講座：画像をやめ、テキストCTA（緑アクセント）で表示
   const cfg=(window.SITE_CONFIG&&window.SITE_CONFIG.topAffiliateBanner)||{};
   const url=String(cfg.url||'').trim();
+  const title=String(cfg.title||'').trim();
   const image=String(cfg.image||'').trim();
-  if(url && image){
-    const alt=String(cfg.imageAlt||'おすすめ講座').trim();
+  if(url && (title || image)){
+    const alt=String(cfg.imageAlt||title||'おすすめ講座').trim();
     const pixel=String(cfg.pixel||'').trim();
     const pixelHtml=pixel
       ? `<img class="top-affiliate-banner-pixel" src="${escapeAttr(pixel)}" width="1" height="1" alt="" loading="eager" decoding="async">`
       : '';
-    parts.push(
-      `<a class="top-affiliate-banner" href="${escapeAttr(url)}" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="${escapeAttr(alt)}">`
-      +`<img src="${escapeAttr(image)}" alt="${escapeAttr(alt)}" width="1672" height="941" loading="eager" decoding="async">`
-      +`</a>${pixelHtml}`
-    );
+    if(title){
+      const meta=String(cfg.meta||'').trim();
+      const tag=String(cfg.tag||'PR').trim();
+      const ctaLabel=String(cfg.ctaLabel||'くわしく見る').trim();
+      parts.push(
+        `<a class="top-affiliate-cta" href="${escapeAttr(url)}" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="${escapeAttr(alt)}">`
+        +`<span class="top-affiliate-cta-tag">${escapeHTML(tag)}</span>`
+        +`<span class="top-affiliate-cta-body">`
+        +`<span class="top-affiliate-cta-title">${escapeHTML(title)}</span>`
+        +(meta?`<span class="top-affiliate-cta-meta">${escapeHTML(meta)}</span>`:'')
+        +`</span>`
+        +`<span class="top-affiliate-cta-link">${escapeHTML(ctaLabel)} ↗</span>`
+        +`</a>${pixelHtml}`
+      );
+    }else{
+      parts.push(
+        `<a class="top-affiliate-banner" href="${escapeAttr(url)}" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="${escapeAttr(alt)}">`
+        +`<img src="${escapeAttr(image)}" alt="${escapeAttr(alt)}" width="1672" height="941" loading="eager" decoding="async">`
+        +`</a>${pixelHtml}`
+      );
+    }
   }
 
   if(!parts.length){

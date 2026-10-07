@@ -553,11 +553,13 @@ def top_affiliate_banner() -> dict[str, str] | None:
     if not isinstance(raw, dict):
         return None
     url = str(raw.get("url") or "").strip()
+    title = str(raw.get("title") or "").strip()
     image = str(raw.get("image") or "").strip()
-    if not url or not image:
+    # テキストCTA(title)か画像(image)のどちらかが必要
+    if not url or (not title and not image):
         return None
-    out: dict[str, str] = {"url": url, "image": image}
-    for key in ("imageAlt", "pixel"):
+    out: dict[str, str] = {"url": url}
+    for key in ("tag", "title", "meta", "ctaLabel", "image", "imageAlt", "pixel"):
         val = raw.get(key)
         if val is not None and str(val).strip():
             out[key] = str(val).strip()
