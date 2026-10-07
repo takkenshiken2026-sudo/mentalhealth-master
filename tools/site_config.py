@@ -515,6 +515,8 @@ def paid_mock_exam() -> dict | None:
         "scoreLead",
         "topLead",
         "footnote",
+        "bannerImage",
+        "bannerAlt",
         "modeTitle",
         "modePurpose",
         "priceLabel",

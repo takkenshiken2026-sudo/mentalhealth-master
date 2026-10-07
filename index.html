@@ -7404,6 +7404,8 @@ function getPaidMockExamConfig(){
     scoreLead: String(cfg.scoreLead||'本番形式の予想模試').trim(),
     topLead: String(cfg.topLead||'本番形式で力試し。有料の予想模試（note）').trim(),
     footnote: String(cfg.footnote||'').trim(),
+    bannerImage: String(cfg.bannerImage||'').trim(),
+    bannerAlt: String(cfg.bannerAlt||'').trim(),
     items: getPaidMockExamItems(),
   };
 }
@@ -7431,11 +7433,14 @@ function getPaidMockExamItems(){
 }
 
 // 案D：有料模試を1件のテキストCTA（ストリップ）として描画
-function paidMockStripHtml(it){
+// opts.onclick を渡すとクリック計測用の onclick 属性を付与する
+function paidMockStripHtml(it, opts){
+  opts=opts||{};
   const label=`${it.title}（有料・note・${it.priceLabel}）`;
   const meta=[it.meta,it.priceLabel,'note'].filter(Boolean).join(' · ');
   const badge=it.badge?`<span class="score-paid-mock-strip-badge">${escapeHTML(it.badge)}</span>`:'';
-  return `<a class="score-paid-mock-strip" href="${escapeAttr(it.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}">`
+  const onclick=opts.onclick?` onclick="${opts.onclick}"`:'';
+  return `<a class="score-paid-mock-strip" href="${escapeAttr(it.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}"${onclick}>`
     +`<span class="score-paid-mock-strip-tag">有料</span>`
     +`<span class="score-paid-mock-strip-body">`
     +`<span class="score-paid-mock-strip-title">${escapeHTML(it.title)}${badge}</span>`
@@ -7446,10 +7451,39 @@ function paidMockStripHtml(it){
 }
 
 // 複数の模試ストリップを縦に並べる
-function paidMockStripListHtml(items){
+function paidMockStripListHtml(items, opts){
   if(!items||!items.length) return '';
-  return `<div class="score-paid-mock-list">${items.map(paidMockStripHtml).join('')}</div>`;
+  return `<div class="score-paid-mock-list">${items.map(function(it){return paidMockStripHtml(it,opts);}).join('')}</div>`;
 }
+
+// ===== バナー A/B テスト（画像版 vs テキストCTA版） =====
+// 訪問者を image / text に 50/50 で振り分け、localStorage で固定する。
+function getPromoVariant(){
+  try{
+    let v=localStorage.getItem('promoABVariant');
+    if(v!=='image'&&v!=='text'){
+      v=Math.random()<0.5?'image':'text';
+      localStorage.setItem('promoABVariant',v);
+    }
+    return v;
+  }catch(_e){
+    // ストレージ不可（プライベートモード等）でも約50/50を維持
+    return Math.random()<0.5?'image':'text';
+  }
+}
+// GA4 計測イベント（promo_impression / promo_click）
+function trackPromo(action, slot, variant){
+  try{
+    if(typeof window.gtag==='function'){
+      window.gtag('event','promo_'+action,{
+        promo_slot:slot,
+        promo_variant:variant,
+        promo_experiment:'banner_image_vs_text'
+      });
+    }
+  }catch(_e){}
+}
+window.trackPromoClick=function(slot,variant){ trackPromo('click',slot,variant); };
 
 function renderTopAffiliateBanner(){
   renderTopPromoBanners();
@@ -7458,16 +7492,29 @@ function renderTopAffiliateBanner(){
 function renderTopPromoBanners(){
   const wrap=document.getElementById('top-affiliate-banner-wrap');
   if(!wrap) return;
+  const variant=getPromoVariant();
   const parts=[];
+  const shown=[]; // [slot, 実際に表示した版] の記録（インプレッション計測用）
 
-  // 有料模試：画像バナーをやめ、案D（テキストCTA）を縦積みで表示
+  // 有料模試（slot: mock）
   const paid=getPaidMockExamConfig();
   if(paid.items.length){
-    const lead=paid.topLead?`<p class="score-paid-mock-lead">${escapeHTML(paid.topLead)}</p>`:'';
-    parts.push(`<div class="top-paid-mock">${lead}${paidMockStripListHtml(paid.items)}</div>`);
+    if(variant==='image' && paid.bannerImage){
+      const alt=paid.bannerAlt||`${paid.items[0].title}（有料・note）`;
+      parts.push(
+        `<a class="paid-mock-banner" href="${escapeAttr(paid.items[0].url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(alt)}" onclick="trackPromoClick('mock','image')">`
+        +`<img src="${escapeAttr(paid.bannerImage)}" alt="${escapeAttr(alt)}" width="1672" height="941" loading="eager" decoding="async">`
+        +`</a>`
+      );
+      shown.push(['mock','image']);
+    }else{
+      const lead=paid.topLead?`<p class="score-paid-mock-lead">${escapeHTML(paid.topLead)}</p>`:'';
+      parts.push(`<div class="top-paid-mock">${lead}${paidMockStripListHtml(paid.items,{onclick:"trackPromoClick('mock','text')"})}</div>`);
+      shown.push(['mock','text']);
+    }
   }
 
-  // スタディング等の講座：画像をやめ、テキストCTA（緑アクセント）で表示
+  // スタディング等の講座（slot: studying）
   const cfg=(window.SITE_CONFIG&&window.SITE_CONFIG.topAffiliateBanner)||{};
   const url=String(cfg.url||'').trim();
   const title=String(cfg.title||'').trim();
@@ -7478,12 +7525,13 @@ function renderTopPromoBanners(){
     const pixelHtml=pixel
       ? `<img class="top-affiliate-banner-pixel" src="${escapeAttr(pixel)}" width="1" height="1" alt="" loading="eager" decoding="async">`
       : '';
-    if(title){
+    const useImage=(variant==='image' && image);
+    if(!useImage && title){
       const meta=String(cfg.meta||'').trim();
       const tag=String(cfg.tag||'PR').trim();
       const ctaLabel=String(cfg.ctaLabel||'くわしく見る').trim();
       parts.push(
-        `<a class="top-affiliate-cta" href="${escapeAttr(url)}" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="${escapeAttr(alt)}">`
+        `<a class="top-affiliate-cta" href="${escapeAttr(url)}" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="${escapeAttr(alt)}" onclick="trackPromoClick('studying','text')">`
         +`<span class="top-affiliate-cta-tag">${escapeHTML(tag)}</span>`
         +`<span class="top-affiliate-cta-body">`
         +`<span class="top-affiliate-cta-title">${escapeHTML(title)}</span>`
@@ -7492,12 +7540,14 @@ function renderTopPromoBanners(){
         +`<span class="top-affiliate-cta-link">${escapeHTML(ctaLabel)} ↗</span>`
         +`</a>${pixelHtml}`
       );
+      shown.push(['studying','text']);
     }else{
       parts.push(
-        `<a class="top-affiliate-banner" href="${escapeAttr(url)}" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="${escapeAttr(alt)}">`
+        `<a class="top-affiliate-banner" href="${escapeAttr(url)}" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="${escapeAttr(alt)}" onclick="trackPromoClick('studying','image')">`
         +`<img src="${escapeAttr(image)}" alt="${escapeAttr(alt)}" width="1672" height="941" loading="eager" decoding="async">`
         +`</a>${pixelHtml}`
       );
+      shown.push(['studying','image']);
     }
   }
 
@@ -7507,10 +7557,19 @@ function renderTopPromoBanners(){
     wrap.innerHTML='';
     return;
   }
-  // 案Dは縦積みにするため常に1カラム
   wrap.hidden=false;
-  wrap.className='top-promo-banners top-promo-banners--single';
+  // 画像版は従来の2カラム、テキスト版は縦積み1カラム
+  if(variant==='image'){
+    wrap.className='top-promo-banners'+(parts.length===1?' top-promo-banners--single':'');
+  }else{
+    wrap.className='top-promo-banners top-promo-banners--single';
+  }
   wrap.innerHTML=parts.join('');
+
+  // インプレッション計測（表示したスロットごとに1回）
+  for(let i=0;i<shown.length;i++){
+    trackPromo('impression', shown[i][0], shown[i][1]);
+  }
 }
 
 function scorePaidMockLeadHtml(m, variant){
