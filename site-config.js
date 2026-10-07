@@ -138,13 +138,14 @@ window.SITE_CONFIG = {
   "paidMockExam": {
     "scoreLead": "本番形式の予想模試",
     "topLead": "本番形式で力試し。有料の予想模試（note）",
-    "footnote": "※ note で販売する有料コンテンツ（¥590）です。サイト内の無料演習とは別商品です。",
+    "footnote": "※ note で販売する有料コンテンツ（¥980）です。サイト内の無料演習とは別商品です。",
     "items": [
       {
         "url": "https://note.com/shikaku_master/n/n23b1be0a19d9",
-        "title": "予想模試 2026 ①",
+        "title": "予想模試 基本編",
         "meta": "PDF・3回分",
-        "priceLabel": "¥590"
+        "priceLabel": "¥980",
+        "badge": "まずはこれから"
       }
     ]
   },
