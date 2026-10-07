@@ -139,6 +139,7 @@ window.SITE_CONFIG = {
     "scoreLead": "本番形式の予想模試",
     "topLead": "本番形式で力試し。有料の予想模試（note）",
     "footnote": "※ note で販売する有料コンテンツ（¥980）です。サイト内の無料演習とは別商品です。",
+    "purchaseNote": "note で購入 ／ PDF をその場でダウンロード ／ 全問くわしい解説つき",
     "bannerImage": "images/paid-mock/mental-health-management-moshi2026.webp",
     "bannerAlt": "メンタルヘルス・マネジメント検定II種 2026年版 予想模試（有料・note）",
     "items": [

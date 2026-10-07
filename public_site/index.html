@@ -665,6 +665,7 @@ details.rich-detail summary{display:none}
 .score-paid-mock-strip-badge{display:inline-block;margin-left:7px;font-size:10px;font-weight:700;color:var(--paid-mock-accent);background:var(--paid-mock-accent-soft);border:1px solid var(--paid-mock-accent-border);border-radius:999px;padding:1px 8px;letter-spacing:.03em;vertical-align:middle}
 .top-paid-mock{display:flex;flex-direction:column;gap:9px}
 .top-paid-mock .score-paid-mock-lead{margin-bottom:0}
+.paid-mock-note{font-size:var(--fs-caption);color:var(--text2);margin:4px 0 0;line-height:1.5}
 .top-affiliate-cta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;border:1px solid var(--accent-border);border-radius:var(--r2);background:var(--accent-soft);text-decoration:none;color:inherit;box-shadow:0 2px 10px var(--accent-shadow);transition:border-color .15s,box-shadow .15s,transform .15s}
 .top-affiliate-cta:hover{border-color:var(--accent);box-shadow:0 4px 14px var(--accent-shadow);transform:translateY(-1px)}
 .top-affiliate-cta-tag{font-size:var(--fs-tiny);font-weight:700;background:var(--accent);color:var(--accent-text);padding:3px 8px;border-radius:4px;flex-shrink:0;letter-spacing:.04em}
@@ -3954,7 +3955,7 @@ function showIchiScore() {
     retryIchiBtn.style.display = wrongIchi > 0 ? '' : 'none';
     retryIchiBtn.textContent = '間違えた' + wrongIchi + '問を復習';
   }
-  renderScorePaidMockPromo({ wrapId: 'ichi-score-paid-mock-wrap', variant: 'ichi' });
+  renderScorePaidMockPromo({ wrapId: 'ichi-score-paid-mock-wrap', variant: 'ichi', scorePct: att > 0 ? Math.round(s / att * 100) : null });
 }
 function shareIchiResultToX(){
   const s = ichiState.score;
@@ -5897,6 +5898,7 @@ function interruptQuiz(){
 function showScore(){
   const res=quizState.sessionResults, correct=res.filter(r=>r.correct).length;
   const pct=Math.round(correct/res.length*100);
+  window.__lastQuizPct=pct; // 得点連動CTA用に直近の正答率を保持
   lastSessionShareData={mode:quizState.mode,correct,total:res.length,pct};
   const u=getUserData(); u.sessions=u.sessions||[];u.sessions.push({date:Date.now(),correct,total:res.length,pct,mode:quizState.mode});saveUser(u);
   // session-end badge check
@@ -7404,6 +7406,7 @@ function getPaidMockExamConfig(){
     scoreLead: String(cfg.scoreLead||'本番形式の予想模試').trim(),
     topLead: String(cfg.topLead||'本番形式で力試し。有料の予想模試（note）').trim(),
     footnote: String(cfg.footnote||'').trim(),
+    purchaseNote: String(cfg.purchaseNote||'').trim(),
     bannerImage: String(cfg.bannerImage||'').trim(),
     bannerAlt: String(cfg.bannerAlt||'').trim(),
     items: getPaidMockExamItems(),
@@ -7437,7 +7440,12 @@ function getPaidMockExamItems(){
 function paidMockStripHtml(it, opts){
   opts=opts||{};
   const label=`${it.title}（有料・note・${it.priceLabel}）`;
-  const meta=[it.meta,it.priceLabel,'note'].filter(Boolean).join(' · ');
+  // 価格アンカリング：1回あたりの単価を併記（例「¥980（1回あたり約327円）」）
+  const price=parseInt(String(it.priceLabel).replace(/[^0-9]/g,''),10);
+  const roundsM=String(it.meta).match(/([0-9]+)\s*回/);
+  const rounds=roundsM?parseInt(roundsM[1],10):0;
+  const priceText=(price&&rounds>0)?`${it.priceLabel}（1回あたり約${Math.round(price/rounds)}円）`:it.priceLabel;
+  const meta=[it.meta,priceText,'note'].filter(Boolean).join(' · ');
   const badge=it.badge?`<span class="score-paid-mock-strip-badge">${escapeHTML(it.badge)}</span>`:'';
   const onclick=opts.onclick?` onclick="${opts.onclick}"`:'';
   return `<a class="score-paid-mock-strip" href="${escapeAttr(it.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}"${onclick}>`
@@ -7509,7 +7517,8 @@ function renderTopPromoBanners(){
       shown.push(['mock','image']);
     }else{
       const lead=paid.topLead?`<p class="score-paid-mock-lead">${escapeHTML(paid.topLead)}</p>`:'';
-      parts.push(`<div class="top-paid-mock">${lead}${paidMockStripListHtml(paid.items,{onclick:"trackPromoClick('mock','text')"})}</div>`);
+      const note=paid.purchaseNote?`<p class="paid-mock-note">${escapeHTML(paid.purchaseNote)}</p>`:'';
+      parts.push(`<div class="top-paid-mock">${lead}${paidMockStripListHtml(paid.items,{onclick:"trackPromoClick('mock','text')"})}${note}</div>`);
       shown.push(['mock','text']);
     }
   }
@@ -7572,11 +7581,17 @@ function renderTopPromoBanners(){
   }
 }
 
-function scorePaidMockLeadHtml(m, variant){
-  if(variant==='ichi'){
-    return `一問一答の次は、<strong>${escapeHTML(m.scoreLead)}</strong>で本番形式を試しませんか？`;
+// 得点連動CTA：採点結果の正答率に応じて誘導文を出し分ける
+function scorePaidMockLeadHtml(m, variant, pct){
+  const lead=`<strong>${escapeHTML(m.scoreLead)}</strong>`;
+  if(typeof pct==='number' && isFinite(pct)){
+    if(pct>=80) return `正答率${pct}%、good！ ${lead}で仕上がりを確かめませんか？`;
+    if(pct<50)  return `あと一歩。${lead}で弱点をつぶして底上げしませんか？`;
   }
-  return `セット演習の次は、<strong>${escapeHTML(m.scoreLead)}</strong>で時間配分を確認しませんか？`;
+  if(variant==='ichi'){
+    return `一問一答の次は、${lead}で力試ししませんか？`;
+  }
+  return `セット演習の次は、${lead}で時間配分を確認しませんか？`;
 }
 
 function renderScorePaidMockPromo(opts){
@@ -7590,11 +7605,15 @@ function renderScorePaidMockPromo(opts){
     wrap.innerHTML='';
     return;
   }
-  const leadHtml=opts.leadHtml!=null?opts.leadHtml:scorePaidMockLeadHtml(m,opts.variant);
+  const pct=(typeof opts.scorePct==='number')?opts.scorePct
+    :(typeof window.__lastQuizPct==='number'?window.__lastQuizPct:null);
+  const leadHtml=opts.leadHtml!=null?opts.leadHtml:scorePaidMockLeadHtml(m,opts.variant,pct);
+  const note=m.purchaseNote?`<p class="paid-mock-note">${escapeHTML(m.purchaseNote)}</p>`:'';
   wrap.hidden=false;
   wrap.innerHTML=`
     <p class="score-paid-mock-lead">${leadHtml}</p>
-    ${paidMockStripListHtml(m.items)}`;
+    ${paidMockStripListHtml(m.items)}
+    ${note}`;
 }
 window.renderScorePaidMockPromo=renderScorePaidMockPromo;
 
