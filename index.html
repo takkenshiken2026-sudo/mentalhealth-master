@@ -668,10 +668,15 @@ details.rich-detail summary{display:none}
 .top-affiliate-cta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 16px;border:1px solid var(--accent-border);border-radius:var(--r2);background:var(--accent-soft);text-decoration:none;color:inherit;box-shadow:0 2px 10px var(--accent-shadow);transition:border-color .15s,box-shadow .15s,transform .15s}
 .top-affiliate-cta:hover{border-color:var(--accent);box-shadow:0 4px 14px var(--accent-shadow);transform:translateY(-1px)}
 .top-affiliate-cta-tag{font-size:var(--fs-tiny);font-weight:700;background:var(--accent);color:var(--accent-text);padding:3px 8px;border-radius:4px;flex-shrink:0;letter-spacing:.04em}
-.top-affiliate-cta-body{flex:1;min-width:160px}
+.top-affiliate-cta-body{flex:1;min-width:0}
 .top-affiliate-cta-title{display:block;font-size:var(--fs-body);font-weight:700;color:var(--text);margin-bottom:2px;line-height:1.35}
 .top-affiliate-cta-meta{font-size:var(--fs-caption);color:var(--text2)}
 .top-affiliate-cta-link{font-size:var(--fs-sub);font-weight:700;color:var(--accent-emphasis);flex-shrink:0;white-space:nowrap}
+@media(max-width:480px){
+  .top-affiliate-cta{align-items:flex-start}
+  .top-affiliate-cta-tag{margin-top:2px}
+  .top-affiliate-cta-link{width:100%;text-align:right;margin-top:3px}
+}
 
 /* ===== DASHBOARD ===== */
 .stat-row{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:18px}
