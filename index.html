@@ -661,6 +661,10 @@ details.rich-detail summary{display:none}
 .score-paid-mock-strip-title{display:block;font-size:var(--fs-body);font-weight:700;color:var(--text);margin-bottom:2px;line-height:1.35}
 .score-paid-mock-strip-meta{font-size:var(--fs-caption);color:var(--text2)}
 .score-paid-mock-strip-cta{font-size:var(--fs-sub);font-weight:700;color:var(--paid-mock-accent);flex-shrink:0;white-space:nowrap}
+.score-paid-mock-list{display:flex;flex-direction:column;gap:9px}
+.score-paid-mock-strip-badge{display:inline-block;margin-left:7px;font-size:10px;font-weight:700;color:var(--paid-mock-accent);background:var(--paid-mock-accent-soft);border:1px solid var(--paid-mock-accent-border);border-radius:999px;padding:1px 8px;letter-spacing:.03em;vertical-align:middle}
+.top-paid-mock{display:flex;flex-direction:column;gap:9px}
+.top-paid-mock .score-paid-mock-lead{margin-bottom:0}
 
 /* ===== DASHBOARD ===== */
 .stat-row{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:18px}
@@ -7379,27 +7383,60 @@ function injectQuizStartEnhancements(){
     </div>`;
   }
   modeList.appendChild(weakCard);
-
-  // バナー画像がある場合は弱点集中対策の下（#top-affiliate-banner-wrap）で横並び表示
-  const paidCfg=getPaidMockExamConfig();
-  if(!startEl.querySelector('#paid-mock-inject') && paidCfg.url && !paidCfg.bannerImage){
-    injectPaidMockExamCard(modeList);
-  }
+  // 有料模試はトップ上部（#top-affiliate-banner-wrap）に案DのテキストCTAとして表示する
 }
 
 function getPaidMockExamConfig(){
   const cfg=(window.SITE_CONFIG&&window.SITE_CONFIG.paidMockExam)||{};
-  if(!cfg.url) return {url:''};
   return {
-    url: String(cfg.url).trim(),
-    modeTitle: String(cfg.modeTitle||'予想模試').trim(),
-    modePurpose: String(cfg.modePurpose||'本番形式で実力確認したい').trim(),
-    priceLabel: String(cfg.priceLabel||'¥590').trim(),
-    scoreMeta: String(cfg.scoreMeta||'PDF').trim(),
     scoreLead: String(cfg.scoreLead||'本番形式の予想模試').trim(),
-    bannerImage: String(cfg.bannerImage||'').trim(),
-    bannerAlt: String(cfg.bannerAlt||'').trim(),
+    topLead: String(cfg.topLead||'本番形式で力試し。有料の予想模試（note）').trim(),
+    footnote: String(cfg.footnote||'').trim(),
+    items: getPaidMockExamItems(),
   };
+}
+
+// 模試を配列として正規化して返す（url が空の項目は表示しない）
+function getPaidMockExamItems(){
+  const cfg=(window.SITE_CONFIG&&window.SITE_CONFIG.paidMockExam)||{};
+  let raw=[];
+  if(Array.isArray(cfg.items)&&cfg.items.length){
+    raw=cfg.items;
+  }else if(cfg.url){
+    // 後方互換：単体設定を1件の配列として扱う
+    raw=[{title:cfg.modeTitle,meta:cfg.scoreMeta,priceLabel:cfg.priceLabel,url:cfg.url}];
+  }
+  return raw.map(function(it){
+    it=it||{};
+    return {
+      title: String(it.title||'予想模試').trim(),
+      meta: String(it.meta||'PDF・3回分').trim(),
+      priceLabel: String(it.priceLabel||'¥590').trim(),
+      badge: String(it.badge||'').trim(),
+      url: String(it.url||'').trim(),
+    };
+  }).filter(function(it){ return it.url; });
+}
+
+// 案D：有料模試を1件のテキストCTA（ストリップ）として描画
+function paidMockStripHtml(it){
+  const label=`${it.title}（有料・note・${it.priceLabel}）`;
+  const meta=[it.meta,it.priceLabel,'note'].filter(Boolean).join(' · ');
+  const badge=it.badge?`<span class="score-paid-mock-strip-badge">${escapeHTML(it.badge)}</span>`:'';
+  return `<a class="score-paid-mock-strip" href="${escapeAttr(it.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}">`
+    +`<span class="score-paid-mock-strip-tag">有料</span>`
+    +`<span class="score-paid-mock-strip-body">`
+    +`<span class="score-paid-mock-strip-title">${escapeHTML(it.title)}${badge}</span>`
+    +`<span class="score-paid-mock-strip-meta">${escapeHTML(meta)}</span>`
+    +`</span>`
+    +`<span class="score-paid-mock-strip-cta">詳細 ↗</span>`
+    +`</a>`;
+}
+
+// 複数の模試ストリップを縦に並べる
+function paidMockStripListHtml(items){
+  if(!items||!items.length) return '';
+  return `<div class="score-paid-mock-list">${items.map(paidMockStripHtml).join('')}</div>`;
 }
 
 function renderTopAffiliateBanner(){
@@ -7411,9 +7448,11 @@ function renderTopPromoBanners(){
   if(!wrap) return;
   const parts=[];
 
+  // 有料模試：画像バナーをやめ、案D（テキストCTA）を縦積みで表示
   const paid=getPaidMockExamConfig();
-  if(paid.url && paid.bannerImage){
-    parts.push(paidMockBannerHtml(paid));
+  if(paid.items.length){
+    const lead=paid.topLead?`<p class="score-paid-mock-lead">${escapeHTML(paid.topLead)}</p>`:'';
+    parts.push(`<div class="top-paid-mock">${lead}${paidMockStripListHtml(paid.items)}</div>`);
   }
 
   const cfg=(window.SITE_CONFIG&&window.SITE_CONFIG.topAffiliateBanner)||{};
@@ -7438,48 +7477,17 @@ function renderTopPromoBanners(){
     wrap.innerHTML='';
     return;
   }
+  // 案Dは縦積みにするため常に1カラム
   wrap.hidden=false;
-  wrap.className='top-promo-banners'+(parts.length===1?' top-promo-banners--single':'');
+  wrap.className='top-promo-banners top-promo-banners--single';
   wrap.innerHTML=parts.join('');
-}
-
-function paidMockBannerHtml(m, extraClass){
-  if(!m.bannerImage) return '';
-  const label=`${m.modeTitle}（有料・note・${m.priceLabel}）`;
-  const alt=m.bannerAlt||label;
-  const cls=['paid-mock-banner', extraClass].filter(Boolean).join(' ');
-  return `<a class="${cls}" href="${escapeAttr(m.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}">`
-    +`<img src="${escapeAttr(m.bannerImage)}" alt="${escapeAttr(alt)}" width="1672" height="941" loading="lazy" decoding="async">`
-    +`</a>`;
-}
-
-function injectPaidMockExamCard(modeList){
-  const m=getPaidMockExamConfig();
-  if(!m.url) return;
-  const wrapper=document.createElement('div');
-  wrapper.id='paid-mock-inject';
-  const label=`${m.modeTitle}（有料・note・${m.priceLabel}）`;
-  if(m.bannerImage){
-    wrapper.innerHTML=paidMockBannerHtml(m);
-  }else{
-    wrapper.innerHTML=`
-    <a class="mode-card-v2 mode-card-v2--paid" href="${escapeAttr(m.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}">
-      <div class="mode-num-v2 mode-num-v2--paid">05</div>
-      <div class="mode-body-v2">
-        <div class="mode-purpose-v2 mode-purpose-v2--paid">${escapeAttr(m.modePurpose)} <span class="mode-paid-tag">有料 ${escapeAttr(m.priceLabel)}</span></div>
-        <div class="mode-title-v2">${escapeAttr(m.modeTitle)}</div>
-      </div>
-      <div class="mode-arrow-v2 mode-arrow-v2--ext" aria-hidden="true">↗</div>
-    </a>`;
-  }
-  modeList.appendChild(wrapper);
 }
 
 function scorePaidMockLeadHtml(m, variant){
   if(variant==='ichi'){
-    return `一問一答の次は、<strong>${escapeAttr(m.scoreLead)}</strong>で本番形式を試しませんか？`;
+    return `一問一答の次は、<strong>${escapeHTML(m.scoreLead)}</strong>で本番形式を試しませんか？`;
   }
-  return `セット演習の次は、<strong>${escapeAttr(m.scoreLead)}</strong>で時間配分を確認しませんか？`;
+  return `セット演習の次は、<strong>${escapeHTML(m.scoreLead)}</strong>で時間配分を確認しませんか？`;
 }
 
 function renderScorePaidMockPromo(opts){
@@ -7488,27 +7496,16 @@ function renderScorePaidMockPromo(opts){
   const wrap=document.getElementById(wrapId);
   if(!wrap) return;
   const m=getPaidMockExamConfig();
-  if(!m.url){
+  if(!m.items.length){
     wrap.hidden=true;
     wrap.innerHTML='';
     return;
   }
-  const label=`${m.modeTitle}（有料・note・${m.priceLabel}）`;
   const leadHtml=opts.leadHtml!=null?opts.leadHtml:scorePaidMockLeadHtml(m,opts.variant);
   wrap.hidden=false;
-  const promo=m.bannerImage
-    ? paidMockBannerHtml(m, 'score-paid-mock-banner')
-    : `<a class="score-paid-mock-strip" href="${escapeAttr(m.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}">
-      <span class="score-paid-mock-strip-tag">有料</span>
-      <span class="score-paid-mock-strip-body">
-        <span class="score-paid-mock-strip-title">${escapeAttr(m.modeTitle)}</span>
-        <span class="score-paid-mock-strip-meta">${escapeAttr(m.scoreMeta)} · ${escapeAttr(m.priceLabel)} · note</span>
-      </span>
-      <span class="score-paid-mock-strip-cta">詳細 ↗</span>
-    </a>`;
   wrap.innerHTML=`
     <p class="score-paid-mock-lead">${leadHtml}</p>
-    ${promo}`;
+    ${paidMockStripListHtml(m.items)}`;
 }
 window.renderScorePaidMockPromo=renderScorePaidMockPromo;
 
@@ -7546,8 +7543,6 @@ window.gotoPage=function(id){
       // 弱点カードが既にある場合は解放状態が変わっていれば再描画
       const existingWeak=document.getElementById('weak-mode-inject');
       if(existingWeak) existingWeak.remove();
-      const existingPaid=document.getElementById('paid-mock-inject');
-      if(existingPaid) existingPaid.remove();
       injectQuizStartEnhancements();
     }
     if(id==='review'){

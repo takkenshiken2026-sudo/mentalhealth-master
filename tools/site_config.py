@@ -505,27 +505,46 @@ def guide_index_picks() -> dict[str, Any] | None:
     }
 
 
-def paid_mock_exam() -> dict[str, str] | None:
+def paid_mock_exam() -> dict | None:
     raw = CONFIG.get("paidMockExam")
     if not isinstance(raw, dict):
         return None
-    url = str(raw.get("url") or "").strip()
-    if not url:
-        return None
-    out: dict[str, str] = {"url": url}
+    out: dict = {}
+    # 共通テキスト・後方互換の単体フィールド
     for key in (
+        "scoreLead",
+        "topLead",
+        "footnote",
         "modeTitle",
         "modePurpose",
         "priceLabel",
         "scoreMeta",
-        "scoreLead",
-        "bannerImage",
-        "bannerAlt",
-        "footnote",
     ):
         val = raw.get(key)
         if val is not None and str(val).strip():
             out[key] = str(val).strip()
+    url = str(raw.get("url") or "").strip()
+    if url:
+        out["url"] = url
+    # 模試リスト（案D）。url が空の項目は公開しない。
+    items: list[dict[str, str]] = []
+    for it in raw.get("items") or []:
+        if not isinstance(it, dict):
+            continue
+        item_url = str(it.get("url") or "").strip()
+        if not item_url:
+            continue
+        item: dict[str, str] = {"url": item_url}
+        for k in ("title", "meta", "priceLabel", "badge"):
+            v = it.get(k)
+            if v is not None and str(v).strip():
+                item[k] = str(v).strip()
+        items.append(item)
+    if items:
+        out["items"] = items
+    # url も items も無ければ出力しない
+    if not out.get("url") and not out.get("items"):
+        return None
     return out
 
 
