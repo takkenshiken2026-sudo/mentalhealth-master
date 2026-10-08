@@ -149,6 +149,13 @@ window.SITE_CONFIG = {
         "meta": "PDF・3回分",
         "priceLabel": "¥980",
         "badge": "まずはこれから"
+      },
+      {
+        "url": "https://note.com/shikaku_master/n/n15dbcd6634bf",
+        "title": "予想模試 直前対策編",
+        "meta": "PDF・3回分",
+        "priceLabel": "¥980",
+        "badge": "本番直前"
       }
     ]
   },
