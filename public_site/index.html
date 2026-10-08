@@ -901,6 +901,14 @@ details.rich-detail summary{display:none}
   .focus-btn{margin-left:auto;margin-right:6px;width:34px;height:34px}
   .topnav-login-btn,.topnav-logout-btn{margin-left:0;margin-right:6px;padding:6px 9px;font-size:12px;height:34px}
   .topnav-hamburger{margin-left:0;width:34px;height:34px}
+  /* 極小幅（iPhone SE 等 ≤360px）でヘッダーが横にはみ出さないようロゴを縮める */
+  @media (max-width:360px){
+    .topnav-inner{padding:0 8px}
+    .topnav-logo{margin-right:6px;min-width:0;flex-shrink:1}
+    .topnav-logo-text{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .topnav-logo-mark{min-width:42px;padding:4px 6px 3px}
+    .focus-btn,.topnav-hamburger{width:30px;height:30px}
+  }
   /* page */
   .main{min-height:calc(100vh - 52px);padding-bottom:0}
   .page{padding:14px 14px calc(96px + env(safe-area-inset-bottom))}
@@ -1125,6 +1133,16 @@ body.is-solving .site-footer{display:none!important}
 .site-footer-copy-brand{font-weight:600;color:var(--text3)}
 .site-footer-copy-sub{display:inline;font-size:inherit;font-weight:500;opacity:.88}
 .site-footer-copy-sub::before{content:'・'}
+/* モバイル：フッターを折り返して全リンクを表示（ベース定義より後に置き優先させる。
+   固定のまま伸ばすと本文を覆うため static に） */
+@media(max-width:760px){
+  .site-footer{position:static}
+  .site-footer-scroll{overflow-x:visible;max-width:100%}
+  .site-footer-inner{flex-wrap:wrap;width:100%;min-width:0;justify-content:center;row-gap:4px}
+  .site-footer-legal{flex:1 1 100%;flex-wrap:wrap;justify-content:center}
+  .site-footer-sep{display:none}
+  .site-footer-copy{margin-left:0;width:100%;text-align:center}
+}
 
 /* ========== GAMIFICATION ==========
 /* Level + Streak 横並び */
