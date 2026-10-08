@@ -248,7 +248,6 @@
     "scoreLead": "本番形式の予想模試",
     "topLead": "本番形式で力試し。有料の予想模試（note）",
     "footnote": "※ note で販売する有料コンテンツ（¥980）です。サイト内の無料演習とは別商品です。",
-    "purchaseNote": "note で購入 ／ PDF をその場でダウンロード ／ 全問くわしい解説つき",
     "bannerImage": "images/paid-mock/mental-health-management-moshi2026.webp",
     "bannerAlt": "メンタルヘルス・マネジメント検定II種 2026年版 予想模試（有料・note）",
     "items": [
@@ -270,7 +269,6 @@
   },
   "topAffiliateBanner": {
     "url": "https://t.afi-b.com/visit.php?a=y7404W-g7355640_T&p=b981480C",
-    "tag": "PR",
     "title": "スタディング メンタルヘルス・マネジメント検定II種",
     "meta": "スマホで最短合格を目指す通信講座",
     "ctaLabel": "無料で講座を見る",

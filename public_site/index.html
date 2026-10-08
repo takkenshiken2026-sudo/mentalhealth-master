@@ -7555,11 +7555,11 @@ function renderTopPromoBanners(){
     const useImage=(variant==='image' && image);
     if(!useImage && title){
       const meta=String(cfg.meta||'').trim();
-      const tag=String(cfg.tag||'PR').trim();
+      const tag=String(cfg.tag||'').trim();
       const ctaLabel=String(cfg.ctaLabel||'くわしく見る').trim();
       parts.push(
         `<a class="top-affiliate-cta" href="${escapeAttr(url)}" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="${escapeAttr(alt)}" onclick="trackPromoClick('studying','text')">`
-        +`<span class="top-affiliate-cta-tag">${escapeHTML(tag)}</span>`
+        +(tag?`<span class="top-affiliate-cta-tag">${escapeHTML(tag)}</span>`:'')
         +`<span class="top-affiliate-cta-body">`
         +`<span class="top-affiliate-cta-title">${escapeHTML(title)}</span>`
         +(meta?`<span class="top-affiliate-cta-meta">${escapeHTML(meta)}</span>`:'')
