@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import html
+import os
 import sys
 from pathlib import Path
 
@@ -227,6 +228,14 @@ def build_standalone_diagram_page(diagram_id: str, base_url: str) -> str:
 
 
 def build_all(*, base_url: str = BASE_DEFAULT) -> int:
+    # 骨組みビルド（新種）: 図解データ(data/term_diagrams/*.json)が無い種では
+    # サンプル/プレビュー一式を生成しない（II種では従来どおり、欠落があれば通常失敗する）。
+    if os.environ.get("EXAM_SKELETON") and not any(
+        load_diagram(diagram_id) for diagram_id, _, _ in DIAGRAM_SAMPLE_CARDS
+    ):
+        print("build_term_diagram_samples: 図解データなし（EXAM_SKELETON: スキップ）")
+        return 0
+
     count = 0
     DIAGRAM_SAMPLES_DIR.mkdir(parents=True, exist_ok=True)
     (DIAGRAM_SAMPLES_DIR / "index.html").write_text(build_diagram_samples_index(), encoding="utf-8")

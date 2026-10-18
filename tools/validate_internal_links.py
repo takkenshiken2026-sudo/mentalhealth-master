@@ -18,6 +18,28 @@ from pathlib import Path
 from urllib.parse import unquote, urldefrag
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from tools.site_config import base_path  # noqa: E402
+
+
+def _strip_base_path(rel: str) -> str:
+    """ルート絶対パスから basePath（例 self）を剥がす。
+
+    ビルドは basePath 配下でも stage をフラット（stage/q, stage/terms）で生成するため、
+    /self/q/... のような絶対リンクは basePath を除いて ROOT 直下に解決する。
+    II種は base_path()=="" なので rel はそのまま（挙動不変）。
+    """
+    bp = base_path().lstrip("/")
+    if not bp:
+        return rel
+    if rel == bp:
+        return ""
+    if rel.startswith(bp + "/"):
+        return rel[len(bp) + 1 :]
+    return rel
+
 
 # index.html SPA: hash routes are handled by JS (see gotoPage / boot routing).
 INDEX_HASH_WHITELIST = frozenset(
@@ -130,7 +152,7 @@ class InternalLinkValidator:
         if self.is_external(path_part or href):
             return None, fragment
         if path_part.startswith("/"):
-            target = (ROOT / path_part.lstrip("/")).resolve()
+            target = (ROOT / _strip_base_path(path_part.lstrip("/"))).resolve()
         elif path_part:
             target = (page.parent / path_part).resolve()
         else:

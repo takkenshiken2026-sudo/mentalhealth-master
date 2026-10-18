@@ -123,6 +123,9 @@ class Validator:
                     None,
                     "データ行がありません（知識ハブは執筆拡充前でも可。目標件数は validate_knowledge_hub の WARN を参照）",
                 )
+            elif os.environ.get("EXAM_SKELETON"):
+                # 新種（grade）の骨組みビルド: データ未投入でも空のまま通す。
+                self.warn(path, None, "データ行がありません（EXAM_SKELETON: 骨組みビルドのため許容）")
             else:
                 self.error(path, None, "データ行がありません")
         return fieldnames, rows

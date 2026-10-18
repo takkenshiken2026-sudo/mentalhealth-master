@@ -32,6 +32,14 @@ def maybe_run_exam_schedule_page(py: str) -> None:
         run([py, str(script)])
 
 
+def maybe_run_essays_page(py: str) -> None:
+    """論述のある種（data/essays.csv がある種）だけ論述ハブを生成。II種は essays.csv が無く no-op。"""
+    script = ROOT / "tools" / "build_essays_pages.py"
+    essays_csv = ROOT / "data" / "essays.csv"
+    if script.is_file() and essays_csv.is_file():
+        run([py, str(script)])
+
+
 def main() -> int:
     ensure_python_deps()
     py = sys.executable
@@ -46,6 +54,7 @@ def main() -> int:
     run([py, "tools/build_article_pages.py"])
     run([py, "tools/build_guide_retire_redirects.py"])
     maybe_run_exam_schedule_page(py)
+    maybe_run_essays_page(py)
     run([py, "tools/build_glossary_pages.py"])
     run([py, "tools/build_hub_retire_redirects.py"])
     run([py, "tools/inject_adsense_head.py"])

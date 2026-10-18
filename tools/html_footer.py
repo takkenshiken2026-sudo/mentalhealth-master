@@ -622,7 +622,8 @@ def q_hub_links_html(rel_path: Path, *, current: str) -> str:
                 f"</li>"
             )
         else:
-            href = "/" + target.lstrip("/")
+            # basePath（例 /self）配下の種では /self/q/... を指す。II種は base_path()=="" で /q/... のまま。
+            href = base_path() + "/" + target.lstrip("/")
             lis.append(
                 f'<li class="q-hub-tab">'
                 f'<a class="q-hub-tab-label" href="{html.escape(href)}">{html.escape(label)}</a>'

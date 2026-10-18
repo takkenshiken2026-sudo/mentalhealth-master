@@ -17,6 +17,7 @@ from __future__ import annotations
 import csv
 import html
 import json
+import os
 import re
 import shutil
 import sys
@@ -1028,7 +1029,9 @@ def main() -> int:
             encoding="utf-8",
         )
 
-    if practice_pages:
+    # 骨組みビルド（EXAM_SKELETON）では問題が0件でも一覧シェルを必ず出し、
+    # q/index.html のハブタブ（/q/practice/index.html）のリンク切れを防ぐ。
+    if practice_pages or os.environ.get("EXAM_SKELETON"):
         idx = Q_ROOT / "practice" / "index.html"
         idx.parent.mkdir(parents=True, exist_ok=True)
         idx.write_text(
@@ -1069,7 +1072,7 @@ def main() -> int:
             encoding="utf-8",
         )
 
-    if ichimon_pages:
+    if ichimon_pages or os.environ.get("EXAM_SKELETON"):
         idx = Q_ROOT / "ichimon" / "index.html"
         idx.parent.mkdir(parents=True, exist_ok=True)
         idx.write_text(

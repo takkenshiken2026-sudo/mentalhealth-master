@@ -5,6 +5,7 @@
 from __future__ import annotations
 
 import html
+import os
 import json
 import sys
 from datetime import date
@@ -289,6 +290,10 @@ def build_page_html() -> str:
 
 
 def main() -> int:
+    # 試験日程ページの本文はII種固定（マルチ種未対応）。新種の骨組みビルドでは生成しない。
+    if os.environ.get("EXAM_SKELETON"):
+        print("build_exam_schedule_page: EXAM_SKELETON のためスキップ（II種固定文言のため新種では生成しない）")
+        return 0
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     out = OUTPUT_DIR / "index.html"
     out.write_text(build_page_html(), encoding="utf-8")

@@ -4,6 +4,7 @@
 
 from __future__ import annotations
 
+import os
 import re
 import sys
 from dataclasses import dataclass
@@ -210,6 +211,10 @@ class GeneratedSeoValidator:
         pages = self.pages()
         validated = 0
         if not pages:
+            if os.environ.get("EXAM_SKELETON"):
+                # 新種（grade）の骨組みビルド: 記事・用語が未投入でも通す。
+                print("validate_generated_seo: 生成ページなし（EXAM_SKELETON: 骨組みビルドのためスキップ）")
+                return 0
             self.error(ROOT, "生成済みSEOページが見つかりません")
         for path in pages:
             profile = self.page_profile(path)

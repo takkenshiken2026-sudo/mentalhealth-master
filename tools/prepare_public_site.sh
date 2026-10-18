@@ -42,7 +42,7 @@ done
 if [[ -f "$ROOT/ads.txt" ]]; then
   cp "$ROOT/ads.txt" "$OUT/"
 fi
-for d in articles q terms; do
+for d in articles q terms essays; do
   if [[ -d "$ROOT/$d" ]]; then
     cp -R "$ROOT/$d" "$OUT/"
   fi
