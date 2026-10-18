@@ -27,6 +27,7 @@ class Grade:
     base_path: str      # 公開時のサブパス（例: "/self"、II種は ""）
     primary: bool
     has_essay: bool
+    published: bool     # build_site.py（本番公開）の対象か。false は未公開（ビルドは可能）。
 
     @property
     def config_path(self) -> Path:
@@ -60,6 +61,7 @@ def load_grades() -> list[Grade]:
                 base_path=str(row.get("basePath") or "").rstrip("/"),
                 primary=bool(row.get("primary")),
                 has_essay=bool(row.get("hasEssay")),
+                published=bool(row.get("published", True)),
             )
         )
     return out
@@ -82,6 +84,16 @@ def primary_grade() -> Grade:
 
 def secondary_grades() -> list[Grade]:
     return [g for g in load_grades() if not g.primary]
+
+
+def published_grades() -> list[Grade]:
+    """本番公開対象の種（published=true）。build_site.py が公開に使う。"""
+    return [g for g in load_grades() if g.published]
+
+
+def published_secondary_grades() -> list[Grade]:
+    """本番公開対象の副種（プライマリ=II種を除く published=true）。"""
+    return [g for g in load_grades() if not g.primary and g.published]
 
 
 if __name__ == "__main__":

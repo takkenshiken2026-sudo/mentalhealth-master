@@ -1,5 +1,5 @@
 {
-  "_comment": "検定の種（grade）レジストリ。既存II種サイトはルート(.)の site-config.json / data/ をそのまま使う。新種(self/master)は grades/<id>/ を独立サイトルートとして持ち、ビルド時に basePath 配下へ配置する。カテゴリ体系(fields)は各ルートの site-config.json 側が正本。",
+  "_comment": "検定の種（grade）レジストリ。既存II種サイトはルート(.)の site-config.json / data/ をそのまま使う。新種(self/master)は grades/<id>/ を独立サイトルートとして持ち、ビルド時に basePath 配下へ配置する。カテゴリ体系(fields)は各ルートの site-config.json 側が正本。published=false の種は build_site.py(本番公開)の対象外（build_grade.py でのローカルビルド/プレビューは可能）。本番公開するときは published を true にする。",
   "grades": [
     {
       "id": "line",
@@ -9,7 +9,8 @@
       "root": ".",
       "basePath": "",
       "primary": true,
-      "hasEssay": false
+      "hasEssay": false,
+      "published": true
     },
     {
       "id": "self",
@@ -19,7 +20,8 @@
       "root": "grades/self",
       "basePath": "/self",
       "primary": false,
-      "hasEssay": false
+      "hasEssay": false,
+      "published": false
     },
     {
       "id": "master",
@@ -29,7 +31,8 @@
       "root": "grades/master",
       "basePath": "/master",
       "primary": false,
-      "hasEssay": true
+      "hasEssay": true,
+      "published": false
     }
   ]
 }

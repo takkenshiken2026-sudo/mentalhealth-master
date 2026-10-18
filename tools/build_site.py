@@ -29,17 +29,22 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from tools import build_grade  # noqa: E402
-from tools.grades import load_grades, primary_grade, secondary_grades  # noqa: E402
+from tools.grades import (  # noqa: E402
+    primary_grade,
+    published_grades,
+    published_secondary_grades,
+    secondary_grades,
+)
 from tools.site_config import clean_origin  # noqa: E402
 
 PUBLIC = ROOT / "public_site"
 
 
 def _sitemap_urls() -> list[str]:
-    """全種の sitemap.xml の絶対URL。origin はプライマリ種（basePath 無し）。"""
+    """公開対象の種の sitemap.xml の絶対URL。origin はプライマリ種（basePath 無し）。"""
     origin = clean_origin()
     urls: list[str] = []
-    for g in load_grades():
+    for g in published_grades():
         bp = g.base_path.strip("/")
         if bp:
             urls.append(f"{origin}/{bp}/sitemap.xml")
@@ -77,7 +82,7 @@ def rewrite_robots() -> None:
 
 def ensure_single_cname() -> None:
     """全種同一ホスト。副種配下の CNAME は不要なので削除（ルートの1本を正とする）。"""
-    for g in secondary_grades():
+    for g in published_secondary_grades():
         name = g.base_path.strip("/")
         nested = PUBLIC / name / "CNAME"
         if nested.is_file():
@@ -96,17 +101,23 @@ def main() -> int:
     if not (PUBLIC / "index.html").is_file():
         raise SystemExit("build_all.py の後に public_site/index.html がありません。")
 
-    # 2) 各副種を public_site/<name> へ。
-    for g in secondary_grades():
+    # 2) 公開対象の副種だけ public_site/<name> へ。未公開(published=false)は本番に出さない。
+    secondaries = published_secondary_grades()
+    for g in secondaries:
         build_grade.build(g.id)
 
-    # 3-5) サイトマップ索引 / robots / CNAME 統一。
-    write_sitemap_index()
-    rewrite_robots()
-    ensure_single_cname()
+    # 3-5) 公開する副種があるときだけ サイトマップ索引 / robots / CNAME を更新。
+    #      副種が無ければ build_all が出した II種そのまま（本番＝現行と一致）。
+    if secondaries:
+        write_sitemap_index()
+        rewrite_robots()
+        ensure_single_cname()
 
-    grades = ", ".join(f"{g.short_label}({g.base_path or '/'})" for g in load_grades())
-    print(f"build_site: 完了 — {grades}（primary: {primary_grade().short_label}）")
+    published = ", ".join(f"{g.short_label}({g.base_path or '/'})" for g in published_grades())
+    pending = ", ".join(f"{g.short_label}({g.base_path})" for g in secondary_grades() if not g.published)
+    print(f"build_site: 完了 — 公開: {published}（primary: {primary_grade().short_label}）")
+    if pending:
+        print(f"build_site: 未公開(準備中・本番除外): {pending}  ← grades.json の published を true で公開")
     return 0
 
 
