@@ -4,3 +4,8 @@ __pycache__/
 # data backups
 *.bak
 *.bak.*
+
+# 新種(grade)のビルドプレビュー出力。build_grade.py のローカル確認用で再生成可能。
+# 本番は build_site.py が published=true の種だけを配置する（未公開の種は追跡しない）。
+/public_site/self/
+/public_site/master/
