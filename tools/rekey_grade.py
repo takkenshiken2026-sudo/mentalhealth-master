@@ -20,6 +20,7 @@ examGrade 由来のコース名・級トークンの補助マップを足す。b
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -91,9 +92,18 @@ def build_rekey_map(root_cfg: dict, grade_cfg: dict) -> list[tuple[str, str]]:
 
 
 def rekey_text(text: str, mapping: list[tuple[str, str]]) -> str:
-    for src, dst in mapping:
-        text = text.replace(src, dst)
-    return text
+    """mapping（最長一致優先）を1回の走査で適用する。
+
+    順次 str.replace を重ねると、先に置換した結果に後続ルールが再ヒットして
+    二重適用が起きる（例: 「検定II種→検定III種」の後に「II種→III種」が
+    「III種」内の「II種」にヒットし「IIII種」になる）。これを避けるため、
+    全ペアを1本の正規表現にまとめ、各位置を高々1回だけ置換する。
+    """
+    if not mapping:
+        return text
+    lookup = dict(mapping)
+    pattern = re.compile("|".join(re.escape(src) for src, _ in mapping))
+    return pattern.sub(lambda m: lookup[m.group(0)], text)
 
 
 def rekey_stage(grade_id: str, stage_dir: Path) -> int:

@@ -128,8 +128,13 @@ ESSAY_STYLE = """
 <style>
 .essay-detail .essay-block{border:1px solid var(--border);border-radius:var(--r2,12px);padding:1rem 1.15rem;margin:1rem 0;background:var(--bg2);}
 .essay-detail .essay-prompt{border-left:4px solid var(--accent);}
-.essay-detail .essay-kicker{font-size:.8rem;font-weight:700;letter-spacing:.04em;color:var(--accent-text,var(--accent));margin:0 0 .4rem;}
+.essay-detail .essay-kicker{display:block;font-size:.8rem;font-weight:700;letter-spacing:.04em;color:var(--accent-text,var(--accent));margin:0 0 .4rem;}
 .essay-detail .essay-howto{color:var(--text2);font-size:.95rem;}
+.essay-detail ul.essay-theme-list{list-style:none;padding:0;margin:.5rem 0;}
+.essay-detail ul.essay-theme-list li{margin:.6rem 0;}
+.essay-detail ul.essay-theme-list a{display:block;text-decoration:none;color:inherit;border:1px solid var(--border);border-radius:var(--r2,12px);padding:.9rem 1.1rem;background:var(--bg2);transition:border-color .15s,background .15s;}
+.essay-detail ul.essay-theme-list a:hover{border-color:var(--accent);background:var(--accent-soft,var(--bg2));}
+.essay-detail ul.essay-theme-list a strong{font-size:1.05rem;}
 .essay-detail ul.essay-checklist{list-style:none;padding:0;margin:.5rem 0;}
 .essay-detail ul.essay-checklist li{display:flex;align-items:flex-start;gap:.6rem;padding:.55rem .2rem;border-bottom:1px solid var(--border);}
 .essay-detail ul.essay-checklist li:last-child{border-bottom:none;}
@@ -179,7 +184,7 @@ def _theme_cards_html(essays: list[dict[str, str]]) -> str:
         category = html.escape(_norm(row.get("category")))
         tag = f'<span class="essay-kicker">{category}</span>' if category else ""
         items.append(
-            f'<li class="essay-block"><a href="{html.escape(slug)}/">'
+            f'<li><a href="{html.escape(slug)}/">'
             f"{tag}<strong>{theme}</strong></a></li>"
         )
     return (
@@ -187,7 +192,7 @@ def _theme_cards_html(essays: list[dict[str, str]]) -> str:
         '<h2 id="essays-list">論述テーマ一覧</h2>'
         '<p class="essay-howto">各テーマは「設問 → 自分で答案を書く → 採点キーワードで自己採点 → '
         "模範解答・解説で確認」の順で学べます。</p>"
-        '<ul class="essay-checklist" style="list-style:none">' + "\n".join(items) + "</ul>"
+        '<ul class="essay-theme-list">' + "\n".join(items) + "</ul>"
         "</section>"
     )
 
