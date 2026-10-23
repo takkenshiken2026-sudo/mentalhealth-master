@@ -21,7 +21,7 @@
       "basePath": "/self",
       "primary": false,
       "hasEssay": false,
-      "published": false
+      "published": true
     },
     {
       "id": "master",
@@ -32,7 +32,7 @@
       "basePath": "/master",
       "primary": false,
       "hasEssay": true,
-      "published": false
+      "published": true
     }
   ]
 }
