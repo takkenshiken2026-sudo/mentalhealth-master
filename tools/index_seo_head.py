@@ -16,6 +16,7 @@ from tools.site_config import (
     exam_name,
     fields,
     google_site_verification,
+    navigation_items,
     public_url,
 )
 
@@ -23,8 +24,21 @@ INDEX_SEO_MARKER_START = "<!--INDEX_SEO_HEAD-->"
 INDEX_SEO_MARKER_END = "<!--/INDEX_SEO_HEAD-->"
 
 
+def _has_terms() -> bool:
+    """用語解説(terms) を navigation（header/footer）に持つ種か。
+
+    持たない種（用語解説を出さない種）では、title・description・keywords・JSON-LD の
+    「用語解説／用語集」記述や terms/ へのパンくず項目を出さない（存在しない機能を宣伝しない）。
+    """
+    for section in ("header", "footer"):
+        if any(key == "terms" for _label, _href, key in navigation_items(section)):
+            return True
+    return False
+
+
 def index_home_title() -> str:
-    return f"{brand_name()}｜{exam_name()} 過去問・一問一答・用語解説で合格を目指す無料学習サイト"
+    feat = "過去問・一問一答・用語解説" if _has_terms() else "過去問・一問一答"
+    return f"{brand_name()}｜{exam_name()} {feat}で合格を目指す無料学習サイト"
 
 
 def index_og_title() -> str:
@@ -52,9 +66,10 @@ def index_spa_hash_url(hash_frag: str) -> str:
 
 
 def index_description() -> str:
+    net = "過去問演習・実践演習・一問一答・重要用語解説" if _has_terms() else "過去問演習・実践演習・一問一答"
     return (
         f"{exam_name()}の合格を目指す無料学習プラットフォーム。"
-        "過去問演習・実践演習・一問一答・重要用語解説を網羅。"
+        f"{net}を網羅。"
         "年度別・分野別に絞った効率学習で合格を目指す。"
     )
 
@@ -62,15 +77,19 @@ def index_description() -> str:
 def index_description_long() -> str:
     field_names = "・".join(str(f.get("name") or f.get("id") or "") for f in fields()[:4])
     subjects = field_names or "主要分野"
+    net = "過去問演習・実践演習・一問一答・重要用語解説" if _has_terms() else "過去問演習・実践演習・一問一答"
     return (
         f"{exam_name()}の合格を目指す無料学習プラットフォーム。"
-        f"過去問演習・実践演習・一問一答・重要用語解説を網羅。"
+        f"{net}を網羅。"
         f"年度別・科目別（{subjects}）に絞った効率的な学習が可能です。"
     )
 
 
 def index_keywords() -> str:
-    parts = [exam_name(), "過去問", "一問一答", "用語集", "資格学習", "合格"]
+    parts = [exam_name(), "過去問", "一問一答"]
+    if _has_terms():
+        parts.append("用語集")
+    parts += ["資格学習", "合格"]
     for f in fields()[:3]:
         name = str(f.get("name") or "").strip()
         if name:
@@ -82,8 +101,9 @@ def index_json_ld_graph() -> list[dict]:
     home_url = index_canonical_url()
     home_id = home_url.rstrip("/")
     alt = f"{exam_name()}対策サイト"
+    net = "過去問・実践演習・一問一答・用語解説" if _has_terms() else "過去問・実践演習・一問一答"
     platform_desc = (
-        f"{exam_name()}の過去問・実践演習・一問一答・用語解説を"
+        f"{exam_name()}の{net}を"
         "網羅した無料学習プラットフォーム"
     )
     return [
@@ -124,7 +144,11 @@ def index_json_ld_graph() -> list[dict]:
                 {"@type": "ListItem", "position": 1, "name": "トップ", "item": home_url},
                 {"@type": "ListItem", "position": 2, "name": "過去問", "item": index_spa_hash_url("#past")},
                 {"@type": "ListItem", "position": 3, "name": "実践演習", "item": index_spa_hash_url("#orig")},
-                {"@type": "ListItem", "position": 4, "name": "用語解説", "item": public_url("terms/")},
+                *(
+                    [{"@type": "ListItem", "position": 4, "name": "用語解説", "item": public_url("terms/")}]
+                    if _has_terms()
+                    else []
+                ),
             ],
         },
     ]

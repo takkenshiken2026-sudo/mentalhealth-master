@@ -163,6 +163,25 @@ def add_home(entries: list[SitemapEntry], base: str) -> None:
     entries.append(SitemapEntry(loc=f"{base}/", lastmod=iso_from_mtime(path)))
 
 
+def _nav_has(key: str) -> bool:
+    """site-config.json の navigation（header/footer）に該当キーがあるか。
+
+    用語解説(terms)・試験ガイド(articles) を持たない種では、ページが
+    生成されていてもサイトマップに載せない（空/非掲載ページの index 化を防ぐ）。
+    navigation が読めない場合は従来どおり掲載する（True）。
+    """
+    import json
+    try:
+        cfg = json.loads((ROOT / "site-config.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return True
+    nav = cfg.get("navigation") or {}
+    for section in ("header", "footer"):
+        if any(e.get("key") == key for e in (nav.get(section) or [])):
+            return True
+    return False
+
+
 def collect_entries(base: str) -> list[SitemapEntry]:
     entries: list[SitemapEntry] = []
     guide_dates = guide_lastmod_by_slug()
@@ -176,7 +195,7 @@ def collect_entries(base: str) -> list[SitemapEntry]:
         add_file(entries, base, rel, csv_dates=csv_dates)
 
     articles_root = ROOT / "articles"
-    if articles_root.is_dir():
+    if articles_root.is_dir() and _nav_has("articles"):
         add_file(entries, base, "articles/index.html", csv_dates=csv_dates)
         for article_dir in sorted(articles_root.iterdir()):
             if not article_dir.is_dir():
@@ -194,7 +213,7 @@ def collect_entries(base: str) -> list[SitemapEntry]:
             add_file(entries, base, path.relative_to(ROOT).as_posix(), csv_dates=csv_dates)
 
     terms_root = ROOT / "terms"
-    if terms_root.is_dir():
+    if terms_root.is_dir() and _nav_has("terms"):
         add_file(entries, base, "terms/index.html", csv_dates=csv_dates)
         for path in sorted(terms_root.glob("*/index.html")):
             add_file(entries, base, path.relative_to(ROOT).as_posix(), csv_dates=csv_dates)

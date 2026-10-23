@@ -9,7 +9,21 @@ import json
 import re
 from pathlib import Path
 
-from tools.site_config import brand_name, contact_url, exam_name, fields
+from tools.site_config import brand_name, contact_url, exam_name, fields, navigation_items
+
+
+def _nav_keys() -> set[str]:
+    """navigation（header + footer）に含まれるキー集合。
+
+    用語解説(terms)・試験ガイド(articles) を持たない種では、noscript フォールバックの
+    機能リスト・サイト内リンクからも該当項目を外す（存在しないページへ誘導しないため）。
+    """
+    keys: set[str] = set()
+    for section in ("header", "footer"):
+        for _label, _href, key in navigation_items(section):
+            if key:
+                keys.add(key)
+    return keys
 
 INDEX_NOSCRIPT_MARKER_START = "<!--INDEX_NOSCRIPT-->"
 INDEX_NOSCRIPT_MARKER_END = "<!--/INDEX_NOSCRIPT-->"
@@ -93,22 +107,47 @@ def index_noscript_inner() -> str:
     if not practice_names:
         practice_names = "主要分野"
     subject_lines = "\n".join(_field_noscript_line(f) for f in field_rows) or "          <li>主要科目</li>"
+    nav_keys = _nav_keys()
+
+    feature_items = [
+        "          <li><strong>過去問演習</strong>：年度別・科目別に絞り込んで効率的に学習</li>",
+        f"          <li><strong>実践演習</strong>：{practice_names}の分野別練習（独自問題集）</li>",
+    ]
+    if "terms" in nav_keys:
+        feature_items.append("          <li><strong>用語解説</strong>：重要用語をわかりやすく解説（静的ページ）</li>")
+    feature_items.append(
+        "          <li><strong>記録・学習分析</strong>：学習日記・バッジ・レベルに加え、正答率や科目別成績で進捗を可視化</li>"
+    )
+    features = "\n".join(feature_items)
+
+    link_items = [
+        '<a href="about.html">このサイトについて</a>',
+        '<a href="q/index.html">過去問一覧</a>',
+        '<a href="q/practice/index.html">実践演習一覧</a>',
+        '<a href="q/ichimon/index.html">一問一答一覧</a>',
+    ]
+    if "terms" in nav_keys:
+        link_items.append('<a href="terms/index.html">用語集</a>')
+    if "articles" in nav_keys:
+        link_items.append('<a href="articles/index.html">試験ガイド</a>')
+    link_items.append('<a href="related-sites.html">関連リンク</a>')
+    link_items.append('<a href="privacy.html">プライバシー</a>')
+    link_items.append(f'<a href="{contact}" target="_blank" rel="noopener noreferrer">お問い合わせ</a>')
+    links = " ・ ".join(link_items)
+
     return f"""    <noscript>
       <div style="max-width:860px;margin:40px auto;padding:0 20px;font-family:sans-serif;line-height:1.8">
         <h1>{bn}｜{en} 無料学習プラットフォーム</h1>
         <p>{en}の合格を目指す無料の学習プラットフォームです。本サービスをご利用いただくにはJavaScriptを有効にしてください。</p>
         <h2>主な機能</h2>
         <ul>
-          <li><strong>過去問演習</strong>：年度別・科目別に絞り込んで効率的に学習</li>
-          <li><strong>実践演習</strong>：{practice_names}の分野別練習（独自問題集）</li>
-          <li><strong>用語解説</strong>：重要用語をわかりやすく解説（静的ページ）</li>
-          <li><strong>記録・学習分析</strong>：学習日記・バッジ・レベルに加え、正答率や科目別成績で進捗を可視化</li>
+{features}
         </ul>
         <h2>対応科目</h2>
         <ul>
 {subject_lines}
         </ul>
-        <p style="margin-top:24px;font-size:14px;line-height:2"><a href="about.html">このサイトについて</a> ・ <a href="q/index.html">過去問一覧</a> ・ <a href="q/practice/index.html">実践演習一覧</a> ・ <a href="q/ichimon/index.html">一問一答一覧</a> ・ <a href="terms/index.html">用語集</a> ・ <a href="articles/index.html">試験ガイド</a> ・ <a href="related-sites.html">関連リンク</a> ・ <a href="privacy.html">プライバシー</a> ・ <a href="{contact}" target="_blank" rel="noopener noreferrer">お問い合わせ</a></p>
+        <p style="margin-top:24px;font-size:14px;line-height:2">{links}</p>
       </div>
     </noscript>"""
 

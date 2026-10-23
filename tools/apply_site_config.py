@@ -48,6 +48,7 @@ from tools.build_index_faq_ldjson import inject_index_faq_ldjson
 from tools.index_seo_head import (
     INDEX_SEO_MARKER_END,
     INDEX_SEO_MARKER_START,
+    index_home_title,
     inject_index_seo_head,
     migrate_legacy_takken_leaks,
     update_index_spa_seo_js,
@@ -600,6 +601,20 @@ def update_index_glossary_excerpt(text: str) -> str:
     return text[:start] + replacement + text[end + len("</section>") :]
 
 
+_DOC_MAIN_H1_RE = re.compile(r'(<h1 id="doc-main-h1"[^>]*>).*?(</h1>)', re.S)
+
+
+def sync_index_doc_main_h1(text: str) -> str:
+    """視覚的に隠した SEO 用 h1（#doc-main-h1）を index_home_title と一致させる。
+
+    この h1 は index.html に焼き込まれており、用語解説を出さない種では
+    タイトルから「用語解説」が外れるため、同じ本文に揃えて不整合を防ぐ。
+    用語解説を持つ種（II種等）では title と同文のまま＝出力不変。
+    """
+    title = html.escape(index_home_title())
+    return _DOC_MAIN_H1_RE.sub(lambda m: m.group(1) + title + m.group(2), text, count=1)
+
+
 def sync_index_learning_nav_extras(text: str) -> str:
     """index.html の SPA 学習ナビに learningNavExtras を差し込む（用語解説の隣）。"""
     extras = learning_nav_extras()
@@ -676,6 +691,7 @@ def main() -> int:
             new = update_index_auth_modal(new)
             new = update_index_logo_styles(new)
             new = update_index_glossary_excerpt(new)
+            new = sync_index_doc_main_h1(new)
             new = sync_index_learning_nav_extras(new)
         if path.suffix == ".html":
             new = inject_adsense_head(new)

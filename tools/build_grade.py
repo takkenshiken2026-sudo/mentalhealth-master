@@ -24,6 +24,7 @@ grade の site-config.json + data を上書きして build_all.py を回すこ�
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import re
 import shutil
@@ -97,6 +98,55 @@ def _strip_exam_dates_nav(site: Path) -> None:
         index.write_text(new, encoding="utf-8")
 
 
+# II種 index.html の SPA 学習ナビに焼き込まれた「用語解説」(tnav-glossary / mnav-glossary)。
+# navigation に terms を持たない種（用語解説を出さない種）では staged index から除去する。
+# articles（試験ガイド）は SPA トップナビに無く footer（navigation.footer 駆動）のみのため、
+# config から外せば連動して消える。
+_GLOSSARY_NAV_RE = re.compile(
+    r'\s*<a class="(?:topnav-link|mobile-nav-item)" id="[tm]nav-glossary".*?</a>',
+    re.S,
+)
+
+
+def _nav_keys(site: Path, section: str) -> set[str]:
+    try:
+        cfg = json.loads((site / "site-config.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return set()
+    return {e.get("key") for e in (cfg.get("navigation", {}).get(section) or [])}
+
+
+def _strip_absent_section_nav(site: Path) -> None:
+    """navigation に無いセクション（用語解説=terms / 試験ガイド=articles）の、
+    SPA index.html に焼き込まれたナビ・リンクを除去する。
+
+    静的ヘッダー/メインフッターは navigation 駆動なので config から外せば消えるが、
+    SPA トップナビの用語解説(tnav/mnav-glossary)と、SPA 二次フッターの関連ページ行
+    （「… ・ 用語集 ・ 試験ガイド ・ …」）は index.html に焼き込まれているため個別に除去する。
+    """
+    index = site / "index.html"
+    if not index.is_file():
+        return
+    present = _nav_keys(site, "header") | _nav_keys(site, "footer")
+    absent = [k for k in ("terms", "articles") if k not in present]
+    if not absent:
+        return
+    text = index.read_text(encoding="utf-8")
+    orig = text
+    if "terms" in absent:
+        text = _GLOSSARY_NAV_RE.sub("", text)  # SPA トップナビ/モバイルナビの用語解説
+    # 二次フッターの関連ページ行から、該当セクションのアンカーを先頭の区切り（ ・ ）ごと除去。
+    for key in absent:
+        text = re.sub(
+            rf'\s*・\s*<a[^>]*href="[^"]*{key}/index[^"]*"[^>]*>.*?</a>',
+            "",
+            text,
+            flags=re.S,
+        )
+    if text != orig:
+        index.write_text(text, encoding="utf-8")
+
+
 def _overlay_grade(site: Path, grade: Grade) -> None:
     shutil.copy2(grade.config_path, site / "site-config.json")
     data_dst = site / "data"
@@ -122,6 +172,7 @@ def build(grade_id: str, *, keep_stage: bool = False) -> Path:
         _overlay_grade(site, grade)
         rekey_stage(grade_id, site)
         _strip_exam_dates_nav(site)
+        _strip_absent_section_nav(site)
 
         env = {**os.environ, "EXAM_SITE_ROOT": str(site), "EXAM_SKELETON": "1"}
         subprocess.run([sys.executable, "tools/build_all.py"], cwd=site, check=True, env=env)
