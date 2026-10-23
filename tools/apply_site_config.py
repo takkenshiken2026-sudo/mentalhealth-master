@@ -53,6 +53,12 @@ from tools.index_seo_head import (
     migrate_legacy_takken_leaks,
     update_index_spa_seo_js,
 )
+from tools.course_nav import (
+    COURSE_SWITCH_MARKER_END,
+    COURSE_SWITCH_MARKER_START,
+    course_switcher_html,
+    other_courses_section_html,
+)
 from tools.index_spa_patch import (
     INDEX_NOSCRIPT_MARKER_END,
     INDEX_NOSCRIPT_MARKER_START,
@@ -615,6 +621,36 @@ def sync_index_doc_main_h1(text: str) -> str:
     return _DOC_MAIN_H1_RE.sub(lambda m: m.group(1) + title + m.group(2), text, count=1)
 
 
+_COURSE_SWITCH_BLOCK_RE = re.compile(
+    re.escape(COURSE_SWITCH_MARKER_START) + r".*?" + re.escape(COURSE_SWITCH_MARKER_END),
+    re.S,
+)
+_PAGE_SUB_ANCHOR = '<div class="page-sub">学習目的に合わせてモードを選んでください</div>'
+_SEC_COURSES_RE = re.compile(r'\s*<section[^>]*aria-labelledby="sec-courses".*?</section>', re.S)
+_SEC_OFFICIAL_END_RE = re.compile(r'(<section[^>]*aria-labelledby="sec-official".*?</section>)', re.S)
+
+
+def inject_index_course_switcher(text: str) -> str:
+    """トップ(index.html)のヒーロー直下に級切替バンドを差し込む（公開種が2つ以上のとき）。"""
+    text = _COURSE_SWITCH_BLOCK_RE.sub("", text)  # 既存バンドを除去（冪等）
+    band = course_switcher_html()
+    if not band or _PAGE_SUB_ANCHOR not in text:
+        return text
+    return text.replace(_PAGE_SUB_ANCHOR, _PAGE_SUB_ANCHOR + band, 1)
+
+
+def inject_related_sites_other_courses(text: str) -> str:
+    """related-sites.html の公式節の直後に「他のコース」節を差し込む（他の公開種があるとき）。"""
+    text = _SEC_COURSES_RE.sub("", text)  # 既存節を除去（冪等）
+    section = other_courses_section_html()
+    if not section:
+        return text
+    m = _SEC_OFFICIAL_END_RE.search(text)
+    if not m:
+        return text
+    return text[: m.end()] + section + text[m.end() :]
+
+
 def sync_index_learning_nav_extras(text: str) -> str:
     """index.html の SPA 学習ナビに learningNavExtras を差し込む（用語解説の隣）。"""
     extras = learning_nav_extras()
@@ -671,6 +707,7 @@ def main() -> int:
             new = update_static_page_canonical(new, path)
             if path == ROOT / "related-sites.html":
                 new = update_related_sites_official_links(new)
+                new = inject_related_sites_other_courses(new)
         new = replace_static_chrome(new, path)
         rel = path.relative_to(ROOT)
         if path.suffix == ".html":
@@ -693,6 +730,7 @@ def main() -> int:
             new = update_index_glossary_excerpt(new)
             new = sync_index_doc_main_h1(new)
             new = sync_index_learning_nav_extras(new)
+            new = inject_index_course_switcher(new)
         if path.suffix == ".html":
             new = inject_adsense_head(new)
         if new != old:

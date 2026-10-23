@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://mentalhealth-master.jp/sitemap.xml
+Sitemap: https://mentalhealth-master.jp/self/sitemap.xml
+Sitemap: https://mentalhealth-master.jp/master/sitemap.xml
+Sitemap: https://mentalhealth-master.jp/sitemap-index.xml
