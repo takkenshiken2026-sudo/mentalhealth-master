@@ -219,5 +219,19 @@
     }
   ],
   "brandLogoTop": "メンタル",
-  "brandLogoBottom": "三種対策"
+  "brandLogoBottom": "三種対策",
+  "paidMockExam": {
+    "scoreLead": "本番形式の予想模試",
+    "topLead": "本番形式で力試し。有料の予想模試（note）",
+    "footnote": "※ note で販売する有料コンテンツ（¥980）です。サイト内の無料演習とは別商品です。",
+    "items": [
+      {
+        "title": "予想模試",
+        "meta": "PDF（選択式）",
+        "priceLabel": "¥980",
+        "badge": "本番形式",
+        "url": "https://note.com/shikaku_master/n/ncba67f8fee08"
+      }
+    ]
+  }
 }
