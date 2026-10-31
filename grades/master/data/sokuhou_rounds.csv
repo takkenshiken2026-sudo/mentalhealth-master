@@ -1,2 +1,2 @@
-round,exam_label,exam_date_iso,status,result_from_iso,result_to_iso,official_note
-41,第41回,2026-11-01,upcoming,,,I種（論述含む）の成績照会・合格発表の日程は公式要項をご確認ください。公式の標準解答が公表され次第、出典付きで掲載します。
+round,exam_label,exam_date_iso,status,result_from_iso,result_to_iso,official_note,score_max,score_pass,score_note
+41,第41回,2026-11-01,upcoming,,,I種（論述含む）の成績照会・合格発表の日程は公式要項をご確認ください。公式の標準解答が公表され次第、出典付きで掲載します。,100,70,選択式の自己採点の目安です。I種の合格は論述を含む総合判定のため、最終判定は公式の結果でご確認ください。

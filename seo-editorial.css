@@ -1506,16 +1506,68 @@ body.seo-editorial-preview-page .seo-editorial.seo-article-card .related-box-tit
 }
 
 /* ===== 解答速報（kaitou-sokuhou） ===== */
-.sokuhou-notice{margin:0;padding:14px 16px;background:var(--surface-alt,#f4f4f5);border:1px solid var(--border,rgba(0,0,0,.09));border-left:4px solid var(--accent,#4a6b5c);border-radius:8px;color:var(--text-muted,#555);font-size:.95rem;line-height:1.7}
-.sokuhou-link-group{margin:14px 0}
-.sokuhou-link-group-title{margin:0 0 6px;font-size:1rem;font-weight:600;color:var(--accent,#4a6b5c)}
+.sokuhou-page .article-lead{margin-bottom:8px}
+
+/* セクション見出し：左寄せ・太字・下線で階層を明確に */
+.sokuhou-page .seo-article-section{margin:30px 0 0}
+.sokuhou-page .seo-article-section > h2{display:flex;align-items:baseline;gap:.5em;text-align:left;font-size:1.22rem;font-weight:700;color:var(--text,#111827);margin:0 0 14px;padding:0 0 10px;border-bottom:2px solid var(--border,rgba(0,0,0,.1))}
+.sokuhou-page .section-heading-num{color:var(--accent,#4a6b5c);font-weight:800;font-size:.95em}
+
+/* 情報テーブル：ラベル列を折り返さず、読みやすく */
+.sokuhou-page .seo-info-table{width:100%;border-collapse:collapse;margin:6px 0}
+.sokuhou-page .seo-info-table th,.sokuhou-page .seo-info-table td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--border,rgba(0,0,0,.08));line-height:1.7}
+.sokuhou-page .seo-info-table th{white-space:nowrap;width:1%;font-weight:600;color:var(--text-muted,#4b5563);background:var(--surface-alt,#f7f7f8)}
+.sokuhou-page .seo-info-table tr:last-child th,.sokuhou-page .seo-info-table tr:last-child td{border-bottom:0}
+@media(max-width:520px){.sokuhou-page .seo-info-table th,.sokuhou-page .seo-info-table td{padding:10px}}
+
+/* 通知ボックス：アクセントの縦バーは廃止。素のカードに */
+.sokuhou-notice{margin:0;padding:16px 18px;background:#fbfbfc;border:1px solid var(--border,rgba(0,0,0,.1));border-radius:12px;color:var(--text-muted,#555);line-height:1.8}
+
+/* 速報リンク一覧 */
+.sokuhou-link-group{margin:16px 0}
+.sokuhou-link-group-title{margin:0 0 8px;font-size:.98rem;font-weight:700;color:var(--text,#111827)}
 .sokuhou-link-list{margin:0;padding-left:1.2em}
-.sokuhou-link-list li{margin:.35em 0;line-height:1.7}
+.sokuhou-link-list li{margin:.4em 0;line-height:1.8}
 .sokuhou-link-meta{color:var(--text-muted,#777);font-size:.85em}
-.sokuhou-round-list{list-style:none;margin:16px 0;padding:0;display:grid;gap:12px}
-.sokuhou-round-card a{display:flex;flex-direction:column;gap:4px;padding:16px;border:1px solid var(--border,rgba(0,0,0,.09));border-radius:10px;background:var(--surface,#fff);text-decoration:none;transition:border-color .15s,box-shadow .15s}
-.sokuhou-round-card a:hover{border-color:var(--accent,#4a6b5c);box-shadow:0 2px 10px rgba(0,0,0,.06)}
-.sokuhou-round-card-title{font-weight:600;color:var(--text,#121212)}
+
+/* ハブの回次カード */
+.sokuhou-round-list{list-style:none;margin:18px 0;padding:0;display:grid;gap:12px}
+.sokuhou-round-card a{display:flex;flex-direction:column;gap:4px;padding:16px 18px;border:1px solid var(--border,rgba(0,0,0,.1));border-radius:12px;background:var(--surface,#fff);text-decoration:none;transition:border-color .15s,box-shadow .15s}
+.sokuhou-round-card a:hover{border-color:var(--accent,#4a6b5c);box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.sokuhou-round-card-title{font-weight:700;color:var(--text,#111827)}
 .sokuhou-round-card-date{font-size:.9rem;color:var(--text-muted,#555)}
+
 .sokuhou-disclaimer{color:var(--text-muted,#555);font-size:.92rem}
 .sokuhou-disclaimer p{line-height:1.8}
+
+/* ===== 自己採点チェッカー ===== */
+.sokuhou-selfcheck{margin:22px 0 6px;padding:22px;border:1px solid var(--border,rgba(0,0,0,.1));border-radius:16px;background:linear-gradient(180deg,#f6f9f7,#ffffff)}
+.sokuhou-selfcheck-title{margin:0 0 6px;font-size:1.3rem;font-weight:800;color:var(--text,#111827)}
+.sokuhou-selfcheck-lead{margin:0 0 16px;color:var(--text-muted,#555);line-height:1.8;font-size:.95rem}
+.sokuhou-selfcheck-form{display:flex;flex-direction:column;gap:10px;max-width:420px}
+.sokuhou-score-label{font-weight:700;color:var(--text,#111827);font-size:.95rem}
+.sokuhou-score-input{display:flex;align-items:center;gap:10px}
+.sokuhou-score-input input{width:140px;padding:12px 14px;font-size:1.4rem;font-weight:700;text-align:center;border:1px solid var(--border,rgba(0,0,0,.18));border-radius:10px;background:#fff;color:var(--text,#111827)}
+.sokuhou-score-input input:focus{outline:2px solid var(--accent,#4a6b5c);outline-offset:1px;border-color:var(--accent,#4a6b5c)}
+.sokuhou-score-unit{font-weight:700;color:var(--text-muted,#555)}
+.sokuhou-pass-hint{margin:0;font-size:.9rem;color:var(--text-muted,#555)}
+.sokuhou-btn-primary{appearance:none;cursor:pointer;border:0;border-radius:10px;padding:13px 20px;font-size:1rem;font-weight:700;color:#fff;background:var(--accent,#4a6b5c)}
+.sokuhou-btn-primary:hover{filter:brightness(.95)}
+.sokuhou-result{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin:18px 0 0;padding:16px 18px;border-radius:12px;background:#f1f5f3;border:1px solid var(--border,rgba(0,0,0,.08))}
+.sokuhou-result.is-pass{background:#e7f4ec;border-color:#bfe3cd}
+.sokuhou-result.is-border{background:#fbf1dc;border-color:#ecd9a8}
+.sokuhou-result.is-miss{background:#f7e9e9;border-color:#e9c6c6}
+.sokuhou-result.is-warn{background:#fff6e5;border-color:#f0dcae;color:#8a6d1b}
+.sokuhou-result-score{font-size:1.15rem;font-weight:700;color:var(--text,#111827)}
+.sokuhou-result-verdict{font-size:1.25rem;font-weight:800}
+.sokuhou-result.is-pass .sokuhou-result-verdict{color:#1f7a4d}
+.sokuhou-result.is-border .sokuhou-result-verdict{color:#9a6a00}
+.sokuhou-result.is-miss .sokuhou-result-verdict{color:#8a3d3d}
+.sokuhou-share{margin:16px 0 0}
+.sokuhou-canvas{display:block;width:100%;max-width:520px;height:auto;border:1px solid var(--border,rgba(0,0,0,.1));border-radius:12px}
+.sokuhou-share-actions{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0}
+.sokuhou-btn-x{appearance:none;cursor:pointer;border:0;border-radius:10px;padding:13px 20px;font-size:1rem;font-weight:700;color:#fff;background:#111827}
+.sokuhou-btn-x:hover{filter:brightness(1.15)}
+.sokuhou-btn-ghost{appearance:none;cursor:pointer;border:1px solid var(--border,rgba(0,0,0,.2));border-radius:10px;padding:13px 20px;font-size:1rem;font-weight:700;color:var(--text,#111827);background:#fff}
+.sokuhou-btn-ghost:hover{background:var(--surface-alt,#f4f4f5)}
+.sokuhou-share-note,.sokuhou-selfcheck-note,.sokuhou-selfcheck-disclaimer{margin:12px 0 0;font-size:.85rem;color:var(--text-muted,#666);line-height:1.7}

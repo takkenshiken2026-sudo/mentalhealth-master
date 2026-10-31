@@ -229,6 +229,61 @@ def self_scoring_html() -> str:
     )
 
 
+def selfcheck_widget_html(round_row: dict[str, str], exam_date_jp: str, canonical: str) -> str:
+    """自己採点チェッカー（合格ライン判定＋結果画像のXシェア）。入力は端末内のみで処理。"""
+    label = _norm(round_row.get("exam_label")) or f"第{_norm(round_row.get('round'))}回"
+    score_max = _norm(round_row.get("score_max")) or "100"
+    score_pass = _norm(round_row.get("score_pass"))
+    score_note = _norm(round_row.get("score_note"))
+
+    pass_attr = f' data-pass="{html.escape(score_pass, quote=True)}"' if score_pass else ""
+    if score_pass:
+        hint = f"合格ライン：{html.escape(score_pass)}点以上（{html.escape(score_max)}点満点）"
+    else:
+        hint = f"{html.escape(score_max)}点満点"
+    note_html = (
+        f'<p class="sokuhou-selfcheck-note">{html.escape(score_note)}</p>' if score_note else ""
+    )
+
+    return (
+        '<section class="sokuhou-selfcheck" id="sokuhou-selfcheck"'
+        f' data-exam="{html.escape(exam_name(), quote=True)}"'
+        f' data-label="{html.escape(label, quote=True)}"'
+        f' data-max="{html.escape(score_max, quote=True)}"{pass_attr}'
+        f' data-url="{html.escape(canonical, quote=True)}"'
+        f' data-date="{html.escape(exam_date_jp, quote=True)}"'
+        ' data-hashtags="メンタルヘルスマネジメント検定,解答速報">'
+        '<h2 class="sokuhou-selfcheck-title">自己採点チェッカー（合格ライン判定）</h2>'
+        '<p class="sokuhou-selfcheck-lead">自己採点した得点を入力すると、合格ラインに届いているかを判定します。'
+        '結果はカード画像にして X（旧Twitter）へシェアできます。</p>'
+        '<div class="sokuhou-selfcheck-form">'
+        '<label class="sokuhou-score-label" for="sokuhou-score">自己採点の得点</label>'
+        '<div class="sokuhou-score-input">'
+        '<input type="number" id="sokuhou-score" min="0" inputmode="numeric" autocomplete="off" placeholder="例: 78">'
+        f'<span class="sokuhou-score-unit">/ {html.escape(score_max)}点</span>'
+        "</div>"
+        f'<p class="sokuhou-pass-hint">{hint}</p>'
+        '<button type="button" id="sokuhou-judge" class="sokuhou-btn-primary">判定する</button>'
+        "</div>"
+        '<div class="sokuhou-result" id="sokuhou-result" hidden></div>'
+        '<div class="sokuhou-share" id="sokuhou-share" hidden>'
+        '<canvas id="sokuhou-canvas" class="sokuhou-canvas" width="1200" height="630" '
+        'aria-label="自己採点の結果画像"></canvas>'
+        '<div class="sokuhou-share-actions">'
+        '<button type="button" id="sokuhou-share-native" class="sokuhou-btn-primary" hidden>画像付きでシェア</button>'
+        '<button type="button" id="sokuhou-post-x" class="sokuhou-btn-x">X でポスト</button>'
+        '<button type="button" id="sokuhou-save-img" class="sokuhou-btn-ghost">画像を保存</button>'
+        "</div>"
+        '<p class="sokuhou-share-note">X のポスト画面には画像を自動で添付できません。'
+        '「画像を保存」した画像を手動で添付してください（スマホは「画像付きでシェア」で X アプリに共有できます）。</p>'
+        "</div>"
+        f"{note_html}"
+        '<p class="sokuhou-selfcheck-disclaimer">※ 自己採点の目安です。正式な合否・得点は公式の成績照会・結果通知でご確認ください。'
+        '入力した得点はこの端末内だけで処理され、外部へ送信・保存されません。</p>'
+        "</section>"
+    )
+
+
 def related_links_html() -> str:
     # 種によって存在しないページ（exam-dates など）はリンク切れになるため実在チェックで絞る。
     candidates: list[tuple[str, str, Path]] = [
@@ -306,6 +361,7 @@ def build_round_page(round_row: dict[str, str], links: list[dict[str, str]]) -> 
 
     faq_list = faq_items(round_row, exam_date_jp)
     body_parts: list[str] = []
+    body_parts.append(selfcheck_widget_html(round_row, exam_date_jp, canonical))
     num = 1
     body_parts.append(section_wrap("試験の基本情報", exam_info_table_html(round_row, exam_date_jp), num, "sokuhou-sec-info"))
     num += 1
@@ -406,6 +462,7 @@ def build_round_page(round_row: dict[str, str], links: list[dict[str, str]]) -> 
 </main>
 {footer}
 {site_page_wrap_close()}
+<script src="../../sokuhou-selfcheck.js" defer></script>
 </body>
 </html>
 """

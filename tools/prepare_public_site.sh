@@ -22,6 +22,7 @@ for f in \
   site-knowledge-hub-index.js \
   site-priority-index.js \
   site-analytics.js \
+  sokuhou-selfcheck.js \
   CNAME \
   robots.txt \
   sitemap.xml \
