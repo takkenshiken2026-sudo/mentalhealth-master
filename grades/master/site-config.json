@@ -75,6 +75,11 @@
         "key": "q"
       },
       {
+        "label": "解答速報",
+        "href": "kaitou-sokuhou/index.html",
+        "key": "sokuhou"
+      },
+      {
         "label": "論述対策",
         "href": "essays/index.html",
         "key": "essays"

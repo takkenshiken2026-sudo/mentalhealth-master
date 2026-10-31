@@ -83,6 +83,11 @@ window.SITE_CONFIG = {
         "key": "q"
       },
       {
+        "label": "解答速報",
+        "href": "kaitou-sokuhou/index.html",
+        "key": "sokuhou"
+      },
+      {
         "label": "関連リンク",
         "href": "related-sites.html",
         "key": "related"
