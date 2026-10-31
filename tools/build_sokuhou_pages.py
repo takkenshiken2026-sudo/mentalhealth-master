@@ -145,7 +145,7 @@ def quality_panel_html(fact_checked_at: str) -> str:
 def section_wrap(heading: str, inner_html: str, section_num: int, section_id: str) -> str:
     return (
         f'<section class="seo-article-section" aria-labelledby="{section_id}">'
-        f'<h2 id="{section_id}"><span class="section-heading-num">{section_num}</span>'
+        f'<h2 id="{section_id}"><span class="sokuhou-num">{section_num}</span>'
         f"{html.escape(heading)}</h2>{inner_html}</section>"
     )
 
@@ -317,7 +317,7 @@ def related_links_html() -> str:
 def disclaimer_html() -> str:
     return (
         '<section class="seo-article-section sokuhou-disclaimer" aria-labelledby="sokuhou-disclaimer-title">'
-        '<h2 id="sokuhou-disclaimer-title"><span class="section-heading-num">★</span>掲載方針・ご注意</h2>'
+        '<h2 id="sokuhou-disclaimer-title"><span class="sokuhou-num">★</span>掲載方針・ご注意</h2>'
         "<p>本ページに掲載する解答は、<strong>本サイトが独自に作成した参考解答</strong>です。"
         "主催団体による公式の標準解答ではありません。試験問題および選択肢の本文は、主催団体の著作物のため転載していません。</p>"
         "<p>独自解答・自己採点の結果は参考情報であり、正答・合否を保証するものではありません。"

@@ -1510,8 +1510,8 @@ body.seo-editorial-preview-page .seo-editorial.seo-article-card .related-box-tit
 
 /* セクション見出し：左寄せ・太字・下線で階層を明確に */
 .sokuhou-page .seo-article-section{margin:30px 0 0}
-.sokuhou-page .seo-article-section > h2{display:flex;align-items:baseline;gap:.5em;text-align:left;font-size:1.22rem;font-weight:700;color:var(--text,#111827);margin:0 0 14px;padding:0 0 10px;border-bottom:2px solid var(--border,rgba(0,0,0,.1))}
-.sokuhou-page .section-heading-num{color:var(--accent,#4a6b5c);font-weight:800;font-size:.95em}
+.sokuhou-page .seo-article-section > h2{display:block;text-align:left;font-size:1.22rem;font-weight:700;line-height:1.5;color:var(--text,#111827);margin:26px 0 14px;padding:0 0 10px;border-bottom:2px solid var(--border,rgba(0,0,0,.12))}
+.sokuhou-num{display:inline-block;color:var(--accent,#4a6b5c);font-weight:800;font-size:.95em;margin-right:.45em}
 
 /* 情報テーブル：ラベル列を折り返さず、読みやすく */
 .sokuhou-page .seo-info-table{width:100%;border-collapse:collapse;margin:6px 0}
@@ -1542,7 +1542,7 @@ body.seo-editorial-preview-page .seo-editorial.seo-article-card .related-box-tit
 
 /* ===== 自己採点チェッカー ===== */
 .sokuhou-selfcheck{margin:22px 0 6px;padding:22px;border:1px solid var(--border,rgba(0,0,0,.1));border-radius:16px;background:linear-gradient(180deg,#f6f9f7,#ffffff)}
-.sokuhou-selfcheck-title{margin:0 0 6px;font-size:1.3rem;font-weight:800;color:var(--text,#111827)}
+.sokuhou-selfcheck-title{display:block;margin:0 0 6px;padding:0;border:0;font-size:1.3rem;font-weight:800;color:var(--text,#111827)}
 .sokuhou-selfcheck-lead{margin:0 0 16px;color:var(--text-muted,#555);line-height:1.8;font-size:.95rem}
 .sokuhou-selfcheck-form{display:flex;flex-direction:column;gap:10px;max-width:420px}
 .sokuhou-score-label{font-weight:700;color:var(--text,#111827);font-size:.95rem}
@@ -1573,11 +1573,11 @@ body.seo-editorial-preview-page .seo-editorial.seo-article-card .related-box-tit
 .sokuhou-share-note,.sokuhou-selfcheck-note,.sokuhou-selfcheck-disclaimer{margin:12px 0 0;font-size:.85rem;color:var(--text-muted,#666);line-height:1.7}
 
 /* ===== 自己採点：問題別グリッド／独自解答 ===== */
-.sokuhou-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(128px,1fr));gap:10px;margin:10px 0 16px}
+.sokuhou-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(144px,1fr));gap:10px;margin:10px 0 16px}
 .sokuhou-q{position:relative;display:flex;flex-direction:column;gap:6px;padding:8px 10px;border:1px solid var(--border,rgba(0,0,0,.12));border-radius:10px;background:#fff}
 .sokuhou-q-label{font-weight:700;font-size:.85rem;color:var(--text-muted,#555)}
-.sokuhou-choices{display:flex;flex-wrap:wrap;gap:5px}
-.sokuhou-choice{width:34px;height:34px;border:1px solid var(--border,rgba(0,0,0,.2));border-radius:8px;background:#fff;font-weight:700;font-size:.95rem;color:var(--text,#111827);cursor:pointer;line-height:1}
+.sokuhou-choices{display:flex;flex-wrap:nowrap;gap:5px}
+.sokuhou-choice{flex:1 1 0;min-width:0;height:36px;border:1px solid var(--border,rgba(0,0,0,.2));border-radius:8px;background:#fff;font-weight:700;font-size:.95rem;color:var(--text,#111827);cursor:pointer;line-height:1;padding:0}
 .sokuhou-choice:hover{border-color:var(--accent,#4a6b5c)}
 .sokuhou-choice.is-selected{background:var(--accent,#4a6b5c);color:#fff;border-color:var(--accent,#4a6b5c)}
 .sokuhou-q.is-correct{background:#e7f4ec;border-color:#bfe3cd}
