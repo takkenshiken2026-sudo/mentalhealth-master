@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""メンタルヘルス・マネジメント検定 解答速報ページ /kaitou-sokuhou/ を生成する。
+"""メンタルヘルス・マネジメント検定 解答速報（自己採点）ページ /kaitou-sokuhou/ を生成する。
 
 出力:
   - ハブ  : kaitou-sokuhou/index.html          … 回次一覧
-  - 回次  : kaitou-sokuhou/<round>/index.html  … 各社速報リンク集 + 正答まとめ + 公式情報
+  - 回次  : kaitou-sokuhou/<round>/index.html  … 本サイト独自解答＋問題別の自己採点ツール
 
 データ（種ごとに data/ を上書きして運用）:
-  - data/sokuhou_rounds.csv : 回次メタ（回・実施日・状態・成績照会予定 など）
-  - data/sokuhou_links.csv  : 各社・各サイトの解答速報リンク（試験後に追記）
+  - data/sokuhou_rounds.csv  : 回次メタ（回・実施日・状態・成績照会・採点基準 など）
+  - data/sokuhou_answers.csv : 本サイト独自の解答（問番号・正答・配点・選択肢数・分野）
 
 方針:
-  - 問題文・選択肢の転載はしない。各社速報へのリンク誘導と、正答番号の比較のみ。
+  - 掲載する解答は「本サイト独自の参考解答」。公式の標準解答ではない。
+  - 問題文・選択肢の本文は転載しない（問番号と正答番号のみ）。
   - 全種（II種ルート + /master + /self）で build_grade 経由で動く。
-  - site_config.public_url() が basePath を、exam_name() が種名を自動解決する。
 """
 
 from __future__ import annotations
@@ -50,35 +50,33 @@ from tools.site_config import brand_name, exam_name, public_url  # noqa: E402
 PAGE_SLUG = "kaitou-sokuhou"
 OUTPUT_DIR = ROOT / PAGE_SLUG
 ROUNDS_CSV = ROOT / "data" / "sokuhou_rounds.csv"
-LINKS_CSV = ROOT / "data" / "sokuhou_links.csv"
+ANSWERS_CSV = ROOT / "data" / "sokuhou_answers.csv"
 SOKUHOU_CSS_VER = "20261031-sokuhou"
 
 AUTHOR_NAME = "編集部"
 AUTHOR_PROFILE = (
     "メンタルヘルス・マネジメント検定の学習・演習コンテンツを運営する編集チーム。"
-    "試験後の解答速報の収集・出典整理を担当しています。"
+    "本サイト独自の参考解答の作成・検証を担当しています。"
 )
-REVIEWER_NAME = "公式情報確認担当"
-REVIEWER_PROFILE = "大阪商工会議所の公開試験情報と照合し、掲載の正確性を確認した担当者です。"
+REVIEWER_NAME = "解答作成・確認担当"
+REVIEWER_PROFILE = "公式の出題範囲・テキストと照合し、本サイト独自解答の根拠を確認した担当者です。"
 PRIMARY_SOURCES = [
     {"label": "メンタルヘルス・マネジメント検定試験（公式）", "url": "https://www.mental-health.ne.jp/"},
     {"label": "公開試験 受験要項（公式）", "url": "https://www.mental-health.ne.jp/guide/"},
 ]
-
-KIND_LABELS = {
-    "official": "公式",
-    "school": "資格スクール・予備校",
-    "crowd": "みんなで作る速報・投票型",
-    "blog": "解説ブログ",
-    "video": "動画（YouTube 等）",
-    "other": "その他",
-}
 
 WEEKDAY_JP = ["月", "火", "水", "木", "金", "土", "日"]
 
 
 def _norm(value: str | None) -> str:
     return (value or "").strip()
+
+
+def _int(value: str | None, default: int = 0) -> int:
+    try:
+        return int(float(_norm(value)))
+    except (TypeError, ValueError):
+        return default
 
 
 def _read_csv(path: Path) -> list[dict[str, str]]:
@@ -97,6 +95,27 @@ def _jp_date(iso: str) -> str:
     except ValueError:
         return iso
     return f"{d.year}年{d.month}月{d.day}日（{WEEKDAY_JP[d.weekday()]}）"
+
+
+def _answers_for(answers: list[dict[str, str]]) -> list[dict]:
+    """解答CSV行を採点用の辞書リストへ整形（問番号順）。"""
+    out: list[dict] = []
+    for row in answers:
+        no = _int(row.get("q_no"))
+        correct = _norm(row.get("correct"))
+        if not no or not correct:
+            continue
+        out.append(
+            {
+                "no": no,
+                "correct": _int(row.get("correct")) if correct.isdigit() else correct,
+                "points": _int(row.get("points"), 2) or 2,
+                "choices": _int(row.get("choices"), 4) or 4,
+                "field": _norm(row.get("field")),
+            }
+        )
+    out.sort(key=lambda r: r["no"])
+    return out
 
 
 def quality_panel_html(fact_checked_at: str) -> str:
@@ -145,54 +164,100 @@ def exam_info_table_html(round_row: dict[str, str], exam_date_jp: str) -> str:
     return '<table class="seo-info-table"><tbody>' + "".join(rows) + "</tbody></table>"
 
 
-def links_section_html(links: list[dict[str, str]], status: str) -> str:
-    if not links:
-        if status == "upcoming":
-            note = (
-                "現在は試験前です。試験終了後（実施日の午後以降）に、各社・各サイトが公開する"
-                "解答速報へのリンクを、公開時刻つきで随時追加します。更新をお待ちください。"
-            )
-        else:
-            note = "解答速報のリンクを準備中です。公開が確認でき次第、出典つきで掲載します。"
-        return _notice(note)
+def selfcheck_widget_html(
+    round_row: dict[str, str], exam_date_jp: str, canonical: str, answers: list[dict]
+) -> str:
+    """問題ごとに解答を入力して採点する自己採点ツール（本サイト独自解答で照合）。"""
+    label = _norm(round_row.get("exam_label")) or f"第{_norm(round_row.get('round'))}回"
+    score_pass = _norm(round_row.get("score_pass"))
+    score_note = _norm(round_row.get("score_note"))
+    pass_attr = f' data-pass="{html.escape(score_pass, quote=True)}"' if score_pass else ""
 
-    # 種類ごとにグルーピングして一覧表示。
-    order = ["official", "school", "crowd", "blog", "video", "other"]
-    grouped: dict[str, list[dict[str, str]]] = {}
-    for row in links:
-        grouped.setdefault(_norm(row.get("kind")) or "other", []).append(row)
+    note_html = (
+        f'<p class="sokuhou-selfcheck-note">{html.escape(score_note)}</p>' if score_note else ""
+    )
 
-    blocks: list[str] = []
-    for kind in order:
-        items = grouped.get(kind)
-        if not items:
-            continue
-        lis: list[str] = []
-        for row in items:
-            provider = html.escape(_norm(row.get("provider")) or "（提供元）")
-            url = _norm(row.get("url"))
-            published = _norm(row.get("published_at"))
-            note = _norm(row.get("note"))
-            meta_bits = []
-            if published:
-                meta_bits.append(f"更新 {html.escape(published)}")
-            if note:
-                meta_bits.append(html.escape(note))
-            meta = f' <span class="sokuhou-link-meta">（{" ・ ".join(meta_bits)}）</span>' if meta_bits else ""
-            if url:
-                link = (
-                    f'<a href="{html.escape(url, quote=True)}" target="_blank" '
-                    f'rel="noopener noreferrer nofollow">{provider}</a>'
-                )
-            else:
-                link = provider
-            lis.append(f"<li>{link}{meta}</li>")
-        label = html.escape(KIND_LABELS.get(kind, KIND_LABELS["other"]))
-        blocks.append(
-            f'<div class="sokuhou-link-group"><h3 class="sokuhou-link-group-title">{label}</h3>'
-            f'<ul class="sokuhou-link-list">{"".join(lis)}</ul></div>'
+    # 解答データが未投入なら、採点UIの代わりに準備中メッセージ。
+    if not answers:
+        body = _notice(
+            "試験後に本サイト独自の解答を公開し、ここで問題ごとに自己採点できるようにします。"
+            "公開までお待ちください。"
         )
-    return "".join(blocks)
+        answers_json = "[]"
+        total = 0
+    else:
+        answers_json = json.dumps(answers, ensure_ascii=False, separators=(",", ":"))
+        total = sum(a["points"] for a in answers)
+        body = (
+            '<p class="sokuhou-selfcheck-lead">問題ごとに自分の解答を選ぶと、本サイトの独自解答と照合して'
+            '得点を自動計算し、合格ラインに届いているかを判定します。結果はカード画像にして'
+            ' X（旧Twitter）へシェアできます。</p>'
+            '<div class="sokuhou-grid" id="sokuhou-grid" aria-label="問題ごとの解答入力"></div>'
+            '<div class="sokuhou-grid-actions">'
+            '<button type="button" id="sokuhou-judge" class="sokuhou-btn-primary">採点する</button>'
+            '<button type="button" id="sokuhou-clear" class="sokuhou-btn-ghost">クリア</button>'
+            "</div>"
+            '<div class="sokuhou-result" id="sokuhou-result" hidden></div>'
+            '<div class="sokuhou-share" id="sokuhou-share" hidden>'
+            '<canvas id="sokuhou-canvas" class="sokuhou-canvas" width="1200" height="630" '
+            'aria-label="自己採点の結果画像"></canvas>'
+            '<div class="sokuhou-share-actions">'
+            '<button type="button" id="sokuhou-share-native" class="sokuhou-btn-primary" hidden>画像付きでシェア</button>'
+            '<button type="button" id="sokuhou-post-x" class="sokuhou-btn-x">X でポスト</button>'
+            '<button type="button" id="sokuhou-save-img" class="sokuhou-btn-ghost">画像を保存</button>'
+            "</div>"
+            '<p class="sokuhou-share-note">X のポスト画面には画像を自動で添付できません。'
+            '「画像を保存」した画像を手動で添付してください（スマホは「画像付きでシェア」で X アプリに共有できます）。</p>'
+            "</div>"
+        )
+
+    return (
+        '<section class="sokuhou-selfcheck" id="sokuhou-selfcheck"'
+        f' data-exam="{html.escape(exam_name(), quote=True)}"'
+        f' data-label="{html.escape(label, quote=True)}"'
+        f' data-total="{total}"{pass_attr}'
+        f' data-url="{html.escape(canonical, quote=True)}"'
+        f' data-date="{html.escape(exam_date_jp, quote=True)}"'
+        ' data-hashtags="メンタルヘルスマネジメント検定,自己採点">'
+        '<h2 class="sokuhou-selfcheck-title">自己採点（問題ごとに入力）</h2>'
+        f"{body}"
+        f'<script type="application/json" id="sokuhou-answers">{answers_json}</script>'
+        f"{note_html}"
+        '<p class="sokuhou-selfcheck-disclaimer">※ 本ツールは本サイト独自の参考解答で採点します（公式の標準解答ではありません）。'
+        '正式な合否・得点は公式の成績照会・結果通知でご確認ください。入力した解答はこの端末内だけで処理され、外部へ送信・保存されません。</p>'
+        "</section>"
+    )
+
+
+def answer_key_html(answers: list[dict], status: str) -> str:
+    """本サイト独自解答の一覧（折りたたみ）。未投入時は準備中。"""
+    if not answers:
+        if status == "upcoming":
+            return _notice("試験後に本サイト独自の解答を公開します。公開までお待ちください。")
+        return _notice("独自解答を準備中です。公開まで今しばらくお待ちください。")
+
+    has_field = any(a["field"] for a in answers)
+    head = "<tr><th>問</th><th>本サイト独自解答</th><th>配点</th>" + ("<th>分野</th>" if has_field else "") + "</tr>"
+    body_rows = []
+    for a in answers:
+        field_td = f"<td>{html.escape(a['field'])}</td>" if has_field else ""
+        body_rows.append(
+            f'<tr><td>問{a["no"]}</td><td class="sokuhou-ans">{html.escape(str(a["correct"]))}</td>'
+            f'<td>{a["points"]}点</td>{field_td}</tr>'
+        )
+    table = (
+        '<table class="seo-info-table sokuhou-answer-table"><thead>'
+        + head
+        + "</thead><tbody>"
+        + "".join(body_rows)
+        + "</tbody></table>"
+    )
+    return (
+        '<details class="sokuhou-answer-details"><summary>独自解答の一覧を表示</summary>'
+        '<p class="sokuhou-answer-note">下記は本サイトが独自に作成した参考解答です。公式の標準解答ではありません。</p>'
+        + table
+        + "</details>"
+    )
 
 
 def official_info_html(round_row: dict[str, str]) -> str:
@@ -210,7 +275,7 @@ def official_info_html(round_row: dict[str, str]) -> str:
         )
     parts.append(
         '<p>合否・得点は、公式の成績照会または結果通知が正式な結果です。'
-        '解答速報はあくまで自己採点の目安としてご利用ください。'
+        '本ページの独自解答・自己採点はあくまで目安としてご利用ください。'
         '最新の日程は<a href="https://www.mental-health.ne.jp/guide/" target="_blank" '
         'rel="noopener noreferrer">公式の受験要項</a>で必ずご確認ください。</p>'
     )
@@ -220,72 +285,16 @@ def official_info_html(round_row: dict[str, str]) -> str:
 def self_scoring_html() -> str:
     return (
         "<p>合格の目安は、おおむね満点の70%以上とされています（配点・基準は回により異なる場合があります）。"
-        "複数の速報で正答が割れている設問は、確定情報ではありません。公式の結果を待ってください。</p>"
+        "本サイトの独自解答は参考であり、確定情報ではありません。公式の結果を待ってください。</p>"
         "<ul>"
-        "<li>速報は<strong>非公式の推定</strong>を含みます。提供元ごとに正答が異なることがあります。</li>"
+        "<li>独自解答は<strong>非公式の推定</strong>を含みます。公式の標準解答とは異なる場合があります。</li>"
         "<li>マークのずれ・転記ミスがないか、問題番号と選択肢を落ち着いて照合しましょう。</li>"
         "<li>ボーダー前後のときは、確定発表まで結果を断定しないのが安全です。</li>"
         "</ul>"
     )
 
 
-def selfcheck_widget_html(round_row: dict[str, str], exam_date_jp: str, canonical: str) -> str:
-    """自己採点チェッカー（合格ライン判定＋結果画像のXシェア）。入力は端末内のみで処理。"""
-    label = _norm(round_row.get("exam_label")) or f"第{_norm(round_row.get('round'))}回"
-    score_max = _norm(round_row.get("score_max")) or "100"
-    score_pass = _norm(round_row.get("score_pass"))
-    score_note = _norm(round_row.get("score_note"))
-
-    pass_attr = f' data-pass="{html.escape(score_pass, quote=True)}"' if score_pass else ""
-    if score_pass:
-        hint = f"合格ライン：{html.escape(score_pass)}点以上（{html.escape(score_max)}点満点）"
-    else:
-        hint = f"{html.escape(score_max)}点満点"
-    note_html = (
-        f'<p class="sokuhou-selfcheck-note">{html.escape(score_note)}</p>' if score_note else ""
-    )
-
-    return (
-        '<section class="sokuhou-selfcheck" id="sokuhou-selfcheck"'
-        f' data-exam="{html.escape(exam_name(), quote=True)}"'
-        f' data-label="{html.escape(label, quote=True)}"'
-        f' data-max="{html.escape(score_max, quote=True)}"{pass_attr}'
-        f' data-url="{html.escape(canonical, quote=True)}"'
-        f' data-date="{html.escape(exam_date_jp, quote=True)}"'
-        ' data-hashtags="メンタルヘルスマネジメント検定,解答速報">'
-        '<h2 class="sokuhou-selfcheck-title">自己採点チェッカー（合格ライン判定）</h2>'
-        '<p class="sokuhou-selfcheck-lead">自己採点した得点を入力すると、合格ラインに届いているかを判定します。'
-        '結果はカード画像にして X（旧Twitter）へシェアできます。</p>'
-        '<div class="sokuhou-selfcheck-form">'
-        '<label class="sokuhou-score-label" for="sokuhou-score">自己採点の得点</label>'
-        '<div class="sokuhou-score-input">'
-        '<input type="number" id="sokuhou-score" min="0" inputmode="numeric" autocomplete="off" placeholder="例: 78">'
-        f'<span class="sokuhou-score-unit">/ {html.escape(score_max)}点</span>'
-        "</div>"
-        f'<p class="sokuhou-pass-hint">{hint}</p>'
-        '<button type="button" id="sokuhou-judge" class="sokuhou-btn-primary">判定する</button>'
-        "</div>"
-        '<div class="sokuhou-result" id="sokuhou-result" hidden></div>'
-        '<div class="sokuhou-share" id="sokuhou-share" hidden>'
-        '<canvas id="sokuhou-canvas" class="sokuhou-canvas" width="1200" height="630" '
-        'aria-label="自己採点の結果画像"></canvas>'
-        '<div class="sokuhou-share-actions">'
-        '<button type="button" id="sokuhou-share-native" class="sokuhou-btn-primary" hidden>画像付きでシェア</button>'
-        '<button type="button" id="sokuhou-post-x" class="sokuhou-btn-x">X でポスト</button>'
-        '<button type="button" id="sokuhou-save-img" class="sokuhou-btn-ghost">画像を保存</button>'
-        "</div>"
-        '<p class="sokuhou-share-note">X のポスト画面には画像を自動で添付できません。'
-        '「画像を保存」した画像を手動で添付してください（スマホは「画像付きでシェア」で X アプリに共有できます）。</p>'
-        "</div>"
-        f"{note_html}"
-        '<p class="sokuhou-selfcheck-disclaimer">※ 自己採点の目安です。正式な合否・得点は公式の成績照会・結果通知でご確認ください。'
-        '入力した得点はこの端末内だけで処理され、外部へ送信・保存されません。</p>'
-        "</section>"
-    )
-
-
 def related_links_html() -> str:
-    # 種によって存在しないページ（exam-dates など）はリンク切れになるため実在チェックで絞る。
     candidates: list[tuple[str, str, Path]] = [
         ("../../index.html", "トップ（学習コンテンツ）", ROOT / "index.html"),
         ("../../exam-dates/", "試験日検索・日程", ROOT / "exam-dates" / "index.html"),
@@ -309,10 +318,10 @@ def disclaimer_html() -> str:
     return (
         '<section class="seo-article-section sokuhou-disclaimer" aria-labelledby="sokuhou-disclaimer-title">'
         '<h2 id="sokuhou-disclaimer-title"><span class="section-heading-num">★</span>掲載方針・ご注意</h2>'
-        "<p>本ページは、各社・各サイトが公開する解答速報を整理し、出典へのリンクでご案内する"
-        "<strong>まとめページ</strong>です。試験問題および選択肢の本文は、主催団体の著作物のため転載しません。</p>"
-        "<p>掲載する正答は各提供元の発表に基づく参考情報であり、当サイトが正答を保証するものではありません。"
-        "正式な結果は公式の成績照会・結果通知をご確認ください。記載に誤り・リンク切れがある場合はお問い合わせください。</p>"
+        "<p>本ページに掲載する解答は、<strong>本サイトが独自に作成した参考解答</strong>です。"
+        "主催団体による公式の標準解答ではありません。試験問題および選択肢の本文は、主催団体の著作物のため転載していません。</p>"
+        "<p>独自解答・自己採点の結果は参考情報であり、正答・合否を保証するものではありません。"
+        "正式な結果は公式の成績照会・結果通知をご確認ください。記載に誤りがある場合はお問い合わせください。</p>"
         "</section>"
     )
 
@@ -321,30 +330,30 @@ def faq_items(round_row: dict[str, str], exam_date_jp: str) -> list[dict[str, st
     label = _norm(round_row.get("exam_label"))
     return [
         {
-            "question": f"{label}の解答速報はいつ出ますか？",
+            "question": f"{label}の解答はいつ公開されますか？",
             "answer": (
-                f"一般に、各社・各サイトの解答速報は試験当日（{exam_date_jp}）の午後以降から順次公開されます。"
-                "公開が確認でき次第、本ページに出典つきで追加します。"
+                f"試験当日（{exam_date_jp}）の試験終了後に、本サイト独自の解答を順次公開します。"
+                "公開後は、このページで問題ごとに自己採点できます。"
             ),
         },
         {
-            "question": "解答速報で合否はわかりますか？",
+            "question": "この解答は公式のものですか？",
             "answer": (
-                "速報は自己採点の目安です。正式な合否・得点は、公式の成績照会または結果通知で確定します。"
-                "ボーダー前後の場合は、公式発表をお待ちください。"
+                "いいえ。本ページの解答は本サイトが独自に作成した参考解答です。公式の標準解答ではありません。"
+                "正式な合否・得点は公式の成績照会・結果通知でご確認ください。"
             ),
         },
         {
-            "question": "各社で正答が違うのはなぜですか？",
+            "question": "自己採点の点数で合否はわかりますか？",
             "answer": (
-                "試験直後の速報は非公式の推定を含むためです。公式の標準解答が公表されると正答が確定します。"
-                "複数の速報を見比べ、割れている設問は確定情報として扱わないことをおすすめします。"
+                "自己採点は目安です。合格の目安はおおむね満点の70%ですが、ボーダー前後の場合は"
+                "公式の結果を待つことをおすすめします。"
             ),
         },
     ]
 
 
-def build_round_page(round_row: dict[str, str], links: list[dict[str, str]]) -> str:
+def build_round_page(round_row: dict[str, str], answers: list[dict]) -> str:
     round_id = _norm(round_row.get("round"))
     exam_label = _norm(round_row.get("exam_label")) or f"第{round_id}回"
     status = _norm(round_row.get("status")) or "upcoming"
@@ -353,19 +362,19 @@ def build_round_page(round_row: dict[str, str], links: list[dict[str, str]]) -> 
     canonical = public_url(f"{PAGE_SLUG}/{round_id}/")
     today = date.today().isoformat()
 
-    page_title = f"{exam_label}{exam_name()} 解答速報｜{exam_date_jp}・各社まとめ"
+    page_title = f"{exam_label}{exam_name()} 解答速報・自己採点｜{exam_date_jp}"
     desc = (
-        f"{exam_label}{exam_name()}（{exam_date_jp}実施）の解答速報まとめ。"
-        "各社・各サイトの解答速報へのリンク、正答の比較、公式の標準解答・成績照会の予定を掲載します。"
+        f"{exam_label}{exam_name()}（{exam_date_jp}実施）の解答速報。本サイト独自の解答と、"
+        "問題ごとに自己採点できるツールを掲載。合格ライン判定・結果画像の X シェアに対応します。"
     )
 
     faq_list = faq_items(round_row, exam_date_jp)
     body_parts: list[str] = []
-    body_parts.append(selfcheck_widget_html(round_row, exam_date_jp, canonical))
+    body_parts.append(selfcheck_widget_html(round_row, exam_date_jp, canonical, answers))
     num = 1
-    body_parts.append(section_wrap("試験の基本情報", exam_info_table_html(round_row, exam_date_jp), num, "sokuhou-sec-info"))
+    body_parts.append(section_wrap("本サイト独自の解答", answer_key_html(answers, status), num, "sokuhou-sec-answers"))
     num += 1
-    body_parts.append(section_wrap("各社・各サイトの解答速報リンク", links_section_html(links, status), num, "sokuhou-sec-links"))
+    body_parts.append(section_wrap("試験の基本情報", exam_info_table_html(round_row, exam_date_jp), num, "sokuhou-sec-info"))
     num += 1
     body_parts.append(section_wrap("公式の標準解答・成績照会の予定", official_info_html(round_row), num, "sokuhou-sec-official"))
     num += 1
@@ -420,8 +429,8 @@ def build_round_page(round_row: dict[str, str], links: list[dict[str, str]]) -> 
     )
     article_class = seo_editorial_article_class(extra="sokuhou-page")
     lead = (
-        f"{exam_label}{exam_name()}（{exam_date_jp}実施）の解答速報まとめです。"
-        "各社・各サイトの速報へのリンクと、公式の標準解答・成績照会の予定を、試験後に随時更新します。"
+        f"{exam_label}{exam_name()}（{exam_date_jp}実施）の解答速報・自己採点ページです。"
+        "本サイト独自の解答で、問題ごとに点数を計算し合格ラインを判定します。試験後に順次更新します。"
     )
 
     return f"""<!DOCTYPE html>
@@ -472,13 +481,12 @@ def build_hub_page(rounds: list[dict[str, str]]) -> str:
     rel_path = Path(PAGE_SLUG) / "index.html"
     canonical = public_url(f"{PAGE_SLUG}/")
     today = date.today().isoformat()
-    page_title = f"{exam_name()} 解答速報｜各社まとめ・回次一覧"
+    page_title = f"{exam_name()} 解答速報・自己採点｜回次一覧"
     desc = (
-        f"{exam_name()}の解答速報まとめ。各回の試験について、各社・各サイトの解答速報リンク、"
-        "正答の比較、公式の標準解答・成績照会の予定を回次ごとに掲載します。"
+        f"{exam_name()}の解答速報・自己採点。各回について本サイト独自の解答と、問題ごとに"
+        "自己採点できるツールを回次ごとに掲載します。"
     )
 
-    # 実施日の新しい順。
     def _key(r: dict[str, str]) -> str:
         return _norm(r.get("exam_date_iso")) or _norm(r.get("round"))
 
@@ -491,15 +499,15 @@ def build_hub_page(rounds: list[dict[str, str]]) -> str:
         href = html.escape(f"{rid}/", quote=True)
         cards.append(
             f'<li class="sokuhou-round-card"><a href="{href}">'
-            f'<span class="sokuhou-round-card-title">{html.escape(label)} 解答速報</span>'
+            f'<span class="sokuhou-round-card-title">{html.escape(label)} 解答速報・自己採点</span>'
             f'<span class="sokuhou-round-card-date">{html.escape(djp)} 実施</span>'
             "</a></li>"
         )
     cards_html = f'<ul class="sokuhou-round-list">{"".join(cards)}</ul>' if cards else _notice("公開準備中です。")
 
     intro = (
-        f"<p>{html.escape(exam_name())}の各回について、試験後に各社・各サイトの解答速報を集めてご案内するまとめページです。"
-        "問題・選択肢の本文は転載せず、出典へのリンクでご案内します。</p>"
+        f"<p>{html.escape(exam_name())}の各回について、本サイト独自の解答と、問題ごとに点数を計算できる"
+        "自己採点ツールを公開します。問題・選択肢の本文は転載しません。</p>"
     )
 
     graph = [
@@ -560,7 +568,7 @@ def build_hub_page(rounds: list[dict[str, str]]) -> str:
 <span class="meta-updated">最終更新日：{html.escape(today)}</span>
 </div>
 <h1 class="article-title">{html.escape(page_title)}</h1>
-<p class="article-lead">{html.escape(exam_name())}の解答速報を回次ごとにまとめています。</p>
+<p class="article-lead">{html.escape(exam_name())}の解答速報・自己採点を回次ごとにまとめています。</p>
 {intro}
 {cards_html}
 {disclaimer_html()}
@@ -578,10 +586,10 @@ def main() -> int:
     if not rounds:
         print("build_sokuhou_pages: data/sokuhou_rounds.csv が無い/空のためスキップ")
         return 0
-    links = _read_csv(LINKS_CSV)
-    links_by_round: dict[str, list[dict[str, str]]] = {}
-    for row in links:
-        links_by_round.setdefault(_norm(row.get("round")), []).append(row)
+    answers_rows = _read_csv(ANSWERS_CSV)
+    answers_by_round: dict[str, list[dict[str, str]]] = {}
+    for row in answers_rows:
+        answers_by_round.setdefault(_norm(row.get("round")), []).append(row)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     (OUTPUT_DIR / "index.html").write_text(build_hub_page(rounds), encoding="utf-8")
@@ -592,9 +600,10 @@ def main() -> int:
             continue
         rdir = OUTPUT_DIR / rid
         rdir.mkdir(parents=True, exist_ok=True)
-        page = build_round_page(r, links_by_round.get(rid, []))
+        answers = _answers_for(answers_by_round.get(rid, []))
+        page = build_round_page(r, answers)
         (rdir / "index.html").write_text(page, encoding="utf-8")
-        print(f"Wrote {PAGE_SLUG}/{rid}/index.html")
+        print(f"Wrote {PAGE_SLUG}/{rid}/index.html（独自解答 {len(answers)} 問）")
     return 0
 
 
