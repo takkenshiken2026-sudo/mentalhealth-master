@@ -1,2 +1,3 @@
-round,exam_label,exam_date_iso,status,result_from_iso,result_to_iso,official_note,score_max,score_pass,score_note
-41,第41回,2026-11-01,upcoming,2026-12-04,2027-03-04,公式の標準解答が公表され次第、出典付きで本ページに掲載します。,100,70,
+round,exam_label,exam_date_iso,status,result_from_iso,result_to_iso,official_note,score_max,score_pass,score_note,source
+41,第41回,2026-11-01,upcoming,2026-12-04,2027-03-04,公式の標準解答が公表され次第、出典付きで本ページに掲載します。,100,70,,
+40,第40回,2026-03-15,final,2026-04-17,2026-07-17,第40回（2026年3月15日実施）は終了しています。下記の期間に成績照会ができます。,100,70,,株式会社日本マンパワー「第40回公開試験 選択問題 解答例」

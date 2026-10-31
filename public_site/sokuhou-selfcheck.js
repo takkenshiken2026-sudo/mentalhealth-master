@@ -160,7 +160,7 @@
       cell.setAttribute("data-no", a.no);
       var label = document.createElement("div");
       label.className = "sokuhou-q-label";
-      label.textContent = "問" + a.no;
+      label.textContent = a.label || ("問" + a.no);
       cell.appendChild(label);
       var choices = document.createElement("div");
       choices.className = "sokuhou-choices";
