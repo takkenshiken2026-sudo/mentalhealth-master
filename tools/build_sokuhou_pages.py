@@ -143,10 +143,10 @@ def quality_panel_html(fact_checked_at: str) -> str:
 
 
 def section_wrap(heading: str, inner_html: str, section_num: int, section_id: str) -> str:
+    # section_num は互換のため受け取るが、見出しはシンプルに統一（番号・バッジを付けない）。
     return (
         f'<section class="seo-article-section" aria-labelledby="{section_id}">'
-        f'<h2 id="{section_id}"><span class="sokuhou-num">{section_num}</span>'
-        f"{html.escape(heading)}</h2>{inner_html}</section>"
+        f'<h2 id="{section_id}">{html.escape(heading)}</h2>{inner_html}</section>'
     )
 
 
@@ -316,8 +316,8 @@ def related_links_html() -> str:
 
 def disclaimer_html() -> str:
     return (
-        '<section class="seo-article-section sokuhou-disclaimer" aria-labelledby="sokuhou-disclaimer-title">'
-        '<h2 id="sokuhou-disclaimer-title"><span class="sokuhou-num">★</span>掲載方針・ご注意</h2>'
+        '<section class="sokuhou-fineprint" aria-labelledby="sokuhou-disclaimer-title">'
+        '<h2 id="sokuhou-disclaimer-title" class="sokuhou-fineprint-title">掲載方針・ご注意</h2>'
         "<p>本ページに掲載する解答は、<strong>本サイトが独自に作成した参考解答</strong>です。"
         "主催団体による公式の標準解答ではありません。試験問題および選択肢の本文は、主催団体の著作物のため転載していません。</p>"
         "<p>独自解答・自己採点の結果は参考情報であり、正答・合否を保証するものではありません。"
@@ -381,7 +381,7 @@ def build_round_page(round_row: dict[str, str], answers: list[dict]) -> str:
     body_parts.append(section_wrap("合格ラインと自己採点の注意", self_scoring_html(), num, "sokuhou-sec-score"))
     num += 1
     body_parts.append(quality_panel_html(today))
-    body_parts.append(faq_section_html(faq_list, heading_id="sokuhou-faq", section_num=num))
+    body_parts.append(faq_section_html(faq_list, heading_id="sokuhou-faq", section_num=None))
     body_parts.append(disclaimer_html())
     related = related_links_html()
     if related:

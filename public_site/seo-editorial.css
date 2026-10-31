@@ -1506,12 +1506,21 @@ body.seo-editorial-preview-page .seo-editorial.seo-article-card .related-box-tit
 }
 
 /* ===== 解答速報（kaitou-sokuhou） ===== */
-.sokuhou-page .article-lead{margin-bottom:8px}
+.sokuhou-page .article-lead{margin-bottom:0}
 
-/* セクション見出し：左寄せ・太字・下線で階層を明確に */
-.sokuhou-page .seo-article-section{margin:30px 0 0}
-.sokuhou-page .seo-article-section > h2{display:block;text-align:left;font-size:1.22rem;font-weight:700;line-height:1.5;color:var(--text,#111827);margin:26px 0 14px;padding:0 0 10px;border-bottom:2px solid var(--border,rgba(0,0,0,.12))}
-.sokuhou-num{display:inline-block;color:var(--accent,#4a6b5c);font-weight:800;font-size:.95em;margin-right:.45em}
+/* 見出しは全セクションで同一スタイルに統一（番号・丸バッジ・左バーなし／下線のみ） */
+.sokuhou-page .article-body h2{display:block}
+.sokuhou-page .seo-article-section{margin:28px 0 0}
+.sokuhou-page .seo-article-section > h2,
+.sokuhou-page .seo-quality-panel > h2{display:block;text-align:left;font-size:1.18rem;font-weight:700;line-height:1.5;color:var(--text,#111827);margin:0 0 14px;padding:0 0 10px;border-left:0;padding-left:0;border-bottom:2px solid var(--border,rgba(0,0,0,.12))}
+.sokuhou-page .seo-quality-panel{margin:28px 0 0}
+.sokuhou-page .seo-article-section > h2:has(.section-heading-num){padding-left:0;border-left:0}
+.sokuhou-page .section-heading-num{display:none}
+
+/* 掲載方針：本文より控えめなファインプリント */
+.sokuhou-fineprint{margin:28px 0 0;padding:16px 18px;background:#fbfbfc;border:1px solid var(--border,rgba(0,0,0,.1));border-radius:12px}
+.sokuhou-fineprint-title{display:block;font-size:.98rem;font-weight:700;color:var(--text,#111827);margin:0 0 8px;padding:0;border:0}
+.sokuhou-fineprint p{font-size:.86rem;color:var(--text-muted,#666);line-height:1.8;margin:.4em 0}
 
 /* 情報テーブル：ラベル列を折り返さず、読みやすく */
 .sokuhou-page .seo-info-table{width:100%;border-collapse:collapse;margin:6px 0}
