@@ -224,6 +224,12 @@ def collect_entries(base: str) -> list[SitemapEntry]:
     if exam_dates.is_file():
         add_file(entries, base, "exam-dates/index.html", csv_dates=csv_dates)
 
+    sokuhou_root = ROOT / "kaitou-sokuhou"
+    if sokuhou_root.is_dir():
+        add_file(entries, base, "kaitou-sokuhou/index.html", csv_dates=csv_dates)
+        for path in sorted(sokuhou_root.glob("*/index.html")):
+            add_file(entries, base, path.relative_to(ROOT).as_posix(), csv_dates=csv_dates)
+
     essays_root = ROOT / "essays"
     if essays_root.is_dir():
         add_file(entries, base, "essays/index.html", csv_dates=csv_dates)
