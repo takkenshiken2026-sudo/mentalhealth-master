@@ -157,17 +157,24 @@
     );
   }
 
-  function canvasToBlob(canvas) {
-    return new Promise(function (resolve) {
-      if (canvas.toBlob) canvas.toBlob(resolve, "image/png");
-      else {
-        var url = canvas.toDataURL("image/png");
-        var bin = atob(url.split(",")[1]);
-        var arr = new Uint8Array(bin.length);
-        for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
-        resolve(new Blob([arr], { type: "image/png" }));
-      }
-    });
+  // 同期的に PNG ファイルを生成（ユーザー操作中に share/save を呼べるように）
+  function canvasToFile(canvas, name) {
+    var url = canvas.toDataURL("image/png");
+    var bin = atob(url.split(",")[1]);
+    var arr = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+    try { return new File([arr], name, { type: "image/png" }); }
+    catch (e) { var b = new Blob([arr], { type: "image/png" }); b.name = name; return b; }
+  }
+
+  function downloadFile(file, name) {
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(file);
+    a.download = name;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
   }
 
   function init(root) {
@@ -195,7 +202,6 @@
     var resultEl = root.querySelector("#sokuhou-result");
     var shareEl = root.querySelector("#sokuhou-share");
     var canvas = root.querySelector("#sokuhou-canvas");
-    var nativeBtn = root.querySelector("#sokuhou-share-native");
     var postBtn = root.querySelector("#sokuhou-post-x");
     var saveBtn = root.querySelector("#sokuhou-save-img");
 
@@ -238,6 +244,27 @@
     });
 
     function grade() {
+      // 未回答ハイライトをリセット
+      var mcells = grid.querySelectorAll(".sokuhou-q.is-missing");
+      for (var mi = 0; mi < mcells.length; mi++) mcells[mi].classList.remove("is-missing");
+      // 全問選択必須：未回答があれば採点結果を出さない
+      var unanswered = [];
+      answers.forEach(function (a) { if (picks[a.no] == null) unanswered.push(a.no); });
+      if (unanswered.length) {
+        last = null;
+        resultEl.hidden = false;
+        resultEl.className = "sokuhou-result is-warn";
+        resultEl.textContent = "未回答が " + unanswered.length + "問あります。全問に解答してから採点してください。";
+        shareEl.hidden = true;
+        var firstMiss = null;
+        for (var ui = 0; ui < unanswered.length; ui++) {
+          var mc = grid.querySelector('.sokuhou-q[data-no="' + unanswered[ui] + '"]');
+          if (mc) { mc.classList.add("is-missing"); if (!firstMiss) firstMiss = mc; }
+        }
+        if (firstMiss) firstMiss.scrollIntoView({ behavior: "smooth", block: "center" });
+        return;
+      }
+
       var score = 0, correct = 0, answered = 0;
       var detail = [];
       answers.forEach(function (a) {
@@ -267,11 +294,11 @@
       resultEl.className = "sokuhou-result is-" + res.key;
       resultEl.innerHTML =
         '<span class="sokuhou-result-score">得点 ' + score + " / " + total + "点" +
-        '<span class="sokuhou-result-sub">（正答 ' + correct + "/" + answers.length + "問" +
-        (answered < answers.length ? "・未解答 " + (answers.length - answered) + "問" : "") + "）</span></span>" +
+        '<span class="sokuhou-result-sub">（正答 ' + correct + "/" + answers.length + "問）</span></span>" +
         '<span class="sokuhou-result-verdict">' + verdictShort(res, data.pass) + "</span>";
 
       drawImage(canvas, data, last);
+      last.file = canvasToFile(canvas, (data.label || "mhm") + "-自己採点.png");
       shareEl.hidden = false;
       resultEl.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
@@ -294,44 +321,40 @@
     if (judgeBtn) judgeBtn.addEventListener("click", grade);
     if (clearBtn) clearBtn.addEventListener("click", clearAll);
 
-    // Web Share API（画像付き）対応端末のみボタン表示
-    var canShareFiles = false;
-    try {
-      canShareFiles = !!(navigator.canShare && navigator.canShare({
-        files: [new File([new Blob()], "x.png", { type: "image/png" })]
-      }));
-    } catch (e) { canShareFiles = false; }
-    if (canShareFiles && nativeBtn) nativeBtn.hidden = false;
+    var imgName = (data.label || "mhm") + "-自己採点.png";
 
-    if (nativeBtn) nativeBtn.addEventListener("click", function () {
-      if (!last) return;
-      canvasToBlob(canvas).then(function (blob) {
-        var file = new File([blob], "mhm-selfcheck.png", { type: "image/png" });
-        var payload = { text: shareText(data, last) + "\n" + data.url };
-        if (navigator.canShare && navigator.canShare({ files: [file] })) payload.files = [file];
-        navigator.share(payload).catch(function () {});
-      });
-    });
-
-    if (postBtn) postBtn.addEventListener("click", function () {
-      if (!last) { grade(); if (!last) return; }
-      var u = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(shareText(data, last)) +
+    function intentUrl(txt) {
+      var u = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(txt) +
         "&url=" + encodeURIComponent(data.url);
       if (data.hashtags) u += "&hashtags=" + encodeURIComponent(data.hashtags);
-      window.open(u, "_blank", "noopener");
-    });
+      return u;
+    }
+
+    // 画像を保存してから X の投稿画面を開く（非対応端末用フォールバック）
+    function fallbackShare(file, txt) {
+      downloadFile(file, imgName);
+      window.open(intentUrl(txt), "_blank", "noopener");
+    }
+
+    // X にシェア：対応端末は画像つきで共有、非対応は画像を自動保存して投稿画面を開く
+    function doShare() {
+      if (!last || !last.file) { grade(); if (!last || !last.file) return; }
+      var file = last.file, txt = shareText(data, last);
+      if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+        navigator.share({ files: [file], text: txt, url: data.url }).catch(function (e) {
+          if (e && e.name === "AbortError") return; // ユーザーがキャンセル
+          fallbackShare(file, txt);
+        });
+      } else {
+        fallbackShare(file, txt);
+      }
+    }
+
+    if (postBtn) postBtn.addEventListener("click", doShare);
 
     if (saveBtn) saveBtn.addEventListener("click", function () {
-      if (!last) { grade(); if (!last) return; }
-      canvasToBlob(canvas).then(function (blob) {
-        var a = document.createElement("a");
-        a.href = URL.createObjectURL(blob);
-        a.download = (data.label || "mhm") + "-自己採点.png";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
-      });
+      if (!last || !last.file) { grade(); if (!last || !last.file) return; }
+      downloadFile(last.file, imgName);
     });
   }
 

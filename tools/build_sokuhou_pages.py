@@ -203,12 +203,11 @@ def selfcheck_widget_html(
             '<canvas id="sokuhou-canvas" class="sokuhou-canvas" width="1200" height="880" '
             'aria-label="自己採点の結果画像"></canvas>'
             '<div class="sokuhou-share-actions">'
-            '<button type="button" id="sokuhou-share-native" class="sokuhou-btn-primary" hidden>画像付きでシェア</button>'
-            '<button type="button" id="sokuhou-post-x" class="sokuhou-btn-x">X でポスト</button>'
+            '<button type="button" id="sokuhou-post-x" class="sokuhou-btn-x">X にシェア（画像つき）</button>'
             '<button type="button" id="sokuhou-save-img" class="sokuhou-btn-ghost">画像を保存</button>'
             "</div>"
-            '<p class="sokuhou-share-note">X のポスト画面には画像を自動で添付できません。'
-            '「画像を保存」した画像を手動で添付してください（スマホは「画像付きでシェア」で X アプリに共有できます）。</p>'
+            '<p class="sokuhou-share-note">対応端末（スマホ等）では共有画面から画像つきで X に投稿できます。'
+            '非対応の場合は結果画像を自動保存し、X の投稿画面を開くので、その画像を添付してください。</p>'
             "</div>"
         )
 
