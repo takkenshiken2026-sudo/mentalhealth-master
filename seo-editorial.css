@@ -1620,3 +1620,7 @@ body.seo-editorial-preview-page .seo-editorial.seo-article-card .related-box-tit
 
 /* 未回答のハイライト（全問必須） */
 .sokuhou-q.is-missing{border-color:#e0a04d;background:#fff6e5;box-shadow:0 0 0 2px rgba(224,160,77,.3)}
+
+/* 画像なしでポスト（アウトライン版Xボタン） */
+.sokuhou-btn-x-outline{appearance:none;cursor:pointer;border:1px solid #111827;border-radius:10px;padding:13px 20px;font-size:1rem;font-weight:700;color:#111827;background:#fff}
+.sokuhou-btn-x-outline:hover{background:#f4f4f5}

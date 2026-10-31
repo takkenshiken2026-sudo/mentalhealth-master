@@ -203,6 +203,7 @@
     var shareEl = root.querySelector("#sokuhou-share");
     var canvas = root.querySelector("#sokuhou-canvas");
     var postBtn = root.querySelector("#sokuhou-post-x");
+    var postTextBtn = root.querySelector("#sokuhou-post-x-text");
     var saveBtn = root.querySelector("#sokuhou-save-img");
 
     var picks = {}; // no -> selected choice (string)
@@ -323,6 +324,13 @@
 
     var imgName = (data.label || "mhm") + "-自己採点.png";
 
+    function hashtagStr() {
+      if (!data.hashtags) return "";
+      return data.hashtags.split(",").map(function (h) { return "#" + h.trim(); })
+        .filter(function (h) { return h.length > 1; }).join(" ");
+    }
+
+    // X 投稿画面（web intent）：本文＋URL＋ハッシュタグ
     function intentUrl(txt) {
       var u = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(txt) +
         "&url=" + encodeURIComponent(data.url);
@@ -330,27 +338,44 @@
       return u;
     }
 
-    // 画像を保存してから X の投稿画面を開く（非対応端末用フォールバック）
-    function fallbackShare(file, txt) {
-      downloadFile(file, imgName);
-      window.open(intentUrl(txt), "_blank", "noopener");
+    // Web Share 用：本文・ハッシュタグ・URL を1つのテキストにまとめる
+    // （text と url を分けて渡すと X 側が URL しか拾わないため）
+    function shareBody() {
+      var parts = [shareText(data, last)];
+      var h = hashtagStr();
+      if (h) parts.push(h);
+      parts.push(data.url);
+      return parts.join("\n");
     }
 
-    // X にシェア：対応端末は画像つきで共有、非対応は画像を自動保存して投稿画面を開く
-    function doShare() {
+    // 画像を保存してから X の投稿画面を開く（画像つき非対応端末のフォールバック）
+    function fallbackShare() {
+      downloadFile(last.file, imgName);
+      window.open(intentUrl(shareText(data, last)), "_blank", "noopener");
+    }
+
+    // 画像つきでポスト：対応端末は画像＋本文＋ハッシュタグで共有、非対応は自動保存＋投稿画面
+    function doShareImage() {
       if (!last || !last.file) { grade(); if (!last || !last.file) return; }
-      var file = last.file, txt = shareText(data, last);
+      var file = last.file;
       if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
-        navigator.share({ files: [file], text: txt, url: data.url }).catch(function (e) {
+        navigator.share({ files: [file], text: shareBody() }).catch(function (e) {
           if (e && e.name === "AbortError") return; // ユーザーがキャンセル
-          fallbackShare(file, txt);
+          fallbackShare();
         });
       } else {
-        fallbackShare(file, txt);
+        fallbackShare();
       }
     }
 
-    if (postBtn) postBtn.addEventListener("click", doShare);
+    // 画像なしでポスト：本文＋ハッシュタグ＋URL のみ
+    function doPostText() {
+      if (!last) { grade(); if (!last) return; }
+      window.open(intentUrl(shareText(data, last)), "_blank", "noopener");
+    }
+
+    if (postBtn) postBtn.addEventListener("click", doShareImage);
+    if (postTextBtn) postTextBtn.addEventListener("click", doPostText);
 
     if (saveBtn) saveBtn.addEventListener("click", function () {
       if (!last || !last.file) { grade(); if (!last || !last.file) return; }
