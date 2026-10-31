@@ -1602,3 +1602,9 @@ body.seo-editorial-preview-page .seo-editorial.seo-article-card .related-box-tit
 .sokuhou-answer-note{font-size:.85rem;color:var(--text-muted,#555);margin:6px 0}
 .sokuhou-answer-table th{white-space:nowrap}
 .sokuhou-answer-table .sokuhou-ans{font-weight:800}
+
+/* ===== 解答一覧（パッと見えるグリッド） ===== */
+.sokuhou-anslist{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px;margin:12px 0 4px}
+.sokuhou-anslist-cell{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 11px;border:1px solid var(--border,rgba(0,0,0,.12));border-radius:8px;background:#fff}
+.sokuhou-anslist-q{font-size:.82rem;color:var(--text-muted,#555);white-space:nowrap}
+.sokuhou-anslist-a{font-size:1.1rem;font-weight:800;color:var(--accent,#4a6b5c);line-height:1}

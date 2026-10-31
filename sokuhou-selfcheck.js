@@ -53,51 +53,94 @@
     ctx.fillRect(0, 0, W, H);
     ctx.strokeStyle = "#e5e7eb";
     ctx.lineWidth = 2;
-    roundRect(ctx, 24, 24, W - 48, H - 48, 28);
+    roundRect(ctx, 16, 16, W - 32, H - 32, 26);
     ctx.stroke();
     ctx.fillStyle = ACCENT;
-    roundRect(ctx, 24, 24, W - 48, 14, 7);
+    roundRect(ctx, 16, 16, W - 32, 12, 6);
     ctx.fill();
 
     ctx.textBaseline = "alphabetic";
+    ctx.textAlign = "left";
+    // ヘッダー
     ctx.fillStyle = ACCENT;
-    ctx.font = "700 30px 'Noto Sans JP', sans-serif";
-    ctx.fillText("メンタルヘルス・マネジメント検定 解答速報", 70, 110);
+    ctx.font = "700 28px 'Noto Sans JP', sans-serif";
+    ctx.fillText("メンタルヘルス・マネジメント検定 解答速報", 60, 92);
     ctx.fillStyle = "#111827";
-    ctx.font = "700 42px 'Noto Sans JP', sans-serif";
-    ctx.fillText(data.label + "　" + data.exam, 70, 172);
+    ctx.font = "700 40px 'Noto Sans JP', sans-serif";
+    ctx.fillText(data.label + "　" + data.exam, 60, 150);
     ctx.fillStyle = "#6b7280";
-    ctx.font = "500 26px 'Noto Sans JP', sans-serif";
-    ctx.fillText(data.date + " 実施　自己採点", 70, 214);
+    ctx.font = "500 24px 'Noto Sans JP', sans-serif";
+    ctx.fillText(data.date + " 実施　自己採点", 60, 188);
 
     // 得点（大）
     ctx.fillStyle = "#111827";
-    ctx.font = "800 150px 'Noto Sans JP', sans-serif";
+    ctx.font = "800 120px 'Noto Sans JP', sans-serif";
     var scoreText = String(r.score);
-    ctx.fillText(scoreText, 70, 400);
+    ctx.fillText(scoreText, 60, 330);
     var sw = ctx.measureText(scoreText).width;
     ctx.fillStyle = "#6b7280";
-    ctx.font = "700 48px 'Noto Sans JP', sans-serif";
-    ctx.fillText("/ " + r.total + "点", 70 + sw + 24, 400);
-    ctx.font = "500 30px 'Noto Sans JP', sans-serif";
+    ctx.font = "700 40px 'Noto Sans JP', sans-serif";
+    ctx.fillText("/ " + r.total + "点", 60 + sw + 20, 330);
+    ctx.font = "500 26px 'Noto Sans JP', sans-serif";
     var sub = "正答 " + r.correct + "/" + r.n + "問";
     if (data.pass != null) sub += "　合格ライン " + data.pass + "点";
-    ctx.fillText(sub, 74, 452);
+    ctx.fillText(sub, 62, 372);
 
-    // 判定バッジ
+    // 判定バッジ（右上）
     var badge = verdictShort(r.res, data.pass);
-    ctx.font = "800 44px 'Noto Sans JP', sans-serif";
-    var bw = ctx.measureText(badge).width + 72;
-    var bx = 70, by = 486, bh = 84;
+    ctx.font = "800 40px 'Noto Sans JP', sans-serif";
+    var bw = ctx.measureText(badge).width + 56;
+    var bh = 76, by = 250, bx = W - 60 - bw;
     ctx.fillStyle = st.bg;
-    roundRect(ctx, bx, by, Math.min(bw, W - 140), bh, 18);
+    roundRect(ctx, bx, by, bw, bh, 16);
     ctx.fill();
     ctx.fillStyle = st.color;
-    ctx.fillText(badge, bx + 36, by + 56);
+    ctx.fillText(badge, bx + 28, by + 50);
+
+    // 回答一覧の見出し＋凡例
+    ctx.fillStyle = "#111827";
+    ctx.font = "700 26px 'Noto Sans JP', sans-serif";
+    var headTxt = "回答一覧（あなたの解答）";
+    ctx.fillText(headTxt, 60, 430);
+    var lx = 60 + ctx.measureText(headTxt).width + 30, ly = 412;
+    var legend = [["#e7f4ec", "#1f7a4d", "正解"], ["#f7e9e9", "#8a3d3d", "不正解"], ["#eef0f2", "#6b7280", "未回答"]];
+    ctx.font = "500 20px 'Noto Sans JP', sans-serif";
+    for (var li = 0; li < legend.length; li++) {
+      ctx.fillStyle = legend[li][0]; roundRect(ctx, lx, ly, 22, 22, 5); ctx.fill();
+      ctx.strokeStyle = legend[li][1]; ctx.lineWidth = 1; roundRect(ctx, lx, ly, 22, 22, 5); ctx.stroke();
+      ctx.fillStyle = "#374151"; ctx.fillText(legend[li][2], lx + 30, ly + 18);
+      lx += 30 + ctx.measureText(legend[li][2]).width + 26;
+    }
+
+    // 回答グリッド（10列×5行）
+    var detail = r.detail || [];
+    var cols = 10, cw = 103, ch = 54, gx = 8, gy = 8, ox = 60, oy = 462;
+    for (var i = 0; i < detail.length; i++) {
+      var d = detail[i];
+      var col = i % cols, row = Math.floor(i / cols);
+      var x = ox + col * (cw + gx), y = oy + row * (ch + gy);
+      var bg = d.blank ? "#eef0f2" : (d.ok ? "#e7f4ec" : "#f7e9e9");
+      var bd = d.blank ? "#d1d5db" : (d.ok ? "#bfe3cd" : "#e9c6c6");
+      ctx.fillStyle = bg; roundRect(ctx, x, y, cw, ch, 9); ctx.fill();
+      ctx.strokeStyle = bd; ctx.lineWidth = 1; roundRect(ctx, x, y, cw, ch, 9); ctx.stroke();
+      // 問番号
+      ctx.fillStyle = "#6b7280"; ctx.font = "600 15px 'Noto Sans JP', sans-serif"; ctx.textAlign = "left";
+      ctx.fillText(String(d.no), x + 9, y + 20);
+      // あなたの解答
+      ctx.fillStyle = d.blank ? "#9ca3af" : (d.ok ? "#1f7a4d" : "#8a3d3d");
+      ctx.font = "800 24px 'Noto Sans JP', sans-serif"; ctx.textAlign = "right";
+      ctx.fillText(d.blank ? "—" : String(d.user), x + cw - 11, y + 24);
+      // 不正解は正解も小さく表示
+      if (!d.blank && !d.ok) {
+        ctx.fillStyle = "#6b7280"; ctx.font = "500 13px 'Noto Sans JP', sans-serif"; ctx.textAlign = "right";
+        ctx.fillText("正 " + d.correct, x + cw - 11, y + ch - 8);
+      }
+      ctx.textAlign = "left";
+    }
 
     ctx.fillStyle = "#9ca3af";
-    ctx.font = "500 24px 'Noto Sans JP', sans-serif";
-    ctx.fillText("mentalhealth-master.jp", 70, H - 54);
+    ctx.font = "500 22px 'Noto Sans JP', sans-serif"; ctx.textAlign = "left";
+    ctx.fillText("mentalhealth-master.jp", 60, H - 34);
   }
 
   function shareText(data, r) {
@@ -190,29 +233,29 @@
 
     function grade() {
       var score = 0, correct = 0, answered = 0;
+      var detail = [];
       answers.forEach(function (a) {
         var sel = picks[a.no];
         var cell = grid.querySelector('.sokuhou-q[data-no="' + a.no + '"]');
         var mark = cell.querySelector(".sokuhou-q-mark");
         cell.classList.remove("is-correct", "is-wrong", "is-blank");
-        if (sel == null) {
+        var blank = (sel == null), ok = false;
+        if (blank) {
           cell.classList.add("is-blank");
           mark.textContent = "未";
-          return;
-        }
-        answered++;
-        if (String(sel) === String(a.correct)) {
-          score += (a.points || 0);
-          correct++;
-          cell.classList.add("is-correct");
-          mark.textContent = "○";
         } else {
-          cell.classList.add("is-wrong");
-          mark.textContent = "×→" + a.correct;
+          answered++;
+          if (String(sel) === String(a.correct)) {
+            score += (a.points || 0); correct++; ok = true;
+            cell.classList.add("is-correct"); mark.textContent = "○";
+          } else {
+            cell.classList.add("is-wrong"); mark.textContent = "×→" + a.correct;
+          }
         }
+        detail.push({ no: a.no, user: blank ? null : sel, correct: a.correct, ok: ok, blank: blank });
       });
       var res = judge(score, data.pass, total);
-      last = { score: score, total: total, correct: correct, n: answers.length, answered: answered, res: res };
+      last = { score: score, total: total, correct: correct, n: answers.length, answered: answered, res: res, detail: detail };
 
       resultEl.hidden = false;
       resultEl.className = "sokuhou-result is-" + res.key;

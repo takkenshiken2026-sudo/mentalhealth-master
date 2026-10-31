@@ -200,7 +200,7 @@ def selfcheck_widget_html(
             "</div>"
             '<div class="sokuhou-result" id="sokuhou-result" hidden></div>'
             '<div class="sokuhou-share" id="sokuhou-share" hidden>'
-            '<canvas id="sokuhou-canvas" class="sokuhou-canvas" width="1200" height="630" '
+            '<canvas id="sokuhou-canvas" class="sokuhou-canvas" width="1200" height="820" '
             'aria-label="自己採点の結果画像"></canvas>'
             '<div class="sokuhou-share-actions">'
             '<button type="button" id="sokuhou-share-native" class="sokuhou-btn-primary" hidden>画像付きでシェア</button>'
@@ -266,6 +266,31 @@ def answer_key_html(answers: list[dict], status: str, source: str = "") -> str:
         f'<p class="sokuhou-answer-note">{note}</p>'
         + table
         + "</details>"
+    )
+
+
+def answer_list_grid_html(answers: list[dict], status: str, source: str = "") -> str:
+    """解答一覧を一目で見えるグリッドで表示（問ラベル＋正解番号）。"""
+    if not answers:
+        if status == "upcoming":
+            return _notice("試験後に解答を公開します。公開までお待ちください。")
+        return _notice("解答を準備中です。公開まで今しばらくお待ちください。")
+
+    if source:
+        note = f"自己採点用の参考解答です（出典：{html.escape(source)}）。公式の標準解答ではありません。"
+    else:
+        note = "自己採点用の参考解答です。公式の標準解答ではありません。"
+
+    cells = "".join(
+        '<div class="sokuhou-anslist-cell">'
+        f'<span class="sokuhou-anslist-q">{html.escape(str(a.get("label") or ("問" + str(a["no"]))))}</span>'
+        f'<span class="sokuhou-anslist-a">{html.escape(str(a["correct"]))}</span>'
+        "</div>"
+        for a in answers
+    )
+    return (
+        f'<p class="sokuhou-answer-note">{note}</p>'
+        f'<div class="sokuhou-anslist" role="list">{cells}</div>'
     )
 
 
@@ -378,11 +403,13 @@ def build_round_page(round_row: dict[str, str], answers: list[dict]) -> str:
     )
 
     faq_list = faq_items(round_row, exam_date_jp)
+    source = _norm(round_row.get("source"))
     body_parts: list[str] = []
+    # 1) まず解答一覧をパッと見える形で
+    body_parts.append(section_wrap("解答一覧", answer_list_grid_html(answers, status, source), 1, "sokuhou-sec-answers"))
+    # 2) その下に自己採点ツール
     body_parts.append(selfcheck_widget_html(round_row, exam_date_jp, canonical, answers))
-    num = 1
-    body_parts.append(section_wrap("解答一覧（自己採点用）", answer_key_html(answers, status, _norm(round_row.get("source"))), num, "sokuhou-sec-answers"))
-    num += 1
+    num = 2
     body_parts.append(section_wrap("試験の基本情報", exam_info_table_html(round_row, exam_date_jp), num, "sokuhou-sec-info"))
     num += 1
     body_parts.append(section_wrap("公式の標準解答・成績照会の予定", official_info_html(round_row), num, "sokuhou-sec-official"))
