@@ -200,7 +200,7 @@ def selfcheck_widget_html(
             "</div>"
             '<div class="sokuhou-result" id="sokuhou-result" hidden></div>'
             '<div class="sokuhou-share" id="sokuhou-share" hidden>'
-            '<canvas id="sokuhou-canvas" class="sokuhou-canvas" width="1200" height="820" '
+            '<canvas id="sokuhou-canvas" class="sokuhou-canvas" width="1200" height="880" '
             'aria-label="自己採点の結果画像"></canvas>'
             '<div class="sokuhou-share-actions">'
             '<button type="button" id="sokuhou-share-native" class="sokuhou-btn-primary" hidden>画像付きでシェア</button>'

@@ -100,21 +100,24 @@
     // 回答一覧の見出し＋凡例
     ctx.fillStyle = "#111827";
     ctx.font = "700 26px 'Noto Sans JP', sans-serif";
-    var headTxt = "回答一覧（あなたの解答）";
-    ctx.fillText(headTxt, 60, 430);
-    var lx = 60 + ctx.measureText(headTxt).width + 30, ly = 412;
+    var headTxt = "回答一覧（あなたの解答と正答）";
+    ctx.fillText(headTxt, 60, 428);
+    var lx = 60 + ctx.measureText(headTxt).width + 28, ly = 410;
     var legend = [["#e7f4ec", "#1f7a4d", "正解"], ["#f7e9e9", "#8a3d3d", "不正解"], ["#eef0f2", "#6b7280", "未回答"]];
     ctx.font = "500 20px 'Noto Sans JP', sans-serif";
     for (var li = 0; li < legend.length; li++) {
       ctx.fillStyle = legend[li][0]; roundRect(ctx, lx, ly, 22, 22, 5); ctx.fill();
       ctx.strokeStyle = legend[li][1]; ctx.lineWidth = 1; roundRect(ctx, lx, ly, 22, 22, 5); ctx.stroke();
       ctx.fillStyle = "#374151"; ctx.fillText(legend[li][2], lx + 30, ly + 18);
-      lx += 30 + ctx.measureText(legend[li][2]).width + 26;
+      lx += 30 + ctx.measureText(legend[li][2]).width + 24;
     }
+    // 各セルの見方
+    ctx.fillStyle = "#6b7280"; ctx.font = "500 18px 'Noto Sans JP', sans-serif"; ctx.textAlign = "left";
+    ctx.fillText("「答」＝あなたの解答　「正」＝正答", 60, 458);
 
-    // 回答グリッド（10列×5行）
+    // 回答グリッド（10列×5行）：各問に あなたの解答 と 正答 を併記
     var detail = r.detail || [];
-    var cols = 10, cw = 103, ch = 54, gx = 8, gy = 8, ox = 60, oy = 462;
+    var cols = 10, cw = 100, ch = 62, gx = 8, gy = 8, ox = 60, oy = 478;
     for (var i = 0; i < detail.length; i++) {
       var d = detail[i];
       var col = i % cols, row = Math.floor(i / cols);
@@ -123,18 +126,21 @@
       var bd = d.blank ? "#d1d5db" : (d.ok ? "#bfe3cd" : "#e9c6c6");
       ctx.fillStyle = bg; roundRect(ctx, x, y, cw, ch, 9); ctx.fill();
       ctx.strokeStyle = bd; ctx.lineWidth = 1; roundRect(ctx, x, y, cw, ch, 9); ctx.stroke();
-      // 問番号
-      ctx.fillStyle = "#6b7280"; ctx.font = "600 15px 'Noto Sans JP', sans-serif"; ctx.textAlign = "left";
-      ctx.fillText(String(d.no), x + 9, y + 20);
-      // あなたの解答
+      // 問番号（左上）
+      ctx.fillStyle = "#6b7280"; ctx.font = "700 15px 'Noto Sans JP', sans-serif"; ctx.textAlign = "left";
+      ctx.fillText(String(d.no), x + 9, y + 21);
+      // あなたの解答（答 X）
+      ctx.textAlign = "right";
+      ctx.fillStyle = "#9ca3af"; ctx.font = "500 14px 'Noto Sans JP', sans-serif";
+      ctx.fillText("答", x + cw - 42, y + 25);
       ctx.fillStyle = d.blank ? "#9ca3af" : (d.ok ? "#1f7a4d" : "#8a3d3d");
-      ctx.font = "800 24px 'Noto Sans JP', sans-serif"; ctx.textAlign = "right";
-      ctx.fillText(d.blank ? "—" : String(d.user), x + cw - 11, y + 24);
-      // 不正解は正解も小さく表示
-      if (!d.blank && !d.ok) {
-        ctx.fillStyle = "#6b7280"; ctx.font = "500 13px 'Noto Sans JP', sans-serif"; ctx.textAlign = "right";
-        ctx.fillText("正 " + d.correct, x + cw - 11, y + ch - 8);
-      }
+      ctx.font = "800 22px 'Noto Sans JP', sans-serif";
+      ctx.fillText(d.blank ? "—" : String(d.user), x + cw - 12, y + 27);
+      // 正答（正 Y）
+      ctx.fillStyle = "#9ca3af"; ctx.font = "500 14px 'Noto Sans JP', sans-serif";
+      ctx.fillText("正", x + cw - 42, y + 52);
+      ctx.fillStyle = "#374151"; ctx.font = "800 22px 'Noto Sans JP', sans-serif";
+      ctx.fillText(String(d.correct), x + cw - 12, y + 54);
       ctx.textAlign = "left";
     }
 
