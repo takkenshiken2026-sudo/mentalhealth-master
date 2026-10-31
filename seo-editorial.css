@@ -15,6 +15,7 @@ body.term-article-page,
 body.compare-article-page,
 body.numbers-article-page,
 body.mistakes-article-page,
+body.sokuhou-page,
 body.seo-editorial-preview-page {
   /* --- タイポグラフィ --- */
   --seo-font-body: var(--font, "Noto Sans JP", sans-serif);
@@ -1615,6 +1616,12 @@ body.seo-editorial-preview-page .seo-editorial.seo-article-card .related-box-tit
 .sokuhou-ans-table th:first-child{width:1%;white-space:nowrap;font-weight:700}
 .sokuhou-ans-table thead th:last-child,.sokuhou-ans-table td{width:100%}
 .sokuhou-ans-table td{line-height:2.1}
+/* 全セルに枠線（線が抜けないように） */
+.sokuhou-page .sokuhou-ans-table{border:1px solid var(--border,rgba(0,0,0,.16))}
+.sokuhou-page .sokuhou-ans-table th,.sokuhou-page .sokuhou-ans-table td{border:1px solid var(--border,rgba(0,0,0,.16))}
+
+/* 関連コンテンツの上に余白 */
+.sokuhou-page .related-box{margin-top:30px}
 .sokuhou-ans-pair{display:inline-block;min-width:3.2em;margin:0 .5em .2em 0;color:var(--text-muted,#555)}
 .sokuhou-ans-pair b{color:var(--accent,#4a6b5c);font-weight:800;margin-left:.2em}
 

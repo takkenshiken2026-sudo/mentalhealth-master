@@ -190,9 +190,7 @@ def selfcheck_widget_html(
         answers_json = json.dumps(answers, ensure_ascii=False, separators=(",", ":"))
         total = sum(a["points"] for a in answers)
         body = (
-            '<p class="sokuhou-selfcheck-lead">問題ごとに自分の解答を選ぶと、参考解答と照合して'
-            '得点を自動計算し、合格ラインに届いているかを判定します。結果はカード画像にして'
-            ' X（旧Twitter）へシェアできます。</p>'
+            '<p class="sokuhou-selfcheck-lead">問題ごとに自分の解答を選び、「採点する」を押すと得点と合否ラインを自動で判定します。</p>'
             '<div class="sokuhou-grid" id="sokuhou-grid" aria-label="問題ごとの解答入力"></div>'
             '<div class="sokuhou-grid-actions">'
             '<button type="button" id="sokuhou-judge" class="sokuhou-btn-primary">採点する</button>'
@@ -207,9 +205,7 @@ def selfcheck_widget_html(
             '<button type="button" id="sokuhou-post-x-text" class="sokuhou-btn-x-outline">画像なしでポスト</button>'
             '<button type="button" id="sokuhou-save-img" class="sokuhou-btn-ghost">画像を保存</button>'
             "</div>"
-            '<p class="sokuhou-share-note">「画像つきでポスト」は、対応端末（スマホ等）では共有画面から本文・ハッシュタグ・画像つきで投稿できます。'
-            '非対応の端末では結果画像を自動保存し、X の投稿画面（本文・ハッシュタグ入り）を開くので、その画像を添付してください。'
-            '「画像なしでポスト」は本文・ハッシュタグのみで投稿します。</p>'
+            '<p class="sokuhou-share-note">対応端末は画像つきで投稿できます。非対応の端末では画像を保存してX投稿画面を開きます。</p>'
             "</div>"
         )
 
@@ -225,8 +221,7 @@ def selfcheck_widget_html(
         f"{body}"
         f'<script type="application/json" id="sokuhou-answers">{answers_json}</script>'
         f"{note_html}"
-        '<p class="sokuhou-selfcheck-disclaimer">※ 本ツールは自己採点用の参考解答で採点します（公式の標準解答ではありません）。'
-        '正式な合否・得点は公式の成績照会・結果通知でご確認ください。入力した解答はこの端末内だけで処理され、外部へ送信・保存されません。</p>'
+        '<p class="sokuhou-selfcheck-disclaimer">※ 参考解答での自己採点です（公式の標準解答ではありません）。入力内容は端末内のみで処理し、保存・送信しません。</p>'
         "</section>"
     )
 
