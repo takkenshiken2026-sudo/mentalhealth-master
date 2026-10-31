@@ -1603,8 +1603,17 @@ body.seo-editorial-preview-page .seo-editorial.seo-article-card .related-box-tit
 .sokuhou-answer-table th{white-space:nowrap}
 .sokuhou-answer-table .sokuhou-ans{font-weight:800}
 
-/* ===== 解答一覧（パッと見えるグリッド） ===== */
-.sokuhou-anslist{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:8px;margin:12px 0 4px}
-.sokuhou-anslist-cell{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 11px;border:1px solid var(--border,rgba(0,0,0,.12));border-radius:8px;background:#fff}
-.sokuhou-anslist-q{font-size:.82rem;color:var(--text-muted,#555);white-space:nowrap}
-.sokuhou-anslist-a{font-size:1.1rem;font-weight:800;color:var(--accent,#4a6b5c);line-height:1}
+/* タイトル：太く大きく（どの回の試験かひと目で分かるように）
+   .seo-editorial.seo-article-card .article-title（var 依存）より詳細度を上げて実値で上書き */
+.sokuhou-page.seo-article-card .article-title,
+.sokuhou-page .seo-article-card .article-title{font-size:2.1rem!important;font-weight:800!important;line-height:1.4;color:var(--text,#111827);margin:2px 0 12px;letter-spacing:.01em;border-bottom:0;padding-bottom:0}
+@media(max-width:520px){.sokuhou-page.seo-article-card .article-title,.sokuhou-page .seo-article-card .article-title{font-size:1.6rem!important}}
+
+/* ===== 解答一覧（表） ===== */
+.sokuhou-ans-table{width:100%}
+.sokuhou-ans-table thead th{background:var(--accent,#4a6b5c);color:#fff;font-weight:700;white-space:nowrap}
+.sokuhou-ans-table th:first-child{width:1%;white-space:nowrap;font-weight:700}
+.sokuhou-ans-table thead th:last-child,.sokuhou-ans-table td{width:100%}
+.sokuhou-ans-table td{line-height:2.1}
+.sokuhou-ans-pair{display:inline-block;min-width:3.2em;margin:0 .5em .2em 0;color:var(--text-muted,#555)}
+.sokuhou-ans-pair b{color:var(--accent,#4a6b5c);font-weight:800;margin-left:.2em}

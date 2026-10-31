@@ -270,7 +270,7 @@ def answer_key_html(answers: list[dict], status: str, source: str = "") -> str:
 
 
 def answer_list_grid_html(answers: list[dict], status: str, source: str = "") -> str:
-    """解答一覧を一目で見えるグリッドで表示（問ラベル＋正解番号）。"""
+    """解答一覧を表で分かりやすく表示。第N問(M) ラベルがあれば大問ごとに1行へまとめる。"""
     if not answers:
         if status == "upcoming":
             return _notice("試験後に解答を公開します。公開までお待ちください。")
@@ -281,17 +281,47 @@ def answer_list_grid_html(answers: list[dict], status: str, source: str = "") ->
     else:
         note = "自己採点用の参考解答です。公式の標準解答ではありません。"
 
-    cells = "".join(
-        '<div class="sokuhou-anslist-cell">'
-        f'<span class="sokuhou-anslist-q">{html.escape(str(a.get("label") or ("問" + str(a["no"]))))}</span>'
-        f'<span class="sokuhou-anslist-a">{html.escape(str(a["correct"]))}</span>'
-        "</div>"
-        for a in answers
-    )
-    return (
-        f'<p class="sokuhou-answer-note">{note}</p>'
-        f'<div class="sokuhou-anslist" role="list">{cells}</div>'
-    )
+    grouped = any("(" in (a.get("label") or "") for a in answers)
+    if grouped:
+        # 大問（第N問）ごとに1行。セルに小問(（M)）と解答を並べる。
+        order: list[str] = []
+        groups: dict[str, list[dict]] = {}
+        for a in answers:
+            label = a.get("label") or f"問{a['no']}"
+            idx = label.find("(")
+            dai = label[:idx] if idx > 0 else label
+            sho = label[idx:] if idx > 0 else ""
+            if dai not in groups:
+                groups[dai] = []
+                order.append(dai)
+            groups[dai].append({"sho": sho, "correct": a["correct"]})
+        rows = []
+        for dai in order:
+            pairs = "".join(
+                f'<span class="sokuhou-ans-pair">{html.escape(p["sho"])}<b>{html.escape(str(p["correct"]))}</b></span>'
+                for p in groups[dai]
+            )
+            rows.append(f"<tr><th>{html.escape(dai)}</th><td>{pairs}</td></tr>")
+        table = (
+            '<table class="seo-info-table sokuhou-ans-table"><thead>'
+            "<tr><th>設問</th><th>解答</th></tr></thead><tbody>"
+            + "".join(rows)
+            + "</tbody></table>"
+        )
+    else:
+        # ラベルが無い（問1,2,…）場合は 問｜解答 の表。
+        rows = "".join(
+            f'<tr><th>{html.escape(str(a.get("label") or ("問" + str(a["no"]))))}</th>'
+            f'<td class="sokuhou-ans">{html.escape(str(a["correct"]))}</td></tr>'
+            for a in answers
+        )
+        table = (
+            '<table class="seo-info-table sokuhou-ans-table"><thead>'
+            "<tr><th>問</th><th>解答</th></tr></thead><tbody>"
+            + rows
+            + "</tbody></table>"
+        )
+    return f'<p class="sokuhou-answer-note">{note}</p>{table}'
 
 
 def official_info_html(round_row: dict[str, str]) -> str:
