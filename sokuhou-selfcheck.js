@@ -151,7 +151,7 @@
 
   function shareText(data, r) {
     return (
-      "【" + data.label + data.exam + " 自己採点】\n" +
+      "【" + data.label + data.exam + " 解答速報・自己採点】\n" +
       "得点 " + r.score + "/" + r.total + "点（正答 " + r.correct + "/" + r.n + "問）\n" +
       "→ " + verdictShort(r.res, data.pass)
     );
@@ -209,14 +209,33 @@
     var picks = {}; // no -> selected choice (string)
     var last = null;
 
-    // 問題グリッド生成
+    // 問題グリッド生成（大問「第N問」ごとにまとめて改行）
+    function daimonOf(a) { var l = a.label || ""; var i = l.indexOf("("); return i > 0 ? l.slice(0, i) : ""; }
+    function shoOf(a) { var l = a.label || ""; var i = l.indexOf("("); return i >= 0 ? l.slice(i) : (l || ("問" + a.no)); }
+    var curDai = null, curQs = null;
     answers.forEach(function (a) {
+      var dai = daimonOf(a);
+      if (curQs === null || dai !== curDai) {
+        curDai = dai;
+        var wrap = document.createElement("div");
+        wrap.className = "sokuhou-daimon";
+        if (dai) {
+          var head = document.createElement("div");
+          head.className = "sokuhou-daimon-head";
+          head.textContent = dai;
+          wrap.appendChild(head);
+        }
+        curQs = document.createElement("div");
+        curQs.className = "sokuhou-daimon-qs";
+        wrap.appendChild(curQs);
+        grid.appendChild(wrap);
+      }
       var cell = document.createElement("div");
       cell.className = "sokuhou-q";
       cell.setAttribute("data-no", a.no);
       var label = document.createElement("div");
       label.className = "sokuhou-q-label";
-      label.textContent = a.label || ("問" + a.no);
+      label.textContent = shoOf(a);
       cell.appendChild(label);
       var choices = document.createElement("div");
       choices.className = "sokuhou-choices";
@@ -227,7 +246,7 @@
           btn.type = "button";
           btn.className = "sokuhou-choice";
           btn.textContent = String(c);
-          btn.setAttribute("aria-label", "問" + a.no + " 選択肢" + c);
+          btn.setAttribute("aria-label", (a.label || ("問" + a.no)) + " 選択肢" + c);
           btn.addEventListener("click", function () {
             var all = choices.querySelectorAll(".sokuhou-choice");
             for (var k = 0; k < all.length; k++) all[k].classList.remove("is-selected");
@@ -241,7 +260,7 @@
       var mark = document.createElement("span");
       mark.className = "sokuhou-q-mark";
       cell.appendChild(mark);
-      grid.appendChild(cell);
+      curQs.appendChild(cell);
     });
 
     function grade() {

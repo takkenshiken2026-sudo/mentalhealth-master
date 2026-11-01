@@ -216,7 +216,7 @@ def selfcheck_widget_html(
         f' data-total="{total}"{pass_attr}'
         f' data-url="{html.escape(canonical, quote=True)}"'
         f' data-date="{html.escape(exam_date_jp, quote=True)}"'
-        ' data-hashtags="メンタルヘルスマネジメント検定,自己採点">'
+        ' data-hashtags="メンタルヘルスマネジメント検定,解答速報,自己採点">'
         '<h2 class="sokuhou-selfcheck-title">自己採点（問題ごとに入力）</h2>'
         f"{body}"
         f'<script type="application/json" id="sokuhou-answers">{answers_json}</script>'

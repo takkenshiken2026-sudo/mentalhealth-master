@@ -1583,7 +1583,10 @@ body.seo-editorial-preview-page .seo-editorial.seo-article-card .related-box-tit
 .sokuhou-share-note,.sokuhou-selfcheck-note,.sokuhou-selfcheck-disclaimer{margin:12px 0 0;font-size:.85rem;color:var(--text-muted,#666);line-height:1.7}
 
 /* ===== 自己採点：問題別グリッド／独自解答 ===== */
-.sokuhou-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(144px,1fr));gap:10px;margin:10px 0 16px}
+.sokuhou-grid{display:block;margin:10px 0 16px}
+.sokuhou-daimon{margin:0 0 16px}
+.sokuhou-daimon-head{font-weight:700;font-size:.95rem;color:var(--accent,#4a6b5c);margin:0 0 8px;padding-bottom:5px;border-bottom:1px solid var(--border,rgba(0,0,0,.12))}
+.sokuhou-daimon-qs{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:8px}
 .sokuhou-q{position:relative;display:flex;flex-direction:column;gap:6px;padding:8px 10px;border:1px solid var(--border,rgba(0,0,0,.12));border-radius:10px;background:#fff}
 .sokuhou-q-label{font-weight:700;font-size:.85rem;color:var(--text-muted,#555)}
 .sokuhou-choices{display:flex;flex-wrap:nowrap;gap:5px}
