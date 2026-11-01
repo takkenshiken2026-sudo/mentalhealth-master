@@ -386,16 +386,26 @@ def disclaimer_html() -> str:
     )
 
 
-def faq_items(round_row: dict[str, str], exam_date_jp: str) -> list[dict[str, str]]:
+def faq_items(round_row: dict[str, str], exam_date_jp: str, published: bool = False) -> list[dict[str, str]]:
     label = _norm(round_row.get("exam_label"))
-    return [
-        {
+    if published:
+        first = {
+            "question": f"{label}の解答は公開されていますか？",
+            "answer": (
+                "はい。本ページで参考解答を公開しています。問題ごとに自己採点でき、"
+                "結果画像を X へシェアできます。"
+            ),
+        }
+    else:
+        first = {
             "question": f"{label}の解答はいつ公開されますか？",
             "answer": (
                 f"試験当日（{exam_date_jp}）の試験終了後に、参考解答を順次公開します。"
                 "公開後は、このページで問題ごとに自己採点できます。"
             ),
-        },
+        }
+    return [
+        first,
         {
             "question": "この解答は公式のものですか？",
             "answer": (
@@ -428,7 +438,8 @@ def build_round_page(round_row: dict[str, str], answers: list[dict]) -> str:
         "問題ごとに自己採点できるツールを掲載。合格ライン判定・結果画像の X シェアに対応します。"
     )
 
-    faq_list = faq_items(round_row, exam_date_jp)
+    published = bool(answers)
+    faq_list = faq_items(round_row, exam_date_jp, published=published)
     source = _norm(round_row.get("source"))
     body_parts: list[str] = []
     # 1) まず解答一覧をパッと見える形で
@@ -490,10 +501,16 @@ def build_round_page(round_row: dict[str, str], answers: list[dict]) -> str:
         [("トップ", "../../index.html"), ("解答速報", "../index.html"), (f"{exam_label} 解答速報", None)],
     )
     article_class = seo_editorial_article_class(extra="sokuhou-page")
-    lead = (
-        f"{exam_label}{exam_name()}（{exam_date_jp}実施）の解答速報・自己採点ページです。"
-        "参考解答で、問題ごとに点数を計算し合格ラインを判定します。試験後に順次更新します。"
-    )
+    if published:
+        lead = (
+            f"{exam_label}{exam_name()}（{exam_date_jp}実施）の解答速報・自己採点ページです。"
+            "参考解答を公開中。問題ごとに点数を計算し、合格ラインを判定できます。"
+        )
+    else:
+        lead = (
+            f"{exam_label}{exam_name()}（{exam_date_jp}実施）の解答速報・自己採点ページです。"
+            "参考解答で、問題ごとに点数を計算し合格ラインを判定します。試験後に順次更新します。"
+        )
 
     return f"""<!DOCTYPE html>
 <html lang="ja">
