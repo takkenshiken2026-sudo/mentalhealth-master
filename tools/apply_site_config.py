@@ -636,7 +636,15 @@ def inject_index_course_switcher(text: str) -> str:
     band = course_switcher_html()
     if not band or _PAGE_SUB_ANCHOR not in text:
         return text
-    return text.replace(_PAGE_SUB_ANCHOR, _PAGE_SUB_ANCHOR + band, 1)
+    # サブ見出し直後に解答速報リンク(<p class="sokuhou-top-link">)があれば、
+    # そのリンクをサブ直下に保ったまま、その後ろにバンドを置く。
+    anchor_re = re.compile(
+        re.escape(_PAGE_SUB_ANCHOR) + r'\s*(?:<p class="sokuhou-top-link"[^>]*>.*?</p>)?',
+        re.S,
+    )
+    m = anchor_re.search(text)
+    chunk = m.group(0)
+    return text.replace(chunk, chunk + band, 1)
 
 
 def inject_related_sites_other_courses(text: str) -> str:
