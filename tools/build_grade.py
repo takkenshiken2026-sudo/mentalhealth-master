@@ -155,6 +155,26 @@ def _overlay_grade(site: Path, grade: Grade) -> None:
     shutil.copytree(grade.data_dir, data_dst)
 
 
+_SOKUHOU_TOP_LINK_RE = re.compile(r'<p class="sokuhou-top-link"[^>]*>.*?</p>', re.S)
+_SOKUHOU_NEUTRAL_LINK = (
+    '<p class="sokuhou-top-link" style="margin:12px 0 2px">'
+    '<a href="kaitou-sokuhou/41/" style="color:#c0392b;font-weight:700;'
+    'text-decoration:underline;white-space:nowrap">'
+    '第41回の解答速報・自己採点はこちら &rarr;</a></p>'
+)
+
+
+def _neutralize_sokuhou_announcement(site: Path) -> None:
+    """副種トップでは『公開しました（日時）』告知を中立リンクへ置換（副種は未公開のため）。"""
+    index = site / "index.html"
+    if not index.is_file():
+        return
+    text = index.read_text(encoding="utf-8")
+    new = _SOKUHOU_TOP_LINK_RE.sub(_SOKUHOU_NEUTRAL_LINK, text, count=1)
+    if new != text:
+        index.write_text(new, encoding="utf-8")
+
+
 def build(grade_id: str, *, keep_stage: bool = False) -> Path:
     grade = get_grade(grade_id)
     if grade.primary:
@@ -173,6 +193,7 @@ def build(grade_id: str, *, keep_stage: bool = False) -> Path:
         rekey_stage(grade_id, site)
         _strip_exam_dates_nav(site)
         _strip_absent_section_nav(site)
+        _neutralize_sokuhou_announcement(site)
 
         env = {**os.environ, "EXAM_SITE_ROOT": str(site), "EXAM_SKELETON": "1"}
         subprocess.run([sys.executable, "tools/build_all.py"], cwd=site, check=True, env=env)
