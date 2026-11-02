@@ -20,10 +20,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def field_hub_page_exists(category: str) -> bool:
-    if not category or not glossary_field_id(category):
-        return False
-    hub = field_hub_slug(category)
-    return (ROOT / "terms" / hub / "index.html").is_file()
+    # 用語解説セクションは廃止済み。分野別用語ハブ（terms/<hub>/index.html）は
+    # 404 回避用のリダイレクト stub しか残っていないため、実体は存在しない扱いとし、
+    # 各ビルダー（過去問・演習・記事）が「<分野>の用語一覧」リンクを張らないようにする。
+    return False
 
 from tools.glossary_past_questions import (  # noqa: E402
     find_past_questions_for_term,

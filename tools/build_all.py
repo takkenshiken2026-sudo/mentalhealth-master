@@ -56,6 +56,7 @@ def main() -> int:
     maybe_run_exam_schedule_page(py)
     maybe_run_essays_page(py)
     run([py, "tools/build_sokuhou_pages.py"])
+    run([py, "tools/build_terms_retire_redirects.py"])
     run([py, "tools/inject_adsense_head.py"])
     run([py, "tools/build_sitemap.py"])
     run([py, "tools/validate_sitemap.py"])
