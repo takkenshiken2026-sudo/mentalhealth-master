@@ -17,9 +17,6 @@ for f in \
   site-theme.css \
   seo-editorial.css \
   site-q-index.js \
-  site-compare-index.js \
-  site-knowledge-hub-index.js \
-  site-priority-index.js \
   site-analytics.js \
   sokuhou-selfcheck.js \
   CNAME \
