@@ -88,12 +88,6 @@ LEARNING_NAV_ITEMS: list[tuple[str, str, str, str]] = [
         '<svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 1"/></svg>',
     ),
     (
-        "tnav-dash",
-        "記録・分析",
-        "#dash",
-        '<svg viewBox="0 0 16 16"><path d="M2 13L5 8l3 2 3-5 3 2"/></svg>',
-    ),
-    (
         "tnav-review",
         "復習",
         "#review",

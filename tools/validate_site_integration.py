@@ -401,7 +401,6 @@ def _spa_nav_hash_hrefs() -> dict[str, str]:
         "tnav-ichimondou": "#ichimondou",
         "tnav-orig": "#orig",
         "tnav-past": "#past",
-        "tnav-dash": "#dash",
         "tnav-review": "#review",
     }
     if bp:

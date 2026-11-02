@@ -427,7 +427,6 @@ const PAGE_SEO = {
   'quiz-start': _pageSeo(_cfgQuizStartTitle(), '{exam}の学習モードを選択。実践演習・過去問・一問一答から選んで学習スタート。', '/', ''),
   'past-config': _pageSeo('過去問演習', '{exam}の過去問を年度別・分野別に絞り込んで学習。', '/#past', '#past'),
   'orig': _pageSeo('実践演習', '{exam}対策の実践演習問題。分野別データで弱点克服。', '/#orig', '#orig'),
-  'dash': _pageSeo('記録・学習分析', '学習日記カレンダー・獲得バッジ・レベルや分野別正答率で、学習の振り返りと弱点把握ができます。', '/#dash', '#dash'),
   'review': _pageSeo('復習', '不正解・未解答の演習問題を分野別にまとめて復習。弱点問題を集中的に解いて定着率を上げる。', '/#review', '#review'),
   'ichimondou': _pageSeo('一問一答', '{exam}の重要知識を一問一答形式で確認。短時間で基礎知識の定着を進められます。', '/#ichimondou', '#ichimondou')
 };
