@@ -57,50 +57,49 @@ def validate_guide_index_picks(root: Path) -> list[Issue]:
 
     cfg_path = root / "site-config.json"
     if not cfg_path.is_file():
-        issues.append(Issue("公開済みアフィリエイトがあるのに site-config.json がありません"))
+        # ハブ（guideIndexPicks）での掲出は任意。設定が無ければ検証対象なし。
         return issues
 
     cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
     picks = cfg.get("guideIndexPicks")
     if not isinstance(picks, dict):
-        issues.append(
-            Issue(
-                f"公開済みアフィリエイト {len(pub)} 本あり。"
-                " site-config.json に guideIndexPicks を設定してください（articles/terms/q 一覧カード）。"
-            )
-        )
+        # guideIndexPicks 未設定でも可（アフィリエイト記事をハブで必須掲出しない運用を許容）。
         return issues
 
     items = picks.get("items")
     if not isinstance(items, list) or not items:
-        issues.append(Issue("guideIndexPicks.items が空です。公開済み affiliate-* を最大3枚設定してください。"))
+        issues.append(Issue("guideIndexPicks.items が空です。表示する項目を設定してください。"))
         return issues
 
-    pick_slugs: list[str] = []
+    has_item = False
     for idx, item in enumerate(items[:3], start=1):
         if not isinstance(item, dict):
             issues.append(Issue(f"guideIndexPicks.items[{idx}] がオブジェクトではありません"))
             continue
         href = str(item.get("href") or "").strip()
-        slug = _slug_from_href(href)
-        if not slug:
+        if not href:
             issues.append(Issue(f"guideIndexPicks.items[{idx}] の href が空です"))
             continue
-        pick_slugs.append(slug)
-        if slug not in pub:
-            issues.append(
-                Issue(
-                    f"guideIndexPicks.items[{idx}] の href={slug!r} は"
-                    f" 公開済みアフィリエイトではありません（公開: {sorted(pub)!r}）"
+        has_item = True
+        is_external = href.startswith(("http://", "https://"))
+        slug = _slug_from_href(href)
+        # アフィリエイト記事を指す項目だけ「公開済みか」を検証（壊れた/未公開リンク防止）。
+        # 模試(note)など外部・非アフィリエイトの導線はこの検証の対象外。
+        if not is_external and (slug.startswith("affiliate-") or slug in pub):
+            if slug not in pub:
+                issues.append(
+                    Issue(
+                        f"guideIndexPicks.items[{idx}] の href={slug!r} は"
+                        f" 公開済みアフィリエイトではありません（公開: {sorted(pub)!r}）"
+                    )
                 )
-            )
         image = str(item.get("image") or "").strip()
         if image:
             img_path = root / image.lstrip("/")
             if not img_path.is_file():
                 issues.append(Issue(f"guideIndexPicks.items[{idx}] の画像がありません: {image}"))
 
-    if not pick_slugs:
+    if not has_item:
         return issues
 
     for hub, label in (

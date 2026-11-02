@@ -270,54 +270,31 @@
       }
     ]
   },
-  "topAffiliateBanner": {
-    "url": "https://t.afi-b.com/visit.php?a=y7404W-g7355640_T&p=b981480C",
-    "title": "スタディング メンタルヘルス・マネジメント検定II種",
-    "meta": "スマホで最短合格を目指す通信講座",
-    "ctaLabel": "無料で講座を見る",
-    "image": "images/paid-mock/MentalHealthManagement-studying.webp",
-    "imageAlt": "スタディング メンタルヘルス・マネジメント検定II種 — スマホで最短合格を目指す（無料で講座を見る）",
-    "pixel": "https://t.afi-b.com/lead/y7404W/b981480C/g7355640_T"
-  },
   "guideIndexPicks": {
-    "title": "おすすめの講座・テキスト・問題集",
-    "lead": "2026年度版の比較記事から、講座・テキスト・問題集の選び方へ。",
+    "title": "本番形式の予想模試で力試し",
+    "lead": "無料の演習に加えて、本番形式の予想模試（note・各¥980）で時間配分と弱点を確認できます。",
     "leadsByHub": {
-      "articles": "2026年度版の比較記事から、講座・テキスト・問題集の選び方へ。",
-      "terms": "用語暗記と併用するテキスト・問題集・講座の比較記事へ。",
-      "q": "無料演習と併用する問題集・講座の比較記事へ。"
+      "articles": "学習の仕上げに。本番形式の予想模試（note・各¥980）で時間配分と弱点を確認できます。",
+      "terms": "用語暗記のあとは、本番形式の予想模試（note・各¥980）で実戦演習に進みましょう。",
+      "q": "無料演習と併用して、本番形式の予想模試（note・各¥980）で総合力を確認できます。"
     },
-    "layout": "grid-3",
+    "layout": "grid-2",
     "items": [
       {
-        "kind": "course",
-        "kindLabel": "講座",
-        "title": "オンライン講座比較【2026年度版】",
-        "description": "スタディングII種·II+IIIダブル·Udemyを比較。動画学習で7領域を補強する選び方を解説します。",
-        "href": "affiliate-online-course-compare/",
-        "cta": "講座を比較する",
-        "image": "images/affiliate/mentalhealth-course-studying-2026.webp",
-        "imageAlt": "スタディング メンタルヘルス・マネジメント検定Ⅱ種合格コースのイメージ"
+        "kind": "mock",
+        "kindLabel": "模試",
+        "title": "予想模試 基本編",
+        "description": "本番形式・PDF3回分（¥980）。まずはここから、50問120分の時間配分を試します。",
+        "href": "https://note.com/shikaku_master/n/n23b1be0a19d9",
+        "cta": "noteで詳細を見る"
       },
       {
-        "kind": "textbook",
-        "kindLabel": "テキスト",
-        "title": "おすすめテキスト3選【2026年度版】",
-        "description": "公式第6版·TACスッキリ·サクッとわかるの3冊を比較。7領域50問120分·70点を前提に1冊選びを解説します。",
-        "href": "affiliate-textbooks-recommend/",
-        "cta": "3冊を比較する",
-        "image": "images/affiliate/mentalhealth-book-450258021x.webp",
-        "imageAlt": "メンタルヘルス・マネジメント検定試験公式テキスト Ⅱ種 ラインケアコース 第6版 表紙"
-      },
-      {
-        "kind": "problem-book",
-        "kindLabel": "問題集",
-        "title": "おすすめ問題集3選【2025年度版】",
-        "description": "過去問2025·能率協会重要ポイント·TACスッキリの3冊を比較。テキスト第1周後の演習1冊の選び方をまとめます。",
-        "href": "affiliate-problem-books/",
-        "cta": "3冊を比較する",
-        "image": "images/affiliate/mentalhealth-book-450255121x.webp",
-        "imageAlt": "メンタルヘルス・マネジメント検定 II種 過去問題集 2025年度版 表紙"
+        "kind": "mock",
+        "kindLabel": "模試",
+        "title": "予想模試 直前対策編",
+        "description": "本番形式・PDF3回分（¥980）。試験直前の総仕上げと弱点つぶしに。",
+        "href": "https://note.com/shikaku_master/n/n15dbcd6634bf",
+        "cta": "noteで詳細を見る"
       }
     ]
   }
