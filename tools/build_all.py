@@ -25,13 +25,6 @@ def run(cmd: list[str]) -> None:
     subprocess.run(cmd, cwd=ROOT, check=True)
 
 
-def maybe_run_exam_schedule_page(py: str) -> None:
-    script = ROOT / "tools" / "build_exam_schedule_page.py"
-    schedule_csv = ROOT / "data" / "exam_schedule_mhm.csv"
-    if script.is_file() and schedule_csv.is_file():
-        run([py, str(script)])
-
-
 def maybe_run_essays_page(py: str) -> None:
     """論述のある種（data/essays.csv がある種）だけ論述ハブを生成。II種は essays.csv が無く no-op。"""
     script = ROOT / "tools" / "build_essays_pages.py"
@@ -53,7 +46,6 @@ def main() -> int:
     run([py, "tools/build_practice_ichimon_pages.py"])
     run([py, "tools/build_article_pages.py"])
     run([py, "tools/build_guide_retire_redirects.py"])
-    maybe_run_exam_schedule_page(py)
     maybe_run_essays_page(py)
     run([py, "tools/build_sokuhou_pages.py"])
     run([py, "tools/build_terms_retire_redirects.py"])

@@ -357,7 +357,7 @@ def self_scoring_html() -> str:
 def related_links_html() -> str:
     candidates: list[tuple[str, str, Path]] = [
         ("../../index.html", "トップ（学習コンテンツ）", ROOT / "index.html"),
-        ("../../exam-dates/", "試験日検索・日程", ROOT / "exam-dates" / "index.html"),
+        ("../../articles/schedule/index.html", "試験日・日程（試験ガイド）", ROOT / "articles" / "schedule" / "index.html"),
         ("../../q/index.html", "過去問一覧", ROOT / "q" / "index.html"),
     ]
     items = "".join(
