@@ -160,14 +160,5 @@ window.SITE_CONFIG = {
         "badge": "本番直前"
       }
     ]
-  },
-  "topAffiliateBanner": {
-    "url": "https://t.afi-b.com/visit.php?a=y7404W-g7355640_T&p=b981480C",
-    "title": "スタディング メンタルヘルス・マネジメント検定II種",
-    "meta": "スマホで最短合格を目指す通信講座",
-    "ctaLabel": "無料で講座を見る",
-    "image": "images/paid-mock/MentalHealthManagement-studying.webp",
-    "imageAlt": "スタディング メンタルヘルス・マネジメント検定II種 — スマホで最短合格を目指す（無料で講座を見る）",
-    "pixel": "https://t.afi-b.com/lead/y7404W/b981480C/g7355640_T"
   }
 };
