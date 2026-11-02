@@ -104,7 +104,6 @@ def validate_guide_index_picks(root: Path) -> list[Issue]:
 
     for hub, label in (
         ("articles", "試験ガイド一覧"),
-        ("terms", "用語一覧"),
         ("q", "過去問一覧"),
     ):
         index_path = root / hub / "index.html"
@@ -116,7 +115,7 @@ def validate_guide_index_picks(root: Path) -> list[Issue]:
             issues.append(
                 Issue(
                     f"{label} に guideIndexPicks カードがありません。"
-                    " build_article_pages / build_glossary_pages / build_past_question_pages を実行してください"
+                    " build_article_pages / build_past_question_pages を実行してください"
                 )
             )
 

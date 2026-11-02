@@ -1100,7 +1100,7 @@ def build_index_html(articles: list[dict[str, str]]) -> str:
 </script>"""
     canonical = public_url("articles/index.html")
     title = f"試験ガイド｜{brand_name()}（{exam_name()}）"
-    desc = f"{exam_name()}の受験フェーズ別ガイド（制度・学習計画・演習・直前・再受験）一覧です。用語の定義は用語解説（知識ハブ）をご覧ください。"
+    desc = f"{exam_name()}の受験フェーズ別ガイド（制度・学習計画・演習・直前・再受験）一覧です。"
     item_list = [
         {"@type": "ListItem", "position": i, "name": apply_vars(a["title"]), "item": public_url(f"articles/{a['slug']}/")}
         for i, a in enumerate(articles, start=1)
@@ -1138,7 +1138,7 @@ def build_index_html(articles: list[dict[str, str]]) -> str:
 <main class="site-page-main">
   {breadcrumb_html(rel_path, [("トップ", "index.html"), ("試験ガイド", None)])}
   <h1>試験ガイド</h1>
-  <p class="site-page-lead">{html.escape(exam_name())}の制度理解から学習計画・演習・直前対策まで、受験フェーズ別の<strong>進め方</strong>をまとめています。用語の意味・比較・数値は<a href="../terms/index.html">用語解説（知識ハブ）</a>、問題演習は<a href="../q/index.html">過去問一覧</a>からどうぞ。</p>
+  <p class="site-page-lead">{html.escape(exam_name())}の制度理解から学習計画・演習・直前対策まで、受験フェーズ別の<strong>進め方</strong>をまとめています。問題演習は<a href="../q/index.html">過去問一覧</a>からどうぞ。</p>
   {build_guide_index_picks_html(rel_path)}
   <section class="article-index-panel" aria-labelledby="article-index-heading">
     <div class="article-index-head">

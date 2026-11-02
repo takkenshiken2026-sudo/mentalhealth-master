@@ -485,8 +485,6 @@ def parse_related_link_tokens(
             add(rel_href(rel_path, target), label or target)
         elif kind == "qindex":
             add(rel_href(rel_path, "q/index.html"), label or "過去問一覧")
-        elif kind == "terms":
-            add(rel_href(rel_path, "terms/index.html"), label or "用語解説一覧")
         elif kind == "review":
             add(rel_href(rel_path, "index.html#review"), label or "復習リスト")
         elif kind == "practice":

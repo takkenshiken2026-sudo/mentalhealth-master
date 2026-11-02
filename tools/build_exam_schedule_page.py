@@ -113,7 +113,6 @@ def related_links_html() -> str:
         ("../articles/exam-application-flow/", "申込みの流れ"),
         ("../articles/exam-venue-and-region/", "会場·受験地の選び方"),
         ("../articles/study-plan/", "学習計画の立て方"),
-        ("../terms/index.html", "用語解説一覧"),
     ]
     items = "".join(
         f'<a class="related-link" href="{html.escape(href, quote=True)}">{html.escape(label)}</a>'

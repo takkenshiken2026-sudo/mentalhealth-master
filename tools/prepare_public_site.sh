@@ -17,7 +17,6 @@ for f in \
   site-theme.css \
   seo-editorial.css \
   site-q-index.js \
-  site-terms-index.js \
   site-compare-index.js \
   site-knowledge-hub-index.js \
   site-priority-index.js \
@@ -43,7 +42,7 @@ done
 if [[ -f "$ROOT/ads.txt" ]]; then
   cp "$ROOT/ads.txt" "$OUT/"
 fi
-for d in articles q terms essays kaitou-sokuhou; do
+for d in articles q essays kaitou-sokuhou; do
   if [[ -d "$ROOT/$d" ]]; then
     cp -R "$ROOT/$d" "$OUT/"
   fi
@@ -66,10 +65,6 @@ for f in site-spa.css site-spa-fields.js site-app.css; do
     cp "$ROOT/$f" "$OUT/"
   fi
 done
-if [[ -f "$ROOT/docs/glossary-article-slugs.json" ]]; then
-  mkdir -p "$OUT/docs"
-  cp "$ROOT/docs/glossary-article-slugs.json" "$OUT/docs/"
-fi
 if [[ -d "$ROOT/assets/brand" ]]; then
   mkdir -p "$OUT/assets"
   cp -R "$ROOT/assets/brand" "$OUT/assets/"
@@ -98,8 +93,8 @@ if grep -q 'site-app.css' "$OUT/index.html" 2>/dev/null && [[ ! -f "$OUT/site-ap
   echo "prepare_public_site.sh: index.html が site-app.css を参照していますが public_site にありません。" >&2
   exit 1
 fi
-if grep -rq 'seo-editorial.css' "$OUT/terms" "$OUT/articles" 2>/dev/null && [[ ! -f "$OUT/seo-editorial.css" ]]; then
-  echo "prepare_public_site.sh: 用語・ガイドが seo-editorial.css を参照していますが public_site にありません。" >&2
+if grep -rq 'seo-editorial.css' "$OUT/articles" 2>/dev/null && [[ ! -f "$OUT/seo-editorial.css" ]]; then
+  echo "prepare_public_site.sh: ガイドが seo-editorial.css を参照していますが public_site にありません。" >&2
   exit 1
 fi
 echo "prepare_public_site.sh: $OUT に $n ファイルを配置しました。"

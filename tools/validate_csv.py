@@ -292,6 +292,9 @@ class Validator:
 
     def validate_glossary(self) -> None:
         path = DATA_DIR / "glossary_terms.csv"
+        if not path.is_file():
+            # 用語解説セクションは廃止済み。用語データが無い場合は検証をスキップする。
+            return
         _, rows = self.read_csv(path, set(GLOSSARY_BASE_REQUIRED))
         entries: list[dict[str, str]] = []
         for row in rows:

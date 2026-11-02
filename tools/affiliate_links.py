@@ -253,7 +253,6 @@ def affiliate_related_box_html(
         return ""
     links_html = "".join(links)
     links_html += (
-        '<a class="related-link" href="../../terms/index.html">用語解説一覧</a>'
         '<a class="related-link" href="../../index.html#past">過去問演習</a>'
     )
     return (

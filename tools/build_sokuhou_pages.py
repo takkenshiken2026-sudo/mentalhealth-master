@@ -359,7 +359,6 @@ def related_links_html() -> str:
         ("../../index.html", "トップ（学習コンテンツ）", ROOT / "index.html"),
         ("../../exam-dates/", "試験日検索・日程", ROOT / "exam-dates" / "index.html"),
         ("../../q/index.html", "過去問一覧", ROOT / "q" / "index.html"),
-        ("../../terms/index.html", "用語解説一覧", ROOT / "terms" / "index.html"),
     ]
     items = "".join(
         f'<a class="related-link" href="{html.escape(href, quote=True)}">{html.escape(label)}</a>'

@@ -865,10 +865,7 @@ def main() -> int:
 
     issues.extend(_index_footer(root / "index.html"))
     issues.extend(_q_index(root / "q" / "index.html"))
-    issues.extend(_terms_index(root / "terms" / "index.html"))
-    err = _terms_js(root / "site-terms-index.js")
-    if err:
-        issues.append(err)
+    # 用語解説セクションは廃止済み（terms/ と site-terms-index.js は削除）。
     err = _build_all_includes_practice(root / "tools" / "build_all.py")
     if err:
         issues.append(err)

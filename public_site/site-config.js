@@ -31,11 +31,6 @@ window.SITE_CONFIG = {
         "key": "about"
       },
       {
-        "label": "用語解説",
-        "href": "terms/index.html",
-        "key": "terms"
-      },
-      {
         "label": "試験ガイド",
         "href": "articles/index.html",
         "key": "articles"
@@ -66,11 +61,6 @@ window.SITE_CONFIG = {
         "label": "このサイトについて",
         "href": "about.html",
         "key": "about"
-      },
-      {
-        "label": "用語解説",
-        "href": "terms/index.html",
-        "key": "terms"
       },
       {
         "label": "試験ガイド",
