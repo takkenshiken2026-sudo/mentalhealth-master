@@ -417,11 +417,31 @@ def _spa_home_url() -> str:
 def _header_learning_nav(root: Path) -> list[Issue]:
     """静的ページの学習ナビ href / q/index の active 状態（site-chrome.md §3, §7）。"""
     spa_hash = _spa_nav_hash_hrefs()
-    article_sample = root / "articles" / "field-law-basics" / "index.html"
-    if not article_sample.is_file():
-        article_sample = root / "articles" / "exam-overview" / "index.html"
-    samples: list[tuple[str, Path]] = [
-        ("articles sample", article_sample),
+    # 学習ナビ検査用のサンプル記事は、公開中かつリダイレクトでないガイド記事を選ぶ
+    # （特定 slug をハードコードすると、その記事が削除/退避されたとき誤検出するため）。
+    article_sample = None
+    for slug in (
+        "exam-format-overview",
+        "pass-score",
+        "exam-scope-overview",
+        "study-plan",
+        "field-law-basics",
+        "exam-overview",
+    ):
+        cand = root / "articles" / slug / "index.html"
+        if cand.is_file() and not _is_redirect_stub(cand):
+            article_sample = cand
+            break
+    if article_sample is None:
+        # 最後の手段: articles 配下の非リダイレクト記事を1つ拾う
+        for cand in sorted((root / "articles").glob("*/index.html")):
+            if not _is_redirect_stub(cand):
+                article_sample = cand
+                break
+    samples: list[tuple[str, Path]] = []
+    if article_sample is not None:
+        samples.append(("articles sample", article_sample))
+    samples += [
         ("about.html", root / "about.html"),
         ("q/index.html", root / "q" / "index.html"),
     ]
