@@ -18,6 +18,7 @@ from tools.editorial_quality import (
     placeholder_issues,
     readability_issues,
     split_semicolon,
+    structural_junk_issues,
 )
 from tools.related_links import parse_related_link_token
 from tools.site_config import is_template_site
@@ -119,6 +120,8 @@ def check_guide_row(
         text = reader_facing_text(row, col, raw, slug_titles=slug_titles) if published else raw
         issues.extend(placeholder_issues(raw, col))
         if published:
+            # 量産テンプレ構造・他資格混入・slug露出は revision_note の自己申告で免除しない（常時 ERROR）
+            issues.extend(structural_junk_issues(text, col))
             issues.extend(readability_issues(text, col))
             issues.extend(generic_issues(text, col))
             if (col.startswith("section_") and col.endswith("_body")) or col.startswith("faq_"):
