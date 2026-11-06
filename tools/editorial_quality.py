@@ -233,8 +233,13 @@ def other_exam_vocab_hits(text: str) -> list[str]:
 
 
 def ascii_slug_leak_hits(text: str) -> list[str]:
-    """読者本文に残った内部 slug 風の英ハイフン語（URL/HTMLタグ除外後）。"""
-    stripped = _URL_RE.sub(" ", _HTML_TAG_RE.sub(" ", text or ""))
+    """読者本文に残った内部 slug 風の英ハイフン語（URL・HTMLタグ・リンクパス除外後）。
+    markdown リンク `[ラベル](../slug/)` や相対パスのリンク先は正当なので誤検出しない。"""
+    stripped = _HTML_TAG_RE.sub(" ", text or "")
+    stripped = _URL_RE.sub(" ", stripped)
+    # markdown リンク先 ](...) と相対/絶対パス（../slug/ や /slug/）はリンクなので除外
+    stripped = re.sub(r"\]\([^)]*\)", " ", stripped)
+    stripped = re.sub(r"\.{0,2}/[A-Za-z0-9_./-]+", " ", stripped)
     out: list[str] = []
     for m in _ASCII_SLUG_RE.finditer(stripped):
         tok = m.group(0)
