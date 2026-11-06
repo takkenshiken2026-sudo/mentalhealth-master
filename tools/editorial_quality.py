@@ -7,9 +7,46 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
-# 専門家記事らしい具体性（数字・期限・条文・例示など）
+# 専門家記事らしい具体性（実データに基づく信号のみ）。
+# ※「例えば」「たとえば」「例：」は量産文が偽の例示で加点を稼ぐ温床になるため含めない。
 CONCRETENESS_RE = re.compile(
-    r"\d|％|%|年|月|日|条|項|科目|分野|公式|例えば|例：|たとえば|しかし|一方で|具体的"
+    r"\d|％|%|条|項|科目|分野|領域|公式テキスト|厚生労働省|指針|しかし|一方で|具体的"
+)
+
+# --- 量産テンプレの構造パターン / 他資格混入（published 本文・FAQ で ERROR）---
+
+# 作り物の例示日付（M/D（曜）のスラッシュ表記）。実在の試験日は「3月21日（日）」等の漢字表記で書く。
+FABRICATED_DATE_RE = re.compile(r"\d{1,2}/\d{1,2}（[日月火水木金土]）")
+
+# 量産文がフラグメントを連ねる長ダッシュ（——）
+EMDASH_CHAIN = "——"
+
+# メンタルヘルス・マネジメント検定に存在しない他資格テンプレ由来の語（ERROR）。
+# 誤検出を避けるため高精度な語のみ。除外した語と理由:
+#  - 「衛生管理者」: 職場の衛生管理者は連携先として正当に登場する
+#  - 「CBT」: 認知行動療法（Cognitive Behavioral Therapy）として正当
+#  - 「電卓」: 持ち物記事で「電卓は不可」等の正当な言及がある
+#  - 「公式」「計算」単体: 公式テキスト/公式情報など正当用例が多い
+OTHER_EXAM_VOCAB: tuple[str, ...] = (
+    "指定数量",
+    "35条書面",
+    "宅地建物取引",
+    "宅建",
+    "危険物取扱",
+    "簿記",
+    "仕訳",
+    "計算問題",
+    "計算ドリル",
+    "計算式",
+    "割合の計算",
+)
+
+# 読者本文に露出してはいけない内部 slug 風の英ハイフン語（URL/タグ除外後に検出）。
+_ASCII_SLUG_RE = re.compile(r"[a-z]{2,}(?:-[a-z0-9]{2,})+")
+_HTML_TAG_RE = re.compile(r"<[^>]+>")
+_URL_RE = re.compile(r"https?://\S+")
+ASCII_SLUG_LEAK_ALLOW: frozenset[str] = frozenset(
+    {"line-care", "work-life-balance", "e-mail"}
 )
 
 # 公開前に必ず消す雛形マーカー（ERROR）
@@ -185,6 +222,76 @@ def boilerplate_issues(text: str, column: str) -> list[EditorialIssue]:
             f"機械的な共通文が含まれています（{shown}）。記事固有のオリジナル文に全面差し替えてください",
         )
     ]
+
+
+def fabricated_date_hits(text: str) -> list[str]:
+    return FABRICATED_DATE_RE.findall(text or "")
+
+
+def other_exam_vocab_hits(text: str) -> list[str]:
+    return [w for w in OTHER_EXAM_VOCAB if w in (text or "")]
+
+
+def ascii_slug_leak_hits(text: str) -> list[str]:
+    """読者本文に残った内部 slug 風の英ハイフン語（URL/HTMLタグ除外後）。"""
+    stripped = _URL_RE.sub(" ", _HTML_TAG_RE.sub(" ", text or ""))
+    out: list[str] = []
+    for m in _ASCII_SLUG_RE.finditer(stripped):
+        tok = m.group(0)
+        if tok in ASCII_SLUG_LEAK_ALLOW:
+            continue
+        out.append(tok)
+    return out
+
+
+def structural_junk_issues(text: str, column: str) -> list[EditorialIssue]:
+    """量産テンプレの構造パターン・他資格混入・内部slug露出（published で ERROR）。
+    revision_note の自己申告では免除しない（常時適用）。"""
+    issues: list[EditorialIssue] = []
+    if not text:
+        return issues
+    dates = fabricated_date_hits(text)
+    if dates:
+        shown = "、".join(dates[:3])
+        issues.append(
+            EditorialIssue(
+                "ERROR",
+                column,
+                f"量産テンプレの作り物の例示日付（{shown} など）が含まれています。"
+                f"実在の公開試験日以外の日付例は使わないでください",
+            )
+        )
+    if text.count(EMDASH_CHAIN) >= 2:
+        issues.append(
+            EditorialIssue(
+                "ERROR",
+                column,
+                "「——」でフラグメントを連ねた量産文です。主語・述語のある通常の文章に書き直してください",
+            )
+        )
+    vocab = other_exam_vocab_hits(text)
+    if vocab:
+        shown = "、".join(vocab[:3])
+        issues.append(
+            EditorialIssue(
+                "ERROR",
+                column,
+                f"この検定に存在しない他資格の語が混入しています（{shown}）。"
+                f"メンタルヘルス・マネジメント検定固有の内容に差し替えてください",
+            )
+        )
+    leaks = ascii_slug_leak_hits(text)
+    if leaks:
+        shown = "、".join(dict.fromkeys(leaks))  # dedupe, keep order
+        issues.append(
+            EditorialIssue(
+                "ERROR",
+                column,
+                f"本文に内部記事名（slug）が露出しています（{shown}）。"
+                f"読者向けの記事タイトルや普通の語に置き換えてください",
+            )
+        )
+    return issues
 
 
 def generic_issues(text: str, column: str, *, min_hits: int = 2) -> list[EditorialIssue]:
