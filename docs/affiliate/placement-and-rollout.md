@@ -88,7 +88,7 @@ python3 tools/build_article_pages.py
 
 ### 4.1 `related_links`（関連記事ボックス）
 
-- 形式: `affiliate-textbooks-recommend:宅建士のおすすめテキスト3選【2026年度版・独学】`
+- 形式: `affiliate-textbooks-recommend:宅建士のおすすめテキスト3選【2027年度版・独学】`
 - セミコロン区切り。slug は **同 CSV に存在する** `affiliate-*` のみ
 - **1 記事あたり比較記事 1〜2 本**。他は通常ガイド・用語・演習へのリンク
 
@@ -161,9 +161,9 @@ python3 tools/build_article_pages.py
 ```json
 "guideIndexPicks": {
   "title": "おすすめの講座・教材",
-  "lead": "2026年度版の比較記事から、講座・テキスト・問題集の選び方へ。",
+  "lead": "2027年度版の比較記事から、講座・テキスト・問題集の選び方へ。",
   "leadsByHub": {
-    "articles": "2026年度版の比較記事から、講座・テキスト・問題集の選び方へ。",
+    "articles": "2027年度版の比較記事から、講座・テキスト・問題集の選び方へ。",
     "terms": "用語暗記と併用するテキスト・問題集・講座の比較記事へ。",
     "q": "無料演習と併用する問題集・講座の比較記事へ。"
   },

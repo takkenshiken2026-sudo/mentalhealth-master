@@ -307,7 +307,7 @@ CSS: `.seo-key-points-box--affiliate`, `.seo-key-points-aside`（右下配置）
 **brief `products[].name` 例**（要点リスト先頭3件になる）:
 
 ```text
-【2026年度版 ◯◯試験 完全攻略テキスト】;【2026 ◯◯試験 要点整理テキスト】;【2026 ◯◯試験 イラストで理解するテキスト】
+【2027年度版 ◯◯試験 完全攻略テキスト】;【2026 ◯◯試験 要点整理テキスト】;【2026 ◯◯試験 イラストで理解するテキスト】
 ```
 
 `key_points` / `action_items` が無くても brief 商品名があれば要点ボックスは生成される。
@@ -451,7 +451,7 @@ https://px.a8.net/...:SMART合格講座（公式）
 ### 通常ガイドの `related_links`（末尾ボックス）
 
 ```text
-affiliate-textbooks-recommend:おすすめテキスト3選【2026年度版・独学】
+affiliate-textbooks-recommend:おすすめテキスト3選【2027年度版・独学】
 past-question-strategy:過去問の回し方
 ```
 

@@ -1,7 +1,7 @@
 slug: affiliate-correspondence-course
 theme_key: correspondence-course
 search_intent: メンタルヘルス・マネジメント検定II種の通信講座を比較して選びたい
-title: メンタルヘルス・マネジメント検定II種の通信講座比較【2026年度版】
+title: メンタルヘルス・マネジメント検定II種の通信講座比較【2027年度版】
 layout: product-comparison
 asp_primary: afb
 comparison_kind: courses
@@ -11,7 +11,7 @@ afb_pixel: https://t.afi-b.com/lead/y7404W/b981480C/g7355640_T
 products:
   - rank: 1
     offer_type: course
-    name: メンタルヘルス・マネジメント検定Ⅱ種合格コース 2026年度試験対応
+    name: メンタルヘルス・マネジメント検定Ⅱ種合格コース 2027年度試験対応
     provider: スタディング
     billing_type: lump
     price_yen: 26800
@@ -20,7 +20,7 @@ products:
     image_file: mentalhealth-course-studying-2026.webp
     for_who: 動画とカリキュラムでII種に特化して学びたい人
     highlights:
-      - 2026年度試験対応のII種合格コース
+      - 2027年度試験対応のII種合格コース
       - 独学の弱点補強に向く通信スタイル
       - 公式テキストと併用しやすい
   - rank: 2

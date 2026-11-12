@@ -12,7 +12,7 @@ afb_pixel: https://t.afi-b.com/lead/y7404W/b981480C/g7355640_T
 products:
   - rank: 1
     offer_type: course
-    name: メンタルヘルス・マネジメント検定Ⅱ種合格コース 2026年度試験対応
+    name: メンタルヘルス・マネジメント検定Ⅱ種合格コース 2027年度試験対応
     provider: スタディング
     billing_type: lump
     price_yen: 26800
@@ -21,12 +21,12 @@ products:
     image_file: mentalhealth-course-studying-2026.webp
     for_who: 動画中心でII種に特化して学びたい人
     highlights:
-      - 2026年度対応のII種コース
+      - 2027年度対応のII種コース
       - スマホ視聴しやすいオンライン学習
       - 独学テキストとの併用向き
   - rank: 2
     offer_type: course
-    name: メンタルヘルス・マネジメント検定Ⅱ種＋Ⅲ種ダブルチャレンジコース 2026年度試験対応
+    name: メンタルヘルス・マネジメント検定Ⅱ種＋Ⅲ種ダブルチャレンジコース 2027年度試験対応
     provider: スタディング
     billing_type: lump
     price_yen: 29800
@@ -36,7 +36,7 @@ products:
     for_who: II種合格後にIII種まで視野に入れたい人
     highlights:
       - II種とIII種を連続で学べる
-      - 2026年度試験対応
+      - 2027年度試験対応
       - 通信講座比較記事と役割分担して選べる
   - rank: 3
     offer_type: course

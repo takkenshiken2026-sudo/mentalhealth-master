@@ -8,7 +8,7 @@
 | 数値・期限早見表 | 10 | ✅ | ✅ | ✅ |
 | よくある誤答 | 10 | ✅ | ✅ | ✅ |
 
-**監修メモ:** 試験合格点（70/100）・2026年度日程は [公式要項](https://www.mental-health.ne.jp/guide/)・[試験のご紹介](https://www.mental-health.ne.jp/about/) に基づく。法令数値は年度・改正で変わるため、公開後も専門家による再確認を推奨。
+**監修メモ:** 試験合格点（70/100）・2027年度日程は [公式要項](https://www.mental-health.ne.jp/guide/)・[試験のご紹介](https://www.mental-health.ne.jp/about/) に基づく。法令数値は年度・改正で変わるため、公開後も専門家による再確認を推奨。
 
 ---
 

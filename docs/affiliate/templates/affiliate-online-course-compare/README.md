@@ -58,7 +58,7 @@ python3 tools/build_affiliate_template_preview.py \
 | `provider` | SMART合格講座 / オンスク |
 | `price_yen` + `billing_type` | `19800` + `lump` または `9800` + `monthly` |
 | `price_label` | `月額 ¥9,800〜`（複雑な料金はこちら） |
-| `duration` | 受講期間6か月 / 2026年度版 |
+| `duration` | 受講期間6か月 / 2027年度版 |
 | `lecture_hours` | 120 |
 | `support` | 質問サポートあり |
 | `a8_url` / `affiliate_url` | ASP リンク（必須） |

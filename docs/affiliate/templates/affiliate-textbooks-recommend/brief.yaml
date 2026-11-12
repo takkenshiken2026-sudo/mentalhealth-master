@@ -16,7 +16,7 @@ price_disclaimer: 価格・在庫・版情報は執筆時点（2026-06-02）のA
 
 products:
   - rank: 1
-    name: 2026年度版 ◯◯試験 完全攻略テキスト
+    name: 2027年度版 ◯◯試験 完全攻略テキスト
     publisher: 学習支援出版
     edition: 2026年6月改訂
     price_yen: 3080
@@ -26,7 +26,7 @@ products:
     asin: B0DEMO0001
     image_file: sample-textbook-a-2026.webp
     amazon_url: https://www.amazon.co.jp/dp/B0DEMO0001
-    workbook_name: 2026年度版 ◯◯試験 完全攻略問題集
+    workbook_name: 2027年度版 ◯◯試験 完全攻略問題集
     workbook_image_file: sample-textbook-a-workbook-2026.webp
     workbook_amazon_url: https://www.amazon.co.jp/dp/B0DEMO0001W
     for_who: 初学者で基礎から体系的に学びたい人

@@ -245,9 +245,9 @@ grep -E 'affiliate-product-hub|images/affiliate/' "articles/$SLUG/index.html" | 
 ```json
 "guideIndexPicks": {
   "title": "おすすめの講座・教材",
-  "lead": "2026年度版の比較記事から、講座・テキスト・問題集の選び方へ。",
+  "lead": "2027年度版の比較記事から、講座・テキスト・問題集の選び方へ。",
   "leadsByHub": {
-    "articles": "2026年度版の比較記事から、講座・テキスト・問題集の選び方へ。",
+    "articles": "2027年度版の比較記事から、講座・テキスト・問題集の選び方へ。",
     "terms": "用語暗記と併用するテキスト・問題集・講座の比較記事へ。",
     "q": "無料演習と併用する問題集・講座の比較記事へ。"
   },
@@ -338,7 +338,7 @@ done
 ### E-3. `related_links` 記法
 
 ```text
-affiliate-textbooks-recommend:おすすめテキスト3選【2026年度版・独学】
+affiliate-textbooks-recommend:おすすめテキスト3選【2027年度版・独学】
 past-question-strategy:過去問の回し方
 ```
 

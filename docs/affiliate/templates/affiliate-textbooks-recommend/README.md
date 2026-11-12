@@ -41,7 +41,7 @@ CSS: `seo-editorial.css`（要点: `.seo-key-points-aside-label` / 比較表: `.
 | `user_intent` | 要点ボックスのイントロ文 |
 | `key_points` | 追加分（`;` 区切り、例: `選び方の基準;過去問との併用`）。商品名3件は brief から自動 |
 
-brief の `products[].name` は **フルネーム**（例: `【2026年度版 ◯◯試験 完全攻略テキスト】`）にする。
+brief の `products[].name` は **フルネーム**（例: `【2027年度版 ◯◯試験 完全攻略テキスト】`）にする。
 
 ### 執筆ルール（必須）
 
