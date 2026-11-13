@@ -240,50 +240,35 @@
   "brandLogoTop": "メンタル",
   "brandLogoBottom": "二種マスター",
   "paidMockExam": {
-    "scoreLead": "本番形式の予想模試",
-    "topLead": "本番形式で力試し。有料の予想模試（note）",
-    "footnote": "※ note で販売する有料コンテンツ（¥980）です。サイト内の無料演習とは別商品です。",
+    "scoreLead": "本番想定の予想模試",
+    "topLead": "本番想定で力試し。有料の予想模試（note）",
+    "footnote": "※ note で販売する有料コンテンツ（¥1,180）です。サイト内の無料演習とは別商品です。",
     "items": [
       {
-        "title": "予想模試 基本編",
-        "meta": "PDF・3回分",
-        "priceLabel": "¥980",
-        "badge": "まずはこれから",
-        "url": "https://note.com/shikaku_master/n/n23b1be0a19d9"
-      },
-      {
-        "title": "予想模試 直前対策編",
-        "meta": "PDF・3回分",
-        "priceLabel": "¥980",
-        "badge": "本番直前",
-        "url": "https://note.com/shikaku_master/n/n15dbcd6634bf"
+        "title": "本番想定模試 3回分（2027年版）",
+        "meta": "PDF・3回分・解説付き",
+        "priceLabel": "¥1,180",
+        "badge": "本番想定",
+        "url": "https://note.com/shikaku_master/n/ned3fd2bce2dd"
       }
     ]
   },
   "guideIndexPicks": {
-    "title": "本番形式の予想模試で力試し",
-    "lead": "無料の演習に加えて、本番形式の予想模試（note・各¥980）で時間配分と弱点を確認できます。",
+    "title": "本番想定の予想模試で力試し",
+    "lead": "無料の演習に加えて、本番想定の予想模試（note・¥1,180）で時間配分と弱点を確認できます。",
     "leadsByHub": {
-      "articles": "学習の仕上げに。本番形式の予想模試（note・各¥980）で時間配分と弱点を確認できます。",
-      "terms": "用語暗記のあとは、本番形式の予想模試（note・各¥980）で実戦演習に進みましょう。",
-      "q": "無料演習と併用して、本番形式の予想模試（note・各¥980）で総合力を確認できます。"
+      "articles": "学習の仕上げに。本番想定の予想模試（note・¥1,180）で時間配分と弱点を確認できます。",
+      "terms": "用語暗記のあとは、本番想定の予想模試（note・¥1,180）で実戦演習に進みましょう。",
+      "q": "無料演習と併用して、本番想定の予想模試（note・¥1,180）で総合力を確認できます。"
     },
     "layout": "grid-2",
     "items": [
       {
         "kind": "mock",
         "kindLabel": "模試",
-        "title": "予想模試 基本編",
-        "description": "本番形式・PDF3回分（¥980）。まずはここから、50問120分の時間配分を試します。",
-        "href": "https://note.com/shikaku_master/n/n23b1be0a19d9",
-        "cta": "noteで詳細を見る"
-      },
-      {
-        "kind": "mock",
-        "kindLabel": "模試",
-        "title": "予想模試 直前対策編",
-        "description": "本番形式・PDF3回分（¥980）。試験直前の総仕上げと弱点つぶしに。",
-        "href": "https://note.com/shikaku_master/n/n15dbcd6634bf",
+        "title": "本番想定模試 3回分（2027年版）",
+        "description": "本番想定・PDF3回分・解説付き（¥1,180）。50問120分の時間配分と弱点を最終チェック。",
+        "href": "https://note.com/shikaku_master/n/ned3fd2bce2dd",
         "cta": "noteで詳細を見る"
       }
     ]

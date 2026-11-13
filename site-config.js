@@ -131,23 +131,16 @@ window.SITE_CONFIG = {
     }
   ],
   "paidMockExam": {
-    "scoreLead": "本番形式の予想模試",
-    "topLead": "本番形式で力試し。有料の予想模試（note）",
-    "footnote": "※ note で販売する有料コンテンツ（¥980）です。サイト内の無料演習とは別商品です。",
+    "scoreLead": "本番想定の予想模試",
+    "topLead": "本番想定で力試し。有料の予想模試（note）",
+    "footnote": "※ note で販売する有料コンテンツ（¥1,180）です。サイト内の無料演習とは別商品です。",
     "items": [
       {
-        "url": "https://note.com/shikaku_master/n/n23b1be0a19d9",
-        "title": "予想模試 基本編",
-        "meta": "PDF・3回分",
-        "priceLabel": "¥980",
-        "badge": "まずはこれから"
-      },
-      {
-        "url": "https://note.com/shikaku_master/n/n15dbcd6634bf",
-        "title": "予想模試 直前対策編",
-        "meta": "PDF・3回分",
-        "priceLabel": "¥980",
-        "badge": "本番直前"
+        "url": "https://note.com/shikaku_master/n/ned3fd2bce2dd",
+        "title": "本番想定模試 3回分（2027年版）",
+        "meta": "PDF・3回分・解説付き",
+        "priceLabel": "¥1,180",
+        "badge": "本番想定"
       }
     ]
   }

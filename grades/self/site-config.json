@@ -226,16 +226,16 @@
   "brandLogoTop": "メンタル",
   "brandLogoBottom": "三種対策",
   "paidMockExam": {
-    "scoreLead": "本番形式の予想模試",
-    "topLead": "本番形式で力試し。有料の予想模試（note）",
+    "scoreLead": "本番想定の予想模試",
+    "topLead": "本番想定で力試し。有料の予想模試（note）",
     "footnote": "※ note で販売する有料コンテンツ（¥980）です。サイト内の無料演習とは別商品です。",
     "items": [
       {
-        "title": "予想模試",
-        "meta": "PDF・3回分（選択式）",
+        "title": "本番想定模試 3回分（2027年版）",
+        "meta": "PDF・3回分・解説付き",
         "priceLabel": "¥980",
-        "badge": "本番形式",
-        "url": "https://note.com/shikaku_master/n/ncba67f8fee08"
+        "badge": "本番想定",
+        "url": "https://note.com/shikaku_master/n/ndd53ebae2edc"
       }
     ]
   }
