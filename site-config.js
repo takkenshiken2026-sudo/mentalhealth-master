@@ -137,7 +137,7 @@ window.SITE_CONFIG = {
     "items": [
       {
         "url": "https://note.com/shikaku_master/n/ned3fd2bce2dd",
-        "title": "本番想定模試 3回分（2027年版）",
+        "title": "【2027年版】本番想定模試 3回分",
         "meta": "PDF・3回分・解説付き",
         "priceLabel": "¥1,180",
         "badge": "本番想定"
