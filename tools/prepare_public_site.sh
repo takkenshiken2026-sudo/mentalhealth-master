@@ -39,6 +39,12 @@ done
 if [[ -f "$ROOT/ads.txt" ]]; then
   cp "$ROOT/ads.txt" "$OUT/"
 fi
+# PWA（build_pwa.py が生成）。存在するときのみ配置。
+for f in manifest.webmanifest sw.js; do
+  if [[ -f "$ROOT/$f" ]]; then
+    cp "$ROOT/$f" "$OUT/"
+  fi
+done
 for d in articles q terms essays kaitou-sokuhou; do
   if [[ -d "$ROOT/$d" ]]; then
     cp -R "$ROOT/$d" "$OUT/"

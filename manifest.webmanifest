@@ -1,0 +1,35 @@
+{
+  "name": "メンタルヘルス二種マスター",
+  "short_name": "二種マスター",
+  "description": "メンタルヘルス・マネジメント検定II種の過去問・一問一答・実践演習を無料で学べる学習アプリ。",
+  "lang": "ja",
+  "dir": "ltr",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f0f0f1",
+  "theme_color": "#4a6b5c",
+  "categories": [
+    "education"
+  ],
+  "icons": [
+    {
+      "src": "/assets/brand/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/brand/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/brand/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

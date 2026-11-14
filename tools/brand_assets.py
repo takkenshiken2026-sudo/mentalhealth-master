@@ -84,6 +84,8 @@ def assets_ready(site_root: Path | None = None) -> bool:
         (d / "og-image.png").is_file()
         and (d / "favicon-32.png").is_file()
         and (d / "favicon-48.png").is_file()
+        and (d / "icon-192.png").is_file()
+        and (d / "icon-512.png").is_file()
         and (root / "favicon.ico").is_file()
     )
 
@@ -327,6 +329,9 @@ def write_brand_assets(site_root: Path | None = None) -> Path:
     render_favicon(32).save(out / "favicon-32.png", optimize=True)
     render_favicon(48).save(out / "favicon-48.png", optimize=True)
     render_favicon(180).save(out / "apple-touch-icon.png", optimize=True)
+    # PWA（Web App Manifest）用アイコン
+    render_favicon(192).save(out / "icon-192.png", optimize=True)
+    render_favicon(512).save(out / "icon-512.png", optimize=True)
     render_og_image().save(out / "og-image.png", optimize=True)
     write_favicon_ico(root / "favicon.ico")
     return out
