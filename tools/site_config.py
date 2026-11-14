@@ -195,6 +195,50 @@ def official_organization() -> str:
     return str(CONFIG.get("officialOrganization") or "試験実施団体")
 
 
+def organization_id() -> str:
+    """サイト全体で共有する発行者（Organization）の @id。"""
+    return f"{clean_origin()}/#organization"
+
+
+def organization_ld() -> dict[str, Any]:
+    """サイトの発行者（運営・編集主体）を表す schema.org Organization。
+
+    E-E-A-T の土台となる発行者実体。事実に基づく情報のみを記載し、
+    監修者の氏名・保有資格など未確定の情報は入れない（虚偽の権威付けを避ける）。
+    """
+    origin = clean_origin()
+    node: dict[str, Any] = {
+        "@type": "Organization",
+        "@id": organization_id(),
+        "name": brand_name(),
+        "url": f"{origin}/",
+        "description": (
+            f"{exam_name()}の学習を支援する無料Webサイト「{brand_name()}」の運営・編集主体。"
+            "過去問演習・一問一答・用語解説・試験ガイドを制作・公開しています。"
+        ),
+        "logo": {
+            "@type": "ImageObject",
+            "url": f"{origin}/assets/brand/apple-touch-icon.png",
+        },
+        "image": f"{origin}/assets/brand/og-image.png",
+        "knowsAbout": exam_name(),
+        "knowsLanguage": "ja",
+    }
+    contact = contact_url()
+    if contact and contact not in ("#", ""):
+        node["contactPoint"] = {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "url": contact,
+        }
+    return node
+
+
+def publisher_ref() -> dict[str, str]:
+    """他ページの JSON-LD から発行者（Organization）を参照する軽量ノード。"""
+    return {"@id": organization_id()}
+
+
 def external_links() -> list[dict[str, str]]:
     raw = CONFIG.get("externalLinks") or []
     if not isinstance(raw, list):

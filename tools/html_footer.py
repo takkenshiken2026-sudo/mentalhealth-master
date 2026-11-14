@@ -282,6 +282,12 @@ def adsense_head_snippet() -> str:
     return (
         f"{ADSENSE_HEAD_MARKER_START}\n"
         f'<meta name="google-adsense-account" content="{client_esc}">\n'
+        # 第三者オリジンへの接続を前倒し（DNS/TCP/TLS）。広告・解析の初回取得を短縮する純粋なヒント。
+        '<link rel="preconnect" href="https://pagead2.googlesyndication.com" crossorigin>\n'
+        '<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">\n'
+        '<link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">\n'
+        '<link rel="dns-prefetch" href="https://tpc.googlesyndication.com">\n'
+        '<link rel="dns-prefetch" href="https://www.googletagmanager.com">\n'
         f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={client_esc}"\n'
         '     crossorigin="anonymous"></script>\n'
         f"{ADSENSE_HEAD_MARKER_END}"

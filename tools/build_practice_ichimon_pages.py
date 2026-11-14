@@ -80,7 +80,15 @@ from tools.q_page_seo import (
     question_meta_description,
     study_modes_note_html,
 )
-from tools.site_config import brand_name, category_order, clean_origin, exam_name
+from tools.site_config import (
+    brand_name,
+    category_order,
+    clean_origin,
+    exam_name,
+    organization_ld,
+    publisher_ref,
+)
+from tools.seo_utils import hub_collection_jsonld
 from tools.seo_editorial_chrome import seo_brand_asset_tags
 
 PRACTICE_CSV = ROOT / "data" / "practice_questions.csv"
@@ -789,6 +797,18 @@ def build_mode_index(
     footer = site_page_footer(rel_path, current=current)
     list_aria = f"{group_label}別{h1}"
 
+    mode_index_jsonld = hub_collection_jsonld(
+        canonical=public_url(base_url, canonical_rel),
+        name=page_title,
+        description=desc,
+        breadcrumb=[
+            ("トップ", public_url(base_url, "index.html")),
+            (f"{h1}一覧", public_url(base_url, canonical_rel)),
+        ],
+        organization=organization_ld(),
+        publisher=publisher_ref(),
+    )
+
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -804,6 +824,7 @@ def build_mode_index(
 {HEAD_FONTS}
 <link rel="stylesheet" href="../../site-pages.css?v={Q_INDEX_CSS_VER}">
 <link rel="stylesheet" href="../../site-theme.css">
+{mode_index_jsonld}
 </head>
 <body class="{shell_body_class('q-index-page')}">
 {site_page_wrap_open()}

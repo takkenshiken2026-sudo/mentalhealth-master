@@ -17,7 +17,9 @@ from tools.site_config import (
     fields,
     google_site_verification,
     navigation_items,
+    organization_ld,
     public_url,
+    publisher_ref,
 )
 
 INDEX_SEO_MARKER_START = "<!--INDEX_SEO_HEAD-->"
@@ -107,6 +109,7 @@ def index_json_ld_graph() -> list[dict]:
         "網羅した無料学習プラットフォーム"
     )
     return [
+        organization_ld(),
         {
             "@type": "WebSite",
             "@id": f"{home_id}/#website",
@@ -115,6 +118,7 @@ def index_json_ld_graph() -> list[dict]:
             "alternateName": alt,
             "description": platform_desc,
             "inLanguage": "ja",
+            "publisher": publisher_ref(),
         },
         {
             "@type": "EducationalApplication",
@@ -122,6 +126,7 @@ def index_json_ld_graph() -> list[dict]:
             "name": brand_name(),
             "alternateName": alt,
             "description": platform_desc,
+            "publisher": publisher_ref(),
             "applicationCategory": "EducationApplication",
             "operatingSystem": "Web",
             "inLanguage": "ja",

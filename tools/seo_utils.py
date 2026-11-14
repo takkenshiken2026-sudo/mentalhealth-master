@@ -4,6 +4,7 @@
 
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
@@ -115,3 +116,51 @@ def json_ld_date_modified(updated: str | None) -> dict[str, str]:
 def latest_content_date(rows: list[dict[str, str]]) -> str | None:
     dates = [d for row in rows if (d := content_date_from_row(row))]
     return max(dates) if dates else None
+
+
+def hub_collection_jsonld(
+    *,
+    canonical: str,
+    name: str,
+    description: str,
+    breadcrumb: list[tuple[str, str]],
+    organization: dict | None = None,
+    publisher: dict | None = None,
+    date_modified: str | None = None,
+) -> str:
+    """一覧・ハブページ用の CollectionPage + BreadcrumbList(+Organization) JSON-LD を返す。
+
+    breadcrumb は (ラベル, 絶対URL) のリスト。site_config への依存を避けるため、
+    Organization / publisher は呼び出し側が辞書で渡す（疎結合）。
+    """
+    graph: list[dict] = []
+    if organization:
+        graph.append(organization)
+    page: dict = {
+        "@type": "CollectionPage",
+        "@id": canonical + "#webpage",
+        "url": canonical,
+        "name": name,
+        "description": description,
+        "inLanguage": "ja-JP",
+    }
+    if publisher:
+        page["publisher"] = publisher
+    if date_modified:
+        page["dateModified"] = date_modified
+    graph.append(page)
+    graph.append(
+        {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": i, "name": label, "item": url}
+                for i, (label, url) in enumerate(breadcrumb, start=1)
+            ],
+        }
+    )
+    data = {"@context": "https://schema.org", "@graph": graph}
+    return (
+        '<script type="application/ld+json">\n'
+        + json.dumps(data, ensure_ascii=False, indent=2)
+        + "\n</script>"
+    )

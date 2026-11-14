@@ -35,7 +35,9 @@ from tools.site_config import (  # noqa: E402
     guide_article_genres,
     guide_genre_order_index,
     guide_genre_style_by_label,
+    organization_ld,
     primary_external_link,
+    publisher_ref,
 )
 
 from tools.seo_editorial_chrome import (  # noqa: E402
@@ -918,6 +920,7 @@ def build_article_html(
         "inLanguage": "ja-JP",
         "about": [genre, *display_tags],
         "isPartOf": public_url("articles/index.html"),
+        "publisher": publisher_ref(),
         **json_ld_date_modified(updated),
     }
     if author:
@@ -930,6 +933,7 @@ def build_article_html(
     json_ld = {
         "@context": "https://schema.org",
         "@graph": [
+            organization_ld(),
             article_schema,
             {"@type": "WebPage", "@id": canonical + "#webpage", "url": canonical, "name": title, "description": desc, "inLanguage": "ja-JP"},
             {
@@ -1106,7 +1110,34 @@ def build_index_html(articles: list[dict[str, str]]) -> str:
         for i, a in enumerate(articles, start=1)
     ]
     ld_json = json.dumps(
-        {"@context": "https://schema.org", "@type": "ItemList", "name": f"{exam_name()} 試験ガイド", "numberOfItems": len(articles), "itemListElement": item_list},
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                organization_ld(),
+                {
+                    "@type": "CollectionPage",
+                    "@id": canonical + "#webpage",
+                    "url": canonical,
+                    "name": title,
+                    "description": desc,
+                    "inLanguage": "ja-JP",
+                    "publisher": publisher_ref(),
+                    "mainEntity": {
+                        "@type": "ItemList",
+                        "name": f"{exam_name()} 試験ガイド",
+                        "numberOfItems": len(articles),
+                        "itemListElement": item_list,
+                    },
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {"@type": "ListItem", "position": 1, "name": "トップ", "item": public_url("index.html")},
+                        {"@type": "ListItem", "position": 2, "name": "試験ガイド", "item": canonical},
+                    ],
+                },
+            ],
+        },
         ensure_ascii=False,
         indent=2,
     )

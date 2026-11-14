@@ -45,7 +45,7 @@ from tools.seo_editorial_chrome import (  # noqa: E402
     seo_editorial_head_fonts,
     seo_editorial_stylesheet_links,
 )
-from tools.site_config import brand_name, exam_name, public_url  # noqa: E402
+from tools.site_config import brand_name, exam_name, organization_ld, public_url, publisher_ref  # noqa: E402
 
 PAGE_SLUG = "kaitou-sokuhou"
 OUTPUT_DIR = ROOT / PAGE_SLUG
@@ -459,7 +459,11 @@ def build_round_page(round_row: dict[str, str], answers: list[dict]) -> str:
     if related:
         body_parts.append(related)
 
+    exam_date_iso = _norm(round_row.get("exam_date_iso"))
+    # 公開日は未来日にしない（試験が未実施なら「本日」を公開日とする）。更新日は常に本日＝鮮度シグナル。
+    date_published = exam_date_iso if (exam_date_iso and exam_date_iso <= today) else today
     graph: list[dict] = [
+        organization_ld(),
         {
             "@type": "WebPage",
             "@id": canonical + "#webpage",
@@ -469,6 +473,9 @@ def build_round_page(round_row: dict[str, str], answers: list[dict]) -> str:
             "inLanguage": "ja-JP",
             "isPartOf": {"@type": "WebSite", "name": brand_name(), "url": public_url("index.html")},
             "about": exam_name(),
+            "datePublished": date_published,
+            "dateModified": today,
+            "publisher": publisher_ref(),
         },
         {
             "@type": "BreadcrumbList",
@@ -589,6 +596,7 @@ def build_hub_page(rounds: list[dict[str, str]]) -> str:
     )
 
     graph = [
+        organization_ld(),
         {
             "@type": "WebPage",
             "@id": canonical + "#webpage",
@@ -598,6 +606,7 @@ def build_hub_page(rounds: list[dict[str, str]]) -> str:
             "inLanguage": "ja-JP",
             "isPartOf": {"@type": "WebSite", "name": brand_name(), "url": public_url("index.html")},
             "about": exam_name(),
+            "publisher": publisher_ref(),
         },
         {
             "@type": "BreadcrumbList",

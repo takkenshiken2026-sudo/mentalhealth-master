@@ -61,8 +61,11 @@ from tools.site_config import (
     clean_origin,
     exam_name,
     excluded_past_exam_years,
+    organization_ld,
     public_url as site_public_url,
+    publisher_ref,
 )
+from tools.seo_utils import hub_collection_jsonld
 
 DATA_CSV = ROOT / "data" / "past_questions.csv"
 Q_ROOT = ROOT / "q"
@@ -901,6 +904,18 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
     study_modes_note = study_modes_note_html()
     index_picks_html = build_guide_index_picks_html(rel_path)
 
+    q_index_jsonld = hub_collection_jsonld(
+        canonical=public_url(base_url, "q/index.html"),
+        name=page_title,
+        description=page_desc,
+        breadcrumb=[
+            ("トップ", public_url(base_url, "index.html")),
+            ("過去問一覧", public_url(base_url, "q/index.html")),
+        ],
+        organization=organization_ld(),
+        publisher=publisher_ref(),
+    )
+
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -917,6 +932,7 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
 {HEAD_FONTS}
 <link rel="stylesheet" href="../site-pages.css?v={Q_INDEX_CSS_VER}">
 <link rel="stylesheet" href="../site-theme.css">
+{q_index_jsonld}
 </head>
 <body class="{shell_body_class('q-index-page')}">
 {site_page_wrap_open()}
