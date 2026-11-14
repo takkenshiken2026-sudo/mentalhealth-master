@@ -1665,6 +1665,9 @@ body.is-solving .site-footer{display:none!important}
       
       
       
+      
+      
+      
       <!--COURSE_SWITCH_START--><div class="course-switch" style="margin:18px 0 6px;padding:14px 16px;border:1px solid var(--border);border-radius:12px;background:var(--bg2)"><div style="font-size:.85rem;font-weight:700;color:var(--text2);margin-bottom:10px">対策する級（コース）を選ぶ</div><div style="display:flex;flex-wrap:wrap;gap:8px"><a class="course-switch-pill" href="https://mentalhealth-master.jp/self/" style="padding:8px 14px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:700;font-size:.9rem;white-space:nowrap;background:var(--bg)">III種（セルフケアコース）</a><span class="course-switch-pill course-switch-pill--current" aria-current="page" style="padding:8px 14px;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;font-size:.9rem;white-space:nowrap">II種（ラインケアコース）<span style="opacity:.85;font-weight:600">（閲覧中）</span></span><a class="course-switch-pill" href="https://mentalhealth-master.jp/master/" style="padding:8px 14px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:700;font-size:.9rem;white-space:nowrap;background:var(--bg)">I種（マスターコース）</a></div></div><!--COURSE_SWITCH_END--><div class="mode-list-v2">
         <div class="mode-card-v2" onclick="startIchimondou()">
           <div class="mode-num-v2">01</div>
@@ -2025,9 +2028,9 @@ function applyCsvImportedQuestions() {
   YEARS = Array.from(yset).sort(function (a, b) { return b - a; });
 }
 </script>
-<script src="exam-site-data-practice.js"></script>
-<script src="exam-site-data-past.js"></script>
-<script src="exam-site-data-ichimondou.js"></script>
+<script defer src="exam-site-data-practice.js"></script>
+<script defer src="exam-site-data-past.js"></script>
+<script defer src="exam-site-data-ichimondou.js"></script>
 <script>
 
 // ===== GAMIFICATION ENGINE =====
@@ -2768,7 +2771,7 @@ function buildYearHistoryHTML(q){
 
 // ===== STATE =====
 let currentUser = null, db = {};
-let quizState = {mode:'past',fields:FIELDS.map(f=>f.id),years:[...YEARS],count:10,order:'rnd',queue:[],idx:0,startTime:0,sessionResults:[],scoreReplayMode:false};
+let quizState = {mode:'past',fields:FIELDS.map(f=>f.id),years:((typeof YEARS!=='undefined'&&Array.isArray(YEARS))?[...YEARS]:[]),count:10,order:'rnd',queue:[],idx:0,startTime:0,sessionResults:[],scoreReplayMode:false};
 
 // Storage: localStorage (works in real browsers / GitHub Pages)
 var _memStore = {};
@@ -6598,6 +6601,9 @@ function closePremium(){document.getElementById('premium-modal').classList.remov
 function mockUpgrade(){const u=getUserData();u.plan='premium';saveUser(u);closePremium();gotoPage('quiz-start')}
 
 loadDB();
+// 問題データ(exam-site-data-*.js)は defer 読み込みのため、
+// DOMContentLoaded（defer スクリプト実行完了後に発火）でアプリ本体を起動する。
+function __bootApp(){
 // ゲストとしてまず入場
 (function(){
   const guestEmail='__guest__';
@@ -6625,6 +6631,12 @@ loadDB();
     enterApp();
   }
 })();
+}
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded', __bootApp, {once:true});
+} else {
+  __bootApp();
+}
 // 試験日は地域等で異なるため、日数カウント表示は廃止（旧 DAILY_MSGS は削除）
 
 </script>
@@ -7699,11 +7711,26 @@ function init(){
   }
 }
 
-// getUserData が利用可能になってから初期化
-if(typeof getUserData==='function'){
-  init();
+// 問題データ(exam-site-data-*.js)は defer 読み込みのため、
+// DOMContentLoaded（defer スクリプト実行完了後に発火）で初期化する。
+function __bootInit(){
+  // defer で読み込んだ問題データを quizState に反映（同期読み込み時と同じ初期状態にする）
+  try{
+    if(typeof YEARS!=='undefined' && Array.isArray(YEARS) && (!quizState.years || quizState.years.length===0)){
+      quizState.years=[...YEARS];
+    }
+  }catch(e){}
+  // getUserData が利用可能になってから初期化
+  if(typeof getUserData==='function'){
+    init();
+  } else {
+    setTimeout(init,400);
+  }
+}
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded', __bootInit, {once:true});
 } else {
-  setTimeout(init,400);
+  __bootInit();
 }
 
 })();
