@@ -682,6 +682,8 @@ details.rich-detail summary{display:none}
 .score-paid-mock-strip-cta{font-size:var(--fs-sub);font-weight:700;color:var(--paid-mock-accent);flex-shrink:0;white-space:nowrap}
 .score-paid-mock-list{display:flex;flex-direction:column;gap:9px}
 .score-paid-mock-strip-badge{display:inline-block;margin-left:7px;font-size:10px;font-weight:700;color:var(--paid-mock-accent);background:var(--paid-mock-accent-soft);border:1px solid var(--paid-mock-accent-border);border-radius:999px;padding:1px 8px;letter-spacing:.03em;vertical-align:middle}
+/* スマホ: タグとCTAを上段・タイトル＋メタを全幅の下段に再配置し、タイトルの不自然な折り返しを防ぐ */
+@media(max-width:520px){.score-paid-mock-strip{align-items:center;row-gap:8px}.score-paid-mock-strip-tag{order:1}.score-paid-mock-strip-cta{order:2;margin-left:auto}.score-paid-mock-strip-body{order:3;flex-basis:100%;min-width:0}}
 .top-paid-mock{display:flex;flex-direction:column;gap:9px}
 .top-paid-mock .score-paid-mock-lead{margin-bottom:0}
 .paid-mock-note{font-size:var(--fs-caption);color:var(--text2);margin:4px 0 0;line-height:1.5}
@@ -1666,6 +1668,7 @@ body.is-solving .site-footer{display:none!important}
       
       
 
+      
       
       
       
