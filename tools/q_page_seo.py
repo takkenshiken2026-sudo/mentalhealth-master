@@ -40,6 +40,7 @@ def index_lead(mode: str) -> str:
     if mode == "past":
         return (
             f"{ex}の過去問を年度別・分野別にまとめています。"
+            "すべてWeb上で無料で解け、PDFのダウンロードやアプリのインストールは不要です。スマホ・PCのブラウザでそのまま学習できます。"
             f"{c['mockExam']}前の出題傾向の確認や、{c['studyModes']}の中心コンテンツとして使えます。"
             "検索と絞り込みで目的の問題を探し、解説ページで正誤と解説を確認できます。"
         )
@@ -62,8 +63,8 @@ def index_meta_description(mode: str, *, count: int) -> str:
     if mode == "past":
         base = (
             f"{ex}の過去問{count}問を年度・分野別に掲載。"
+            "Web上で無料で解け、PDFのダウンロードは不要。スマホ・PCで学習できます。"
             f"{c['mockExam']}対策・{c['studyModes']}の学習に対応。"
-            "検索・絞り込みのあと解説ページへ。"
         )
     elif mode == "practice":
         base = (
@@ -147,7 +148,7 @@ def index_page_title(mode: str) -> str:
     c = seo_copy()
     label = MODE_LABEL[mode]
     if mode == "past":
-        sub = f"{c['mockExam']}対策"
+        sub = "Web無料・模試対策"
     elif mode == "practice":
         sub = f"{c['mockExam']}前の演習"
     else:
