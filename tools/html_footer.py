@@ -554,7 +554,7 @@ def q_index_stats_line(*, question_count: int, mode: str, year_count: int = 0, c
         return f"全{n}問・{category_count}分野"
     if mode == "ichimon":
         return f"全{n}問・{year_count}年度・{category_count}分野"
-    return f"全{n}問・{year_count}年度・{category_count}分野"
+    return f"全{n}問・{category_count}分野"
 
 
 def q_index_filters_details_html(
