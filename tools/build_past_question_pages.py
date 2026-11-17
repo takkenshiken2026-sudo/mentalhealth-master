@@ -916,6 +916,23 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
         publisher=publisher_ref(),
     )
 
+    exam_info_items = [
+        ("articles/schedule/index.html", "試験日程・申込期間"),
+        ("articles/pass-score/index.html", "合格点（100点満点70点）"),
+        ("articles/exam-venue-and-region/index.html", "試験会場・受験地"),
+        ("articles/exam-changes/index.html", "制度変更の確認"),
+    ]
+    exam_info_links_html = (
+        '<section class="related-box" aria-labelledby="q-exam-info-h">'
+        '<p class="related-box-title" id="q-exam-info-h">試験情報</p>'
+        '<div class="related-links">'
+        + "".join(
+            f'<a class="related-link" href="{html.escape(rel_href(rel_path, href))}">{html.escape(label)}</a>'
+            for href, label in exam_info_items
+        )
+        + "</div></section>"
+    )
+
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -987,6 +1004,7 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
       </div>
     </div>
   </section>
+  {exam_info_links_html}
 </main>
 {q_index_footer}
 {site_page_wrap_close()}
