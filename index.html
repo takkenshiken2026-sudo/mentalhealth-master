@@ -1691,6 +1691,7 @@ body.is-solving .site-footer{display:none!important}
       
       
       
+      
       <!--COURSE_SWITCH_START--><div class="course-switch" style="margin:18px 0 6px;padding:14px 16px;border:1px solid var(--border);border-radius:12px;background:var(--bg2)"><div style="font-size:.85rem;font-weight:700;color:var(--text2);margin-bottom:10px">対策する級（コース）を選ぶ</div><div style="display:flex;flex-wrap:wrap;gap:8px"><a class="course-switch-pill" href="https://mentalhealth-master.jp/self/" style="padding:8px 14px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:700;font-size:.9rem;white-space:nowrap;background:var(--bg)">III種（セルフケアコース）</a><span class="course-switch-pill course-switch-pill--current" aria-current="page" style="padding:8px 14px;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;font-size:.9rem;white-space:nowrap">II種（ラインケアコース）<span style="opacity:.85;font-weight:600">（閲覧中）</span></span><a class="course-switch-pill" href="https://mentalhealth-master.jp/master/" style="padding:8px 14px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:700;font-size:.9rem;white-space:nowrap;background:var(--bg)">I種（マスターコース）</a></div></div><!--COURSE_SWITCH_END--><div class="mode-list-v2">
         <div class="mode-card-v2" onclick="startIchimondou()">
           <div class="mode-num-v2">01</div>
@@ -4621,14 +4622,14 @@ function renderQScoreReplay(sr){
   document.getElementById('qp-label').textContent=`${idx+1} / ${total}`;
   document.getElementById('qp-fill').style.width=Math.round(idx/total*100)+'%';
   const f=FIELDS.find(f=>f.id===q.field)||{name:'—'};
-  const sourceLabel=(q.year!=null&&q.year!=='')?formatPastYearLabel(q.year):'実践演習';
+  const sourceLabel=quizState.mode==='past'?'':((q.year!=null&&q.year!=='')?formatPastYearLabel(q.year):'実践演習');const yearHTML=sourceLabel?`<span class="q-meta-item q-meta-year"><span class="q-meta-value">${sourceLabel}</span></span>`:'';
   const showStars=!['past','orig'].includes(quizState.mode);
   const starsHTML=showStars?`
     <span class="q-meta-item diff-wrap">${diffStarsHTML(getDifficultyEvidence(q))}</span>
     <span class="q-meta-item freq-item">${freqStarsHTML(getFrequencyEvidence(q))}</span>`:'';
   document.getElementById('q-meta').innerHTML=`
     <span class="q-meta-item q-meta-field"><span class="q-meta-label">${f.name}</span></span>
-    <span class="q-meta-item q-meta-year"><span class="q-meta-value">${sourceLabel}</span></span>${starsHTML}`;
+    ${yearHTML}${starsHTML}`;
   updateBookmarkButton(q);
   document.getElementById('q-body').textContent=formatExamQuestionBodyText(q.text||'');
   document.getElementById('opts').innerHTML=q.opts.map((o,j)=>
@@ -4682,14 +4683,14 @@ function renderQ(){ window.scrollTo({top:0,behavior:"instant"});
   document.getElementById('qp-label').textContent=`${idx+1} / ${total}`;
   document.getElementById('qp-fill').style.width=Math.round(idx/total*100)+'%';
   const f=FIELDS.find(f=>f.id===q.field)||{name:'—'};
-  const sourceLabel=(q.year!=null&&q.year!=='')?formatPastYearLabel(q.year):'実践演習';
+  const sourceLabel=quizState.mode==='past'?'':((q.year!=null&&q.year!=='')?formatPastYearLabel(q.year):'実践演習');const yearHTML=sourceLabel?`<span class="q-meta-item q-meta-year"><span class="q-meta-value">${sourceLabel}</span></span>`:'';
   const showStars=!['past','orig'].includes(quizState.mode);
   const starsHTML=showStars?`
 	    <span class="q-meta-item diff-wrap">${diffStarsHTML(getDifficultyEvidence(q))}</span>
 	    <span class="q-meta-item freq-item">${freqStarsHTML(getFrequencyEvidence(q))}</span>`:'';
 	  document.getElementById('q-meta').innerHTML=`
 	    <span class="q-meta-item q-meta-field"><span class="q-meta-label">${f.name}</span></span>
-	    <span class="q-meta-item q-meta-year"><span class="q-meta-value">${sourceLabel}</span></span>${starsHTML}`;
+	    ${yearHTML}${starsHTML}`;
 	  updateBookmarkButton(q);
 	  document.getElementById('q-body').textContent=formatExamQuestionBodyText(q.text||'');
   document.getElementById('opts').innerHTML=q.opts.map((o,i)=>

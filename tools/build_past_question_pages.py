@@ -976,7 +976,6 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
   <p class="site-page-lead">{html.escape(page_lead)}</p>
   {index_picks_html}
   {study_modes_note}
-  {about_html}
   {q_hub_links_html(rel_path, current="past")}
   <section class="past-index-panel" aria-labelledby="past-index-heading">
     <div class="past-index-head">
@@ -1024,6 +1023,7 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
     </div>
   </section>
   {exam_info_links_html}
+  {about_html}
 </main>
 {q_index_footer}
 {site_page_wrap_close()}
