@@ -140,7 +140,7 @@ window.SITE_CONFIG = {
         "title": "【2027年版】本番想定模試 3回分",
         "meta": "PDF・3回分・解説付き",
         "priceLabel": "¥1,180",
-        "badge": "本番想定"
+        "badge": "実力チェック"
       }
     ]
   },
@@ -154,7 +154,7 @@ window.SITE_CONFIG = {
         "title": "【全120問】分野別問題集",
         "meta": "PDF・全120問・解説付き",
         "priceLabel": "¥790",
-        "badge": "分野別"
+        "badge": "基礎固め"
       }
     ]
   }

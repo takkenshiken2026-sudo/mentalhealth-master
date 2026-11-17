@@ -234,7 +234,7 @@
         "title": "【2027年版】本番想定模試 3回分",
         "meta": "PDF・3回分・解説付き",
         "priceLabel": "¥980",
-        "badge": "本番想定",
+        "badge": "実力チェック",
         "url": "https://note.com/shikaku_master/n/ndd53ebae2edc"
       }
     ]
@@ -248,7 +248,7 @@
         "title": "【全166問】分野別問題集",
         "meta": "PDF・全166問・解説付き",
         "priceLabel": "¥790",
-        "badge": "分野別",
+        "badge": "基礎固め",
         "url": "https://note.com/shikaku_master/n/n3c8a743e02d1"
       }
     ]
@@ -265,7 +265,7 @@
     "items": [
       {
         "kind": "mock",
-        "kindLabel": "模試",
+        "kindLabel": "実力チェック",
         "title": "【2027年版】本番想定模試 3回分",
         "description": "本番想定・PDF3回分・解説付き（¥980）。本番の時間配分と弱点を最終チェック。",
         "href": "https://note.com/shikaku_master/n/ndd53ebae2edc",
@@ -273,7 +273,7 @@
       },
       {
         "kind": "problem-book",
-        "kindLabel": "分野別",
+        "kindLabel": "基礎固め",
         "title": "【全166問】分野別問題集",
         "description": "分野別・全166問・解説付き（¥790）。覚え方・ひっかけ注意つきで弱点分野を総点検。",
         "href": "https://note.com/shikaku_master/n/n3c8a743e02d1",
