@@ -595,6 +595,41 @@ def paid_mock_exam() -> dict | None:
     return out
 
 
+def paid_field_quiz() -> dict | None:
+    """分野別問題集（note）。paidMockExam と同じ構造で、トップ/採点結果に並べて表示する。"""
+    raw = CONFIG.get("paidFieldQuiz")
+    if not isinstance(raw, dict):
+        return None
+    out: dict = {}
+    for key in (
+        "scoreLead",
+        "topLead",
+        "footnote",
+        "purchaseNote",
+    ):
+        val = raw.get(key)
+        if val is not None and str(val).strip():
+            out[key] = str(val).strip()
+    items: list[dict[str, str]] = []
+    for it in raw.get("items") or []:
+        if not isinstance(it, dict):
+            continue
+        item_url = str(it.get("url") or "").strip()
+        if not item_url:
+            continue
+        item: dict[str, str] = {"url": item_url}
+        for k in ("title", "meta", "priceLabel", "badge"):
+            v = it.get(k)
+            if v is not None and str(v).strip():
+                item[k] = str(v).strip()
+        items.append(item)
+    if items:
+        out["items"] = items
+    if not out.get("items"):
+        return None
+    return out
+
+
 def top_affiliate_banner() -> dict[str, str] | None:
     raw = CONFIG.get("topAffiliateBanner")
     if not isinstance(raw, dict):
@@ -645,6 +680,9 @@ def write_site_config_js() -> None:
     pm = paid_mock_exam()
     if pm:
         payload["paidMockExam"] = pm
+    pfq = paid_field_quiz()
+    if pfq:
+        payload["paidFieldQuiz"] = pfq
     tab = top_affiliate_banner()
     if tab:
         payload["topAffiliateBanner"] = tab

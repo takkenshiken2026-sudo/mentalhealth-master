@@ -143,5 +143,19 @@ window.SITE_CONFIG = {
         "badge": "本番想定"
       }
     ]
+  },
+  "paidFieldQuiz": {
+    "scoreLead": "分野別問題集",
+    "topLead": "分野別に総点検。有料の分野別問題集（note）",
+    "footnote": "※ note で販売する有料コンテンツ（¥790）です。サイト内の無料演習とは別商品です。",
+    "items": [
+      {
+        "url": "https://note.com/shikaku_master/n/n918e00d79a84",
+        "title": "【全120問】分野別問題集",
+        "meta": "PDF・全120問・解説付き",
+        "priceLabel": "¥790",
+        "badge": "分野別"
+      }
+    ]
   }
 };

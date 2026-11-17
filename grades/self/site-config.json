@@ -238,5 +238,47 @@
         "url": "https://note.com/shikaku_master/n/ndd53ebae2edc"
       }
     ]
+  },
+  "paidFieldQuiz": {
+    "scoreLead": "分野別問題集",
+    "topLead": "分野別に総点検。有料の分野別問題集（note）",
+    "footnote": "※ note で販売する有料コンテンツ（¥790）です。サイト内の無料演習とは別商品です。",
+    "items": [
+      {
+        "title": "【全166問】分野別問題集",
+        "meta": "PDF・全166問・解説付き",
+        "priceLabel": "¥790",
+        "badge": "分野別",
+        "url": "https://note.com/shikaku_master/n/n3c8a743e02d1"
+      }
+    ]
+  },
+  "guideIndexPicks": {
+    "title": "予想模試と分野別問題集で総仕上げ",
+    "lead": "無料の演習に加えて、本番想定の予想模試（note・¥980）と分野別問題集（note・¥790）で弱点と時間配分を確認できます。",
+    "leadsByHub": {
+      "articles": "学習の仕上げに。予想模試（note・¥980）と分野別問題集（note・¥790）で弱点と時間配分を確認できます。",
+      "terms": "用語暗記のあとは、分野別問題集（note・¥790）と予想模試（note・¥980）で実戦演習に進みましょう。",
+      "q": "無料演習と併用して、予想模試（note・¥980）と分野別問題集（note・¥790）で総合力を確認できます。"
+    },
+    "layout": "grid-2",
+    "items": [
+      {
+        "kind": "mock",
+        "kindLabel": "模試",
+        "title": "【2027年版】本番想定模試 3回分",
+        "description": "本番想定・PDF3回分・解説付き（¥980）。本番の時間配分と弱点を最終チェック。",
+        "href": "https://note.com/shikaku_master/n/ndd53ebae2edc",
+        "cta": "noteで詳細を見る"
+      },
+      {
+        "kind": "problem-book",
+        "kindLabel": "分野別",
+        "title": "【全166問】分野別問題集",
+        "description": "分野別・全166問・解説付き（¥790）。覚え方・ひっかけ注意つきで弱点分野を総点検。",
+        "href": "https://note.com/shikaku_master/n/n3c8a743e02d1",
+        "cta": "noteで詳細を見る"
+      }
+    ]
   }
 }

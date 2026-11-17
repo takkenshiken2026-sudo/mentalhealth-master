@@ -1679,6 +1679,8 @@ body.is-solving .site-footer{display:none!important}
       
       
       
+      
+      
       <!--COURSE_SWITCH_START--><div class="course-switch" style="margin:18px 0 6px;padding:14px 16px;border:1px solid var(--border);border-radius:12px;background:var(--bg2)"><div style="font-size:.85rem;font-weight:700;color:var(--text2);margin-bottom:10px">対策する級（コース）を選ぶ</div><div style="display:flex;flex-wrap:wrap;gap:8px"><a class="course-switch-pill" href="https://mentalhealth-master.jp/self/" style="padding:8px 14px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:700;font-size:.9rem;white-space:nowrap;background:var(--bg)">III種（セルフケアコース）</a><span class="course-switch-pill course-switch-pill--current" aria-current="page" style="padding:8px 14px;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;font-size:.9rem;white-space:nowrap">II種（ラインケアコース）<span style="opacity:.85;font-weight:600">（閲覧中）</span></span><a class="course-switch-pill" href="https://mentalhealth-master.jp/master/" style="padding:8px 14px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:700;font-size:.9rem;white-space:nowrap;background:var(--bg)">I種（マスターコース）</a></div></div><!--COURSE_SWITCH_END--><div class="mode-list-v2">
         <div class="mode-card-v2" onclick="startIchimondou()">
           <div class="mode-num-v2">01</div>
@@ -7462,6 +7464,32 @@ function getPaidMockExamItems(){
   }).filter(function(it){ return it.url; });
 }
 
+// 分野別問題集（note）。模試と同じストリップUIで、トップ/採点結果に並べて表示する。
+function getPaidFieldQuizConfig(){
+  const cfg=(window.SITE_CONFIG&&window.SITE_CONFIG.paidFieldQuiz)||{};
+  return {
+    scoreLead: String(cfg.scoreLead||'分野別問題集').trim(),
+    topLead: String(cfg.topLead||'分野別に総点検。有料の分野別問題集（note）').trim(),
+    footnote: String(cfg.footnote||'').trim(),
+    purchaseNote: String(cfg.purchaseNote||'').trim(),
+    items: getPaidFieldQuizItems(),
+  };
+}
+function getPaidFieldQuizItems(){
+  const cfg=(window.SITE_CONFIG&&window.SITE_CONFIG.paidFieldQuiz)||{};
+  const raw=Array.isArray(cfg.items)?cfg.items:[];
+  return raw.map(function(it){
+    it=it||{};
+    return {
+      title: String(it.title||'分野別問題集').trim(),
+      meta: String(it.meta||'PDF・分野別').trim(),
+      priceLabel: String(it.priceLabel||'¥790').trim(),
+      badge: String(it.badge||'').trim(),
+      url: String(it.url||'').trim(),
+    };
+  }).filter(function(it){ return it.url; });
+}
+
 // 案D：有料模試を1件のテキストCTA（ストリップ）として描画
 // opts.onclick を渡すとクリック計測用の onclick 属性を付与する
 function paidMockStripHtml(it, opts){
@@ -7550,6 +7578,15 @@ function renderTopPromoBanners(){
     }
   }
 
+  // 分野別問題集（slot: field）。画像バナーは持たないので常にテキストストリップで表示する。
+  const field=getPaidFieldQuizConfig();
+  if(field.items.length){
+    const flead=field.topLead?`<p class="score-paid-mock-lead">${escapeHTML(field.topLead)}</p>`:'';
+    const fnote=field.purchaseNote?`<p class="paid-mock-note">${escapeHTML(field.purchaseNote)}</p>`:'';
+    parts.push(`<div class="top-paid-mock">${flead}${paidMockStripListHtml(field.items,{onclick:"trackPromoClick('field','text')"})}${fnote}</div>`);
+    shown.push(['field','text']);
+  }
+
   // スタディング等の講座（slot: studying）
   const cfg=(window.SITE_CONFIG&&window.SITE_CONFIG.topAffiliateBanner)||{};
   const url=String(cfg.url||'').trim();
@@ -7627,20 +7664,35 @@ function renderScorePaidMockPromo(opts){
   const wrap=document.getElementById(wrapId);
   if(!wrap) return;
   const m=getPaidMockExamConfig();
-  if(!m.items.length){
+  const field=getPaidFieldQuizConfig();
+  if(!m.items.length && !field.items.length){
     wrap.hidden=true;
     wrap.innerHTML='';
     return;
   }
   const pct=(typeof opts.scorePct==='number')?opts.scorePct
     :(typeof window.__lastQuizPct==='number'?window.__lastQuizPct:null);
-  const leadHtml=opts.leadHtml!=null?opts.leadHtml:scorePaidMockLeadHtml(m,opts.variant,pct);
-  const note=m.purchaseNote?`<p class="paid-mock-note">${escapeHTML(m.purchaseNote)}</p>`:'';
-  wrap.hidden=false;
-  wrap.innerHTML=`
+  let html='';
+  // 予想模試（得点連動の誘導文つき）
+  if(m.items.length){
+    const leadHtml=opts.leadHtml!=null?opts.leadHtml:scorePaidMockLeadHtml(m,opts.variant,pct);
+    const note=m.purchaseNote?`<p class="paid-mock-note">${escapeHTML(m.purchaseNote)}</p>`:'';
+    html+=`
     <p class="score-paid-mock-lead">${leadHtml}</p>
     ${paidMockStripListHtml(m.items)}
     ${note}`;
+  }
+  // 分野別問題集
+  if(field.items.length){
+    const flead=`<strong>${escapeHTML(field.scoreLead)}</strong>で弱点分野をまとめて補強しませんか？`;
+    const fnote=field.purchaseNote?`<p class="paid-mock-note">${escapeHTML(field.purchaseNote)}</p>`:'';
+    html+=`
+    <p class="score-paid-mock-lead">${flead}</p>
+    ${paidMockStripListHtml(field.items)}
+    ${fnote}`;
+  }
+  wrap.hidden=false;
+  wrap.innerHTML=html;
 }
 window.renderScorePaidMockPromo=renderScorePaidMockPromo;
 
