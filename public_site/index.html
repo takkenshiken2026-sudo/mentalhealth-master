@@ -1791,12 +1791,9 @@ body.is-solving .site-footer{display:none!important}
           <span>正答率<strong id="ichi-score-pct">—</strong></span>
         </div>
         <div class="ichi-score-label" id="ichi-score-label"></div>
-        <div id="ichi-score-goal" class="score-goal"></div>
         <div class="ichi-score-btns">
           <button class="btn-primary" onclick="continueIchiSession()" style="font-size:15px;padding:13px">続けて解く</button>
           <button type="button" class="btn-ghost" id="btn-retry-wrong-ichi" onclick="retryWrongIchi()" style="display:none;font-size:15px;padding:13px">間違えた0問を復習</button>
-          <button class="btn-ghost" onclick="shareIchiResultToX()" style="font-size:15px;padding:13px">Xに投稿する</button>
-          <button class="btn-ghost" onclick="gotoPage('quiz-start')" style="font-size:15px;padding:13px">他の問題を解く</button>
         </div>
         <div id="ichi-score-paid-mock-wrap" class="score-paid-mock-wrap ichi-score-paid-mock-wrap" hidden></div>
       </div>
@@ -1844,7 +1841,6 @@ body.is-solving .site-footer{display:none!important}
         <div id="score-session-msg" style="margin-bottom:16px"></div>
         <div class="score-ring-wrap" id="score-ring-wrap"></div>
         <div class="score-detail-grid" id="score-details"></div>
-        <div id="score-goal" class="score-goal"></div>
         <div id="score-badges-earned" style="margin-bottom:8px"></div>
         <details class="score-q-accordion" id="score-q-accordion">
           <summary class="score-q-accordion-summary">
@@ -1857,8 +1853,6 @@ body.is-solving .site-footer{display:none!important}
         <div class="score-btns">
           <button class="btn-primary" onclick="continueSession()">続けて解く</button>
           <button type="button" class="btn-ghost" id="btn-retry-wrong" onclick="retryWrongQuestions()" style="display:none">間違えた0問を復習</button>
-          <button class="btn-ghost" onclick="shareSessionResultToX()">Xに投稿する</button>
-          <button class="btn-ghost" onclick="gotoPage('quiz-start')">他の問題を解く</button>
         </div>
         <div id="score-paid-mock-wrap" class="score-paid-mock-wrap" hidden></div>
       </div>
@@ -3982,7 +3976,6 @@ function showIchiScore() {
   const ratio = att > 0 ? s / att : 0;
   const li = Math.min(Math.floor(ratio * (labels.length - 0.001)), labels.length - 1);
   document.getElementById('ichi-score-label').textContent = labels[Math.max(0, li)];
-  renderScoreGoal('ichi-score-goal');
   const wrongIchi = (ichiState.sessionResults || []).filter(r => !r.correct).length;
   const retryIchiBtn = document.getElementById('btn-retry-wrong-ichi');
   if (retryIchiBtn) {
@@ -5966,7 +5959,6 @@ function showScore(){
     det.className='score-detail-grid';
     det.innerHTML='';
   }
-  renderScoreGoal('score-goal');
   const wrongCount=res.filter(r=>!r.correct).length;
   const retryBtn=document.getElementById('btn-retry-wrong');
   if(retryBtn){
