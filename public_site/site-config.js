@@ -68,6 +68,11 @@ window.SITE_CONFIG = {
         "key": "articles"
       },
       {
+        "label": "試験日程",
+        "href": "articles/schedule/index.html",
+        "key": "schedule"
+      },
+      {
         "label": "過去問一覧",
         "href": "q/index.html",
         "key": "q"
