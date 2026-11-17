@@ -57,6 +57,87 @@ def index_lead(mode: str) -> str:
     )
 
 
+def _about_cfg() -> dict:
+    raw = CONFIG.get("seoAbout")
+    return raw if isinstance(raw, dict) else {}
+
+
+def index_about_html(mode: str) -> str:
+    """過去問一覧ページに置く、試験概要・出題範囲・学習法・FAQ の SEO 本文。
+    site-config.json の seoAbout を持つ種のみ出力（未設定種は空文字）。"""
+    if mode != "past":
+        return ""
+    cfg = _about_cfg()
+    if not cfg:
+        return ""
+    import json as _json
+
+    e = html.escape
+    parts: list[str] = ['<section class="q-seo-about site-prose" aria-labelledby="q-seo-about-h">']
+    parts.append(f'<h2 id="q-seo-about-h">{e(exam_name())}とは</h2>')
+    overview = str(cfg.get("overview") or "").strip()
+    if overview:
+        parts.append(f"<p>{e(overview)}</p>")
+
+    facts = cfg.get("facts") or []
+    if isinstance(facts, list) and facts:
+        parts.append('<h3>試験の概要</h3>')
+        parts.append('<dl class="q-seo-facts">')
+        for item in facts:
+            if isinstance(item, (list, tuple)) and len(item) == 2:
+                parts.append(f"<dt>{e(str(item[0]))}</dt><dd>{e(str(item[1]))}</dd>")
+        parts.append("</dl>")
+
+    scope = cfg.get("scope") or []
+    if isinstance(scope, list) and scope:
+        parts.append(f"<h3>{e(str(cfg.get('scopeHeading') or '出題範囲'))}</h3>")
+        parts.append("<ul>" + "".join(f"<li>{e(str(s))}</li>" for s in scope) + "</ul>")
+
+    study = cfg.get("study") or []
+    if isinstance(study, list) and study:
+        parts.append(f"<h3>{e(str(cfg.get('studyHeading') or '学習の進め方'))}</h3>")
+        parts.append("<ol>" + "".join(f"<li>{e(str(s))}</li>" for s in study) + "</ol>")
+
+    faq = cfg.get("faq") or []
+    faq_pairs = [x for x in faq if isinstance(x, (list, tuple)) and len(x) == 2] if isinstance(faq, list) else []
+    if faq_pairs:
+        parts.append(f"<h3>{e(str(cfg.get('faqHeading') or 'よくある質問'))}</h3>")
+        parts.append('<div class="q-seo-faq">')
+        for q, a in faq_pairs:
+            parts.append(f"<h4>{e(str(q))}</h4><p>{e(str(a))}</p>")
+        parts.append("</div>")
+        ld = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": str(q),
+                    "acceptedAnswer": {"@type": "Answer", "text": str(a)},
+                }
+                for q, a in faq_pairs
+            ],
+        }
+        parts.append(
+            '<script type="application/ld+json">'
+            + _json.dumps(ld, ensure_ascii=False)
+            + "</script>"
+        )
+
+    links = cfg.get("relatedLinks") or []
+    link_pairs = [x for x in links if isinstance(x, (list, tuple)) and len(x) == 2] if isinstance(links, list) else []
+    if link_pairs:
+        parts.append(f"<h3>{e(str(cfg.get('relatedHeading') or '関連ページ'))}</h3>")
+        parts.append(
+            "<ul>"
+            + "".join(f'<li><a href="{e(str(href))}">{e(str(label))}</a></li>' for href, label in link_pairs)
+            + "</ul>"
+        )
+
+    parts.append("</section>")
+    return "\n".join(parts)
+
+
 def index_meta_description(mode: str, *, count: int) -> str:
     ex = exam_name()
     c = seo_copy()

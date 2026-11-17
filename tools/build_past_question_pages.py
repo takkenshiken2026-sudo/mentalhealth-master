@@ -890,6 +890,7 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
     q_index_footer = site_page_footer(rel_path, current="q")
 
     from tools.q_page_seo import (
+        index_about_html,
         index_h1,
         index_lead,
         index_meta_description,
@@ -902,6 +903,7 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
     index_h1_text = index_h1("past")
     page_desc = index_meta_description("past", count=len(pages))
     page_lead = index_lead("past")
+    about_html = index_about_html("past")
     search_placeholder = index_search_placeholder("past")
     study_modes_note = study_modes_note_html()
     index_picks_html = build_guide_index_picks_html(rel_path)
@@ -974,6 +976,7 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
   <p class="site-page-lead">{html.escape(page_lead)}</p>
   {index_picks_html}
   {study_modes_note}
+  {about_html}
   {q_hub_links_html(rel_path, current="past")}
   <section class="past-index-panel" aria-labelledby="past-index-heading">
     <div class="past-index-head">
