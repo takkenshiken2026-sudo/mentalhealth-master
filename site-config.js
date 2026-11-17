@@ -6,7 +6,7 @@ window.SITE_CONFIG = {
   "contactUrl": "https://forms.gle/N4ZcNRjLyxRbSwsv5",
   "ga4MeasurementId": "G-KRCW0FBHM8",
   "theme": {
-    "accent": "#0B8D4A",
+    "accent": "#1C7A40",
     "accentText": "#ffffff",
     "background": "#f0f0f1",
     "surface": "#ffffff",
@@ -142,7 +142,7 @@ window.SITE_CONFIG = {
     "items": [
       {
         "url": "https://note.com/shikaku_master/n/ned3fd2bce2dd",
-        "title": "【2027年版】本番想定模試 3回分",
+        "title": "メンタルヘルス・マネジメント検定II種 本番想定模試 3回分【2027年版】",
         "meta": "PDF・3回分・解説付き",
         "priceLabel": "¥1,180",
         "badge": "実力チェック"
@@ -156,7 +156,7 @@ window.SITE_CONFIG = {
     "items": [
       {
         "url": "https://note.com/shikaku_master/n/n918e00d79a84",
-        "title": "【全120問】分野別問題集",
+        "title": "メンタルヘルス・マネジメント検定II種 分野別問題集【全120問】",
         "meta": "PDF・全120問・解説付き",
         "priceLabel": "¥790",
         "badge": "基礎固め"

@@ -1,14 +1,14 @@
 :root {
-  --sel: #0B8D4A;
-  --accent: #0B8D4A;
+  --sel: #1C7A40;
+  --accent: #1C7A40;
   --accent-text: #ffffff;
-  --accent-soft: color-mix(in srgb, #0B8D4A 11%, #ffffff);
-  --accent-soft-mid: color-mix(in srgb, #0B8D4A 18%, #ffffff);
-  --accent-border: color-mix(in srgb, #0B8D4A 26%, #ffffff);
-  --accent-emphasis: color-mix(in srgb, #0B8D4A 42%, #333333);
-  --accent-hover-surface: color-mix(in srgb, #0B8D4A 7%, #ffffff);
-  --accent-hover-border: color-mix(in srgb, #0B8D4A 30%, #e4e4e6);
-  --accent-shadow: color-mix(in srgb, #0B8D4A 12%, transparent);
+  --accent-soft: color-mix(in srgb, #1C7A40 11%, #ffffff);
+  --accent-soft-mid: color-mix(in srgb, #1C7A40 18%, #ffffff);
+  --accent-border: color-mix(in srgb, #1C7A40 26%, #ffffff);
+  --accent-emphasis: color-mix(in srgb, #1C7A40 42%, #333333);
+  --accent-hover-surface: color-mix(in srgb, #1C7A40 7%, #ffffff);
+  --accent-hover-border: color-mix(in srgb, #1C7A40 30%, #e4e4e6);
+  --accent-shadow: color-mix(in srgb, #1C7A40 12%, transparent);
   --bg: #ffffff;
   --bg2: #f4f4f5;
   --page-bg: #f0f0f1;

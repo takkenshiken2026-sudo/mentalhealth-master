@@ -670,8 +670,10 @@ details.rich-detail summary{display:none}
 .score-q-text{flex:1;color:var(--text2)}
 .score-q-time{font-family:var(--mono);font-size:var(--fs-sub);color:var(--text3)}
 .score-btns{display:flex;gap:9px;flex-wrap:wrap}
+.score-btns .btn-primary{min-width:220px}
 .score-paid-mock-wrap{margin-top:24px;padding-top:20px;border-top:1px solid var(--border)}
 .score-paid-mock-lead{font-size:var(--fs-sub);color:var(--text);margin-bottom:14px;line-height:1.65;font-weight:500}
+.score-paid-mock-lead.score-paid-field-lead{margin-top:28px}
 .score-paid-mock-lead strong{color:var(--text);font-weight:700}
 .score-paid-mock-strip{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:14px 18px;border:1px solid var(--paid-mock-accent-border);border-radius:var(--r2);background:var(--paid-mock-accent-soft);text-decoration:none;color:inherit;box-shadow:0 2px 10px var(--paid-mock-accent-shadow);transition:border-color .15s,box-shadow .15s,transform .15s}
 .score-paid-mock-strip:hover{border-color:var(--paid-mock-accent);box-shadow:0 4px 14px var(--paid-mock-accent-shadow);transform:translateY(-1px)}
@@ -1792,12 +1794,9 @@ body.is-solving .site-footer{display:none!important}
           <span>正答率<strong id="ichi-score-pct">—</strong></span>
         </div>
         <div class="ichi-score-label" id="ichi-score-label"></div>
-        <div id="ichi-score-goal" class="score-goal"></div>
         <div class="ichi-score-btns">
           <button class="btn-primary" onclick="continueIchiSession()" style="font-size:15px;padding:13px">続けて解く</button>
           <button type="button" class="btn-ghost" id="btn-retry-wrong-ichi" onclick="retryWrongIchi()" style="display:none;font-size:15px;padding:13px">間違えた0問を復習</button>
-          <button class="btn-ghost" onclick="shareIchiResultToX()" style="font-size:15px;padding:13px">Xに投稿する</button>
-          <button class="btn-ghost" onclick="gotoPage('quiz-start')" style="font-size:15px;padding:13px">他の問題を解く</button>
         </div>
         <div id="ichi-score-paid-mock-wrap" class="score-paid-mock-wrap ichi-score-paid-mock-wrap" hidden></div>
       </div>
@@ -1845,7 +1844,6 @@ body.is-solving .site-footer{display:none!important}
         <div id="score-session-msg" style="margin-bottom:16px"></div>
         <div class="score-ring-wrap" id="score-ring-wrap"></div>
         <div class="score-detail-grid" id="score-details"></div>
-        <div id="score-goal" class="score-goal"></div>
         <div id="score-badges-earned" style="margin-bottom:8px"></div>
         <details class="score-q-accordion" id="score-q-accordion">
           <summary class="score-q-accordion-summary">
@@ -1858,8 +1856,6 @@ body.is-solving .site-footer{display:none!important}
         <div class="score-btns">
           <button class="btn-primary" onclick="continueSession()">続けて解く</button>
           <button type="button" class="btn-ghost" id="btn-retry-wrong" onclick="retryWrongQuestions()" style="display:none">間違えた0問を復習</button>
-          <button class="btn-ghost" onclick="shareSessionResultToX()">Xに投稿する</button>
-          <button class="btn-ghost" onclick="gotoPage('quiz-start')">他の問題を解く</button>
         </div>
         <div id="score-paid-mock-wrap" class="score-paid-mock-wrap" hidden></div>
       </div>
@@ -3984,7 +3980,6 @@ function showIchiScore() {
   const ratio = att > 0 ? s / att : 0;
   const li = Math.min(Math.floor(ratio * (labels.length - 0.001)), labels.length - 1);
   document.getElementById('ichi-score-label').textContent = labels[Math.max(0, li)];
-  renderScoreGoal('ichi-score-goal');
   const wrongIchi = (ichiState.sessionResults || []).filter(r => !r.correct).length;
   const retryIchiBtn = document.getElementById('btn-retry-wrong-ichi');
   if (retryIchiBtn) {
@@ -5968,7 +5963,6 @@ function showScore(){
     det.className='score-detail-grid';
     det.innerHTML='';
   }
-  renderScoreGoal('score-goal');
   const wrongCount=res.filter(r=>!r.correct).length;
   const retryBtn=document.getElementById('btn-retry-wrong');
   if(retryBtn){
@@ -7695,7 +7689,7 @@ function renderScorePaidMockPromo(opts){
     const flead=`<strong>${escapeHTML(field.scoreLead)}</strong>で弱点分野をまとめて補強しませんか？`;
     const fnote=field.purchaseNote?`<p class="paid-mock-note">${escapeHTML(field.purchaseNote)}</p>`:'';
     html+=`
-    <p class="score-paid-mock-lead">${flead}</p>
+    <p class="score-paid-mock-lead score-paid-field-lead">${flead}</p>
     ${paidMockStripListHtml(field.items)}
     ${fnote}`;
   }

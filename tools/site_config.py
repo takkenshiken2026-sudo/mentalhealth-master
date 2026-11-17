@@ -51,6 +51,12 @@ def brand_mark() -> str:
     return str(CONFIG.get("brandMark") or brand_name()[:1] or "S")
 
 
+def favicon_mark() -> str:
+    """ファビコン/アプリアイコン用の短いマーク。Google 検索やブラウザタブの小サイズでも
+    判読できるよう 1〜3 文字にする。brandFaviconMark > brandMark の順で解決。"""
+    return str(CONFIG.get("brandFaviconMark") or brand_mark())
+
+
 def brand_logo_lines() -> tuple[str, str]:
     """長方形ロゴ（2行）の上段・下段。brandLogoTop/Bottom > brandLogoText > brandName から自動分割。"""
     top = str(CONFIG.get("brandLogoTop") or "").strip()

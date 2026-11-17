@@ -13,6 +13,7 @@ from tools.site_config import (
     brand_name,
     clean_origin,
     exam_name,
+    favicon_mark,
     public_url,
     resolve_site_root,
     theme,
@@ -32,6 +33,9 @@ def _font_candidates(*, bold: bool) -> list[Path]:
             Path("/System/Library/Fonts/ヒラギノ角ゴシック W6.ttc"),
             Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"),
             Path("/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc"),
+            # 日本語フォント（Noto 不在環境向け）。無いと和文が豆腐(□)になるため DejaVu より前に置く。
+            Path("/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf"),
+            Path("/usr/share/fonts/truetype/fonts-japanese-gothic.ttf"),
             Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
             Path("/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"),
         ]
@@ -39,6 +43,9 @@ def _font_candidates(*, bold: bool) -> list[Path]:
         Path("/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc"),
         Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"),
         Path("/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc"),
+        # 日本語フォント（Noto 不在環境向け）。
+        Path("/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf"),
+        Path("/usr/share/fonts/truetype/fonts-japanese-gothic.ttf"),
         Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"),
         Path("/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf"),
     ]
@@ -150,43 +157,39 @@ def favicon_top_line() -> str:
 
 
 def render_favicon(size: int):
+    """全サイズ共通で、短いマーク（例「二種」）を角丸四角に大きく中央配置する。
+    小サイズ(Google検索・タブ)でも潰れず読めるよう、2行ロゴではなく単一マークにする。"""
     from PIL import Image, ImageDraw
 
-    top, bottom = brand_logo_lines()
+    mark = favicon_mark()
     img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
     margin = max(1, size // 16)
     inner = size - margin * 2
-
-    if size <= 32:
-        label = favicon_top_line()
-        draw.rounded_rectangle(
-            [margin, margin, size - margin, size - margin],
-            radius=max(2, size // 8),
-            fill=theme_ink(),
-        )
-        font, _ = _fit_font(draw, label, inner - 4, max(6, size // 2), bold=True)
-        tw = draw.textlength(label, font=font)
-        th = font.size
-        draw.text(
-            ((size - tw) / 2, (size - th) / 2),
-            label,
-            fill="#ffffff",
-            font=font,
-        )
-        return img
-
-    _draw_logo_mark(
-        draw,
-        x=margin,
-        y=margin,
-        width=inner,
-        height=inner,
-        top=top,
-        bottom=bottom,
-        bg=theme_ink(),
-        fg="#ffffff",
-        radius=max(2, size // 8),
+    radius = max(2, size // 8)
+    draw.rounded_rectangle(
+        [margin, margin, size - margin, size - margin],
+        radius=radius,
+        fill=theme_ink(),
+    )
+    # 左右の余白は控えめにして文字を大きく（判読性優先）
+    pad = max(1, int(inner * 0.12))
+    font, _ = _fit_font(draw, mark, max(1, inner - pad * 2), max(6, int(size * 0.64)), bold=True)
+    # 擬似ボールド（IPAゴシック等はウェイトが細いので輪郭を少し太らせる）
+    stroke = max(0, round(size / 120))
+    # 和文は字形の上下に余白が出るため、実バウンディングボックスで中央寄せ
+    bbox = draw.textbbox((0, 0), mark, font=font, stroke_width=stroke)
+    tw = bbox[2] - bbox[0]
+    th = bbox[3] - bbox[1]
+    tx = (size - tw) / 2 - bbox[0]
+    ty = (size - th) / 2 - bbox[1]
+    draw.text(
+        (tx, ty),
+        mark,
+        fill="#ffffff",
+        font=font,
+        stroke_width=stroke,
+        stroke_fill="#ffffff",
     )
     return img
 
