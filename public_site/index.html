@@ -1885,7 +1885,7 @@ body.is-solving .site-footer{display:none!important}
         </ol>
       </nav>
       <h2 class="page-title">過去問</h2>
-      <div class="page-sub">年度・分野を選んで学習スタート</div>
+      <div class="page-sub">分野を選んで学習スタート</div>
 
       <div class="orig-bottom-bar" style="margin-top:0;margin-bottom:16px;padding-top:0;border-top:none;border-bottom:1px solid var(--border);padding-bottom:16px">
         <h2 class="section-label" style="margin-bottom:12px">出題数</h2>
@@ -1896,13 +1896,6 @@ body.is-solving .site-footer{display:none!important}
           <button class="count-btn"    onclick="selCount(0)"  id="cb0">全問</button>
         </div>
       </div>
-
-      <h2 class="section-label">年度を選ぶ</h2>
-      <div style="display:flex;gap:5px;margin-bottom:7px" class="year-select-actions">
-        <button class="btn-ghost" onclick="selectAllYears()">すべて選択</button>
-        <button class="btn-ghost" onclick="clearAllYears()">解除</button>
-      </div>
-      <div class="year-grid" id="year-grid"></div>
 
       <h2 class="section-label">分野を選ぶ</h2>
       <div class="field-chips" id="field-chips"></div>
@@ -4286,15 +4279,11 @@ function isCsvPracticePoolQuestion(q){
 function isLegacyOrigQuestion(q){ return !!(q && q.unit); }
 function isAnyOrigQuestion(q){ return isLegacyOrigQuestion(q) || isCsvPracticePoolQuestion(q); }
 function buildYearGrid(){
+  // 年度選択UIは廃止（年度は実質1種類）。常に全年度を対象にする。
   const allYears=getPastOnlyYearsSorted();
-  const yearBtnLabel=(y)=>formatPastYearLabel(y)||(y+'年');
-  // sync quizState.years to available years
-  quizState.years=quizState.years.filter(y=>allYears.includes(y));
-  if(!quizState.years.length) quizState.years=[...allYears];
-  document.getElementById('year-grid').innerHTML=allYears.map(y=>{
-    const isOn=quizState.years.includes(y);
-    return `<button class="year-btn ${isOn?'on':''}" id="yb${y}" onclick="toggleYear(${y})">${yearBtnLabel(y)}</button>`;
-  }).join('');
+  quizState.years=[...allYears];
+  const grid=document.getElementById('year-grid');
+  if(grid) grid.innerHTML='';
 }
 function getPastOnlyYearsSorted(){
   const origSet=(typeof CSV_IMPORTED_PRACTICE_POOL_YEARS!=='undefined'&&Array.isArray(CSV_IMPORTED_PRACTICE_POOL_YEARS))
