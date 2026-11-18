@@ -29,6 +29,7 @@ from tools.site_config import (
     learning_nav_extras,
     learning_nav_label,
     navigation_items,
+    static_question_modes,
 )
 
 FORM_URL = contact_url()
@@ -601,11 +602,16 @@ def q_index_filters_details_html(
 
 def q_hub_links_html(rel_path: Path, *, current: str) -> str:
     """過去問・実践演習・一問一答のモード切替タブ（一覧・個別ページ共通）。"""
-    items: list[tuple[str, str, str]] = [
+    all_items: list[tuple[str, str, str]] = [
         ("past", "過去問", "q/index.html"),
         ("practice", "実践演習", "q/practice/index.html"),
         ("ichimon", "一問一答", "q/ichimon/index.html"),
     ]
+    static_modes = static_question_modes()
+    items = [it for it in all_items if it[0] in static_modes]
+    # 静的モードが1つ以下ならタブ切替は不要（リンク切れ防止のためハブ自体を出さない）。
+    if len(items) <= 1:
+        return ""
     lis: list[str] = []
     for key, label, target in items:
         if key == current:

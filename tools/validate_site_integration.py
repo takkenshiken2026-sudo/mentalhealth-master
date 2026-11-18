@@ -38,6 +38,7 @@ from tools.site_config import (  # noqa: E402
     ga4_measurement_id,
     load_config,
     public_url,
+    static_question_modes,
 )
 
 
@@ -112,6 +113,10 @@ def _q_index(q_index: Path) -> list[Issue]:
         return [Issue("q/index.html がありません（build_past_question_pages を実行）")]
     text = q_index.read_text(encoding="utf-8")
     issues: list[Issue] = []
+    # 実践演習・一問一答が静的生成対象のときだけモード切替ハブを必須とする。
+    hub_expected = any(m in static_question_modes() for m in ("practice", "ichimon"))
+    if not hub_expected:
+        return issues
     if "q-hub-links" not in text:
         issues.append(Issue("q/index.html: q_hub_links_html（3モードタブ）がありません"))
     if 'aria-current="page">過去問</span>' not in text and "is-current" not in text:
@@ -280,7 +285,11 @@ def _mode_index_counts(root: Path) -> list[Issue]:
         ("practice", root / "data" / "practice_questions.csv", practice_index, True),
         ("ichimon", root / "data" / "ichimon_questions.csv", root / "q" / "ichimon" / "index.html", False),
     ]
+    static_modes = static_question_modes()
     for mode, csv_path, index_path, skip_invalid in checks:
+        if mode not in static_modes:
+            # 静的生成対象外のモードは一覧ページを持たないため検証しない。
+            continue
         csv_n = _csv_row_count(csv_path, skip_invalid=skip_invalid)
         json_n = _q_index_data_count(index_path)
         if csv_n == 0:

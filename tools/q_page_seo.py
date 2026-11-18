@@ -7,7 +7,7 @@ import html
 import re
 
 from tools.build_past_question_pages import meta_description
-from tools.site_config import CONFIG, brand_name, exam_name
+from tools.site_config import CONFIG, brand_name, exam_name, static_question_modes
 
 MODE_LABEL: dict[str, str] = {
     "past": "過去問",
@@ -27,9 +27,16 @@ def seo_copy() -> dict[str, str]:
 def study_modes_note_html() -> str:
     """一覧・各問ページ本文に置く短い学習導線（表示＋検索キーワードの自然な含有）。"""
     c = seo_copy()
+    # 実践演習・一問一答が静的ページを持たない種では「タブ移動」ではなく学習アプリへ誘導。
+    has_mode_tabs = any(m in static_question_modes() for m in ("practice", "ichimon"))
+    nav_sentence = (
+        "タブから他の演習モードへ移動できます。"
+        if has_mode_tabs
+        else "実践演習・一問一答は学習アプリで取り組めます。"
+    )
     text = (
         f"{exam_name()}の{c['studyModes']}と{c['mockExam']}対策を、このサイトでまとめて学習できます。"
-        "タブから他の演習モードへ移動できます。"
+        + nav_sentence
     )
     return f'<p class="q-study-modes-note">{html.escape(text)}</p>'
 
