@@ -4,6 +4,7 @@
   "brandMark": "M3",
   "examName": "メンタルヘルス・マネジメント検定III種",
   "examGrade": "III種",
+  "staticQuestionModes": ["past"],
   "seoAbout": {
     "overview": "メンタルヘルス・マネジメント検定III種（セルフケアコース）は、おもに一般社員を対象に、働く人が自分自身のストレスやメンタルヘルスの不調に気づき、予防・対処するための知識を問う検定です。大阪商工会議所が主催し、公式テキスト（第6版）に基づいて出題されます。このページでは、III種の過去問形式の問題を分野別にまとめ、無料で解けるようにしています。",
     "facts": [
@@ -41,8 +42,7 @@
     ],
     "relatedHeading": "III種の学習に役立つページ",
     "relatedLinks": [
-      ["practice/index.html", "III種 実践演習（本番に近い形式の問題）"],
-      ["ichimon/index.html", "III種 一問一答（◯×で用語をチェック）"],
+      ["../index.html", "III種 学習アプリ（実践演習・一問一答もアプリで演習できます）"],
       ["../articles/exam-overview/index.html", "III種 試験の概要・申込ガイド"]
     ]
   },

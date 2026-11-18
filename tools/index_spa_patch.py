@@ -9,7 +9,14 @@ import json
 import re
 from pathlib import Path
 
-from tools.site_config import brand_name, contact_url, exam_name, fields, navigation_items
+from tools.site_config import (
+    brand_name,
+    contact_url,
+    exam_name,
+    fields,
+    navigation_items,
+    static_question_modes,
+)
 
 
 def _nav_keys() -> set[str]:
@@ -120,12 +127,15 @@ def index_noscript_inner() -> str:
     )
     features = "\n".join(feature_items)
 
+    static_modes = static_question_modes()
     link_items = [
         '<a href="about.html">このサイトについて</a>',
         '<a href="q/index.html">過去問一覧</a>',
-        '<a href="q/practice/index.html">実践演習一覧</a>',
-        '<a href="q/ichimon/index.html">一問一答一覧</a>',
     ]
+    if "practice" in static_modes:
+        link_items.append('<a href="q/practice/index.html">実践演習一覧</a>')
+    if "ichimon" in static_modes:
+        link_items.append('<a href="q/ichimon/index.html">一問一答一覧</a>')
     if "terms" in nav_keys:
         link_items.append('<a href="terms/index.html">用語集</a>')
     if "articles" in nav_keys:

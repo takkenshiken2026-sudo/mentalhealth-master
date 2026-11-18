@@ -87,6 +87,7 @@ from tools.site_config import (
     exam_name,
     organization_ld,
     publisher_ref,
+    static_question_modes,
 )
 from tools.seo_utils import hub_collection_jsonld
 from tools.seo_editorial_chrome import seo_brand_asset_tags
@@ -1011,6 +1012,10 @@ def main() -> int:
     args = ap.parse_args()
     base = args.base_url.rstrip("/")
 
+    static_modes = static_question_modes()
+    build_practice = "practice" in static_modes
+    build_ichimon = "ichimon" in static_modes
+
     glossary_lookup = load_glossary_lookup()
     guides = load_guide_articles()
     question_catalog = load_question_catalog(ROOT)
@@ -1032,7 +1037,7 @@ def main() -> int:
         practice_rows_valid.append(row)
     _patch_index_rows_for_practice(practice_pages)
 
-    for p, row in zip(practice_pages, practice_rows_valid):
+    for p, row in (zip(practice_pages, practice_rows_valid) if build_practice else []):
         rel = Path(p["rel_path"])
         out = ROOT / rel
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -1052,7 +1057,7 @@ def main() -> int:
 
     # 骨組みビルド（EXAM_SKELETON）では問題が0件でも一覧シェルを必ず出し、
     # q/index.html のハブタブ（/q/practice/index.html）のリンク切れを防ぐ。
-    if practice_pages or os.environ.get("EXAM_SKELETON"):
+    if build_practice and (practice_pages or os.environ.get("EXAM_SKELETON")):
         idx = Q_ROOT / "practice" / "index.html"
         idx.parent.mkdir(parents=True, exist_ok=True)
         idx.write_text(
@@ -1075,7 +1080,7 @@ def main() -> int:
     ichimon_rows = [r for _, r in ichimon_pairs]
     _patch_index_rows_for_ichimon(ichimon_pages)
 
-    for p, row in zip(ichimon_pages, ichimon_rows):
+    for p, row in (zip(ichimon_pages, ichimon_rows) if build_ichimon else []):
         rel = Path(p["rel_path"])
         out = ROOT / rel
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -1093,7 +1098,7 @@ def main() -> int:
             encoding="utf-8",
         )
 
-    if ichimon_pages or os.environ.get("EXAM_SKELETON"):
+    if build_ichimon and (ichimon_pages or os.environ.get("EXAM_SKELETON")):
         idx = Q_ROOT / "ichimon" / "index.html"
         idx.parent.mkdir(parents=True, exist_ok=True)
         idx.write_text(
@@ -1106,14 +1111,20 @@ def main() -> int:
             encoding="utf-8",
         )
 
-    print(
-        f"Wrote practice: {len(practice_pages)} pages"
-        + (", index" if practice_pages else "")
-    )
-    print(
-        f"Wrote ichimon: {len(ichimon_pages)} pages"
-        + (", index" if ichimon_pages else "")
-    )
+    if build_practice:
+        print(
+            f"Wrote practice: {len(practice_pages)} pages"
+            + (", index" if practice_pages else "")
+        )
+    else:
+        print("Skipped practice: 静的生成対象外（staticQuestionModes）")
+    if build_ichimon:
+        print(
+            f"Wrote ichimon: {len(ichimon_pages)} pages"
+            + (", index" if ichimon_pages else "")
+        )
+    else:
+        print("Skipped ichimon: 静的生成対象外（staticQuestionModes）")
     return 0
 
 

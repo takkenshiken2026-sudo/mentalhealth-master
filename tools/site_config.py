@@ -126,6 +126,22 @@ def exam_grade() -> str:
     return str(CONFIG.get("examGrade") or "").strip()
 
 
+_ALL_QUESTION_MODES = ("past", "practice", "ichimon")
+
+
+def static_question_modes() -> list[str]:
+    """静的ページ（一覧・各問）を生成する問題モード。
+    site-config.json の staticQuestionModes で種別ごとに制限できる。
+    未設定なら全モード（past/practice/ichimon）を静的生成（従来どおり）。
+    学習アプリ（SPA）側の各モードはこの設定に関係なく常に利用可能。"""
+    raw = CONFIG.get("staticQuestionModes")
+    if isinstance(raw, list) and raw:
+        picked = [str(m).strip() for m in raw if str(m).strip() in _ALL_QUESTION_MODES]
+        if picked:
+            return picked
+    return list(_ALL_QUESTION_MODES)
+
+
 def grade_portal_href() -> str:
     """級選択ポータルへのリンク（FP 等の multi-grade サイト用）。"""
     return str(CONFIG.get("gradePortalHref") or "").strip()
