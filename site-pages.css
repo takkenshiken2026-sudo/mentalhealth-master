@@ -6656,48 +6656,76 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
 
 /* 過去問一覧ページの試験概要・出題範囲・FAQ（q_page_seo.index_about_html） */
 .q-seo-about {
-  margin: 28px 0 8px;
-  padding: 20px 22px;
+  margin: 32px 0 8px;
+  padding: 22px 24px;
   background: var(--bg2);
   border: 1px solid var(--border);
   border-radius: var(--r2);
+  color: var(--text);
 }
 .q-seo-about > h2 {
-  margin: 0 0 10px;
-  font-size: var(--fs-sub);
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 700;
   line-height: 1.5;
 }
 .q-seo-about h3 {
-  margin: 20px 0 8px;
-  padding-left: 10px;
+  margin: 26px 0 10px;
+  padding-left: 11px;
   border-left: 4px solid var(--accent);
-  font-size: calc(var(--fs-body) + 1px);
+  font-size: 17px;
+  font-weight: 700;
   line-height: 1.5;
 }
 .q-seo-about h4 {
-  margin: 14px 0 4px;
-  font-size: var(--fs-body);
-  line-height: 1.5;
+  margin: 16px 0 4px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
 }
-.q-seo-about p { margin: 6px 0; line-height: 1.85; }
-.q-seo-about ul, .q-seo-about ol { margin: 6px 0; padding-left: 1.4em; line-height: 1.85; }
-.q-seo-about li { margin: 3px 0; }
-.q-seo-facts {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: 6px 16px;
-  margin: 8px 0;
+.q-seo-about p,
+.q-seo-about li,
+.q-seo-about td,
+.q-seo-about th {
+  font-size: 16px;
+  line-height: 1.8;
 }
-.q-seo-facts dt {
+.q-seo-about p { margin: 6px 0; }
+.q-seo-about ul,
+.q-seo-about ol { margin: 8px 0; padding-left: 1.4em; }
+.q-seo-about li { margin: 5px 0; }
+/* 試験概要テーブル */
+.q-seo-table {
+  width: 100%;
+  margin: 10px 0 4px;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  background: var(--bg);
+}
+.q-seo-table th,
+.q-seo-table td {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+}
+.q-seo-table th[scope="row"] {
+  width: 8.5em;
+  white-space: nowrap;
   font-weight: 600;
   color: var(--accent-emphasis);
-  white-space: nowrap;
+  background: var(--accent-soft);
 }
-.q-seo-facts dd { margin: 0; }
+.q-seo-table td { background: var(--bg); }
+/* FAQ */
 .q-seo-faq h4 { color: var(--accent-emphasis); }
 .q-seo-faq h4::before { content: "Q. "; color: var(--accent); font-weight: 700; }
+.q-seo-faq p { margin: 4px 0 12px; }
 @media (max-width: 600px) {
   .q-seo-about { padding: 16px; }
-  .q-seo-facts { grid-template-columns: 1fr; gap: 2px 0; }
-  .q-seo-facts dt { margin-top: 8px; }
+  .q-seo-about > h2 { font-size: 18px; }
+  .q-seo-about h3 { font-size: 16px; }
+  .q-seo-table th[scope="row"] { width: 6.5em; }
+  .q-seo-table th,
+  .q-seo-table td { padding: 8px 10px; }
 }

@@ -82,11 +82,11 @@ def index_about_html(mode: str) -> str:
     facts = cfg.get("facts") or []
     if isinstance(facts, list) and facts:
         parts.append('<h3>試験の概要</h3>')
-        parts.append('<dl class="q-seo-facts">')
+        parts.append('<table class="q-seo-table"><tbody>')
         for item in facts:
             if isinstance(item, (list, tuple)) and len(item) == 2:
-                parts.append(f"<dt>{e(str(item[0]))}</dt><dd>{e(str(item[1]))}</dd>")
-        parts.append("</dl>")
+                parts.append(f"<tr><th scope=\"row\">{e(str(item[0]))}</th><td>{e(str(item[1]))}</td></tr>")
+        parts.append("</tbody></table>")
 
     scope = cfg.get("scope") or []
     if isinstance(scope, list) and scope:
