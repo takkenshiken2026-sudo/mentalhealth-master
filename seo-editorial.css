@@ -1634,3 +1634,25 @@ body.seo-editorial-preview-page .seo-editorial.seo-article-card .related-box-tit
 /* 画像なしでポスト（アウトライン版Xボタン） */
 .sokuhou-btn-x-outline{appearance:none;cursor:pointer;border:1px solid #111827;border-radius:10px;padding:13px 20px;font-size:1rem;font-weight:700;color:#111827;background:#fff}
 .sokuhou-btn-x-outline:hover{background:#f4f4f5}
+
+/* ===== 合格率の推移グラフ（試験ガイド・合否難易度） ===== */
+.prchart-block{--prchart-accent:#1C7A40;--prchart-accent-dark:#145e30;}
+.seo-editorial .prchart-figure{margin:24px 0 8px;}
+.seo-editorial .prchart-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--seo-table-border,rgba(0,0,0,.16));background:#fff;padding:12px 10px 6px;}
+.seo-editorial .prchart-svg{display:block;width:100%;min-width:600px;height:auto;font-family:var(--seo-font-body,"Noto Sans JP",sans-serif);}
+.prchart-grid{stroke:rgba(0,0,0,.10);stroke-width:1;}
+.prchart-axis{stroke:rgba(0,0,0,.45);stroke-width:1.5;}
+.prchart-avg{stroke:#b45309;stroke-width:1.5;stroke-dasharray:5 4;}
+.prchart-avglab{fill:#b45309;font-size:11px;font-weight:700;}
+.prchart-rect{fill:var(--prchart-accent,#1C7A40);transition:fill .15s ease;}
+.prchart-bar{cursor:default;}
+.prchart-bar:hover .prchart-rect{fill:var(--prchart-accent-dark,#145e30);}
+.prchart-val{fill:#1f2937;font-size:12px;font-weight:700;}
+.prchart-ylab{fill:#6b7280;font-size:11px;}
+.prchart-xlab{fill:#374151;font-size:12px;font-weight:700;}
+.prchart-xlab2{fill:#9ca3af;font-size:10px;}
+.prchart-unit{fill:#9ca3af;font-size:11px;}
+.prchart-axistitle{fill:#6b7280;font-size:11px;}
+.seo-editorial .prchart-caption{font-size:var(--seo-fs-caption,.8125rem);color:var(--seo-text-caption,#757575);margin:8px 0 0;line-height:1.7;}
+.seo-editorial .prchart-table td.num,.seo-editorial .prchart-table th.num{text-align:right;font-variant-numeric:tabular-nums;}
+.seo-editorial .prchart-table .prchart-rate{font-weight:700;color:var(--prchart-accent,#1C7A40);}

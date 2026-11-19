@@ -1243,6 +1243,11 @@ def main() -> int:
         print(f"Warning: glossary auto-link disabled: {exc}", file=sys.stderr)
     ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
     clean_generated_dirs()
+    from tools.guide_charts import inject as inject_passrate_chart  # noqa: E402
+    from tools.site_config import exam_grade  # noqa: E402
+
+    # ルート（プライマリ種）の site-config には examGrade が無いため II種 を既定にする。
+    current_grade = exam_grade() or "II種"
     for article in buildable:
         slug = norm(article.get("slug"))
         if not slug:
@@ -1250,15 +1255,14 @@ def main() -> int:
         out_dir = ARTICLES_DIR / slug
         out_dir.mkdir(parents=True, exist_ok=True)
         (out_dir / GEN_MARKER).write_text("generated\n", encoding="utf-8")
-        (out_dir / "index.html").write_text(
-            build_article_html(
-                article,
-                by_slug,
-                term_hrefs=term_hrefs,
-                glossary_categories=glossary_categories,
-            ),
-            encoding="utf-8",
+        html_out = build_article_html(
+            article,
+            by_slug,
+            term_hrefs=term_hrefs,
+            glossary_categories=glossary_categories,
         )
+        html_out = inject_passrate_chart(html_out, slug, current_grade)
+        (out_dir / "index.html").write_text(html_out, encoding="utf-8")
     (ARTICLES_DIR / "index.html").write_text(build_index_html(buildable), encoding="utf-8")
     msg = f"Wrote {len(buildable)} guide articles under {ARTICLES_DIR}"
     if skipped_affiliate:
