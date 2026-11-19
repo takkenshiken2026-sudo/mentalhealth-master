@@ -71,3 +71,44 @@
     gtag("config", MID, cfg0);
   } catch (_e2) {}
 })();
+
+// Microsoft Clarity — window.__CLARITY_PROJECT_ID__ / SITE_CONFIG.clarityProjectId で上書き可（未設定・空なら下記の既定ID）
+(function () {
+  var DEFAULT_PID = "zgaxqf7chk";
+  var raw = "";
+  try {
+    if (typeof window !== "undefined" && window.__CLARITY_PROJECT_ID__ != null) {
+      raw = String(window.__CLARITY_PROJECT_ID__).trim();
+    }
+    if (!raw && typeof window !== "undefined" && window.SITE_CONFIG && window.SITE_CONFIG.clarityProjectId != null) {
+      raw = String(window.SITE_CONFIG.clarityProjectId).trim();
+    }
+  } catch (_e) {}
+  if (!raw) raw = DEFAULT_PID;
+  var PID = /^[A-Za-z0-9]+$/.test(raw) ? raw : "";
+  if (!PID) return;
+
+  // 二重初期化防止（SPA 再評価・複数読み込み対策）
+  if (typeof window !== "undefined" && window.__CLARITY_INIT__ === PID) return;
+  try {
+    if (document.querySelector('script[src*="clarity.ms/tag/"][data-clarity-pid="' + PID + '"]')) {
+      window.__CLARITY_INIT__ = PID;
+      return;
+    }
+  } catch (_e) {}
+  window.__CLARITY_INIT__ = PID;
+
+  (function (c, l, a, r, i) {
+    c[a] =
+      c[a] ||
+      function () {
+        (c[a].q = c[a].q || []).push(arguments);
+      };
+    var t = l.createElement(r);
+    t.async = 1;
+    t.src = "https://www.clarity.ms/tag/" + i;
+    t.setAttribute("data-clarity-pid", i);
+    var y = l.getElementsByTagName(r)[0];
+    y.parentNode.insertBefore(t, y);
+  })(window, document, "clarity", "script", PID);
+})();
