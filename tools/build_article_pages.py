@@ -52,6 +52,90 @@ ARTICLES_DIR = ROOT / "articles"
 GEN_MARKER = ".generated-by-exam-site"
 GUIDE_PAGES_CSS_VER = "20260527-guide"
 
+# 記事カードのサムネイル / 記事ファーストビューに使うイメージ写真。
+# 値は (ファイル名, 幅, 高さ)。画像は /images/photos/ に配置。
+ARTICLE_IMAGE_DIR = "/images/photos/"
+ARTICLE_IMAGES: dict[str, tuple[str, int, int]] = {
+    "study-plan": ("notebook-pens-ruler-study.webp", 1600, 1040),
+    "schedule": ("notebook-stationery-clips.webp", 1600, 896),
+    "exam-venue-and-region": ("businessman-station-stress.webp", 1600, 1066),
+    "exam-format-overview": ("pen-blank-notebook-desk.webp", 1600, 1067),
+    "exam-scope-overview": ("bookshelf-study-books.webp", 1600, 1062),
+    "exam-difficulty": ("businessman-worried-thinking.webp", 1600, 1066),
+    "pass-score": ("businessman-smiling-documents.webp", 1600, 1067),
+    "past-questions-by-field": ("hand-writing-notebook-cafe.webp", 1600, 1066),
+    "exam-changes": ("coworkers-reviewing-reports.webp", 1600, 982),
+    "legal-revision-impact": ("business-pair-documents-phone.webp", 1600, 1066),
+    "affiliate-textbooks-recommend": ("man-reading-book-study.webp", 1600, 1066),
+    "affiliate-problem-books": ("hand-writing-blank-notebook.webp", 1600, 1066),
+    "affiliate-online-course-compare": ("business-men-laptop-advice.webp", 1600, 1067),
+    "affiliate-correspondence-course": ("businessman-laptop-working.webp", 1600, 1067),
+    "affiliate-cram-school": ("seminar-training-attendees.webp", 1600, 1067),
+    "affiliate-mock-exam-materials": ("notebook-pens-ruler-study.webp", 1600, 1040),
+    "affiliate-free-vs-paid-study": ("colored-pencils-notebook.webp", 1600, 1066),
+    "affiliate-beginner-material-set": ("notebook-stationery-clips.webp", 1600, 896),
+    "affiliate-retake-short-course": ("colleague-support-shoulder-outdoor.webp", 1600, 1066),
+    "affiliate-qualification-support-service": ("manager-supporting-employee.webp", 1600, 939),
+    "exam-overview": ("coworkers-discussion-office.webp", 1600, 1148),
+    "self-study-method": ("businessman-laptop-working.webp", 1600, 1067),
+    "field-study-key-points": ("colored-pencils-notebook.webp", 1600, 1066),
+    "review-and-weak-points": ("hand-writing-blank-notebook.webp", 1600, 1066),
+    "final-prep-and-exam-day": ("man-reading-book-study.webp", 1600, 1066),
+    "exam-introduction": ("seminar-training-attendees.webp", 1600, 1067),
+}
+# 画像ファイルごとの代替テキスト（装飾的だが内容説明として付与）。
+ARTICLE_IMAGE_ALT: dict[str, str] = {
+    "notebook-pens-ruler-study.webp": "ノートとペン・定規などの学習用文房具",
+    "notebook-stationery-clips.webp": "ノートと文房具",
+    "businessman-station-stress.webp": "駅のホームで頭を抱えるビジネスパーソン",
+    "pen-blank-notebook-desk.webp": "机の上のペンと白紙のノート",
+    "bookshelf-study-books.webp": "本棚に並ぶ書籍",
+    "businessman-worried-thinking.webp": "資料を見て考え込むビジネスパーソン",
+    "businessman-smiling-documents.webp": "書類を手に笑顔のビジネスパーソン",
+    "hand-writing-notebook-cafe.webp": "ノートに書き込む手元",
+    "coworkers-reviewing-reports.webp": "資料を確認するビジネスパーソン",
+    "business-pair-documents-phone.webp": "書類を確認し電話するビジネスパーソン",
+    "man-reading-book-study.webp": "本を読んで学習する男性",
+    "hand-writing-blank-notebook.webp": "ノートに書き込む手元",
+    "business-men-laptop-advice.webp": "パソコンを見ながら相談するビジネスパーソン",
+    "businessman-laptop-working.webp": "パソコンで学習するビジネスパーソン",
+    "seminar-training-attendees.webp": "セミナーを受講する人たち",
+    "colored-pencils-notebook.webp": "色鉛筆とノート",
+    "coworkers-discussion-office.webp": "オフィスで打ち合わせをするビジネスパーソン",
+    "colleague-support-shoulder-outdoor.webp": "同僚を励ますビジネスパーソン",
+    "manager-supporting-employee.webp": "部下をサポートする上司",
+}
+
+
+def article_hero_figure_html(slug: str) -> str:
+    """記事ファーストビュー用のヒーロー画像（タイトル直下）。"""
+    info = ARTICLE_IMAGES.get(slug)
+    if not info:
+        return ""
+    name, w, h = info
+    alt = ARTICLE_IMAGE_ALT.get(name, "")
+    return (
+        '<figure class="article-hero">'
+        f'<img class="article-hero-img" src="{ARTICLE_IMAGE_DIR}{name}" '
+        f'alt="{html.escape(alt, quote=True)}" width="{w}" height="{h}" '
+        'loading="eager" fetchpriority="high" decoding="async">'
+        "</figure>"
+    )
+
+
+def article_card_thumb_html(slug: str) -> str:
+    """記事一覧カードのサムネイル画像。"""
+    info = ARTICLE_IMAGES.get(slug)
+    if not info:
+        return ""
+    name, w, h = info
+    return (
+        '<span class="article-index-card-thumb">'
+        f'<img src="{ARTICLE_IMAGE_DIR}{name}" '
+        f'alt="" width="{w}" height="{h}" loading="lazy" decoding="async">'
+        "</span>"
+    )
+
 
 def norm(value: str | None) -> str:
     return (value or "").strip()
@@ -998,6 +1082,7 @@ def build_article_html(
       {meta_updated_html(updated)}
     </div>
     <h1 class="article-title">{html.escape(title)}</h1>
+    {article_hero_figure_html(slug)}
     <p class="article-lead">{lead_html}</p>
     {toc}
     {quality_panel}
@@ -1062,7 +1147,8 @@ def build_index_html(articles: list[dict[str, str]]) -> str:
             f'data-genre-style="{html.escape(style, quote=True)}" '
             f'data-search="{html.escape(search_text, quote=True)}">'
             f'<a class="article-index-card-link" href="{html.escape(article["slug"])}/">'
-            f'<span class="article-index-card-genre">{html.escape(genre)}</span>'
+            + article_card_thumb_html(norm(article.get("slug")))
+            + f'<span class="article-index-card-genre">{html.escape(genre)}</span>'
             f"<h2>{html.escape(title_text)}</h2>"
             f"<p>{html.escape(desc_text)}</p>"
             + (f'<div class="article-index-card-tags">{html.escape(tags)}</div>' if tags else "")
