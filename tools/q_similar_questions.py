@@ -268,12 +268,12 @@ def build_similar_questions_html(
     items: list[str] = []
     for ref in similar:
         href = rel_href(rel_path, ref["rel_path"])
-        title = html.escape(ref["title"])
-        # 類似の問題は「問題名」だけを表示する（モード・分野・プレビューは出さない）。
+        text = html.escape(ref["preview"] or ref["text"][:_PREVIEW_LIMIT])
+        # 類似の問題は「問題文」を表示する（問題番号・ID・分野は出さない）。
         items.append(
             f'<li class="q-similar-item">'
             f'<a class="q-similar-card" href="{html.escape(href)}">'
-            f'<span class="q-similar-title">{title}</span>'
+            f'<span class="q-similar-text">{text}</span>'
             f"</a></li>"
         )
 

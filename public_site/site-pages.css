@@ -1034,6 +1034,12 @@ a.site-page-brand:hover {
   line-height: 1.55;
   color: var(--ink);
 }
+.q-similar-text {
+  display: block;
+  font-size: var(--fs-sub);
+  line-height: 1.55;
+  color: var(--text);
+}
 
 .q-related .related-box {
   margin: 0;
