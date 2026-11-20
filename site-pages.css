@@ -778,6 +778,46 @@ a.site-page-brand:hover {
   background: color-mix(in srgb, var(--green) 8%, var(--bg, #fff));
   border-color: color-mix(in srgb, var(--green) 22%, var(--border));
 }
+/* 正答・解説アコーディオン（初期状態は閉じ） */
+.site-page-wrap .q-static-main .q-block.q-answer-acc {
+  padding: 0;
+  overflow: hidden;
+}
+.q-answer-acc-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0;
+  padding: 14px 18px;
+  background: color-mix(in srgb, var(--green) 8%, var(--bg, #fff));
+  color: var(--ink);
+  font-weight: 700;
+  font-size: var(--fs-sub);
+}
+.q-answer-acc-summary::-webkit-details-marker {
+  display: none;
+}
+.q-answer-acc-summary::after {
+  content: "▼";
+  font-size: 10px;
+  color: var(--text3);
+  transition: transform 0.15s ease;
+}
+.q-answer-acc[open] .q-answer-acc-summary::after {
+  transform: rotate(180deg);
+}
+.q-answer-acc[open] .q-answer-acc-summary {
+  border-bottom: 1px solid var(--border2, var(--border));
+}
+.q-answer-acc-body {
+  padding: 2px 18px 16px;
+}
+.q-answer-acc-body > section {
+  margin-top: 14px;
+}
 .site-page-wrap .q-static-main .term-trust-section,
 .site-page-wrap .q-static-main .q-hub-links {
   margin-bottom: 18px;

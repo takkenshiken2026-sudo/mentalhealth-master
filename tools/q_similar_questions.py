@@ -268,27 +268,18 @@ def build_similar_questions_html(
     items: list[str] = []
     for ref in similar:
         href = rel_href(rel_path, ref["rel_path"])
-        mode_label = MODE_LABEL.get(ref["mode"], ref["mode"])
-        cat = html.escape(ref["category"] or "")
         title = html.escape(ref["title"])
-        preview = html.escape(ref["preview"] or ref["text"][:_PREVIEW_LIMIT])
+        # 類似の問題は「問題名」だけを表示する（モード・分野・プレビューは出さない）。
         items.append(
             f'<li class="q-similar-item">'
             f'<a class="q-similar-card" href="{html.escape(href)}">'
-            f'<span class="q-similar-card-head">'
-            f'<span class="q-similar-mode">{html.escape(mode_label)}</span>'
             f'<span class="q-similar-title">{title}</span>'
-            f'</span>'
-            f'<span class="q-similar-cat">{cat}</span>'
-            f'<p class="q-similar-preview">{preview}</p>'
             f"</a></li>"
         )
 
     return (
         '<section class="q-block q-similar" aria-labelledby="q-similar-h">'
         '<h2 id="q-similar-h" class="q-h2">類似の問題</h2>'
-        '<p class="q-similar-lead">同じ分野・タグや問題文のキーワードが近い問題です。'
-        "解き直しや確認に使えます。</p>"
         f'<ul class="q-similar-list">{"".join(items)}</ul>'
         "</section>"
     )
