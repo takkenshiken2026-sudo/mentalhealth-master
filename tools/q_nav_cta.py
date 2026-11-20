@@ -133,7 +133,6 @@ def solve_cta_html(
         f"{cat_phrase}{cfg['mode_label']}をこのまま続けて力試ししましょう。"
     )
     app = html.escape(rel_href(rel_path, cfg["app_href"]))
-    idx = html.escape(rel_href(rel_path, cfg["index_href"]))
     return (
         '<aside class="q-solve-cta" aria-labelledby="q-solve-cta-h">'
         '<div class="q-solve-cta-main">'
@@ -143,7 +142,6 @@ def solve_cta_html(
         "</div>"
         '<div class="q-solve-cta-actions">'
         f'<a class="q-solve-cta-btn q-solve-cta-btn--primary" href="{app}">{html.escape(cfg["solve_label"])} ▶</a>'
-        f'<a class="q-solve-cta-btn q-solve-cta-btn--ghost" href="{idx}">{html.escape(cfg["index_label"])}を見る</a>'
         "</div>"
         "</aside>"
     )

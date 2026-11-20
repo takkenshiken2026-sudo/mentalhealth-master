@@ -495,7 +495,6 @@ def build_practice_question_html(
   {seq_nav}
   {similar_html}
   {related_html}
-  {seq_nav}
 </main>
 {site_footer}
 {site_page_wrap_close()}
@@ -641,7 +640,6 @@ def build_ichimon_question_html(
   {seq_nav}
   {similar_html}
   {related_html}
-  {seq_nav}
 </main>
 {site_footer}
 {site_page_wrap_close()}
