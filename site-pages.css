@@ -1343,6 +1343,9 @@ a.q-hub-tab-label:hover {
   gap: 10px;
   align-items: stretch;
 }
+.q-seq-nav--2col {
+  grid-template-columns: 1fr 1fr;
+}
 .q-seq-link {
   display: flex;
   flex-direction: column;

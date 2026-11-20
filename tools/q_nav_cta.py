@@ -102,17 +102,10 @@ def sequence_nav_html(
             f'<span class="q-seq-label">{label}</span></a>'
         )
 
-    index_cell = (
-        '<a class="q-seq-link q-seq-index" '
-        f'href="{html.escape(rel_href(rel_path, cfg["index_href"]))}">'
-        '<span class="q-seq-dir">一覧</span>'
-        f'<span class="q-seq-label">{html.escape(cfg["index_label"])}</span></a>'
-    )
-
+    # 中央の「一覧」リンクは不要のため出力しない（前の問題 / 次の問題 のみ）。
     return (
-        '<nav class="q-seq-nav" aria-label="問題の連番ナビゲーション">'
+        '<nav class="q-seq-nav q-seq-nav--2col" aria-label="問題の連番ナビゲーション">'
         + cell(prev_page, "prev", "← 前の問題")
-        + index_cell
         + cell(next_page, "next", "次の問題 →")
         + "</nav>"
     )
