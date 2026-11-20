@@ -6621,7 +6621,9 @@ function __bootApp(){
   currentUser={email:guestEmail,name:'ゲスト'};
   enterApp();
   renderOrigPage();
-  gotoPage('quiz-start');
+  // URLハッシュ（例: #past）があればその画面を初期表示する。
+  // ハッシュが無い通常訪問では _resolveInitialPage() が 'quiz-start' を返す。
+  gotoPage(_resolveInitialPage());
 })();
 // Supabaseセッションがあればログイン済みユーザーに切り替え
 (async function(){
