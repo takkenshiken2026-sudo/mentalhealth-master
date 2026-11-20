@@ -3804,6 +3804,20 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
 .article-index-empty.hide {
   display: none;
 }
+.article-index-card-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--ink) 8%, transparent);
+}
+.article-index-card-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .article-index-card-link {
   display: flex;
   flex-direction: column;

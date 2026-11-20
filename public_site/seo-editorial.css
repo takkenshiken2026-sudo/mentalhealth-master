@@ -1656,3 +1656,8 @@ body.seo-editorial-preview-page .seo-editorial.seo-article-card .related-box-tit
 .seo-editorial .prchart-caption{font-size:var(--seo-fs-caption,.8125rem);color:var(--seo-text-caption,#757575);margin:8px 0 0;line-height:1.7;}
 .seo-editorial .prchart-table td.num,.seo-editorial .prchart-table th.num{text-align:right;font-variant-numeric:tabular-nums;}
 .seo-editorial .prchart-table .prchart-rate{font-weight:700;color:var(--prchart-accent,#1C7A40);}
+
+/* 記事ファーストビューのヒーロー画像 */
+.article-hero{margin:0 0 20px;}
+.article-hero-img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;background:color-mix(in srgb,currentColor 8%,transparent);}
+@media (max-width:640px){.article-hero{margin:0 0 16px;}.article-hero-img{border-radius:10px;aspect-ratio:16/10;}}
