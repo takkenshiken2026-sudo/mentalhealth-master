@@ -779,6 +779,9 @@ def build_question_html(
       {opts_html}
     </ol>
   </section>
+  <details class="q-reveal">
+    <summary class="q-reveal-summary">正答・解説を見る</summary>
+    <div class="q-reveal-body">
   <section class="q-block q-answer" aria-labelledby="q-ans-h">
     <h2 id="q-ans-h" class="q-h2">正答</h2>
     {ans_block}
@@ -787,6 +790,8 @@ def build_question_html(
     <h2 id="q-exp-h" class="q-h2">解説</h2>
     {exp_html}
   </section>
+    </div>
+  </details>
   {solve_cta}
   {seq_nav}
   {similar_html}

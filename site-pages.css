@@ -778,6 +778,53 @@ a.site-page-brand:hover {
   background: color-mix(in srgb, var(--green) 8%, var(--bg, #fff));
   border-color: color-mix(in srgb, var(--green) 22%, var(--border));
 }
+
+/* 正答・解説のアコーディオン（既定で閉じる／自分で解いてから開く） */
+.q-reveal {
+  margin: 4px 0 8px;
+}
+.q-reveal-summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--r2);
+  font-size: var(--fs-sub);
+  font-weight: 700;
+  color: var(--accent-emphasis);
+  transition: background 0.15s, border-color 0.15s;
+}
+.q-reveal-summary::-webkit-details-marker {
+  display: none;
+}
+.q-reveal-summary::before {
+  content: "▶";
+  flex: 0 0 auto;
+  font-size: 0.72em;
+  line-height: 1;
+  color: var(--accent);
+  transition: transform 0.15s;
+}
+.q-reveal[open] > .q-reveal-summary::before {
+  transform: rotate(90deg);
+}
+.q-reveal-summary:hover {
+  background: var(--accent-soft-mid);
+  border-color: var(--accent-hover-border);
+}
+.q-reveal[open] > .q-reveal-summary {
+  margin-bottom: 12px;
+}
+.q-reveal-body > .q-block {
+  margin-top: 0;
+}
+.q-reveal-body > .q-block + .q-block {
+  margin-top: 12px;
+}
 .site-page-wrap .q-static-main .term-trust-section,
 .site-page-wrap .q-static-main .q-hub-links {
   margin-bottom: 18px;

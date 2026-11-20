@@ -483,6 +483,9 @@ def build_practice_question_html(
     <h2 id="q-opts-h" class="q-h2">選択肢</h2>
     <ol class="q-opts">{opts_html}</ol>
   </section>
+  <details class="q-reveal">
+    <summary class="q-reveal-summary">正答・解説を見る</summary>
+    <div class="q-reveal-body">
   <section class="q-block q-answer" aria-labelledby="q-ans-h">
     <h2 id="q-ans-h" class="q-h2">正答</h2>
     {ans_block}
@@ -491,6 +494,8 @@ def build_practice_question_html(
     <h2 id="q-exp-h" class="q-h2">解説</h2>
     {exp_html}
   </section>
+    </div>
+  </details>
   {solve_cta}
   {seq_nav}
   {similar_html}
@@ -628,6 +633,9 @@ def build_ichimon_question_html(
     <h2 id="q-stem-h" class="q-h2">問題</h2>
     <div class="q-stem q-stem-ichimon">{page["statement_html"]}</div>
   </section>
+  <details class="q-reveal">
+    <summary class="q-reveal-summary">正答・解説を見る</summary>
+    <div class="q-reveal-body">
   <section class="q-block q-answer" aria-labelledby="q-ans-h">
     <h2 id="q-ans-h" class="q-h2">正答</h2>
     <p class="q-ichimon-answer">答えは <strong class="q-marubatsu">{html.escape(ans)}</strong> です。</p>
@@ -636,6 +644,8 @@ def build_ichimon_question_html(
     <h2 id="q-exp-h" class="q-h2">解説</h2>
     {exp_html}
   </section>
+    </div>
+  </details>
   {solve_cta}
   {seq_nav}
   {similar_html}
