@@ -1003,7 +1003,46 @@ a.site-page-brand:hover {
   max-width: none;
   width: 100%;
 }
-.q-related .related-links,
+/* 関連ページのリンクは「類似の問題」カードと同じ縦積みカードに統一する */
+.q-related .related-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.q-related .related-box .related-links .related-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  color: var(--text);
+  font-size: var(--fs-sub);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+.q-related .related-box .related-links .related-link::after {
+  content: "›";
+  flex: 0 0 auto;
+  font-size: 1.25em;
+  line-height: 1;
+  color: var(--text2);
+}
+.q-related .related-box .related-links .related-link:hover {
+  background: var(--accent-hover-surface);
+  border-color: var(--accent-hover-border);
+  box-shadow: var(--sh);
+  color: var(--accent-emphasis);
+}
+.q-related .related-box .related-links .related-link:hover::after {
+  color: var(--accent-emphasis);
+}
 .q-related-list {
   display: flex;
   flex-wrap: wrap;
