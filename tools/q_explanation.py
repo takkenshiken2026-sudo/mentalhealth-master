@@ -510,11 +510,8 @@ def _choice_specific_lead(
             "学習・制度・実務の観点で問題がある記述ではありません。"
         )
     if mode == "most_correct":
-        if correct_text:
-            return (
-                f"（{choice_num}）「{snip}」は、"
-                f"正答（{correct}）「{_snippet(correct_text, 44)}」とは異なる内容です。"
-            )
+        # 正答の全文は「正解の理由」と正答表示で提示済み。誤答肢ごとに再掲すると
+        # 解説内で正答文が反復するため、ここでは正答番号への参照だけにとどめる。
         return (
             f"（{choice_num}）「{snip}」は、本問の正答（{correct}）とは論点が異なります。"
         )
@@ -609,22 +606,12 @@ def infer_wrong_choice_note(
             "最も不適切な一つだけを選びます。"
         )
     elif mode == "most_correct":
-        if not multi_pick and correct and correct_text:
-            # 冒頭文（_choice_specific_lead）で既に正答（N）「全文」を提示済み。
-            # ここで正答全文を再掲すると同一注記内で二重になるため、対比文のみ残す。
-            parts.append(
-                "この肢の記述は、その論点とは一致しません。"
-            )
+        # 正答の根拠は「正解の理由」セクションに1回だけ表示する（build_explanation_html）。
+        # 誤答肢ごとに根拠や共通の対比文を付けると解説内で反復するため、
+        # ここでは肢固有の指摘（断定表現の言い過ぎ等）だけを添える。
         abs_hint = _wrong_choice_absolute_hint(opt)
         if abs_hint:
             parts.append(abs_hint)
-        hint = _wrong_choice_correct_hint(correct_body)
-        if hint and hint not in "".join(parts):
-            hint_core = hint.rstrip("。．.!！?？")
-            parts.append(
-                f"正答の根拠は「{_snippet(hint_core, 60)}」です。"
-                "誤答肢との差分を一行メモに残してください。"
-            )
     else:
         parts.append(
             "設問文の「正しいもの／誤っているもの／最も適切でないもの」を"
@@ -685,8 +672,9 @@ def infer_wrong_choice_note(
             break
 
     if len(parts) < 2:
+        # 冒頭で正答（N）に言及済みのため、ここでは正答番号を繰り返さない。
         parts.append(
-            f"正答（{correct}）との差分を一行メモに残し、同分野の過去問・実践演習で解き直すと定着しやすくなります。"
+            "正答との差分を一行メモに残し、同分野の過去問・実践演習で解き直すと定着しやすくなります。"
         )
 
     return dedupe_prose("\n\n".join(parts))
@@ -1279,6 +1267,12 @@ def build_explanation_html(page: dict, row: dict) -> str:
                     )
         elif correct_body:
             correct_inner.append(f"<p>{text_to_html(correct_body)}</p>")
+        if len(correct_indices) == 1 and not correct_inner:
+            # correct_body が正答選択肢と重複するとして除去された場合でも、
+            # 正答の根拠は「正解の理由」で1回だけ提示する（誤答肢側では反復させない）。
+            basis = dedupe_prose(norm(row.get("explanation_correct")))
+            if basis:
+                correct_inner.append(f"<p>{text_to_html(basis)}</p>")
         if correct_inner:
             parts.append(
                 '<section class="q-exp-section" aria-labelledby="q-exp-correct-h">'
@@ -1392,6 +1386,24 @@ def infer_ichimon_opposite_note(page: dict, row: dict) -> str:
     return dedupe_prose("\n\n".join(parts))
 
 
+def _strip_sentences_present_in(text: str, context: str) -> str:
+    """context（正解の理由など）に既出の文を text から除く。空になれば元を返す。"""
+    ctx = _normalize_for_compare(context or "")
+    if not ctx:
+        return dedupe_prose(text)
+    kept: list[str] = []
+    for sent in re.split(r"(?<=[。！？!?])\s*", norm(text)):
+        s = sent.strip()
+        if not s:
+            continue
+        sn = _normalize_for_compare(s)
+        if sn and sn in ctx:
+            continue
+        kept.append(s if s[-1] in "。！？!?" else s + "。")
+    result = dedupe_prose("".join(kept))
+    return result or dedupe_prose(text)
+
+
 def build_ichimon_explanation_html(page: dict, row: dict) -> str:
     """一問一答 — 正解の理由・もう一方の記号のみ。"""
     statement = norm(page.get("statement") or row.get("question"))
@@ -1421,6 +1433,8 @@ def build_ichimon_explanation_html(page: dict, row: dict) -> str:
     opposite = dedupe_prose(opposite)
     if not opposite:
         opposite = infer_ichimon_opposite_note(page, row)
+    # 「正解の理由」で既出の文を「◯/× を選びやすい考え方」で繰り返さない
+    opposite = _strip_sentences_present_in(opposite, f"{summary}\n{correct_body}")
 
     parts: list[str] = ['<div class="q-exp">']
 
