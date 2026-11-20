@@ -610,8 +610,9 @@ def infer_wrong_choice_note(
         )
     elif mode == "most_correct":
         if not multi_pick and correct and correct_text:
+            # 冒頭文（_choice_specific_lead）で既に正答（N）「全文」を提示済み。
+            # ここで正答全文を再掲すると同一注記内で二重になるため、対比文のみ残す。
             parts.append(
-                f"本問で選ぶべき正答は（{correct}）「{_snippet(correct_text, 56)}」です。"
                 "この肢の記述は、その論点とは一致しません。"
             )
         abs_hint = _wrong_choice_absolute_hint(opt)
