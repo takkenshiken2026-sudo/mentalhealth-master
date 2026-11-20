@@ -407,6 +407,10 @@ def build_practice_question_html(
     related_html = build_practice_related_html(
         page, rel_path, all_pages, glossary_lookup, guides
     )
+    from tools.q_nav_cta import sequence_nav_html, solve_cta_html
+
+    solve_cta = solve_cta_html(rel_path, "practice", page, rel_href)
+    seq_nav = sequence_nav_html(rel_path, "practice", all_pages, page, rel_href)
     json_ld = {
         "@context": "https://schema.org",
         "@graph": [
@@ -487,9 +491,11 @@ def build_practice_question_html(
     <h2 id="q-exp-h" class="q-h2">解説</h2>
     {exp_html}
   </section>
+  {solve_cta}
+  {seq_nav}
   {similar_html}
   {related_html}
-  <p class="q-app-link"><a href="{html.escape(rel_href(rel_path, 'index.html#orig'))}">アプリで演習する</a></p>
+  {seq_nav}
 </main>
 {site_footer}
 {site_page_wrap_close()}
@@ -549,6 +555,10 @@ def build_ichimon_question_html(
     related_html = build_ichimon_related_html(
         page, rel_path, all_pages, glossary_lookup, guides
     )
+    from tools.q_nav_cta import sequence_nav_html, solve_cta_html
+
+    solve_cta = solve_cta_html(rel_path, "ichimon", page, rel_href)
+    seq_nav = sequence_nav_html(rel_path, "ichimon", all_pages, page, rel_href)
     json_ld = {
         "@context": "https://schema.org",
         "@graph": [
@@ -627,9 +637,11 @@ def build_ichimon_question_html(
     <h2 id="q-exp-h" class="q-h2">解説</h2>
     {exp_html}
   </section>
+  {solve_cta}
+  {seq_nav}
   {similar_html}
   {related_html}
-  <p class="q-app-link"><a href="{html.escape(rel_href(rel_path, 'index.html#ichimondou'))}">アプリで演習する</a></p>
+  {seq_nav}
 </main>
 {site_footer}
 {site_page_wrap_close()}

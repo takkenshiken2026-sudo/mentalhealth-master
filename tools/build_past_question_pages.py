@@ -697,6 +697,10 @@ def build_question_html(
     related_html = build_related_links_html(
         page, row, rel_path, all_pages, glossary_lookup, guides
     )
+    from tools.q_nav_cta import sequence_nav_html, solve_cta_html
+
+    solve_cta = solve_cta_html(rel_path, "past", page, rel_href)
+    seq_nav = sequence_nav_html(rel_path, "past", all_pages, page, rel_href)
 
     json_ld = {
         "@context": "https://schema.org",
@@ -783,9 +787,11 @@ def build_question_html(
     <h2 id="q-exp-h" class="q-h2">解説</h2>
     {exp_html}
   </section>
+  {solve_cta}
+  {seq_nav}
   {similar_html}
   {related_html}
-  <p class="q-app-link"><a href="{html.escape(rel_href(rel_path, 'index.html#past'))}">アプリで演習する</a></p>
+  {seq_nav}
 </main>
 {site_footer}
 {site_page_wrap_close()}

@@ -1173,6 +1173,154 @@ a.q-hub-tab-label:hover {
   font-size: var(--fs-body);
 }
 
+/* === 解く機能への CTA（問題ページ） === */
+.q-solve-cta {
+  margin: 22px 0 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--accent-border);
+  border-radius: var(--r2);
+  background: var(--accent-soft);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px 20px;
+}
+.q-solve-cta-main {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+.q-solve-cta-eyebrow {
+  margin: 0 0 4px;
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--accent-emphasis);
+}
+.q-solve-cta-title {
+  margin: 0 0 6px;
+  font-size: var(--fs-h3, 1.05rem);
+  font-weight: 700;
+  color: var(--text);
+}
+.q-solve-cta-text {
+  margin: 0;
+  font-size: var(--fs-caption);
+  line-height: 1.6;
+  color: var(--ink);
+}
+.q-solve-cta-actions {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  align-items: center;
+}
+.q-solve-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: var(--fs-sub);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.05s;
+}
+.q-solve-cta-btn--primary {
+  background: var(--accent);
+  color: var(--accent-text);
+  border: 1px solid var(--accent);
+}
+.q-solve-cta-btn--primary:hover {
+  box-shadow: var(--sh);
+  filter: brightness(1.06);
+}
+.q-solve-cta-btn--primary:active {
+  transform: translateY(1px);
+}
+.q-solve-cta-btn--ghost {
+  background: transparent;
+  color: var(--accent-emphasis);
+  border: 1px solid var(--accent-border);
+}
+.q-solve-cta-btn--ghost:hover {
+  background: var(--accent-soft-mid);
+  border-color: var(--accent-hover-border);
+}
+
+/* === 連番ナビ（前の問題 / 一覧 / 次の問題） === */
+.q-seq-nav {
+  margin: 16px 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 10px;
+  align-items: stretch;
+}
+.q-seq-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  background: var(--bg2);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+a.q-seq-link:hover {
+  background: var(--accent-hover-surface);
+  border-color: var(--accent-hover-border);
+  box-shadow: var(--sh);
+}
+.q-seq-prev {
+  text-align: left;
+  align-items: flex-start;
+}
+.q-seq-index {
+  text-align: center;
+  align-items: center;
+}
+.q-seq-next {
+  text-align: right;
+  align-items: flex-end;
+}
+.q-seq-dir {
+  font-size: var(--fs-tiny);
+  font-weight: 700;
+  color: var(--accent-emphasis);
+  letter-spacing: 0.02em;
+}
+.q-seq-label {
+  font-size: var(--fs-sub);
+  font-weight: 700;
+  color: var(--text);
+}
+.q-seq-link.is-disabled {
+  opacity: 0.45;
+  background: var(--bg2);
+  border-style: dashed;
+  cursor: default;
+  pointer-events: none;
+}
+.q-seq-link.is-disabled .q-seq-label {
+  color: var(--text2);
+}
+@media (max-width: 480px) {
+  .q-solve-cta-actions {
+    width: 100%;
+  }
+  .q-solve-cta-btn {
+    flex: 1 1 auto;
+  }
+  .q-seq-dir {
+    font-size: 0.68rem;
+  }
+}
+
 /* 過去問静的ページ — フォントサイズを3段階に整理 */
 .q-static-main {
   --q-page-fs-title: var(--fs-h2);
