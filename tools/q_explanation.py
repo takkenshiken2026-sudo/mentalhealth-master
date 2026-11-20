@@ -1281,22 +1281,8 @@ def build_explanation_html(page: dict, row: dict) -> str:
             parts.extend(correct_inner)
             parts.append("</section>")
 
-        wrong_items = collapse_wrong_choice_items(
-            page, row, build_choice_commentary(page, row)
-        )
-        if wrong_items:
-            lis = "".join(
-                f'<li class="q-exp-choice-item">'
-                f'<p class="q-exp-choice-head">'
-                f'<span class="q-exp-choice-num">（{nums}）</span></p>'
-                f'<p class="q-exp-choice-note">{text_to_html(note)}</p></li>'
-                for nums, note in wrong_items
-            )
-            parts.append(
-                '<section class="q-exp-section" aria-labelledby="q-exp-wrong-h">'
-                '<h3 id="q-exp-wrong-h" class="q-exp-h3">他の選択肢</h3>'
-                f'<ul class="q-exp-choice-list">{lis}</ul></section>'
-            )
+        # 「他の選択肢（誤りの理由）」セクションは表示しない方針のため生成しない。
+        # 解説は「正解の理由」のみとする。
 
     parts.append("</div>")
     return "\n    ".join(parts)
