@@ -621,8 +621,10 @@ def sync_index_doc_main_h1(text: str) -> str:
     return _DOC_MAIN_H1_RE.sub(lambda m: m.group(1) + title + m.group(2), text, count=1)
 
 
+# バンドは "\n      <!--COURSE_SWITCH_START-->" で始まるため、除去時に直前の改行＋字下げも
+# 一緒に取り除く（再生成のたびに空行が増えないようにする）。
 _COURSE_SWITCH_BLOCK_RE = re.compile(
-    re.escape(COURSE_SWITCH_MARKER_START) + r".*?" + re.escape(COURSE_SWITCH_MARKER_END),
+    r"(?:\n[ \t]*)?" + re.escape(COURSE_SWITCH_MARKER_START) + r".*?" + re.escape(COURSE_SWITCH_MARKER_END),
     re.S,
 )
 _PAGE_SUB_ANCHOR = '<div class="page-sub">学習目的に合わせてモードを選んでください</div>'

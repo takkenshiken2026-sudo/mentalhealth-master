@@ -2,7 +2,7 @@
  * 方針: 同一オリジンGETのみ対象。HTMLはネットワーク優先、静的はSWR。
  * 別オリジン(広告/解析/フォント/Supabase)には介入しない。
  */
-const CACHE = 'mhm-pwa-v3';
+const CACHE = 'mhm-pwa-v4';
 const CORE = ["/", "/index.html", "/site-pages.css", "/site-theme.css", "/seo-editorial.css", "/site-q-index.js", "/site-config.js", "/exam-site-data-past.js", "/exam-site-data-practice.js", "/exam-site-data-ichimondou.js", "/assets/brand/icon-192.png"];
 
 self.addEventListener('install', (event) => {
