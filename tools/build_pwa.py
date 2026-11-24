@@ -35,7 +35,7 @@ from tools.site_config import (  # noqa: E402
 )
 
 # SW のキャッシュ世代。sw.js の中身や precache 対象を変えたら上げる。
-PWA_CACHE_VERSION = "v1"
+PWA_CACHE_VERSION = "v2"
 
 PWA_HEAD_MARKER_START = "<!--PWA_HEAD-->"
 PWA_HEAD_MARKER_END = "<!--/PWA_HEAD-->"
@@ -183,7 +183,14 @@ def pwa_head_snippet() -> str:
         '<meta name="apple-mobile-web-app-status-bar-style" content="default">\n'
         f'<meta name="apple-mobile-web-app-title" content="{short_attr}">\n'
         '<link rel="apple-touch-icon" sizes="192x192" href="/assets/brand/icon-192.png">\n'
-        "<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){"
+        # 既存の SW が制御していた画面（古いキャッシュで表示中）だけ、新しい SW に
+        # 切り替わった時点で1回だけ再読み込みし、最新の問題データを表示する。
+        # 初回訪問（制御なし）では再読み込みしない。
+        "<script>if('serviceWorker' in navigator){"
+        "var _swHad=!!navigator.serviceWorker.controller,_swReloaded=false;"
+        "navigator.serviceWorker.addEventListener('controllerchange',function(){"
+        "if(!_swHad||_swReloaded)return;_swReloaded=true;window.location.reload();});"
+        "window.addEventListener('load',function(){"
         "navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>\n"
         f"{PWA_HEAD_MARKER_END}"
     )

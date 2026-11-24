@@ -100,7 +100,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="二種マスター">
 <link rel="apple-touch-icon" sizes="192x192" href="/assets/brand/icon-192.png">
-<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
+<script>if('serviceWorker' in navigator){var _swHad=!!navigator.serviceWorker.controller,_swReloaded=false;navigator.serviceWorker.addEventListener('controllerchange',function(){if(!_swHad||_swReloaded)return;_swReloaded=true;window.location.reload();});window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js').catch(function(){});});}</script>
 <!--/PWA_HEAD-->
 </head>
 <body class="q-index-page site-shell-column-page">
