@@ -19,7 +19,12 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 
 FIELD_LABELS = {
+    "tags": "タグ（難易度）",
     "stem": "問題文",
+    "statement_a": "記述ア",
+    "statement_b": "記述イ",
+    "statement_c": "記述ウ",
+    "statement_d": "記述エ",
     "choice_1": "選択肢1",
     "choice_2": "選択肢2",
     "choice_3": "選択肢3",
