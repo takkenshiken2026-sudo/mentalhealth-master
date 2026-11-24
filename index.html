@@ -934,7 +934,9 @@ details.rich-detail summary{display:none}
   }
   /* page */
   .main{min-height:calc(100vh - 52px);padding-bottom:0}
-  .page{padding:14px 14px calc(96px + env(safe-area-inset-bottom))}
+  /* フッターは static なので通常ページの下余白は小さくする。画面下に固定ボタンがある出題画面のみ広く残す */
+  .page{padding:14px 14px 32px}
+  #page-quiz{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
   .page.active{min-height:calc(100vh - 52px)}
   .page-title{font-size:var(--fs-title);font-weight:var(--fw-strong)}
   .page-sub{font-size:var(--fs-sub);line-height:1.6;margin-bottom:18px}
