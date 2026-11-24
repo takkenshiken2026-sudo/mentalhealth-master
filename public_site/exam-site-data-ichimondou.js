@@ -99,7 +99,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0013",
     "field": "rights",
-    "statement": "個人のストレス状態を診断するためのツールであり、集団分析には使用できない。",
+    "statement": "仕事のストレス判定図は、個人のストレス状態を診断するためのツールであり、集団分析には使用できない。",
     "correctAnswer": false,
     "exp": "仕事のストレス判定図は集団分析に活用するツール。使用する調査票の種類は法律で指定されていない。",
     "publicPath": "q/ichimon/s/ichi-0013/index.html"
@@ -107,7 +107,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0014",
     "field": "rights",
-    "statement": "「仕事の要求度」「仕事のコントロール」「上司や同僚の支援」の3つの尺度で職場のストレスレベルを評価する。",
+    "statement": "仕事のストレス判定図は、「仕事の量的負担」「仕事のコントロール」「上司や同僚の支援」の尺度から、職場（集団）のストレスの程度を評価するツールである。",
     "correctAnswer": true,
     "exp": "仕事のストレス判定図は集団分析に活用するツール。使用する調査票の種類は法律で指定されていない。",
     "publicPath": "q/ichimon/s/ichi-0014/index.html"
@@ -115,7 +115,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0015",
     "field": "rights",
-    "statement": "判定図の結果が「高ストレス」でも、本人の申し出がなければ医師の面接指導は行えない。",
+    "statement": "仕事のストレス判定図の結果が「高ストレス」であれば、本人の申出がなくても、事業者は医師の面接指導を行わなければならない。",
     "correctAnswer": false,
     "exp": "仕事のストレス判定図は集団分析に活用するツール。使用する調査票の種類は法律で指定されていない。",
     "publicPath": "q/ichimon/s/ichi-0015/index.html"
@@ -123,7 +123,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0016",
     "field": "rights",
-    "statement": "ストレスチェック制度の実施においては、この調査票の使用が法律で義務づけられている。",
+    "statement": "ストレスチェック制度では、職業性ストレス簡易調査票（仕事のストレス判定図）の使用が法律で義務づけられている。",
     "correctAnswer": false,
     "exp": "仕事のストレス判定図は集団分析に活用するツール。使用する調査票の種類は法律で指定されていない。",
     "publicPath": "q/ichimon/s/ichi-0016/index.html"
@@ -579,7 +579,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0073",
     "field": "rights",
-    "statement": "改善策の評価は実施直後に一度行えば十分であり、継続的なモニタリングは不要である。",
+    "statement": "職場環境改善の評価は、改善策の実施直後に一度行えば十分であり、継続的なモニタリングは不要である。",
     "correctAnswer": false,
     "exp": "改善策の評価はプロセス評価（実施状況）とアウトカム評価（結果）の両面から継続的に行うことが重要。効果がなければ計画を見直すPDCAサイクルを回す。",
     "publicPath": "q/ichimon/s/ichi-0073/index.html"
@@ -587,7 +587,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0074",
     "field": "rights",
-    "statement": "評価指標として、労働者のストレス反応の変化や欠勤率などを活用することができる。",
+    "statement": "職場環境改善の評価指標として、労働者のストレス反応の変化や欠勤率などを活用することができる。",
     "correctAnswer": true,
     "exp": "改善策の評価はプロセス評価（実施状況）とアウトカム評価（結果）の両面から継続的に行うことが重要。効果がなければ計画を見直すPDCAサイクルを回す。",
     "publicPath": "q/ichimon/s/ichi-0074/index.html"
@@ -595,7 +595,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0075",
     "field": "rights",
-    "statement": "アウトカム評価のみが有効であり、プロセス評価は意味がない。",
+    "statement": "職場環境改善の評価では、アウトカム評価のみが有効であり、プロセス評価は意味がない。",
     "correctAnswer": false,
     "exp": "改善策の評価はプロセス評価（実施状況）とアウトカム評価（結果）の両面から継続的に行うことが重要。効果がなければ計画を見直すPDCAサイクルを回す。",
     "publicPath": "q/ichimon/s/ichi-0075/index.html"
@@ -603,7 +603,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0076",
     "field": "rights",
-    "statement": "改善の効果が出なかった場合、同じ対策を繰り返すことが最善策である。",
+    "statement": "職場環境改善で効果が出なかった場合は、同じ対策を繰り返すことが最善策である。",
     "correctAnswer": false,
     "exp": "改善策の評価はプロセス評価（実施状況）とアウトカム評価（結果）の両面から継続的に行うことが重要。効果がなければ計画を見直すPDCAサイクルを回す。",
     "publicPath": "q/ichimon/s/ichi-0076/index.html"
@@ -611,7 +611,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0077",
     "field": "rights",
-    "statement": "遅刻・早退・欠勤が増える。",
+    "statement": "遅刻・早退・欠勤が増えることは、部下のメンタルヘルス不調のサインとなりうる。",
     "correctAnswer": true,
     "exp": "表情が明るくなり会話が増えるのは不調のサインではない。「いつもと違う様子」として遅刻・欠勤増加、ミス増加、覇気がない、孤立などに気を配ることが重要。",
     "publicPath": "q/ichimon/s/ichi-0077/index.html"
@@ -619,7 +619,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0078",
     "field": "rights",
-    "statement": "仕事のミスや判断力の低下が見られる。",
+    "statement": "仕事のミスや判断力の低下は、部下のメンタルヘルス不調のサインとなりうる。",
     "correctAnswer": true,
     "exp": "表情が明るくなり会話が増えるのは不調のサインではない。「いつもと違う様子」として遅刻・欠勤増加、ミス増加、覇気がない、孤立などに気を配ることが重要。",
     "publicPath": "q/ichimon/s/ichi-0078/index.html"
@@ -627,7 +627,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0079",
     "field": "rights",
-    "statement": "表情が明るくなり、会話が増える。",
+    "statement": "表情が明るくなり会話が増えることは、メンタルヘルス不調の典型的なサインである。",
     "correctAnswer": false,
     "exp": "表情が明るくなり会話が増えるのは不調のサインではない。「いつもと違う様子」として遅刻・欠勤増加、ミス増加、覇気がない、孤立などに気を配ることが重要。",
     "publicPath": "q/ichimon/s/ichi-0079/index.html"
@@ -635,7 +635,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0080",
     "field": "rights",
-    "statement": "口数が減り、表情が暗くなる。",
+    "statement": "口数が減り、表情が暗くなることは、部下のメンタルヘルス不調のサインとなりうる。",
     "correctAnswer": true,
     "exp": "表情が明るくなり会話が増えるのは不調のサインではない。「いつもと違う様子」として遅刻・欠勤増加、ミス増加、覇気がない、孤立などに気を配ることが重要。",
     "publicPath": "q/ichimon/s/ichi-0080/index.html"
@@ -707,7 +707,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0089",
     "field": "rights",
-    "statement": "情緒的サポートとは、業務上の具体的な手助けや道具・資源の提供を指すことである。",
+    "statement": "情緒的サポートとは、業務上の具体的な手助けや道具・資源の提供のことである。",
     "correctAnswer": false,
     "exp": "情緒的サポート＝共感・傾聴、情報的サポート＝情報・アドバイス提供、評価的サポート＝フィードバック・評価、道具的サポート＝具体的な手助け・資源提供。",
     "publicPath": "q/ichimon/s/ichi-0089/index.html"
@@ -723,7 +723,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0091",
     "field": "rights",
-    "statement": "情報的サポートとは、悩みを聞いたり共感したりすることで精神的な支えとなることを指すことである。",
+    "statement": "情報的サポートとは、悩みを聞いたり共感したりすることで精神的な支えとなることである。",
     "correctAnswer": false,
     "exp": "情緒的サポート＝共感・傾聴、情報的サポート＝情報・アドバイス提供、評価的サポート＝フィードバック・評価、道具的サポート＝具体的な手助け・資源提供。",
     "publicPath": "q/ichimon/s/ichi-0091/index.html"
@@ -1923,7 +1923,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0241",
     "field": "rights",
-    "statement": "服装や身だしなみが乱れてきた。",
+    "statement": "服装や身だしなみが乱れてきたことは、管理監督者が注意すべき「いつもと違う様子」にあたる。",
     "correctAnswer": true,
     "exp": "積極的な挑戦は不調のサインではなく、むしろポジティブな変化。服装の乱れ・報連相の減少・表情の暗化・口数減少・ミス増加などが「いつもと違う」サイン。",
     "publicPath": "q/ichimon/s/ichi-0241/index.html"
@@ -1931,7 +1931,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0242",
     "field": "rights",
-    "statement": "報告・連絡・相談が少なくなった。",
+    "statement": "報告・連絡・相談が少なくなったことは、管理監督者が注意すべき「いつもと違う様子」にあたる。",
     "correctAnswer": true,
     "exp": "積極的な挑戦は不調のサインではなく、むしろポジティブな変化。服装の乱れ・報連相の減少・表情の暗化・口数減少・ミス増加などが「いつもと違う」サイン。",
     "publicPath": "q/ichimon/s/ichi-0242/index.html"
@@ -1939,7 +1939,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0243",
     "field": "rights",
-    "statement": "以前より積極的に新しい仕事に挑戦するようになった。",
+    "statement": "以前より積極的に新しい仕事に挑戦するようになったことは、メンタルヘルス不調を示す典型的な「いつもと違う様子」である。",
     "correctAnswer": false,
     "exp": "積極的な挑戦は不調のサインではなく、むしろポジティブな変化。服装の乱れ・報連相の減少・表情の暗化・口数減少・ミス増加などが「いつもと違う」サイン。",
     "publicPath": "q/ichimon/s/ichi-0243/index.html"
@@ -1947,7 +1947,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0244",
     "field": "rights",
-    "statement": "表情が暗く、口数が減った。",
+    "statement": "表情が暗く、口数が減ったことは、管理監督者が注意すべき「いつもと違う様子」にあたる。",
     "correctAnswer": true,
     "exp": "積極的な挑戦は不調のサインではなく、むしろポジティブな変化。服装の乱れ・報連相の減少・表情の暗化・口数減少・ミス増加などが「いつもと違う」サイン。",
     "publicPath": "q/ichimon/s/ichi-0244/index.html"
@@ -2027,7 +2027,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0254",
     "field": "rights",
-    "statement": "健康情報は要配慮個人情報に該当し、取得・利用・第三者提供には原則として本人の同意が必要である。",
+    "statement": "健康情報は要配慮個人情報に該当し、その取得や第三者への提供には、原則として本人の同意が必要である。",
     "correctAnswer": true,
     "exp": "健康情報は要配慮個人情報（個人情報保護法）として厳格な管理が求められる。第三者提供には本人同意が原則。病名等は必要最小限の範囲にとどめる。",
     "publicPath": "q/ichimon/s/ichi-0254/index.html"
@@ -2723,7 +2723,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0341",
     "field": "rights",
-    "statement": "職場のストレス状況を把握するため、ストレスチェックや面談を実施することは、職場環境改善におけるPDCAサイクルのC（Check）に該当する活動である。",
+    "statement": "評価の結果を踏まえ、改善策や計画を見直して次の取り組みに反映することは、職場環境改善におけるPDCAサイクルのC（Check）に該当する活動である。",
     "correctAnswer": false,
     "exp": "PDCA：P＝計画（改善策立案）、D＝実施、C＝評価・検証、A＝見直し・改善。Cは実施後の効果測定で、次のAにつなげる重要なステップ。",
     "publicPath": "q/ichimon/s/ichi-0341/index.html"
@@ -2755,7 +2755,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0345",
     "field": "rights",
-    "statement": "繁忙期に仕事量が増え、一時的に残業が増えた。",
+    "statement": "繁忙期に仕事量が増え、一時的に残業が増えたことは、メンタルヘルス不調のサインとして特に注意が必要な状態である。",
     "correctAnswer": false,
     "exp": "複数のサインが重なる場合（遅刻増加＋ミス増加＋顔色悪化）は特に注意が必要。単一の変化よりも複数の変化の組み合わせで判断することが重要。",
     "publicPath": "q/ichimon/s/ichi-0345/index.html"
@@ -2763,7 +2763,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0346",
     "field": "rights",
-    "statement": "先月から遅刻・欠勤が増え、仕事のミスも目立つようになり、顔色が悪い。",
+    "statement": "先月から遅刻・欠勤が増え、仕事のミスも目立ち、顔色も悪いという状態は、メンタルヘルス不調のサインとして特に注意が必要である。",
     "correctAnswer": true,
     "exp": "複数のサインが重なる場合（遅刻増加＋ミス増加＋顔色悪化）は特に注意が必要。単一の変化よりも複数の変化の組み合わせで判断することが重要。",
     "publicPath": "q/ichimon/s/ichi-0346/index.html"
@@ -2771,7 +2771,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0347",
     "field": "rights",
-    "statement": "新しいプロジェクトへの参加を積極的に希望するようになった。",
+    "statement": "新しいプロジェクトへの参加を積極的に希望するようになったことは、メンタルヘルス不調のサインとして特に注意が必要な状態である。",
     "correctAnswer": false,
     "exp": "複数のサインが重なる場合（遅刻増加＋ミス増加＋顔色悪化）は特に注意が必要。単一の変化よりも複数の変化の組み合わせで判断することが重要。",
     "publicPath": "q/ichimon/s/ichi-0347/index.html"
@@ -2779,7 +2779,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0348",
     "field": "rights",
-    "statement": "チームの懇親会に積極的に参加し、以前より会話が増えた。",
+    "statement": "チームの懇親会に積極的に参加し、以前より会話が増えたことは、メンタルヘルス不調のサインとして特に注意が必要な状態である。",
     "correctAnswer": false,
     "exp": "複数のサインが重なる場合（遅刻増加＋ミス増加＋顔色悪化）は特に注意が必要。単一の変化よりも複数の変化の組み合わせで判断することが重要。",
     "publicPath": "q/ichimon/s/ichi-0348/index.html"
@@ -3587,7 +3587,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0449",
     "field": "rights",
-    "statement": "改善策は専門家のみが決定し、現場の労働者は実施のみを担う。",
+    "statement": "参加型職場環境改善では、改善策は専門家のみが決定し、現場の労働者は実施のみを担う。",
     "correctAnswer": false,
     "exp": "参加型職場環境改善は、当事者である労働者が主体的に関与することで、改善策が実態に合ったものになり、定着しやすい。規模を問わず実施可能。",
     "publicPath": "q/ichimon/s/ichi-0449/index.html"
@@ -3595,7 +3595,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0450",
     "field": "rights",
-    "statement": "労働者自身が職場の問題を話し合い、改善策を主体的に検討・実施することで定着しやすい。",
+    "statement": "参加型職場環境改善では、労働者自身が職場の問題を話し合い、改善策を主体的に検討・実施するため、改善策が定着しやすい。",
     "correctAnswer": true,
     "exp": "参加型職場環境改善は、当事者である労働者が主体的に関与することで、改善策が実態に合ったものになり、定着しやすい。規模を問わず実施可能。",
     "publicPath": "q/ichimon/s/ichi-0450/index.html"
@@ -3603,7 +3603,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0451",
     "field": "rights",
-    "statement": "参加型改善は大企業にのみ適用可能であり、小規模職場では実施できない。",
+    "statement": "参加型職場環境改善は大企業にのみ適用可能であり、小規模な職場では実施できない。",
     "correctAnswer": false,
     "exp": "参加型職場環境改善は、当事者である労働者が主体的に関与することで、改善策が実態に合ったものになり、定着しやすい。規模を問わず実施可能。",
     "publicPath": "q/ichimon/s/ichi-0451/index.html"
@@ -3611,7 +3611,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0452",
     "field": "rights",
-    "statement": "改善効果が出るまでに数年かかるため、即効性はない。",
+    "statement": "参加型の職場環境改善は、改善効果が出るまでに必ず数年を要し、短期間で効果が現れることはない。",
     "correctAnswer": false,
     "exp": "参加型職場環境改善は、当事者である労働者が主体的に関与することで、改善策が実態に合ったものになり、定着しやすい。規模を問わず実施可能。",
     "publicPath": "q/ichimon/s/ichi-0452/index.html"
@@ -3651,7 +3651,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0457",
     "field": "rights",
-    "statement": "個人の精神疾患リスクを診断するツールとして、個人面談に活用する。",
+    "statement": "仕事の量－コントロール判定図は、個人の精神疾患リスクを診断するツールとして個人面談に活用する。",
     "correctAnswer": false,
     "exp": "量−コントロール判定図は職業性ストレス簡易調査票の集団分析結果をもとに、職場のストレスレベルを視覚化するツール。改善優先度の判断・職場への結果フィードバックに活用。",
     "publicPath": "q/ichimon/s/ichi-0457/index.html"
@@ -3659,7 +3659,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0458",
     "field": "rights",
-    "statement": "職場（集団）のストレス状況を把握し、高ストレス職場の特定と環境改善の優先順位づけに活用する。",
+    "statement": "仕事の量－コントロール判定図は、職場（集団）のストレス状況を把握し、高ストレス職場の特定や環境改善の優先順位づけに活用する。",
     "correctAnswer": true,
     "exp": "量−コントロール判定図は職業性ストレス簡易調査票の集団分析結果をもとに、職場のストレスレベルを視覚化するツール。改善優先度の判断・職場への結果フィードバックに活用。",
     "publicPath": "q/ichimon/s/ichi-0458/index.html"
@@ -3667,7 +3667,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0459",
     "field": "rights",
-    "statement": "このツールは産業医のみが使用できる専門的なツールである。",
+    "statement": "仕事の量－コントロール判定図は、産業医のみが使用できる専門的なツールである。",
     "correctAnswer": false,
     "exp": "量−コントロール判定図は職業性ストレス簡易調査票の集団分析結果をもとに、職場のストレスレベルを視覚化するツール。改善優先度の判断・職場への結果フィードバックに活用。",
     "publicPath": "q/ichimon/s/ichi-0459/index.html"
@@ -4323,7 +4323,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0541",
     "field": "law",
-    "statement": "この時間数を超えると即座に死亡するリスクがあるため。",
+    "statement": "過労死の労災認定で「2〜6か月平均で月80時間超」の時間外・休日労働が目安とされるのは、この時間数を超えると即座に死亡するリスクがあるためである。",
     "correctAnswer": false,
     "exp": "過労死認定基準（脳・心臓疾患）は医学的根拠に基づく。発症前1か月100時間超または2〜6か月平均80時間超の時間外労働が「過重業務」の目安。労基法の上限規制とは別概念。",
     "publicPath": "q/ichimon/s/ichi-0541/index.html"
@@ -4331,7 +4331,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0542",
     "field": "law",
-    "statement": "この水準を超える長時間労働は、脳・心臓疾患の発症との関連が医学的に認められているため。",
+    "statement": "過労死の労災認定で「2〜6か月平均で月80時間超」の時間外・休日労働が目安とされるのは、この水準の長時間労働と脳・心臓疾患の発症との関連が医学的に認められているためである。",
     "correctAnswer": true,
     "exp": "過労死認定基準（脳・心臓疾患）は医学的根拠に基づく。発症前1か月100時間超または2〜6か月平均80時間超の時間外労働が「過重業務」の目安。労基法の上限規制とは別概念。",
     "publicPath": "q/ichimon/s/ichi-0542/index.html"
@@ -4339,7 +4339,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0543",
     "field": "law",
-    "statement": "労働基準法が定める時間外労働の上限がこの水準であるため。",
+    "statement": "過労死の労災認定で「2〜6か月平均で月80時間超」の時間外・休日労働が目安とされるのは、労働基準法が定める時間外労働の上限がこの水準であるためである。",
     "correctAnswer": false,
     "exp": "過労死認定基準（脳・心臓疾患）は医学的根拠に基づく。発症前1か月100時間超または2〜6か月平均80時間超の時間外労働が「過重業務」の目安。労基法の上限規制とは別概念。",
     "publicPath": "q/ichimon/s/ichi-0543/index.html"
@@ -4347,7 +4347,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0544",
     "field": "law",
-    "statement": "この水準を超えると会社が倒産するリスクが高まるため。",
+    "statement": "過労死の労災認定で「2〜6か月平均で月80時間超」の時間外・休日労働が目安とされるのは、この水準を超えると会社が倒産するリスクが高まるためである。",
     "correctAnswer": false,
     "exp": "過労死認定基準（脳・心臓疾患）は医学的根拠に基づく。発症前1か月100時間超または2〜6か月平均80時間超の時間外労働が「過重業務」の目安。労基法の上限規制とは別概念。",
     "publicPath": "q/ichimon/s/ichi-0544/index.html"
@@ -4419,7 +4419,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0553",
     "field": "law",
-    "statement": "ストレスチェックの実施時期・対象者・実施者・高ストレス者への対応方法等。",
+    "statement": "ストレスチェック制度の実施計画（実施規程）には、実施時期・対象者・実施者・高ストレス者への対応方法などを定める。",
     "correctAnswer": true,
     "exp": "ストレスチェック実施計画には、実施時期・対象者・実施者（医師・保健師等）・実施方法・情報管理方針・高ストレス者への面接指導対応等を定める。個人結果の人事利用は禁止。",
     "publicPath": "q/ichimon/s/ichi-0553/index.html"
@@ -4427,7 +4427,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0554",
     "field": "law",
-    "statement": "各労働者のストレスチェック結果の詳細と個人別対策。",
+    "statement": "ストレスチェック制度の実施計画には、各労働者のストレスチェック結果の詳細と個人ごとの対策を記載する。",
     "correctAnswer": false,
     "exp": "ストレスチェック実施計画には、実施時期・対象者・実施者（医師・保健師等）・実施方法・情報管理方針・高ストレス者への面接指導対応等を定める。個人結果の人事利用は禁止。",
     "publicPath": "q/ichimon/s/ichi-0554/index.html"
@@ -4435,7 +4435,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0555",
     "field": "law",
-    "statement": "ストレスチェックを実施しない理由の記録。",
+    "statement": "ストレスチェック制度の実施計画には、ストレスチェックを実施しない理由を記録する。",
     "correctAnswer": false,
     "exp": "ストレスチェック実施計画には、実施時期・対象者・実施者（医師・保健師等）・実施方法・情報管理方針・高ストレス者への面接指導対応等を定める。個人結果の人事利用は禁止。",
     "publicPath": "q/ichimon/s/ichi-0555/index.html"
@@ -4443,7 +4443,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0556",
     "field": "law",
-    "statement": "実施結果に基づく人事評価の方針。",
+    "statement": "ストレスチェック制度の実施計画には、実施結果を用いた人事評価の方針を定める。",
     "correctAnswer": false,
     "exp": "ストレスチェック実施計画には、実施時期・対象者・実施者（医師・保健師等）・実施方法・情報管理方針・高ストレス者への面接指導対応等を定める。個人結果の人事利用は禁止。",
     "publicPath": "q/ichimon/s/ichi-0556/index.html"
@@ -4483,7 +4483,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0561",
     "field": "law",
-    "statement": "部下のメンタルヘルス不調を自ら診断・治療すること。",
+    "statement": "ラインによるケアにおける管理監督者の役割には、部下のメンタルヘルス不調を自ら診断・治療することが含まれる。",
     "correctAnswer": false,
     "exp": "ラインによるケアの本質は「日常の職務管理の中でのメンタルヘルス配慮」。診断・治療は専門家の領域。管理監督者は気づき・対話・環境改善・専門家への橋渡しを担う。",
     "publicPath": "q/ichimon/s/ichi-0561/index.html"
@@ -4491,7 +4491,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0562",
     "field": "law",
-    "statement": "日常の職務管理の中でメンタルヘルスに配慮し、不調の早期発見・対応と職場環境改善を担うこと。",
+    "statement": "ラインによるケアにおける管理監督者の重要な役割は、日常の職務管理の中でメンタルヘルスに配慮し、不調の早期発見・対応と職場環境の改善を担うことである。",
     "correctAnswer": true,
     "exp": "ラインによるケアの本質は「日常の職務管理の中でのメンタルヘルス配慮」。診断・治療は専門家の領域。管理監督者は気づき・対話・環境改善・専門家への橋渡しを担う。",
     "publicPath": "q/ichimon/s/ichi-0562/index.html"
@@ -4499,7 +4499,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0563",
     "field": "law",
-    "statement": "産業医の業務を代行し、労働者の健康診断を実施すること。",
+    "statement": "ラインによるケアにおける管理監督者の役割には、産業医の業務を代行して労働者の健康診断を実施することが含まれる。",
     "correctAnswer": false,
     "exp": "ラインによるケアの本質は「日常の職務管理の中でのメンタルヘルス配慮」。診断・治療は専門家の領域。管理監督者は気づき・対話・環境改善・専門家への橋渡しを担う。",
     "publicPath": "q/ichimon/s/ichi-0563/index.html"
@@ -4507,7 +4507,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0564",
     "field": "law",
-    "statement": "メンタルヘルス不調者の人事異動を単独で決定すること。",
+    "statement": "ラインによるケアにおける管理監督者の役割には、メンタルヘルス不調者の人事異動を単独で決定することが含まれる。",
     "correctAnswer": false,
     "exp": "ラインによるケアの本質は「日常の職務管理の中でのメンタルヘルス配慮」。診断・治療は専門家の領域。管理監督者は気づき・対話・環境改善・専門家への橋渡しを担う。",
     "publicPath": "q/ichimon/s/ichi-0564/index.html"
@@ -4683,7 +4683,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0586",
     "field": "rights",
-    "statement": "ワーク・エンゲイジメントや職場の一体感など、ポジティブな職場要因も評価項目に加えられている。",
+    "statement": "新職業性ストレス簡易調査票には、ワーク・エンゲイジメントや職場の一体感など、ポジティブな職場要因も評価項目に加えられている。",
     "correctAnswer": true,
     "exp": "新職業性ストレス簡易調査票はポジティブ要因（上司・同僚のサポート充実度・公正な評価・キャリア形成支援等）も含む。ストレスチェックで使用義務はなく選択制。",
     "publicPath": "q/ichimon/s/ichi-0586/index.html"
@@ -4739,39 +4739,39 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0593",
     "field": "rights",
-    "statement": "個人のメンタルヘルスリスクを点数化して評価するツールである。",
+    "statement": "メンタルヘルスアクションチェックリストは、個人のメンタルヘルスリスクを点数化して評価するツールである。",
     "correctAnswer": false,
-    "exp": "メンタルヘルスアクションチェックリスト（旧：職場環境改善のためのヒント集）は職場の管理監督者・労働者が職場環境改善の着眼点を得るための参加型ツール。",
+    "exp": "「職場環境改善のためのヒント集（メンタルヘルスアクションチェックリスト）」は、職場の管理監督者や労働者が話し合いながら、職場環境改善の着眼点を得るための参加型のツール。個人のリスクを点数化するものではなく、産業医だけが使うものでもない。",
     "publicPath": "q/ichimon/s/ichi-0593/index.html"
   },
   {
     "id": "ichi-0594",
     "field": "rights",
-    "statement": "職場の管理監督者や労働者が職場環境の改善すべき点を話し合うための手がかりとして活用する。",
+    "statement": "メンタルヘルスアクションチェックリストは、職場の管理監督者や労働者が職場環境の改善すべき点を話し合うための手がかりとして活用する。",
     "correctAnswer": true,
-    "exp": "メンタルヘルスアクションチェックリスト（旧：職場環境改善のためのヒント集）は職場の管理監督者・労働者が職場環境改善の着眼点を得るための参加型ツール。",
+    "exp": "「職場環境改善のためのヒント集（メンタルヘルスアクションチェックリスト）」は、職場の管理監督者や労働者が話し合いながら、職場環境改善の着眼点を得るための参加型のツール。個人のリスクを点数化するものではなく、産業医だけが使うものでもない。",
     "publicPath": "q/ichimon/s/ichi-0594/index.html"
   },
   {
     "id": "ichi-0595",
     "field": "rights",
-    "statement": "このチェックリストは産業医のみが使用できる。",
+    "statement": "メンタルヘルスアクションチェックリストは、産業医のみが使用できる。",
     "correctAnswer": false,
-    "exp": "メンタルヘルスアクションチェックリスト（旧：職場環境改善のためのヒント集）は職場の管理監督者・労働者が職場環境改善の着眼点を得るための参加型ツール。",
+    "exp": "「職場環境改善のためのヒント集（メンタルヘルスアクションチェックリスト）」は、職場の管理監督者や労働者が話し合いながら、職場環境改善の着眼点を得るための参加型のツール。個人のリスクを点数化するものではなく、産業医だけが使うものでもない。",
     "publicPath": "q/ichimon/s/ichi-0595/index.html"
   },
   {
     "id": "ichi-0596",
     "field": "rights",
-    "statement": "チェックリストで問題が見つかった場合、即座に職場閉鎖の根拠として使用する。",
+    "statement": "メンタルヘルスアクションチェックリストで問題が見つかった場合は、ただちに当該職場を閉鎖する根拠として使用する。",
     "correctAnswer": false,
-    "exp": "メンタルヘルスアクションチェックリスト（旧：職場環境改善のためのヒント集）は職場の管理監督者・労働者が職場環境改善の着眼点を得るための参加型ツール。",
+    "exp": "「職場環境改善のためのヒント集（メンタルヘルスアクションチェックリスト）」は、職場の管理監督者や労働者が話し合いながら、職場環境改善の着眼点を得るための参加型のツール。個人のリスクを点数化するものではなく、産業医だけが使うものでもない。",
     "publicPath": "q/ichimon/s/ichi-0596/index.html"
   },
   {
     "id": "ichi-0597",
     "field": "rights",
-    "statement": "業務の質が向上し、積極的な提案が増えた。",
+    "statement": "業務の質が向上し、積極的な提案が増えたことは、部下の身体的なストレスサインにあたる。",
     "correctAnswer": false,
     "exp": "身体的ストレスサインとして頭痛・肩こり・胃腸症状・不眠・慢性疲労・食欲変化等がある。これらが急に増えた場合はメンタルヘルス不調のシグナルである可能性がある。",
     "publicPath": "q/ichimon/s/ichi-0597/index.html"
@@ -4779,7 +4779,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0598",
     "field": "rights",
-    "statement": "頭痛・肩こり・胃腸不調・不眠・疲労感の訴えが増えた。",
+    "statement": "頭痛・肩こり・胃腸の不調・不眠・疲労感の訴えが増えたことは、部下の身体的なストレスサインにあたる。",
     "correctAnswer": true,
     "exp": "身体的ストレスサインとして頭痛・肩こり・胃腸症状・不眠・慢性疲労・食欲変化等がある。これらが急に増えた場合はメンタルヘルス不調のシグナルである可能性がある。",
     "publicPath": "q/ichimon/s/ichi-0598/index.html"
@@ -4787,7 +4787,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0599",
     "field": "rights",
-    "statement": "職場の懇親会に積極的に参加するようになった。",
+    "statement": "職場の懇親会に積極的に参加するようになったことは、部下の身体的なストレスサインにあたる。",
     "correctAnswer": false,
     "exp": "身体的ストレスサインとして頭痛・肩こり・胃腸症状・不眠・慢性疲労・食欲変化等がある。これらが急に増えた場合はメンタルヘルス不調のシグナルである可能性がある。",
     "publicPath": "q/ichimon/s/ichi-0599/index.html"
@@ -4795,7 +4795,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0600",
     "field": "rights",
-    "statement": "残業を自ら申し出て、積極的に業務に取り組んでいる。",
+    "statement": "残業を自ら申し出て積極的に業務に取り組んでいることは、部下の身体的なストレスサインにあたる。",
     "correctAnswer": false,
     "exp": "身体的ストレスサインとして頭痛・肩こり・胃腸症状・不眠・慢性疲労・食欲変化等がある。これらが急に増えた場合はメンタルヘルス不調のシグナルである可能性がある。",
     "publicPath": "q/ichimon/s/ichi-0600/index.html"
@@ -4931,7 +4931,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0617",
     "field": "rights",
-    "statement": "部下が悩みを話せるよう、相談に乗り共感する。",
+    "statement": "部下が悩みを話せるよう相談に乗り共感することは、「道具的サポート」にあたる。",
     "correctAnswer": false,
     "exp": "道具的サポート＝具体的な手助け・資源（人・物・時間・お金）の提供。情緒的（共感・傾聴）・情報的（情報・アドバイス）・評価的（フィードバック・承認）と区別できることが重要。",
     "publicPath": "q/ichimon/s/ichi-0617/index.html"
@@ -4939,7 +4939,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0618",
     "field": "rights",
-    "statement": "問題解決のための具体的な情報・知識を提供する。",
+    "statement": "問題解決のための具体的な情報や知識を提供することは、「道具的サポート」にあたる。",
     "correctAnswer": false,
     "exp": "道具的サポート＝具体的な手助け・資源（人・物・時間・お金）の提供。情緒的（共感・傾聴）・情報的（情報・アドバイス）・評価的（フィードバック・承認）と区別できることが重要。",
     "publicPath": "q/ichimon/s/ichi-0618/index.html"
@@ -4947,7 +4947,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0619",
     "field": "rights",
-    "statement": "業務量の一時的な軽減や人員の補充など、具体的な物的・人的資源の提供を行う。",
+    "statement": "業務量の一時的な軽減や人員の補充など、具体的な物的・人的資源を提供することは、「道具的サポート」にあたる。",
     "correctAnswer": true,
     "exp": "道具的サポート＝具体的な手助け・資源（人・物・時間・お金）の提供。情緒的（共感・傾聴）・情報的（情報・アドバイス）・評価的（フィードバック・承認）と区別できることが重要。",
     "publicPath": "q/ichimon/s/ichi-0619/index.html"
@@ -4955,7 +4955,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0620",
     "field": "rights",
-    "statement": "部下の業務評価を適切に行い、フィードバックする。",
+    "statement": "部下の業務評価を適切に行い、フィードバックすることは、「道具的サポート」にあたる。",
     "correctAnswer": false,
     "exp": "道具的サポート＝具体的な手助け・資源（人・物・時間・お金）の提供。情緒的（共感・傾聴）・情報的（情報・アドバイス）・評価的（フィードバック・承認）と区別できることが重要。",
     "publicPath": "q/ichimon/s/ichi-0620/index.html"
@@ -5859,7 +5859,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0733",
     "field": "rights",
-    "statement": "改善策によるストレス指標の変化（欠勤率・ストレスチェックスコア等）を測定すること。",
+    "statement": "改善策によるストレス指標の変化（欠勤率・ストレスチェックの結果等）を測定することは、職場環境改善の「プロセス評価」にあたる。",
     "correctAnswer": false,
     "exp": "プロセス評価＝計画の実施状況・実施率・参加率等の評価。アウトカム評価＝ストレス指標や欠勤率等の結果指標の評価。両方を組み合わせることで改善活動の全体像を把握できる。",
     "publicPath": "q/ichimon/s/ichi-0733/index.html"
@@ -5867,7 +5867,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0734",
     "field": "rights",
-    "statement": "改善策が計画通りに実施されているか、参加率はどうか等、実施状況を評価すること。",
+    "statement": "改善策が計画どおり実施されているか、参加率はどうかなど、実施状況を評価することは、職場環境改善の「プロセス評価」にあたる。",
     "correctAnswer": true,
     "exp": "プロセス評価＝計画の実施状況・実施率・参加率等の評価。アウトカム評価＝ストレス指標や欠勤率等の結果指標の評価。両方を組み合わせることで改善活動の全体像を把握できる。",
     "publicPath": "q/ichimon/s/ichi-0734/index.html"
@@ -5875,7 +5875,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0735",
     "field": "rights",
-    "statement": "改善策の費用対効果を金額で算出すること。",
+    "statement": "改善策の費用対効果を金額で算出することは、職場環境改善の「プロセス評価」にあたる。",
     "correctAnswer": false,
     "exp": "プロセス評価＝計画の実施状況・実施率・参加率等の評価。アウトカム評価＝ストレス指標や欠勤率等の結果指標の評価。両方を組み合わせることで改善活動の全体像を把握できる。",
     "publicPath": "q/ichimon/s/ichi-0735/index.html"
@@ -5883,7 +5883,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0736",
     "field": "rights",
-    "statement": "改善策に関わったスタッフの満足度を評価すること。",
+    "statement": "改善策の実施後に職場の離職率がどう変化したかを測定することは、職場環境改善の「プロセス評価」にあたる。",
     "correctAnswer": false,
     "exp": "プロセス評価＝計画の実施状況・実施率・参加率等の評価。アウトカム評価＝ストレス指標や欠勤率等の結果指標の評価。両方を組み合わせることで改善活動の全体像を把握できる。",
     "publicPath": "q/ichimon/s/ichi-0736/index.html"
@@ -6403,7 +6403,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0801",
     "field": "law",
-    "statement": "1日の労働時間の上限を8時間に固定すること。",
+    "statement": "勤務間インターバル制度は、1日の労働時間の上限を一律に8時間に固定することを目的とする。",
     "correctAnswer": false,
     "exp": "勤務間インターバル制度の目的は終業〜始業間の休息確保。例えば11時間のインターバルを設けることで最低限の睡眠・生活時間を確保し、過重労働・健康障害を防ぐ。",
     "publicPath": "q/ichimon/s/ichi-0801/index.html"
@@ -6411,7 +6411,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0802",
     "field": "law",
-    "statement": "終業から翌日の始業までに一定の休息時間を確保することで、労働者の睡眠・生活時間を守ること。",
+    "statement": "勤務間インターバル制度は、終業から翌日の始業までに一定の休息時間を確保し、労働者の睡眠時間や生活時間を守ることを目的とする。",
     "correctAnswer": true,
     "exp": "勤務間インターバル制度の目的は終業〜始業間の休息確保。例えば11時間のインターバルを設けることで最低限の睡眠・生活時間を確保し、過重労働・健康障害を防ぐ。",
     "publicPath": "q/ichimon/s/ichi-0802/index.html"
@@ -6419,7 +6419,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0803",
     "field": "law",
-    "statement": "月の残業時間をゼロにすること。",
+    "statement": "勤務間インターバル制度は、毎月の残業時間をゼロにすることを目的とする。",
     "correctAnswer": false,
     "exp": "勤務間インターバル制度の目的は終業〜始業間の休息確保。例えば11時間のインターバルを設けることで最低限の睡眠・生活時間を確保し、過重労働・健康障害を防ぐ。",
     "publicPath": "q/ichimon/s/ichi-0803/index.html"
@@ -6427,7 +6427,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0804",
     "field": "law",
-    "statement": "週休3日制を義務化すること。",
+    "statement": "勤務間インターバル制度は、週休3日制を義務化することを目的とする。",
     "correctAnswer": false,
     "exp": "勤務間インターバル制度の目的は終業〜始業間の休息確保。例えば11時間のインターバルを設けることで最低限の睡眠・生活時間を確保し、過重労働・健康障害を防ぐ。",
     "publicPath": "q/ichimon/s/ichi-0804/index.html"
@@ -6755,7 +6755,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0845",
     "field": "rights",
-    "statement": "業務の進め方・順序を自分で決められる自由度が高い。",
+    "statement": "業務の進め方や作業の順序を自分の判断で自由に決められることは、「仕事のコントロール（裁量度）」が低い職場の特徴である。",
     "correctAnswer": false,
     "exp": "仕事のコントロール（裁量度）が低い＝やり方・ペース・順序等を自分で決められない状態。高要求度＋低コントロールの組み合わせが最もストレスが高い（高ストレイン）。",
     "publicPath": "q/ichimon/s/ichi-0845/index.html"
@@ -6763,7 +6763,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0846",
     "field": "rights",
-    "statement": "業務手順が厳密に決められており、自分で判断・工夫する余地がほとんどない。",
+    "statement": "業務手順が厳密に決められていて、自分で判断・工夫する余地がほとんどないことは、「仕事のコントロール（裁量度）」が低い職場の特徴である。",
     "correctAnswer": true,
     "exp": "仕事のコントロール（裁量度）が低い＝やり方・ペース・順序等を自分で決められない状態。高要求度＋低コントロールの組み合わせが最もストレスが高い（高ストレイン）。",
     "publicPath": "q/ichimon/s/ichi-0846/index.html"
@@ -6771,7 +6771,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0847",
     "field": "rights",
-    "statement": "上司からの支援が十分に得られる。",
+    "statement": "上司からの支援が十分に得られることは、「仕事のコントロール（裁量度）」が低い職場の特徴である。",
     "correctAnswer": false,
     "exp": "仕事のコントロール（裁量度）が低い＝やり方・ペース・順序等を自分で決められない状態。高要求度＋低コントロールの組み合わせが最もストレスが高い（高ストレイン）。",
     "publicPath": "q/ichimon/s/ichi-0847/index.html"
@@ -6779,7 +6779,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0848",
     "field": "rights",
-    "statement": "業務目標が明確で達成感を得やすい。",
+    "statement": "業務目標が明確で達成感を得やすいことは、「仕事のコントロール（裁量度）」が低い職場の特徴である。",
     "correctAnswer": false,
     "exp": "仕事のコントロール（裁量度）が低い＝やり方・ペース・順序等を自分で決められない状態。高要求度＋低コントロールの組み合わせが最もストレスが高い（高ストレイン）。",
     "publicPath": "q/ichimon/s/ichi-0848/index.html"
@@ -6819,7 +6819,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0853",
     "field": "rights",
-    "statement": "仕事のストレス要因・ストレス反応・修飾要因（サポート等）の3領域から構成される。",
+    "statement": "職業性ストレス簡易調査票は、仕事のストレス要因・心身のストレス反応・修飾要因（周囲のサポート等）の3領域から構成される。",
     "correctAnswer": true,
     "exp": "職業性ストレス簡易調査票（57項目）は①仕事のストレス要因（量・コントロール・対人関係等）②ストレス反応（身体・心理・行動）③修飾要因（上司・同僚・家族のサポート）の3領域。",
     "publicPath": "q/ichimon/s/ichi-0853/index.html"
@@ -6827,7 +6827,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0854",
     "field": "rights",
-    "statement": "身体的健康のみを評価する調査票である。",
+    "statement": "職業性ストレス簡易調査票は、身体的健康のみを評価する調査票である。",
     "correctAnswer": false,
     "exp": "職業性ストレス簡易調査票（57項目）は①仕事のストレス要因（量・コントロール・対人関係等）②ストレス反応（身体・心理・行動）③修飾要因（上司・同僚・家族のサポート）の3領域。",
     "publicPath": "q/ichimon/s/ichi-0854/index.html"
@@ -6835,7 +6835,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0855",
     "field": "rights",
-    "statement": "離職意向と仕事への満足度のみを問う調査票である。",
+    "statement": "職業性ストレス簡易調査票は、離職意向と仕事への満足度のみを問う調査票である。",
     "correctAnswer": false,
     "exp": "職業性ストレス簡易調査票（57項目）は①仕事のストレス要因（量・コントロール・対人関係等）②ストレス反応（身体・心理・行動）③修飾要因（上司・同僚・家族のサポート）の3領域。",
     "publicPath": "q/ichimon/s/ichi-0855/index.html"
@@ -6843,7 +6843,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0856",
     "field": "rights",
-    "statement": "職場の物理的環境のみを評価する調査票である。",
+    "statement": "職業性ストレス簡易調査票は、職場の物理的環境のみを評価する調査票である。",
     "correctAnswer": false,
     "exp": "職業性ストレス簡易調査票（57項目）は①仕事のストレス要因（量・コントロール・対人関係等）②ストレス反応（身体・心理・行動）③修飾要因（上司・同僚・家族のサポート）の3領域。",
     "publicPath": "q/ichimon/s/ichi-0856/index.html"
@@ -6851,7 +6851,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0857",
     "field": "rights",
-    "statement": "株価・配当金・営業利益は、職場環境改善の評価指標として活用できる組み合わせである。",
+    "statement": "株価・配当金・営業利益は、職場環境改善の評価指標として適している。",
     "correctAnswer": false,
     "exp": "職場環境改善の評価指標：ストレスチェック集団分析結果・欠勤率・休職者数・離職率・生産性指標・労災件数等。複数の指標を組み合わせて多面的に評価することが重要。",
     "publicPath": "q/ichimon/s/ichi-0857/index.html"
@@ -6859,7 +6859,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0858",
     "field": "rights",
-    "statement": "ストレスチェックスコアの変化・欠勤率・離職率・生産性指標は、職場環境改善の評価指標として活用できる組み合わせである。",
+    "statement": "ストレスチェック結果の変化・欠勤率・離職率・生産性指標などは、職場環境改善の評価指標として活用できる。",
     "correctAnswer": true,
     "exp": "職場環境改善の評価指標：ストレスチェック集団分析結果・欠勤率・休職者数・離職率・生産性指標・労災件数等。複数の指標を組み合わせて多面的に評価することが重要。",
     "publicPath": "q/ichimon/s/ichi-0858/index.html"
@@ -6867,7 +6867,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0859",
     "field": "rights",
-    "statement": "社員食堂の満足度・社内報の発行部数は、職場環境改善の評価指標として活用できる組み合わせである。",
+    "statement": "社員食堂の満足度や社内報の発行部数は、職場環境改善の評価指標として適している。",
     "correctAnswer": false,
     "exp": "職場環境改善の評価指標：ストレスチェック集団分析結果・欠勤率・休職者数・離職率・生産性指標・労災件数等。複数の指標を組み合わせて多面的に評価することが重要。",
     "publicPath": "q/ichimon/s/ichi-0859/index.html"
@@ -6875,7 +6875,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0860",
     "field": "rights",
-    "statement": "採用応募者数・面接通過率は、職場環境改善の評価指標として活用できる組み合わせである。",
+    "statement": "採用応募者数や面接の通過率は、職場環境改善の評価指標として適している。",
     "correctAnswer": false,
     "exp": "職場環境改善の評価指標：ストレスチェック集団分析結果・欠勤率・休職者数・離職率・生産性指標・労災件数等。複数の指標を組み合わせて多面的に評価することが重要。",
     "publicPath": "q/ichimon/s/ichi-0860/index.html"
@@ -6915,7 +6915,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0865",
     "field": "rights",
-    "statement": "「行動面」のストレスサインとして、「集中力・記憶力の低下」という記述は正しい。",
+    "statement": "集中力・記憶力の低下は、「行動面」のストレスサインにあたる。",
     "correctAnswer": false,
     "exp": "ストレス反応の種類：①身体的（頭痛・不眠・胃腸症状等）②心理的（抑うつ・不安・イライラ等）③行動的（飲酒増加・欠勤・作業ミス・遅刻等）。行動面のサインは外から見えやすい。",
     "publicPath": "q/ichimon/s/ichi-0865/index.html"
@@ -6923,7 +6923,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0866",
     "field": "rights",
-    "statement": "「行動面」のストレスサインとして、「飲酒量の増加・喫煙量の増加・遅刻・欠勤の増加」という記述は正しい。",
+    "statement": "飲酒量や喫煙量の増加、遅刻・欠勤の増加は、「行動面」のストレスサインにあたる。",
     "correctAnswer": true,
     "exp": "ストレス反応の種類：①身体的（頭痛・不眠・胃腸症状等）②心理的（抑うつ・不安・イライラ等）③行動的（飲酒増加・欠勤・作業ミス・遅刻等）。行動面のサインは外から見えやすい。",
     "publicPath": "q/ichimon/s/ichi-0866/index.html"
@@ -6931,7 +6931,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0867",
     "field": "rights",
-    "statement": "「行動面」のストレスサインとして、「頭痛・肩こり・不眠」という記述は正しい。",
+    "statement": "頭痛・肩こり・不眠は、「行動面」のストレスサインにあたる。",
     "correctAnswer": false,
     "exp": "ストレス反応の種類：①身体的（頭痛・不眠・胃腸症状等）②心理的（抑うつ・不安・イライラ等）③行動的（飲酒増加・欠勤・作業ミス・遅刻等）。行動面のサインは外から見えやすい。",
     "publicPath": "q/ichimon/s/ichi-0867/index.html"
@@ -6939,7 +6939,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0868",
     "field": "rights",
-    "statement": "「行動面」のストレスサインとして、「気分の落ち込み・不安感・イライラ」という記述は正しい。",
+    "statement": "気分の落ち込み・不安感・イライラは、「行動面」のストレスサインにあたる。",
     "correctAnswer": false,
     "exp": "ストレス反応の種類：①身体的（頭痛・不眠・胃腸症状等）②心理的（抑うつ・不安・イライラ等）③行動的（飲酒増加・欠勤・作業ミス・遅刻等）。行動面のサインは外から見えやすい。",
     "publicPath": "q/ichimon/s/ichi-0868/index.html"
@@ -7011,7 +7011,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0877",
     "field": "rights",
-    "statement": "一人で問題を抱え込み、誰にも相談しない。",
+    "statement": "一人で問題を抱え込み、誰にも相談しないことは、「ソーシャルサポートの希求」型のコーピングにあたる。",
     "correctAnswer": false,
     "exp": "社会的支援希求型コーピングは他者への相談・援助要請。一人で抱え込まず助けを求めることは有効なコーピング。「相談する」という行動自体がストレス緩和に寄与する。",
     "publicPath": "q/ichimon/s/ichi-0877/index.html"
@@ -7019,7 +7019,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0878",
     "field": "rights",
-    "statement": "上司・同僚・家族・専門家に悩みを打ち明けたり、助けを求めたりする。",
+    "statement": "上司・同僚・家族・専門家に悩みを打ち明けたり助けを求めたりすることは、「ソーシャルサポートの希求」型のコーピングにあたる。",
     "correctAnswer": true,
     "exp": "社会的支援希求型コーピングは他者への相談・援助要請。一人で抱え込まず助けを求めることは有効なコーピング。「相談する」という行動自体がストレス緩和に寄与する。",
     "publicPath": "q/ichimon/s/ichi-0878/index.html"
@@ -7027,7 +7027,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0879",
     "field": "rights",
-    "statement": "問題から目を背けて娯楽に没頭する。",
+    "statement": "問題から目を背けて娯楽に没頭することは、「ソーシャルサポートの希求」型のコーピングにあたる。",
     "correctAnswer": false,
     "exp": "社会的支援希求型コーピングは他者への相談・援助要請。一人で抱え込まず助けを求めることは有効なコーピング。「相談する」という行動自体がストレス緩和に寄与する。",
     "publicPath": "q/ichimon/s/ichi-0879/index.html"
@@ -7035,7 +7035,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0880",
     "field": "rights",
-    "statement": "問題の原因を徹底的に分析し、対策を自分で考える。",
+    "statement": "問題の原因を一人で分析し、対策を自分だけで考えて実行することは、「ソーシャルサポートの希求」型のコーピングにあたる。",
     "correctAnswer": false,
     "exp": "社会的支援希求型コーピングは他者への相談・援助要請。一人で抱え込まず助けを求めることは有効なコーピング。「相談する」という行動自体がストレス緩和に寄与する。",
     "publicPath": "q/ichimon/s/ichi-0880/index.html"
@@ -7139,7 +7139,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0893",
     "field": "rights",
-    "statement": "「情報的サポート」の具体例として、「業務量を一時的に減らす」という記述は正しい。",
+    "statement": "業務量を一時的に減らすことは、「情報的サポート」の具体例である。",
     "correctAnswer": false,
     "exp": "情報的サポート＝問題解決に役立つ情報・知識・アドバイスの提供。相談窓口の案内・制度の説明・専門家の紹介等が含まれる。道具的（業務調整）・情緒的（共感）・評価的（フィードバック）と区別する。",
     "publicPath": "q/ichimon/s/ichi-0893/index.html"
@@ -7147,7 +7147,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0894",
     "field": "rights",
-    "statement": "悩みを聞いて共感する",
+    "statement": "悩みを聞いて共感することは、「情報的サポート」の具体例である。",
     "correctAnswer": false,
     "exp": "情報的サポート＝問題解決に役立つ情報・知識・アドバイスの提供。相談窓口の案内・制度の説明・専門家の紹介等が含まれる。道具的（業務調整）・情緒的（共感）・評価的（フィードバック）と区別する。",
     "publicPath": "q/ichimon/s/ichi-0894/index.html"
@@ -7155,7 +7155,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0895",
     "field": "rights",
-    "statement": "「情報的サポート」の具体例として、「産業医面談・EAP等の利用方法を教える」という記述は正しい。",
+    "statement": "産業医面談やEAPなどの利用方法を教えることは、「情報的サポート」の具体例である。",
     "correctAnswer": true,
     "exp": "情報的サポート＝問題解決に役立つ情報・知識・アドバイスの提供。相談窓口の案内・制度の説明・専門家の紹介等が含まれる。道具的（業務調整）・情緒的（共感）・評価的（フィードバック）と区別する。",
     "publicPath": "q/ichimon/s/ichi-0895/index.html"
@@ -7163,7 +7163,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-0896",
     "field": "rights",
-    "statement": "部下の業務成果を適切に評価する",
+    "statement": "部下の業務成果を適切に評価することは、「情報的サポート」の具体例である。",
     "correctAnswer": false,
     "exp": "情報的サポート＝問題解決に役立つ情報・知識・アドバイスの提供。相談窓口の案内・制度の説明・専門家の紹介等が含まれる。道具的（業務調整）・情緒的（共感）・評価的（フィードバック）と区別する。",
     "publicPath": "q/ichimon/s/ichi-0896/index.html"
@@ -8195,7 +8195,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1025",
     "field": "rights",
-    "statement": "「職場環境等の把握と改善」における「定性的評価」の方法として、「ストレスチェックの数値データの集計」という記述は正しい。",
+    "statement": "ストレスチェックの数値データの集計は、職場環境等の把握における「定性的評価」の方法である。",
     "correctAnswer": false,
     "exp": "定性的評価：職場巡視・ヒアリング・グループディスカッション・面談等で得る質的情報。定量的評価（数値）との組み合わせで職場の実態を多面的に把握する。",
     "publicPath": "q/ichimon/s/ichi-1025/index.html"
@@ -8203,7 +8203,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1026",
     "field": "rights",
-    "statement": "「職場環境等の把握と改善」における「定性的評価」の方法として、「職場巡視・グループインタビュー・個別面談等による質的な情報収集」という記述は正しい。",
+    "statement": "職場巡視・グループインタビュー・個別面談などによる質的な情報収集は、職場環境等の把握における「定性的評価」の方法である。",
     "correctAnswer": true,
     "exp": "定性的評価：職場巡視・ヒアリング・グループディスカッション・面談等で得る質的情報。定量的評価（数値）との組み合わせで職場の実態を多面的に把握する。",
     "publicPath": "q/ichimon/s/ichi-1026/index.html"
@@ -8211,7 +8211,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1027",
     "field": "rights",
-    "statement": "「職場環境等の把握と改善」における「定性的評価」の方法として、「欠勤率・離職率の統計分析」という記述は正しい。",
+    "statement": "欠勤率・離職率の統計分析は、職場環境等の把握における「定性的評価」の方法である。",
     "correctAnswer": false,
     "exp": "定性的評価：職場巡視・ヒアリング・グループディスカッション・面談等で得る質的情報。定量的評価（数値）との組み合わせで職場の実態を多面的に把握する。",
     "publicPath": "q/ichimon/s/ichi-1027/index.html"
@@ -8219,7 +8219,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1028",
     "field": "rights",
-    "statement": "「職場環境等の把握と改善」における「定性的評価」の方法として、「生産性指標の数値化」という記述は正しい。",
+    "statement": "生産性指標の数値化は、職場環境等の把握における「定性的評価」の方法である。",
     "correctAnswer": false,
     "exp": "定性的評価：職場巡視・ヒアリング・グループディスカッション・面談等で得る質的情報。定量的評価（数値）との組み合わせで職場の実態を多面的に把握する。",
     "publicPath": "q/ichimon/s/ichi-1028/index.html"
@@ -8323,7 +8323,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1041",
     "field": "rights",
-    "statement": "上司からの過度な叱責・批判が続いている。",
+    "statement": "上司からの過度な叱責・批判が続いている状況は、職場の人間関係によるストレス要因となる。",
     "correctAnswer": true,
     "exp": "良好な人間関係・同僚からの協力はストレスを緩和する保護要因。過度な叱責・無視・孤立・顧客からのハラスメントはストレス要因。良い人間関係づくりも管理監督者の重要な役割。",
     "publicPath": "q/ichimon/s/ichi-1041/index.html"
@@ -8331,7 +8331,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1042",
     "field": "rights",
-    "statement": "同僚との良好な協力関係のもとで業務が進んでいる。",
+    "statement": "同僚との良好な協力関係のもとで業務が進んでいる状況は、職場の人間関係によるストレス要因となる。",
     "correctAnswer": false,
     "exp": "良好な人間関係・同僚からの協力はストレスを緩和する保護要因。過度な叱責・無視・孤立・顧客からのハラスメントはストレス要因。良い人間関係づくりも管理監督者の重要な役割。",
     "publicPath": "q/ichimon/s/ichi-1042/index.html"
@@ -8339,7 +8339,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1043",
     "field": "rights",
-    "statement": "同僚から無視・孤立させられている。",
+    "statement": "同僚から無視され、孤立させられている状況は、職場の人間関係によるストレス要因となる。",
     "correctAnswer": true,
     "exp": "良好な人間関係・同僚からの協力はストレスを緩和する保護要因。過度な叱責・無視・孤立・顧客からのハラスメントはストレス要因。良い人間関係づくりも管理監督者の重要な役割。",
     "publicPath": "q/ichimon/s/ichi-1043/index.html"
@@ -8347,7 +8347,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1044",
     "field": "rights",
-    "statement": "顧客からの理不尽なクレームが頻繁に発生している。",
+    "statement": "顧客からの理不尽なクレームが頻繁に発生している状況は、職場の人間関係によるストレス要因となる。",
     "correctAnswer": true,
     "exp": "良好な人間関係・同僚からの協力はストレスを緩和する保護要因。過度な叱責・無視・孤立・顧客からのハラスメントはストレス要因。良い人間関係づくりも管理監督者の重要な役割。",
     "publicPath": "q/ichimon/s/ichi-1044/index.html"
@@ -8355,7 +8355,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1045",
     "field": "rights",
-    "statement": "「リラクセーション法」として職場でも活用できるものとして、「過度な飲酒・喫煙・過食」という記述は正しい。",
+    "statement": "過度な飲酒・喫煙・過食は、職場でも活用できるリラクセーション法である。",
     "correctAnswer": false,
     "exp": "リラクセーション法：自律訓練法・漸進的筋弛緩法・呼吸法（腹式呼吸）・マインドフルネス・ヨガ等。飲酒・喫煙・過食は回避コーピングであり健康的なリラクセーションとは異なる。",
     "publicPath": "q/ichimon/s/ichi-1045/index.html"
@@ -8363,7 +8363,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1046",
     "field": "rights",
-    "statement": "「リラクセーション法」として職場でも活用できるものとして、「自律訓練法・漸進的筋弛緩法・呼吸法・マインドフルネス」という記述は正しい。",
+    "statement": "自律訓練法・漸進的筋弛緩法・呼吸法・マインドフルネスは、職場でも活用できるリラクセーション法である。",
     "correctAnswer": true,
     "exp": "リラクセーション法：自律訓練法・漸進的筋弛緩法・呼吸法（腹式呼吸）・マインドフルネス・ヨガ等。飲酒・喫煙・過食は回避コーピングであり健康的なリラクセーションとは異なる。",
     "publicPath": "q/ichimon/s/ichi-1046/index.html"
@@ -8371,7 +8371,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1047",
     "field": "rights",
-    "statement": "「リラクセーション法」として職場でも活用できるものとして、「長時間のゲーム・SNSへの没頭」という記述は正しい。",
+    "statement": "長時間のゲームやSNSへの没頭は、職場でも活用できるリラクセーション法である。",
     "correctAnswer": false,
     "exp": "リラクセーション法：自律訓練法・漸進的筋弛緩法・呼吸法（腹式呼吸）・マインドフルネス・ヨガ等。飲酒・喫煙・過食は回避コーピングであり健康的なリラクセーションとは異なる。",
     "publicPath": "q/ichimon/s/ichi-1047/index.html"
@@ -8379,7 +8379,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1048",
     "field": "rights",
-    "statement": "「リラクセーション法」として職場でも活用できるものとして、「強度の高い運動のみ」という記述は正しい。",
+    "statement": "職場で活用できるリラクセーション法は、強度の高い運動に限られる。",
     "correctAnswer": false,
     "exp": "リラクセーション法：自律訓練法・漸進的筋弛緩法・呼吸法（腹式呼吸）・マインドフルネス・ヨガ等。飲酒・喫煙・過食は回避コーピングであり健康的なリラクセーションとは異なる。",
     "publicPath": "q/ichimon/s/ichi-1048/index.html"
@@ -8389,7 +8389,7 @@ window.ICHIMONDOU_ROWS = [
     "field": "rights",
     "statement": "特別条項を結べば時間外労働に上限はなく、どれだけでも残業させることができる。",
     "correctAnswer": false,
-    "exp": "2019年施行の改正労基法により特別条項にも上限規制。年720時間・単月100時間未満・複数月平均80時間以内・月45時間超は年6回まで。上限違反は罰則対象（罰金・懲役）。",
+    "exp": "2019年施行の改正労働基準法により、特別条項にも上限規制がある。年720時間以内・単月100時間未満（休日労働含む）・2〜6か月平均80時間以内（休日労働含む）で、月45時間を超えられるのは年6回まで。上限に違反すると罰則（6か月以下の拘禁刑または30万円以下の罰金）の対象となる。",
     "publicPath": "q/ichimon/s/ichi-1049/index.html"
   },
   {
@@ -8397,23 +8397,23 @@ window.ICHIMONDOU_ROWS = [
     "field": "rights",
     "statement": "特別条項を適用しても、年720時間・月100時間未満・2〜6か月平均80時間以内の上限がある。",
     "correctAnswer": true,
-    "exp": "2019年施行の改正労基法により特別条項にも上限規制。年720時間・単月100時間未満・複数月平均80時間以内・月45時間超は年6回まで。上限違反は罰則対象（罰金・懲役）。",
+    "exp": "2019年施行の改正労働基準法により、特別条項にも上限規制がある。年720時間以内・単月100時間未満（休日労働含む）・2〜6か月平均80時間以内（休日労働含む）で、月45時間を超えられるのは年6回まで。上限に違反すると罰則（6か月以下の拘禁刑または30万円以下の罰金）の対象となる。",
     "publicPath": "q/ichimon/s/ichi-1050/index.html"
   },
   {
     "id": "ichi-1051",
     "field": "rights",
-    "statement": "管理監督者であっても、過重労働による健康障害防止の観点から健康確保への配慮が必要である。",
-    "correctAnswer": true,
-    "exp": "2019年施行の改正労基法により特別条項にも上限規制。年720時間・単月100時間未満・複数月平均80時間以内・月45時間超は年6回まで。上限違反は罰則対象（罰金・懲役）。",
+    "statement": "36協定に特別条項を設ければ、月45時間を超える時間外労働を年に何回でも行わせることができる。",
+    "correctAnswer": false,
+    "exp": "2019年施行の改正労働基準法により、特別条項にも上限規制がある。年720時間以内・単月100時間未満（休日労働含む）・2〜6か月平均80時間以内（休日労働含む）で、月45時間を超えられるのは年6回まで。上限に違反すると罰則（6か月以下の拘禁刑または30万円以下の罰金）の対象となる。",
     "publicPath": "q/ichimon/s/ichi-1051/index.html"
   },
   {
     "id": "ichi-1052",
     "field": "rights",
-    "statement": "特別条項の適用は月1回まで認められている。",
+    "statement": "36協定の特別条項を適用できるのは、月1回までと定められている。",
     "correctAnswer": false,
-    "exp": "2019年施行の改正労基法により特別条項にも上限規制。年720時間・単月100時間未満・複数月平均80時間以内・月45時間超は年6回まで。上限違反は罰則対象（罰金・懲役）。",
+    "exp": "2019年施行の改正労働基準法により、特別条項にも上限規制がある。年720時間以内・単月100時間未満（休日労働含む）・2〜6か月平均80時間以内（休日労働含む）で、月45時間を超えられるのは年6回まで。上限に違反すると罰則（6か月以下の拘禁刑または30万円以下の罰金）の対象となる。",
     "publicPath": "q/ichimon/s/ichi-1052/index.html"
   },
   {
@@ -8427,7 +8427,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1054",
     "field": "rights",
-    "statement": "部下の業務成果を認め「よくできた」とフィードバックする。",
+    "statement": "部下の業務成果を認め、「よくできた」とフィードバックすることは、評価的サポートにあたる。",
     "correctAnswer": true,
     "exp": "評価的サポート＝業務遂行に対する適切なフィードバック・承認・評価。「よくできた」「この点を改善しよう」等の具体的フィードバックが該当。情報（アドバイス）・道具（手助け）・情緒（共感）と区別する。",
     "publicPath": "q/ichimon/s/ichi-1054/index.html"
@@ -9123,7 +9123,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1141",
     "field": "rights",
-    "statement": "個人の精神疾患を診断する目的で使用する。",
+    "statement": "職業性ストレス簡易調査票は、個人の精神疾患を診断する目的で使用する。",
     "correctAnswer": false,
     "exp": "職業性ストレス簡易調査票の活用：ストレスチェック実施・個人へのフィードバック・集団分析による職場環境改善。診断ツールではなく予防・改善のためのスクリーニングツール。",
     "publicPath": "q/ichimon/s/ichi-1141/index.html"
@@ -9131,7 +9131,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1142",
     "field": "rights",
-    "statement": "ストレスチェック制度の実施ツールとして、また集団分析を通じた職場環境改善の基礎データとして活用する。",
+    "statement": "職業性ストレス簡易調査票は、ストレスチェックの実施や、集団分析を通じた職場環境改善の基礎データとして活用する。",
     "correctAnswer": true,
     "exp": "職業性ストレス簡易調査票の活用：ストレスチェック実施・個人へのフィードバック・集団分析による職場環境改善。診断ツールではなく予防・改善のためのスクリーニングツール。",
     "publicPath": "q/ichimon/s/ichi-1142/index.html"
@@ -9139,7 +9139,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1143",
     "field": "rights",
-    "statement": "労災認定の証拠書類として単独で使用する。",
+    "statement": "職業性ストレス簡易調査票は、労災認定の証拠書類として単独で使用する。",
     "correctAnswer": false,
     "exp": "職業性ストレス簡易調査票の活用：ストレスチェック実施・個人へのフィードバック・集団分析による職場環境改善。診断ツールではなく予防・改善のためのスクリーニングツール。",
     "publicPath": "q/ichimon/s/ichi-1143/index.html"
@@ -9147,7 +9147,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1144",
     "field": "rights",
-    "statement": "採用選考における性格評価ツールとして使用する。",
+    "statement": "職業性ストレス簡易調査票は、採用選考における応募者の性格評価に使用する。",
     "correctAnswer": false,
     "exp": "職業性ストレス簡易調査票の活用：ストレスチェック実施・個人へのフィードバック・集団分析による職場環境改善。診断ツールではなく予防・改善のためのスクリーニングツール。",
     "publicPath": "q/ichimon/s/ichi-1144/index.html"
@@ -9155,7 +9155,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1145",
     "field": "rights",
-    "statement": "新しい業務を担当して最初の1週間にミスが増えた。",
+    "statement": "新しい業務を担当して最初の1週間にミスが増えたことは、メンタルヘルス不調のサインとして特に注意が必要な業務パフォーマンスの低下である。",
     "correctAnswer": false,
     "exp": "不調のサインとしてのパフォーマンス低下は、以前できていたことができなくなる「変化」が重要。新業務・繁忙期・環境変化による一時的な低下との区別が必要。継続性・複数サインの組み合わせで判断。",
     "publicPath": "q/ichimon/s/ichi-1145/index.html"
@@ -9163,7 +9163,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1146",
     "field": "rights",
-    "statement": "以前は問題なくこなせていた業務のミスが急増し、集中力・判断力の低下が目立つようになった。",
+    "statement": "以前は問題なくこなせていた業務でミスが急増し、集中力や判断力の低下が目立つようになったことは、メンタルヘルス不調のサインとなりうる。",
     "correctAnswer": true,
     "exp": "不調のサインとしてのパフォーマンス低下は、以前できていたことができなくなる「変化」が重要。新業務・繁忙期・環境変化による一時的な低下との区別が必要。継続性・複数サインの組み合わせで判断。",
     "publicPath": "q/ichimon/s/ichi-1146/index.html"
@@ -9171,7 +9171,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1147",
     "field": "rights",
-    "statement": "繁忙期に一時的に業務量が増え、対応が追いつかない状態が続いている。",
+    "statement": "繁忙期に周囲と同様に一時的に業務量が増え、対応が追いつかない状態は、メンタルヘルス不調のサインとして特に注意が必要な業務パフォーマンスの低下である。",
     "correctAnswer": false,
     "exp": "不調のサインとしてのパフォーマンス低下は、以前できていたことができなくなる「変化」が重要。新業務・繁忙期・環境変化による一時的な低下との区別が必要。継続性・複数サインの組み合わせで判断。",
     "publicPath": "q/ichimon/s/ichi-1147/index.html"
@@ -9179,7 +9179,7 @@ window.ICHIMONDOU_ROWS = [
   {
     "id": "ichi-1148",
     "field": "rights",
-    "statement": "新任管理職として着任直後に業務の把握に時間がかかっている。",
+    "statement": "新任管理職が着任直後に業務の把握に時間がかかっていることは、メンタルヘルス不調のサインとして特に注意が必要な業務パフォーマンスの低下である。",
     "correctAnswer": false,
     "exp": "不調のサインとしてのパフォーマンス低下は、以前できていたことができなくなる「変化」が重要。新業務・繁忙期・環境変化による一時的な低下との区別が必要。継続性・複数サインの組み合わせで判断。",
     "publicPath": "q/ichimon/s/ichi-1148/index.html"
