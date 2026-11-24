@@ -5165,6 +5165,11 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
   .site-shell-header .topnav-logo {
     margin-right: 8px;
   }
+  /* スマホでは上部の案内（一問一答・過去問ほか）を出さない。狭い幅に押し込まれ
+     「‡ 一問-」のように途中で切れて見えるため。トップへはロゴから戻れる */
+  .site-shell-header .topnav-links {
+    display: none;
+  }
   .site-shell-header .topnav-logo-mark,
   .site-footer .topnav-logo-mark,
   .site-footer .site-footer-logo-mark {
