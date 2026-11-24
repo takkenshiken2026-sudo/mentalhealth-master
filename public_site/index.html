@@ -1345,8 +1345,7 @@ body.is-solving .site-footer{display:none!important}
 
 /* Session-end message card */
 .session-msg-card{background:var(--bg2);border:1.5px solid var(--border2);border-radius:var(--r2);padding:18px 20px;box-shadow:var(--sh)}
-.session-msg-main{font-size:var(--fs-body);font-weight:700;color:var(--text);margin-bottom:8px;line-height:1.4}
-.session-msg-advice{font-size:var(--fs-sub);color:var(--text2);line-height:1.65}
+.session-msg-main{font-size:var(--fs-body);font-weight:700;color:var(--text);line-height:1.4}
 .session-msg-extra{font-size:var(--fs-sub);color:var(--green);font-weight:600;margin-top:8px}
 </style>
 <script type="application/ld+json">
@@ -5831,14 +5830,12 @@ function reviewQ(qid){
 // --- Session-end feedback ---
 function getSessionFeedback(pct, total, res, u){
   const correct = res.filter(r=>r.correct).length;
-  const wrong = res.filter(r=>!r.correct);
   const dayStreak = u.dayStreak||0;
   const totalAnswered = Object.keys(u.answers||{}).length;
   const lv = getLevel(totalAnswered);
 
   // メッセージ候補を条件で絞り込んで選ぶ
   let msg = '';
-  let advice = '';
 
   if(pct===100){
     const perfects = [
@@ -5848,9 +5845,6 @@ function getSessionFeedback(pct, total, res, u){
       '完璧なセッション。この感覚を本番でも再現できるように。',
     ];
     msg = perfects[Math.floor(Math.random()*perfects.length)];
-    advice = total>=10
-      ? '各問の根拠を口で言えるか確認すると、記憶がより定着します。'
-      : '問題数を少し増やして、この正答率が安定するか試してみましょう。';
   } else if(pct>=80){
     const goods = [
       'しっかり力がついてきています。この積み重ねが合格につながります。',
@@ -5859,11 +5853,6 @@ function getSessionFeedback(pct, total, res, u){
       '着実に仕上がっています。間違えた問題を重点的に確認しましょう。',
     ];
     msg = goods[Math.floor(Math.random()*goods.length)];
-    const wf = wrong.length ? wrong[0].q.field : null;
-    const fn = wf ? (FIELDS.find(f=>f.id===wf)||{name:wf}).name : null;
-    advice = fn
-      ? `不正解は${wrong.length}問でした。${fn}の解説を読み直しておくと確実です。`
-      : '不正解の問題は解説を読んで、根拠まで理解しておきましょう。';
   } else if(pct>=60){
     const middles = [
       '合格圏まであと一歩。今日気づいた弱点が、明日の得点源になります。',
@@ -5872,9 +5861,6 @@ function getSessionFeedback(pct, total, res, u){
       'ここから上がる人は、必ず復習を丁寧にやっています。',
     ];
     msg = middles[Math.floor(Math.random()*middles.length)];
-    advice = wrong.length
-      ? `間違えた${wrong.length}問の解説を読んで、なぜ間違えたかを確認しましょう。`
-      : '次は問題数を少し増やして挑んでみましょう。';
   } else {
     const lows = [
       '難しい問題も含まれていました。解説を丁寧に読むと必ず理解できます。',
@@ -5883,7 +5869,6 @@ function getSessionFeedback(pct, total, res, u){
       '本試験は繰り返し解いた分だけ伸びます。焦らず続けていきましょう。',
     ];
     msg = lows[Math.floor(Math.random()*lows.length)];
-    advice = '解説を一問一問読んで、正解の根拠をつかむことが最優先です。';
   }
 
   // 連続学習ボーナスメッセージ
@@ -5907,7 +5892,7 @@ function getSessionFeedback(pct, total, res, u){
     };
   }
 
-  return { msg, advice, streakNote, lvUpNote, levelUp };
+  return { msg, streakNote, lvUpNote, levelUp };
 }
 function interruptQuiz(){
   if(quizState.scoreReplayMode){
@@ -5955,7 +5940,6 @@ function showScore(){
     const extras = [fb.streakNote, fb.lvUpNote].filter(Boolean);
     msgEl.innerHTML = `<div class="session-msg-card">
       <div class="session-msg-main">${fb.msg}</div>
-      <div class="session-msg-advice">${fb.advice}</div>
       ${extras.map(e=>`<div class="session-msg-extra">${e}</div>`).join('')}
     </div>`;
   }
