@@ -49,7 +49,8 @@ ICHIMON_FIELDS = {
 }
 # 過去問 CSV と実践演習 CSV で共通する列（過去問の同期対象）
 PAST_SYNC_FIELDS = [
-    "category", "stem", "choice_1", "choice_2", "choice_3", "choice_4", "correct",
+    "category", "stem", "statement_a", "statement_b", "statement_c", "statement_d",
+    "choice_1", "choice_2", "choice_3", "choice_4", "correct",
     "explanation", "explanation_choices", "explanation_correct",
     "explanation_summary", "explanation_point",
 ]
