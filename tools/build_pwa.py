@@ -35,7 +35,7 @@ from tools.site_config import (  # noqa: E402
 )
 
 # SW のキャッシュ世代。sw.js の中身や precache 対象を変えたら上げる。
-PWA_CACHE_VERSION = "v4"
+PWA_CACHE_VERSION = "v5"
 
 PWA_HEAD_MARKER_START = "<!--PWA_HEAD-->"
 PWA_HEAD_MARKER_END = "<!--/PWA_HEAD-->"
