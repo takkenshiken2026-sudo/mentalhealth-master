@@ -6979,3 +6979,83 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
   .q-seo-table th,
   .q-seo-table td { padding: 8px 10px; }
 }
+
+/* === 試験ガイド一覧（articles-index-page）— スマホ用の詰めた表示 ===
+   1画面で多くの記事が見えるよう、カードを「小さな画像＋ジャンル＋見出し」の1行型にし、
+   説明文・タグは記事ページ側に任せて一覧では省く。ジャンル絞り込みは横1列でスクロール。 */
+@media (max-width: 760px) {
+  .articles-index-page .hub-promo__lead { display: none; }
+  .articles-index-page .site-page-main > .article-index-picks { padding: 12px 16px; }
+  .articles-index-page .article-index-picks-head { margin-bottom: 8px; }
+  .articles-index-page .article-index-picks-grid { gap: 8px; }
+  .articles-index-page .article-index-pick-link { padding: 12px 14px; gap: 6px; }
+  .articles-index-page .article-index-pick-desc { font-size: var(--fs-caption); line-height: 1.55; }
+
+  .articles-index-page .article-index-panel { padding: 14px 16px; }
+  .articles-index-page .article-index-head {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .articles-index-page .article-index-head h2 { margin: 0; }
+  .articles-index-page .article-index-head p { display: none; }
+  .articles-index-page .article-index-hit { align-self: center; padding: 4px 9px; }
+
+  .articles-index-page .article-index-tools {
+    gap: 8px;
+    margin-bottom: 12px;
+    padding: 10px;
+  }
+  .articles-index-page .article-index-search > span { display: none; }
+  .articles-index-page .article-index-search input { padding: 8px 10px; }
+  .articles-index-page .article-index-chips {
+    flex-wrap: nowrap;
+    gap: 6px;
+    overflow-x: auto;
+    margin: 0 -10px;
+    padding: 0 10px 2px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .articles-index-page .article-index-chips::-webkit-scrollbar { display: none; }
+  .articles-index-page .article-index-chip {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 5px 10px;
+  }
+
+  .articles-index-page .article-index-grid { gap: 8px; }
+  .articles-index-page .article-index-card-link {
+    display: grid;
+    grid-template-columns: 64px minmax(0, 1fr);
+    grid-template-areas: "thumb genre" "thumb title";
+    grid-template-rows: auto 1fr;
+    align-items: start;
+    gap: 4px 12px;
+    padding: 10px 12px;
+    box-shadow: none;
+  }
+  .articles-index-page .article-index-card-thumb {
+    grid-area: thumb;
+    width: 64px;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+  }
+  .articles-index-page .article-index-card-genre {
+    grid-area: genre;
+    justify-self: start;
+    padding: 2px 7px;
+    letter-spacing: 0.02em;
+  }
+  .articles-index-page .article-index-card h2 {
+    grid-area: title;
+    font-size: var(--fs-sub);
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  .articles-index-page .article-index-card p,
+  .articles-index-page .article-index-card-tags { display: none; }
+}
