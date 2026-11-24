@@ -636,10 +636,11 @@ def inject_index_course_switcher(text: str) -> str:
     band = course_switcher_html()
     if not band or _PAGE_SUB_ANCHOR not in text:
         return text
-    # サブ見出し直後に解答速報リンク(<p class="sokuhou-top-link">)があれば、
-    # そのリンクをサブ直下に保ったまま、その後ろにバンドを置く。
+    # サブ見出し直後に解答速報リンク(<p class="sokuhou-top-link">)やお知らせ行
+    # (<p class="site-notice-line">)があれば、それらをサブ直下に保ったまま、その後ろにバンドを置く。
     anchor_re = re.compile(
-        re.escape(_PAGE_SUB_ANCHOR) + r'\s*(?:<p class="sokuhou-top-link"[^>]*>.*?</p>)?',
+        re.escape(_PAGE_SUB_ANCHOR)
+        + r'(?:\s*<p class="(?:sokuhou-top-link|site-notice-line)"[^>]*>.*?</p>)*',
         re.S,
     )
     m = anchor_re.search(text)
