@@ -1018,7 +1018,7 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
     # 印刷・PDF保存用ページ（build_print_pages.py）への導線。過去問がある種だけ（I種などは生成されない）。
     print_link_html = (
         '<p class="q-print-link" style="margin:4px 12px 12px;font-size:.9rem">'
-        '<a href="print/index.html">印刷・PDF保存用（分野別・問題編と解答編）はこちら</a></p>'
+        '<a href="print/index.html">印刷・PDF保存用のサンプル（分野別・問題編と解答編）はこちら</a></p>'
         if pages
         else ""
     )
