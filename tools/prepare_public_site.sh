@@ -53,6 +53,10 @@ done
 if [[ -d "$ROOT/exam-dates" ]]; then
   cp -R "$ROOT/exam-dates" "$OUT/"
 fi
+# GitHub Pages のカスタム 404（存在しない URL すべてに返る）
+if [[ -f "$ROOT/404.html" ]]; then
+  cp "$ROOT/404.html" "$OUT/"
+fi
 if [[ -f "$ROOT/privacy-terms.html" ]]; then
   cp "$ROOT/privacy-terms.html" "$OUT/"
 fi

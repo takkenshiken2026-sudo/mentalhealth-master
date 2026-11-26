@@ -32,6 +32,7 @@
       "basePath": "/master",
       "primary": false,
       "hasEssay": true,
+      "hasPastQuestions": false,
       "published": true
     }
   ]

@@ -113,6 +113,10 @@ def main() -> int:
         rewrite_robots()
         ensure_single_cname()
 
+    # 6) 検索実績のある URL（reports/gsc/*/pages.csv）が 404 になっていないか。
+    #    記事の廃止・slug 変更で転送の登録漏れがあればここで止める。
+    run([sys.executable, "tools/validate_known_urls.py"])
+
     published = ", ".join(f"{g.short_label}({g.base_path or '/'})" for g in published_grades())
     pending = ", ".join(f"{g.short_label}({g.base_path})" for g in secondary_grades() if not g.published)
     print(f"build_site: 完了 — 公開: {published}（primary: {primary_grade().short_label}）")
