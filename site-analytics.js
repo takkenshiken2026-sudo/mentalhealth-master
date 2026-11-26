@@ -112,3 +112,50 @@
     y.parentNode.insertBefore(t, y);
   })(window, document, "clarity", "script", PID);
 })();
+
+// 有料教材（note）への導線クリックと、印刷の利用を計測（静的ページ共通・2026-11）。
+// GA4 イベント: promo_click（promo_slot=static_<ページ種別>, promo_variant=mock|problem_book|other）、
+//               print_click（「印刷する」ボタン）、print_open（印刷ダイアログを開いた＝Ctrl+P を含む）。
+// トップ（SPA）の案内枠は onclick の trackPromoClick で計測済みのため二重に数えない。
+(function () {
+  if (typeof document === "undefined" || typeof window === "undefined") return;
+  function send(name, params) {
+    try {
+      if (typeof window.gtag === "function") window.gtag("event", name, params);
+    } catch (_e) {}
+  }
+  function slot() {
+    var p = location.pathname || "";
+    if (/\/q\/print\/field-/.test(p)) return "print_field";
+    if (/\/q\/print\//.test(p)) return "print_hub";
+    if (/\/q\/(index\.html)?$/.test(p)) return "q_index";
+    if (/\/q\//.test(p)) return "q_question";
+    if (/\/articles\//.test(p)) return "articles";
+    if (/\/kaitou-sokuhou\//.test(p)) return "sokuhou";
+    return "other";
+  }
+  document.addEventListener(
+    "click",
+    function (ev) {
+      var t = ev.target;
+      if (!t || !t.closest) return;
+      var a = t.closest('a[href*="note.com/"]');
+      if (a && !/trackPromo/.test(a.getAttribute("onclick") || "")) {
+        var card = a.closest("[data-pick-kind]");
+        var kind = card ? String(card.getAttribute("data-pick-kind") || "").replace("-", "_") : "";
+        if (!kind) {
+          var box = a.closest("article, li, p") || a;
+          var text = (box.textContent || "") + " " + (a.textContent || "");
+          kind = /模試/.test(text) ? "mock" : /問題集/.test(text) ? "problem_book" : "other";
+        }
+        send("promo_click", { promo_slot: "static_" + slot(), promo_variant: kind, link_url: a.href });
+      }
+      var b = t.closest("button.print-btn");
+      if (b) send("print_click", { page_path: location.pathname, print_slot: slot() });
+    },
+    true
+  );
+  window.addEventListener("beforeprint", function () {
+    send("print_open", { page_path: location.pathname, print_slot: slot() });
+  });
+})();

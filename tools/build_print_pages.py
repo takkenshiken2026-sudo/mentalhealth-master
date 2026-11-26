@@ -3,7 +3,8 @@
 """過去問の印刷・PDF保存用ページを生成する（q/print/）。
 
 - q/print/index.html … 印刷用の入口（分野ごとの印刷セットと、予想模試・問題集への導線）。index, follow。
-- q/print/field-N/index.html … 分野ごとの印刷ページ（問題編 → 改ページ → 解答・解説編）。
+- q/print/field-N/index.html … 分野ごとの印刷ページ（問題編 → 改ページ → 解答編：正解と1行の要点）。
+  選択肢ごとの詳しい解説は Web（各問ページ）に残し、紙には載せない。
   内容が過去問一覧・各問ページと重なるため noindex, follow（入口ページを検索の受け皿にする）。
 
 背景: GSC（2026-08〜10）で「過去問 pdf / ダウンロード」系の検索が約2,300表示あり、
@@ -77,6 +78,7 @@ PRINT_CSS = """
 .print-exp{margin:0 0 14px;break-inside:avoid;page-break-inside:avoid;line-height:1.7;font-size:.92rem}
 .print-exp h3{font-size:.92rem;margin:0 0 4px}
 .print-exp p{margin:0 0 4px}
+.print-exp-more{font-size:.88rem;margin:0 0 10px}
 .print-cta{margin:22px 0 8px;padding:14px 16px;border:2px solid var(--accent);border-radius:12px;break-inside:avoid;page-break-inside:avoid}
 .print-cta p{margin:0 0 6px;line-height:1.7}
 .print-cta .print-cta-url{font-size:.85rem;word-break:break-all}
@@ -164,7 +166,7 @@ def build_field_page(rel: Path, field_name: str, pages: list[dict], *, set_no: i
     ex = exam_name()
     title = f"{ex} 過去問 印刷用（{field_name}・{len(pages)}問）｜{brand_title_suffix()}"
     desc = (
-        f"{ex}の過去問「{field_name}」{len(pages)}問の印刷用ページ。問題編と解答・解説編に分かれ、"
+        f"{ex}の過去問「{field_name}」{len(pages)}問の印刷用ページ。問題編と解答編（正解と要点）に分かれ、"
         "ブラウザの印刷機能でA4に印刷したり、PDFとして保存したりできます。"
     )
     q_parts = []
@@ -177,14 +179,21 @@ def build_field_page(rel: Path, field_name: str, pages: list[dict], *, set_no: i
     key_cells = "".join(
         f"<tr><th>第{p['qno']}問</th><td>{_correct_label(p['correct'])}</td></tr>" for p in pages
     )
+    # 印刷物には「正解と要点（1行の理由）」だけを載せ、選択肢ごとの詳しい解説は Web で読む形にする。
+    # 無料で全部そろった紙の問題集にせず、有料の分野別問題集・予想模試との重なりを抑えるため（2026-11）。
     exp_parts = []
     for p, row in pages_rows(pages):
-        why = norm(row.get("explanation_correct"))
-        main = norm(row.get("explanation")) or p["exp"]
-        body = "".join(f"<p>{html.escape(t)}</p>" for t in (why, main) if t)
+        why = norm(row.get("explanation_correct")) or norm(row.get("explanation_summary"))
+        body = f"<p>{html.escape(why)}</p>" if why else ""
         exp_parts.append(
             f'<div class="print-exp"><h3>第{p["qno"]}問　正解 {_correct_label(p["correct"])}</h3>{body}</div>'
         )
+    q_url = public_url("q/index.html")
+    more_html = (
+        '<p class="print-exp-more">選択肢ごとの詳しい解説は、Webの過去問一覧から各問を開くと読めます'
+        f'（<a href="{html.escape(rel_href(rel, "q/index.html"))}">過去問一覧</a>'
+        f'<span class="print-only">：{html.escape(q_url)}</span>）。</p>'
+    )
     crumb = breadcrumb_html(
         rel,
         [("トップ", "index.html"), ("過去問一覧", "q/index.html"), ("印刷・PDF保存", "q/print/index.html"), (field_name, None)],
@@ -200,14 +209,15 @@ def build_field_page(rel: Path, field_name: str, pages: list[dict], *, set_no: i
   {crumb}
   <h1>{html.escape(ex)} 過去問 印刷用：{html.escape(field_name)}（{len(pages)}問）</h1>
   <div class="print-body">
-  <p class="print-howto">「印刷する」を押すと、問題編と解答・解説編がA4で印刷されます（解答・解説編は新しいページから始まります）。印刷画面で送信先を「PDFとして保存」にすると、PDFファイルとして保存できます。画面で解く場合は<a href="{q_href}">過去問一覧</a>から1問ずつ解けます。</p>
+  <p class="print-howto">「印刷する」を押すと、問題編と解答編（正解と要点）がA4で印刷されます（解答編は新しいページから始まります）。印刷画面で送信先を「PDFとして保存」にすると、PDFファイルとして保存できます。画面で解く場合は<a href="{q_href}">過去問一覧</a>から1問ずつ解けます。</p>
   <div class="print-actions"><button type="button" class="print-btn" onclick="window.print()">印刷する／PDFとして保存</button><a class="print-btn print-btn--ghost" href="{hub_href}">ほかの分野を選ぶ</a></div>
   {build_guide_index_picks_html(rel)}
   <div class="print-sheet">
     <p class="print-only">{html.escape(ex)} 過去問（{html.escape(field_name)}・{len(pages)}問）　セット{set_no}/{total_sets}　{html.escape(brand_title_suffix())}</p>
     <h2>問題編：{html.escape(field_name)}</h2>
     {''.join(q_parts)}
-    <h2 class="print-break">解答・解説編：{html.escape(field_name)}</h2>
+    <h2 class="print-break">解答編（正解と要点）：{html.escape(field_name)}</h2>
+    {more_html}
     <table class="print-key"><tbody>{key_cells}</tbody></table>
     {''.join(exp_parts)}
     {_mock_cta_html(printable=True)}
@@ -232,15 +242,15 @@ def pages_rows(pages: list[dict]):
 
 def build_hub_page(rel: Path, sets: list[tuple[str, str, int]], total: int) -> str:
     ex = exam_name()
-    title = f"{ex} 過去問を印刷・PDF保存【{total}問・解答解説付き・無料】｜{brand_title_suffix()}"
+    title = f"{ex} 過去問を印刷・PDF保存【{total}問・解答と要点付き・無料】｜{brand_title_suffix()}"
     desc = (
-        f"{ex}の過去問{total}問を、分野ごとに印刷・PDF保存できます。問題編と解答・解説編に分かれたA4の印刷用ページを無料で公開。"
+        f"{ex}の過去問{total}問を、分野ごとに印刷・PDF保存できます。問題編と解答編（正解と要点）に分かれたA4の印刷用ページを無料で公開。"
         "ブラウザの印刷機能から「PDFとして保存」を選ぶとPDFファイルになります。"
     )
     crumb = breadcrumb_html(rel, [("トップ", "index.html"), ("過去問一覧", "q/index.html"), ("印刷・PDF保存", None)])
     set_items = "".join(
         f'<li><a href="{html.escape(rel_href(rel, href))}"><strong>{html.escape(name)}（{n}問）</strong>'
-        "<span>問題編＋解答・解説編　印刷・PDF保存</span></a></li>"
+        "<span>問題編＋解答編（正解と要点）　印刷・PDF保存</span></a></li>"
         for href, name, n in sets
     )
     q_href = html.escape(rel_href(rel, "q/index.html"))
@@ -253,7 +263,7 @@ def build_hub_page(rel: Path, sets: list[tuple[str, str, int]], total: int) -> s
   {crumb}
   <h1>{html.escape(ex)} 過去問を印刷・PDF保存</h1>
   <div class="print-body">
-  <p>{html.escape(ex)}の過去問{total}問を、分野ごとに印刷できるようにまとめました。各セットは「問題編」と「解答・解説編」に分かれていて、A4で印刷すると問題を紙で解き、あとから答え合わせができます。</p>
+  <p>{html.escape(ex)}の過去問{total}問を、分野ごとに印刷できるようにまとめました。各セットは「問題編」と「解答編（正解と要点）」に分かれていて、A4で印刷すると問題を紙で解き、あとから答え合わせができます。選択肢ごとの詳しい解説は、Webの各問ページで読めます。</p>
   <h2>分野を選んで印刷する</h2>
   <ul class="print-sets">{set_items}</ul>
   <h2>PDFとして保存する方法</h2>
