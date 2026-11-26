@@ -459,11 +459,9 @@ def site_shell_footer(
     include_analytics: bool = True,
     current: str | None = None,
 ) -> str:
-    """index.html の site-footer と同型（画面下固定。site-pages.css で position:fixed）。"""
+    """index.html の site-footer と同型（リンク一覧 + 著作権表記。ロゴは置かない）。"""
     _ = fixed
-    root = html.escape(footer_href(rel_path, "index.html"))
-    title = html.escape(f"{brand_name()}（{exam_name()}対策）トップへ")
-    mark = _brand_logo_mark_html()
+    # フッターにはロゴを置かない（トップへはフッターの「トップ」とヘッダーのロゴから戻れる）
     links: list[str] = []
     for label, dest, key in SITE_FOOTER_NAV:
         suppress_footer_current = bool(
@@ -486,10 +484,6 @@ def site_shell_footer(
     footer = f"""<footer class="site-footer" role="contentinfo">
     <div class="site-footer-scroll">
       <div class="site-footer-inner">
-        <a class="site-footer-brand" href="{root}" title="{title}">
-          {mark}
-        </a>
-        <span class="site-footer-sep" aria-hidden="true"></span>
         <nav class="site-footer-legal" aria-label="サイト情報・ポリシー">
           {links_html}
         </nav>
