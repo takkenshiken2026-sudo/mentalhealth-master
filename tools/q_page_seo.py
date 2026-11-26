@@ -7,7 +7,7 @@ import html
 import re
 
 from tools.build_past_question_pages import meta_description
-from tools.site_config import CONFIG, brand_name, exam_name, static_question_modes
+from tools.site_config import CONFIG, brand_name, brand_title_suffix, exam_name, static_question_modes
 
 MODE_LABEL: dict[str, str] = {
     "past": "過去問",
@@ -139,7 +139,7 @@ def index_meta_description(mode: str, *, count: int) -> str:
     if mode == "past":
         base = (
             f"{ex}の過去問{count}問をWebで無料公開。全問に正解と解説付きで、"
-            "PDFのダウンロードや会員登録は不要。分野別・年度別にスマホ・PCですぐ解けます。"
+            "スマホ・PCのブラウザから分野別・年度別にすぐ解けます。"
             f"{c['mockExam']}対策・{c['studyModes']}の学習に対応。"
         )
     elif mode == "practice":
@@ -223,13 +223,14 @@ def index_page_title(mode: str, *, count: int | None = None) -> str:
     """一覧ページの <title>（試験名・モード・模試キーワード・ブランド）。
 
     過去問は GSC で「過去問 web / 無料 / pdf / ダウンロード」の検索が多いため、
-    問題数と「Web無料・解説付き・PDF不要」を題名の前半に置く（2026-11 クリック率改善）。
+    問題数と「Web無料・解説付き」を題名の前半に置く（2026-11 クリック率改善）。
+    「PDF不要」は pdf・ダウンロードで探す人に「PDFは無い」と読まれるため使わない。
     """
     c = seo_copy()
     label = MODE_LABEL[mode]
     if mode == "past":
         if count:
-            return f"{exam_name()} {label}{count}問【Web無料・解説付き・PDF不要】｜{brand_name()}"
+            return f"{exam_name()} {label}{count}問【Web無料・解説付き・スマホで解ける】｜{brand_title_suffix()}"
         sub = "Web無料・模試対策"
     elif mode == "practice":
         sub = f"{c['mockExam']}前の演習"

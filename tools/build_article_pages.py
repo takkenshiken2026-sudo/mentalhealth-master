@@ -29,6 +29,7 @@ from tools.guide_index_picks_ui import build_guide_index_picks_html  # noqa: E40
 from tools.seo_utils import content_date_from_row, json_ld_date_modified, meta_updated_html  # noqa: E402
 from tools.site_config import (  # noqa: E402
     brand_name,
+    brand_title_suffix,
     clean_origin,
     exam_name,
     external_links,
@@ -1056,7 +1057,7 @@ def build_article_html(
 <meta charset="UTF-8">
 {seo_brand_asset_tags(rel_path)}
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{html.escape(title)}｜{html.escape(brand_name())}</title>
+<title>{html.escape(title)}｜{html.escape(brand_title_suffix())}</title>
 <meta name="description" content="{html.escape(desc)}">
 {ROBOTS_INDEX_FOLLOW}
 <link rel="canonical" href="{html.escape(canonical)}">
