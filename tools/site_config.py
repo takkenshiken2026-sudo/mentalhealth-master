@@ -47,6 +47,16 @@ def brand_name() -> str:
     return str(CONFIG.get("brandName") or "Sampleマスター")
 
 
+def brand_title_suffix() -> str:
+    """<title> 末尾に付けるサイト名。
+
+    検索結果（特にスマホ）では長い題名の後半が切れるため、site-config.json の
+    brandShortName があればそれを使う（例: 「二種マスター」）。無ければ brandName。
+    構造化データ・OGP・本文のサイト名は brand_name() のまま。
+    """
+    return str(CONFIG.get("brandShortName") or "").strip() or brand_name()
+
+
 def brand_mark() -> str:
     return str(CONFIG.get("brandMark") or brand_name()[:1] or "S")
 

@@ -38,9 +38,30 @@ def _has_terms() -> bool:
     return False
 
 
+def _past_question_count() -> int:
+    """data/past_questions.csv の問題数（無ければ 0）。副種ビルドでは data/ が当該種のもの。"""
+    import csv
+    from pathlib import Path
+
+    from tools.site_config import ROOT as _SITE_ROOT
+
+    path = Path(_SITE_ROOT) / "data" / "past_questions.csv"
+    if not path.is_file():
+        return 0
+    with path.open(encoding="utf-8-sig", newline="") as f:
+        return sum(1 for _ in csv.DictReader(f))
+
+
 def index_home_title() -> str:
-    feat = "過去問・一問一答・用語解説" if _has_terms() else "過去問・一問一答"
-    return f"{brand_name()}｜{exam_name()} {feat}で合格を目指す無料学習サイト"
+    """トップ（SPA）の <title>。
+
+    2026-11: 検索結果では試験名と「何がどれだけ無料で解けるか」が前半に見えるよう、
+    サイト名を末尾へ移した（旧: 「{サイト名}｜{試験名} 過去問・一問一答で合格を目指す無料学習サイト」）。
+    """
+    n = _past_question_count()
+    if n:
+        return f"{exam_name()} 過去問{n}問・一問一答【Web無料・解説付き】｜{brand_name()}"
+    return f"{exam_name()} 実践演習・一問一答【Web無料・解説付き】｜{brand_name()}"
 
 
 def index_og_title() -> str:
@@ -68,23 +89,26 @@ def index_spa_hash_url(hash_frag: str) -> str:
 
 
 def index_description() -> str:
-    net = "過去問演習・実践演習・一問一答・重要用語解説" if _has_terms() else "過去問演習・実践演習・一問一答"
-    return (
-        f"{exam_name()}の合格を目指す無料学習プラットフォーム。"
-        f"{net}を網羅。"
-        "年度別・分野別に絞った効率学習で合格を目指す。"
+    n = _past_question_count()
+    head = (
+        f"{exam_name()}の過去問{n}問を全問解説付きでWeb無料公開。"
+        if n
+        else f"{exam_name()}の実践演習と一問一答をWeb無料で公開。"
     )
+    rest = "実践演習・一問一答も、" if n else ""
+    return head + f"{rest}分野別・年度別に絞ってスマホ・PCのブラウザですぐ学習できます。"
 
 
 def index_description_long() -> str:
+    """トップの meta description（検索結果の説明文）。問題数と「全問解説付き・Web無料」を冒頭に置く。"""
     field_names = "・".join(str(f.get("name") or f.get("id") or "") for f in fields()[:4])
     subjects = field_names or "主要分野"
-    net = "過去問演習・実践演習・一問一答・重要用語解説" if _has_terms() else "過去問演習・実践演習・一問一答"
-    return (
-        f"{exam_name()}の合格を目指す無料学習プラットフォーム。"
-        f"{net}を網羅。"
-        f"年度別・科目別（{subjects}）に絞った効率的な学習が可能です。"
-    )
+    n = _past_question_count()
+    if n:
+        head = f"{exam_name()}の過去問{n}問を全問解説付きでWeb無料公開。実践演習・一問一答も、"
+    else:
+        head = f"{exam_name()}の実践演習・一問一答を解説付きでWeb無料公開。"
+    return head + f"科目別（{subjects}）・年度別に絞ってスマホ・PCのブラウザですぐ学習できます。"
 
 
 def index_keywords() -> str:
@@ -428,8 +452,13 @@ function _pageSeo(pageTitle, descTemplate, path, hash) {
     hash: hash || ''
   };
 }
+// トップ（quiz-start）は <head> に静的に書いた title / description をそのまま使う
+// （検索エンジンはJS実行後の値を採用するため、ここで別の文言に書き換えない）。
+const _HOME_STATIC_TITLE = document.title;
+const _HOME_STATIC_DESC = (document.querySelector('meta[name="description"]') || {}).content || '';
+const _HOME_SEO_FALLBACK = _pageSeo(_cfgQuizStartTitle(), '{exam}の学習モードを選択。実践演習・過去問・一問一答から選んで学習スタート。', '/', '');
 const PAGE_SEO = {
-  'quiz-start': _pageSeo(_cfgQuizStartTitle(), '{exam}の学習モードを選択。実践演習・過去問・一問一答から選んで学習スタート。', '/', ''),
+  'quiz-start': { title: _HOME_STATIC_TITLE || _HOME_SEO_FALLBACK.title, desc: _HOME_STATIC_DESC || _HOME_SEO_FALLBACK.desc, path: '/', hash: '' },
   'past-config': _pageSeo('過去問演習', '{exam}の過去問を年度別・分野別に絞り込んで学習。', '/#past', '#past'),
   'orig': _pageSeo('実践演習', '{exam}対策の実践演習問題。分野別データで弱点克服。', '/#orig', '#orig'),
   'review': _pageSeo('復習', '不正解・未解答の演習問題を分野別にまとめて復習。弱点問題を集中的に解いて定着率を上げる。', '/#review', '#review'),
