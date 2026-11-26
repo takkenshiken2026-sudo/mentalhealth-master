@@ -1016,9 +1016,11 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
     exam_info_links_html += other_grades_past_links_html()
 
     # 印刷・PDF保存用ページ（build_print_pages.py）への導線。過去問がある種だけ（I種などは生成されない）。
+    from tools.build_print_pages import DL_ICON as _DL_ICON
     print_link_html = (
         '<p class="q-print-link" style="margin:4px 12px 12px;font-size:.9rem">'
-        '<a href="print/index.html">印刷・PDF保存用のサンプル（分野別・問題編と解答編）はこちら</a></p>'
+        '<a href="print/index.html" style="display:inline-flex;align-items:center;gap:6px;font-weight:600">'
+        f'{_DL_ICON}印刷・PDF保存用のサンプル（分野別・問題編と解答編）はこちら</a></p>'
         if pages
         else ""
     )

@@ -53,18 +53,21 @@ from tools.site_config import (  # noqa: E402
 )
 
 PRINT_ROOT = ROOT / "q" / "print"
+# ダウンロード（印刷・PDF保存）の目印アイコン。文字色に合わせる（currentColor）。
+DL_ICON = '<svg class="dl-icon" width="18" height="18" style="width:18px;height:18px;min-width:18px;flex:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 19h14"/></svg>'
 CIRCLED = "①②③④⑤⑥"
 
 PRINT_CSS = """
 .print-page .print-body{padding:0 16px;max-width:760px}
 .print-page .print-body > ol{padding-left:1.5em;line-height:1.8}
 .print-page .print-actions{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 18px}
-.print-page .print-btn{display:inline-block;padding:10px 18px;border-radius:999px;border:0;background:var(--accent);color:#fff;font-weight:700;font-size:.95rem;cursor:pointer;text-decoration:none}
+.print-page .dl-icon{flex:none;vertical-align:-3px;margin-right:6px}
+.print-page .print-btn{display:inline-flex;align-items:center;padding:10px 18px;border-radius:999px;border:0;background:var(--accent);color:#fff;font-weight:700;font-size:.95rem;cursor:pointer;text-decoration:none}
 .print-page .print-btn--ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
 .print-page .print-howto{font-size:.88rem;line-height:1.7;color:var(--text2);margin:0 0 12px}
 .print-page .print-sets{list-style:none;padding:0;margin:12px 0 20px;display:grid;gap:10px}
 .print-page .print-sets a{display:block;padding:14px 16px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);background:var(--bg)}
-.print-page .print-sets a strong{display:block;font-size:1rem}
+.print-page .print-sets a strong{display:flex;align-items:center;font-size:1rem;color:var(--accent)}
 .print-page .print-sets a span{display:block;font-size:.85rem;color:var(--text2);margin-top:2px}
 .print-sheet h2{font-size:1.15rem;margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
 .print-q{margin:0 0 18px;break-inside:avoid;page-break-inside:avoid}
@@ -225,7 +228,7 @@ def build_field_page(
   <div class="print-body">
   {sample_html}
   <p class="print-howto">「印刷する」を押すと、問題編と解答編（正解と要点）がA4で印刷されます（解答編は新しいページから始まります）。印刷画面で送信先を「PDFとして保存」にすると、PDFファイルとして保存できます。画面で解く場合は<a href="{q_href}">過去問一覧</a>から1問ずつ解けます。</p>
-  <div class="print-actions"><button type="button" class="print-btn" onclick="window.print()">印刷する／PDFとして保存</button><a class="print-btn print-btn--ghost" href="{hub_href}">ほかの分野を選ぶ</a></div>
+  <div class="print-actions"><button type="button" class="print-btn" onclick="window.print()">{DL_ICON}印刷する／PDFとして保存</button><a class="print-btn print-btn--ghost" href="{hub_href}">ほかの分野を選ぶ</a></div>
   {build_guide_index_picks_html(rel)}
   <div class="print-sheet">
     <p class="print-only">{html.escape(ex)} 過去問 {label}（{html.escape(field_name)}・{len(pages)}問）　セット{set_no}/{total_sets}　{html.escape(brand_title_suffix())}</p>
@@ -283,7 +286,7 @@ def build_hub_page(rel: Path, sets: list[tuple[str, str, int, int]], total: int)
         )
     crumb = breadcrumb_html(rel, [("トップ", "index.html"), ("過去問一覧", "q/index.html"), ("印刷・PDF保存", None)])
     set_items = "".join(
-        f'<li><a href="{html.escape(rel_href(rel, href))}"><strong>{html.escape(name)}'
+        f'<li><a href="{html.escape(rel_href(rel, href))}"><strong>{DL_ICON}{html.escape(name)}'
         + (f"（サンプル{n}問／全{t}問）" if n < t else f"（{n}問）")
         + "</strong><span>問題編＋解答編（正解と要点）　印刷・PDF保存</span></a></li>"
         for href, name, n, t in sets
