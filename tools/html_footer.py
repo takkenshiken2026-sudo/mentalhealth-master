@@ -595,7 +595,10 @@ def q_index_filters_details_html(
 
 
 def q_hub_links_html(rel_path: Path, *, current: str) -> str:
-    """過去問・実践演習・一問一答のモード切替タブ（一覧・個別ページ共通）。"""
+    """過去問・実践演習・一問一答のモード切替タブ（一覧・個別ページ共通）。
+
+    data-mode はタブのアイコン（site-pages.css「サイト共通モノクロアイコン」）の図柄選択に使う。
+    """
     all_items: list[tuple[str, str, str]] = [
         ("past", "過去問", "q/index.html"),
         ("practice", "実践演習", "q/practice/index.html"),
@@ -610,7 +613,7 @@ def q_hub_links_html(rel_path: Path, *, current: str) -> str:
     for key, label, target in items:
         if key == current:
             lis.append(
-                f'<li class="q-hub-tab is-current">'
+                f'<li class="q-hub-tab is-current" data-mode="{key}">'
                 f'<span class="q-hub-tab-label" aria-current="page">{html.escape(label)}</span>'
                 f"</li>"
             )
@@ -618,7 +621,7 @@ def q_hub_links_html(rel_path: Path, *, current: str) -> str:
             # basePath（例 /self）配下の種では /self/q/... を指す。II種は base_path()=="" で /q/... のまま。
             href = base_path() + "/" + target.lstrip("/")
             lis.append(
-                f'<li class="q-hub-tab">'
+                f'<li class="q-hub-tab" data-mode="{key}">'
                 f'<a class="q-hub-tab-label" href="{html.escape(href)}">{html.escape(label)}</a>'
                 f"</li>"
             )
