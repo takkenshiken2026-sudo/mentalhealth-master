@@ -17,6 +17,18 @@ if str(ROOT) not in sys.path:
 from tools.editorial_quality import norm  # noqa: E402
 
 RETIRED_JSON = ROOT / "data" / "guide_retired.json"
+SITE_CONFIG = ROOT / "site-config.json"
+
+
+def site_origin() -> str:
+    """site-config.json の siteOrigin（末尾スラッシュなし）。無ければ空文字（相対 URL にフォールバック）。"""
+    if SITE_CONFIG.is_file():
+        try:
+            data = json.loads(SITE_CONFIG.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return ""
+        return norm(data.get("siteOrigin")).rstrip("/")
+    return ""
 
 REDIRECT_HTML = """<!DOCTYPE html>
 <html lang="ja">
@@ -59,11 +71,19 @@ def load_retired_map() -> dict[str, str]:
     return mapping
 
 
-def article_redirect_href(target: str) -> str:
-    """articles/{slug}/index.html からの相対 URL を組み立てる。"""
+def article_redirect_href(target: str, origin: str = "") -> str:
+    """転送先 URL を組み立てる。
+
+    origin（siteOrigin）があれば、転送先記事の canonical と同じ絶対 URL
+    （https://…/articles/{slug}/）を返す。旧 slug が chapters/… のように
+    階層を持つ場合も正しく解決でき、評価の引き継ぎ先が canonical と一致する。
+    origin が無いときは articles/{slug}/index.html からの相対 URL。
+    """
     t = norm(target)
     if t.startswith(("http://", "https://")):
         return t
+    if origin and not t.startswith("../"):
+        return f"{origin}/articles/{t.strip('/')}/"
     if t.startswith("../"):
         base = t.rstrip("/")
         if base.endswith(".html"):
@@ -73,10 +93,10 @@ def article_redirect_href(target: str) -> str:
     return f"../{slug}/index.html"
 
 
-def write_redirect(articles_dir: Path, slug: str, target_slug: str) -> None:
+def write_redirect(articles_dir: Path, slug: str, target_slug: str, origin: str = "") -> None:
     out_dir = articles_dir / slug
     out_dir.mkdir(parents=True, exist_ok=True)
-    rel = article_redirect_href(target_slug)
+    rel = article_redirect_href(target_slug, origin)
     esc = html.escape(rel, quote=True)
     (out_dir / "index.html").write_text(
         REDIRECT_HTML.format(url=esc, url_js=repr(rel)),
@@ -87,15 +107,30 @@ def write_redirect(articles_dir: Path, slug: str, target_slug: str) -> None:
         marker.unlink()
 
 
+def _is_published_slug(slug: str) -> bool:
+    with (ROOT / "data" / "guide_articles.csv").open(encoding="utf-8-sig", newline="") as f:
+        for row in csv.DictReader(f):
+            if norm(row.get("slug")) == slug and norm(row.get("content_status")) != "archived":
+                return True
+    return False
+
+
 def main() -> int:
     mapping = load_retired_map()
     articles_dir = ROOT / "articles"
     articles_dir.mkdir(parents=True, exist_ok=True)
+    origin = site_origin()
     count = 0
     for slug, target in sorted(mapping.items()):
         if not target:
             continue
-        write_redirect(articles_dir, slug, target)
+        if (articles_dir / slug / ".generated-by-exam-site").is_file() or (
+            ROOT / "data" / "guide_articles.csv"
+        ).is_file() and _is_published_slug(slug):
+            # 現行記事と同じ slug は上書きしない（転送表の誤登録対策）
+            print(f"skip: articles/{slug}/ は現行記事のため転送しません")
+            continue
+        write_redirect(articles_dir, slug, target, origin)
         count += 1
     print(f"Wrote {count} retired guide redirect(s) under articles/")
     return 0
