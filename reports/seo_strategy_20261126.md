@@ -132,6 +132,11 @@ GSC の分析で、伸びしろの大半は「過去問」系（特に pdf・ダ
 - 模試導線: 入口・分野別ページの画面に予想模試・分野別問題集の枠（`guideIndexPicks`、`leadsByHub.print` を追加）。印刷物の最後にも「過去問を解き終えたら、本番形式で仕上げ」の枠を入れ、紙でも分かるよう note の URL を文字で載せる。
 - 過去問一覧: 題名を「…過去問300問【Web無料・解説付き・印刷/PDF保存OK】」に、説明文に「分野ごとに印刷・PDF保存もできます」を追加。モード切替タブの直下（スマホの最初の画面内）に印刷用ページへのリンク。
 
+### 印刷ページの調整と計測（2026-11-27）
+- 有料教材との食い合い対策: 印刷物の解答編を「正解と1行の要点（explanation_correct）」だけにし、選択肢ごとの詳しい解説は Web の各問ページで読む形に変更（無料で全部そろった紙の問題集にしない）。解答編の冒頭に過去問一覧の URL を文字で掲載。職場環境・配慮78問で A4 53→40ページ。題名は「…【300問・解答と要点付き・無料】」。
+- 計測（`site-analytics.js`、全静的ページ共通）: note へのリンクのクリックを GA4 イベント `promo_click`（promo_slot=static_print_field / static_print_hub / static_q_index / static_articles など、promo_variant=mock / problem_book）で記録。印刷は `print_click`（ボタン）と `print_open`（印刷ダイアログ、Ctrl+P を含む）。トップ（SPA）の案内枠は既存の trackPromoClick で計測済みのため二重計上しない。
+- 判断方法: 12〜1月の promo_click（特に print 系の枠）と note の売上を、印刷ページ公開前と比べる。売上が落ちていれば印刷範囲を各分野の一部（サンプル）に絞る。
+
 ### 既知の不具合
 - （解消済み 2026-11-26）トップページ読み込み時の JavaScript エラー「renderTopAffiliateBanner is not defined」。初回表示時に後段の script で定義される関数を呼び、例外で gotoPage 以降（GA4 の page_view・ログイン状態の復元）が止まっていた。存在チェックを追加。
 
