@@ -1,6 +1,13 @@
 {
   "brandName": "メンタルヘルス二種マスター",
   "brandShortName": "二種マスター",
+  "topNoticeLines": [
+    {
+      "id": "apply42",
+      "until": "2027-02-04",
+      "html": "<strong style=\"color:var(--accent)\">次回試験</strong> 第42回は2027年3月21日（日）。一般申込は1月22日〜2月4日（コンビニ払いは1月31日まで）。<a href=\"articles/schedule/\">日程・申込方法を見る</a>"
+    }
+  ],
   "brandMark": "M",
   "brandFaviconMark": "二種",
   "examName": "メンタルヘルス・マネジメント検定II種",
