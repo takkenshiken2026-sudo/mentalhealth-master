@@ -56,7 +56,8 @@ COPY_IGNORE = shutil.ignore_patterns(
 # 掃除する生成ツリー（build_all が種データから作り直す / 空ならシェルのみ）。
 # articles はII種記事に生成マーカーが無く build_article_pages のクリーンが効かないため丸ごと除去
 # （build_article_pages が articles/index.html を空で再生成する）。
-PURGE_DIRS = ("q", "terms", "articles", "exam-dates")
+# kaitou-sokuhou も各種の sokuhou_rounds.csv から作り直す（残すと II種の回のページが副種に混入する）
+PURGE_DIRS = ("q", "terms", "articles", "exam-dates", "kaitou-sokuhou")
 
 # 掃除する生成JS。exam-site-data-* は build_all が再生成。
 # eisei1-*/eisei2-* は現行SPA(index.html)が参照しないII種レガシーデータなので除去（リーク防止）。

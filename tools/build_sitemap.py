@@ -239,7 +239,10 @@ def main() -> int:
     import argparse
 
     ap = argparse.ArgumentParser()
-    ap.add_argument("--base-url", default=clean_origin())
+    # 副種（/self・/master）は basePath 付きの URL を載せる（以前は II種の URL になっていた）。
+    from tools.site_config import public_url as _site_public_url
+
+    ap.add_argument("--base-url", default=_site_public_url("").rstrip("/") or clean_origin())
     args = ap.parse_args()
     base = args.base_url.rstrip("/")
     entries = collect_entries(base)
