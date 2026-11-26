@@ -632,6 +632,41 @@ _SEC_COURSES_RE = re.compile(r'\s*<section[^>]*aria-labelledby="sec-courses".*?<
 _SEC_OFFICIAL_END_RE = re.compile(r'(<section[^>]*aria-labelledby="sec-official".*?</section>)', re.S)
 
 
+_TOP_NOTICE_RE = re.compile(r'\s*<p class="site-notice-line" data-top-notice="[^"]*"[^>]*>.*?</p>', re.S)
+
+
+def inject_index_top_notices(text: str) -> str:
+    """site-config.json の topNoticeLines をトップの見出し直下に差し込む（冪等）。
+
+    形式: [{"id": "apply42", "until": "YYYY-MM-DD", "html": "..."}]
+    until を過ぎたもの（ビルド日の翌日以降）は出さない。設定の無い種では既存の差し込みを除去する
+    （副種ビルドは II種の index.html を流用するため）。html は設定ファイル由来の信頼済み断片。
+    """
+    from datetime import date
+
+    from tools.site_config import CONFIG
+
+    text = _TOP_NOTICE_RE.sub("", text)
+    items = CONFIG.get("topNoticeLines") if isinstance(CONFIG.get("topNoticeLines"), list) else []
+    today = date.today().isoformat()
+    lines = []
+    for it in items:
+        if not isinstance(it, dict) or not it.get("html"):
+            continue
+        until = str(it.get("until") or "")
+        if until and today > until:
+            continue
+        nid = html.escape(str(it.get("id") or "notice"), quote=True)
+        lines.append(
+            f'\n      <p class="site-notice-line" data-top-notice="{nid}" '
+            'style="margin:6px 0 0;font-size:.8rem;line-height:1.6;color:var(--text2)">'
+            f'{it["html"]}</p>'
+        )
+    if not lines or _PAGE_SUB_ANCHOR not in text:
+        return text
+    return text.replace(_PAGE_SUB_ANCHOR, _PAGE_SUB_ANCHOR + "".join(lines), 1)
+
+
 def inject_index_course_switcher(text: str) -> str:
     """トップ(index.html)のヒーロー直下に級切替バンドを差し込む（公開種が2つ以上のとき）。"""
     text = _COURSE_SWITCH_BLOCK_RE.sub("", text)  # 既存バンドを除去（冪等）
@@ -741,6 +776,7 @@ def main() -> int:
             new = update_index_glossary_excerpt(new)
             new = sync_index_doc_main_h1(new)
             new = sync_index_learning_nav_extras(new)
+            new = inject_index_top_notices(new)
             new = inject_index_course_switcher(new)
         if path.suffix == ".html":
             new = inject_adsense_head(new)
