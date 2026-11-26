@@ -29,12 +29,13 @@
 .print-page .print-body{padding:0 16px;max-width:760px}
 .print-page .print-body > ol{padding-left:1.5em;line-height:1.8}
 .print-page .print-actions{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 18px}
-.print-page .print-btn{display:inline-block;padding:10px 18px;border-radius:999px;border:0;background:var(--accent);color:#fff;font-weight:700;font-size:.95rem;cursor:pointer;text-decoration:none}
+.print-page .dl-icon{flex:none;vertical-align:-3px;margin-right:6px}
+.print-page .print-btn{display:inline-flex;align-items:center;padding:10px 18px;border-radius:999px;border:0;background:var(--accent);color:#fff;font-weight:700;font-size:.95rem;cursor:pointer;text-decoration:none}
 .print-page .print-btn--ghost{background:transparent;color:var(--accent);border:1px solid var(--accent)}
 .print-page .print-howto{font-size:.88rem;line-height:1.7;color:var(--text2);margin:0 0 12px}
 .print-page .print-sets{list-style:none;padding:0;margin:12px 0 20px;display:grid;gap:10px}
 .print-page .print-sets a{display:block;padding:14px 16px;border:1px solid var(--border);border-radius:12px;text-decoration:none;color:var(--text);background:var(--bg)}
-.print-page .print-sets a strong{display:block;font-size:1rem}
+.print-page .print-sets a strong{display:flex;align-items:center;font-size:1rem;color:var(--accent)}
 .print-page .print-sets a span{display:block;font-size:.85rem;color:var(--text2);margin-top:2px}
 .print-sheet h2{font-size:1.15rem;margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--accent)}
 .print-q{margin:0 0 18px;break-inside:avoid;page-break-inside:avoid}
@@ -119,7 +120,7 @@
   <div class="print-body">
   <p class="print-sample-note">この印刷用は「職場環境・配慮」78問のうち10問のサンプルです。残りの68問は、過去問一覧からWeb上で解説付きで解けます。本番と同じ形式・時間配分で紙で解きたい場合は、下の予想模試（PDF3回分・解説付き）を使ってください。</p>
   <p class="print-howto">「印刷する」を押すと、問題編と解答編（正解と要点）がA4で印刷されます（解答編は新しいページから始まります）。印刷画面で送信先を「PDFとして保存」にすると、PDFファイルとして保存できます。画面で解く場合は<a href="../../../q/index.html">過去問一覧</a>から1問ずつ解けます。</p>
-  <div class="print-actions"><button type="button" class="print-btn" onclick="window.print()">印刷する／PDFとして保存</button><a class="print-btn print-btn--ghost" href="../../../q/print/index.html">ほかの分野を選ぶ</a></div>
+  <div class="print-actions"><button type="button" class="print-btn" onclick="window.print()"><svg class="dl-icon" width="18" height="18" style="width:18px;height:18px;min-width:18px;flex:none" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 19h14"/></svg>印刷する／PDFとして保存</button><a class="print-btn print-btn--ghost" href="../../../q/print/index.html">ほかの分野を選ぶ</a></div>
   <section class="hub-promo hub-promo--grid-2 article-index-picks" aria-labelledby="article-index-picks-heading"><div class="hub-promo__head article-index-picks-head"><h2 id="article-index-picks-heading">予想模試と分野別問題集で総仕上げ</h2><p class="hub-promo__lead">無料の演習に加えて、本番想定の予想模試（note・¥1,180）と分野別問題集（note・¥790）で弱点と時間配分を確認できます。</p></div><div class="hub-promo__grid article-index-picks-grid"><article class="hub-promo-card article-index-pick" data-pick-kind="mock"><a class="hub-promo-card__link article-index-pick-link" href="https://note.com/shikaku_master/n/ned3fd2bce2dd" target="_blank" rel="noopener noreferrer"><div class="hub-promo-card__body"><h3>メンタルヘルス・マネジメント検定II種 本番想定模試 3回分【2027年版】</h3><p class="hub-promo-card__desc article-index-pick-desc">本番想定・PDF3回分・解説付き（¥1,180）。50問120分の時間配分と弱点を最終チェック。</p><div class="hub-promo-card__foot article-index-pick-foot"><span class="hub-promo-card__cta article-index-pick-cta">noteで詳細を見る</span><span class="hub-promo-card__kind article-index-pick-kind">実力チェック</span></div></div></a></article><article class="hub-promo-card article-index-pick" data-pick-kind="problem-book"><a class="hub-promo-card__link article-index-pick-link" href="https://note.com/shikaku_master/n/n918e00d79a84" target="_blank" rel="noopener noreferrer"><div class="hub-promo-card__body"><h3>メンタルヘルス・マネジメント検定II種 分野別問題集【全120問】</h3><p class="hub-promo-card__desc article-index-pick-desc">分野別・全120問・解説付き（¥790）。覚え方・ひっかけ注意つきで弱点分野を総点検。</p><div class="hub-promo-card__foot article-index-pick-foot"><span class="hub-promo-card__cta article-index-pick-cta">noteで詳細を見る</span><span class="hub-promo-card__kind article-index-pick-kind">基礎固め</span></div></div></a></article></div></section>
   <div class="print-sheet">
     <p class="print-only">メンタルヘルス・マネジメント検定II種 過去問 印刷用サンプル（職場環境・配慮・10問）　セット2/3　二種マスター</p>
