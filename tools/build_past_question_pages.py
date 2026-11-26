@@ -1015,6 +1015,14 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
 
     exam_info_links_html += other_grades_past_links_html()
 
+    # 印刷・PDF保存用ページ（build_print_pages.py）への導線。過去問がある種だけ（I種などは生成されない）。
+    print_link_html = (
+        '<p class="q-print-link" style="margin:4px 12px 12px;font-size:.9rem">'
+        '<a href="print/index.html">印刷・PDF保存用（分野別・問題編と解答・解説編）はこちら</a></p>'
+        if pages
+        else ""
+    )
+
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -1043,6 +1051,7 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
   {index_picks_html}
   {study_modes_note}
   {q_hub_links_html(rel_path, current="past")}
+  {print_link_html}
   <section class="past-index-panel" aria-labelledby="past-index-heading">
     <div class="past-index-head">
       <div>
