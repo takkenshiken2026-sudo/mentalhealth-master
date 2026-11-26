@@ -410,6 +410,13 @@ h2.section-label .tip-icon{width:13px;height:13px;font-size:9px}
 .mode-purpose-v2{font-size:12px;color:var(--text2);font-weight:500;margin-bottom:3px}
 .mode-title-v2{font-size:16px;font-weight:700;color:var(--text);line-height:1.3}
 .mode-arrow-v2{color:var(--text3);font-size:16px;flex-shrink:0}
+/* モノクロアイコン（モード選択カード・設定見出し・開始ボタン・お知らせ）。色は文字色に追従 */
+.mode-ico-v2{width:36px;height:36px;border-radius:9px;background:#ececee;color:#333;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mode-ico-v2 svg{width:18px;height:18px}
+.sec-ico{width:1.15em;height:1.15em;vertical-align:-.2em;margin-right:.4em;flex-shrink:0}
+.btn-ico{width:1.05em;height:1.05em;vertical-align:-.15em;margin-right:.45em}
+.btn-ico path{fill:currentColor}
+.notice-ico{width:1.1em;height:1.1em;vertical-align:-.2em;margin-right:.3em}
 .mode-card-v2--paid{text-decoration:none;color:inherit;border-color:var(--border2);background:#fff}
 .mode-card-v2--paid:hover{border-color:var(--text2);box-shadow:var(--sh2);transform:translateY(-1px);background:var(--bg3)}
 .mode-num-v2--paid{color:var(--text3);font-weight:400}
@@ -1628,8 +1635,8 @@ body.is-solving .site-footer{display:none!important}
       <p style="margin:0 0 9px"><span class="exam-ready-tag" style="display:inline-block;padding:4px 12px;border-radius:6px;background:var(--accent);color:#fff;font-weight:700;font-size:.85rem;letter-spacing:.03em;line-height:1.5;white-space:nowrap">2027年版対応</span></p>
       <h2 class="page-title">「メンタルヘルス・マネジメント検定II種」の問題を解く</h2>
       <div class="page-sub">学習目的に合わせてモードを選んでください</div>
-      <p class="site-notice-line" data-top-notice="apply42" style="margin:6px 0 0;font-size:.8rem;line-height:1.6;color:var(--text2)"><strong style="color:var(--accent)">次回試験</strong> 第42回は2027年3月21日（日）。一般申込は1月22日〜2月4日（コンビニ払いは1月31日まで）。<a href="articles/schedule/">日程・申込方法を見る</a></p>
-      <p class="site-notice-line" style="margin:6px 0 0;font-size:.8rem;line-height:1.6;color:var(--text2)"><strong style="color:var(--accent)">お知らせ</strong>（2026年11月24日）実践演習と一問一答の問題・解説をリニューアルしました。</p>
+      <p class="site-notice-line" data-top-notice="apply42" style="margin:6px 0 0;font-size:.8rem;line-height:1.6;color:var(--text2)"><strong style="color:var(--accent)"><svg class="notice-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>次回試験</strong> 第42回は2027年3月21日（日）。一般申込は1月22日〜2月4日（コンビニ払いは1月31日まで）。<a href="articles/schedule/">日程・申込方法を見る</a></p>
+      <p class="site-notice-line" style="margin:6px 0 0;font-size:.8rem;line-height:1.6;color:var(--text2)"><strong style="color:var(--accent)"><svg class="notice-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>お知らせ</strong>（2026年11月24日）実践演習と一問一答の問題・解説をリニューアルしました。</p>
       <!--COURSE_SWITCH_START--><div class="course-switch" style="margin:18px 0 6px;padding:14px 16px;border:1px solid var(--border);border-radius:12px;background:var(--bg2)"><div style="font-size:.85rem;font-weight:700;color:var(--text2);margin-bottom:10px">対策する級（コース）を選ぶ</div><div style="display:flex;flex-wrap:wrap;gap:8px"><a class="course-switch-pill" href="https://mentalhealth-master.jp/self/" style="padding:8px 14px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:700;font-size:.9rem;white-space:nowrap;background:var(--bg)">III種（セルフケアコース）</a><span class="course-switch-pill course-switch-pill--current" aria-current="page" style="padding:8px 14px;border-radius:999px;background:var(--accent);color:#fff;font-weight:700;font-size:.9rem;white-space:nowrap">II種（ラインケアコース）<span style="opacity:.85;font-weight:600">（閲覧中）</span></span><a class="course-switch-pill" href="https://mentalhealth-master.jp/master/" style="padding:8px 14px;border-radius:999px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:700;font-size:.9rem;white-space:nowrap;background:var(--bg)">I種（マスターコース）</a></div></div><!--COURSE_SWITCH_END-->
       
       
@@ -1716,6 +1723,7 @@ body.is-solving .site-footer{display:none!important}
       <div class="mode-list-v2">
         <div class="mode-card-v2" onclick="startIchimondou()">
           <div class="mode-num-v2">01</div>
+          <div class="mode-ico-v2" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 2v12M4 4h8M4 8h8M4 12h8"/></svg></div>
           <div class="mode-body-v2">
             <div class="mode-purpose-v2">隙間時間に知識を定着させたい</div>
             <div class="mode-title-v2">一問一答</div>
@@ -1724,6 +1732,7 @@ body.is-solving .site-footer{display:none!important}
         </div>
         <div class="mode-card-v2" onclick="gotoPage('past-config')">
           <div class="mode-num-v2">02</div>
+          <div class="mode-ico-v2" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 2h10v12H3z"/><path d="M5 5h6M5 8h6M5 11h4"/></svg></div>
           <div class="mode-body-v2">
             <div class="mode-purpose-v2" id="mode-past-purpose" aria-live="polite">本番の出題傾向を押さえたい</div>
             <div class="mode-title-v2">過去問</div>
@@ -1732,6 +1741,7 @@ body.is-solving .site-footer{display:none!important}
         </div>
         <div class="mode-card-v2" onclick="gotoPage('orig')">
           <div class="mode-num-v2">03</div>
+          <div class="mode-ico-v2" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 1"/></svg></div>
           <div class="mode-body-v2">
             <div class="mode-purpose-v2" id="mode-orig-purpose" aria-live="polite">本格的に実力をつけたい</div>
             <div class="mode-title-v2">実践演習</div>
@@ -1755,16 +1765,16 @@ body.is-solving .site-footer{display:none!important}
       </nav>
       <div id="ichi-config" class="ichi-config">
         <p class="ichi-config-lead">分野を選んで「開始」してください。記述が正しいときは○、誤りのときは×で答えます。</p>
-        <h2 class="section-label">出題数</h2>
+        <h2 class="section-label"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 9h15M4.5 15h15M10 4l-2 16M16 4l-2 16"/></svg>出題数</h2>
         <div class="count-btns" style="margin-bottom:16px">
           <button type="button" class="count-btn" onclick="selIchiCount(5)" id="icb5">5問ずつ</button>
           <button type="button" class="count-btn on" onclick="selIchiCount(10)" id="icb10">10問ずつ</button>
           <button type="button" class="count-btn" onclick="selIchiCount(30)" id="icb30">30問ずつ</button>
           <button type="button" class="count-btn" onclick="selIchiCount(0)" id="icb0">エンドレス</button>
         </div>
-        <h2 class="section-label">分野を選ぶ</h2>
+        <h2 class="section-label"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2.5h8.5A1.5 1.5 0 0 1 21 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z"/></svg>分野を選ぶ</h2>
         <div class="field-chips" id="ichi-field-chips"></div>
-        <button type="button" class="btn-primary ichi-start-btn" onclick="beginIchimondouSession()">開始</button>
+        <button type="button" class="btn-primary ichi-start-btn" onclick="beginIchimondouSession()"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.5v13l10.5-6.5z"/></svg>開始</button>
       </div>
       <div id="ichi-play-wrap" class="ichi-play-wrap" style="display:none">
       <div class="ichi-prog-wrap">
@@ -1910,7 +1920,7 @@ body.is-solving .site-footer{display:none!important}
       <div class="page-sub">分野を選んで学習スタート</div>
 
       <div class="orig-bottom-bar" style="margin-top:0;margin-bottom:16px;padding-top:0;border-top:none;border-bottom:1px solid var(--border);padding-bottom:16px">
-        <h2 class="section-label" style="margin-bottom:12px">出題数</h2>
+        <h2 class="section-label" style="margin-bottom:12px"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 9h15M4.5 15h15M10 4l-2 16M16 4l-2 16"/></svg>出題数</h2>
         <div class="count-btns">
           <button class="count-btn"    onclick="selCount(5)"  id="cb5">5問</button>
           <button class="count-btn on" onclick="selCount(10)" id="cb10">10問</button>
@@ -1919,16 +1929,16 @@ body.is-solving .site-footer{display:none!important}
         </div>
       </div>
 
-      <h2 class="section-label">分野を選ぶ</h2>
+      <h2 class="section-label"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2.5h8.5A1.5 1.5 0 0 1 21 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z"/></svg>分野を選ぶ</h2>
       <div class="field-chips" id="field-chips"></div>
 
-      <h2 class="section-label" style="margin-top:22px">出題順</h2>
+      <h2 class="section-label" style="margin-top:22px"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7h3.5c4.5 0 6.5 10 11 10H21M3 17h3.5c1.7 0 2.9-1.4 4-3.2M13.5 10.2c1.1-1.8 2.3-3.2 4-3.2H21"/><path d="M18.5 4.5L21 7l-2.5 2.5M18.5 14.5L21 17l-2.5 2.5"/></svg>出題順</h2>
       <div class="count-btns count-btns--stack-mobile" style="margin-bottom:22px">
         <button class="count-btn"    id="order-seq" onclick="selOrder('seq')">最初から解く</button>
         <button class="count-btn on" id="order-rnd" onclick="selOrder('rnd')">ランダムに解く</button>
       </div>
 
-      <button type="button" class="btn-primary ichi-start-btn" onclick="beginQuiz()">スタート</button>
+      <button type="button" class="btn-primary ichi-start-btn" onclick="beginQuiz()"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.5v13l10.5-6.5z"/></svg>スタート</button>
 
       <div style="font-size:12px;color:var(--text3);background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:8px 12px;margin-top:16px;line-height:1.65">
         ※ 掲載問題は、公式過去問そのものではなく、著作権上の配慮と最新法令への対応のため問題文・選択肢を編集した「過去問形式」の演習問題です。試験本番の原文・合格基準・試験日程などは<a href="https://www.mental-health.ne.jp/about/" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:underline">試験のご紹介（公式）</a>等の公式情報を、法令・通達の原文は<a href="https://www.mlit.go.jp/" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:underline">国土交通省</a>等のウェブサイトをご確認ください。
@@ -1948,7 +1958,7 @@ body.is-solving .site-footer{display:none!important}
       <div class="page-sub">分野を選び、過去問と同じ形式で演習できます。出題順は毎回ランダムです。</div>
 
       <div class="orig-bottom-bar" style="margin-top:0;margin-bottom:16px;padding-top:0;border-top:none;border-bottom:1px solid var(--border);padding-bottom:16px">
-        <h2 class="section-label" style="margin-bottom:12px">出題数</h2>
+        <h2 class="section-label" style="margin-bottom:12px"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4.5 9h15M4.5 15h15M10 4l-2 16M16 4l-2 16"/></svg>出題数</h2>
         <div class="count-btns">
           <button class="count-btn"    onclick="selOrigCount(5)"  id="ocb5">5問</button>
           <button class="count-btn on" onclick="selOrigCount(10)" id="ocb10">10問</button>
@@ -1958,9 +1968,9 @@ body.is-solving .site-footer{display:none!important}
         <div class="orig-sel-summary" id="orig-sel-summary" style="margin-top:12px">条件を選んでください</div>
       </div>
 
-      <h2 class="section-label">分野を選ぶ</h2>
+      <h2 class="section-label"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2.5h8.5A1.5 1.5 0 0 1 21 9v9.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z"/></svg>分野を選ぶ</h2>
       <div class="field-chips" id="orig-field-chips"></div>
-      <button type="button" class="btn-primary ichi-start-btn" onclick="beginOrigQuiz()">スタート</button>
+      <button type="button" class="btn-primary ichi-start-btn" onclick="beginOrigQuiz()"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.5v13l10.5-6.5z"/></svg>スタート</button>
 
     </div>
 
@@ -2649,7 +2659,7 @@ function renderBadgeGrid(targetId, compact){
     </div>`;
   }).join('');
   el.innerHTML=`<div class="badge-card-head">
-    <div class="section-label" style="margin-bottom:0">獲得バッジ ${tip('学習の節目や連続正解、分野ごとの達成で獲得できます。未獲得のバッジも一覧で確認できます。')}</div>
+    <div class="section-label" style="margin-bottom:0"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.3L7 21l5-2.5 5 2.5-1.5-7.7"/></svg>獲得バッジ ${tip('学習の節目や連続正解、分野ごとの達成で獲得できます。未獲得のバッジも一覧で確認できます。')}</div>
     <div class="badge-count">${earnedCount}/${BADGE_DEFS.length}</div>
   </div><div class="badge-grid">${html}</div>`;
 }
@@ -5973,7 +5983,7 @@ function showScore(){
   // Show newly earned badges
   const earnedEl=document.getElementById('score-badges-earned');
   if(earnedEl&&sessionNewBadges.length){
-    earnedEl.innerHTML='<div class="section-label" style="margin-bottom:8px">バッジ獲得</div><div class="score-badges-row">'
+    earnedEl.innerHTML='<div class="section-label" style="margin-bottom:8px"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="9" r="5.5"/><path d="M8.5 13.3L7 21l5-2.5 5 2.5-1.5-7.7"/></svg>バッジ獲得</div><div class="score-badges-row">'
       +sessionNewBadges.map(b=>`<div class="score-earned-badge"><span class="badge-icon" style="width:24px;height:24px;border-radius:6px">${badgeIconHTML(b.icon)}</span>${b.name}</div>`).join('')+'</div>';
   }else if(earnedEl){ earnedEl.innerHTML=''; }
   const scoreAccordion=document.getElementById('score-q-accordion');
@@ -6922,7 +6932,7 @@ if(document.readyState==='loading'){
 <div id="srs-modal-overlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:150;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(3px)" onclick="if(event.target===this)closeSrsModal()">
   <div style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:24px;max-width:480px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:var(--sh2)">
     <div class="srs-review-kicker">スペースドリペティション</div>
-    <h2 class="section-label" style="margin-bottom:8px">復習スケジュール</h2>
+    <h2 class="section-label" style="margin-bottom:8px"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>復習スケジュール</h2>
     <p class="srs-modal-desc">忘却曲線に基づいて、今日復習すべき問題を表示しています。</p>
     <div id="srs-queue-list"></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px">
@@ -7041,7 +7051,7 @@ function renderSrsBanner(container){
   container.innerHTML=`
   <div class="card srs-review-card" onclick="openSrsModal()">
     <div class="srs-review-kicker">スペースドリペティション</div>
-    <h2 class="section-label" style="margin-bottom:6px">復習スケジュール</h2>
+    <h2 class="section-label" style="margin-bottom:6px"><svg class="sec-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>復習スケジュール</h2>
     <p class="srs-review-lead">忘却曲線に基づく今日の復習</p>
     <div class="srs-review-card-foot">
       <span class="tag tag-blue">${queue.length}問</span>
@@ -7410,6 +7420,7 @@ function injectQuizStartEnhancements(){
     weakCard.innerHTML=`
     <div class="mode-card-v2" onclick="openWeakMode()">
       <div class="mode-num-v2">04</div>
+      <div class="mode-ico-v2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
       <div class="mode-body-v2">
         <div class="mode-purpose-v2">苦手な問題を集中的に克服したい</div>
         <div class="mode-title-v2">弱点集中対策</div>
@@ -7420,6 +7431,7 @@ function injectQuizStartEnhancements(){
     weakCard.innerHTML=`
     <div class="mode-card-v2" style="opacity:.55;cursor:not-allowed;pointer-events:none;position:relative">
       <div class="mode-num-v2" style="color:var(--text3)">04</div>
+      <div class="mode-ico-v2" aria-hidden="true" style="color:var(--text3)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
       <div class="mode-body-v2">
         <div class="mode-purpose-v2" style="display:flex;align-items:center;gap:5px">
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="7" width="10" height="8" rx="2"/><path d="M5 7V5a3 3 0 016 0v2"/></svg>

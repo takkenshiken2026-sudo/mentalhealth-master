@@ -7075,3 +7075,164 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
   .articles-index-page .article-index-card p,
   .articles-index-page .article-index-card-tags { display: none; }
 }
+
+/* ==========================================================================
+   サイト共通モノクロアイコン（見出し・タブ・パンくず・検索欄）
+   - 図柄は線画の SVG を mask で描き、色は文字色（currentColor）に追従する。
+   - 生成ページの固定 id / class に ::before で付与する（タブは data-mode で図柄を選ぶ）。
+   - 問題タイプ切替タブの図柄はヘッダー学習ナビ（tools/html_footer.py）と同じ。
+   ========================================================================== */
+:root {
+  --ico-doc: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z'/%3E%3Cpath d='M14 3v5h5M8.5 13h7M8.5 17h4.5'/%3E%3C/svg%3E");
+  --ico-listcheck: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 6l1.5 1.5L8 4.5M3.5 13l1.5 1.5L8 11.5'/%3E%3Cpath d='M11 6.5h9.5M11 13.5h9.5M4 19.5h.01M11 19.5h9.5'/%3E%3C/svg%3E");
+  --ico-bulb: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 18h6M10 21h4'/%3E%3Cpath d='M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z'/%3E%3C/svg%3E");
+  --ico-checkcircle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M8 12.5l2.7 2.7L16 9.8'/%3E%3C/svg%3E");
+  --ico-book: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 5.5c2.7-1.6 5.7-1.6 9 .5 3.3-2.1 6.3-2.1 9-.5V19c-2.7-1.6-5.7-1.6-9 .5-3.3-2.1-6.3-2.1-9-.5z'/%3E%3Cpath d='M12 6v13.5'/%3E%3C/svg%3E");
+  --ico-layers: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3.5l9 4.5-9 4.5L3 8z'/%3E%3Cpath d='M3 12.5l9 4.5 9-4.5M3 16.5l9 4.5 9-4.5'/%3E%3C/svg%3E");
+  --ico-nav-past: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 2h10v12H3z'/%3E%3Cpath d='M5 5h6M5 8h6M5 11h4'/%3E%3C/svg%3E");
+  --ico-nav-orig: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='8' cy='8' r='6'/%3E%3Cpath d='M8 5v3l2 1'/%3E%3C/svg%3E");
+  --ico-nav-ichimon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 2v12M4 4h8M4 8h8M4 12h8'/%3E%3C/svg%3E");
+  --ico-home: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 11L12 4l8.5 7'/%3E%3Cpath d='M5.5 9.5V20h13V9.5'/%3E%3Cpath d='M10 20v-5.5h4V20'/%3E%3C/svg%3E");
+  --ico-toc: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6h11.5M9 12h11.5M9 18h11.5M4 6h.01M4 12h.01M4 18h.01'/%3E%3C/svg%3E");
+  --ico-shield: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z'/%3E%3Cpath d='M8.8 12l2.2 2.2 4.2-4.4'/%3E%3C/svg%3E");
+  --ico-info: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 11v5.5M12 7.8h.01'/%3E%3C/svg%3E");
+  --ico-landmark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 20.5h18M5 20.5v-9M9.7 20.5v-9M14.3 20.5v-9M19 20.5v-9M2.5 9L12 3.5 21.5 9z'/%3E%3C/svg%3E");
+  --ico-pencil: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 20l1-4.5L16 4.5l3.5 3.5-11 11z'/%3E%3Cpath d='M13.5 7l3.5 3.5'/%3E%3C/svg%3E");
+  --ico-flag: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 21V4M5 4h11.5l-2 4 2 4H5'/%3E%3C/svg%3E");
+  --ico-help: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M9.5 9.3a2.6 2.6 0 0 1 5 .9c0 1.8-2.5 2.2-2.5 3.8'/%3E%3Cpath d='M12 17.3h.01'/%3E%3C/svg%3E");
+  --ico-alert: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3.8l9 15.7H3z'/%3E%3Cpath d='M12 10v4.3M12 17h.01'/%3E%3C/svg%3E");
+  --ico-clipcheck: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='4.5' width='14' height='16.5' rx='1.5'/%3E%3Cpath d='M9 4.5V3h6v1.5M9 13l2 2 4-4'/%3E%3C/svg%3E");
+  --ico-target: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Ccircle cx='12' cy='12' r='1'/%3E%3C/svg%3E");
+  --ico-grid: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='4' width='6.5' height='6.5' rx='1'/%3E%3Crect x='13.5' y='4' width='6.5' height='6.5' rx='1'/%3E%3Crect x='4' y='13.5' width='6.5' height='6.5' rx='1'/%3E%3Crect x='13.5' y='13.5' width='6.5' height='6.5' rx='1'/%3E%3C/svg%3E");
+  --ico-users: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='8.5' r='3.5'/%3E%3Cpath d='M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5'/%3E%3Cpath d='M15.5 5.3a3.5 3.5 0 0 1 0 6.4M18 14.8c1.9.8 3.1 2.5 3.5 5.2'/%3E%3C/svg%3E");
+  --ico-database: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cellipse cx='12' cy='5.5' rx='7.5' ry='2.5'/%3E%3Cpath d='M4.5 5.5v13c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5v-13M4.5 12c0 1.4 3.4 2.5 7.5 2.5s7.5-1.1 7.5-2.5'/%3E%3C/svg%3E");
+  --ico-tag: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 12.5V4.5a1 1 0 0 1 1-1h8l8 8-9 9z'/%3E%3Cpath d='M8 8h.01'/%3E%3C/svg%3E");
+  --ico-globe: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z'/%3E%3C/svg%3E");
+  --ico-monitor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='12.5' rx='1.5'/%3E%3Cpath d='M8.5 20.5h7M12 16.5v4'/%3E%3C/svg%3E");
+  --ico-mail: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='18' height='14' rx='1.5'/%3E%3Cpath d='M3.5 6l8.5 7 8.5-7'/%3E%3C/svg%3E");
+  --ico-lock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='5' y='11' width='14' height='10' rx='2'/%3E%3Cpath d='M8 11V7.5a4 4 0 0 1 8 0V11'/%3E%3C/svg%3E");
+  --ico-scale: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3.5v17M7 20.5h10M4.5 7.5h15M12 3.5l-1 1M12 3.5l1 1'/%3E%3Cpath d='M4.5 7.5L2 13.5a3 3 0 0 0 5 0zM19.5 7.5L17 13.5a3 3 0 0 0 5 0z'/%3E%3C/svg%3E");
+  --ico-link: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 14a4.5 4.5 0 0 0 6.4.3l3-3a4.5 4.5 0 0 0-6.4-6.4l-1.2 1.2'/%3E%3Cpath d='M14 10a4.5 4.5 0 0 0-6.4-.3l-3 3a4.5 4.5 0 0 0 6.4 6.4l1.2-1.2'/%3E%3C/svg%3E");
+  --ico-search-gray: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23767676' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='6.5'/%3E%3Cpath d='M20 20l-4.3-4.3'/%3E%3C/svg%3E");
+}
+.q-static-main #q-stem-h::before,
+.q-static-main #q-opts-h::before,
+.q-answer-acc-summary::before,
+.q-static-main #q-ans-h::before,
+.q-static-main #q-exp-h::before,
+.q-static-main #q-similar-h::before,
+.q-hub-tab[data-mode="past"] .q-hub-tab-label::before,
+.q-hub-tab[data-mode="practice"] .q-hub-tab-label::before,
+.q-hub-tab[data-mode="ichimon"] .q-hub-tab-label::before,
+.q-breadcrumb > li:first-child > a::before,
+#seo-toc-title::before,
+#quality-panel-title::before,
+#sokuhou-quality-title::before,
+#article-info-title::before,
+#official-info-title::before,
+#sokuhou-sec-answers::before,
+.sokuhou-selfcheck-title::before,
+#sokuhou-sec-info::before,
+#sokuhou-sec-official::before,
+#sokuhou-sec-score::before,
+#sokuhou-faq::before,
+#sokuhou-disclaimer-title::before,
+.sokuhou-round-card-title::before,
+.site-static-page #sec-purpose::before,
+.site-static-page #sec-features::before,
+.site-static-page #sec-operator::before,
+.site-static-page #sec-editorial::before,
+.site-static-page #sec-data::before,
+.site-static-page #sec-name::before,
+.site-static-page #sec-domain::before,
+.site-static-page #sec-env::before,
+.site-static-page #sec-contact::before,
+.site-static-page #sec-privacy::before,
+.site-static-page #sec-terms::before,
+.site-static-page #sec-disclaimer::before,
+.site-static-page #sec-official::before,
+.site-static-page #sec-courses::before,
+.site-static-page #sec-network::before,
+.site-static-page #sec-learn::before,
+.site-static-page #sec-note::before {
+  content: "";
+  display: inline-block;
+  flex: none;
+  width: 1.15em;
+  height: 1.15em;
+  margin-right: 0.45em;
+  vertical-align: -0.2em;
+  background-color: currentColor;
+  -webkit-mask: var(--ico) center / contain no-repeat;
+  mask: var(--ico) center / contain no-repeat;
+}
+.q-static-main #q-stem-h::before { --ico: var(--ico-doc); }
+.q-static-main #q-opts-h::before { --ico: var(--ico-listcheck); }
+.q-answer-acc-summary::before { --ico: var(--ico-bulb); }
+.q-static-main #q-ans-h::before { --ico: var(--ico-checkcircle); }
+.q-static-main #q-exp-h::before { --ico: var(--ico-book); }
+.q-static-main #q-similar-h::before { --ico: var(--ico-layers); }
+.q-hub-tab[data-mode="past"] .q-hub-tab-label::before { --ico: var(--ico-nav-past); }
+.q-hub-tab[data-mode="practice"] .q-hub-tab-label::before { --ico: var(--ico-nav-orig); }
+.q-hub-tab[data-mode="ichimon"] .q-hub-tab-label::before { --ico: var(--ico-nav-ichimon); }
+.q-breadcrumb > li:first-child > a::before { --ico: var(--ico-home); }
+#seo-toc-title::before { --ico: var(--ico-toc); }
+#quality-panel-title::before { --ico: var(--ico-shield); }
+#sokuhou-quality-title::before { --ico: var(--ico-shield); }
+#article-info-title::before { --ico: var(--ico-info); }
+#official-info-title::before { --ico: var(--ico-landmark); }
+#sokuhou-sec-answers::before { --ico: var(--ico-listcheck); }
+.sokuhou-selfcheck-title::before { --ico: var(--ico-pencil); }
+#sokuhou-sec-info::before { --ico: var(--ico-info); }
+#sokuhou-sec-official::before { --ico: var(--ico-landmark); }
+#sokuhou-sec-score::before { --ico: var(--ico-flag); }
+#sokuhou-faq::before { --ico: var(--ico-help); }
+#sokuhou-disclaimer-title::before { --ico: var(--ico-alert); }
+.sokuhou-round-card-title::before { --ico: var(--ico-clipcheck); }
+.site-static-page #sec-purpose::before { --ico: var(--ico-target); }
+.site-static-page #sec-features::before { --ico: var(--ico-grid); }
+.site-static-page #sec-operator::before { --ico: var(--ico-users); }
+.site-static-page #sec-editorial::before { --ico: var(--ico-pencil); }
+.site-static-page #sec-data::before { --ico: var(--ico-database); }
+.site-static-page #sec-name::before { --ico: var(--ico-tag); }
+.site-static-page #sec-domain::before { --ico: var(--ico-globe); }
+.site-static-page #sec-env::before { --ico: var(--ico-monitor); }
+.site-static-page #sec-contact::before { --ico: var(--ico-mail); }
+.site-static-page #sec-privacy::before { --ico: var(--ico-lock); }
+.site-static-page #sec-terms::before { --ico: var(--ico-scale); }
+.site-static-page #sec-disclaimer::before { --ico: var(--ico-alert); }
+.site-static-page #sec-official::before { --ico: var(--ico-landmark); }
+.site-static-page #sec-courses::before { --ico: var(--ico-layers); }
+.site-static-page #sec-network::before { --ico: var(--ico-link); }
+.site-static-page #sec-learn::before { --ico: var(--ico-book); }
+.site-static-page #sec-note::before { --ico: var(--ico-alert); }
+/* 正答・解説アコーディオン：アイコンと文言は左寄せ、開閉の▼は右端 */
+.q-answer-acc-summary {
+  justify-content: flex-start;
+}
+.q-answer-acc-summary::before {
+  margin-right: 0;
+}
+.q-answer-acc-summary::after {
+  margin-left: auto;
+}
+/* 問題タイプ切替タブ（ラベルは flex 中央寄せ済み） */
+.q-hub-tab .q-hub-tab-label::before {
+  margin-right: 0.4em;
+  vertical-align: 0;
+}
+/* 一覧の検索欄：左端に虫眼鏡 */
+.past-index-search input[type="search"],
+.article-index-search input[type="search"] {
+  padding-left: 34px;
+  background-image: var(--ico-search-gray);
+  background-repeat: no-repeat;
+  background-position: 11px 50%;
+  background-size: 16px 16px;
+}
+/* 試験ガイドの囲み見出しは flex＋gap で間隔を取るため、アイコン側の余白は付けない */
+.seo-editorial #quality-panel-title::before,
+.seo-editorial #article-info-title::before,
+.seo-editorial #official-info-title::before {
+  margin-right: 0;
+}
