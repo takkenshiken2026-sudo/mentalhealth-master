@@ -4053,7 +4053,9 @@ function gotoPage(id, opts){
   closeSidebar();
   if(id==='review')      renderReview();
   if(id==='orig')        renderOrigPage();
-  if(id==='quiz-start')  { renderDailyStatus(); updateQuizStartModeStats(); renderTopAffiliateBanner(); }
+  // renderTopAffiliateBanner は後段の <script> で定義されるため、初回表示（__bootApp）時は未定義。
+  // 未定義のまま呼ぶと例外で gotoPage 以降（GA4 の page_view・ログイン状態の復元）が止まる。初回分は init() が描画する。
+  if(id==='quiz-start')  { renderDailyStatus(); updateQuizStartModeStats(); if(typeof renderTopAffiliateBanner==='function') renderTopAffiliateBanner(); }
   if(id==='past-config') buildYearGrid();
   try {
     if (typeof window.ga4PageView === "function") {
