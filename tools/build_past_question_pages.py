@@ -803,6 +803,61 @@ def build_question_html(
 """
 
 
+
+def other_grades_past_links_html() -> str:
+    """ほかのコース（I種・II種・III種のうち公開中のもの）の過去問一覧へのリンク枠。
+
+    「2種」を付けない「メンタルヘルスマネジメント検定 過去問」系の検索で、
+    3コースの過去問がそろっていることを一覧ページ上で示す（2026-11 SEO 施策）。
+    grades.json に公開中の種が 1 つしかない、または現在の種を判定できないときは空文字。
+    """
+    try:
+        from tools.grades import published_grades
+    except Exception:  # noqa: BLE001
+        return ""
+    from tools.site_config import CONFIG
+
+    grades = published_grades()
+    current = exam_name()
+    if len(grades) < 2 or not any(g.exam_name == current for g in grades):
+        return ""
+    origin = str(CONFIG.get("siteOrigin") or "").rstrip("/")
+    if not origin:
+        return ""
+    # 副種のビルドは一時ディレクトリ（grades/ を含まず data/ を差し替え）で行うため、
+    # ほかの種のデータ件数はビルド中に数えられない。過去問の有無は grades.json の
+    # hasPastQuestions（既定 true）で判定する。
+    try:
+        import json as _json
+
+        from tools.grades import REGISTRY_PATH
+
+        registry = {str(r.get("id")): r for r in _json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))["grades"]}
+    except Exception:  # noqa: BLE001
+        registry = {}
+
+    items: list[tuple[str, str]] = []
+    for g in grades:
+        if g.exam_name == current:
+            continue
+        course = g.label.split("（")[-1].rstrip("）") if "（" in g.label else g.label
+        has_past = bool((registry.get(g.id) or {}).get("hasPastQuestions", True))
+        if has_past:
+            items.append((f"{origin}{g.base_path}/q/index.html", f"{g.exam_name}（{course}）の過去問"))
+        else:
+            # 過去問が未収録の種は、空の一覧へ誘導しないよう実践演習へ
+            items.append((f"{origin}{g.base_path}/q/practice/index.html", f"{g.exam_name}（{course}）の実践演習"))
+    if not items:
+        return ""
+    links = "".join(
+        f'<a class="related-link" href="{html.escape(href)}">{html.escape(label)}</a>' for href, label in items
+    )
+    return (
+        '<section class="related-box" aria-labelledby="q-other-grades-h">'
+        '<p class="related-box-title" id="q-other-grades-h">ほかのコースの問題（Web無料）</p>'
+        f'<div class="related-links">{links}</div></section>'
+    )
+
 def build_q_index(pages: list[dict], base_url: str) -> str:
     index_pages: list[dict] = []
     for page in pages:
@@ -957,6 +1012,8 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
             )
             + "</div></section>"
         )
+
+    exam_info_links_html += other_grades_past_links_html()
 
     return f"""<!DOCTYPE html>
 <html lang="ja">
