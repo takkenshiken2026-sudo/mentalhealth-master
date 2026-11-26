@@ -138,8 +138,8 @@ def index_meta_description(mode: str, *, count: int) -> str:
     c = seo_copy()
     if mode == "past":
         base = (
-            f"{ex}の過去問{count}問を分野別に掲載。"
-            "Web上で無料で解け、PDFのダウンロードは不要。スマホ・PCで学習できます。"
+            f"{ex}の過去問{count}問をWebで無料公開。全問に正解と解説付きで、"
+            "PDFのダウンロードや会員登録は不要。分野別・年度別にスマホ・PCですぐ解けます。"
             f"{c['mockExam']}対策・{c['studyModes']}の学習に対応。"
         )
     elif mode == "practice":
@@ -219,11 +219,17 @@ def index_h1(mode: str) -> str:
     return f"{exam_name()} {MODE_LABEL[mode]}"
 
 
-def index_page_title(mode: str) -> str:
-    """一覧ページの <title>（試験名・モード・模試キーワード・ブランド）。"""
+def index_page_title(mode: str, *, count: int | None = None) -> str:
+    """一覧ページの <title>（試験名・モード・模試キーワード・ブランド）。
+
+    過去問は GSC で「過去問 web / 無料 / pdf / ダウンロード」の検索が多いため、
+    問題数と「Web無料・解説付き・PDF不要」を題名の前半に置く（2026-11 クリック率改善）。
+    """
     c = seo_copy()
     label = MODE_LABEL[mode]
     if mode == "past":
+        if count:
+            return f"{exam_name()} {label}{count}問【Web無料・解説付き・PDF不要】｜{brand_name()}"
         sub = "Web無料・模試対策"
     elif mode == "practice":
         sub = f"{c['mockExam']}前の演習"

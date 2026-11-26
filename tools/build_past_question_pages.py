@@ -908,7 +908,7 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
         study_modes_note_html,
     )
 
-    page_title = index_page_title("past")
+    page_title = index_page_title("past", count=len(pages))
     index_h1_text = index_h1("past")
     page_desc = index_meta_description("past", count=len(pages))
     page_lead = index_lead("past")
