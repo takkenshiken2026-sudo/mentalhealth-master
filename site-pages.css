@@ -303,13 +303,10 @@ a.site-page-brand:hover,
   padding: 7px max(14px, env(safe-area-inset-right, 0px)) calc(7px + env(safe-area-inset-bottom, 0px))
     max(14px, env(safe-area-inset-left, 0px));
 }
-.site-footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  text-decoration: none;
-  color: var(--text);
-  flex: 0 0 auto;
+/* フッターにはロゴを出さない（直後の区切り線も不要） */
+.site-footer-brand,
+.site-footer-brand + .site-footer-sep {
+  display: none !important;
 }
 .site-footer-site-name {
   font-size: 12px;
@@ -383,12 +380,8 @@ a.site-page-brand:hover,
     gap: 0;
     width: 100%;
     min-width: 0;
-    padding: 18px max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px))
+    padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px))
       max(16px, env(safe-area-inset-left, 0px));
-  }
-  .site-footer-brand {
-    align-self: center;
-    margin-bottom: 10px;
   }
   .site-footer-sep {
     display: none;
