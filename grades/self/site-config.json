@@ -46,6 +46,13 @@
       ["../articles/exam-overview/index.html", "III種 試験の概要・申込ガイド"]
     ]
   },
+  "topNoticeLines": [
+    {
+      "id": "apply42",
+      "until": "2027-02-04",
+      "html": "<strong style=\"color:var(--accent)\">次回試験</strong> 第42回は2027年3月21日（日）13:30集合。一般申込は1月22日〜2月4日（コンビニ払いは1月31日まで）。<a href=\"articles/schedule/\">日程・申込方法を見る</a>"
+    }
+  ],
   "basePath": "/self",
   "siteOrigin": "https://mentalhealth-master.jp",
   "contactUrl": "https://forms.gle/N4ZcNRjLyxRbSwsv5",
@@ -80,6 +87,11 @@
         "key": "about"
       },
       {
+        "label": "試験ガイド",
+        "href": "articles/index.html",
+        "key": "articles"
+      },
+      {
         "label": "過去問一覧",
         "href": "q/index.html",
         "key": "q"
@@ -105,6 +117,16 @@
         "label": "このサイトについて",
         "href": "about.html",
         "key": "about"
+      },
+      {
+        "label": "試験ガイド",
+        "href": "articles/index.html",
+        "key": "articles"
+      },
+      {
+        "label": "試験日程",
+        "href": "articles/schedule/index.html",
+        "key": "schedule"
       },
       {
         "label": "過去問一覧",

@@ -152,7 +152,14 @@ def apply_vars(value: str) -> str:
 
 
 def public_url(rel_path: str) -> str:
-    return f"{clean_origin().rstrip('/')}/{rel_path.lstrip('/')}"
+    """公開 URL（basePath 対応）。
+
+    副種（III種 /self・I種 /master）では basePath を付ける。以前は付けておらず、
+    副種の記事の canonical が II種の同名記事を指していた（2026-11-26 修正）。
+    """
+    from tools.site_config import public_url as _site_public_url
+
+    return _site_public_url(rel_path)
 
 
 def rel_prefix(rel_path: Path) -> str:

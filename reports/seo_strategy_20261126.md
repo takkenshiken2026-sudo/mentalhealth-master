@@ -95,6 +95,17 @@ GSC の分析で、伸びしろの大半は「過去問」系（特に pdf・ダ
 - トップ（II種のみ）: 見出し直下に「次回試験 第42回…一般申込1/22〜2/4」の1行と日程記事へのリンク。`site-config.json` の `topNoticeLines`（`until` 2027-02-04 を過ぎると自動で非表示）。
 - `data/exam_schedule_mhm.csv` の第42回の取得日を 2026-11-26 に更新（値は公式と一致）。
 
+### B の実施（2026-11-26）
+- **重大な不具合の修正（以前から存在）**: III種（/self）・I種（/master）の記事ページの canonical が II種の同名記事（/articles/…）を指し、各種のサイトマップにも basePath の無い II種の URL が載っていた。副種の記事は検索結果に出られない状態だった。
+  - `tools/build_article_pages.py` の `public_url` を basePath 対応の `site_config.public_url` に変更。
+  - `tools/build_sitemap.py` の基準 URL を basePath 付きに変更。
+  - `tools/build_grade.py` の作り直し対象に `kaitou-sokuhou` を追加（II種の第40・42回の解答速報ページが I種サイトに混入し、サイトマップにも載っていた）。
+  - 修正後、/self・/master 配下の全ページの canonical とサイトマップが各種の URL になっていることを確認。II種の URL は変化なし。
+- **III種の日程記事を新設**（/self/articles/schedule/）: 第42回の日程・集合13:30・受験料5,280円・申込と支払い・II種との併願・試験後の日程。公式（guide・apply・about、2026-11-26確認）にもとづく。III種の問題数は公式に記載が無いため書いていない。
+- III種の難易度記事の題名・説明文に勉強時間を明記（「…難易度と勉強時間【合格率約74％・15〜30時間が目安】」）。
+- III種サイトのメニューに「試験ガイド」（ヘッダー・フッター）と「試験日程」（フッター）を追加。III種トップに次回試験の案内1行（13:30集合、2027-02-04まで表示）。
+- II種→III種の導線: II種の日程記事（併願の節）と「検定とは」記事から III種・I種の対策ページへリンク。
+
 ### 既知の不具合（今回は未対応）
 - トップページ読み込み時に JavaScript エラー「renderTopAffiliateBanner is not defined」（`index.html` で関数定義より前に呼び出し）。今回の変更以前から存在。
 
