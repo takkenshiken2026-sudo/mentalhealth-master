@@ -139,7 +139,7 @@ def index_meta_description(mode: str, *, count: int) -> str:
     if mode == "past":
         base = (
             f"{ex}の過去問{count}問をWebで無料公開。全問に正解と解説付きで、"
-            "スマホ・PCのブラウザから分野別にすぐ解け、分野ごとに印刷・PDF保存もできます。"
+            "スマホ・PCのブラウザから分野別にすぐ解け、分野ごとのサンプルは印刷・PDF保存もできます。"
             f"{c['mockExam']}対策・{c['studyModes']}の学習に対応。"
         )
     elif mode == "practice":
@@ -230,7 +230,7 @@ def index_page_title(mode: str, *, count: int | None = None) -> str:
     label = MODE_LABEL[mode]
     if mode == "past":
         if count:
-            return f"{exam_name()} {label}{count}問【Web無料・解説付き・印刷/PDF保存OK】｜{brand_title_suffix()}"
+            return f"{exam_name()} {label}{count}問【Web無料・解説付き・印刷/PDFサンプルあり】｜{brand_title_suffix()}"
         sub = "Web無料・模試対策"
     elif mode == "practice":
         sub = f"{c['mockExam']}前の演習"

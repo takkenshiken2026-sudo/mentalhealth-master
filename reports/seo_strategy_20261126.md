@@ -137,6 +137,13 @@ GSC の分析で、伸びしろの大半は「過去問」系（特に pdf・ダ
 - 計測（`site-analytics.js`、全静的ページ共通）: note へのリンクのクリックを GA4 イベント `promo_click`（promo_slot=static_print_field / static_print_hub / static_q_index / static_articles など、promo_variant=mock / problem_book）で記録。印刷は `print_click`（ボタン）と `print_open`（印刷ダイアログ、Ctrl+P を含む）。トップ（SPA）の案内枠は既存の trackPromoClick で計測済みのため二重計上しない。
 - 判断方法: 12〜1月の promo_click（特に print 系の枠）と note の売上を、印刷ページ公開前と比べる。売上が落ちていれば印刷範囲を各分野の一部（サンプル）に絞る。
 
+### 印刷範囲の絞り込み（2026-11-27）
+- 印刷できる問題を各分野10問のサンプルに限定（`site-config.json` と `grades/self/site-config.json` の `printSamplePerField: 10`、未設定なら全問）。II種・III種とも計30問。各分野の先頭（問題番号順）から採る。
+  - 本番1回分（50問）・有料の分野別問題集（各分野約40問）より少ない量にし、「紙で本番形式なら予想模試（PDF3回分）」の導線を明確にする。
+- 印刷ページ冒頭に「◯問のうち10問のサンプル。残りはWebで解説付き。紙で本番形式なら予想模試」の注記。入口の一覧は「（サンプル10問／全108問）」表示、案内枠を一覧の直後へ移動。
+- 題名: 入口「…過去問を印刷・PDF保存【分野別サンプル30問・解答付き・無料】」、分野別「…過去問 印刷用サンプル（…・10問）」、過去問一覧「…過去問300問【Web無料・解説付き・印刷/PDFサンプルあり】」。
+- 職場環境・配慮の印刷は A4 7ページ。
+
 ### 既知の不具合
 - （解消済み 2026-11-26）トップページ読み込み時の JavaScript エラー「renderTopAffiliateBanner is not defined」。初回表示時に後段の script で定義される関数を呼び、例外で gotoPage 以降（GA4 の page_view・ログイン状態の復元）が止まっていた。存在チェックを追加。
 
