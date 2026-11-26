@@ -38,30 +38,36 @@ def _has_terms() -> bool:
     return False
 
 
-def _past_question_count() -> int:
-    """data/past_questions.csv の問題数（無ければ 0）。副種ビルドでは data/ が当該種のもの。"""
+def _data_rows(name: str) -> int:
+    """data/<name> の行数（無ければ 0）。副種ビルドでは data/ が当該種のもの。"""
     import csv
     from pathlib import Path
 
     from tools.site_config import ROOT as _SITE_ROOT
 
-    path = Path(_SITE_ROOT) / "data" / "past_questions.csv"
+    path = Path(_SITE_ROOT) / "data" / name
     if not path.is_file():
         return 0
     with path.open(encoding="utf-8-sig", newline="") as f:
         return sum(1 for _ in csv.DictReader(f))
 
 
+def _past_question_count() -> int:
+    return _data_rows("past_questions.csv")
+
+
 def index_home_title() -> str:
     """トップ（SPA）の <title>。
 
-    2026-11: 検索結果では試験名と「何がどれだけ無料で解けるか」が前半に見えるよう、
-    サイト名を末尾へ移した（旧: 「{サイト名}｜{試験名} 過去問・一問一答で合格を目指す無料学習サイト」）。
+    2026-11: 過去問一覧（/q/index.html）と題名が重ならないよう、トップは「無料問題集
+    （実践演習・一問一答）」を受け持つ。「過去問」の検索は過去問一覧に集める。
+    （旧: 「{サイト名}｜{試験名} 過去問・一問一答で合格を目指す無料学習サイト」）
     """
-    n = _past_question_count()
-    if n:
-        return f"{exam_name()} 過去問{n}問・一問一答【Web無料・解説付き】｜{brand_name()}"
-    return f"{exam_name()} 実践演習・一問一答【Web無料・解説付き】｜{brand_name()}"
+    np_ = _data_rows("practice_questions.csv")
+    ni = _data_rows("ichimon_questions.csv")
+    if np_ and ni:
+        return f"{exam_name()}の無料問題集【実践演習{np_:,}問・一問一答{ni:,}問】｜{brand_name()}"
+    return f"{exam_name()}の無料問題集【実践演習・一問一答】｜{brand_name()}"
 
 
 def index_og_title() -> str:
@@ -89,26 +95,24 @@ def index_spa_hash_url(hash_frag: str) -> str:
 
 
 def index_description() -> str:
+    np_ = _data_rows("practice_questions.csv")
+    ni = _data_rows("ichimon_questions.csv")
     n = _past_question_count()
-    head = (
-        f"{exam_name()}の過去問{n}問を全問解説付きでWeb無料公開。"
-        if n
-        else f"{exam_name()}の実践演習と一問一答をWeb無料で公開。"
-    )
-    rest = "実践演習・一問一答も、" if n else ""
-    return head + f"{rest}分野別・年度別に絞ってスマホ・PCのブラウザですぐ学習できます。"
+    head = f"{exam_name()}の実践演習{np_:,}問・一問一答{ni:,}問を全問解説付きでWeb無料公開。"
+    tail = f"過去問{n:,}問も分野別に解けます。" if n else ""
+    return head + tail + "スマホ・PCのブラウザですぐ学習できます。"
 
 
 def index_description_long() -> str:
-    """トップの meta description（検索結果の説明文）。問題数と「全問解説付き・Web無料」を冒頭に置く。"""
+    """トップの meta description。実践演習・一問一答を主に、過去問は過去問一覧への入口として触れる。"""
     field_names = "・".join(str(f.get("name") or f.get("id") or "") for f in fields()[:4])
     subjects = field_names or "主要分野"
+    np_ = _data_rows("practice_questions.csv")
+    ni = _data_rows("ichimon_questions.csv")
     n = _past_question_count()
-    if n:
-        head = f"{exam_name()}の過去問{n}問を全問解説付きでWeb無料公開。実践演習・一問一答も、"
-    else:
-        head = f"{exam_name()}の実践演習・一問一答を解説付きでWeb無料公開。"
-    return head + f"科目別（{subjects}）・年度別に絞ってスマホ・PCのブラウザですぐ学習できます。"
+    head = f"{exam_name()}の実践演習{np_:,}問・一問一答{ni:,}問を全問解説付きでWeb無料公開。"
+    tail = f"過去問{n:,}問も分野別に解けます。" if n else ""
+    return head + tail + f"科目別（{subjects}）に絞ってスマホ・PCのブラウザですぐ学習できます。"
 
 
 def index_keywords() -> str:
