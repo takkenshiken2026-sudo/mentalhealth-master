@@ -2054,7 +2054,7 @@ body.is-solving .site-footer{display:none!important}
       <button type="button" class="btn-primary ichi-start-btn" onclick="beginQuiz()"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.5v13l10.5-6.5z"/></svg>スタート</button>
 
       <div style="font-size:12px;color:var(--text3);background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:8px 12px;margin-top:16px;line-height:1.65">
-        ※ 掲載問題は、公式過去問そのものではなく、著作権上の配慮と最新法令への対応のため問題文・選択肢を編集した「過去問形式」の演習問題です。試験本番の原文・合格基準・試験日程などは<a href="https://www.mental-health.ne.jp/about/" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:underline">試験のご紹介（公式）</a>等の公式情報を、法令・通達の原文は<a href="https://www.mlit.go.jp/" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:underline">国土交通省</a>等のウェブサイトをご確認ください。
+        ※ 掲載問題は、公式過去問そのものではなく、著作権上の配慮と最新法令への対応のため問題文・選択肢を編集した「過去問形式」の演習問題です。試験本番の原文・合格基準・試験日程などは<a href="https://www.mental-health.ne.jp/about/" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:underline">試験のご紹介（公式）</a>等の公式情報を、法令・通達の原文は<a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:underline">厚生労働省</a>等のウェブサイトをご確認ください。
       </div>
 
     </div>
@@ -2932,13 +2932,26 @@ function _getItem(k){ try{ return localStorage.getItem(k); }catch(e){ return _me
 function _setItem(k,v){ try{ localStorage.setItem(k,v); }catch(e){ _memStore[k]=v; } }
 function loadDB(){ try{ var s=_getItem('exam_site_shell_v1'); db=s?JSON.parse(s):{} }catch(e){db={}} }
 function saveDB(){ try{ _setItem('exam_site_shell_v1',JSON.stringify(db)); }catch(e){} }
+// 他試験サイト由来だった応援の手紙の文面（受け取り済みで端末に保存されたもの）を差し替える
+const LEGACY_LETTER_FIXES={
+  '業法を柱に育てましょう':{title:'法令と指針を味方にしましょう',body:'安全配慮義務やストレスチェック制度など、法令や国の指針は正誤の決め手になりやすいですので、今日は法令・指針の問題を多めに触れ、得点の土台を一緒に太らせていきましょう。'},
+  '四分野バランスを整えましょう':{title:'分野のバランスを整えましょう',body:'得意に偏りすぎると本番の得点がブレやすくなりますので、後回し分野へ一問だけ手を伸ばす勇気を、今日は称えていきましょう。'},
+  '長い準備を一緒に進めましょう':{title:'長い準備を一緒に進めましょう',body:'試験日はまだ先でも、準備は日々の積み重ねですので、今日このアプリでの演習も、応援しています。'}
+};
+function fixLegacyLetters(letters){
+  letters.forEach(function(l){
+    const fix=l&&LEGACY_LETTER_FIXES[l.title];
+    if(fix&&l.body!==fix.body){ l.title=fix.title; l.body=fix.body; }
+  });
+  return letters;
+}
 function normalizeUserData(u){
   if(!u) return u;
   u.answers=u.answers||{};
 	  u.sessions=u.sessions||[];
 	  u.bookmarks=u.bookmarks||{};
 	  u.bookmarkNotes=u.bookmarkNotes||{};
-	  u.letters=u.letters||[];
+	  u.letters=fixLegacyLetters(u.letters||[]);
   u.reviewActions=Array.isArray(u.reviewActions)?u.reviewActions.filter(x=>Number(x)>0).slice(-200):[];
   u.visitMarks=u.visitMarks||{};
   u.badges=u.badges||{};
@@ -4707,7 +4720,7 @@ function renderBookmarkNote(q, wrapId='bookmark-note-wrap'){
       <div class="bookmark-note-status">${hasNote?'保存済み':'未入力'}</div>
     </div>
     <textarea class="bookmark-note-input" maxlength="1200" placeholder="${escapeHTML(placeholder)}" oninput="saveBookmarkNote(${JSON.stringify(String(q.id))}, this.value, this)">${escapeHTML(note.text)}</textarea>
-    <div class="bookmark-note-help">例：問題文の「例外」を読み飛ばした／35条書面と37条書面を混同した</div>
+    <div class="bookmark-note-help">例：問題文の「例外」を読み飛ばした／一次予防と二次予防を混同した</div>
   </div>`;
 }
 function updateBookmarkButton(q, btnId='q-bookmark-btn'){
@@ -5443,7 +5456,7 @@ function buildDailyVisitLetter(){
     },
     {
       title:'長い準備を一緒に進めましょう',
-      body:'試験は秋の一大イベントでも、準備は日々の積み重ねですので、今日このアプリでの演習も、応援しています。'
+      body:'試験日はまだ先でも、準備は日々の積み重ねですので、今日このアプリでの演習も、応援しています。'
     },
     {
       title:'解説まで味わいましょう',
@@ -5478,8 +5491,8 @@ function buildDailyVisitLetter(){
       body:'キーフレーズには論点のヒントがありますので、「原則・例外」など言い換えに敏感になる練習を、今日も一問から励まし合いましょう。'
     },
     {
-      title:'四分野バランスを整えましょう',
-      body:'得意に偏りすぎると試験日がブレやすくなりますので、後回し分野へ一問だけ手を伸ばす勇気を、今日は称えていきましょう。'
+      title:'分野のバランスを整えましょう',
+      body:'得意に偏りすぎると本番の得点がブレやすくなりますので、後回し分野へ一問だけ手を伸ばす勇気を、今日は称えていきましょう。'
     },
     {
       title:'過去問を味方につけましょう',
@@ -5510,8 +5523,8 @@ function buildDailyVisitLetter(){
       body:'点数は一時的でも、誤答位置は宝の地図になりますので、論点メモに落として次の味方に変え、前向きに次へ進みましょう。'
     },
     {
-      title:'業法を柱に育てましょう',
-      body:'法令・制度は出題の柱になりやすいですので、今日は業法と遵守事項を多めに触れ、得点の土台を一緒に太らせていきましょう。'
+      title:'法令と指針を味方にしましょう',
+      body:'安全配慮義務やストレスチェック制度など、法令や国の指針は正誤の決め手になりやすいですので、今日は法令・指針の問題を多めに触れ、得点の土台を一緒に太らせていきましょう。'
     },
     {
       title:'小さな記録を残しましょう',
