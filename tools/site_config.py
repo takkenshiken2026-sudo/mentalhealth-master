@@ -697,6 +697,9 @@ def mock_test() -> dict | None:
     raw = CONFIG.get("mockTest")
     if not isinstance(raw, dict):
         return None
+    # enabled: false で非公開（設定は残したまま止められる）
+    if raw.get("enabled") is False:
+        return None
     try:
         count = int(raw.get("questionCount") or 0)
         minutes = int(raw.get("minutes") or 0)
