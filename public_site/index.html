@@ -8027,9 +8027,13 @@ if(document.readyState==='loading'){
     if(card) card.remove();
     const mtPage=document.getElementById('page-mocktest');
     if(mtPage) mtPage.remove();
-    // #mocktest で直接来た場合はトップへ
+    // #mocktest で直接来た場合はトップを表示する。URL の #mocktest は残す
+    // （公開直後に古い設定ファイルが読まれた場合でも、自動の再読み込みでテストを開けるように）
     const _g=window.gotoPage;
-    window.gotoPage=function(id,opts){ return _g.call(this,id==='mocktest'?'quiz-start':id,opts); };
+    window.gotoPage=function(id,opts){
+      if(id==='mocktest') return _g.call(this,'quiz-start',Object.assign({},opts,{skipHistory:true}));
+      return _g.call(this,id,opts);
+    };
     return;
   }
   if(card){
