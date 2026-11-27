@@ -54,6 +54,7 @@ INDEX_HASH_WHITELIST = frozenset(
         "quiz",
         "score",
         "analytics",
+        "mocktest",
     }
 )
 

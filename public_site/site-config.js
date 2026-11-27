@@ -162,5 +162,12 @@ window.SITE_CONFIG = {
         "badge": "基礎固め"
       }
     ]
+  },
+  "mockTest": {
+    "title": "本番形式テスト",
+    "questionCount": 50,
+    "minutes": 120,
+    "maxScore": 100,
+    "passScore": 70
   }
 };

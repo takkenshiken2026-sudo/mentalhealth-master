@@ -3640,6 +3640,14 @@ html:not(.js) .terms-idx-seo-fallback .terms-idx-seo-list a {
   min-width: 0;
   height: 100%;
 }
+/* セット商品（paidBundle）は全幅で先頭に置き、枠線を強調する */
+.article-index-pick[data-pick-kind="bundle"] {
+  grid-column: 1 / -1;
+}
+.article-index-pick[data-pick-kind="bundle"] .article-index-pick-link {
+  border: 1.5px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 5%, var(--bg));
+}
 .article-index-pick-link:has(.article-index-pick-media) {
   padding-top: 0;
   gap: 8px;
