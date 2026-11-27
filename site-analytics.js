@@ -114,7 +114,7 @@
 })();
 
 // 有料教材（note）への導線クリックと、印刷の利用を計測（静的ページ共通・2026-11）。
-// GA4 イベント: promo_click（promo_slot=static_<ページ種別>, promo_variant=mock|problem_book|other）、
+// GA4 イベント: promo_click（promo_slot=static_<ページ種別>, promo_variant=bundle|mock|problem_book|other）、
 //               print_click（「印刷する」ボタン）、print_open（印刷ダイアログを開いた＝Ctrl+P を含む）。
 // トップ（SPA）の案内枠は onclick の trackPromoClick で計測済みのため二重に数えない。
 (function () {
@@ -146,7 +146,7 @@
         if (!kind) {
           var box = a.closest("article, li, p") || a;
           var text = (box.textContent || "") + " " + (a.textContent || "");
-          kind = /模試/.test(text) ? "mock" : /問題集/.test(text) ? "problem_book" : "other";
+          kind = /セット/.test(text) ? "bundle" : /模試/.test(text) ? "mock" : /問題集/.test(text) ? "problem_book" : "other";
         }
         send("promo_click", { promo_slot: "static_" + slot(), promo_variant: kind, link_url: a.href });
       }

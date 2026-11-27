@@ -537,6 +537,19 @@ def guide_index_picks() -> dict[str, Any] | None:
         layout = "grid-3"
     max_items = 4 if layout == "grid-2" else 3
     items: list[dict[str, str]] = []
+    # セット商品（paidBundle）は url があるときだけ先頭に置く（全幅のカード）。
+    bundle = paid_bundle()
+    if bundle:
+        items.append(
+            {
+                "kind": "bundle",
+                "kindLabel": bundle.get("badge") or "セット割",
+                "title": bundle["title"],
+                "description": bundle.get("description") or "",
+                "href": bundle["url"],
+                "cta": "noteで詳細を見る",
+            }
+        )
     for item in items_raw[:max_items]:
         if not isinstance(item, dict):
             continue
@@ -662,6 +675,46 @@ def paid_field_quiz() -> dict | None:
     return out
 
 
+def paid_bundle() -> dict[str, str] | None:
+    """予想模試＋分野別問題集のセット商品（note）。url が空なら None（どこにも表示しない）。"""
+    raw = CONFIG.get("paidBundle")
+    if not isinstance(raw, dict):
+        return None
+    url = str(raw.get("url") or "").strip()
+    title = str(raw.get("title") or "").strip()
+    if not url or not title:
+        return None
+    out: dict[str, str] = {"url": url, "title": title}
+    for key in ("scoreLead", "meta", "priceLabel", "regularPriceLabel", "badge", "description"):
+        val = raw.get(key)
+        if val is not None and str(val).strip():
+            out[key] = str(val).strip()
+    return out
+
+
+def mock_test() -> dict | None:
+    """トップの無料「本番形式テスト」の設定。未設定・問題数0なら None（その種では表示しない）。"""
+    raw = CONFIG.get("mockTest")
+    if not isinstance(raw, dict):
+        return None
+    try:
+        count = int(raw.get("questionCount") or 0)
+        minutes = int(raw.get("minutes") or 0)
+        max_score = int(raw.get("maxScore") or 100)
+        pass_score = int(raw.get("passScore") or 0)
+    except (TypeError, ValueError):
+        return None
+    if count <= 0 or minutes <= 0 or pass_score <= 0:
+        return None
+    return {
+        "title": str(raw.get("title") or "本番形式テスト").strip() or "本番形式テスト",
+        "questionCount": count,
+        "minutes": minutes,
+        "maxScore": max_score,
+        "passScore": pass_score,
+    }
+
+
 def top_affiliate_banner() -> dict[str, str] | None:
     raw = CONFIG.get("topAffiliateBanner")
     if not isinstance(raw, dict):
@@ -715,6 +768,12 @@ def write_site_config_js() -> None:
     pfq = paid_field_quiz()
     if pfq:
         payload["paidFieldQuiz"] = pfq
+    bundle = paid_bundle()
+    if bundle:
+        payload["paidBundle"] = bundle
+    mt = mock_test()
+    if mt:
+        payload["mockTest"] = mt
     tab = top_affiliate_banner()
     if tab:
         payload["topAffiliateBanner"] = tab

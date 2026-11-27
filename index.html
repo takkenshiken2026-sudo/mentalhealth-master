@@ -688,6 +688,104 @@ details.rich-detail summary{display:none}
 .score-paid-mock-strip-meta{font-size:var(--fs-caption);color:var(--text2)}
 .score-paid-mock-strip-cta{font-size:var(--fs-sub);font-weight:700;color:var(--paid-mock-accent);flex-shrink:0;white-space:nowrap}
 .score-paid-mock-list{display:flex;flex-direction:column;gap:9px}
+/* セット商品（paidBundle） */
+.paid-bundle-strip{border-width:1.5px;border-color:var(--paid-mock-accent)}
+.paid-bundle-price{font-weight:700;color:var(--text)}
+.paid-bundle-regular{margin-left:6px;color:var(--text3);white-space:nowrap}
+.paid-bundle-save{display:inline-block;white-space:nowrap;margin-left:6px;font-size:var(--fs-tiny);font-weight:700;color:var(--paid-mock-accent-text);background:var(--paid-mock-accent);border-radius:4px;padding:1px 6px;vertical-align:1px}
+/* 本番形式テスト（#mocktest） */
+.mt-free-tag{display:inline-block;margin-left:8px;font-size:var(--fs-tiny);font-weight:700;color:#fff;background:var(--green);border-radius:4px;padding:2px 7px;vertical-align:middle;letter-spacing:.04em}
+.mode-title-v2 .mt-free-tag{margin-left:6px;vertical-align:2px}
+.mode-meta-v2{font-size:var(--fs-caption);color:var(--text2);margin-top:2px}
+.mt-facts{margin:18px 0 14px;border:1px solid var(--border2);border-radius:var(--r2);overflow:hidden}
+.mt-facts>div{display:flex;gap:12px;padding:10px 14px;border-top:1px solid var(--border)}
+.mt-facts>div:first-child{border-top:none}
+.mt-facts dt{flex:0 0 6.5em;font-size:var(--fs-sub);font-weight:700;color:var(--text2)}
+.mt-facts dd{margin:0;font-size:var(--fs-sub);line-height:1.6}
+.mt-notes{margin:0 0 18px;padding-left:1.2em;font-size:var(--fs-sub);color:var(--text2);line-height:1.75}
+.mt-start-btn{min-width:240px;font-size:15px;padding:13px 20px}
+.mt-resume{padding:14px 16px;border:1.5px solid var(--ink);border-radius:var(--r2);background:var(--bg3);margin-bottom:8px}
+.mt-resume-text{margin:0 0 10px;font-size:var(--fs-sub);font-weight:700}
+.mt-history{margin-top:26px}
+.mt-history-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.mt-history-list li{display:flex;gap:14px;align-items:baseline;font-size:var(--fs-sub)}
+.mt-history-date{color:var(--text3);min-width:3.2em}
+.mt-history-score{font-weight:700;min-width:3.5em}
+.mt-history-score.is-pass{color:var(--green)}
+.mt-history-score.is-fail{color:var(--red)}
+.mt-history-verdict{color:var(--text2)}
+.mt-bar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 12px;margin:-8px 0 12px;background:#fff;border:1px solid var(--border2);border-radius:var(--r2);box-shadow:var(--sh)}
+.mt-clock{font-weight:700;font-variant-numeric:tabular-nums;font-size:15px;min-width:6.2em}
+.mt-clock--warn{color:var(--red)}
+.mt-progress{font-size:var(--fs-sub);color:var(--text2);margin-right:auto}
+.mt-bar-btn{padding:7px 12px}
+.mt-palette{margin:0 0 12px;padding:12px;border:1px solid var(--border2);border-radius:var(--r2);background:var(--bg3)}
+.mt-palette-legend{display:flex;gap:14px;font-size:var(--fs-caption);color:var(--text2);margin-bottom:8px}
+.mt-lg::before{content:"";display:inline-block;width:10px;height:10px;border-radius:3px;border:1px solid var(--border2);background:#fff;margin-right:5px;vertical-align:-1px}
+.mt-lg--done::before{background:var(--ink);border-color:var(--ink)}
+.mt-lg--flag::before{background:#fff;border:2px solid var(--red)}
+.mt-palette-grid{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:5px}
+.mt-pal-btn{padding:6px 0;font-size:12px;font-family:var(--font);border:1px solid var(--border2);border-radius:5px;background:#fff;color:var(--text);cursor:pointer;font-variant-numeric:tabular-nums}
+.mt-pal-btn.is-done{background:var(--ink);border-color:var(--ink);color:#fff}
+.mt-pal-btn.is-flag{box-shadow:inset 0 0 0 2px var(--red)}
+.mt-pal-btn.is-current{outline:2px solid var(--green);outline-offset:1px}
+.mt-qhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.mt-qnum{font-weight:700;font-size:15px}
+.mt-qnum-total{font-weight:500;color:var(--text3);font-size:var(--fs-sub)}
+.mt-flag{margin-left:auto;font-size:var(--fs-sub);color:var(--text2);display:inline-flex;align-items:center;gap:5px;cursor:pointer;user-select:none}
+.mt-opt.is-selected{border-color:var(--ink);background:var(--sel-s);box-shadow:inset 0 0 0 1px var(--ink)}
+.mt-opt.is-selected .opt-num{color:var(--ink);font-weight:700}
+.mt-nav{display:flex;justify-content:space-between;gap:8px;margin-top:6px}
+.mt-nav .btn-primary,.mt-nav .btn-ghost{min-width:120px;padding:11px 16px}
+.mt-nav button[disabled]{opacity:.4;cursor:default}
+.mt-key-hint{margin:10px 0 0;font-size:var(--fs-caption);color:var(--text3);text-align:right}
+.mt-score-card{padding:20px 18px;border-radius:var(--r2);border:1.5px solid var(--border2);background:var(--bg3);margin:14px 0 22px;text-align:center}
+.mt-score-card--fail{border-color:var(--red-b);background:var(--red-s)}
+.mt-score-card--border,.mt-score-card--pass{border-color:var(--grn-b);background:var(--grn-s)}
+.mt-score-num{font-size:44px;font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.mt-score-num span{font-size:15px;font-weight:500;color:var(--text2);margin-left:4px}
+.mt-score-card--fail .mt-score-num{color:var(--red)}
+.mt-score-card--border .mt-score-num,.mt-score-card--pass .mt-score-num{color:var(--green)}
+.mt-verdict{margin-top:8px;font-size:15px}
+.mt-score-sub{margin-top:6px;font-size:var(--fs-caption);color:var(--text2)}
+.mt-fields{display:flex;flex-direction:column;gap:10px;margin-bottom:6px}
+.mt-field-row{display:grid;grid-template-columns:minmax(0,11em) 1fr auto;gap:10px;align-items:center;font-size:var(--fs-sub)}
+.mt-field-bar{height:8px;border-radius:99px;background:var(--bg4);overflow:hidden}
+.mt-field-bar span{display:block;height:100%;background:var(--ink);border-radius:99px}
+.mt-field-row.is-weak .mt-field-bar span{background:var(--red)}
+.mt-field-val{font-variant-numeric:tabular-nums;color:var(--text2);white-space:nowrap}
+.mt-weak-tag{display:inline-block;margin-left:6px;font-size:var(--fs-tiny);font-weight:700;color:var(--red);border:1px solid var(--red-b);border-radius:99px;padding:0 6px;vertical-align:1px}
+.mt-cta{margin:24px 0 20px;padding-top:20px;border-top:1px solid var(--border)}
+.mt-result-btns{margin:4px 0 18px}
+.mt-review{margin-top:6px}
+.mt-review-list{display:flex;flex-direction:column;gap:6px;padding:10px 0}
+.mt-review-item{border:1px solid var(--border2);border-radius:var(--r);background:#fff}
+.mt-review-item summary{display:flex;gap:10px;align-items:center;padding:9px 12px;cursor:pointer;font-size:var(--fs-sub);list-style:none}
+.mt-review-item summary::-webkit-details-marker{display:none}
+.mt-review-mark{font-weight:700;min-width:1em}
+.mt-review-item.is-ok .mt-review-mark{color:var(--green)}
+.mt-review-item.is-ng .mt-review-mark{color:var(--red)}
+.mt-review-num{color:var(--text3);min-width:3em}
+.mt-review-text{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mt-review-body{padding:4px 14px 14px;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:8px}
+.mt-review-ans{margin:0;font-size:var(--fs-sub);line-height:1.65}
+.mt-review-ans span{display:inline-block;min-width:6.5em;font-weight:700;color:var(--text2)}
+.mt-score-link{margin:16px 0 0;font-size:var(--fs-sub)}
+.mt-score-link a{color:var(--text);font-weight:700}
+@media(max-width:700px){
+  .mt-facts>div{flex-direction:column;gap:2px}
+  .mt-palette-grid{grid-template-columns:repeat(8,minmax(0,1fr))}
+  .mt-pal-btn{padding:8px 0}
+  .mt-field-row{grid-template-columns:1fr auto}
+  .mt-field-bar{grid-column:1 / -1;grid-row:2}
+  .mt-key-hint{display:none}
+  .mt-bar{flex-wrap:nowrap;gap:6px;padding:8px 10px}
+  .mt-clock{min-width:0;font-size:14px;white-space:nowrap}
+  .mt-progress{font-size:12px;white-space:nowrap}
+  .mt-bar-btn{padding:6px 9px;font-size:13px;white-space:nowrap}
+  .mt-start-btn{width:100%}
+  .mt-nav .btn-primary,.mt-nav .btn-ghost{flex:1;min-width:0}
+}
 .score-paid-mock-strip-badge{display:inline-block;margin-left:7px;font-size:10px;font-weight:700;color:var(--paid-mock-accent);background:var(--paid-mock-accent-soft);border:1px solid var(--paid-mock-accent-border);border-radius:999px;padding:1px 8px;letter-spacing:.03em;vertical-align:middle}
 /* スマホ: タグとCTAを上段・タイトル＋メタを全幅の下段に再配置し、タイトルの不自然な折り返しを防ぐ */
 @media(max-width:520px){.score-paid-mock-strip{align-items:center;row-gap:8px}.score-paid-mock-strip-tag{order:1}.score-paid-mock-strip-cta{order:2;margin-left:auto}.score-paid-mock-strip-body{order:3;flex-basis:100%;min-width:0}}
@@ -1743,11 +1841,31 @@ body.is-solving .site-footer{display:none!important}
           </div>
           <div class="mode-arrow-v2">›</div>
         </div>
+        <div class="mode-card-v2" id="mode-mocktest-card" role="button" tabindex="0" onclick="gotoPage('mocktest')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();gotoPage('mocktest');}" hidden>
+          <div class="mode-num-v2">04</div>
+          <div class="mode-body-v2">
+            <div class="mode-purpose-v2">合格点に届くか、本番形式で測りたい</div>
+            <div class="mode-title-v2">本番形式テスト<span class="mt-free-tag">無料</span></div>
+            <div class="mode-meta-v2" data-mt-meta></div>
+          </div>
+          <div class="mode-arrow-v2">›</div>
+        </div>
       </div>
 
       <div id="top-affiliate-banner-wrap" class="top-promo-banners" hidden></div>
 
       <div id="daily-status-wrap"></div>
+    </div>
+
+    <!-- 本番形式テスト（中身は後段のスクリプトが描画。SITE_CONFIG.mockTest が無い種では使わない） -->
+    <div class="page" id="page-mocktest">
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="/" onclick="event.preventDefault();gotoPage('quiz-start')" title="トップ">トップ</a></li>
+          <li class="breadcrumb-item breadcrumb-current" aria-current="page">本番形式テスト</li>
+        </ol>
+      </nav>
+      <div id="mt-root"></div>
     </div>
 
     <!-- 一問一答 -->
@@ -1936,7 +2054,7 @@ body.is-solving .site-footer{display:none!important}
       <button type="button" class="btn-primary ichi-start-btn" onclick="beginQuiz()"><svg class="btn-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 5.5v13l10.5-6.5z"/></svg>スタート</button>
 
       <div style="font-size:12px;color:var(--text3);background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:8px 12px;margin-top:16px;line-height:1.65">
-        ※ 掲載問題は、公式過去問そのものではなく、著作権上の配慮と最新法令への対応のため問題文・選択肢を編集した「過去問形式」の演習問題です。試験本番の原文・合格基準・試験日程などは<a href="https://www.mental-health.ne.jp/about/" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:underline">試験のご紹介（公式）</a>等の公式情報を、法令・通達の原文は<a href="https://www.mlit.go.jp/" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:underline">国土交通省</a>等のウェブサイトをご確認ください。
+        ※ 掲載問題は、公式過去問そのものではなく、著作権上の配慮と最新法令への対応のため問題文・選択肢を編集した「過去問形式」の演習問題です。試験本番の原文・合格基準・試験日程などは<a href="https://www.mental-health.ne.jp/about/" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:underline">試験のご紹介（公式）</a>等の公式情報を、法令・通達の原文は<a href="https://www.mhlw.go.jp/" target="_blank" rel="noopener" style="color:var(--text2);text-decoration:underline">厚生労働省</a>等のウェブサイトをご確認ください。
       </div>
 
     </div>
@@ -2814,13 +2932,26 @@ function _getItem(k){ try{ return localStorage.getItem(k); }catch(e){ return _me
 function _setItem(k,v){ try{ localStorage.setItem(k,v); }catch(e){ _memStore[k]=v; } }
 function loadDB(){ try{ var s=_getItem('exam_site_shell_v1'); db=s?JSON.parse(s):{} }catch(e){db={}} }
 function saveDB(){ try{ _setItem('exam_site_shell_v1',JSON.stringify(db)); }catch(e){} }
+// 他試験サイト由来だった応援の手紙の文面（受け取り済みで端末に保存されたもの）を差し替える
+const LEGACY_LETTER_FIXES={
+  '業法を柱に育てましょう':{title:'法令と指針を味方にしましょう',body:'安全配慮義務やストレスチェック制度など、法令や国の指針は正誤の決め手になりやすいですので、今日は法令・指針の問題を多めに触れ、得点の土台を一緒に太らせていきましょう。'},
+  '四分野バランスを整えましょう':{title:'分野のバランスを整えましょう',body:'得意に偏りすぎると本番の得点がブレやすくなりますので、後回し分野へ一問だけ手を伸ばす勇気を、今日は称えていきましょう。'},
+  '長い準備を一緒に進めましょう':{title:'長い準備を一緒に進めましょう',body:'試験日はまだ先でも、準備は日々の積み重ねですので、今日このアプリでの演習も、応援しています。'}
+};
+function fixLegacyLetters(letters){
+  letters.forEach(function(l){
+    const fix=l&&LEGACY_LETTER_FIXES[l.title];
+    if(fix&&l.body!==fix.body){ l.title=fix.title; l.body=fix.body; }
+  });
+  return letters;
+}
 function normalizeUserData(u){
   if(!u) return u;
   u.answers=u.answers||{};
 	  u.sessions=u.sessions||[];
 	  u.bookmarks=u.bookmarks||{};
 	  u.bookmarkNotes=u.bookmarkNotes||{};
-	  u.letters=u.letters||[];
+	  u.letters=fixLegacyLetters(u.letters||[]);
   u.reviewActions=Array.isArray(u.reviewActions)?u.reviewActions.filter(x=>Number(x)>0).slice(-200):[];
   u.visitMarks=u.visitMarks||{};
   u.badges=u.badges||{};
@@ -4092,7 +4223,7 @@ function _resolveInitialPage() {
   };
   const hashMap = {
     '#past':'past-config','#orig':'orig','#ichimondou':'ichimondou',
-    '#review':'review'
+    '#review':'review','#mocktest':'mocktest'
   };
   return pathMap[path] || hashMap[hash] || 'quiz-start';
 }
@@ -4589,7 +4720,7 @@ function renderBookmarkNote(q, wrapId='bookmark-note-wrap'){
       <div class="bookmark-note-status">${hasNote?'保存済み':'未入力'}</div>
     </div>
     <textarea class="bookmark-note-input" maxlength="1200" placeholder="${escapeHTML(placeholder)}" oninput="saveBookmarkNote(${JSON.stringify(String(q.id))}, this.value, this)">${escapeHTML(note.text)}</textarea>
-    <div class="bookmark-note-help">例：問題文の「例外」を読み飛ばした／35条書面と37条書面を混同した</div>
+    <div class="bookmark-note-help">例：問題文の「例外」を読み飛ばした／一次予防と二次予防を混同した</div>
   </div>`;
 }
 function updateBookmarkButton(q, btnId='q-bookmark-btn'){
@@ -5325,7 +5456,7 @@ function buildDailyVisitLetter(){
     },
     {
       title:'長い準備を一緒に進めましょう',
-      body:'試験は秋の一大イベントでも、準備は日々の積み重ねですので、今日このアプリでの演習も、応援しています。'
+      body:'試験日はまだ先でも、準備は日々の積み重ねですので、今日このアプリでの演習も、応援しています。'
     },
     {
       title:'解説まで味わいましょう',
@@ -5360,8 +5491,8 @@ function buildDailyVisitLetter(){
       body:'キーフレーズには論点のヒントがありますので、「原則・例外」など言い換えに敏感になる練習を、今日も一問から励まし合いましょう。'
     },
     {
-      title:'四分野バランスを整えましょう',
-      body:'得意に偏りすぎると試験日がブレやすくなりますので、後回し分野へ一問だけ手を伸ばす勇気を、今日は称えていきましょう。'
+      title:'分野のバランスを整えましょう',
+      body:'得意に偏りすぎると本番の得点がブレやすくなりますので、後回し分野へ一問だけ手を伸ばす勇気を、今日は称えていきましょう。'
     },
     {
       title:'過去問を味方につけましょう',
@@ -5392,8 +5523,8 @@ function buildDailyVisitLetter(){
       body:'点数は一時的でも、誤答位置は宝の地図になりますので、論点メモに落として次の味方に変え、前向きに次へ進みましょう。'
     },
     {
-      title:'業法を柱に育てましょう',
-      body:'法令・制度は出題の柱になりやすいですので、今日は業法と遵守事項を多めに触れ、得点の土台を一緒に太らせていきましょう。'
+      title:'法令と指針を味方にしましょう',
+      body:'安全配慮義務やストレスチェック制度など、法令や国の指針は正誤の決め手になりやすいですので、今日は法令・指針の問題を多めに触れ、得点の土台を一緒に太らせていきましょう。'
     },
     {
       title:'小さな記録を残しましょう',
@@ -7407,6 +7538,8 @@ function injectQuizStartEnhancements(){
   const u=typeof getUserData==='function'?getUserData():null;
   const total=Object.keys(u?.answers||{}).length;
   const remaining=Math.max(0,WEAK_UNLOCK_COUNT-total);
+  const mtCard=document.getElementById('mode-mocktest-card');
+  const weakNum=(mtCard&&!mtCard.hidden)?'05':'04';
 
   // 弱点モードカード（ロック状態 or 解放状態）
   const weakCard=document.createElement('div');
@@ -7414,7 +7547,7 @@ function injectQuizStartEnhancements(){
   if(unlocked){
     weakCard.innerHTML=`
     <div class="mode-card-v2" onclick="openWeakMode()">
-      <div class="mode-num-v2">04</div>
+      <div class="mode-num-v2">${weakNum}</div>
       <div class="mode-body-v2">
         <div class="mode-purpose-v2">苦手な問題を集中的に克服したい</div>
         <div class="mode-title-v2">弱点集中対策</div>
@@ -7424,7 +7557,7 @@ function injectQuizStartEnhancements(){
   } else {
     weakCard.innerHTML=`
     <div class="mode-card-v2" style="opacity:.55;cursor:not-allowed;pointer-events:none;position:relative">
-      <div class="mode-num-v2" style="color:var(--text3)">04</div>
+      <div class="mode-num-v2" style="color:var(--text3)">${weakNum}</div>
       <div class="mode-body-v2">
         <div class="mode-purpose-v2" style="display:flex;align-items:center;gap:5px">
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="7" width="10" height="8" rx="2"/><path d="M5 7V5a3 3 0 016 0v2"/></svg>
@@ -7500,6 +7633,46 @@ function getPaidFieldQuizItems(){
   }).filter(function(it){ return it.url; });
 }
 
+// セット商品（予想模試＋分野別問題集）。url が空なら null（表示しない）。
+function getPaidBundleConfig(){
+  const cfg=(window.SITE_CONFIG&&window.SITE_CONFIG.paidBundle)||null;
+  if(!cfg) return null;
+  const url=String(cfg.url||'').trim();
+  const title=String(cfg.title||'').trim();
+  if(!url||!title) return null;
+  return {
+    url, title,
+    scoreLead: String(cfg.scoreLead||'予想模試＋分野別問題集のセット').trim(),
+    meta: String(cfg.meta||'').trim(),
+    priceLabel: String(cfg.priceLabel||'').trim(),
+    regularPriceLabel: String(cfg.regularPriceLabel||'').trim(),
+    badge: String(cfg.badge||'セット割').trim(),
+  };
+}
+function paidBundleSavingYen(b){
+  const reg=parseInt(String(b.regularPriceLabel||'').replace(/[^0-9]/g,''),10);
+  const price=parseInt(String(b.priceLabel||'').replace(/[^0-9]/g,''),10);
+  return (reg&&price&&reg>price)?reg-price:0;
+}
+function paidBundleStripHtml(b, opts){
+  opts=opts||{};
+  const save=paidBundleSavingYen(b);
+  const label=`${b.title}（有料・note・${b.priceLabel}）`;
+  const priceHtml=(b.priceLabel?`<span class="paid-bundle-price">${escapeHTML(b.priceLabel)}</span>`:'')
+    +(b.regularPriceLabel?`<s class="paid-bundle-regular">単品合計${escapeHTML(b.regularPriceLabel)}</s>`:'')
+    +(save?`<span class="paid-bundle-save">¥${save.toLocaleString('ja-JP')}お得</span>`:'');
+  const badge=b.badge?`<span class="score-paid-mock-strip-badge">${escapeHTML(b.badge)}</span>`:'';
+  const onclick=opts.onclick?` onclick="${opts.onclick}"`:'';
+  return `<a class="score-paid-mock-strip paid-bundle-strip" href="${escapeAttr(b.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeAttr(label)}"${onclick}>`
+    +`<span class="score-paid-mock-strip-tag">有料</span>`
+    +`<span class="score-paid-mock-strip-body">`
+    +`<span class="score-paid-mock-strip-title">${escapeHTML(b.title)}${badge}</span>`
+    +`<span class="score-paid-mock-strip-meta">${b.meta?escapeHTML(b.meta)+' · ':''}${priceHtml}</span>`
+    +`</span>`
+    +`<span class="score-paid-mock-strip-cta">詳細 ↗</span>`
+    +`</a>`;
+}
+
 // 案D：有料模試を1件のテキストCTA（ストリップ）として描画
 // opts.onclick を渡すとクリック計測用の onclick 属性を付与する
 function paidMockStripHtml(it, opts){
@@ -7568,6 +7741,13 @@ function renderTopPromoBanners(){
   const variant=getPromoVariant();
   const parts=[];
   const shown=[]; // [slot, 実際に表示した版] の記録（インプレッション計測用）
+
+  // セット商品（slot: bundle）。url があるときだけ先頭に出す。
+  const bundle=getPaidBundleConfig();
+  if(bundle){
+    parts.push(`<div class="top-paid-mock">${paidBundleStripHtml(bundle,{onclick:"trackPromoClick('bundle','text')"})}</div>`);
+    shown.push(['bundle','text']);
+  }
 
   // 有料模試（slot: mock）
   const paid=getPaidMockExamConfig();
@@ -7675,7 +7855,11 @@ function renderScorePaidMockPromo(opts){
   if(!wrap) return;
   const m=getPaidMockExamConfig();
   const field=getPaidFieldQuizConfig();
-  if(!m.items.length && !field.items.length){
+  const bundle=getPaidBundleConfig();
+  // 計測用の版（通常のセット演習 or 一問一答）
+  const sv=(opts.variant==='ichi')?'ichi':'set';
+  const shown=[];
+  if(!m.items.length && !field.items.length && !bundle){
     wrap.hidden=true;
     wrap.innerHTML='';
     return;
@@ -7689,8 +7873,18 @@ function renderScorePaidMockPromo(opts){
     const note=m.purchaseNote?`<p class="paid-mock-note">${escapeHTML(m.purchaseNote)}</p>`:'';
     html+=`
     <p class="score-paid-mock-lead">${leadHtml}</p>
-    ${paidMockStripListHtml(m.items)}
+    ${paidMockStripListHtml(m.items,{onclick:"trackPromoClick('score_mock','"+sv+"')"})}
     ${note}`;
+    shown.push('score_mock');
+  }
+  // セット商品（予想模試の直後）
+  if(bundle){
+    const save=paidBundleSavingYen(bundle);
+    const blead=`まとめて揃えるなら、<strong>${escapeHTML(bundle.scoreLead)}</strong>${save?`が単品合計より¥${save.toLocaleString('ja-JP')}お得です。`:'もあります。'}`;
+    html+=`
+    <p class="score-paid-mock-lead score-paid-field-lead">${blead}</p>
+    <div class="score-paid-mock-list">${paidBundleStripHtml(bundle,{onclick:"trackPromoClick('score_bundle','"+sv+"')"})}</div>`;
+    shown.push('score_bundle');
   }
   // 分野別問題集
   if(field.items.length){
@@ -7698,13 +7892,17 @@ function renderScorePaidMockPromo(opts){
     const fnote=field.purchaseNote?`<p class="paid-mock-note">${escapeHTML(field.purchaseNote)}</p>`:'';
     html+=`
     <p class="score-paid-mock-lead score-paid-field-lead">${flead}</p>
-    ${paidMockStripListHtml(field.items)}
+    ${paidMockStripListHtml(field.items,{onclick:"trackPromoClick('score_field','"+sv+"')"})}
     ${fnote}`;
+    shown.push('score_field');
   }
   wrap.hidden=false;
   wrap.innerHTML=html;
+  for(let i=0;i<shown.length;i++) trackPromo('impression', shown[i], sv);
 }
 window.renderScorePaidMockPromo=renderScorePaidMockPromo;
+// 本番形式テスト（後段の独立スクリプト）から使う
+window.__paidPromo={getPaidMockExamConfig,getPaidFieldQuizConfig,getPaidBundleConfig,paidMockStripListHtml,paidBundleStripHtml,trackPromo};
 
 // 復習ページ：旧レイアウトで #review-list の外にあった SRS ノードを除去
 function injectReviewEnhancements(){
@@ -7806,6 +8004,536 @@ if(document.readyState==='loading'){
   __bootInit();
 }
 
+})();
+</script>
+<script>
+/* =====================================================================
+   本番形式テスト（無料・#mocktest）
+   - SITE_CONFIG.mockTest がある種だけ表示（II種のみ設定。III種・I種は非表示）
+   - 過去問から分野の比率どおりに questionCount 問を出題し、minutes 分の制限時間で解く
+   - 解答中は正解・解説を出さず、採点後に100点満点の得点・合否の目安・分野別の正答率を表示
+   - 結果画面で得点の帯（fail / border / pass）に応じて有料の予想模試・問題集・セットへ誘導
+   - GA4: mocktest_start / mocktest_resume / mocktest_submit、promo_impression / promo_click
+     （promo_slot=mocktest_bundle|mocktest_mock|mocktest_field、promo_variant=得点の帯）
+   ===================================================================== */
+(function(){
+  const CFG=(window.SITE_CONFIG&&window.SITE_CONFIG.mockTest)||null;
+  const STATE_KEY='mocktest_state_v1';
+  const HIST_KEY='mocktest_history_v1';
+  function enabled(){ return !!(CFG && CFG.questionCount>0 && CFG.minutes>0); }
+
+  const card=document.getElementById('mode-mocktest-card');
+  if(!enabled()){
+    if(card) card.remove();
+    const mtPage=document.getElementById('page-mocktest');
+    if(mtPage) mtPage.remove();
+    // #mocktest で直接来た場合はトップへ
+    const _g=window.gotoPage;
+    window.gotoPage=function(id,opts){ return _g.call(this,id==='mocktest'?'quiz-start':id,opts); };
+    return;
+  }
+  if(card){
+    card.hidden=false;
+    const meta=card.querySelector('[data-mt-meta]');
+    if(meta) meta.textContent=CFG.questionCount+'問・'+CFG.minutes+'分・'+CFG.maxScore+'点満点で採点';
+  }
+
+  // SPA の画面タイトル・SEO（ハッシュ #mocktest）
+  try{
+    PAGE_TITLES.mocktest=CFG.title;
+    PAGE_SEO.mocktest=_pageSeo(
+      CFG.title+'（'+CFG.questionCount+'問・'+CFG.minutes+'分）',
+      '{exam}の過去問から本番と同じ'+CFG.questionCount+'問を出題し、'+CFG.minutes+'分で解く無料の'+CFG.title+'。'+CFG.maxScore+'点満点の得点と合格点（'+CFG.passScore+'点）に届くか、分野別の正答率がわかります。',
+      '/#mocktest','#mocktest'
+    );
+  }catch(_e){}
+
+  function lsGet(k){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):null; }catch(_e){ return null; } }
+  function lsSet(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(_e){} }
+  function lsDel(k){ try{ localStorage.removeItem(k); }catch(_e){} }
+  function ga(name,params){ try{ if(typeof window.gtag==='function') window.gtag('event',name,params||{}); }catch(_e){} }
+  function root(){ return document.getElementById('mt-root'); }
+  function pageActive(){ const p=document.getElementById('page-mocktest'); return !!(p&&p.classList.contains('active')); }
+  function limitMs(){ return CFG.minutes*60000; }
+  function fieldName(id){ const f=FIELDS.find(x=>x.id===id); return f?f.name:(id||'—'); }
+  function yen(n){ return '¥'+Number(n).toLocaleString('ja-JP'); }
+
+  const mt={view:'intro',qs:[],answers:[],flags:[],idx:0,usedMs:0,lastTick:0,timer:null,startedAt:0,result:null,paletteOpen:false};
+
+  // ---- 出題 ----
+  function pool(){
+    const all=(typeof QUESTIONS!=='undefined'&&Array.isArray(QUESTIONS))?QUESTIONS:[];
+    return all.filter(q=>q&&Array.isArray(q.opts)&&q.opts.length>1&&typeof q.ans==='number'&&!isCsvPracticePoolQuestion(q));
+  }
+  // 分野ごとの出題数（最大剰余法で questionCount 問を各分野の過去問の比率に配分）
+  function fieldQuota(p,n){
+    const by={};
+    p.forEach(q=>{ (by[q.field]=by[q.field]||[]).push(q); });
+    const ids=FIELDS.map(f=>f.id).filter(id=>by[id]).concat(Object.keys(by).filter(id=>!FIELDS.some(f=>f.id===id)));
+    const qs=ids.map(id=>{ const exact=n*by[id].length/p.length; return {id,n:Math.floor(exact),rem:exact-Math.floor(exact)}; });
+    let left=n-qs.reduce((a,b)=>a+b.n,0);
+    qs.slice().sort((a,b)=>b.rem-a.rem).forEach(q=>{ if(left>0){ q.n++; left--; } });
+    return {by,qs};
+  }
+  function pickQuestions(){
+    const p=pool();
+    const n=Math.min(CFG.questionCount,p.length);
+    const {by,qs}=fieldQuota(p,n);
+    const out=[];
+    // 本番と同じく分野（公式テキストの章）順に並べ、分野内は問題番号順
+    qs.forEach(qt=>{
+      const picked=shuffleArray(by[qt.id]).slice(0,qt.n);
+      picked.sort((a,b)=>(a.num||0)-(b.num||0)||String(a.id).localeCompare(String(b.id)));
+      out.push(...picked);
+    });
+    return out;
+  }
+
+  // ---- 途中保存・再開 ----
+  function save(){
+    if(mt.view!=='exam') return;
+    lsSet(STATE_KEY,{v:1,ids:mt.qs.map(q=>q.id),answers:mt.answers,flags:mt.flags,idx:mt.idx,usedMs:Math.round(mt.usedMs),startedAt:mt.startedAt});
+  }
+  function loadSaved(){
+    const s=lsGet(STATE_KEY);
+    if(!s||!Array.isArray(s.ids)||!s.ids.length) return null;
+    const qs=s.ids.map(id=>findQuestionById(id)).filter(Boolean);
+    if(qs.length!==s.ids.length) return null;
+    if(!(Number(s.usedMs)<limitMs())) return null;
+    return {
+      qs,
+      answers:qs.map((_,i)=>(Array.isArray(s.answers)&&typeof s.answers[i]==='number')?s.answers[i]:null),
+      flags:qs.map((_,i)=>!!(Array.isArray(s.flags)&&s.flags[i])),
+      idx:Math.min(Math.max(0,Number(s.idx)||0),qs.length-1),
+      usedMs:Number(s.usedMs)||0,
+      startedAt:Number(s.startedAt)||Date.now()
+    };
+  }
+  function history(){ const h=lsGet(HIST_KEY); return Array.isArray(h)?h:[]; }
+
+  // ---- 時間 ----
+  // 画面を開いている間だけ時間を数える（閉じている間・別画面にいる間は止まる）。
+  function startTimer(){
+    stopTimer();
+    mt.lastTick=Date.now();
+    mt.timer=setInterval(tick,1000);
+  }
+  function stopTimer(){
+    if(mt.timer) clearInterval(mt.timer);
+    mt.timer=null;
+    mt.lastTick=0;
+  }
+  let _saveCounter=0;
+  function tick(){
+    const now=Date.now();
+    if(mt.view!=='exam'||!pageActive()){ stopTimer(); return; }
+    if(document.hidden){ mt.lastTick=now; return; }
+    if(mt.lastTick) mt.usedMs+=Math.min(Math.max(0,now-mt.lastTick),5000);
+    mt.lastTick=now;
+    updateClock();
+    if((++_saveCounter)%10===0) save();
+    if(mt.usedMs>=limitMs()) submit('timeup');
+  }
+  function fmtRemain(ms){
+    const s=Math.max(0,Math.ceil(ms/1000));
+    const h=Math.floor(s/3600), m=Math.floor(s%3600/60), sec=s%60;
+    return (h?h+':'+String(m).padStart(2,'0'):String(m))+':'+String(sec).padStart(2,'0');
+  }
+  function updateClock(){
+    const el=document.getElementById('mt-clock');
+    if(!el) return;
+    const remain=limitMs()-mt.usedMs;
+    el.textContent='残り '+fmtRemain(remain);
+    el.classList.toggle('mt-clock--warn',remain<=10*60000);
+  }
+
+  // ---- 画面: 説明 ----
+  function renderIntro(){
+    mt.view='intro';
+    document.body.classList.remove('is-solving');
+    const saved=loadSaved();
+    const p=pool();
+    const n=Math.min(CFG.questionCount,p.length);
+    const {qs}=fieldQuota(p,n);
+    const pp=n?CFG.maxScore/n:0;
+    const dist=qs.map(q=>escapeHTML(fieldName(q.id))+' '+q.n+'問').join('・');
+    const hist=history().slice(-5).reverse();
+    let resumeHtml='';
+    if(saved){
+      const answered=saved.answers.filter(a=>a!=null).length;
+      resumeHtml=`<div class="mt-resume">
+        <p class="mt-resume-text">解答途中のテストがあります（${answered} / ${saved.qs.length}問 解答済み・残り${fmtRemain(limitMs()-saved.usedMs)}）。</p>
+        <div class="score-btns">
+          <button type="button" class="btn-primary" onclick="mtResume()">続きから再開する</button>
+          <button type="button" class="btn-ghost" onclick="mtDiscardAndStart()">破棄して新しく始める</button>
+        </div>
+      </div>`;
+    }
+    const histHtml=hist.length?`<div class="mt-history">
+        <div class="section-label">これまでの結果（この端末）</div>
+        <ul class="mt-history-list">${hist.map(h=>{
+          const d=new Date(h.date);
+          const ok=h.score>=CFG.passScore;
+          return `<li><span class="mt-history-date">${d.getMonth()+1}/${d.getDate()}</span><span class="mt-history-score ${ok?'is-pass':'is-fail'}">${h.score}点</span><span class="mt-history-verdict">${ok?'合格点以上':'合格点未満'}</span></li>`;
+        }).join('')}</ul>
+      </div>`:'';
+    root().innerHTML=`
+      <h2 class="page-title">${escapeHTML(CFG.title)}<span class="mt-free-tag">無料</span></h2>
+      <div class="page-sub">本番と同じ${CFG.questionCount}問・${CFG.minutes}分で、合格点（${CFG.passScore}点）に届くかを測ります。</div>
+      <dl class="mt-facts">
+        <div><dt>問題数</dt><dd>${n}問（過去問${p.length}問から毎回ちがう組み合わせで出題）</dd></div>
+        <div><dt>分野の内訳</dt><dd>${dist}（過去問の分野の比率どおり）</dd></div>
+        <div><dt>制限時間</dt><dd>${CFG.minutes}分</dd></div>
+        <div><dt>配点</dt><dd>1問${Number.isInteger(pp)?pp:pp.toFixed(1)}点・${CFG.maxScore}点満点</dd></div>
+        <div><dt>合格の目安</dt><dd>${CFG.passScore}点以上</dd></div>
+      </dl>
+      <ul class="mt-notes">
+        <li>解いている間は正解・解説を表示しません。採点後にまとめて確認できます。</li>
+        <li>前の問題に戻って解答を変えられます。迷った問題には「見直し」の印を付けられます。</li>
+        <li>途中で画面を閉じても、この端末に保存され、続きから再開できます（閉じている間は時間を数えません）。</li>
+      </ul>
+      ${resumeHtml||`<div class="score-btns"><button type="button" class="btn-primary mt-start-btn" onclick="mtStart()">テストを始める</button></div>`}
+      ${histHtml}`;
+  }
+
+  // ---- 画面: 解答 ----
+  function renderExam(){
+    document.body.classList.add('is-solving');
+    const q=mt.qs[mt.idx], n=mt.qs.length;
+    if(!q){ renderIntro(); return; }
+    const answered=mt.answers.filter(a=>a!=null).length;
+    const picked=mt.answers[mt.idx];
+    const isLast=mt.idx===n-1;
+    root().innerHTML=`
+      <div class="mt-bar" id="mt-bar">
+        <span class="mt-clock" id="mt-clock"></span>
+        <span class="mt-progress">解答 ${answered} / ${n}</span>
+        <button type="button" class="btn-ghost mt-bar-btn" onclick="mtTogglePalette()" aria-expanded="${mt.paletteOpen?'true':'false'}" aria-controls="mt-palette">問題一覧</button>
+        <button type="button" class="btn-primary mt-bar-btn" onclick="mtConfirmSubmit()">採点する</button>
+      </div>
+      <div class="mt-palette" id="mt-palette"${mt.paletteOpen?'':' hidden'}>
+        <div class="mt-palette-legend"><span class="mt-lg mt-lg--done">解答済み</span><span class="mt-lg mt-lg--flag">見直し</span><span class="mt-lg">未解答</span></div>
+        <div class="mt-palette-grid">${mt.qs.map((_,i)=>{
+          const cls=['mt-pal-btn'];
+          if(mt.answers[i]!=null) cls.push('is-done');
+          if(mt.flags[i]) cls.push('is-flag');
+          if(i===mt.idx) cls.push('is-current');
+          return `<button type="button" class="${cls.join(' ')}" onclick="mtGo(${i})" aria-label="問${i+1}${mt.answers[i]!=null?'（解答済み）':'（未解答）'}${mt.flags[i]?'（見直し）':''}">${i+1}</button>`;
+        }).join('')}</div>
+      </div>
+      <div class="q-card">
+        <div class="mt-qhead">
+          <span class="mt-qnum">問${mt.idx+1}<span class="mt-qnum-total"> / ${n}</span></span>
+          <span class="q-meta-item q-meta-field"><span class="q-meta-label">${escapeHTML(fieldName(q.field))}</span></span>
+          <label class="mt-flag"><input type="checkbox" ${mt.flags[mt.idx]?'checked':''} onchange="mtToggleFlag(this.checked)"> 見直し</label>
+        </div>
+        <div class="q-text" id="mt-qtext"></div>
+      </div>
+      <div class="opts-list" role="radiogroup" aria-label="選択肢">${q.opts.map((o,i)=>
+        `<div class="opt mt-opt${picked===i?' is-selected':''}" role="radio" tabindex="0" aria-checked="${picked===i?'true':'false'}" onclick="mtPick(${i})" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();mtPick(${i});}"><span class="opt-num">${i+1}</span><span>${o}</span></div>`
+      ).join('')}</div>
+      <div class="mt-nav">
+        <button type="button" class="btn-ghost" onclick="mtGo(${mt.idx-1})"${mt.idx===0?' disabled':''}>← 前へ</button>
+        ${isLast
+          ?`<button type="button" class="btn-primary" onclick="mtConfirmSubmit()">採点する</button>`
+          :`<button type="button" class="btn-primary" onclick="mtGo(${mt.idx+1})">次へ →</button>`}
+      </div>
+      <p class="mt-key-hint">キーボード: 1〜${q.opts.length} で選択、← → で移動</p>`;
+    document.getElementById('mt-qtext').textContent=formatExamQuestionBodyText(q.text||'');
+    const nav=document.querySelector('.topnav');
+    const bar=document.getElementById('mt-bar');
+    if(bar&&nav) bar.style.top=(nav.getBoundingClientRect().height||0)+'px';
+    updateClock();
+  }
+
+  function begin(state){
+    mt.qs=state.qs; mt.answers=state.answers; mt.flags=state.flags; mt.idx=state.idx;
+    mt.usedMs=state.usedMs; mt.startedAt=state.startedAt; mt.result=null; mt.view='exam'; mt.paletteOpen=false;
+    save();
+    renderExam();
+    window.scrollTo(0,0);
+    startTimer();
+  }
+  window.mtStart=function(){
+    const qs=pickQuestions();
+    if(!qs.length){ alert('出題できる問題がありません。'); return; }
+    lsDel(STATE_KEY);
+    begin({qs,answers:qs.map(()=>null),flags:qs.map(()=>false),idx:0,usedMs:0,startedAt:Date.now()});
+    ga('mocktest_start',{question_count:qs.length,minutes:CFG.minutes});
+  };
+  window.mtResume=function(){
+    const s=loadSaved();
+    if(!s){ window.mtStart(); return; }
+    begin(s);
+    ga('mocktest_resume',{answered:s.answers.filter(a=>a!=null).length});
+  };
+  window.mtDiscardAndStart=function(){
+    if(!confirm('解答途中のテストを破棄して、新しい問題で始めますか？')) return;
+    lsDel(STATE_KEY);
+    window.mtStart();
+  };
+  window.mtPick=function(i){
+    if(mt.view!=='exam') return;
+    mt.answers[mt.idx]=i;
+    save();
+    renderExam();
+  };
+  window.mtGo=function(i){
+    if(mt.view!=='exam'||i<0||i>=mt.qs.length) return;
+    mt.idx=i;
+    save();
+    renderExam();
+    window.scrollTo({top:0,behavior:'instant'});
+  };
+  window.mtToggleFlag=function(on){
+    if(mt.view!=='exam') return;
+    mt.flags[mt.idx]=!!on;
+    save();
+    renderExam();
+  };
+  window.mtTogglePalette=function(){
+    mt.paletteOpen=!mt.paletteOpen;
+    renderExam();
+  };
+  window.mtConfirmSubmit=function(){
+    if(mt.view!=='exam') return;
+    const blank=mt.answers.filter(a=>a==null).length;
+    const flagged=mt.flags.filter(Boolean).length;
+    const parts=[];
+    if(blank) parts.push('未解答が'+blank+'問');
+    if(flagged) parts.push('見直しの印が'+flagged+'問');
+    const msg=parts.length?parts.join('、')+'あります。採点しますか？（未解答は不正解になります）':'採点しますか？';
+    if(!confirm(msg)) return;
+    submit('manual');
+  };
+
+  // ---- 採点 ----
+  function submit(reason){
+    if(mt.view!=='exam') return;
+    stopTimer();
+    const n=mt.qs.length;
+    let correct=0, answered=0;
+    const byField={};
+    mt.qs.forEach((q,i)=>{
+      const a=mt.answers[i];
+      const f=byField[q.field]=byField[q.field]||{id:q.field,total:0,correct:0};
+      f.total++;
+      if(a!=null) answered++;
+      if(a===q.ans){ correct++; f.correct++; }
+    });
+    const score=n?Math.round(correct*CFG.maxScore/n):0;
+    const fields=FIELDS.map(f=>byField[f.id]).filter(Boolean)
+      .concat(Object.values(byField).filter(f=>!FIELDS.some(x=>x.id===f.id)));
+    fields.forEach(f=>{ f.pct=f.total?Math.round(f.correct/f.total*100):0; });
+    const weakest=fields.slice().sort((a,b)=>a.pct-b.pct||b.total-a.total)[0]||null;
+    const usedMin=Math.max(1,Math.round(mt.usedMs/60000));
+    mt.result={score,correct,answered,total:n,fields,weakest:weakest?weakest.id:'',reason,usedMin,date:Date.now()};
+    mt.view='result';
+    lsDel(STATE_KEY);
+    const h=history(); h.push({date:mt.result.date,score,correct,total:n}); lsSet(HIST_KEY,h.slice(-20));
+
+    // 学習記録（ダッシュボード・復習に反映）
+    try{
+      const u=getUserData();
+      if(u){
+        const now=Date.now();
+        const per=answered?mt.usedMs/1000/answered:0;
+        mt.qs.forEach((q,i)=>{
+          const a=mt.answers[i];
+          if(a==null) return;
+          u.answers[q.id]={ans:a,time:per,date:now};
+          bumpDailyAnswerAttemptCount(u);
+          saveAnswerToSupabase(q,a,a===q.ans,per);
+        });
+        u.sessions=u.sessions||[];
+        u.sessions.push({date:now,correct,total:n,pct:n?Math.round(correct/n*100):0,mode:'mock'});
+        saveUser(u);
+      }
+    }catch(_e){}
+
+    ga('mocktest_submit',{score,passed:score>=CFG.passScore?1:0,correct,answered,total:n,minutes_used:usedMin,reason});
+    document.body.classList.remove('is-solving');
+    renderResult(true);
+    window.scrollTo(0,0);
+  }
+
+  function band(score){
+    if(score<CFG.passScore) return 'fail';
+    if(score<CFG.passScore+10) return 'border';
+    return 'pass';
+  }
+
+  function ctaHtml(r){
+    const api=window.__paidPromo;
+    if(!api) return '';
+    const b=band(r.score);
+    const bundle=api.getPaidBundleConfig();
+    const mock=api.getPaidMockExamConfig();
+    const field=api.getPaidFieldQuizConfig();
+    const pp=r.total?CFG.maxScore/r.total:1;
+    const weakName=r.weakest?fieldName(r.weakest):'';
+    let lead='';
+    if(b==='fail'){
+      const gap=CFG.passScore-r.score;
+      lead=`合格点（${CFG.passScore}点）まで<strong>あと${gap}点（${Math.ceil(gap/pp)}問）</strong>です。`
+        +(weakName?`正答率が最も低かった「${escapeHTML(weakName)}」を分野別問題集で補強し、`:'弱点の分野を分野別問題集で補強し、')
+        +`本番前に<strong>予想模試3回分</strong>で${CFG.passScore}点を超えるか確かめましょう。`;
+    }else if(b==='border'){
+      lead=`合格点付近です。このテストは過去問から出題しているため、解いたことのある問題も含まれます。`
+        +`<strong>初めて見る問題でも${CFG.passScore}点を取れるか</strong>、本番想定の予想模試3回分で確かめましょう。`;
+    }else{
+      lead=`合格圏です。ただし、このテストには解いたことのある過去問も含まれます。`
+        +`<strong>初めて見る問題でも同じ点を取れるか</strong>、本番想定の予想模試3回分で仕上げましょう。`;
+    }
+    const blocks=[];
+    function strip(kind,html){ blocks.push({kind,html}); }
+    const oc=kind=>({onclick:`trackPromoClick('mocktest_${kind}','${b}')`});
+    const mockHtml=mock.items.length?api.paidMockStripListHtml(mock.items,oc('mock')):'';
+    const fieldHtml=field.items.length?api.paidMockStripListHtml(field.items,oc('field')):'';
+    const bundleHtml=bundle?api.paidBundleStripHtml(bundle,oc('bundle')):'';
+    if(b==='fail'){
+      if(bundleHtml) strip('bundle',bundleHtml);
+      if(fieldHtml) strip('field',fieldHtml);
+      if(mockHtml) strip('mock',mockHtml);
+    }else{
+      if(mockHtml) strip('mock',mockHtml);
+      if(bundleHtml) strip('bundle',bundleHtml);
+      else if(fieldHtml) strip('field',fieldHtml);
+    }
+    if(!blocks.length) return '';
+    setTimeout(function(){ blocks.forEach(x=>api.trackPromo('impression','mocktest_'+x.kind,b)); },0);
+    return `<div class="mt-cta">
+      <p class="score-paid-mock-lead">${lead}</p>
+      <div class="score-paid-mock-list">${blocks.map(x=>x.html).join('')}</div>
+      <p class="paid-mock-note">※ note で販売する有料コンテンツです。サイト内の無料演習とは別商品です。</p>
+    </div>`;
+  }
+
+  function renderResult(fresh){
+    const r=mt.result;
+    if(!r){ mt.view='intro'; renderIntro(); return; }
+    document.body.classList.remove('is-solving');
+    const b=band(r.score);
+    const diff=r.score-CFG.passScore;
+    const verdict=diff>=0
+      ?`合格点（${CFG.passScore}点）を<strong>${diff}点</strong>上回りました`
+      :`合格点（${CFG.passScore}点）まで<strong>あと${-diff}点</strong>です`;
+    const wrongCount=r.total-r.correct;
+    const fieldRows=r.fields.map(f=>`
+      <div class="mt-field-row${f.id===r.weakest&&r.fields.length>1?' is-weak':''}">
+        <div class="mt-field-name">${escapeHTML(fieldName(f.id))}${f.id===r.weakest&&r.fields.length>1?'<span class="mt-weak-tag">最も低い分野</span>':''}</div>
+        <div class="mt-field-bar"><span style="width:${f.pct}%"></span></div>
+        <div class="mt-field-val">${f.correct} / ${f.total}問（${f.pct}%）</div>
+      </div>`).join('');
+    const reviewItems=mt.qs.map((q,i)=>{
+      const a=mt.answers[i];
+      const ok=a===q.ans;
+      const mine=a==null?'未解答':(a+1)+'. '+q.opts[a];
+      return `<details class="mt-review-item ${ok?'is-ok':'is-ng'}">
+        <summary><span class="mt-review-mark">${ok?'○':'×'}</span><span class="mt-review-num">問${i+1}</span><span class="mt-review-text">${escapeHTML(String(q.text||'').slice(0,46))}…</span></summary>
+        <div class="mt-review-body">
+          <div class="q-text">${escapeHTML(formatExamQuestionBodyText(q.text||''))}</div>
+          <p class="mt-review-ans"><span>あなたの解答</span>${mine}</p>
+          <p class="mt-review-ans"><span>正解</span>${q.ans+1}. ${q.opts[q.ans]}</p>
+          <div class="exp-text">${q.exp||''}</div>
+        </div>
+      </details>`;
+    }).join('');
+    root().innerHTML=`
+      <h2 class="page-title">${escapeHTML(CFG.title)}の結果</h2>
+      <div class="mt-score-card mt-score-card--${b}">
+        <div class="mt-score-num">${r.score}<span>点 / ${CFG.maxScore}点</span></div>
+        <div class="mt-verdict">${verdict}</div>
+        <div class="mt-score-sub">正解 ${r.correct} / ${r.total}問・未解答 ${r.total-r.answered}問・解答時間 ${r.usedMin}分</div>
+        ${r.reason==='timeup'?`<div class="mt-score-sub">制限時間（${CFG.minutes}分）になったため、自動で採点しました。</div>`:''}
+      </div>
+      <div class="section-label">分野別の正答率</div>
+      <div class="mt-fields">${fieldRows}</div>
+      ${ctaHtml(r)}
+      <div class="score-btns mt-result-btns">
+        ${wrongCount?`<button type="button" class="btn-primary" onclick="mtRetryWrong()">間違えた${wrongCount}問を復習する</button>`:''}
+        <button type="button" class="btn-ghost" onclick="mtAgain()">もう一度受ける（別の${r.total}問）</button>
+      </div>
+      <details class="score-q-accordion mt-review">
+        <summary class="score-q-accordion-summary">
+          <span class="score-q-accordion-title">解答と解説</span>
+          <span class="score-q-accordion-meta">全${r.total}問</span>
+          <span class="score-q-accordion-chevron" aria-hidden="true">▼</span>
+        </summary>
+        <div class="mt-review-list">${reviewItems}</div>
+      </details>`;
+  }
+
+  window.mtAgain=function(){
+    mt.result=null; mt.view='intro';
+    window.mtStart();
+  };
+  window.mtRetryWrong=function(){
+    const wrong=mt.qs.filter((q,i)=>mt.answers[i]!==q.ans);
+    if(!wrong.length) return;
+    syncMissionPopupBaseline();
+    showNextBtn(false,null);
+    quizState.queue=wrong.slice();
+    quizState.idx=0;
+    quizState.sessionResults=[];
+    quizState.scoreReplayMode=false;
+    quizState.fromReview=false;
+    quizState.mode='past';
+    gotoPage('quiz');
+    renderQ();
+  };
+
+  // ---- 画面遷移 ----
+  function onShow(){
+    if(mt.view==='exam'){ renderExam(); startTimer(); return; }
+    if(mt.view==='result'&&mt.result){ renderResult(); return; }
+    renderIntro();
+  }
+  const _goto=window.gotoPage;
+  window.gotoPage=function(id,opts){
+    if(id!=='mocktest'&&mt.view==='exam'){ save(); stopTimer(); }
+    // 結果画面から離れたら、次に開いたときは説明画面（これまでの結果つき）から始める
+    if(id!=='mocktest'&&mt.view==='result'){ mt.view='intro'; mt.result=null; }
+    const r=_goto.apply(this,arguments);
+    if(id==='mocktest') onShow();
+    return r;
+  };
+  document.addEventListener('visibilitychange',function(){
+    if(mt.view!=='exam') return;
+    if(document.hidden) save();
+    else mt.lastTick=Date.now();
+  });
+  window.addEventListener('pagehide',function(){ if(mt.view==='exam') save(); });
+
+  // キーボード: 1〜9 で選択、← → で前後
+  document.addEventListener('keydown',function(e){
+    if(mt.view!=='exam'||!pageActive()) return;
+    const t=e.target;
+    if(t&&(t.tagName==='TEXTAREA'||t.tagName==='INPUT'||t.isContentEditable)) return;
+    if(e.altKey||e.ctrlKey||e.metaKey) return;
+    const n=parseQuizOptionKey(e);
+    const q=mt.qs[mt.idx];
+    if(n!=null&&q&&n<=q.opts.length){ e.preventDefault(); window.mtPick(n-1); return; }
+    if(e.key==='ArrowRight'){ e.preventDefault(); window.mtGo(mt.idx+1); return; }
+    if(e.key==='ArrowLeft'){ e.preventDefault(); window.mtGo(mt.idx-1); }
+  },true);
+
+  // 通常の採点結果画面に、本番形式テストへの1行導線を出す
+  const _showScore=window.showScore;
+  window.showScore=function(){
+    const r=_showScore.apply(this,arguments);
+    try{
+      const wrap=document.getElementById('score-paid-mock-wrap');
+      if(wrap&&!document.getElementById('score-mocktest-link')){
+        const p=document.createElement('p');
+        p.id='score-mocktest-link';
+        p.className='mt-score-link';
+        p.innerHTML=`<a href="#mocktest" onclick="event.preventDefault();gotoPage('mocktest')">${CFG.questionCount}問・${CFG.minutes}分の${escapeHTML(CFG.title)}（無料）で、合格点に届くか測る →</a>`;
+        wrap.parentNode.insertBefore(p,wrap);
+      }
+    }catch(_e){}
+    return r;
+  };
 })();
 </script>
 <!-- GA4: tools/html_footer.analytics_snippet と同内容（トップ SPA） -->

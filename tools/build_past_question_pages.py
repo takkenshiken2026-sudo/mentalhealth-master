@@ -1024,6 +1024,16 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
         if pages
         else ""
     )
+    # トップの無料「本番形式テスト」（index.html #mocktest）への導線。mockTest を設定した種だけ。
+    from tools.site_config import mock_test as _mock_test
+    _mt = _mock_test()
+    if _mt and pages:
+        print_link_html += (
+            '<p class="q-mocktest-link" style="margin:0 12px 12px;font-size:.9rem">'
+            '<a href="../index.html#mocktest" style="font-weight:600">'
+            f'本番と同じ{_mt["questionCount"]}問・{_mt["minutes"]}分の{html.escape(_mt["title"])}（無料）で、'
+            f'合格点（{_mt["passScore"]}点）に届くか測る →</a></p>'
+        )
 
     return f"""<!DOCTYPE html>
 <html lang="ja">

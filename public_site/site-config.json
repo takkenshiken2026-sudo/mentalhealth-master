@@ -101,7 +101,7 @@
     {
       "id": "apply42",
       "until": "2027-02-04",
-      "html": "<strong style=\"color:var(--accent)\">次回試験</strong> 第42回は2027年3月21日（日）。一般申込は1月22日〜2月4日（コンビニ払いは1月31日まで）。<a href=\"articles/schedule/\">日程・申込方法を見る</a>"
+      "html": "<strong style=\"color:var(--accent)\"><svg class=\"notice-ico\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><rect x=\"3.5\" y=\"5\" width=\"17\" height=\"15.5\" rx=\"1.5\"/><path d=\"M3.5 10h17M8 3v4M16 3v4\"/></svg>次回試験</strong> 第42回は2027年3月21日（日）。一般申込は1月22日〜2月4日（コンビニ払いは1月31日まで）。<a href=\"articles/schedule/\">日程・申込方法を見る</a>"
     }
   ],
   "brandMark": "M",
@@ -376,6 +376,25 @@
         "url": "https://note.com/shikaku_master/n/n918e00d79a84"
       }
     ]
+  },
+  "paidBundle": {
+    "_note": "予想模試＋分野別問題集のセット（note の有料マガジン等）。url を入れるとトップ・採点結果・本番形式テストの結果・過去問一覧などの商品枠の先頭に表示される。url が空のあいだは表示しない。価格は note 側の設定と必ず一致させる。",
+    "scoreLead": "予想模試＋分野別問題集のセット",
+    "title": "メンタルヘルス・マネジメント検定II種 合格セット（予想模試3回分＋分野別問題集）",
+    "meta": "PDF・模試3回分＋問題集120問・解説付き",
+    "priceLabel": "¥1,580",
+    "regularPriceLabel": "¥1,970",
+    "badge": "セット割",
+    "description": "予想模試3回分（¥1,180）と分野別問題集120問（¥790）のセット（¥1,580）。弱点の補強から本番前の総仕上げまでまとめて揃います。",
+    "url": ""
+  },
+  "mockTest": {
+    "_note": "トップの無料「本番形式テスト」（#mocktest）。過去問から分野の比率どおりに出題し、制限時間つきで解いて100点満点で採点する。未設定の種では表示しない。",
+    "title": "本番形式テスト",
+    "questionCount": 50,
+    "minutes": 120,
+    "maxScore": 100,
+    "passScore": 70
   },
   "printSamplePerField": 10,
   "guideIndexPicks": {
