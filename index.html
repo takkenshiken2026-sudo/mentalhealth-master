@@ -7445,6 +7445,19 @@ function getWeakAnalysis(){
   };
 }
 
+// 弱点集中対策の利用計測（GA4）。weak_card_view / weak_open / weak_start / weak_complete
+function trackWeak(name, params){
+  try{ if(typeof window.gtag==='function') window.gtag('event',name,params||{}); }catch(_e){}
+}
+let _weakCardViewAt=0;
+function trackWeakCardView(unlocked, answered){
+  // トップ表示時に同じカードが続けて作り直されるため、1.5秒以内の重複は数えない
+  const now=Date.now();
+  if(now-_weakCardViewAt<1500) return;
+  _weakCardViewAt=now;
+  trackWeak('weak_card_view',{weak_state:unlocked?'unlocked':'locked',answered_total:answered});
+}
+
 function openWeakMode(){
   const overlay=document.getElementById('weak-mode-overlay');
   if(!overlay) return;
@@ -7475,6 +7488,7 @@ function openWeakMode(){
         ${relatedCount>0?`<span style="font-size:12px;background:#e0f2fe;color:#0369a1;border-radius:4px;padding:2px 8px;font-weight:600">関連未解答 ${relatedCount}問</span>`:''}
       </div>`
     :'';
+  trackWeak('weak_open',{weak_pool:totalCount,weak_fields:weakFields.length});
   el.innerHTML=`
   <div style="margin-bottom:14px">${barsHTML}</div>
   ${weakChipsHTML}
@@ -7506,6 +7520,7 @@ function startWeakModeQuiz(){
   quizState.sessionResults=[]; quizState.scoreReplayMode=false;
   quizState.fromReview=false;
   quizState.mode='weak';
+  trackWeak('weak_start',{question_count:quizState.queue.length,weak_pool:weakPool.length});
   if(typeof gotoPage==='function') gotoPage('quiz');
   if(typeof renderQ==='function') renderQ();
 }
@@ -7538,6 +7553,7 @@ function injectQuizStartEnhancements(){
   const u=typeof getUserData==='function'?getUserData():null;
   const total=Object.keys(u?.answers||{}).length;
   const remaining=Math.max(0,WEAK_UNLOCK_COUNT-total);
+  trackWeakCardView(unlocked,total);
   const mtCard=document.getElementById('mode-mocktest-card');
   const weakNum=(mtCard&&!mtCard.hidden)?'05':'04';
 
@@ -7956,6 +7972,19 @@ window.gotoPage=function(id){
 // 既存showScoreにフック（30問達成直後の再描画）
 const _origShowScore2=window.showScore;
 window.showScore=function(){
+  try{
+    if(typeof quizState!=='undefined' && quizState.mode==='weak' && !quizState.fromReview){
+      const res=quizState.sessionResults||[];
+      const correct=res.filter(r=>r.correct).length;
+      trackWeak('weak_complete',{
+        answered:res.length,
+        question_count:(quizState.queue||[]).length,
+        correct,
+        pct:res.length?Math.round(correct/res.length*100):0,
+        finished:res.length>=(quizState.queue||[]).length?1:0
+      });
+    }
+  }catch(_e){}
   if(_origShowScore2) _origShowScore2.apply(this,arguments);
   renderScorePaidMockPromo();
 };
