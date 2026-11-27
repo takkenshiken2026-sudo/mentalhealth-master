@@ -2,7 +2,7 @@
  * 方針: 同一オリジンGETのみ対象。HTMLはネットワーク優先、静的はSWR。
  * 別オリジン(広告/解析/フォント/Supabase)には介入しない。
  */
-const CACHE = 'mhm-pwa-v6';
+const CACHE = 'mhm-pwa-v7-ca1013a5d9';
 const CORE = ["/", "/index.html", "/site-pages.css", "/site-theme.css", "/seo-editorial.css", "/site-q-index.js", "/site-config.js", "/exam-site-data-past.js", "/exam-site-data-practice.js", "/exam-site-data-ichimondou.js", "/assets/brand/icon-192.png"];
 
 self.addEventListener('install', (event) => {
@@ -40,6 +40,22 @@ self.addEventListener('fetch', (event) => {
       } catch (e) {
         const cached = (await caches.match(req)) || (await caches.match('/index.html')) || (await caches.match('/'));
         return cached || Response.error();
+      }
+    })());
+    return;
+  }
+
+  // 設定ファイル: ネットワーク優先（HTMLとの版ずれ防止）・失敗時のみキャッシュ
+  if (/\/site-config\.js$/.test(url.pathname)) {
+    event.respondWith((async () => {
+      try {
+        const net = await fetch(req, { cache: 'no-cache' });
+        if (net && net.status === 200) {
+          try { const c = await caches.open(CACHE); c.put(req, net.clone()); } catch (e) {}
+        }
+        return net;
+      } catch (e) {
+        return (await caches.match(req)) || Response.error();
       }
     })());
     return;

@@ -12,13 +12,17 @@
 - HTML ナビゲーションは「ネットワーク優先・失敗時のみキャッシュ」。
   → オンライン時は常に最新を配信し、古い内容に固定されない。オフライン時だけ学習を継続できる。
 - 静的アセット(CSS/JS/画像)は stale-while-revalidate（即表示＋裏で更新）。
-- バージョン更新時に古いキャッシュを確実に破棄する。
+- ただし site-config.js はネットワーク優先。HTML（最新）と設定（古い保存分）の版ずれで、
+  新機能の設定が読めずに表示されない不具合を防ぐ（数KBなので毎回の確認でも負担は小さい）。
+- キャッシュ名に公開物（CORE_PRECACHE）の内容のハッシュを含める。中身が変わった公開では sw.js も
+  変わるため、ブラウザが新しい SW を入れ、古いキャッシュを破棄し、ページを1回だけ自動で再読み込みする。
 
 build_all.py から inject_adsense_head の後に呼び出す（生成 HTML を含む全ページへ反映）。
 """
 
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -35,7 +39,8 @@ from tools.site_config import (  # noqa: E402
 )
 
 # SW のキャッシュ世代。sw.js の中身や precache 対象を変えたら上げる。
-PWA_CACHE_VERSION = "v6"
+# 実際のキャッシュ名は「世代＋公開物の内容ハッシュ」（core_content_hash）なので、内容の更新だけなら上げなくてよい。
+PWA_CACHE_VERSION = "v7"
 
 PWA_HEAD_MARKER_START = "<!--PWA_HEAD-->"
 PWA_HEAD_MARKER_END = "<!--/PWA_HEAD-->"
@@ -104,8 +109,25 @@ def build_manifest() -> str:
     return json.dumps(data, ensure_ascii=False, indent=2) + "\n"
 
 
-def build_service_worker() -> str:
-    cache = f"mhm-pwa-{PWA_CACHE_VERSION}"
+def core_content_hash() -> str:
+    """CORE_PRECACHE の公開物（ルート直下のファイル）の内容から短いハッシュを作る。"""
+    h = hashlib.sha256()
+    seen: set[str] = set()
+    for url in CORE_PRECACHE:
+        rel = "index.html" if url == "/" else url.lstrip("/")
+        if rel in seen:
+            continue
+        seen.add(rel)
+        path = ROOT / rel
+        h.update(rel.encode("utf-8") + b"\0")
+        if path.is_file():
+            h.update(path.read_bytes())
+        h.update(b"\0")
+    return h.hexdigest()[:10]
+
+
+def build_service_worker(content_hash: str = "") -> str:
+    cache = f"mhm-pwa-{PWA_CACHE_VERSION}" + (f"-{content_hash}" if content_hash else "")
     core = json.dumps(CORE_PRECACHE, ensure_ascii=False)
     return f"""/* Service Worker（自動生成: tools/build_pwa.py）
  * 方針: 同一オリジンGETのみ対象。HTMLはネットワーク優先、静的はSWR。
@@ -149,6 +171,22 @@ self.addEventListener('fetch', (event) => {{
       }} catch (e) {{
         const cached = (await caches.match(req)) || (await caches.match('/index.html')) || (await caches.match('/'));
         return cached || Response.error();
+      }}
+    }})());
+    return;
+  }}
+
+  // 設定ファイル: ネットワーク優先（HTMLとの版ずれ防止）・失敗時のみキャッシュ
+  if (/\\/site-config\\.js$/.test(url.pathname)) {{
+    event.respondWith((async () => {{
+      try {{
+        const net = await fetch(req, {{ cache: 'no-cache' }});
+        if (net && net.status === 200) {{
+          try {{ const c = await caches.open(CACHE); c.put(req, net.clone()); }} catch (e) {{}}
+        }}
+        return net;
+      }} catch (e) {{
+        return (await caches.match(req)) || Response.error();
       }}
     }})());
     return;
@@ -223,11 +261,7 @@ def iter_html_files(root: Path) -> list[Path]:
 
 
 def main() -> int:
-    # 1) manifest / sw.js を生成
-    (ROOT / "manifest.webmanifest").write_text(build_manifest(), encoding="utf-8")
-    (ROOT / "sw.js").write_text(build_service_worker(), encoding="utf-8")
-
-    # 2) 全 HTML の <head> に PWA タグを注入
+    # 1) 全 HTML の <head> に PWA タグを注入
     updated = 0
     for path in iter_html_files(ROOT):
         old = path.read_text(encoding="utf-8")
@@ -235,7 +269,15 @@ def main() -> int:
         if new != old:
             path.write_text(new, encoding="utf-8")
             updated += 1
-    print(f"build_pwa: manifest.webmanifest / sw.js を生成、{updated} ページに PWA タグを注入")
+
+    # 2) manifest / sw.js を生成（キャッシュ名は注入後の公開物の内容から決める）
+    (ROOT / "manifest.webmanifest").write_text(build_manifest(), encoding="utf-8")
+    content_hash = core_content_hash()
+    (ROOT / "sw.js").write_text(build_service_worker(content_hash), encoding="utf-8")
+    print(
+        f"build_pwa: manifest.webmanifest / sw.js を生成（キャッシュ mhm-pwa-{PWA_CACHE_VERSION}-{content_hash}）、"
+        f"{updated} ページに PWA タグを注入"
+    )
     return 0
 
 
