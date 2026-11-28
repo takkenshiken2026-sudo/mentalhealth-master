@@ -8366,7 +8366,6 @@ if(document.readyState==='loading'){
         <li>解いている間は正解・解説を表示しません。採点後にまとめて確認できます。</li>
         <li>前の問題に戻って解答を変えられます。迷った問題には「見直し」の印を付けられます。</li>
         <li>途中で画面を閉じても、この端末に保存され、続きから再開できます（閉じている間は時間を数えません）。</li>
-        ${LEVEL_MIX.length?'<li>本番よりやや難しめの問題を多く出題します。本番で確実に合格点をとるための確認として、70点を目指してください。</li>':''}
         ${FIXED?'<li>何度受けても同じ問題です。2回目以降は、点数が実力より高く出やすくなります。</li>':''}
       </ul>
       ${resumeHtml||`<div class="score-btns"><button type="button" class="btn-primary mt-start-btn" onclick="mtStart()">テストを始める</button></div>`}
