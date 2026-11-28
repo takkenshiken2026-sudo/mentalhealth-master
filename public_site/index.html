@@ -782,6 +782,7 @@ details.rich-detail summary{display:none}
 .mt-score-link a{color:var(--text);font-weight:700}
 @media(max-width:700px){
   .mt-facts>div{flex-direction:column;gap:2px}
+  .mt-facts dt{flex:none}
   .mt-palette-grid{grid-template-columns:repeat(8,minmax(0,1fr))}
   .mt-pal-btn{padding:8px 0}
   .mt-field-row{grid-template-columns:1fr auto}
@@ -8076,7 +8077,7 @@ if(document.readyState==='loading'){
   if(card){
     card.hidden=false;
     const meta=card.querySelector('[data-mt-meta]');
-    if(meta) meta.textContent=CFG.questionCount+'問・'+CFG.minutes+'分・'+CFG.maxScore+'点満点で採点';
+    if(meta) meta.textContent='実践演習・一問一答と同じ問題から本番形式で出題｜'+CFG.questionCount+'問・'+CFG.minutes+'分・'+CFG.maxScore+'点満点';
   }
   document.querySelectorAll('[data-mt-title]').forEach(function(el){ el.textContent=CFG.title; });
 
@@ -8117,7 +8118,7 @@ if(document.readyState==='loading'){
     PAGE_TITLES.mocktest=CFG.title;
     PAGE_SEO.mocktest=_pageSeo(
       CFG.title+'（'+CFG.questionCount+'問・'+CFG.minutes+'分）',
-      '{exam}の過去問から本番と同じ'+CFG.questionCount+'問を出題し、'+CFG.minutes+'分で解く無料の'+CFG.title+'。'+CFG.maxScore+'点満点の得点と合格点（'+CFG.passScore+'点）に届くか、分野別の正答率がわかります。',
+      '{exam}の実践演習・一問一答と同じ問題から、本番と同じ形式（4択'+CFG.questionCount+'問・'+CFG.minutes+'分）で出題する無料の'+CFG.title+'。'+CFG.maxScore+'点満点の得点と合格点（'+CFG.passScore+'点）に届くか、分野別の正答率がわかります。',
       '/#mocktest','#mocktest'
     );
   }catch(_e){}
@@ -8248,7 +8249,7 @@ if(document.readyState==='loading'){
     const done=answeredTotal(), rest=remainingToUnlock();
     root().innerHTML=`
       <h2 class="page-title">${escapeHTML(CFG.title)}<span class="mt-free-tag">無料</span></h2>
-      <div class="page-sub">本番と同じ${CFG.questionCount}問・${CFG.minutes}分で、合格点（${CFG.passScore}点）に届くかを診断します。</div>
+      <div class="page-sub">実践演習・一問一答で学ぶ問題から、本番と同じ形式（4択${CFG.questionCount}問・${CFG.minutes}分）で出題し、合格点（${CFG.passScore}点）に届くかを診断します。</div>
       <div class="mt-locked">
         <p class="mt-locked-title">${lockIcon()} あと${rest}問解くと受けられます</p>
         <p class="mt-locked-text">${escapeHTML(CFG.title)}は、一問一答・過去問・実践演習で合計${UNLOCK}問以上解いた方が受けられます（現在 ${done}問）。基礎を一通り固めてから受けると、より正確に実力を測れます。</p>
@@ -8295,10 +8296,11 @@ if(document.readyState==='loading'){
       </div>`:'';
     root().innerHTML=`
       <h2 class="page-title">${escapeHTML(CFG.title)}<span class="mt-free-tag">無料</span></h2>
-      <div class="page-sub">本番と同じ${CFG.questionCount}問・${CFG.minutes}分で、合格点（${CFG.passScore}点）に届くかを測ります。</div>
+      <div class="page-sub">実践演習・一問一答で学ぶ問題から、本番と同じ形式（4択${CFG.questionCount}問・${CFG.minutes}分）で出題し、合格点（${CFG.passScore}点）に届くかを測ります。</div>
       <dl class="mt-facts">
-        <div><dt>問題数</dt><dd>${FIXED?`${n}問（過去問${p.length}問から選んだ1回分。何度受けても同じ問題です）`:`${n}問（過去問${p.length}問から毎回ちがう組み合わせで出題）`}</dd></div>
-        <div><dt>分野の内訳</dt><dd>${dist}（過去問の分野の比率どおり）</dd></div>
+        <div><dt>出題元</dt><dd>実践演習・過去問と同じ4択の問題（${p.length}問）。一問一答は、これらの問題の論点を○×形式にしたものです。テストでは本番と同じ4択で出題します。</dd></div>
+        <div><dt>問題数</dt><dd>${FIXED?`${n}問（上の${p.length}問から選んだ1回分。何度受けても同じ問題です）`:`${n}問（上の${p.length}問から毎回ちがう組み合わせで出題）`}</dd></div>
+        <div><dt>分野の内訳</dt><dd>${dist}（出題元の分野の比率どおり）</dd></div>
         <div><dt>制限時間</dt><dd>${CFG.minutes}分</dd></div>
         <div><dt>配点</dt><dd>1問${Number.isInteger(pp)?pp:pp.toFixed(1)}点・${CFG.maxScore}点満点</dd></div>
         <div><dt>合格の目安</dt><dd>${CFG.passScore}点以上</dd></div>
@@ -8659,7 +8661,7 @@ if(document.readyState==='loading'){
         const rest=remainingToUnlock();
         link.innerHTML=rest>0
           ?`<span class="mt-score-link-locked">あと${rest}問解くと、${CFG.questionCount}問・${CFG.minutes}分の${escapeHTML(CFG.title)}（無料）が受けられます</span>`
-          :`<a href="#mocktest" onclick="event.preventDefault();gotoPage('mocktest')">${CFG.questionCount}問・${CFG.minutes}分の${escapeHTML(CFG.title)}（無料）で、合格点に届くか測る →</a>`;
+          :`<a href="#mocktest" onclick="event.preventDefault();gotoPage('mocktest')">実践演習・一問一答と同じ問題から本番形式（${CFG.questionCount}問・${CFG.minutes}分）で出題する${escapeHTML(CFG.title)}（無料）で、合格点に届くか測る →</a>`;
       }
     }catch(_e){}
     return r;
