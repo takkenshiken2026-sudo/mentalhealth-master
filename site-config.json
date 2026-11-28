@@ -390,7 +390,7 @@
   },
   "mockTest": {
     "_note": "トップの無料「本番形式テスト」（#mocktest）。過去問から分野の比率どおりに出題し、制限時間つきで解いて100点満点で採点する。未設定の種では表示しない。enabled を false にすると非公開（入口・過去問一覧のリンク・採点結果のリンクが消え、#mocktest はトップに戻る）。fixedSet が true なら全員同じ問題の1回分（setId から決まる。setId を変えると問題の組み合わせが変わる）。false なら毎回ちがう組み合わせ。unlockAnswers は受験できるようになるまでに解く問題数（一問一答・過去問・実践演習の合計。0 なら制限なし）。",
-    "enabled": true,
+    "enabled": false,
     "title": "実力診断テスト",
     "fixedSet": true,
     "unlockAnswers": 100,
