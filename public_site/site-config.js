@@ -162,5 +162,21 @@ window.SITE_CONFIG = {
         "badge": "基礎固め"
       }
     ]
+  },
+  "mockTest": {
+    "title": "実力診断テスト",
+    "questionCount": 50,
+    "minutes": 120,
+    "maxScore": 100,
+    "passScore": 70,
+    "fixedSet": true,
+    "setId": "line-2027b",
+    "unlockAnswers": 100,
+    "levelMix": {
+      "5": 10,
+      "4": 25,
+      "3": 15
+    },
+    "levelNote": "本番よりやや難しめ（★3〜5の問題で構成。★4・5が7割）"
   }
 };
