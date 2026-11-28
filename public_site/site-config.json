@@ -389,9 +389,11 @@
     "url": ""
   },
   "mockTest": {
-    "_note": "トップの無料「本番形式テスト」（#mocktest）。過去問から分野の比率どおりに出題し、制限時間つきで解いて100点満点で採点する。未設定の種では表示しない。enabled を false にすると非公開（入口・過去問一覧のリンク・採点結果のリンクが消え、#mocktest はトップに戻る）。",
-    "enabled": false,
-    "title": "本番形式テスト",
+    "_note": "トップの無料「本番形式テスト」（#mocktest）。過去問から分野の比率どおりに出題し、制限時間つきで解いて100点満点で採点する。未設定の種では表示しない。enabled を false にすると非公開（入口・過去問一覧のリンク・採点結果のリンクが消え、#mocktest はトップに戻る）。fixedSet が true なら全員同じ問題の1回分（setId から決まる。setId を変えると問題の組み合わせが変わる）。false なら毎回ちがう組み合わせ。",
+    "enabled": true,
+    "title": "実力診断テスト",
+    "fixedSet": true,
+    "setId": "line-2027a",
     "questionCount": 50,
     "minutes": 120,
     "maxScore": 100,

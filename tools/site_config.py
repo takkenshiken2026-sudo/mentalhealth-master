@@ -715,6 +715,9 @@ def mock_test() -> dict | None:
         "minutes": minutes,
         "maxScore": max_score,
         "passScore": pass_score,
+        # true: 全員同じ問題の1回分（setId から決定）。false: 毎回ちがう組み合わせ
+        "fixedSet": bool(raw.get("fixedSet")),
+        "setId": str(raw.get("setId") or "").strip(),
     }
 
 
