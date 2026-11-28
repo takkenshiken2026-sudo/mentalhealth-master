@@ -6,7 +6,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務は判例によって認められてきたもので、現在も法律上の明文規定は存在しない。",
     "correctAnswer": false,
     "exp": "安全配慮義務は2008年施行の労働契約法第5条で明文化され、心の健康も対象と解される。直接の使用者だけでなく、派遣先や元請企業も実質的な指揮命令関係があれば負う場合がある。労働者側の過失があれば過失相殺による減額もある。",
-    "publicPath": "q/ichimon/s/ichi-0001/index.html"
+    "publicPath": "q/ichimon/s/ichi-0001/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0002",
@@ -14,7 +15,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務を負うのは労働契約を直接結んでいる使用者に限られ、派遣先や元請企業が負うことはない。",
     "correctAnswer": false,
     "exp": "安全配慮義務は2008年施行の労働契約法第5条で明文化され、心の健康も対象と解される。直接の使用者だけでなく、派遣先や元請企業も実質的な指揮命令関係があれば負う場合がある。労働者側の過失があれば過失相殺による減額もある。",
-    "publicPath": "q/ichimon/s/ichi-0002/index.html"
+    "publicPath": "q/ichimon/s/ichi-0002/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0003",
@@ -22,7 +24,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務は労働契約法第5条に規定されており、その対象には労働者の心の健康も含まれると解されている。",
     "correctAnswer": true,
     "exp": "安全配慮義務は2008年施行の労働契約法第5条で明文化され、心の健康も対象と解される。直接の使用者だけでなく、派遣先や元請企業も実質的な指揮命令関係があれば負う場合がある。労働者側の過失があれば過失相殺による減額もある。",
-    "publicPath": "q/ichimon/s/ichi-0003/index.html"
+    "publicPath": "q/ichimon/s/ichi-0003/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0004",
@@ -30,7 +33,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務違反による損害賠償では、労働者側の過失を考慮して、過失相殺により賠償額が減額されることがある。",
     "correctAnswer": true,
     "exp": "安全配慮義務は2008年施行の労働契約法第5条で明文化され、心の健康も対象と解される。直接の使用者だけでなく、派遣先や元請企業も実質的な指揮命令関係があれば負う場合がある。労働者側の過失があれば過失相殺による減額もある。",
-    "publicPath": "q/ichimon/s/ichi-0004/index.html"
+    "publicPath": "q/ichimon/s/ichi-0004/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0005",
@@ -38,7 +42,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "セルフケアには、ストレスへの気づきと対処に加え、労働者が自発的に相談することも含まれる。",
     "correctAnswer": true,
     "exp": "事業場内産業保健スタッフ等には、産業医等、衛生管理者等、保健師等、心の健康づくり専門スタッフ、人事労務管理スタッフ、事業場内メンタルヘルス推進担当者が含まれる。セルフケアには自発的な相談も含まれる。事業場外資源を活用する場合も、事業場内の窓口を明確にしておく。",
-    "publicPath": "q/ichimon/s/ichi-0005/index.html"
+    "publicPath": "q/ichimon/s/ichi-0005/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0006",
@@ -46,7 +51,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ラインによるケアでは、管理監督者が職場環境等の把握と改善や、部下からの相談への対応を行う。",
     "correctAnswer": true,
     "exp": "事業場内産業保健スタッフ等には、産業医等、衛生管理者等、保健師等、心の健康づくり専門スタッフ、人事労務管理スタッフ、事業場内メンタルヘルス推進担当者が含まれる。セルフケアには自発的な相談も含まれる。事業場外資源を活用する場合も、事業場内の窓口を明確にしておく。",
-    "publicPath": "q/ichimon/s/ichi-0006/index.html"
+    "publicPath": "q/ichimon/s/ichi-0006/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0007",
@@ -54,7 +60,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "衛生管理者や人事労務管理スタッフは、「事業場内産業保健スタッフ等」には含まれない。",
     "correctAnswer": false,
     "exp": "事業場内産業保健スタッフ等には、産業医等、衛生管理者等、保健師等、心の健康づくり専門スタッフ、人事労務管理スタッフ、事業場内メンタルヘルス推進担当者が含まれる。セルフケアには自発的な相談も含まれる。事業場外資源を活用する場合も、事業場内の窓口を明確にしておく。",
-    "publicPath": "q/ichimon/s/ichi-0007/index.html"
+    "publicPath": "q/ichimon/s/ichi-0007/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0008",
@@ -62,7 +69,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業場外資源によるケアを活用する場合は、事業場内に窓口を設ける必要はなく、相談対応はすべて外部機関に任せればよい。",
     "correctAnswer": false,
     "exp": "事業場内産業保健スタッフ等には、産業医等、衛生管理者等、保健師等、心の健康づくり専門スタッフ、人事労務管理スタッフ、事業場内メンタルヘルス推進担当者が含まれる。セルフケアには自発的な相談も含まれる。事業場外資源を活用する場合も、事業場内の窓口を明確にしておく。",
-    "publicPath": "q/ichimon/s/ichi-0008/index.html"
+    "publicPath": "q/ichimon/s/ichi-0008/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0009",
@@ -70,7 +78,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "NIOSHの職業性ストレスモデルでは、仕事のストレス要因によってストレス反応が生じ、それが持続すると健康障害に至る過程が示されている。",
     "correctAnswer": true,
     "exp": "NIOSHの職業性ストレスモデルでは、仕事のストレス要因によってストレス反応が生じ、持続すると健康障害に至る。個人的要因・仕事以外の要因・緩衝要因（上司・同僚・家族の支援）が影響する。要求度とコントロールの2軸はカラセックのモデル。",
-    "publicPath": "q/ichimon/s/ichi-0009/index.html"
+    "publicPath": "q/ichimon/s/ichi-0009/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0010",
@@ -78,7 +87,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "NIOSHの職業性ストレスモデルでは、上司・同僚・家族からの支援は、ストレス反応への影響を和らげる緩衝要因とされている。",
     "correctAnswer": true,
     "exp": "NIOSHの職業性ストレスモデルでは、仕事のストレス要因によってストレス反応が生じ、持続すると健康障害に至る。個人的要因・仕事以外の要因・緩衝要因（上司・同僚・家族の支援）が影響する。要求度とコントロールの2軸はカラセックのモデル。",
-    "publicPath": "q/ichimon/s/ichi-0010/index.html"
+    "publicPath": "q/ichimon/s/ichi-0010/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0011",
@@ -86,7 +96,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "NIOSHの職業性ストレスモデルでは、家庭からの要求などの仕事以外の要因は扱われていない。",
     "correctAnswer": false,
     "exp": "NIOSHの職業性ストレスモデルでは、仕事のストレス要因によってストレス反応が生じ、持続すると健康障害に至る。個人的要因・仕事以外の要因・緩衝要因（上司・同僚・家族の支援）が影響する。要求度とコントロールの2軸はカラセックのモデル。",
-    "publicPath": "q/ichimon/s/ichi-0011/index.html"
+    "publicPath": "q/ichimon/s/ichi-0011/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0012",
@@ -94,7 +105,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "NIOSHの職業性ストレスモデルは、仕事の要求度とコントロールの2つの軸の組合せだけで健康障害のリスクを説明するモデルである。",
     "correctAnswer": false,
     "exp": "NIOSHの職業性ストレスモデルでは、仕事のストレス要因によってストレス反応が生じ、持続すると健康障害に至る。個人的要因・仕事以外の要因・緩衝要因（上司・同僚・家族の支援）が影響する。要求度とコントロールの2軸はカラセックのモデル。",
-    "publicPath": "q/ichimon/s/ichi-0012/index.html"
+    "publicPath": "q/ichimon/s/ichi-0012/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0013",
@@ -102,7 +114,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事のストレス判定図は、個人のストレス状態を診断するためのツールであり、集団分析には使用できない。",
     "correctAnswer": false,
     "exp": "仕事のストレス判定図は、量－コントロール判定図と職場の支援判定図からなり、全国平均を100とした健康リスクで集団のストレスの程度を比較できる。集団分析に用いるもので、個人の診断用ではない。ストレスチェックでこの調査票の使用は義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0013/index.html"
+    "publicPath": "q/ichimon/s/ichi-0013/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0014",
@@ -110,7 +123,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事のストレス判定図は、「仕事の量的負担」「仕事のコントロール」「上司や同僚の支援」の尺度から、職場（集団）のストレスの程度を評価するツールである。",
     "correctAnswer": true,
     "exp": "仕事のストレス判定図は、量－コントロール判定図と職場の支援判定図からなり、全国平均を100とした健康リスクで集団のストレスの程度を比較できる。集団分析に用いるもので、個人の診断用ではない。ストレスチェックでこの調査票の使用は義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0014/index.html"
+    "publicPath": "q/ichimon/s/ichi-0014/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0015",
@@ -118,7 +132,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事のストレス判定図の結果が「高ストレス」であれば、本人の申出がなくても、事業者は医師の面接指導を行わなければならない。",
     "correctAnswer": false,
     "exp": "仕事のストレス判定図は、量－コントロール判定図と職場の支援判定図からなり、全国平均を100とした健康リスクで集団のストレスの程度を比較できる。集団分析に用いるもので、個人の診断用ではない。ストレスチェックでこの調査票の使用は義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0015/index.html"
+    "publicPath": "q/ichimon/s/ichi-0015/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0016",
@@ -126,39 +141,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事のストレス判定図では、全国平均を100とした健康リスクにより、集団のストレスの程度を比較できる。",
     "correctAnswer": true,
     "exp": "仕事のストレス判定図は、量－コントロール判定図と職場の支援判定図からなり、全国平均を100とした健康リスクで集団のストレスの程度を比較できる。集団分析に用いるもので、個人の診断用ではない。ストレスチェックでこの調査票の使用は義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0016/index.html"
+    "publicPath": "q/ichimon/s/ichi-0016/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0017",
     "field": "limit",
-    "statement": "部下から「死にたい」と打ち明けられたときは、「冗談でもそんなことを言ってはいけない」とたしなめ、気持ちを切り替えさせる。",
+    "statement": "TALKの原則のTellとは、聴き手自身が困難を乗り越えた体験を話し、つらい状況は必ず乗り越えられると伝えて励ますことをいう。",
     "correctAnswer": false,
-    "exp": "部下から「死にたい」という言葉が出たら、深刻に受け止め、一人にせず、速やかに産業医や医療機関などの専門家につなぐ。生命に関わる事態では、秘密の保持よりも安全の確保が優先される。",
-    "publicPath": "q/ichimon/s/ichi-0017/index.html"
+    "exp": "TALKの原則は、Tell（心配していることを伝える）、Ask（自殺を考えているかを率直に尋ねる）、Listen（否定せずに傾聴する）、Keep safe（一人にせず安全を確保し、専門家や関係者につなぐ）。真剣に尋ねること自体が危険を高めるわけではない。",
+    "publicPath": "q/ichimon/s/ichi-0017/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0018",
     "field": "limit",
-    "statement": "部下から「死にたい」と打ち明けられた場合、生命の安全の確保は、本人の秘密を守ることよりも優先される。",
+    "statement": "TALKの原則のAskとは、自殺を考えているかどうかを率直に尋ねることであり、真剣に尋ねること自体が危険を高めるわけではないとされる。",
     "correctAnswer": true,
-    "exp": "部下から「死にたい」という言葉が出たら、深刻に受け止め、一人にせず、速やかに産業医や医療機関などの専門家につなぐ。生命に関わる事態では、秘密の保持よりも安全の確保が優先される。",
-    "publicPath": "q/ichimon/s/ichi-0018/index.html"
+    "exp": "TALKの原則は、Tell（心配していることを伝える）、Ask（自殺を考えているかを率直に尋ねる）、Listen（否定せずに傾聴する）、Keep safe（一人にせず安全を確保し、専門家や関係者につなぐ）。真剣に尋ねること自体が危険を高めるわけではない。",
+    "publicPath": "q/ichimon/s/ichi-0018/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0019",
     "field": "limit",
-    "statement": "部下から「死にたい」という言葉が出たときは、深刻に受け止め、一人にせず、速やかに産業医や専門家につなぐ。",
+    "statement": "自殺の危険が差し迫っている場合は、本人の了解が得られなくても、家族や産業医などと連携して本人の安全を確保する。",
     "correctAnswer": true,
-    "exp": "部下から「死にたい」という言葉が出たら、深刻に受け止め、一人にせず、速やかに産業医や医療機関などの専門家につなぐ。生命に関わる事態では、秘密の保持よりも安全の確保が優先される。",
-    "publicPath": "q/ichimon/s/ichi-0019/index.html"
+    "exp": "TALKの原則は、Tell（心配していることを伝える）、Ask（自殺を考えているかを率直に尋ねる）、Listen（否定せずに傾聴する）、Keep safe（一人にせず安全を確保し、専門家や関係者につなぐ）。真剣に尋ねること自体が危険を高めるわけではない。",
+    "publicPath": "q/ichimon/s/ichi-0019/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0020",
     "field": "limit",
-    "statement": "部下から「死にたい」という言葉が出たときは、まず本人の気が済むまで話を聞き、専門家への紹介は本人が希望してから行う。",
+    "statement": "TALKの原則のListenとは、本人の話を聴きながら考え方の偏りを指摘し、前向きな考え方に修正するよう働きかけることをいう。",
     "correctAnswer": false,
-    "exp": "部下から「死にたい」という言葉が出たら、深刻に受け止め、一人にせず、速やかに産業医や医療機関などの専門家につなぐ。生命に関わる事態では、秘密の保持よりも安全の確保が優先される。",
-    "publicPath": "q/ichimon/s/ichi-0020/index.html"
+    "exp": "TALKの原則は、Tell（心配していることを伝える）、Ask（自殺を考えているかを率直に尋ねる）、Listen（否定せずに傾聴する）、Keep safe（一人にせず安全を確保し、専門家や関係者につなぐ）。真剣に尋ねること自体が危険を高めるわけではない。",
+    "publicPath": "q/ichimon/s/ichi-0020/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0021",
@@ -166,7 +186,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第1ステップでは、病気休業の開始と休業中のケアを行う。",
     "correctAnswer": true,
     "exp": "職場復帰支援の手引きでは、5つのステップが示されている。第1ステップは病気休業の開始と休業中のケア、第2ステップは主治医による職場復帰可能の判断、第3ステップは職場復帰の可否の判断と職場復帰支援プランの作成、第4ステップは事業者による最終的な職場復帰の決定、第5ステップは職場復帰後のフォローアップである。",
-    "publicPath": "q/ichimon/s/ichi-0021/index.html"
+    "publicPath": "q/ichimon/s/ichi-0021/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0022",
@@ -174,7 +195,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第3ステップでは、職場復帰の可否の判断と職場復帰支援プランの作成を行う。",
     "correctAnswer": true,
     "exp": "職場復帰支援の手引きでは、5つのステップが示されている。第1ステップは病気休業の開始と休業中のケア、第2ステップは主治医による職場復帰可能の判断、第3ステップは職場復帰の可否の判断と職場復帰支援プランの作成、第4ステップは事業者による最終的な職場復帰の決定、第5ステップは職場復帰後のフォローアップである。",
-    "publicPath": "q/ichimon/s/ichi-0022/index.html"
+    "publicPath": "q/ichimon/s/ichi-0022/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0023",
@@ -182,7 +204,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第3ステップでは、事業者による最終的な職場復帰の決定を行う。",
     "correctAnswer": false,
     "exp": "職場復帰支援の手引きでは、5つのステップが示されている。第1ステップは病気休業の開始と休業中のケア、第2ステップは主治医による職場復帰可能の判断、第3ステップは職場復帰の可否の判断と職場復帰支援プランの作成、第4ステップは事業者による最終的な職場復帰の決定、第5ステップは職場復帰後のフォローアップである。",
-    "publicPath": "q/ichimon/s/ichi-0023/index.html"
+    "publicPath": "q/ichimon/s/ichi-0023/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0024",
@@ -190,7 +213,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援プランは、第5ステップの職場復帰後のフォローアップの段階で初めて作成する。",
     "correctAnswer": false,
     "exp": "職場復帰支援の手引きでは、5つのステップが示されている。第1ステップは病気休業の開始と休業中のケア、第2ステップは主治医による職場復帰可能の判断、第3ステップは職場復帰の可否の判断と職場復帰支援プランの作成、第4ステップは事業者による最終的な職場復帰の決定、第5ステップは職場復帰後のフォローアップである。",
-    "publicPath": "q/ichimon/s/ichi-0024/index.html"
+    "publicPath": "q/ichimon/s/ichi-0024/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0025",
@@ -198,7 +222,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事や職業生活に関して強いストレスとなっている事柄がある労働者は、全体の2割程度である。",
     "correctAnswer": false,
     "exp": "労働安全衛生調査（実態調査）は、事業所と労働者個人の双方を対象とした調査です。令和7年調査では、強い不安・悩み・ストレスとなっている事柄がある労働者は67.5％で、内容は「仕事の量」と「仕事の失敗、責任の発生等」（いずれも39.5％）が最も多く、「対人関係（セクハラ・パワハラを含む）」（32.9％）が続きます。",
-    "publicPath": "q/ichimon/s/ichi-0025/index.html"
+    "publicPath": "q/ichimon/s/ichi-0025/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0026",
@@ -206,7 +231,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "強いストレスの内容として最も多く挙げられるのは「対人関係（セクハラ・パワハラを含む）」である。",
     "correctAnswer": false,
     "exp": "労働安全衛生調査（実態調査）は、事業所と労働者個人の双方を対象とした調査です。令和7年調査では、強い不安・悩み・ストレスとなっている事柄がある労働者は67.5％で、内容は「仕事の量」と「仕事の失敗、責任の発生等」（いずれも39.5％）が最も多く、「対人関係（セクハラ・パワハラを含む）」（32.9％）が続きます。",
-    "publicPath": "q/ichimon/s/ichi-0026/index.html"
+    "publicPath": "q/ichimon/s/ichi-0026/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0027",
@@ -214,7 +240,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "強いストレスの内容として、「仕事の量」は最も多く挙げられる事柄の一つである。",
     "correctAnswer": true,
     "exp": "労働安全衛生調査（実態調査）は、事業所と労働者個人の双方を対象とした調査です。令和7年調査では、強い不安・悩み・ストレスとなっている事柄がある労働者は67.5％で、内容は「仕事の量」と「仕事の失敗、責任の発生等」（いずれも39.5％）が最も多く、「対人関係（セクハラ・パワハラを含む）」（32.9％）が続きます。",
-    "publicPath": "q/ichimon/s/ichi-0027/index.html"
+    "publicPath": "q/ichimon/s/ichi-0027/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0028",
@@ -222,7 +249,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働安全衛生調査は事業所のみを対象としており、労働者個人のストレスの状況は調べていない。",
     "correctAnswer": false,
     "exp": "労働安全衛生調査（実態調査）は、事業所と労働者個人の双方を対象とした調査です。令和7年調査では、強い不安・悩み・ストレスとなっている事柄がある労働者は67.5％で、内容は「仕事の量」と「仕事の失敗、責任の発生等」（いずれも39.5％）が最も多く、「対人関係（セクハラ・パワハラを含む）」（32.9％）が続きます。",
-    "publicPath": "q/ichimon/s/ichi-0028/index.html"
+    "publicPath": "q/ichimon/s/ichi-0028/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0029",
@@ -230,7 +258,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "時間外・休日労働が月45時間を超えると、健康障害リスクが高まるとされている。",
     "correctAnswer": true,
     "exp": "一般の労働者については、月80時間超の時間外・休日労働を行い疲労の蓄積が認められる者が申し出た場合に、医師による面接指導が義務となる。月100時間超で申出不要の面接指導が義務となるのは、研究開発業務従事者や高度プロフェッショナル制度適用者など特定の場合であり、通常の労働者に一律に当てはまるわけではない。医師は面接指導結果を踏まえ、就業上の措置について事業者に意見を述べる。費用は事業者負担となる。",
-    "publicPath": "q/ichimon/s/ichi-0029/index.html"
+    "publicPath": "q/ichimon/s/ichi-0029/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0030",
@@ -238,7 +267,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "月100時間を超える時間外労働が認められた場合、労働者本人の申し出がなくても医師の面接指導を実施しなければならない。",
     "correctAnswer": false,
     "exp": "一般の労働者については、月80時間超の時間外・休日労働を行い疲労の蓄積が認められる者が申し出た場合に、医師による面接指導が義務となる。月100時間超で申出不要の面接指導が義務となるのは、研究開発業務従事者や高度プロフェッショナル制度適用者など特定の場合であり、通常の労働者に一律に当てはまるわけではない。医師は面接指導結果を踏まえ、就業上の措置について事業者に意見を述べる。費用は事業者負担となる。",
-    "publicPath": "q/ichimon/s/ichi-0030/index.html"
+    "publicPath": "q/ichimon/s/ichi-0030/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0031",
@@ -246,7 +276,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "長時間労働者への面接指導は、衛生委員会等で審議したうえで実施計画を策定する必要がある。",
     "correctAnswer": true,
     "exp": "一般の労働者については、月80時間超の時間外・休日労働を行い疲労の蓄積が認められる者が申し出た場合に、医師による面接指導が義務となる。月100時間超で申出不要の面接指導が義務となるのは、研究開発業務従事者や高度プロフェッショナル制度適用者など特定の場合であり、通常の労働者に一律に当てはまるわけではない。医師は面接指導結果を踏まえ、就業上の措置について事業者に意見を述べる。費用は事業者負担となる。",
-    "publicPath": "q/ichimon/s/ichi-0031/index.html"
+    "publicPath": "q/ichimon/s/ichi-0031/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0032",
@@ -254,7 +285,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過労死の労災認定においては、発症前1か月に100時間または2〜6か月間平均で月80時間を超える時間外労働が目安となる。",
     "correctAnswer": true,
     "exp": "一般の労働者については、月80時間超の時間外・休日労働を行い疲労の蓄積が認められる者が申し出た場合に、医師による面接指導が義務となる。月100時間超で申出不要の面接指導が義務となるのは、研究開発業務従事者や高度プロフェッショナル制度適用者など特定の場合であり、通常の労働者に一律に当てはまるわけではない。医師は面接指導結果を踏まえ、就業上の措置について事業者に意見を述べる。費用は事業者負担となる。",
-    "publicPath": "q/ichimon/s/ichi-0032/index.html"
+    "publicPath": "q/ichimon/s/ichi-0032/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0033",
@@ -262,7 +294,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "パワーハラスメントは、①優越的な関係を背景とした言動であって、②業務上必要かつ相当な範囲を超えたものにより、③労働者の就業環境が害されるもの、と定義されている。",
     "correctAnswer": true,
     "exp": "パワハラの3要素は「優越的な関係を背景にした言動」「業務上の適正な範囲を超えている」「就業環境が害される」。上司から部下に限らず、同僚・部下からの言動も含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0033/index.html"
+    "publicPath": "q/ichimon/s/ichi-0033/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0034",
@@ -270,7 +303,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "パワーハラスメントと認められるには、行為者に加害の故意や悪意があり、身体的な攻撃を伴うことが必要である。",
     "correctAnswer": false,
     "exp": "パワハラの3要素は「優越的な関係を背景にした言動」「業務上の適正な範囲を超えている」「就業環境が害される」。上司から部下に限らず、同僚・部下からの言動も含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0034/index.html"
+    "publicPath": "q/ichimon/s/ichi-0034/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0035",
@@ -278,7 +312,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "パワーハラスメントは、職務上の地位が上位の者から部下に対して行われる言動に限られる。",
     "correctAnswer": false,
     "exp": "パワハラの3要素は「優越的な関係を背景にした言動」「業務上の適正な範囲を超えている」「就業環境が害される」。上司から部下に限らず、同僚・部下からの言動も含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0035/index.html"
+    "publicPath": "q/ichimon/s/ichi-0035/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0036",
@@ -286,7 +321,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "パワーハラスメントと認められるには、複数の労働者が関与し、第三者が客観的に確認できることが必要である。",
     "correctAnswer": false,
     "exp": "パワハラの3要素は「優越的な関係を背景にした言動」「業務上の適正な範囲を超えている」「就業環境が害される」。上司から部下に限らず、同僚・部下からの言動も含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0036/index.html"
+    "publicPath": "q/ichimon/s/ichi-0036/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0037",
@@ -294,7 +330,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "常時50人以上の労働者を使用する事業場では、1年以内ごとに1回、定期にストレスチェックを実施しなければならない。",
     "correctAnswer": true,
     "exp": "常時50人以上の事業場では1年以内ごとに1回、定期にストレスチェックを実施する義務がある。50人未満の事業場は現行では努力義務だが、2025年5月公布の改正法により、公布後3年以内に義務化される。結果は実施者から本人に直接通知され、事業者が把握するには本人の同意が必要。面接指導の申出を理由とする不利益取扱いは禁止。解雇・昇進・異動の直接の権限を持つ監督的地位にある者は、実施の事務に従事できない。",
-    "publicPath": "q/ichimon/s/ichi-0037/index.html"
+    "publicPath": "q/ichimon/s/ichi-0037/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0038",
@@ -302,7 +339,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの結果は、実施者から事業者に通知され、事業者を通じて労働者本人に伝えられる。",
     "correctAnswer": false,
     "exp": "常時50人以上の事業場では1年以内ごとに1回、定期にストレスチェックを実施する義務がある。50人未満の事業場は現行では努力義務だが、2025年5月公布の改正法により、公布後3年以内に義務化される。結果は実施者から本人に直接通知され、事業者が把握するには本人の同意が必要。面接指導の申出を理由とする不利益取扱いは禁止。解雇・昇進・異動の直接の権限を持つ監督的地位にある者は、実施の事務に従事できない。",
-    "publicPath": "q/ichimon/s/ichi-0038/index.html"
+    "publicPath": "q/ichimon/s/ichi-0038/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0039",
@@ -310,7 +348,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの結果に基づく面接指導の申出をしたことを理由として、事業者が当該労働者に不利益な取扱いをすることは禁止されている。",
     "correctAnswer": true,
     "exp": "常時50人以上の事業場では1年以内ごとに1回、定期にストレスチェックを実施する義務がある。50人未満の事業場は現行では努力義務だが、2025年5月公布の改正法により、公布後3年以内に義務化される。結果は実施者から本人に直接通知され、事業者が把握するには本人の同意が必要。面接指導の申出を理由とする不利益取扱いは禁止。解雇・昇進・異動の直接の権限を持つ監督的地位にある者は、実施の事務に従事できない。",
-    "publicPath": "q/ichimon/s/ichi-0039/index.html"
+    "publicPath": "q/ichimon/s/ichi-0039/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0040",
@@ -318,7 +357,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働者の解雇・昇進・異動について直接の権限を持つ監督的地位にある者でも、所定の研修を修了すれば、ストレスチェックの実施の事務に従事できる。",
     "correctAnswer": false,
     "exp": "常時50人以上の事業場では1年以内ごとに1回、定期にストレスチェックを実施する義務がある。50人未満の事業場は現行では努力義務だが、2025年5月公布の改正法により、公布後3年以内に義務化される。結果は実施者から本人に直接通知され、事業者が把握するには本人の同意が必要。面接指導の申出を理由とする不利益取扱いは禁止。解雇・昇進・異動の直接の権限を持つ監督的地位にある者は、実施の事務に従事できない。",
-    "publicPath": "q/ichimon/s/ichi-0040/index.html"
+    "publicPath": "q/ichimon/s/ichi-0040/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0041",
@@ -326,7 +366,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "心の健康づくり計画は、ストレスチェック制度の実施規程と一体のものとして策定しなければならず、別に定めることは認められない。",
     "correctAnswer": false,
     "exp": "心の健康づくり計画は衛生委員会等で十分に調査審議して策定し、実施状況を評価して見直していく。ストレスチェック制度は計画に位置づけることが望ましいが、一体として策定する義務はない。小規模事業場では事業場外資源の活用が勧められる。",
-    "publicPath": "q/ichimon/s/ichi-0041/index.html"
+    "publicPath": "q/ichimon/s/ichi-0041/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0042",
@@ -334,7 +375,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "心の健康づくり計画は、衛生委員会等で十分に調査審議を行ったうえで策定することとされている。",
     "correctAnswer": true,
     "exp": "心の健康づくり計画は衛生委員会等で十分に調査審議して策定し、実施状況を評価して見直していく。ストレスチェック制度は計画に位置づけることが望ましいが、一体として策定する義務はない。小規模事業場では事業場外資源の活用が勧められる。",
-    "publicPath": "q/ichimon/s/ichi-0042/index.html"
+    "publicPath": "q/ichimon/s/ichi-0042/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0043",
@@ -342,7 +384,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "常時50人未満の小規模事業場では、事業場外資源を活用せず、事業場内の体制だけで心の健康づくりに取り組まなければならない。",
     "correctAnswer": false,
     "exp": "心の健康づくり計画は衛生委員会等で十分に調査審議して策定し、実施状況を評価して見直していく。ストレスチェック制度は計画に位置づけることが望ましいが、一体として策定する義務はない。小規模事業場では事業場外資源の活用が勧められる。",
-    "publicPath": "q/ichimon/s/ichi-0043/index.html"
+    "publicPath": "q/ichimon/s/ichi-0043/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0044",
@@ -350,7 +393,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "心の健康づくり計画は、実施状況を評価し、その結果に基づいて見直していくことが求められる。",
     "correctAnswer": true,
     "exp": "心の健康づくり計画は衛生委員会等で十分に調査審議して策定し、実施状況を評価して見直していく。ストレスチェック制度は計画に位置づけることが望ましいが、一体として策定する義務はない。小規模事業場では事業場外資源の活用が勧められる。",
-    "publicPath": "q/ichimon/s/ichi-0044/index.html"
+    "publicPath": "q/ichimon/s/ichi-0044/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0045",
@@ -358,7 +402,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の「いつもと違う」様子に気づけるよう、管理監督者は日頃から部下の通常の状態を把握しておくことが大切である。",
     "correctAnswer": true,
     "exp": "管理監督者は病名や症状（疾病性）を判断するのではなく、遅刻・欠勤やミスの増加など職場で把握できる事例性に基づいて対応する。相談内容は本人の了解を得て産業保健スタッフ等と共有する。職場環境等には作業環境・作業方法・労働時間・人間関係などが含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0045/index.html"
+    "publicPath": "q/ichimon/s/ichi-0045/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0046",
@@ -366,7 +411,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下のメンタルヘルス不調が疑われる場合、管理監督者はまず病名や症状の有無を見極め、それに基づいて対応を判断する。",
     "correctAnswer": false,
     "exp": "管理監督者は病名や症状（疾病性）を判断するのではなく、遅刻・欠勤やミスの増加など職場で把握できる事例性に基づいて対応する。相談内容は本人の了解を得て産業保健スタッフ等と共有する。職場環境等には作業環境・作業方法・労働時間・人間関係などが含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0046/index.html"
+    "publicPath": "q/ichimon/s/ichi-0046/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0047",
@@ -374,7 +420,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ラインによるケアにおける職場環境等の把握と改善の対象には、作業環境・作業方法・労働時間・職場の人間関係などが含まれる。",
     "correctAnswer": true,
     "exp": "管理監督者は病名や症状（疾病性）を判断するのではなく、遅刻・欠勤やミスの増加など職場で把握できる事例性に基づいて対応する。相談内容は本人の了解を得て産業保健スタッフ等と共有する。職場環境等には作業環境・作業方法・労働時間・人間関係などが含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0047/index.html"
+    "publicPath": "q/ichimon/s/ichi-0047/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0048",
@@ -382,7 +429,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は、部下から受けた相談の内容を、本人の了解の有無にかかわらず、すべて産業保健スタッフに報告しなければならない。",
     "correctAnswer": false,
     "exp": "管理監督者は病名や症状（疾病性）を判断するのではなく、遅刻・欠勤やミスの増加など職場で把握できる事例性に基づいて対応する。相談内容は本人の了解を得て産業保健スタッフ等と共有する。職場環境等には作業環境・作業方法・労働時間・人間関係などが含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0048/index.html"
+    "publicPath": "q/ichimon/s/ichi-0048/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0049",
@@ -390,7 +438,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "飲酒量や喫煙量の増加、遅刻・欠勤の増加は、ストレス反応のうち心理面の反応に分類される。",
     "correctAnswer": false,
     "exp": "セリエの汎適応症候群では、ストレスへの反応は、警告反応期（ショック相と反ショック相）、抵抗期、疲憊期の3段階で進む。抵抗期はストレッサーに抵抗して適応している段階で、適応の機能が破綻するのは疲憊期である。飲酒量の増加や遅刻・欠勤は、ストレス反応のうち行動面の反応にあたる。",
-    "publicPath": "q/ichimon/s/ichi-0049/index.html"
+    "publicPath": "q/ichimon/s/ichi-0049/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0050",
@@ -398,7 +447,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "セリエの汎適応症候群では、ストレッサーにさらされた直後の警告反応期に、一時的に抵抗力が低下するショック相がみられる。",
     "correctAnswer": true,
     "exp": "セリエの汎適応症候群では、ストレスへの反応は、警告反応期（ショック相と反ショック相）、抵抗期、疲憊期の3段階で進む。抵抗期はストレッサーに抵抗して適応している段階で、適応の機能が破綻するのは疲憊期である。飲酒量の増加や遅刻・欠勤は、ストレス反応のうち行動面の反応にあたる。",
-    "publicPath": "q/ichimon/s/ichi-0050/index.html"
+    "publicPath": "q/ichimon/s/ichi-0050/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0051",
@@ -406,7 +456,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "汎適応症候群の抵抗期は、ストレッサーに対する抵抗力が最も低下し、心身の機能が破綻する段階である。",
     "correctAnswer": false,
     "exp": "セリエの汎適応症候群では、ストレスへの反応は、警告反応期（ショック相と反ショック相）、抵抗期、疲憊期の3段階で進む。抵抗期はストレッサーに抵抗して適応している段階で、適応の機能が破綻するのは疲憊期である。飲酒量の増加や遅刻・欠勤は、ストレス反応のうち行動面の反応にあたる。",
-    "publicPath": "q/ichimon/s/ichi-0051/index.html"
+    "publicPath": "q/ichimon/s/ichi-0051/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0052",
@@ -414,7 +465,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "汎適応症候群では、ストレッサーが長く続くと、抵抗期を経て疲憊期に至り、心身の不調が生じやすくなる。",
     "correctAnswer": true,
     "exp": "セリエの汎適応症候群では、ストレスへの反応は、警告反応期（ショック相と反ショック相）、抵抗期、疲憊期の3段階で進む。抵抗期はストレッサーに抵抗して適応している段階で、適応の機能が破綻するのは疲憊期である。飲酒量の増加や遅刻・欠勤は、ストレス反応のうち行動面の反応にあたる。",
-    "publicPath": "q/ichimon/s/ichi-0052/index.html"
+    "publicPath": "q/ichimon/s/ichi-0052/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0053",
@@ -422,7 +474,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "うつ病では、気分の落ち込みが朝に強く、夕方にかけて軽くなる日内変動がみられることがある。",
     "correctAnswer": true,
     "exp": "うつ病の治療は休養と薬物療法が基本で、抗うつ薬の効果が現れるまでに数週間程度かかる。症状が軽快しても再発を防ぐため服薬を続け、中止は医師が判断する。気分の日内変動や不眠・食欲低下などの身体症状を伴うこともある。",
-    "publicPath": "q/ichimon/s/ichi-0053/index.html"
+    "publicPath": "q/ichimon/s/ichi-0053/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0054",
@@ -430,7 +483,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "うつ病の症状が軽快したら、再発を防ぐため、医師の判断を待たずに抗うつ薬の服用をすぐに中止することが望ましい。",
     "correctAnswer": false,
     "exp": "うつ病の治療は休養と薬物療法が基本で、抗うつ薬の効果が現れるまでに数週間程度かかる。症状が軽快しても再発を防ぐため服薬を続け、中止は医師が判断する。気分の日内変動や不眠・食欲低下などの身体症状を伴うこともある。",
-    "publicPath": "q/ichimon/s/ichi-0054/index.html"
+    "publicPath": "q/ichimon/s/ichi-0054/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0055",
@@ -438,7 +492,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "うつ病の治療では、抗うつ薬の効果が現れるまでに、一般に数週間程度かかる。",
     "correctAnswer": true,
     "exp": "うつ病の治療は休養と薬物療法が基本で、抗うつ薬の効果が現れるまでに数週間程度かかる。症状が軽快しても再発を防ぐため服薬を続け、中止は医師が判断する。気分の日内変動や不眠・食欲低下などの身体症状を伴うこともある。",
-    "publicPath": "q/ichimon/s/ichi-0055/index.html"
+    "publicPath": "q/ichimon/s/ichi-0055/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0056",
@@ -446,7 +501,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "うつ病は気分の落ち込みなどの精神症状のみが現れる病気であり、不眠や食欲低下などの身体症状を伴うことはない。",
     "correctAnswer": false,
     "exp": "うつ病の治療は休養と薬物療法が基本で、抗うつ薬の効果が現れるまでに数週間程度かかる。症状が軽快しても再発を防ぐため服薬を続け、中止は医師が判断する。気分の日内変動や不眠・食欲低下などの身体症状を伴うこともある。",
-    "publicPath": "q/ichimon/s/ichi-0056/index.html"
+    "publicPath": "q/ichimon/s/ichi-0056/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0057",
@@ -454,7 +510,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ADHDの特性は成長とともに必ず消失するため、成人の職場で配慮が必要になることはない。",
     "correctAnswer": false,
     "exp": "発達障害者支援法は発達障害を、広汎性発達障害・学習障害・注意欠陥多動性障害などの脳機能の障害と定義する。特性は成人後も続くことがある。障害者雇用促進法上の障害者は手帳の所持者に限られない。ASDのある人には具体的な指示が伝わりやすい。",
-    "publicPath": "q/ichimon/s/ichi-0057/index.html"
+    "publicPath": "q/ichimon/s/ichi-0057/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0058",
@@ -462,7 +519,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "発達障害者支援法は、発達障害を、自閉症などの広汎性発達障害、学習障害、注意欠陥多動性障害などの脳機能の障害と定義している。",
     "correctAnswer": true,
     "exp": "発達障害者支援法は発達障害を、広汎性発達障害・学習障害・注意欠陥多動性障害などの脳機能の障害と定義する。特性は成人後も続くことがある。障害者雇用促進法上の障害者は手帳の所持者に限られない。ASDのある人には具体的な指示が伝わりやすい。",
-    "publicPath": "q/ichimon/s/ichi-0058/index.html"
+    "publicPath": "q/ichimon/s/ichi-0058/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0059",
@@ -470,7 +528,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "発達障害のある人は、障害者手帳を取得していない限り、障害者雇用促進法上の合理的配慮の対象とはならない。",
     "correctAnswer": false,
     "exp": "発達障害者支援法は発達障害を、広汎性発達障害・学習障害・注意欠陥多動性障害などの脳機能の障害と定義する。特性は成人後も続くことがある。障害者雇用促進法上の障害者は手帳の所持者に限られない。ASDのある人には具体的な指示が伝わりやすい。",
-    "publicPath": "q/ichimon/s/ichi-0059/index.html"
+    "publicPath": "q/ichimon/s/ichi-0059/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0060",
@@ -478,7 +537,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "自閉スペクトラム症（ASD）のある労働者には、作業の手順や期限を具体的に示すと伝わりやすいとされる。",
     "correctAnswer": true,
     "exp": "発達障害者支援法は発達障害を、広汎性発達障害・学習障害・注意欠陥多動性障害などの脳機能の障害と定義する。特性は成人後も続くことがある。障害者雇用促進法上の障害者は手帳の所持者に限られない。ASDのある人には具体的な指示が伝わりやすい。",
-    "publicPath": "q/ichimon/s/ichi-0060/index.html"
+    "publicPath": "q/ichimon/s/ichi-0060/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0061",
@@ -486,7 +546,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "常用労働者が100人を超える事業主が法定雇用率を達成していない場合、障害者雇用納付金を納付しなければならない。",
     "correctAnswer": true,
     "exp": "精神障害者保健福祉手帳の所持者は法定雇用率の算定対象。常用労働者100人超の事業主が未達成なら障害者雇用納付金を納付する。合理的配慮は過重な負担となる場合を除いて義務。民間企業の法定雇用率は2024年4月から2.5％、2026年7月から2.7％。",
-    "publicPath": "q/ichimon/s/ichi-0061/index.html"
+    "publicPath": "q/ichimon/s/ichi-0061/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0062",
@@ -494,7 +555,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害者保健福祉手帳を持つ労働者は、障害者の法定雇用率の算定の対象となる。",
     "correctAnswer": true,
     "exp": "精神障害者保健福祉手帳の所持者は法定雇用率の算定対象。常用労働者100人超の事業主が未達成なら障害者雇用納付金を納付する。合理的配慮は過重な負担となる場合を除いて義務。民間企業の法定雇用率は2024年4月から2.5％、2026年7月から2.7％。",
-    "publicPath": "q/ichimon/s/ichi-0062/index.html"
+    "publicPath": "q/ichimon/s/ichi-0062/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0063",
@@ -502,7 +564,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "障害者雇用促進法上の合理的配慮は、事業主に過重な負担を及ぼすこととなる場合でも、必ず提供しなければならない。",
     "correctAnswer": false,
     "exp": "精神障害者保健福祉手帳の所持者は法定雇用率の算定対象。常用労働者100人超の事業主が未達成なら障害者雇用納付金を納付する。合理的配慮は過重な負担となる場合を除いて義務。民間企業の法定雇用率は2024年4月から2.5％、2026年7月から2.7％。",
-    "publicPath": "q/ichimon/s/ichi-0063/index.html"
+    "publicPath": "q/ichimon/s/ichi-0063/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0064",
@@ -510,7 +573,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "民間企業の障害者の法定雇用率は、2026年7月から2.5％となった。",
     "correctAnswer": false,
     "exp": "精神障害者保健福祉手帳の所持者は法定雇用率の算定対象。常用労働者100人超の事業主が未達成なら障害者雇用納付金を納付する。合理的配慮は過重な負担となる場合を除いて義務。民間企業の法定雇用率は2024年4月から2.5％、2026年7月から2.7％。",
-    "publicPath": "q/ichimon/s/ichi-0064/index.html"
+    "publicPath": "q/ichimon/s/ichi-0064/index.html",
+    "level": 5
   },
   {
     "id": "ichi-0065",
@@ -518,7 +582,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事の量的負担だけがストレス要因となり、仕事の質的負担（難しさや責任の重さ）はストレス要因にならない。",
     "correctAnswer": false,
     "exp": "職場のストレス要因には、仕事の量的負担と質的負担（難しさ・責任の重さ）、役割の曖昧さ・役割葛藤、交替勤務や深夜業、対人関係の問題などがある。",
-    "publicPath": "q/ichimon/s/ichi-0065/index.html"
+    "publicPath": "q/ichimon/s/ichi-0065/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0066",
@@ -526,7 +591,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場の人間関係の問題も、ストレス要因のひとつである。",
     "correctAnswer": true,
     "exp": "職場のストレス要因には、仕事の量的負担と質的負担（難しさ・責任の重さ）、役割の曖昧さ・役割葛藤、交替勤務や深夜業、対人関係の問題などがある。",
-    "publicPath": "q/ichimon/s/ichi-0066/index.html"
+    "publicPath": "q/ichimon/s/ichi-0066/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0067",
@@ -534,7 +600,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "役割の曖昧さや役割葛藤は、ストレスとは関係がない。",
     "correctAnswer": false,
     "exp": "職場のストレス要因には、仕事の量的負担と質的負担（難しさ・責任の重さ）、役割の曖昧さ・役割葛藤、交替勤務や深夜業、対人関係の問題などがある。",
-    "publicPath": "q/ichimon/s/ichi-0067/index.html"
+    "publicPath": "q/ichimon/s/ichi-0067/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0068",
@@ -542,7 +609,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "交替勤務や深夜業は生活リズムを乱しやすく、心身への負担となりうる。",
     "correctAnswer": true,
     "exp": "職場のストレス要因には、仕事の量的負担と質的負担（難しさ・責任の重さ）、役割の曖昧さ・役割葛藤、交替勤務や深夜業、対人関係の問題などがある。",
-    "publicPath": "q/ichimon/s/ichi-0068/index.html"
+    "publicPath": "q/ichimon/s/ichi-0068/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0069",
@@ -550,7 +618,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境の改善は産業医が主導するものであり、管理監督者が主体的に行う必要はない。",
     "correctAnswer": false,
     "exp": "ラインによる職場環境改善では、集団分析の結果などで職場のストレス状況を把握し、職場での話し合いで部下の意見も聞きながら改善策を検討する。高ストレスの職場に限らず取り組み、実行しやすい改善策から段階的に進める。",
-    "publicPath": "q/ichimon/s/ichi-0069/index.html"
+    "publicPath": "q/ichimon/s/ichi-0069/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0070",
@@ -558,7 +627,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ラインによる職場環境改善では、ストレスチェックの集団分析結果を活用し、職場のストレス状況を把握したうえで改善策を検討する。",
     "correctAnswer": true,
     "exp": "ラインによる職場環境改善では、集団分析の結果などで職場のストレス状況を把握し、職場での話し合いで部下の意見も聞きながら改善策を検討する。高ストレスの職場に限らず取り組み、実行しやすい改善策から段階的に進める。",
-    "publicPath": "q/ichimon/s/ichi-0070/index.html"
+    "publicPath": "q/ichimon/s/ichi-0070/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0071",
@@ -566,7 +636,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善は、集団分析で高ストレスと判定された職場だけで行えばよく、それ以外の職場では必要ない。",
     "correctAnswer": false,
     "exp": "ラインによる職場環境改善では、集団分析の結果などで職場のストレス状況を把握し、職場での話し合いで部下の意見も聞きながら改善策を検討する。高ストレスの職場に限らず取り組み、実行しやすい改善策から段階的に進める。",
-    "publicPath": "q/ichimon/s/ichi-0071/index.html"
+    "publicPath": "q/ichimon/s/ichi-0071/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0072",
@@ -574,7 +645,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善は、実行しやすい改善策から段階的に取り組むことが効果的である。",
     "correctAnswer": true,
     "exp": "ラインによる職場環境改善では、集団分析の結果などで職場のストレス状況を把握し、職場での話し合いで部下の意見も聞きながら改善策を検討する。高ストレスの職場に限らず取り組み、実行しやすい改善策から段階的に進める。",
-    "publicPath": "q/ichimon/s/ichi-0072/index.html"
+    "publicPath": "q/ichimon/s/ichi-0072/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0073",
@@ -582,7 +654,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善の評価は、改善策の実施直後に一度行えば十分であり、継続的なモニタリングは不要である。",
     "correctAnswer": false,
     "exp": "職場環境改善の評価は、実施状況などのプロセス評価と、ストレス反応や欠勤率の変化などのアウトカム評価を組み合わせて継続的に行う。集団分析の結果は改善前後で比較でき、効果がなければ計画を見直す。",
-    "publicPath": "q/ichimon/s/ichi-0073/index.html"
+    "publicPath": "q/ichimon/s/ichi-0073/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0074",
@@ -590,7 +663,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善の評価指標として、労働者のストレス反応の変化や欠勤率などを活用することができる。",
     "correctAnswer": true,
     "exp": "職場環境改善の評価は、実施状況などのプロセス評価と、ストレス反応や欠勤率の変化などのアウトカム評価を組み合わせて継続的に行う。集団分析の結果は改善前後で比較でき、効果がなければ計画を見直す。",
-    "publicPath": "q/ichimon/s/ichi-0074/index.html"
+    "publicPath": "q/ichimon/s/ichi-0074/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0075",
@@ -598,7 +672,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善の評価では、アウトカム評価のみが有効であり、プロセス評価は意味がない。",
     "correctAnswer": false,
     "exp": "職場環境改善の評価は、実施状況などのプロセス評価と、ストレス反応や欠勤率の変化などのアウトカム評価を組み合わせて継続的に行う。集団分析の結果は改善前後で比較でき、効果がなければ計画を見直す。",
-    "publicPath": "q/ichimon/s/ichi-0075/index.html"
+    "publicPath": "q/ichimon/s/ichi-0075/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0076",
@@ -606,7 +681,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善の評価では、改善前後のストレスチェックの集団分析結果を比較することができる。",
     "correctAnswer": true,
     "exp": "職場環境改善の評価は、実施状況などのプロセス評価と、ストレス反応や欠勤率の変化などのアウトカム評価を組み合わせて継続的に行う。集団分析の結果は改善前後で比較でき、効果がなければ計画を見直す。",
-    "publicPath": "q/ichimon/s/ichi-0076/index.html"
+    "publicPath": "q/ichimon/s/ichi-0076/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0077",
@@ -614,7 +690,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "遅刻・早退・欠勤が増えることは、部下のメンタルヘルス不調のサインとなりうる。",
     "correctAnswer": true,
     "exp": "部下の不調のサインは「いつもと違う」様子で、遅刻・早退・欠勤の増加、能率の低下やミスの増加、報告・相談の減少、口数の減少などがある。新しい仕事に伴う一時的な質問の増加は、それだけでは不調のサインとはいえない。",
-    "publicPath": "q/ichimon/s/ichi-0077/index.html"
+    "publicPath": "q/ichimon/s/ichi-0077/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0078",
@@ -622,7 +699,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事のミスや判断力の低下は、部下のメンタルヘルス不調のサインとなりうる。",
     "correctAnswer": true,
     "exp": "部下の不調のサインは「いつもと違う」様子で、遅刻・早退・欠勤の増加、能率の低下やミスの増加、報告・相談の減少、口数の減少などがある。新しい仕事に伴う一時的な質問の増加は、それだけでは不調のサインとはいえない。",
-    "publicPath": "q/ichimon/s/ichi-0078/index.html"
+    "publicPath": "q/ichimon/s/ichi-0078/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0079",
@@ -630,7 +708,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "新しい仕事を任されて一時的に上司への質問の回数が増えたことは、メンタルヘルス不調の典型的なサインである。",
     "correctAnswer": false,
     "exp": "部下の不調のサインは「いつもと違う」様子で、遅刻・早退・欠勤の増加、能率の低下やミスの増加、報告・相談の減少、口数の減少などがある。新しい仕事に伴う一時的な質問の増加は、それだけでは不調のサインとはいえない。",
-    "publicPath": "q/ichimon/s/ichi-0079/index.html"
+    "publicPath": "q/ichimon/s/ichi-0079/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0080",
@@ -638,7 +717,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "口数が減り、表情が暗くなることは、部下のメンタルヘルス不調のサインとなりうる。",
     "correctAnswer": true,
     "exp": "部下の不調のサインは「いつもと違う」様子で、遅刻・早退・欠勤の増加、能率の低下やミスの増加、報告・相談の減少、口数の減少などがある。新しい仕事に伴う一時的な質問の増加は、それだけでは不調のサインとはいえない。",
-    "publicPath": "q/ichimon/s/ichi-0080/index.html"
+    "publicPath": "q/ichimon/s/ichi-0080/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0081",
@@ -646,7 +726,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "昇進・昇格は常にポジティブな出来事であり、ストレス要因にはなりえない。",
     "correctAnswer": false,
     "exp": "昇進・昇格・異動・転勤は、本人が望んだものでも、責任や役割、生活環境の変化を伴うためストレス要因となり得る。家庭の問題などの職場外の要因や、単身赴任による生活の変化も、職場での不調に影響する。",
-    "publicPath": "q/ichimon/s/ichi-0081/index.html"
+    "publicPath": "q/ichimon/s/ichi-0081/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0082",
@@ -654,7 +735,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事上の失敗や責任の発生は、強いストレス要因となりうる。",
     "correctAnswer": true,
     "exp": "昇進・昇格・異動・転勤は、本人が望んだものでも、責任や役割、生活環境の変化を伴うためストレス要因となり得る。家庭の問題などの職場外の要因や、単身赴任による生活の変化も、職場での不調に影響する。",
-    "publicPath": "q/ichimon/s/ichi-0082/index.html"
+    "publicPath": "q/ichimon/s/ichi-0082/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0083",
@@ -662,7 +744,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "異動や転勤によるストレスは、本人が希望した異動であれば生じることはない。",
     "correctAnswer": false,
     "exp": "昇進・昇格・異動・転勤は、本人が望んだものでも、責任や役割、生活環境の変化を伴うためストレス要因となり得る。家庭の問題などの職場外の要因や、単身赴任による生活の変化も、職場での不調に影響する。",
-    "publicPath": "q/ichimon/s/ichi-0083/index.html"
+    "publicPath": "q/ichimon/s/ichi-0083/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0084",
@@ -670,7 +753,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "家庭の問題などの職場外の要因が、職場でのメンタルヘルス不調に影響することがある。",
     "correctAnswer": true,
     "exp": "昇進・昇格・異動・転勤は、本人が望んだものでも、責任や役割、生活環境の変化を伴うためストレス要因となり得る。家庭の問題などの職場外の要因や、単身赴任による生活の変化も、職場での不調に影響する。",
-    "publicPath": "q/ichimon/s/ichi-0084/index.html"
+    "publicPath": "q/ichimon/s/ichi-0084/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0085",
@@ -678,7 +762,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下が自発的に残業している場合は、その労働時間を把握する必要はない。",
     "correctAnswer": false,
     "exp": "労働時間は、タイムカードやパソコンの使用時間の記録などの客観的な方法で把握することが原則。管理監督者は業務量の偏りを把握し、業務分担や進め方を見直す。自発的な残業も把握の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0085/index.html"
+    "publicPath": "q/ichimon/s/ichi-0085/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0086",
@@ -686,7 +771,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は、業務量の偏りを把握し、必要に応じて業務分担を見直す。",
     "correctAnswer": true,
     "exp": "労働時間は、タイムカードやパソコンの使用時間の記録などの客観的な方法で把握することが原則。管理監督者は業務量の偏りを把握し、業務分担や進め方を見直す。自発的な残業も把握の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0086/index.html"
+    "publicPath": "q/ichimon/s/ichi-0086/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0087",
@@ -694,7 +780,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の労働時間の把握は、本人の自己申告のみによることが原則とされている。",
     "correctAnswer": false,
     "exp": "労働時間は、タイムカードやパソコンの使用時間の記録などの客観的な方法で把握することが原則。管理監督者は業務量の偏りを把握し、業務分担や進め方を見直す。自発的な残業も把握の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0087/index.html"
+    "publicPath": "q/ichimon/s/ichi-0087/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0088",
@@ -702,7 +789,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働時間の把握は、タイムカードやパソコンの使用時間の記録など、客観的な方法によることが原則とされている。",
     "correctAnswer": true,
     "exp": "労働時間は、タイムカードやパソコンの使用時間の記録などの客観的な方法で把握することが原則。管理監督者は業務量の偏りを把握し、業務分担や進め方を見直す。自発的な残業も把握の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0088/index.html"
+    "publicPath": "q/ichimon/s/ichi-0088/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0089",
@@ -710,7 +798,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "情緒的サポートとは、業務上の具体的な手助けや道具・資源の提供のことである。",
     "correctAnswer": false,
     "exp": "社会的支援には、情緒的サポート（共感・傾聴）、情報的サポート（情報・助言）、評価的サポート（評価・フィードバック）、道具的サポート（具体的な手助け、人手や時間の提供）の4種類がある。",
-    "publicPath": "q/ichimon/s/ichi-0089/index.html"
+    "publicPath": "q/ichimon/s/ichi-0089/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0090",
@@ -718,7 +807,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "評価的サポートとは、業務遂行に対するフィードバックや適切な評価を行うことである。",
     "correctAnswer": true,
     "exp": "社会的支援には、情緒的サポート（共感・傾聴）、情報的サポート（情報・助言）、評価的サポート（評価・フィードバック）、道具的サポート（具体的な手助け、人手や時間の提供）の4種類がある。",
-    "publicPath": "q/ichimon/s/ichi-0090/index.html"
+    "publicPath": "q/ichimon/s/ichi-0090/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0091",
@@ -726,7 +816,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "情報的サポートとは、悩みを聞いたり共感したりすることで精神的な支えとなることである。",
     "correctAnswer": false,
     "exp": "社会的支援には、情緒的サポート（共感・傾聴）、情報的サポート（情報・助言）、評価的サポート（評価・フィードバック）、道具的サポート（具体的な手助け、人手や時間の提供）の4種類がある。",
-    "publicPath": "q/ichimon/s/ichi-0091/index.html"
+    "publicPath": "q/ichimon/s/ichi-0091/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0092",
@@ -734,7 +825,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "情緒的サポートとは、共感したり話を聴いたりして、気持ちを受け止めることである。",
     "correctAnswer": true,
     "exp": "社会的支援には、情緒的サポート（共感・傾聴）、情報的サポート（情報・助言）、評価的サポート（評価・フィードバック）、道具的サポート（具体的な手助け、人手や時間の提供）の4種類がある。",
-    "publicPath": "q/ichimon/s/ichi-0092/index.html"
+    "publicPath": "q/ichimon/s/ichi-0092/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0093",
@@ -742,7 +834,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の病名や治療内容は、職場全体で情報共有することで支援がしやすくなる。",
     "correctAnswer": false,
     "exp": "メンタルヘルスに関する情報は要配慮個人情報で、本人の同意を得て支援に必要な範囲で共有する。産業医等が事業者に伝える際は、就業上の措置に必要な情報に加工して伝えることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0093/index.html"
+    "publicPath": "q/ichimon/s/ichi-0093/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0094",
@@ -750,7 +843,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の健康情報は、業務上必要な範囲で最小限の情報にとどめ、関係者間で慎重に取り扱うことが求められる。",
     "correctAnswer": true,
     "exp": "メンタルヘルスに関する情報は要配慮個人情報で、本人の同意を得て支援に必要な範囲で共有する。産業医等が事業者に伝える際は、就業上の措置に必要な情報に加工して伝えることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0094/index.html"
+    "publicPath": "q/ichimon/s/ichi-0094/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0095",
@@ -758,7 +852,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医が面談で得た情報は、事業者が就業上の措置を判断するため、すべてそのまま管理監督者に伝えられる。",
     "correctAnswer": false,
     "exp": "メンタルヘルスに関する情報は要配慮個人情報で、本人の同意を得て支援に必要な範囲で共有する。産業医等が事業者に伝える際は、就業上の措置に必要な情報に加工して伝えることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0095/index.html"
+    "publicPath": "q/ichimon/s/ichi-0095/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0096",
@@ -766,7 +861,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医等が事業者に意見を伝える際は、就業上の措置に必要な情報に加工して伝えることが望ましい。",
     "correctAnswer": true,
     "exp": "メンタルヘルスに関する情報は要配慮個人情報で、本人の同意を得て支援に必要な範囲で共有する。産業医等が事業者に伝える際は、就業上の措置に必要な情報に加工して伝えることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0096/index.html"
+    "publicPath": "q/ichimon/s/ichi-0096/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0097",
@@ -774,7 +870,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者自身も、自らのストレスサインに気づき、早めに対処することが重要である。",
     "correctAnswer": true,
     "exp": "管理監督者も一人の労働者として、自らのストレスに気づき、必要に応じて産業保健スタッフ等に相談するセルフケアが重要。役割の変化がストレス要因となりやすく、事業者は管理監督者の労働時間の状況も把握する。",
-    "publicPath": "q/ichimon/s/ichi-0097/index.html"
+    "publicPath": "q/ichimon/s/ichi-0097/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0098",
@@ -782,7 +879,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は部下のケアに専念するため、自分自身のストレスは後回しにすべきである。",
     "correctAnswer": false,
     "exp": "管理監督者も一人の労働者として、自らのストレスに気づき、必要に応じて産業保健スタッフ等に相談するセルフケアが重要。役割の変化がストレス要因となりやすく、事業者は管理監督者の労働時間の状況も把握する。",
-    "publicPath": "q/ichimon/s/ichi-0098/index.html"
+    "publicPath": "q/ichimon/s/ichi-0098/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0099",
@@ -790,7 +888,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者にとっても、仕事以外の活動や趣味を持つなど、気分転換の手段を持つことが有効である。",
     "correctAnswer": true,
     "exp": "管理監督者も一人の労働者として、自らのストレスに気づき、必要に応じて産業保健スタッフ等に相談するセルフケアが重要。役割の変化がストレス要因となりやすく、事業者は管理監督者の労働時間の状況も把握する。",
-    "publicPath": "q/ichimon/s/ichi-0099/index.html"
+    "publicPath": "q/ichimon/s/ichi-0099/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0100",
@@ -798,167 +897,188 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は部下のケアを担う立場であるため、自らのストレスについて産業保健スタッフに相談することは控えるべきである。",
     "correctAnswer": false,
     "exp": "管理監督者も一人の労働者として、自らのストレスに気づき、必要に応じて産業保健スタッフ等に相談するセルフケアが重要。役割の変化がストレス要因となりやすく、事業者は管理監督者の労働時間の状況も把握する。",
-    "publicPath": "q/ichimon/s/ichi-0100/index.html"
+    "publicPath": "q/ichimon/s/ichi-0100/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0101",
     "field": "limit",
-    "statement": "部下の相談を受けたときは、早く解決するため、話を十分に聴く前にすぐ助言や解決策を示す。",
+    "statement": "部下に安心して話してもらうため、相談の冒頭で「ここで聞いた話は、どのような場合でも誰にも伝えない」と約束することが望ましい。",
     "correctAnswer": false,
-    "exp": "部下の相談を受ける際の基本は、まず話を十分に聴くこと。業務に直接関係のない悩みも仕事に影響している場合があり、まず聴く。相談内容を他者に伝える場合は必要性を検討し、原則として本人の同意を得る。",
-    "publicPath": "q/ichimon/s/ichi-0101/index.html"
+    "exp": "相談内容を他者に伝える場合は、必要性を検討し、目的と範囲を説明して本人の了解を得ることが原則。生命に関わる場合などは例外となるため、無条件の守秘は約束しない。業務外の悩みでも、まずは話を聴く。",
+    "publicPath": "q/ichimon/s/ichi-0101/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0102",
     "field": "limit",
-    "statement": "部下の相談を受けるときは、まず傾聴し、部下が自分の気持ちや状況を話せる場をつくることを優先する。",
+    "statement": "部下の悩みが業務外の家庭の問題であっても、仕事に影響していることがあるため、まずは話を聴く。",
     "correctAnswer": true,
-    "exp": "部下の相談を受ける際の基本は、まず話を十分に聴くこと。業務に直接関係のない悩みも仕事に影響している場合があり、まず聴く。相談内容を他者に伝える場合は必要性を検討し、原則として本人の同意を得る。",
-    "publicPath": "q/ichimon/s/ichi-0102/index.html"
+    "exp": "相談内容を他者に伝える場合は、必要性を検討し、目的と範囲を説明して本人の了解を得ることが原則。生命に関わる場合などは例外となるため、無条件の守秘は約束しない。業務外の悩みでも、まずは話を聴く。",
+    "publicPath": "q/ichimon/s/ichi-0102/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0103",
     "field": "limit",
-    "statement": "部下から受けた相談の内容は、本人の同意の有無にかかわらず、必ず上司や人事部門に報告しなければならない。",
+    "statement": "部下の話がまとまらないときは、管理監督者が要点を整理して「つまり原因はこういうことだ」と結論づけて伝えることが、要約の技法である。",
     "correctAnswer": false,
-    "exp": "部下の相談を受ける際の基本は、まず話を十分に聴くこと。業務に直接関係のない悩みも仕事に影響している場合があり、まず聴く。相談内容を他者に伝える場合は必要性を検討し、原則として本人の同意を得る。",
-    "publicPath": "q/ichimon/s/ichi-0103/index.html"
+    "exp": "相談内容を他者に伝える場合は、必要性を検討し、目的と範囲を説明して本人の了解を得ることが原則。生命に関わる場合などは例外となるため、無条件の守秘は約束しない。業務外の悩みでも、まずは話を聴く。",
+    "publicPath": "q/ichimon/s/ichi-0103/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0104",
     "field": "limit",
     "statement": "部下から受けた相談の内容を他者に伝える場合は、その必要性を検討し、原則として本人の同意を得る。",
     "correctAnswer": true,
-    "exp": "部下の相談を受ける際の基本は、まず話を十分に聴くこと。業務に直接関係のない悩みも仕事に影響している場合があり、まず聴く。相談内容を他者に伝える場合は必要性を検討し、原則として本人の同意を得る。",
-    "publicPath": "q/ichimon/s/ichi-0104/index.html"
+    "exp": "相談内容を他者に伝える場合は、必要性を検討し、目的と範囲を説明して本人の了解を得ることが原則。生命に関わる場合などは例外となるため、無条件の守秘は約束しない。業務外の悩みでも、まずは話を聴く。",
+    "publicPath": "q/ichimon/s/ichi-0104/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0105",
     "field": "limit",
-    "statement": "メンタルヘルス不調は必ず身体症状として現れるため、健康診断で容易に発見できる。",
+    "statement": "「いつもと違う」様子は、口数が減るなど活動性が低下する方向の変化を指し、急に口数が増えるといった変化は含まれない。",
     "correctAnswer": false,
-    "exp": "メンタルヘルス不調は、本人が自覚していない、周囲に知られたくないと隠す、身体症状として現れるなどの理由で発見が遅れやすい。日頃から接している管理監督者が「いつもと違う」様子に気づくことが重要。",
-    "publicPath": "q/ichimon/s/ichi-0105/index.html"
+    "exp": "「いつもと違う」様子は本人の普段の様子と比べて判断する。遅刻・欠勤の増加のほか、仕事の量に見合わない残業や休日出勤の増加、職場での会話の減少やその逆の多弁など、さまざまな方向の変化が含まれる。",
+    "publicPath": "q/ichimon/s/ichi-0105/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0106",
     "field": "limit",
-    "statement": "メンタルヘルス不調は、本人が自覚していなかったり、周囲に知られたくないと隠したりするため、発見が遅れることがある。",
+    "statement": "仕事の量に見合わないほど残業や休日出勤が増えることも、部下の「いつもと違う」様子に含まれる。",
     "correctAnswer": true,
-    "exp": "メンタルヘルス不調は、本人が自覚していない、周囲に知られたくないと隠す、身体症状として現れるなどの理由で発見が遅れやすい。日頃から接している管理監督者が「いつもと違う」様子に気づくことが重要。",
-    "publicPath": "q/ichimon/s/ichi-0106/index.html"
+    "exp": "「いつもと違う」様子は本人の普段の様子と比べて判断する。遅刻・欠勤の増加のほか、仕事の量に見合わない残業や休日出勤の増加、職場での会話の減少やその逆の多弁など、さまざまな方向の変化が含まれる。",
+    "publicPath": "q/ichimon/s/ichi-0106/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0107",
     "field": "limit",
-    "statement": "職場でのメンタルヘルス不調はほとんどが軽微なものであり、自然に回復する。",
+    "statement": "部下が「いつもと違う」かどうかは、職場の他の部下の平均的な様子と比べて判断する。",
     "correctAnswer": false,
-    "exp": "メンタルヘルス不調は、本人が自覚していない、周囲に知られたくないと隠す、身体症状として現れるなどの理由で発見が遅れやすい。日頃から接している管理監督者が「いつもと違う」様子に気づくことが重要。",
-    "publicPath": "q/ichimon/s/ichi-0107/index.html"
+    "exp": "「いつもと違う」様子は本人の普段の様子と比べて判断する。遅刻・欠勤の増加のほか、仕事の量に見合わない残業や休日出勤の増加、職場での会話の減少やその逆の多弁など、さまざまな方向の変化が含まれる。",
+    "publicPath": "q/ichimon/s/ichi-0107/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0108",
     "field": "limit",
     "statement": "メンタルヘルス不調は、頭痛や不眠などの身体症状として現れることがあり、本人も気づきにくい。",
     "correctAnswer": true,
-    "exp": "メンタルヘルス不調は、本人が自覚していない、周囲に知られたくないと隠す、身体症状として現れるなどの理由で発見が遅れやすい。日頃から接している管理監督者が「いつもと違う」様子に気づくことが重要。",
-    "publicPath": "q/ichimon/s/ichi-0108/index.html"
+    "exp": "「いつもと違う」様子は本人の普段の様子と比べて判断する。遅刻・欠勤の増加のほか、仕事の量に見合わない残業や休日出勤の増加、職場での会話の減少やその逆の多弁など、さまざまな方向の変化が含まれる。",
+    "publicPath": "q/ichimon/s/ichi-0108/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0109",
     "field": "limit",
-    "statement": "管理監督者はカウンセラーの代わりとして、専門的な心理支援を行う役割がある。",
+    "statement": "管理監督者の役割は職場環境等の把握と改善および相談対応であり、休業した部下の職場復帰の支援には関与しない。",
     "correctAnswer": false,
-    "exp": "管理監督者が部下の話を聴く意義は、日常的な関係の中で不調に早く気づき、適切な支援につなげること。病名の判断や専門的な心理療法は管理監督者の役割ではなく、聴いて専門家につなぐことが役割。",
-    "publicPath": "q/ichimon/s/ichi-0109/index.html"
+    "exp": "指針は、管理監督者を、部下の状況を日常的に把握し、職場の具体的なストレス要因を把握して改善を図ることができる立場と位置づけている。管理監督者は職場復帰の支援にも関わり、自らもセルフケアに取り組む。",
+    "publicPath": "q/ichimon/s/ichi-0109/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0110",
     "field": "limit",
-    "statement": "管理監督者が日常的に部下の話を聴くことで、早期に不調に気づき、適切な支援につなげることができる。",
+    "statement": "管理監督者は、部下の状況を日常的に把握しており、個々の職場の具体的なストレス要因を把握して改善を図ることができる立場にある。",
     "correctAnswer": true,
-    "exp": "管理監督者が部下の話を聴く意義は、日常的な関係の中で不調に早く気づき、適切な支援につなげること。病名の判断や専門的な心理療法は管理監督者の役割ではなく、聴いて専門家につなぐことが役割。",
-    "publicPath": "q/ichimon/s/ichi-0110/index.html"
+    "exp": "指針は、管理監督者を、部下の状況を日常的に把握し、職場の具体的なストレス要因を把握して改善を図ることができる立場と位置づけている。管理監督者は職場復帰の支援にも関わり、自らもセルフケアに取り組む。",
+    "publicPath": "q/ichimon/s/ichi-0110/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0111",
     "field": "limit",
-    "statement": "管理監督者が部下の話を聴く最終目的は、問題を把握し、管理監督者自身が解決策を提供することである。",
+    "statement": "管理監督者自身のメンタルヘルスケアは、セルフケアの対象ではなく、その上司が行うラインによるケアによってのみ行われる。",
     "correctAnswer": false,
-    "exp": "管理監督者が部下の話を聴く意義は、日常的な関係の中で不調に早く気づき、適切な支援につなげること。病名の判断や専門的な心理療法は管理監督者の役割ではなく、聴いて専門家につなぐことが役割。",
-    "publicPath": "q/ichimon/s/ichi-0111/index.html"
+    "exp": "指針は、管理監督者を、部下の状況を日常的に把握し、職場の具体的なストレス要因を把握して改善を図ることができる立場と位置づけている。管理監督者は職場復帰の支援にも関わり、自らもセルフケアに取り組む。",
+    "publicPath": "q/ichimon/s/ichi-0111/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0112",
     "field": "limit",
     "statement": "管理監督者の役割は、部下の話を聴いて状態に気づき、必要に応じて専門家につなぐことである。",
     "correctAnswer": true,
-    "exp": "管理監督者が部下の話を聴く意義は、日常的な関係の中で不調に早く気づき、適切な支援につなげること。病名の判断や専門的な心理療法は管理監督者の役割ではなく、聴いて専門家につなぐことが役割。",
-    "publicPath": "q/ichimon/s/ichi-0112/index.html"
+    "exp": "指針は、管理監督者を、部下の状況を日常的に把握し、職場の具体的なストレス要因を把握して改善を図ることができる立場と位置づけている。管理監督者は職場復帰の支援にも関わり、自らもセルフケアに取り組む。",
+    "publicPath": "q/ichimon/s/ichi-0112/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0113",
     "field": "limit",
-    "statement": "不調が疑われる部下との面談では、相手の話をさえぎらず、最後まで聴く。",
+    "statement": "積極的傾聴では、相手の話の内容だけでなく、その背後にある気持ちにも注意を向ける。",
     "correctAnswer": true,
-    "exp": "傾聴では、相手の話をさえぎらず、ペースに合わせて結論を急がせず、繰り返しや言い換えで理解しようとする姿勢を示す。自分の経験を話して励ますことは、話の中心が聴き手に移るため適切ではない。",
-    "publicPath": "q/ichimon/s/ichi-0113/index.html"
+    "exp": "積極的傾聴では、話の主導権は話し手にあり、聴き手は話の内容だけでなく背後の気持ちにも注意を向け、評価や批判を加えずに受け止める。自分の体験談で励ましたり、安易に否定したりはしない。",
+    "publicPath": "q/ichimon/s/ichi-0113/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0114",
     "field": "limit",
     "statement": "不調が疑われる部下との面談では、相手の感情や言葉を繰り返し、共感的な姿勢を示す。",
     "correctAnswer": true,
-    "exp": "傾聴では、相手の話をさえぎらず、ペースに合わせて結論を急がせず、繰り返しや言い換えで理解しようとする姿勢を示す。自分の経験を話して励ますことは、話の中心が聴き手に移るため適切ではない。",
-    "publicPath": "q/ichimon/s/ichi-0114/index.html"
+    "exp": "積極的傾聴では、話の主導権は話し手にあり、聴き手は話の内容だけでなく背後の気持ちにも注意を向け、評価や批判を加えずに受け止める。自分の体験談で励ましたり、安易に否定したりはしない。",
+    "publicPath": "q/ichimon/s/ichi-0114/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0115",
     "field": "limit",
-    "statement": "不調が疑われる部下との面談では、「それは気にしすぎだ」「もっと前向きに考えよう」と励ますことが傾聴の基本である。",
+    "statement": "積極的傾聴では、相手の話を正確に理解するため、聴き手が質問を重ねて話の主導権を持つことが基本である。",
     "correctAnswer": false,
-    "exp": "傾聴では、相手の話をさえぎらず、ペースに合わせて結論を急がせず、繰り返しや言い換えで理解しようとする姿勢を示す。自分の経験を話して励ますことは、話の中心が聴き手に移るため適切ではない。",
-    "publicPath": "q/ichimon/s/ichi-0115/index.html"
+    "exp": "積極的傾聴では、話の主導権は話し手にあり、聴き手は話の内容だけでなく背後の気持ちにも注意を向け、評価や批判を加えずに受け止める。自分の体験談で励ましたり、安易に否定したりはしない。",
+    "publicPath": "q/ichimon/s/ichi-0115/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0116",
     "field": "limit",
     "statement": "傾聴では、聴き手が自分の似た経験を話して励ますことを優先する。",
     "correctAnswer": false,
-    "exp": "傾聴では、相手の話をさえぎらず、ペースに合わせて結論を急がせず、繰り返しや言い換えで理解しようとする姿勢を示す。自分の経験を話して励ますことは、話の中心が聴き手に移るため適切ではない。",
-    "publicPath": "q/ichimon/s/ichi-0116/index.html"
+    "exp": "積極的傾聴では、話の主導権は話し手にあり、聴き手は話の内容だけでなく背後の気持ちにも注意を向け、評価や批判を加えずに受け止める。自分の体験談で励ましたり、安易に否定したりはしない。",
+    "publicPath": "q/ichimon/s/ichi-0116/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0117",
     "field": "limit",
-    "statement": "本人が受診を拒否した場合は、強制的に受診させることが管理監督者の責任である。",
+    "statement": "自立支援医療（精神通院医療）は入院医療費の自己負担を軽減する制度であり、通院の医療費は対象とならない。",
     "correctAnswer": false,
-    "exp": "部下を専門家に紹介する際は、産業医や保健師などに事前に相談して勧め方を検討し、早めに紹介する。受診先の候補や目的を具体的に説明すると本人の不安を和らげやすい。強制は逆効果。",
-    "publicPath": "q/ichimon/s/ichi-0117/index.html"
+    "exp": "自立支援医療（精神通院医療）は、精神疾患の通院医療費の自己負担を原則1割に軽減する制度で、申請は市町村の窓口で行う。健康保険の傷病手当金は業務外の病気やけがによる休業が対象で、支給額は標準報酬日額のおおむね3分の2。",
+    "publicPath": "q/ichimon/s/ichi-0117/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0118",
     "field": "limit",
-    "statement": "部下を専門家へ紹介する際は、産業医や保健師などに事前に相談したうえで、受診の勧め方を検討する。",
+    "statement": "自立支援医療（精神通院医療）を利用すると、精神疾患の通院医療費の自己負担が、原則として1割に軽減される。",
     "correctAnswer": true,
-    "exp": "部下を専門家に紹介する際は、産業医や保健師などに事前に相談して勧め方を検討し、早めに紹介する。受診先の候補や目的を具体的に説明すると本人の不安を和らげやすい。強制は逆効果。",
-    "publicPath": "q/ichimon/s/ichi-0118/index.html"
+    "exp": "自立支援医療（精神通院医療）は、精神疾患の通院医療費の自己負担を原則1割に軽減する制度で、申請は市町村の窓口で行う。健康保険の傷病手当金は業務外の病気やけがによる休業が対象で、支給額は標準報酬日額のおおむね3分の2。",
+    "publicPath": "q/ichimon/s/ichi-0118/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0119",
     "field": "limit",
-    "statement": "専門家への紹介は、本人が職場で問題行動を起こしてから行えばよい。",
+    "statement": "健康保険の傷病手当金は、業務上の病気やけがで休業した場合に支給される制度である。",
     "correctAnswer": false,
-    "exp": "部下を専門家に紹介する際は、産業医や保健師などに事前に相談して勧め方を検討し、早めに紹介する。受診先の候補や目的を具体的に説明すると本人の不安を和らげやすい。強制は逆効果。",
-    "publicPath": "q/ichimon/s/ichi-0119/index.html"
+    "exp": "自立支援医療（精神通院医療）は、精神疾患の通院医療費の自己負担を原則1割に軽減する制度で、申請は市町村の窓口で行う。健康保険の傷病手当金は業務外の病気やけがによる休業が対象で、支給額は標準報酬日額のおおむね3分の2。",
+    "publicPath": "q/ichimon/s/ichi-0119/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0120",
     "field": "limit",
-    "statement": "部下に受診を勧める際は、受診先の候補や受診の目的を具体的に説明すると、本人の不安を和らげやすい。",
+    "statement": "自立支援医療（精神通院医療）の申請は、市町村の窓口で行う。",
     "correctAnswer": true,
-    "exp": "部下を専門家に紹介する際は、産業医や保健師などに事前に相談して勧め方を検討し、早めに紹介する。受診先の候補や目的を具体的に説明すると本人の不安を和らげやすい。強制は逆効果。",
-    "publicPath": "q/ichimon/s/ichi-0120/index.html"
+    "exp": "自立支援医療（精神通院医療）は、精神疾患の通院医療費の自己負担を原則1割に軽減する制度で、申請は市町村の窓口で行う。健康保険の傷病手当金は業務外の病気やけがによる休業が対象で、支給額は標準報酬日額のおおむね3分の2。",
+    "publicPath": "q/ichimon/s/ichi-0120/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0121",
@@ -966,7 +1086,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "常時500人以上の労働者を使用する事業場では、業務の種類にかかわらず、専属の産業医を選任しなければならない。",
     "correctAnswer": false,
     "exp": "産業医は常時50人以上の事業場で選任義務があり、専属が必要なのは常時1000人以上の事業場、または一定の有害業務に常時500人以上を従事させる事業場。労働者の健康確保のため必要と認めるときは事業者に勧告でき、事業者は勧告を尊重しなければならない。職場巡視は原則毎月1回。事業者が指名した産業医は衛生委員会の委員となる。",
-    "publicPath": "q/ichimon/s/ichi-0121/index.html"
+    "publicPath": "q/ichimon/s/ichi-0121/index.html",
+    "level": 5
   },
   {
     "id": "ichi-0122",
@@ -974,7 +1095,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医は、労働者の健康を確保するため必要があると認めるときは、事業者に対し、労働者の健康管理等について必要な勧告をすることができる。",
     "correctAnswer": true,
     "exp": "産業医は常時50人以上の事業場で選任義務があり、専属が必要なのは常時1000人以上の事業場、または一定の有害業務に常時500人以上を従事させる事業場。労働者の健康確保のため必要と認めるときは事業者に勧告でき、事業者は勧告を尊重しなければならない。職場巡視は原則毎月1回。事業者が指名した産業医は衛生委員会の委員となる。",
-    "publicPath": "q/ichimon/s/ichi-0122/index.html"
+    "publicPath": "q/ichimon/s/ichi-0122/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0123",
@@ -982,7 +1104,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医の選任が義務づけられているのは、常時50人以上の労働者を使用する事業場である。",
     "correctAnswer": true,
     "exp": "産業医は常時50人以上の事業場で選任義務があり、専属が必要なのは常時1000人以上の事業場、または一定の有害業務に常時500人以上を従事させる事業場。労働者の健康確保のため必要と認めるときは事業者に勧告でき、事業者は勧告を尊重しなければならない。職場巡視は原則毎月1回。事業者が指名した産業医は衛生委員会の委員となる。",
-    "publicPath": "q/ichimon/s/ichi-0123/index.html"
+    "publicPath": "q/ichimon/s/ichi-0123/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0124",
@@ -990,7 +1113,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医は衛生委員会の委員とはならず、求めに応じて意見を述べるにとどまる。",
     "correctAnswer": false,
     "exp": "産業医は常時50人以上の事業場で選任義務があり、専属が必要なのは常時1000人以上の事業場、または一定の有害業務に常時500人以上を従事させる事業場。労働者の健康確保のため必要と認めるときは事業者に勧告でき、事業者は勧告を尊重しなければならない。職場巡視は原則毎月1回。事業者が指名した産業医は衛生委員会の委員となる。",
-    "publicPath": "q/ichimon/s/ichi-0124/index.html"
+    "publicPath": "q/ichimon/s/ichi-0124/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0125",
@@ -998,7 +1122,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業保健総合支援センターは、大企業専用の支援機関である。",
     "correctAnswer": false,
     "exp": "地域産業保健センターは主に労働者数50人未満の小規模事業場を対象に無料で支援を行う。産業保健総合支援センターは各都道府県に設置され、規模を問わず産業保健スタッフへの研修や相談に応じる。精神保健福祉センターは心の健康相談に応じる。",
-    "publicPath": "q/ichimon/s/ichi-0125/index.html"
+    "publicPath": "q/ichimon/s/ichi-0125/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0126",
@@ -1006,7 +1131,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "地域産業保健センターは、主に小規模事業場の労働者・事業者を対象とした支援を行っている。",
     "correctAnswer": true,
     "exp": "地域産業保健センターは主に労働者数50人未満の小規模事業場を対象に無料で支援を行う。産業保健総合支援センターは各都道府県に設置され、規模を問わず産業保健スタッフへの研修や相談に応じる。精神保健福祉センターは心の健康相談に応じる。",
-    "publicPath": "q/ichimon/s/ichi-0126/index.html"
+    "publicPath": "q/ichimon/s/ichi-0126/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0127",
@@ -1014,7 +1140,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "EAP（従業員支援プログラム）は、事業場内でのみ提供されるサービスである。",
     "correctAnswer": false,
     "exp": "地域産業保健センターは主に労働者数50人未満の小規模事業場を対象に無料で支援を行う。産業保健総合支援センターは各都道府県に設置され、規模を問わず産業保健スタッフへの研修や相談に応じる。精神保健福祉センターは心の健康相談に応じる。",
-    "publicPath": "q/ichimon/s/ichi-0127/index.html"
+    "publicPath": "q/ichimon/s/ichi-0127/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0128",
@@ -1022,7 +1149,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業保健総合支援センターは各都道府県に設置され、産業保健スタッフへの研修や専門的な相談を行っている。",
     "correctAnswer": true,
     "exp": "地域産業保健センターは主に労働者数50人未満の小規模事業場を対象に無料で支援を行う。産業保健総合支援センターは各都道府県に設置され、規模を問わず産業保健スタッフへの研修や相談に応じる。精神保健福祉センターは心の健康相談に応じる。",
-    "publicPath": "q/ichimon/s/ichi-0128/index.html"
+    "publicPath": "q/ichimon/s/ichi-0128/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0129",
@@ -1030,7 +1158,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "心療内科は身体疾患のみを扱い、精神疾患の治療は行わない。",
     "correctAnswer": false,
     "exp": "精神科は、うつ病、統合失調症、双極性障害など、精神疾患を幅広く診療の対象とする。心療内科は、心理的な要因が深く関わる身体の病気（心身症）を主な対象とする。いずれも外来診療が中心。",
-    "publicPath": "q/ichimon/s/ichi-0129/index.html"
+    "publicPath": "q/ichimon/s/ichi-0129/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0130",
@@ -1038,7 +1167,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神科はすべての精神疾患を診療対象とし、うつ病や統合失調症なども含まれる。",
     "correctAnswer": true,
     "exp": "精神科は、うつ病、統合失調症、双極性障害など、精神疾患を幅広く診療の対象とする。心療内科は、心理的な要因が深く関わる身体の病気（心身症）を主な対象とする。いずれも外来診療が中心。",
-    "publicPath": "q/ichimon/s/ichi-0130/index.html"
+    "publicPath": "q/ichimon/s/ichi-0130/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0131",
@@ -1046,7 +1176,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス不調の場合、まず外科を受診することが推奨される。",
     "correctAnswer": false,
     "exp": "精神科は、うつ病、統合失調症、双極性障害など、精神疾患を幅広く診療の対象とする。心療内科は、心理的な要因が深く関わる身体の病気（心身症）を主な対象とする。いずれも外来診療が中心。",
-    "publicPath": "q/ichimon/s/ichi-0131/index.html"
+    "publicPath": "q/ichimon/s/ichi-0131/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0132",
@@ -1054,39 +1185,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "心療内科は、心理的な要因が深く関わる身体の病気（心身症）を主な対象とする診療科である。",
     "correctAnswer": true,
     "exp": "精神科は、うつ病、統合失調症、双極性障害など、精神疾患を幅広く診療の対象とする。心療内科は、心理的な要因が深く関わる身体の病気（心身症）を主な対象とする。いずれも外来診療が中心。",
-    "publicPath": "q/ichimon/s/ichi-0132/index.html"
+    "publicPath": "q/ichimon/s/ichi-0132/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0133",
     "field": "limit",
-    "statement": "管理監督者は、部下の状態に応じて産業医や保健師に相談・連携することが求められる。",
+    "statement": "EAPのサービスには、労働者からの相談への対応のほか、管理監督者への助言（マネジメントコンサルテーション）や研修などが含まれることがある。",
     "correctAnswer": true,
-    "exp": "外部EAPは事業場内の産業保健スタッフによる支援を補うもので、代わりにはならない。就業上の措置は産業医の意見を踏まえて判断し、職場復帰支援は関係者が本人の同意のもとで情報を共有して進める。",
-    "publicPath": "q/ichimon/s/ichi-0133/index.html"
+    "exp": "外部EAPを導入しても、事業場内産業保健スタッフ等によるケアは不要にならない。EAPは相談対応のほか、管理監督者への助言（マネジメントコンサルテーション）や研修を提供することがあり、相談内容は本人の同意なく個人が特定できる形で報告されない。",
+    "publicPath": "q/ichimon/s/ichi-0133/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0134",
     "field": "limit",
     "statement": "主治医と産業医の意見が異なる場合は、就業上の措置を判断するうえで産業医の意見が重要な参考となる。",
     "correctAnswer": true,
-    "exp": "外部EAPは事業場内の産業保健スタッフによる支援を補うもので、代わりにはならない。就業上の措置は産業医の意見を踏まえて判断し、職場復帰支援は関係者が本人の同意のもとで情報を共有して進める。",
-    "publicPath": "q/ichimon/s/ichi-0134/index.html"
+    "exp": "外部EAPを導入しても、事業場内産業保健スタッフ等によるケアは不要にならない。EAPは相談対応のほか、管理監督者への助言（マネジメントコンサルテーション）や研修を提供することがあり、相談内容は本人の同意なく個人が特定できる形で報告されない。",
+    "publicPath": "q/ichimon/s/ichi-0134/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0135",
     "field": "limit",
     "statement": "外部EAPの利用は、事業場内の産業保健スタッフへの相談が不要になることを意味する。",
     "correctAnswer": false,
-    "exp": "外部EAPは事業場内の産業保健スタッフによる支援を補うもので、代わりにはならない。就業上の措置は産業医の意見を踏まえて判断し、職場復帰支援は関係者が本人の同意のもとで情報を共有して進める。",
-    "publicPath": "q/ichimon/s/ichi-0135/index.html"
+    "exp": "外部EAPを導入しても、事業場内産業保健スタッフ等によるケアは不要にならない。EAPは相談対応のほか、管理監督者への助言（マネジメントコンサルテーション）や研修を提供することがあり、相談内容は本人の同意なく個人が特定できる形で報告されない。",
+    "publicPath": "q/ichimon/s/ichi-0135/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0136",
     "field": "limit",
     "statement": "外部EAPの相談員は、本人の同意がなくても、相談内容を個人が特定できる形で事業者に報告する。",
     "correctAnswer": false,
-    "exp": "外部EAPは事業場内の産業保健スタッフによる支援を補うもので、代わりにはならない。就業上の措置は産業医の意見を踏まえて判断し、職場復帰支援は関係者が本人の同意のもとで情報を共有して進める。",
-    "publicPath": "q/ichimon/s/ichi-0136/index.html"
+    "exp": "外部EAPを導入しても、事業場内産業保健スタッフ等によるケアは不要にならない。EAPは相談対応のほか、管理監督者への助言（マネジメントコンサルテーション）や研修を提供することがあり、相談内容は本人の同意なく個人が特定できる形で報告されない。",
+    "publicPath": "q/ichimon/s/ichi-0136/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0137",
@@ -1094,7 +1230,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第2ステップは、事業者による最終的な職場復帰の決定を行うステップである。",
     "correctAnswer": false,
     "exp": "職場復帰支援の5つのステップは、第1休業開始と休業中のケア、第2主治医による職場復帰可能の判断、第3可否の判断とプランの作成、第4事業者による最終的な決定、第5フォローアップ。主治医の判断は業務遂行能力の回復を示すとは限らない。",
-    "publicPath": "q/ichimon/s/ichi-0137/index.html"
+    "publicPath": "q/ichimon/s/ichi-0137/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0138",
@@ -1102,7 +1239,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第2ステップは、主治医による職場復帰可能の判断（診断書の提出）が行われるステップである。",
     "correctAnswer": true,
     "exp": "職場復帰支援の5つのステップは、第1休業開始と休業中のケア、第2主治医による職場復帰可能の判断、第3可否の判断とプランの作成、第4事業者による最終的な決定、第5フォローアップ。主治医の判断は業務遂行能力の回復を示すとは限らない。",
-    "publicPath": "q/ichimon/s/ichi-0138/index.html"
+    "publicPath": "q/ichimon/s/ichi-0138/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0139",
@@ -1110,7 +1248,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第2ステップは、職場復帰支援プランを実行するステップである。",
     "correctAnswer": false,
     "exp": "職場復帰支援の5つのステップは、第1休業開始と休業中のケア、第2主治医による職場復帰可能の判断、第3可否の判断とプランの作成、第4事業者による最終的な決定、第5フォローアップ。主治医の判断は業務遂行能力の回復を示すとは限らない。",
-    "publicPath": "q/ichimon/s/ichi-0139/index.html"
+    "publicPath": "q/ichimon/s/ichi-0139/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0140",
@@ -1118,39 +1257,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "主治医による職場復帰可能の判断は、職場で求められる業務遂行能力まで回復していることを示すとは限らない。",
     "correctAnswer": true,
     "exp": "職場復帰支援の5つのステップは、第1休業開始と休業中のケア、第2主治医による職場復帰可能の判断、第3可否の判断とプランの作成、第4事業者による最終的な決定、第5フォローアップ。主治医の判断は業務遂行能力の回復を示すとは限らない。",
-    "publicPath": "q/ichimon/s/ichi-0140/index.html"
+    "publicPath": "q/ichimon/s/ichi-0140/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0141",
     "field": "limit",
-    "statement": "職場復帰した部下には、回復を促すため、復職直後から元の業務量に戻すことが望ましい。",
+    "statement": "職場復帰支援プランとは、個々の事業場における職場復帰支援の手順や関係者の役割などを、事業場としてあらかじめ定めたものをいう。",
     "correctAnswer": false,
-    "exp": "復職後は定期的な面談で体調や業務の状況を確認しながら、業務の負荷を段階的に上げる。職場復帰支援プランは産業医や人事労務担当者、管理監督者などが連携して作成し、管理監督者は実行の中心を担う。",
-    "publicPath": "q/ichimon/s/ichi-0141/index.html"
+    "exp": "手引きでは、職場復帰支援プログラムは事業場があらかじめ定める手順・内容・関係者の役割で、衛生委員会等で調査審議し産業医等の助言を受けて策定し、周知する。職場復帰支援プランは、労働者ごとに職場復帰日や配慮の内容を定めるもの。",
+    "publicPath": "q/ichimon/s/ichi-0141/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0142",
     "field": "limit",
-    "statement": "職場復帰した部下とは、定期的に面談を行い、体調や業務の状況をきめ細かく確認する。",
+    "statement": "職場復帰支援プログラムは、衛生委員会等で調査審議し、産業医等の助言を受けて、事業場の実態に即した形で策定する。",
     "correctAnswer": true,
-    "exp": "復職後は定期的な面談で体調や業務の状況を確認しながら、業務の負荷を段階的に上げる。職場復帰支援プランは産業医や人事労務担当者、管理監督者などが連携して作成し、管理監督者は実行の中心を担う。",
-    "publicPath": "q/ichimon/s/ichi-0142/index.html"
+    "exp": "手引きでは、職場復帰支援プログラムは事業場があらかじめ定める手順・内容・関係者の役割で、衛生委員会等で調査審議し産業医等の助言を受けて策定し、周知する。職場復帰支援プランは、労働者ごとに職場復帰日や配慮の内容を定めるもの。",
+    "publicPath": "q/ichimon/s/ichi-0142/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0143",
     "field": "limit",
-    "statement": "再発を防ぐため、職場復帰した部下は特別扱いせず、厳しく管理することが重要である。",
+    "statement": "職場復帰支援プログラムは、事業場内産業保健スタッフ等が使う内部資料であるため、労働者や管理監督者に周知する必要はない。",
     "correctAnswer": false,
-    "exp": "復職後は定期的な面談で体調や業務の状況を確認しながら、業務の負荷を段階的に上げる。職場復帰支援プランは産業医や人事労務担当者、管理監督者などが連携して作成し、管理監督者は実行の中心を担う。",
-    "publicPath": "q/ichimon/s/ichi-0143/index.html"
+    "exp": "手引きでは、職場復帰支援プログラムは事業場があらかじめ定める手順・内容・関係者の役割で、衛生委員会等で調査審議し産業医等の助言を受けて策定し、周知する。職場復帰支援プランは、労働者ごとに職場復帰日や配慮の内容を定めるもの。",
+    "publicPath": "q/ichimon/s/ichi-0143/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0144",
     "field": "limit",
     "statement": "職場復帰支援プランは、産業医や人事労務担当者、管理監督者などが連携して作成する。",
     "correctAnswer": true,
-    "exp": "復職後は定期的な面談で体調や業務の状況を確認しながら、業務の負荷を段階的に上げる。職場復帰支援プランは産業医や人事労務担当者、管理監督者などが連携して作成し、管理監督者は実行の中心を担う。",
-    "publicPath": "q/ichimon/s/ichi-0144/index.html"
+    "exp": "手引きでは、職場復帰支援プログラムは事業場があらかじめ定める手順・内容・関係者の役割で、衛生委員会等で調査審議し産業医等の助言を受けて策定し、周知する。職場復帰支援プランは、労働者ごとに職場復帰日や配慮の内容を定めるもの。",
+    "publicPath": "q/ichimon/s/ichi-0144/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0145",
@@ -1158,7 +1302,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "治療中の労働者は、完治するまで就業させてはならない。",
     "correctAnswer": false,
     "exp": "治療と仕事の両立支援は、労働者本人の申し出を端緒に、主治医への業務情報の提供と主治医の意見、産業医等の意見を踏まえて事業者が就業上の措置を検討する。対象は反復・継続して治療が必要な疾病。",
-    "publicPath": "q/ichimon/s/ichi-0145/index.html"
+    "publicPath": "q/ichimon/s/ichi-0145/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0146",
@@ -1166,7 +1311,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "両立支援においては、主治医・産業医・事業者・労働者が連携して対応することが重要である。",
     "correctAnswer": true,
     "exp": "治療と仕事の両立支援は、労働者本人の申し出を端緒に、主治医への業務情報の提供と主治医の意見、産業医等の意見を踏まえて事業者が就業上の措置を検討する。対象は反復・継続して治療が必要な疾病。",
-    "publicPath": "q/ichimon/s/ichi-0146/index.html"
+    "publicPath": "q/ichimon/s/ichi-0146/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0147",
@@ -1174,7 +1320,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "時間単位の年次有給休暇や時差出勤などの制度は、両立支援には活用できない。",
     "correctAnswer": false,
     "exp": "治療と仕事の両立支援は、労働者本人の申し出を端緒に、主治医への業務情報の提供と主治医の意見、産業医等の意見を踏まえて事業者が就業上の措置を検討する。対象は反復・継続して治療が必要な疾病。",
-    "publicPath": "q/ichimon/s/ichi-0147/index.html"
+    "publicPath": "q/ichimon/s/ichi-0147/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0148",
@@ -1182,7 +1329,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "治療と仕事の両立支援は、支援を求める労働者本人からの申し出を端緒として進めることが基本である。",
     "correctAnswer": true,
     "exp": "治療と仕事の両立支援は、労働者本人の申し出を端緒に、主治医への業務情報の提供と主治医の意見、産業医等の意見を踏まえて事業者が就業上の措置を検討する。対象は反復・継続して治療が必要な疾病。",
-    "publicPath": "q/ichimon/s/ichi-0148/index.html"
+    "publicPath": "q/ichimon/s/ichi-0148/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0149",
@@ -1190,7 +1338,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働契約法第5条の安全配慮義務に違反した使用者には、刑事罰として罰金が科される。",
     "correctAnswer": false,
     "exp": "労働安全衛生法は公法的規制で、違反は刑事罰や行政処分の対象となることがある。安全配慮義務（労働契約法第5条）は私法上の義務で罰則はなく、損害賠償は裁判などを通じて請求する。民事訴訟では、公法上の基準を守っていたかどうかも考慮される。",
-    "publicPath": "q/ichimon/s/ichi-0149/index.html"
+    "publicPath": "q/ichimon/s/ichi-0149/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0150",
@@ -1198,7 +1347,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働安全衛生法は公法であるため、その違反の有無が民事訴訟での安全配慮義務違反の判断に影響することはない。",
     "correctAnswer": false,
     "exp": "労働安全衛生法は公法的規制で、違反は刑事罰や行政処分の対象となることがある。安全配慮義務（労働契約法第5条）は私法上の義務で罰則はなく、損害賠償は裁判などを通じて請求する。民事訴訟では、公法上の基準を守っていたかどうかも考慮される。",
-    "publicPath": "q/ichimon/s/ichi-0150/index.html"
+    "publicPath": "q/ichimon/s/ichi-0150/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0151",
@@ -1206,7 +1356,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働安全衛生法は公法的規制にあたり、違反した場合は刑事罰や行政処分の対象となることがある。",
     "correctAnswer": true,
     "exp": "労働安全衛生法は公法的規制で、違反は刑事罰や行政処分の対象となることがある。安全配慮義務（労働契約法第5条）は私法上の義務で罰則はなく、損害賠償は裁判などを通じて請求する。民事訴訟では、公法上の基準を守っていたかどうかも考慮される。",
-    "publicPath": "q/ichimon/s/ichi-0151/index.html"
+    "publicPath": "q/ichimon/s/ichi-0151/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0152",
@@ -1214,7 +1365,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務違反による損害賠償は、民事上の責任として、裁判などを通じて請求される。",
     "correctAnswer": true,
     "exp": "労働安全衛生法は公法的規制で、違反は刑事罰や行政処分の対象となることがある。安全配慮義務（労働契約法第5条）は私法上の義務で罰則はなく、損害賠償は裁判などを通じて請求する。民事訴訟では、公法上の基準を守っていたかどうかも考慮される。",
-    "publicPath": "q/ichimon/s/ichi-0152/index.html"
+    "publicPath": "q/ichimon/s/ichi-0152/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0153",
@@ -1222,7 +1374,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス対策は、労働者の生産性の向上や職場の活性化につながる。",
     "correctAnswer": true,
     "exp": "メンタルヘルス対策は、生産性の向上・人材の定着・法的リスクの低減などにつながる経営上の取り組み。生産性の損失には、欠勤・休職によるものだけでなく、出勤中の不調によるプレゼンティーイズムも含まれる。対策を講じていても、不調の発生と責任の有無は個別に判断される。",
-    "publicPath": "q/ichimon/s/ichi-0153/index.html"
+    "publicPath": "q/ichimon/s/ichi-0153/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0154",
@@ -1230,7 +1383,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス対策は、休職や離職の防止を通じて、人材の定着に寄与する。",
     "correctAnswer": true,
     "exp": "メンタルヘルス対策は、生産性の向上・人材の定着・法的リスクの低減などにつながる経営上の取り組み。生産性の損失には、欠勤・休職によるものだけでなく、出勤中の不調によるプレゼンティーイズムも含まれる。対策を講じていても、不調の発生と責任の有無は個別に判断される。",
-    "publicPath": "q/ichimon/s/ichi-0154/index.html"
+    "publicPath": "q/ichimon/s/ichi-0154/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0155",
@@ -1238,7 +1392,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業者がメンタルヘルス対策に取り組んでいれば、労働者にメンタルヘルス不調が生じても、安全配慮義務違反を問われることは一切ない。",
     "correctAnswer": false,
     "exp": "メンタルヘルス対策は、生産性の向上・人材の定着・法的リスクの低減などにつながる経営上の取り組み。生産性の損失には、欠勤・休職によるものだけでなく、出勤中の不調によるプレゼンティーイズムも含まれる。対策を講じていても、不調の発生と責任の有無は個別に判断される。",
-    "publicPath": "q/ichimon/s/ichi-0155/index.html"
+    "publicPath": "q/ichimon/s/ichi-0155/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0156",
@@ -1246,7 +1401,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス不調による生産性の損失は欠勤や休職によるものに限られ、出勤している労働者の不調は損失に含まれない。",
     "correctAnswer": false,
     "exp": "メンタルヘルス対策は、生産性の向上・人材の定着・法的リスクの低減などにつながる経営上の取り組み。生産性の損失には、欠勤・休職によるものだけでなく、出勤中の不調によるプレゼンティーイズムも含まれる。対策を講じていても、不調の発生と責任の有無は個別に判断される。",
-    "publicPath": "q/ichimon/s/ichi-0156/index.html"
+    "publicPath": "q/ichimon/s/ichi-0156/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0157",
@@ -1254,7 +1410,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働基準法上の管理監督者は労働時間規制の適用対象外であるため、事業者がその労働時間の状況を把握する必要はない。",
     "correctAnswer": false,
     "exp": "時間外労働の上限は原則月45時間・年360時間。特別条項を設けても、年720時間以内、時間外・休日労働の合計は単月100時間未満・2〜6か月平均80時間以内、月45時間超は年6回まで。管理監督者を含め、事業者は労働時間の状況を把握しなければならない（労働安全衛生法第66条の8の3）。",
-    "publicPath": "q/ichimon/s/ichi-0157/index.html"
+    "publicPath": "q/ichimon/s/ichi-0157/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0158",
@@ -1262,7 +1419,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "36協定に特別条項を設ければ、月45時間を超える時間外労働は年12回まで認められる。",
     "correctAnswer": false,
     "exp": "時間外労働の上限は原則月45時間・年360時間。特別条項を設けても、年720時間以内、時間外・休日労働の合計は単月100時間未満・2〜6か月平均80時間以内、月45時間超は年6回まで。管理監督者を含め、事業者は労働時間の状況を把握しなければならない（労働安全衛生法第66条の8の3）。",
-    "publicPath": "q/ichimon/s/ichi-0158/index.html"
+    "publicPath": "q/ichimon/s/ichi-0158/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0159",
@@ -1270,7 +1428,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "時間外労働の上限は、原則として月45時間・年360時間とされている。",
     "correctAnswer": true,
     "exp": "時間外労働の上限は原則月45時間・年360時間。特別条項を設けても、年720時間以内、時間外・休日労働の合計は単月100時間未満・2〜6か月平均80時間以内、月45時間超は年6回まで。管理監督者を含め、事業者は労働時間の状況を把握しなければならない（労働安全衛生法第66条の8の3）。",
-    "publicPath": "q/ichimon/s/ichi-0159/index.html"
+    "publicPath": "q/ichimon/s/ichi-0159/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0160",
@@ -1278,7 +1437,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "36協定に特別条項を設けた場合でも、時間外労働と休日労働の合計は単月100時間未満でなければならない。",
     "correctAnswer": true,
     "exp": "時間外労働の上限は原則月45時間・年360時間。特別条項を設けても、年720時間以内、時間外・休日労働の合計は単月100時間未満・2〜6か月平均80時間以内、月45時間超は年6回まで。管理監督者を含め、事業者は労働時間の状況を把握しなければならない（労働安全衛生法第66条の8の3）。",
-    "publicPath": "q/ichimon/s/ichi-0160/index.html"
+    "publicPath": "q/ichimon/s/ichi-0160/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0161",
@@ -1286,7 +1446,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス不調とは、うつ病などの精神疾患と医師に診断された状態のみを指し、診断に至らない不調は含まれない。",
     "correctAnswer": false,
     "exp": "指針は、メンタルヘルス不調を、精神障害や自殺だけでなく、ストレスや強い悩み、不安など、心身の健康や生活の質に影響を与える可能性のある問題を幅広く含むものと定義している。仕事の要因だけでなく、私生活上の出来事や個人の要因が重なって生じることもある。",
-    "publicPath": "q/ichimon/s/ichi-0161/index.html"
+    "publicPath": "q/ichimon/s/ichi-0161/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0162",
@@ -1294,7 +1455,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス不調から回復して職場復帰した労働者は再発の心配がないため、復帰後に特別な配慮を行う必要はない。",
     "correctAnswer": false,
     "exp": "指針は、メンタルヘルス不調を、精神障害や自殺だけでなく、ストレスや強い悩み、不安など、心身の健康や生活の質に影響を与える可能性のある問題を幅広く含むものと定義している。仕事の要因だけでなく、私生活上の出来事や個人の要因が重なって生じることもある。",
-    "publicPath": "q/ichimon/s/ichi-0162/index.html"
+    "publicPath": "q/ichimon/s/ichi-0162/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0163",
@@ -1302,7 +1464,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「労働者の心の健康の保持増進のための指針」のいうメンタルヘルス不調には、精神障害だけでなく、ストレスや強い悩み、不安なども含まれる。",
     "correctAnswer": true,
     "exp": "指針は、メンタルヘルス不調を、精神障害や自殺だけでなく、ストレスや強い悩み、不安など、心身の健康や生活の質に影響を与える可能性のある問題を幅広く含むものと定義している。仕事の要因だけでなく、私生活上の出来事や個人の要因が重なって生じることもある。",
-    "publicPath": "q/ichimon/s/ichi-0163/index.html"
+    "publicPath": "q/ichimon/s/ichi-0163/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0164",
@@ -1310,7 +1473,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス不調は、仕事のストレスだけでなく、私生活上の出来事や個人の要因が重なって生じることがある。",
     "correctAnswer": true,
     "exp": "指針は、メンタルヘルス不調を、精神障害や自殺だけでなく、ストレスや強い悩み、不安など、心身の健康や生活の質に影響を与える可能性のある問題を幅広く含むものと定義している。仕事の要因だけでなく、私生活上の出来事や個人の要因が重なって生じることもある。",
-    "publicPath": "q/ichimon/s/ichi-0164/index.html"
+    "publicPath": "q/ichimon/s/ichi-0164/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0165",
@@ -1318,7 +1482,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "問題焦点型コーピングとは、ストレスを感じた際の気分転換や感情の解放を指す。",
     "correctAnswer": false,
     "exp": "コーピングは問題焦点型と情動焦点型に大別され、状況に応じて使い分ける。変えられない状況では情動焦点型が役立つ。上司への相談などの社会的支援の希求もコーピングの一つ。飲酒による対処は長期的に有効ではない。",
-    "publicPath": "q/ichimon/s/ichi-0165/index.html"
+    "publicPath": "q/ichimon/s/ichi-0165/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0166",
@@ -1326,7 +1491,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "情動焦点型コーピングとは、ストレスの原因そのものに働きかけて解決を図ることである。",
     "correctAnswer": false,
     "exp": "コーピングは問題焦点型と情動焦点型に大別され、状況に応じて使い分ける。変えられない状況では情動焦点型が役立つ。上司への相談などの社会的支援の希求もコーピングの一つ。飲酒による対処は長期的に有効ではない。",
-    "publicPath": "q/ichimon/s/ichi-0166/index.html"
+    "publicPath": "q/ichimon/s/ichi-0166/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0167",
@@ -1334,7 +1500,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "コーピングは問題焦点型と情動焦点型に大別され、状況に応じて使い分けることが効果的である。",
     "correctAnswer": true,
     "exp": "コーピングは問題焦点型と情動焦点型に大別され、状況に応じて使い分ける。変えられない状況では情動焦点型が役立つ。上司への相談などの社会的支援の希求もコーピングの一つ。飲酒による対処は長期的に有効ではない。",
-    "publicPath": "q/ichimon/s/ichi-0167/index.html"
+    "publicPath": "q/ichimon/s/ichi-0167/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0168",
@@ -1342,7 +1509,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "上司に相談して助言を得ることも、ストレスへの対処（コーピング）の一つである。",
     "correctAnswer": true,
     "exp": "コーピングは問題焦点型と情動焦点型に大別され、状況に応じて使い分ける。変えられない状況では情動焦点型が役立つ。上司への相談などの社会的支援の希求もコーピングの一つ。飲酒による対処は長期的に有効ではない。",
-    "publicPath": "q/ichimon/s/ichi-0168/index.html"
+    "publicPath": "q/ichimon/s/ichi-0168/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0169",
@@ -1350,7 +1518,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "第4ステップでは主治医が単独で最終的な職場復帰の可否を決定する。",
     "correctAnswer": false,
     "exp": "第4ステップでは、産業医の意見などを踏まえて事業者が最終的な職場復帰の決定を行う。第5ステップのフォローアップは、再発の有無や業務遂行能力などを確認し、状況に応じてプランを見直しながら継続する。",
-    "publicPath": "q/ichimon/s/ichi-0169/index.html"
+    "publicPath": "q/ichimon/s/ichi-0169/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0170",
@@ -1358,7 +1527,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "第4ステップは事業者による最終的な職場復帰の決定であり、産業医の意見を参考に行われる。",
     "correctAnswer": true,
     "exp": "第4ステップでは、産業医の意見などを踏まえて事業者が最終的な職場復帰の決定を行う。第5ステップのフォローアップは、再発の有無や業務遂行能力などを確認し、状況に応じてプランを見直しながら継続する。",
-    "publicPath": "q/ichimon/s/ichi-0170/index.html"
+    "publicPath": "q/ichimon/s/ichi-0170/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0171",
@@ -1366,7 +1536,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "第5ステップのフォローアップは、復職から1か月間のみ行えば十分である。",
     "correctAnswer": false,
     "exp": "第4ステップでは、産業医の意見などを踏まえて事業者が最終的な職場復帰の決定を行う。第5ステップのフォローアップは、再発の有無や業務遂行能力などを確認し、状況に応じてプランを見直しながら継続する。",
-    "publicPath": "q/ichimon/s/ichi-0171/index.html"
+    "publicPath": "q/ichimon/s/ichi-0171/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0172",
@@ -1374,7 +1545,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "第5ステップのフォローアップでは、状況に応じて職場復帰支援プランの見直しを行う。",
     "correctAnswer": true,
     "exp": "第4ステップでは、産業医の意見などを踏まえて事業者が最終的な職場復帰の決定を行う。第5ステップのフォローアップは、再発の有無や業務遂行能力などを確認し、状況に応じてプランを見直しながら継続する。",
-    "publicPath": "q/ichimon/s/ichi-0172/index.html"
+    "publicPath": "q/ichimon/s/ichi-0172/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0173",
@@ -1382,7 +1554,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務違反に基づく損害賠償額の算定では、治療費などの積極損害、休業による逸失利益、慰謝料などが考慮される。",
     "correctAnswer": true,
     "exp": "安全配慮義務違反に基づく損害賠償額は、積極損害（治療費など）・消極損害（休業による逸失利益など）・慰謝料などを考慮して算定する。労働者側の事情が損害に寄与した場合は過失相殺による減額がある。義務を尽くしていれば損害が生じても責任は問われない。",
-    "publicPath": "q/ichimon/s/ichi-0173/index.html"
+    "publicPath": "q/ichimon/s/ichi-0173/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0174",
@@ -1390,7 +1563,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務違反に基づく損害賠償の対象は財産的な損害に限られ、精神的損害に対する慰謝料は含まれない。",
     "correctAnswer": false,
     "exp": "安全配慮義務違反に基づく損害賠償額は、積極損害（治療費など）・消極損害（休業による逸失利益など）・慰謝料などを考慮して算定する。労働者側の事情が損害に寄与した場合は過失相殺による減額がある。義務を尽くしていれば損害が生じても責任は問われない。",
-    "publicPath": "q/ichimon/s/ichi-0174/index.html"
+    "publicPath": "q/ichimon/s/ichi-0174/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0175",
@@ -1398,7 +1572,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働者側の事情が損害の発生や拡大に寄与した場合、過失相殺により賠償額が減額されることがある。",
     "correctAnswer": true,
     "exp": "安全配慮義務違反に基づく損害賠償額は、積極損害（治療費など）・消極損害（休業による逸失利益など）・慰謝料などを考慮して算定する。労働者側の事情が損害に寄与した場合は過失相殺による減額がある。義務を尽くしていれば損害が生じても責任は問われない。",
-    "publicPath": "q/ichimon/s/ichi-0175/index.html"
+    "publicPath": "q/ichimon/s/ichi-0175/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0176",
@@ -1406,7 +1581,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "使用者が安全配慮義務を尽くしていたと認められる場合でも、労働者に損害が生じた以上、使用者は必ず賠償責任を負う。",
     "correctAnswer": false,
     "exp": "安全配慮義務違反に基づく損害賠償額は、積極損害（治療費など）・消極損害（休業による逸失利益など）・慰謝料などを考慮して算定する。労働者側の事情が損害に寄与した場合は過失相殺による減額がある。義務を尽くしていれば損害が生じても責任は問われない。",
-    "publicPath": "q/ichimon/s/ichi-0176/index.html"
+    "publicPath": "q/ichimon/s/ichi-0176/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0177",
@@ -1414,7 +1590,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働者が通勤の途中に交通事故で負傷した場合は、使用者の安全配慮義務違反が問われる典型的なケースである。",
     "correctAnswer": false,
     "exp": "安全配慮義務違反は、使用者が予見可能な健康被害を回避する措置を怠った場合に問われる。管理監督者が過重労働を把握しながら放置したケースは典型例。",
-    "publicPath": "q/ichimon/s/ichi-0177/index.html"
+    "publicPath": "q/ichimon/s/ichi-0177/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0178",
@@ -1422,7 +1599,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者が部下の過重労働を把握しながら改善せず、部下がうつ病を発症した場合は、安全配慮義務違反が問われうる。",
     "correctAnswer": true,
     "exp": "安全配慮義務違反は、使用者が予見可能な健康被害を回避する措置を怠った場合に問われる。管理監督者が過重労働を把握しながら放置したケースは典型例。",
-    "publicPath": "q/ichimon/s/ichi-0178/index.html"
+    "publicPath": "q/ichimon/s/ichi-0178/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0179",
@@ -1430,7 +1608,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働者が業務と無関係な私生活上のトラブルにより精神的な不調をきたした場合も、使用者は安全配慮義務違反を問われる。",
     "correctAnswer": false,
     "exp": "安全配慮義務違反は、使用者が予見可能な健康被害を回避する措置を怠った場合に問われる。管理監督者が過重労働を把握しながら放置したケースは典型例。",
-    "publicPath": "q/ichimon/s/ichi-0179/index.html"
+    "publicPath": "q/ichimon/s/ichi-0179/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0180",
@@ -1438,7 +1617,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務上の負荷がほとんどない中で、使用者が予見できなかった持病の発作を労働者が突然起こした場合も、使用者は安全配慮義務違反を問われる。",
     "correctAnswer": false,
     "exp": "安全配慮義務違反は、使用者が予見可能な健康被害を回避する措置を怠った場合に問われる。管理監督者が過重労働を把握しながら放置したケースは典型例。",
-    "publicPath": "q/ichimon/s/ichi-0180/index.html"
+    "publicPath": "q/ichimon/s/ichi-0180/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0181",
@@ -1446,7 +1626,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害の労災認定には、業務による強いストレスが発病の主な原因であることが必要であり、私的な出来事は一切考慮されない。",
     "correctAnswer": false,
     "exp": "精神障害の労災認定は、発病前おおむね6か月の業務による心理的負荷を「強・中・弱」で評価し、業務以外の心理的負荷や個体側要因も考慮して判断する。2023年9月の改正でカスタマーハラスメントが評価の対象に加わった。業務起因性が認められれば自殺も労災の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0181/index.html"
+    "publicPath": "q/ichimon/s/ichi-0181/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0182",
@@ -1454,7 +1635,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "認定基準では、業務による心理的負荷の強度を「強・中・弱」の3段階で評価する。",
     "correctAnswer": true,
     "exp": "精神障害の労災認定は、発病前おおむね6か月の業務による心理的負荷を「強・中・弱」で評価し、業務以外の心理的負荷や個体側要因も考慮して判断する。2023年9月の改正でカスタマーハラスメントが評価の対象に加わった。業務起因性が認められれば自殺も労災の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0182/index.html"
+    "publicPath": "q/ichimon/s/ichi-0182/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0183",
@@ -1462,7 +1644,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害の労災認定で評価の対象となるのは、発病前おおむね1年間に起きた業務上の出来事である。",
     "correctAnswer": false,
     "exp": "精神障害の労災認定は、発病前おおむね6か月の業務による心理的負荷を「強・中・弱」で評価し、業務以外の心理的負荷や個体側要因も考慮して判断する。2023年9月の改正でカスタマーハラスメントが評価の対象に加わった。業務起因性が認められれば自殺も労災の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0183/index.html"
+    "publicPath": "q/ichimon/s/ichi-0183/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0184",
@@ -1470,7 +1653,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害の労災認定では、発病前おおむね6か月間の業務上の出来事が評価の対象となる。",
     "correctAnswer": true,
     "exp": "精神障害の労災認定は、発病前おおむね6か月の業務による心理的負荷を「強・中・弱」で評価し、業務以外の心理的負荷や個体側要因も考慮して判断する。2023年9月の改正でカスタマーハラスメントが評価の対象に加わった。業務起因性が認められれば自殺も労災の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0184/index.html"
+    "publicPath": "q/ichimon/s/ichi-0184/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0185",
@@ -1478,7 +1662,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの結果に基づく集団分析は、事業者の努力義務とされている。",
     "correctAnswer": true,
     "exp": "集団分析は事業者の努力義務で、結果は職場環境の改善に活用することが望ましい。集団分析の結果は個人が特定されない限り本人の同意なく事業者に提供できるが、集計・分析の単位が10人を下回る場合は、原則として全員の同意がなければ提供しない。",
-    "publicPath": "q/ichimon/s/ichi-0185/index.html"
+    "publicPath": "q/ichimon/s/ichi-0185/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0186",
@@ -1486,7 +1671,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "集団分析の結果は、職場環境改善のための資料として活用することが望ましい。",
     "correctAnswer": true,
     "exp": "集団分析は事業者の努力義務で、結果は職場環境の改善に活用することが望ましい。集団分析の結果は個人が特定されない限り本人の同意なく事業者に提供できるが、集計・分析の単位が10人を下回る場合は、原則として全員の同意がなければ提供しない。",
-    "publicPath": "q/ichimon/s/ichi-0186/index.html"
+    "publicPath": "q/ichimon/s/ichi-0186/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0187",
@@ -1494,7 +1680,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "集団分析の結果を事業者に提供するには、集計・分析の単位の人数にかかわらず、常に対象労働者全員の同意が必要である。",
     "correctAnswer": false,
     "exp": "集団分析は事業者の努力義務で、結果は職場環境の改善に活用することが望ましい。集団分析の結果は個人が特定されない限り本人の同意なく事業者に提供できるが、集計・分析の単位が10人を下回る場合は、原則として全員の同意がなければ提供しない。",
-    "publicPath": "q/ichimon/s/ichi-0187/index.html"
+    "publicPath": "q/ichimon/s/ichi-0187/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0188",
@@ -1502,7 +1689,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "集計・分析の単位が10人未満の集団分析結果も、全員の同意の有無にかかわらず、そのまま事業者に提供しなければならない。",
     "correctAnswer": false,
     "exp": "集団分析は事業者の努力義務で、結果は職場環境の改善に活用することが望ましい。集団分析の結果は個人が特定されない限り本人の同意なく事業者に提供できるが、集計・分析の単位が10人を下回る場合は、原則として全員の同意がなければ提供しない。",
-    "publicPath": "q/ichimon/s/ichi-0188/index.html"
+    "publicPath": "q/ichimon/s/ichi-0188/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0189",
@@ -1510,7 +1698,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "性的な言動に対する労働者の対応によって、その労働者が解雇や降格などの不利益を受けるセクシュアルハラスメントは「対価型」にあたる。",
     "correctAnswer": true,
     "exp": "セクシュアルハラスメント防止措置の対象は、パートタイム労働者や派遣労働者を含むすべての労働者。性的な言動への対応によって不利益を受ける「対価型」と、就業環境が害される「環境型」がある。判断は、平均的な女性（男性）労働者の感じ方を基準とする。社外の者からの行為も措置の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0189/index.html"
+    "publicPath": "q/ichimon/s/ichi-0189/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0190",
@@ -1518,7 +1707,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "セクシュアルハラスメントの判断では、労働者の主観を重視しつつ、「平均的な女性（男性）労働者の感じ方」を基準とすることが適当とされている。",
     "correctAnswer": true,
     "exp": "セクシュアルハラスメント防止措置の対象は、パートタイム労働者や派遣労働者を含むすべての労働者。性的な言動への対応によって不利益を受ける「対価型」と、就業環境が害される「環境型」がある。判断は、平均的な女性（男性）労働者の感じ方を基準とする。社外の者からの行為も措置の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0190/index.html"
+    "publicPath": "q/ichimon/s/ichi-0190/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0191",
@@ -1526,7 +1716,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業主のセクシュアルハラスメント防止措置の対象は正社員に限られ、パートタイム労働者や派遣労働者は含まれない。",
     "correctAnswer": false,
     "exp": "セクシュアルハラスメント防止措置の対象は、パートタイム労働者や派遣労働者を含むすべての労働者。性的な言動への対応によって不利益を受ける「対価型」と、就業環境が害される「環境型」がある。判断は、平均的な女性（男性）労働者の感じ方を基準とする。社外の者からの行為も措置の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0191/index.html"
+    "publicPath": "q/ichimon/s/ichi-0191/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0192",
@@ -1534,7 +1725,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "セクシュアルハラスメントは、同じ事業主に雇用される労働者の間で行われるものに限られ、取引先の労働者などによる行為は事業主の措置の対象とならない。",
     "correctAnswer": false,
     "exp": "セクシュアルハラスメント防止措置の対象は、パートタイム労働者や派遣労働者を含むすべての労働者。性的な言動への対応によって不利益を受ける「対価型」と、就業環境が害される「環境型」がある。判断は、平均的な女性（男性）労働者の感じ方を基準とする。社外の者からの行為も措置の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0192/index.html"
+    "publicPath": "q/ichimon/s/ichi-0192/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0193",
@@ -1542,7 +1734,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害の労災支給決定件数は、脳・心臓疾患の労災支給決定件数を一貫して下回っている。",
     "correctAnswer": false,
     "exp": "精神障害の労災請求件数は近年増加が続き、支給決定件数は脳・心臓疾患を大きく上回る水準で推移している。強いストレスとなっている事柄がある労働者は令和7年調査で67.5％。生産性の損失には、出勤しながら能率が落ちるプレゼンティーイズムも含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0193/index.html"
+    "publicPath": "q/ichimon/s/ichi-0193/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0194",
@@ -1550,7 +1743,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害による労災の請求件数は、近年増加が続いている。",
     "correctAnswer": true,
     "exp": "精神障害の労災請求件数は近年増加が続き、支給決定件数は脳・心臓疾患を大きく上回る水準で推移している。強いストレスとなっている事柄がある労働者は令和7年調査で67.5％。生産性の損失には、出勤しながら能率が落ちるプレゼンティーイズムも含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0194/index.html"
+    "publicPath": "q/ichimon/s/ichi-0194/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0195",
@@ -1558,7 +1752,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働安全衛生調査では、強いストレスとなっている事柄がある労働者は、全体の3割程度にとどまっている。",
     "correctAnswer": false,
     "exp": "精神障害の労災請求件数は近年増加が続き、支給決定件数は脳・心臓疾患を大きく上回る水準で推移している。強いストレスとなっている事柄がある労働者は令和7年調査で67.5％。生産性の損失には、出勤しながら能率が落ちるプレゼンティーイズムも含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0195/index.html"
+    "publicPath": "q/ichimon/s/ichi-0195/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0196",
@@ -1566,7 +1761,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス不調による生産性の損失には、欠勤や休職によるものだけでなく、出勤しながら能率が低下するプレゼンティーイズムによるものも含まれる。",
     "correctAnswer": true,
     "exp": "精神障害の労災請求件数は近年増加が続き、支給決定件数は脳・心臓疾患を大きく上回る水準で推移している。強いストレスとなっている事柄がある労働者は令和7年調査で67.5％。生産性の損失には、出勤しながら能率が落ちるプレゼンティーイズムも含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0196/index.html"
+    "publicPath": "q/ichimon/s/ichi-0196/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0197",
@@ -1574,7 +1770,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業場内メンタルヘルス推進担当者は、産業医の資格を持つ者の中から選任しなければならない。",
     "correctAnswer": false,
     "exp": "事業者はメンタルヘルスケアを積極的に推進する旨を表明し、心の健康づくり計画に基づき組織的・計画的に取り組む。事業場内メンタルヘルス推進担当者は衛生管理者等や常勤の保健師等から選任することが望ましい。小規模事業場では衛生推進者等を推進担当者とすることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0197/index.html"
+    "publicPath": "q/ichimon/s/ichi-0197/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0198",
@@ -1582,7 +1779,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "指針では、事業場内メンタルヘルス推進担当者は、衛生管理者等や常勤の保健師等から選任することが望ましいとされている。",
     "correctAnswer": true,
     "exp": "事業者はメンタルヘルスケアを積極的に推進する旨を表明し、心の健康づくり計画に基づき組織的・計画的に取り組む。事業場内メンタルヘルス推進担当者は衛生管理者等や常勤の保健師等から選任することが望ましい。小規模事業場では衛生推進者等を推進担当者とすることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0198/index.html"
+    "publicPath": "q/ichimon/s/ichi-0198/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0199",
@@ -1590,7 +1788,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業者は、メンタルヘルスケアを積極的に推進する旨を表明し、心の健康づくり計画に基づいて組織的・計画的に取り組むことが求められる。",
     "correctAnswer": true,
     "exp": "事業者はメンタルヘルスケアを積極的に推進する旨を表明し、心の健康づくり計画に基づき組織的・計画的に取り組む。事業場内メンタルヘルス推進担当者は衛生管理者等や常勤の保健師等から選任することが望ましい。小規模事業場では衛生推進者等を推進担当者とすることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0199/index.html"
+    "publicPath": "q/ichimon/s/ichi-0199/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0200",
@@ -1598,7 +1797,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "小規模事業場では、衛生推進者などをメンタルヘルス推進担当者として関与させることは想定されていない。",
     "correctAnswer": false,
     "exp": "事業者はメンタルヘルスケアを積極的に推進する旨を表明し、心の健康づくり計画に基づき組織的・計画的に取り組む。事業場内メンタルヘルス推進担当者は衛生管理者等や常勤の保健師等から選任することが望ましい。小規模事業場では衛生推進者等を推進担当者とすることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0200/index.html"
+    "publicPath": "q/ichimon/s/ichi-0200/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0201",
@@ -1606,7 +1806,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "36協定を締結する過半数代表者には、労働基準法上の管理監督者を選ぶこともできる。",
     "correctAnswer": false,
     "exp": "36協定は、過半数労働組合（ない場合は過半数代表者）と書面で締結し、労働基準監督署長に届け出て初めて時間外労働を行わせることができる。過半数代表者は管理監督者以外から民主的な方法で選出する。36協定がなければ、時間外・休日労働は原則として行わせることができない。",
-    "publicPath": "q/ichimon/s/ichi-0201/index.html"
+    "publicPath": "q/ichimon/s/ichi-0201/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0202",
@@ -1614,7 +1815,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "36協定は、過半数労働組合（ない場合は過半数代表者）と書面で締結し、労働基準監督署長に届け出る必要がある。",
     "correctAnswer": true,
     "exp": "36協定は、過半数労働組合（ない場合は過半数代表者）と書面で締結し、労働基準監督署長に届け出て初めて時間外労働を行わせることができる。過半数代表者は管理監督者以外から民主的な方法で選出する。36協定がなければ、時間外・休日労働は原則として行わせることができない。",
-    "publicPath": "q/ichimon/s/ichi-0202/index.html"
+    "publicPath": "q/ichimon/s/ichi-0202/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0203",
@@ -1622,7 +1824,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "36協定は締結した時点で効力が生じるため、労働基準監督署長に届け出なくても時間外労働を行わせることができる。",
     "correctAnswer": false,
     "exp": "36協定は、過半数労働組合（ない場合は過半数代表者）と書面で締結し、労働基準監督署長に届け出て初めて時間外労働を行わせることができる。過半数代表者は管理監督者以外から民主的な方法で選出する。36協定がなければ、時間外・休日労働は原則として行わせることができない。",
-    "publicPath": "q/ichimon/s/ichi-0203/index.html"
+    "publicPath": "q/ichimon/s/ichi-0203/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0204",
@@ -1630,7 +1833,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "36協定がなければ、法定時間外労働や法定休日労働は原則として行わせることができない。",
     "correctAnswer": true,
     "exp": "36協定は、過半数労働組合（ない場合は過半数代表者）と書面で締結し、労働基準監督署長に届け出て初めて時間外労働を行わせることができる。過半数代表者は管理監督者以外から民主的な方法で選出する。36協定がなければ、時間外・休日労働は原則として行わせることができない。",
-    "publicPath": "q/ichimon/s/ichi-0204/index.html"
+    "publicPath": "q/ichimon/s/ichi-0204/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0205",
@@ -1638,7 +1842,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事の要求度が高くコントロールが低い状態は「高ストレイン」と呼ばれ、健康障害のリスクが高い。",
     "correctAnswer": true,
     "exp": "カラセックのモデルでは、要求度が高くコントロールが低い「高ストレイン」で健康障害のリスクが最も高い。要求度・コントロールともに高い状態は「活性化」、要求度が低くコントロールが高い状態は「低ストレイン」、ともに低い状態は「受動的」と呼ばれる。コントロールは仕事上の裁量を指す。のちに社会的支援を加えた拡張モデルも提唱された。",
-    "publicPath": "q/ichimon/s/ichi-0205/index.html"
+    "publicPath": "q/ichimon/s/ichi-0205/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0206",
@@ -1646,7 +1851,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事の要求度が高くコントロールも高い状態は、最もストレスが大きく健康障害のリスクが最も高いとされる。",
     "correctAnswer": false,
     "exp": "カラセックのモデルでは、要求度が高くコントロールが低い「高ストレイン」で健康障害のリスクが最も高い。要求度・コントロールともに高い状態は「活性化」、要求度が低くコントロールが高い状態は「低ストレイン」、ともに低い状態は「受動的」と呼ばれる。コントロールは仕事上の裁量を指す。のちに社会的支援を加えた拡張モデルも提唱された。",
-    "publicPath": "q/ichimon/s/ichi-0206/index.html"
+    "publicPath": "q/ichimon/s/ichi-0206/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0207",
@@ -1654,7 +1860,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "要求度－コントロールモデルに社会的支援を加えた拡張モデルでは、要求度が高く、コントロールが低く、支援も乏しい状態が、最も健康リスクが低いとされる。",
     "correctAnswer": false,
     "exp": "カラセックのモデルでは、要求度が高くコントロールが低い「高ストレイン」で健康障害のリスクが最も高い。要求度・コントロールともに高い状態は「活性化」、要求度が低くコントロールが高い状態は「低ストレイン」、ともに低い状態は「受動的」と呼ばれる。コントロールは仕事上の裁量を指す。のちに社会的支援を加えた拡張モデルも提唱された。",
-    "publicPath": "q/ichimon/s/ichi-0207/index.html"
+    "publicPath": "q/ichimon/s/ichi-0207/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0208",
@@ -1662,7 +1869,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事の要求度が低くコントロールも低い状態は「低ストレイン」と呼ばれ、最も望ましい状態とされる。",
     "correctAnswer": false,
     "exp": "カラセックのモデルでは、要求度が高くコントロールが低い「高ストレイン」で健康障害のリスクが最も高い。要求度・コントロールともに高い状態は「活性化」、要求度が低くコントロールが高い状態は「低ストレイン」、ともに低い状態は「受動的」と呼ばれる。コントロールは仕事上の裁量を指す。のちに社会的支援を加えた拡張モデルも提唱された。",
-    "publicPath": "q/ichimon/s/ichi-0208/index.html"
+    "publicPath": "q/ichimon/s/ichi-0208/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0209",
@@ -1670,7 +1878,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "同じストレッサーにさらされても、受け止め方や対処の仕方、周囲の支援によって、ストレス反応の強さには個人差がある。",
     "correctAnswer": true,
     "exp": "ストレス反応は心理面・身体面・行動面に現れ、受け止め方・対処の仕方・周囲の支援によって個人差がある。急性のストレス反応では交感神経系が優位になり、心拍数や血圧が上昇する。昇進や結婚など望ましい出来事もストレッサーとなり得る。",
-    "publicPath": "q/ichimon/s/ichi-0209/index.html"
+    "publicPath": "q/ichimon/s/ichi-0209/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0210",
@@ -1678,7 +1887,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレス反応は、心理面・身体面・行動面に現れる。",
     "correctAnswer": true,
     "exp": "ストレス反応は心理面・身体面・行動面に現れ、受け止め方・対処の仕方・周囲の支援によって個人差がある。急性のストレス反応では交感神経系が優位になり、心拍数や血圧が上昇する。昇進や結婚など望ましい出来事もストレッサーとなり得る。",
-    "publicPath": "q/ichimon/s/ichi-0210/index.html"
+    "publicPath": "q/ichimon/s/ichi-0210/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0211",
@@ -1686,7 +1896,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレッサーには、昇進や結婚など、本人にとって望ましい出来事は含まれない。",
     "correctAnswer": false,
     "exp": "ストレス反応は心理面・身体面・行動面に現れ、受け止め方・対処の仕方・周囲の支援によって個人差がある。急性のストレス反応では交感神経系が優位になり、心拍数や血圧が上昇する。昇進や結婚など望ましい出来事もストレッサーとなり得る。",
-    "publicPath": "q/ichimon/s/ichi-0211/index.html"
+    "publicPath": "q/ichimon/s/ichi-0211/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0212",
@@ -1694,7 +1905,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "急性のストレス反応では、一般に副交感神経系が優位になり、心拍数や血圧が低下する。",
     "correctAnswer": false,
     "exp": "ストレス反応は心理面・身体面・行動面に現れ、受け止め方・対処の仕方・周囲の支援によって個人差がある。急性のストレス反応では交感神経系が優位になり、心拍数や血圧が上昇する。昇進や結婚など望ましい出来事もストレッサーとなり得る。",
-    "publicPath": "q/ichimon/s/ichi-0212/index.html"
+    "publicPath": "q/ichimon/s/ichi-0212/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0213",
@@ -1702,7 +1914,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "双極性障害では、うつ状態の期間は短く、躁状態の期間のほうが長く続くことが多い。",
     "correctAnswer": false,
     "exp": "双極性障害は躁状態（軽躁状態）とうつ状態を繰り返す病気で、治療は気分安定薬が中心。Ⅰ型は激しい躁状態、Ⅱ型は軽躁状態を伴う。経過の中ではうつ状態の期間のほうが長いことが多い。",
-    "publicPath": "q/ichimon/s/ichi-0213/index.html"
+    "publicPath": "q/ichimon/s/ichi-0213/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0214",
@@ -1710,7 +1923,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "躁状態では、気分が高揚し、睡眠欲求が減少し、活動性が増す。",
     "correctAnswer": true,
     "exp": "双極性障害は躁状態（軽躁状態）とうつ状態を繰り返す病気で、治療は気分安定薬が中心。Ⅰ型は激しい躁状態、Ⅱ型は軽躁状態を伴う。経過の中ではうつ状態の期間のほうが長いことが多い。",
-    "publicPath": "q/ichimon/s/ichi-0214/index.html"
+    "publicPath": "q/ichimon/s/ichi-0214/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0215",
@@ -1718,7 +1932,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "双極性障害の治療では、気分安定薬が中心となる。",
     "correctAnswer": true,
     "exp": "双極性障害は躁状態（軽躁状態）とうつ状態を繰り返す病気で、治療は気分安定薬が中心。Ⅰ型は激しい躁状態、Ⅱ型は軽躁状態を伴う。経過の中ではうつ状態の期間のほうが長いことが多い。",
-    "publicPath": "q/ichimon/s/ichi-0215/index.html"
+    "publicPath": "q/ichimon/s/ichi-0215/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0216",
@@ -1726,7 +1941,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "双極Ⅱ型障害は、Ⅰ型と比べて躁症状が重く、激しい躁状態を特徴とする。",
     "correctAnswer": false,
     "exp": "双極性障害は躁状態（軽躁状態）とうつ状態を繰り返す病気で、治療は気分安定薬が中心。Ⅰ型は激しい躁状態、Ⅱ型は軽躁状態を伴う。経過の中ではうつ状態の期間のほうが長いことが多い。",
-    "publicPath": "q/ichimon/s/ichi-0216/index.html"
+    "publicPath": "q/ichimon/s/ichi-0216/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0217",
@@ -1734,7 +1950,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "統合失調症の陰性症状には、感情の平板化や意欲の低下などがある。",
     "correctAnswer": true,
     "exp": "統合失調症の症状には、幻覚・妄想などの陽性症状と、感情の平板化・意欲の低下などの陰性症状がある。およそ100人に1人程度がかかり、思春期から青年期に発症することが多い。症状が落ち着いた後も服薬を継続することが再発予防に重要。",
-    "publicPath": "q/ichimon/s/ichi-0217/index.html"
+    "publicPath": "q/ichimon/s/ichi-0217/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0218",
@@ -1742,7 +1959,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "統合失調症では、再発を防ぐため、症状が落ち着いた後も服薬を継続することが重要とされる。",
     "correctAnswer": true,
     "exp": "統合失調症の症状には、幻覚・妄想などの陽性症状と、感情の平板化・意欲の低下などの陰性症状がある。およそ100人に1人程度がかかり、思春期から青年期に発症することが多い。症状が落ち着いた後も服薬を継続することが再発予防に重要。",
-    "publicPath": "q/ichimon/s/ichi-0218/index.html"
+    "publicPath": "q/ichimon/s/ichi-0218/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0219",
@@ -1750,7 +1968,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "統合失調症の幻覚や妄想は、陰性症状に分類される。",
     "correctAnswer": false,
     "exp": "統合失調症の症状には、幻覚・妄想などの陽性症状と、感情の平板化・意欲の低下などの陰性症状がある。およそ100人に1人程度がかかり、思春期から青年期に発症することが多い。症状が落ち着いた後も服薬を継続することが再発予防に重要。",
-    "publicPath": "q/ichimon/s/ichi-0219/index.html"
+    "publicPath": "q/ichimon/s/ichi-0219/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0220",
@@ -1758,7 +1977,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "統合失調症は、主に高齢期に発症することが多い病気である。",
     "correctAnswer": false,
     "exp": "統合失調症の症状には、幻覚・妄想などの陽性症状と、感情の平板化・意欲の低下などの陰性症状がある。およそ100人に1人程度がかかり、思春期から青年期に発症することが多い。症状が落ち着いた後も服薬を継続することが再発予防に重要。",
-    "publicPath": "q/ichimon/s/ichi-0220/index.html"
+    "publicPath": "q/ichimon/s/ichi-0220/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0221",
@@ -1766,7 +1986,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "努力−報酬不均衡モデルでは、仕事で費やす努力に比べて得られる報酬が少ない状態が続くと、健康障害のリスクが高まるとされる。",
     "correctAnswer": true,
     "exp": "努力−報酬不均衡モデルはシーグリストが提唱した。努力に比べて報酬が少ない状態が続くと健康障害のリスクが高まるとし、報酬には金銭・尊重・昇進や雇用の安定が含まれる。過剰コミットメントはリスクを高める個人側の要因とされる。",
-    "publicPath": "q/ichimon/s/ichi-0221/index.html"
+    "publicPath": "q/ichimon/s/ichi-0221/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0222",
@@ -1774,7 +1995,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "努力−報酬不均衡モデルでいう報酬は金銭的な報酬のみであり、尊重や昇進・雇用の安定は含まれない。",
     "correctAnswer": false,
     "exp": "努力−報酬不均衡モデルはシーグリストが提唱した。努力に比べて報酬が少ない状態が続くと健康障害のリスクが高まるとし、報酬には金銭・尊重・昇進や雇用の安定が含まれる。過剰コミットメントはリスクを高める個人側の要因とされる。",
-    "publicPath": "q/ichimon/s/ichi-0222/index.html"
+    "publicPath": "q/ichimon/s/ichi-0222/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0223",
@@ -1782,7 +2004,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "努力−報酬不均衡モデルでは、過剰コミットメントは健康障害のリスクを低下させる要因とされている。",
     "correctAnswer": false,
     "exp": "努力−報酬不均衡モデルはシーグリストが提唱した。努力に比べて報酬が少ない状態が続くと健康障害のリスクが高まるとし、報酬には金銭・尊重・昇進や雇用の安定が含まれる。過剰コミットメントはリスクを高める個人側の要因とされる。",
-    "publicPath": "q/ichimon/s/ichi-0223/index.html"
+    "publicPath": "q/ichimon/s/ichi-0223/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0224",
@@ -1790,7 +2013,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "努力−報酬不均衡モデルを提唱したのは、シーグリストである。",
     "correctAnswer": true,
     "exp": "努力−報酬不均衡モデルはシーグリストが提唱した。努力に比べて報酬が少ない状態が続くと健康障害のリスクが高まるとし、報酬には金銭・尊重・昇進や雇用の安定が含まれる。過剰コミットメントはリスクを高める個人側の要因とされる。",
-    "publicPath": "q/ichimon/s/ichi-0224/index.html"
+    "publicPath": "q/ichimon/s/ichi-0224/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0225",
@@ -1798,7 +2022,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "照明・騒音・温度などの物理的な作業環境は、メンタルヘルスに影響しない。",
     "correctAnswer": false,
     "exp": "単調な反復作業や自分でペースを調整できない作業、VDT作業、照明・騒音・温度などの物理的環境、交替勤務は、身体面と心理面の両方に影響するストレス要因となる。",
-    "publicPath": "q/ichimon/s/ichi-0225/index.html"
+    "publicPath": "q/ichimon/s/ichi-0225/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0226",
@@ -1806,7 +2031,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "単調な反復作業や過度な作業ペースは、ストレス要因となりうる。",
     "correctAnswer": true,
     "exp": "単調な反復作業や自分でペースを調整できない作業、VDT作業、照明・騒音・温度などの物理的環境、交替勤務は、身体面と心理面の両方に影響するストレス要因となる。",
-    "publicPath": "q/ichimon/s/ichi-0226/index.html"
+    "publicPath": "q/ichimon/s/ichi-0226/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0227",
@@ -1814,7 +2040,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "VDT作業（パソコン作業）による負担は身体面に限られ、精神的な疲労やストレスには影響しない。",
     "correctAnswer": false,
     "exp": "単調な反復作業や自分でペースを調整できない作業、VDT作業、照明・騒音・温度などの物理的環境、交替勤務は、身体面と心理面の両方に影響するストレス要因となる。",
-    "publicPath": "q/ichimon/s/ichi-0227/index.html"
+    "publicPath": "q/ichimon/s/ichi-0227/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0228",
@@ -1822,7 +2049,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "交替勤務や深夜業は生活リズムを乱しやすく、健康面への配慮が必要とされる。",
     "correctAnswer": true,
     "exp": "単調な反復作業や自分でペースを調整できない作業、VDT作業、照明・騒音・温度などの物理的環境、交替勤務は、身体面と心理面の両方に影響するストレス要因となる。",
-    "publicPath": "q/ichimon/s/ichi-0228/index.html"
+    "publicPath": "q/ichimon/s/ichi-0228/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0229",
@@ -1830,7 +2058,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職業性ストレス簡易調査票は個人のストレス診断専用であり、集団での使用はできない。",
     "correctAnswer": false,
     "exp": "仕事のストレス判定図は集団の評価に、職場環境改善のためのヒント集は労働者参加型の改善策の検討に用いる。職業性ストレス簡易調査票の結果は、個人へのフィードバックだけでなく集団分析にも用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0229/index.html"
+    "publicPath": "q/ichimon/s/ichi-0229/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0230",
@@ -1838,7 +2067,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルスアクションチェックリストは、職場環境改善の手がかりを得るためのツールである。",
     "correctAnswer": true,
     "exp": "仕事のストレス判定図は集団の評価に、職場環境改善のためのヒント集は労働者参加型の改善策の検討に用いる。職業性ストレス簡易調査票の結果は、個人へのフィードバックだけでなく集団分析にも用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0230/index.html"
+    "publicPath": "q/ichimon/s/ichi-0230/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0231",
@@ -1846,7 +2076,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "量－コントロール判定図は、個人の業務適性を判定するためのツールである。",
     "correctAnswer": false,
     "exp": "仕事のストレス判定図は集団の評価に、職場環境改善のためのヒント集は労働者参加型の改善策の検討に用いる。職業性ストレス簡易調査票の結果は、個人へのフィードバックだけでなく集団分析にも用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0231/index.html"
+    "publicPath": "q/ichimon/s/ichi-0231/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0232",
@@ -1854,7 +2085,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職業性ストレス簡易調査票の結果は、個人へのフィードバックだけでなく、集団分析にも用いることができる。",
     "correctAnswer": true,
     "exp": "仕事のストレス判定図は集団の評価に、職場環境改善のためのヒント集は労働者参加型の改善策の検討に用いる。職業性ストレス簡易調査票の結果は、個人へのフィードバックだけでなく集団分析にも用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0232/index.html"
+    "publicPath": "q/ichimon/s/ichi-0232/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0233",
@@ -1862,7 +2094,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事の分担を見直し、一部の労働者への業務の集中を解消することは、職場環境改善の取り組みとなる。",
     "correctAnswer": true,
     "exp": "職場環境改善には、業務分担の見直し、作業手順や役割分担の明確化、意思決定への参加による裁量の向上などがある。改善策は労働者参加の話し合いで職場ごとに検討し、実行しやすいものから取り組む。",
-    "publicPath": "q/ichimon/s/ichi-0233/index.html"
+    "publicPath": "q/ichimon/s/ichi-0233/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0234",
@@ -1870,7 +2103,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下が相談しやすい雰囲気をつくるため、日頃から声かけを行うことは、職場環境改善の取り組みとなる。",
     "correctAnswer": true,
     "exp": "職場環境改善には、業務分担の見直し、作業手順や役割分担の明確化、意思決定への参加による裁量の向上などがある。改善策は労働者参加の話し合いで職場ごとに検討し、実行しやすいものから取り組む。",
-    "publicPath": "q/ichimon/s/ichi-0234/index.html"
+    "publicPath": "q/ichimon/s/ichi-0234/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0235",
@@ -1878,7 +2112,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善の効果を早く出すため、改善策は職場での話し合いを経ずに経営層が一律に決め、全職場で同時に実施する。",
     "correctAnswer": false,
     "exp": "職場環境改善には、業務分担の見直し、作業手順や役割分担の明確化、意思決定への参加による裁量の向上などがある。改善策は労働者参加の話し合いで職場ごとに検討し、実行しやすいものから取り組む。",
-    "publicPath": "q/ichimon/s/ichi-0235/index.html"
+    "publicPath": "q/ichimon/s/ichi-0235/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0236",
@@ -1886,7 +2121,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場の意思決定に労働者が参加できる機会を増やし、仕事の裁量を高めることは、職場環境改善の取り組みとなる。",
     "correctAnswer": true,
     "exp": "職場環境改善には、業務分担の見直し、作業手順や役割分担の明確化、意思決定への参加による裁量の向上などがある。改善策は労働者参加の話し合いで職場ごとに検討し、実行しやすいものから取り組む。",
-    "publicPath": "q/ichimon/s/ichi-0236/index.html"
+    "publicPath": "q/ichimon/s/ichi-0236/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0237",
@@ -1894,7 +2130,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "役割葛藤とは、自分の担当業務の範囲が不明確な状態を指す。",
     "correctAnswer": false,
     "exp": "役割の曖昧さは役割や仕事の範囲が不明確な状態、役割葛藤は両立が難しい複数の要求にさらされる状態、役割の過負荷は役割が処理能力を超える状態。管理監督者は上司と部下の板挟みで役割葛藤が生じやすい。",
-    "publicPath": "q/ichimon/s/ichi-0237/index.html"
+    "publicPath": "q/ichimon/s/ichi-0237/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0238",
@@ -1902,7 +2139,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "役割の曖昧さとは、相反する役割期待や要求に同時にさらされている状態を指す。",
     "correctAnswer": false,
     "exp": "役割の曖昧さは役割や仕事の範囲が不明確な状態、役割葛藤は両立が難しい複数の要求にさらされる状態、役割の過負荷は役割が処理能力を超える状態。管理監督者は上司と部下の板挟みで役割葛藤が生じやすい。",
-    "publicPath": "q/ichimon/s/ichi-0238/index.html"
+    "publicPath": "q/ichimon/s/ichi-0238/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0239",
@@ -1910,7 +2148,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "役割の過負荷とは、与えられた役割の量が個人の処理能力を超えている状態を指す。",
     "correctAnswer": true,
     "exp": "役割の曖昧さは役割や仕事の範囲が不明確な状態、役割葛藤は両立が難しい複数の要求にさらされる状態、役割の過負荷は役割が処理能力を超える状態。管理監督者は上司と部下の板挟みで役割葛藤が生じやすい。",
-    "publicPath": "q/ichimon/s/ichi-0239/index.html"
+    "publicPath": "q/ichimon/s/ichi-0239/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0240",
@@ -1918,7 +2157,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は、上司と部下の板挟みになりやすく、役割葛藤が生じやすい立場にある。",
     "correctAnswer": true,
     "exp": "役割の曖昧さは役割や仕事の範囲が不明確な状態、役割葛藤は両立が難しい複数の要求にさらされる状態、役割の過負荷は役割が処理能力を超える状態。管理監督者は上司と部下の板挟みで役割葛藤が生じやすい。",
-    "publicPath": "q/ichimon/s/ichi-0240/index.html"
+    "publicPath": "q/ichimon/s/ichi-0240/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0241",
@@ -1926,7 +2166,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "服装や身だしなみが乱れてきたことは、管理監督者が注意すべき「いつもと違う様子」にあたる。",
     "correctAnswer": true,
     "exp": "「いつもと違う様子」は、その部下の以前の状態と比べた変化で判断する。身だしなみの乱れ、遅刻の増加、報告・相談や発言の減少などはサインとなりうる。資格取得の勉強を始めるなどの前向きな行動は、それだけでは不調のサインとはいえない。",
-    "publicPath": "q/ichimon/s/ichi-0241/index.html"
+    "publicPath": "q/ichimon/s/ichi-0241/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0242",
@@ -1934,7 +2175,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "報告・連絡・相談が少なくなったことは、管理監督者が注意すべき「いつもと違う様子」にあたる。",
     "correctAnswer": true,
     "exp": "「いつもと違う様子」は、その部下の以前の状態と比べた変化で判断する。身だしなみの乱れ、遅刻の増加、報告・相談や発言の減少などはサインとなりうる。資格取得の勉強を始めるなどの前向きな行動は、それだけでは不調のサインとはいえない。",
-    "publicPath": "q/ichimon/s/ichi-0242/index.html"
+    "publicPath": "q/ichimon/s/ichi-0242/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0243",
@@ -1942,7 +2184,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務に必要な資格の取得に向けて計画的に勉強を始めたことは、メンタルヘルス不調を示す典型的な「いつもと違う様子」である。",
     "correctAnswer": false,
     "exp": "「いつもと違う様子」は、その部下の以前の状態と比べた変化で判断する。身だしなみの乱れ、遅刻の増加、報告・相談や発言の減少などはサインとなりうる。資格取得の勉強を始めるなどの前向きな行動は、それだけでは不調のサインとはいえない。",
-    "publicPath": "q/ichimon/s/ichi-0243/index.html"
+    "publicPath": "q/ichimon/s/ichi-0243/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0244",
@@ -1950,7 +2193,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "表情が暗く、口数が減ったことは、管理監督者が注意すべき「いつもと違う様子」にあたる。",
     "correctAnswer": true,
     "exp": "「いつもと違う様子」は、その部下の以前の状態と比べた変化で判断する。身だしなみの乱れ、遅刻の増加、報告・相談や発言の減少などはサインとなりうる。資格取得の勉強を始めるなどの前向きな行動は、それだけでは不調のサインとはいえない。",
-    "publicPath": "q/ichimon/s/ichi-0244/index.html"
+    "publicPath": "q/ichimon/s/ichi-0244/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0245",
@@ -1958,7 +2202,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下本人が望んでいるなら、長時間労働を黙認することも管理監督者の裁量の範囲内である。",
     "correctAnswer": false,
     "exp": "部下の長時間労働には、業務の優先順位を一緒に整理し、不要な業務の削減や再配分を検討する。原因は業務量や進め方にあることが多く、本人の努力任せにしない。面接指導の対象となる部下には申出を勧めることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0245/index.html"
+    "publicPath": "q/ichimon/s/ichi-0245/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0246",
@@ -1966,7 +2211,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務の優先順位を整理し、不必要な業務の削減や効率化について部下と話し合うことは、長時間労働への適切な対応である。",
     "correctAnswer": true,
     "exp": "部下の長時間労働には、業務の優先順位を一緒に整理し、不要な業務の削減や再配分を検討する。原因は業務量や進め方にあることが多く、本人の努力任せにしない。面接指導の対象となる部下には申出を勧めることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0246/index.html"
+    "publicPath": "q/ichimon/s/ichi-0246/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0247",
@@ -1974,7 +2220,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の長時間労働の削減は本人の健康管理の問題であるため、管理監督者は本人の自主的な努力に任せる。",
     "correctAnswer": false,
     "exp": "部下の長時間労働には、業務の優先順位を一緒に整理し、不要な業務の削減や再配分を検討する。原因は業務量や進め方にあることが多く、本人の努力任せにしない。面接指導の対象となる部下には申出を勧めることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0247/index.html"
+    "publicPath": "q/ichimon/s/ichi-0247/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0248",
@@ -1982,7 +2229,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "長時間労働の部下が医師の面接指導の対象となる場合、管理監督者は申出を勧めることが望ましい。",
     "correctAnswer": true,
     "exp": "部下の長時間労働には、業務の優先順位を一緒に整理し、不要な業務の削減や再配分を検討する。原因は業務量や進め方にあることが多く、本人の努力任せにしない。面接指導の対象となる部下には申出を勧めることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0248/index.html"
+    "publicPath": "q/ichimon/s/ichi-0248/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0249",
@@ -1990,7 +2238,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "昇進は望ましい出来事であるため、ストレスにはなりえない。",
     "correctAnswer": false,
     "exp": "昇進・異動・海外赴任・単身赴任は、仕事や生活環境の変化を伴うストレス要因となる。昇進うつは昇進後に発症することがある。海外赴任では言葉や生活習慣の違いのストレスも加わる。適応にかかる期間には個人差がある。",
-    "publicPath": "q/ichimon/s/ichi-0249/index.html"
+    "publicPath": "q/ichimon/s/ichi-0249/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0250",
@@ -1998,7 +2247,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「昇進うつ」は、昇進後に責任の重さや環境の変化に適応できず発症することがある。",
     "correctAnswer": true,
     "exp": "昇進・異動・海外赴任・単身赴任は、仕事や生活環境の変化を伴うストレス要因となる。昇進うつは昇進後に発症することがある。海外赴任では言葉や生活習慣の違いのストレスも加わる。適応にかかる期間には個人差がある。",
-    "publicPath": "q/ichimon/s/ichi-0250/index.html"
+    "publicPath": "q/ichimon/s/ichi-0250/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0251",
@@ -2006,7 +2256,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "異動による環境の変化に伴うストレスは、異動後1週間程度で必ずなくなる。",
     "correctAnswer": false,
     "exp": "昇進・異動・海外赴任・単身赴任は、仕事や生活環境の変化を伴うストレス要因となる。昇進うつは昇進後に発症することがある。海外赴任では言葉や生活習慣の違いのストレスも加わる。適応にかかる期間には個人差がある。",
-    "publicPath": "q/ichimon/s/ichi-0251/index.html"
+    "publicPath": "q/ichimon/s/ichi-0251/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0252",
@@ -2014,7 +2265,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "海外赴任では、仕事上の負担に加え、言葉や生活習慣の違いによるストレスが生じることがある。",
     "correctAnswer": true,
     "exp": "昇進・異動・海外赴任・単身赴任は、仕事や生活環境の変化を伴うストレス要因となる。昇進うつは昇進後に発症することがある。海外赴任では言葉や生活習慣の違いのストレスも加わる。適応にかかる期間には個人差がある。",
-    "publicPath": "q/ichimon/s/ichi-0252/index.html"
+    "publicPath": "q/ichimon/s/ichi-0252/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0253",
@@ -2022,7 +2274,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医が取得した労働者の健康情報は、事業者が自由に利用できる。",
     "correctAnswer": false,
     "exp": "健康情報は要配慮個人情報で、取得や第三者提供には原則として本人の同意が必要。労働安全衛生法に基づく健康診断の結果など法令に基づく取得は例外。事業者は、衛生委員会等での審議を踏まえて健康情報の取扱規程を定める。",
-    "publicPath": "q/ichimon/s/ichi-0253/index.html"
+    "publicPath": "q/ichimon/s/ichi-0253/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0254",
@@ -2030,7 +2283,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "健康情報は要配慮個人情報に該当し、その取得や第三者への提供には、原則として本人の同意が必要である。",
     "correctAnswer": true,
     "exp": "健康情報は要配慮個人情報で、取得や第三者提供には原則として本人の同意が必要。労働安全衛生法に基づく健康診断の結果など法令に基づく取得は例外。事業者は、衛生委員会等での審議を踏まえて健康情報の取扱規程を定める。",
-    "publicPath": "q/ichimon/s/ichi-0254/index.html"
+    "publicPath": "q/ichimon/s/ichi-0254/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0255",
@@ -2038,7 +2292,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働安全衛生法に基づく健康診断の結果であっても、事業者は本人の同意がなければ取得できない。",
     "correctAnswer": false,
     "exp": "健康情報は要配慮個人情報で、取得や第三者提供には原則として本人の同意が必要。労働安全衛生法に基づく健康診断の結果など法令に基づく取得は例外。事業者は、衛生委員会等での審議を踏まえて健康情報の取扱規程を定める。",
-    "publicPath": "q/ichimon/s/ichi-0255/index.html"
+    "publicPath": "q/ichimon/s/ichi-0255/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0256",
@@ -2046,7 +2301,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業者は、健康情報の取扱規程を、衛生委員会等での審議を踏まえて定めることが求められる。",
     "correctAnswer": true,
     "exp": "健康情報は要配慮個人情報で、取得や第三者提供には原則として本人の同意が必要。労働安全衛生法に基づく健康診断の結果など法令に基づく取得は例外。事業者は、衛生委員会等での審議を踏まえて健康情報の取扱規程を定める。",
-    "publicPath": "q/ichimon/s/ichi-0256/index.html"
+    "publicPath": "q/ichimon/s/ichi-0256/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0257",
@@ -2054,7 +2310,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "社会的支援は、ストレス反応を直接的に低減させる効果のみがある。",
     "correctAnswer": false,
     "exp": "社会的支援には、ストレッサーの影響を和らげる緩衝効果と、健康によい影響を直接与える直接効果がある。情緒的・情報的・評価的・道具的の4種類があり、上司だけでなく同僚や家族も担い手となる。",
-    "publicPath": "q/ichimon/s/ichi-0257/index.html"
+    "publicPath": "q/ichimon/s/ichi-0257/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0258",
@@ -2062,7 +2319,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "上司・同僚からのサポートは、ストレッサーの影響を緩和する緩衝効果があるとされる。",
     "correctAnswer": true,
     "exp": "社会的支援には、ストレッサーの影響を和らげる緩衝効果と、健康によい影響を直接与える直接効果がある。情緒的・情報的・評価的・道具的の4種類があり、上司だけでなく同僚や家族も担い手となる。",
-    "publicPath": "q/ichimon/s/ichi-0258/index.html"
+    "publicPath": "q/ichimon/s/ichi-0258/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0259",
@@ -2070,7 +2328,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "社会的支援は業務上の支援に限定され、精神的な支えは含まれない。",
     "correctAnswer": false,
     "exp": "社会的支援には、ストレッサーの影響を和らげる緩衝効果と、健康によい影響を直接与える直接効果がある。情緒的・情報的・評価的・道具的の4種類があり、上司だけでなく同僚や家族も担い手となる。",
-    "publicPath": "q/ichimon/s/ichi-0259/index.html"
+    "publicPath": "q/ichimon/s/ichi-0259/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0260",
@@ -2078,39 +2337,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "社会的支援には、ストレッサーの有無にかかわらず健康によい影響を与える直接効果もあるとされる。",
     "correctAnswer": true,
     "exp": "社会的支援には、ストレッサーの影響を和らげる緩衝効果と、健康によい影響を直接与える直接効果がある。情緒的・情報的・評価的・道具的の4種類があり、上司だけでなく同僚や家族も担い手となる。",
-    "publicPath": "q/ichimon/s/ichi-0260/index.html"
+    "publicPath": "q/ichimon/s/ichi-0260/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0261",
     "field": "limit",
-    "statement": "積極的傾聴では、相手の話をさえぎらず、最後まで聴く。",
+    "statement": "職場復帰支援の手引きでいう「衛生管理者等」には、衛生管理者のほか、衛生推進者および安全衛生推進者が含まれる。",
     "correctAnswer": true,
-    "exp": "積極的傾聴では、話をさえぎらず、表情や声の調子にも注意を向け、繰り返しや言い換えで確認し、評価や批判をせずに受け止める。沈黙は相手が考えを整理している時間であり、待つことが大切。",
-    "publicPath": "q/ichimon/s/ichi-0261/index.html"
+    "exp": "手引きでは、事業場内産業保健スタッフは産業医等・衛生管理者等・事業場内の保健師等をいい、これに心の健康づくり専門スタッフや人事労務管理スタッフ等を加えたものが事業場内産業保健スタッフ等。衛生管理者等には衛生推進者・安全衛生推進者も含まれる。",
+    "publicPath": "q/ichimon/s/ichi-0261/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0262",
     "field": "limit",
-    "statement": "積極的傾聴では、相手の言葉を繰り返したり言い換えたりして、内容を確認する。",
+    "statement": "職場復帰支援の手引きでいう「管理監督者」とは、上司その他労働者を指揮命令する者をいう。",
     "correctAnswer": true,
-    "exp": "積極的傾聴では、話をさえぎらず、表情や声の調子にも注意を向け、繰り返しや言い換えで確認し、評価や批判をせずに受け止める。沈黙は相手が考えを整理している時間であり、待つことが大切。",
-    "publicPath": "q/ichimon/s/ichi-0262/index.html"
+    "exp": "手引きでは、事業場内産業保健スタッフは産業医等・衛生管理者等・事業場内の保健師等をいい、これに心の健康づくり専門スタッフや人事労務管理スタッフ等を加えたものが事業場内産業保健スタッフ等。衛生管理者等には衛生推進者・安全衛生推進者も含まれる。",
+    "publicPath": "q/ichimon/s/ichi-0262/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0263",
     "field": "limit",
-    "statement": "積極的傾聴では、相手が沈黙した場合、すぐに別の話題に切り替える。",
+    "statement": "職場復帰支援の手引きでいう「事業場内産業保健スタッフ」には、産業医等、衛生管理者等、保健師等に加えて、人事労務管理スタッフが含まれる。",
     "correctAnswer": false,
-    "exp": "積極的傾聴では、話をさえぎらず、表情や声の調子にも注意を向け、繰り返しや言い換えで確認し、評価や批判をせずに受け止める。沈黙は相手が考えを整理している時間であり、待つことが大切。",
-    "publicPath": "q/ichimon/s/ichi-0263/index.html"
+    "exp": "手引きでは、事業場内産業保健スタッフは産業医等・衛生管理者等・事業場内の保健師等をいい、これに心の健康づくり専門スタッフや人事労務管理スタッフ等を加えたものが事業場内産業保健スタッフ等。衛生管理者等には衛生推進者・安全衛生推進者も含まれる。",
+    "publicPath": "q/ichimon/s/ichi-0263/index.html",
+    "level": 5
   },
   {
     "id": "ichi-0264",
     "field": "limit",
-    "statement": "積極的傾聴では、相手の話を聴きながら、その内容の正しさを評価して伝えることが重要である。",
+    "statement": "職場復帰支援の手引きでいう「心の健康づくり専門スタッフ」は精神科・心療内科等の医師に限られ、心理職は含まれない。",
     "correctAnswer": false,
-    "exp": "積極的傾聴では、話をさえぎらず、表情や声の調子にも注意を向け、繰り返しや言い換えで確認し、評価や批判をせずに受け止める。沈黙は相手が考えを整理している時間であり、待つことが大切。",
-    "publicPath": "q/ichimon/s/ichi-0264/index.html"
+    "exp": "手引きでは、事業場内産業保健スタッフは産業医等・衛生管理者等・事業場内の保健師等をいい、これに心の健康づくり専門スタッフや人事労務管理スタッフ等を加えたものが事業場内産業保健スタッフ等。衛生管理者等には衛生推進者・安全衛生推進者も含まれる。",
+    "publicPath": "q/ichimon/s/ichi-0264/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0265",
@@ -2118,7 +2382,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "うつ病の初期症状は常に気分の落ち込みとして現れるため、発見は容易である。",
     "correctAnswer": false,
     "exp": "うつ病は、頭痛・胃腸の不調・不眠などの身体症状が前面に出て、内科の受診を繰り返すことがある。症状には日内変動がみられやすく、朝方に気分が悪く、夕方にかけて楽になる傾向がある。",
-    "publicPath": "q/ichimon/s/ichi-0265/index.html"
+    "publicPath": "q/ichimon/s/ichi-0265/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0266",
@@ -2126,7 +2391,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "うつ病は、頭痛・胃腸の不調・不眠などの身体症状として現れることもあり、内科の受診を繰り返す場合もある。",
     "correctAnswer": true,
     "exp": "うつ病は、頭痛・胃腸の不調・不眠などの身体症状が前面に出て、内科の受診を繰り返すことがある。症状には日内変動がみられやすく、朝方に気分が悪く、夕方にかけて楽になる傾向がある。",
-    "publicPath": "q/ichimon/s/ichi-0266/index.html"
+    "publicPath": "q/ichimon/s/ichi-0266/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0267",
@@ -2134,7 +2400,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "うつ病患者は自分の不調を過大に訴える傾向があるため、訴えを割り引いて聞くべきである。",
     "correctAnswer": false,
     "exp": "うつ病は、頭痛・胃腸の不調・不眠などの身体症状が前面に出て、内科の受診を繰り返すことがある。症状には日内変動がみられやすく、朝方に気分が悪く、夕方にかけて楽になる傾向がある。",
-    "publicPath": "q/ichimon/s/ichi-0267/index.html"
+    "publicPath": "q/ichimon/s/ichi-0267/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0268",
@@ -2142,103 +2409,116 @@ window.ICHIMONDOU_ROWS = [
     "statement": "うつ病では、朝方に気分が悪く、夕方にかけて楽になる日内変動がみられることがある。",
     "correctAnswer": true,
     "exp": "うつ病は、頭痛・胃腸の不調・不眠などの身体症状が前面に出て、内科の受診を繰り返すことがある。症状には日内変動がみられやすく、朝方に気分が悪く、夕方にかけて楽になる傾向がある。",
-    "publicPath": "q/ichimon/s/ichi-0268/index.html"
+    "publicPath": "q/ichimon/s/ichi-0268/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0269",
     "field": "limit",
     "statement": "部下に「自殺を考えているか」と直接尋ねると、自殺を促すことになるため、絶対に避けるべきである。",
     "correctAnswer": false,
-    "exp": "自殺を考えているかを率直に尋ねることは、自殺を誘発するものではなく、気持ちを受け止めるきっかけになりうる。うつ病では回復期にも自殺の危険性が高まることがある。身辺の整理などの行動は危険のサインとなりうる。",
-    "publicPath": "q/ichimon/s/ichi-0269/index.html"
+    "exp": "十箇条には自殺を口にする・自殺未遂に及ぶことが含まれる。うつ病では回復期にも自殺の危険が高まることがある。自殺既遂者は男性が多いが、自殺未遂者は女性が多い。自殺について率直に尋ねることは危険を高めない。",
+    "publicPath": "q/ichimon/s/ichi-0269/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0270",
     "field": "limit",
-    "statement": "「死にたい」という訴えは気を引くための言動であることが多いため、深刻に捉えなくてよい。",
+    "statement": "自殺で亡くなる人と同様に、自殺未遂者の数も男性のほうが女性より多いとされている。",
     "correctAnswer": false,
-    "exp": "自殺を考えているかを率直に尋ねることは、自殺を誘発するものではなく、気持ちを受け止めるきっかけになりうる。うつ病では回復期にも自殺の危険性が高まることがある。身辺の整理などの行動は危険のサインとなりうる。",
-    "publicPath": "q/ichimon/s/ichi-0270/index.html"
+    "exp": "十箇条には自殺を口にする・自殺未遂に及ぶことが含まれる。うつ病では回復期にも自殺の危険が高まることがある。自殺既遂者は男性が多いが、自殺未遂者は女性が多い。自殺について率直に尋ねることは危険を高めない。",
+    "publicPath": "q/ichimon/s/ichi-0270/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0271",
     "field": "limit",
-    "statement": "自殺念慮について直接確認することは、むしろ気持ちを受け止めるきっかけになりうる。",
+    "statement": "自殺を口にすることは、「自殺予防の十箇条」に挙げられたサインの一つである。",
     "correctAnswer": true,
-    "exp": "自殺を考えているかを率直に尋ねることは、自殺を誘発するものではなく、気持ちを受け止めるきっかけになりうる。うつ病では回復期にも自殺の危険性が高まることがある。身辺の整理などの行動は危険のサインとなりうる。",
-    "publicPath": "q/ichimon/s/ichi-0271/index.html"
+    "exp": "十箇条には自殺を口にする・自殺未遂に及ぶことが含まれる。うつ病では回復期にも自殺の危険が高まることがある。自殺既遂者は男性が多いが、自殺未遂者は女性が多い。自殺について率直に尋ねることは危険を高めない。",
+    "publicPath": "q/ichimon/s/ichi-0271/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0272",
     "field": "limit",
     "statement": "うつ病では、回復期に入ったころにも自殺の危険性が高まることがあるため、注意が必要である。",
     "correctAnswer": true,
-    "exp": "自殺を考えているかを率直に尋ねることは、自殺を誘発するものではなく、気持ちを受け止めるきっかけになりうる。うつ病では回復期にも自殺の危険性が高まることがある。身辺の整理などの行動は危険のサインとなりうる。",
-    "publicPath": "q/ichimon/s/ichi-0272/index.html"
+    "exp": "十箇条には自殺を口にする・自殺未遂に及ぶことが含まれる。うつ病では回復期にも自殺の危険が高まることがある。自殺既遂者は男性が多いが、自殺未遂者は女性が多い。自殺について率直に尋ねることは危険を高めない。",
+    "publicPath": "q/ichimon/s/ichi-0272/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0273",
     "field": "limit",
-    "statement": "繰り返しは、相手の話がすべて終わったあと、面談の最後にまとめて一度だけ行う技法である。",
+    "statement": "「最近の仕事の様子はどうですか」という問いかけは、閉じられた質問にあたる。",
     "correctAnswer": false,
-    "exp": "繰り返しは、相手の言葉のキーワードや感情をそのまま返し、聴いていることを伝えて話を促す技法。解釈や評価を加えるものではなく、会話の途中で適宜用いる。機械的に返すと、かえって話しにくくなることがある。",
-    "publicPath": "q/ichimon/s/ichi-0273/index.html"
+    "exp": "閉じられた質問は「はい」「いいえ」などで答えられ、事実確認に適し、口数の少ない相手にも答えやすい。「最近の仕事の様子はどうですか」のように相手が自由に答える質問は開かれた質問。繰り返しは相手の言葉のキーワードを返し、話を促す技法。",
+    "publicPath": "q/ichimon/s/ichi-0273/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0274",
     "field": "limit",
     "statement": "面談での「繰り返し」の技法では、相手の言葉のキーワードを繰り返すことで、聴いていることを伝え、話を促す効果がある。",
     "correctAnswer": true,
-    "exp": "繰り返しは、相手の言葉のキーワードや感情をそのまま返し、聴いていることを伝えて話を促す技法。解釈や評価を加えるものではなく、会話の途中で適宜用いる。機械的に返すと、かえって話しにくくなることがある。",
-    "publicPath": "q/ichimon/s/ichi-0274/index.html"
+    "exp": "閉じられた質問は「はい」「いいえ」などで答えられ、事実確認に適し、口数の少ない相手にも答えやすい。「最近の仕事の様子はどうですか」のように相手が自由に答える質問は開かれた質問。繰り返しは相手の言葉のキーワードを返し、話を促す技法。",
+    "publicPath": "q/ichimon/s/ichi-0274/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0275",
     "field": "limit",
-    "statement": "繰り返しの技法では、感情を込めずに機械的に返すと、かえって相手が話しにくくなることがある。",
+    "statement": "「昨夜は眠れましたか」のように「はい」「いいえ」で答えられる質問は、閉じられた質問にあたる。",
     "correctAnswer": true,
-    "exp": "繰り返しは、相手の言葉のキーワードや感情をそのまま返し、聴いていることを伝えて話を促す技法。解釈や評価を加えるものではなく、会話の途中で適宜用いる。機械的に返すと、かえって話しにくくなることがある。",
-    "publicPath": "q/ichimon/s/ichi-0275/index.html"
+    "exp": "閉じられた質問は「はい」「いいえ」などで答えられ、事実確認に適し、口数の少ない相手にも答えやすい。「最近の仕事の様子はどうですか」のように相手が自由に答える質問は開かれた質問。繰り返しは相手の言葉のキーワードを返し、話を促す技法。",
+    "publicPath": "q/ichimon/s/ichi-0275/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0276",
     "field": "limit",
     "statement": "繰り返しは相手の話の内容を評価・解釈して伝え直す技法である。",
     "correctAnswer": false,
-    "exp": "繰り返しは、相手の言葉のキーワードや感情をそのまま返し、聴いていることを伝えて話を促す技法。解釈や評価を加えるものではなく、会話の途中で適宜用いる。機械的に返すと、かえって話しにくくなることがある。",
-    "publicPath": "q/ichimon/s/ichi-0276/index.html"
+    "exp": "閉じられた質問は「はい」「いいえ」などで答えられ、事実確認に適し、口数の少ない相手にも答えやすい。「最近の仕事の様子はどうですか」のように相手が自由に答える質問は開かれた質問。繰り返しは相手の言葉のキーワードを返し、話を促す技法。",
+    "publicPath": "q/ichimon/s/ichi-0276/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0277",
     "field": "limit",
-    "statement": "部下に受診を勧めて断られた場合でも、関係を保ちながら、時期をみて再度勧める。",
+    "statement": "本人が受診を拒否していても、自殺の危険が差し迫っているなど緊急性が高い場合は、家族に連絡して受診につなげることがある。",
     "correctAnswer": true,
-    "exp": "受診の勧奨は、本人の不安に寄り添い、受診の目的や医療機関の特徴を丁寧に説明する。断られても関係を保ち時期をみて再度勧め、受診後も見守る。主治医への情報提供は本人の同意を得て行う。",
-    "publicPath": "q/ichimon/s/ichi-0277/index.html"
+    "exp": "受診を勧める前に産業医や保健師に相談し、勧め方や受診先を検討する。緊急性が高い場合は本人の同意がなくても家族に連絡することがある。主治医から病名などの情報を得るには本人の同意が必要。",
+    "publicPath": "q/ichimon/s/ichi-0277/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0278",
     "field": "limit",
-    "statement": "受診を勧めても拒否された場合、それ以上関わることはせず本人に任せる。",
+    "statement": "部下に受診を勧める際は、まず内科を受診させ、精神科の受診は内科医の判断に委ねることが原則とされている。",
     "correctAnswer": false,
-    "exp": "受診の勧奨は、本人の不安に寄り添い、受診の目的や医療機関の特徴を丁寧に説明する。断られても関係を保ち時期をみて再度勧め、受診後も見守る。主治医への情報提供は本人の同意を得て行う。",
-    "publicPath": "q/ichimon/s/ichi-0278/index.html"
+    "exp": "受診を勧める前に産業医や保健師に相談し、勧め方や受診先を検討する。緊急性が高い場合は本人の同意がなくても家族に連絡することがある。主治医から病名などの情報を得るには本人の同意が必要。",
+    "publicPath": "q/ichimon/s/ichi-0278/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0279",
     "field": "limit",
-    "statement": "部下に受診を勧める際、本人が不安を感じているようであれば、受診の目的や医療機関の特徴を丁寧に説明する。",
+    "statement": "部下に受診を勧める前に、産業医や保健師に相談し、勧め方や受診先を検討しておくことが望ましい。",
     "correctAnswer": true,
-    "exp": "受診の勧奨は、本人の不安に寄り添い、受診の目的や医療機関の特徴を丁寧に説明する。断られても関係を保ち時期をみて再度勧め、受診後も見守る。主治医への情報提供は本人の同意を得て行う。",
-    "publicPath": "q/ichimon/s/ichi-0279/index.html"
+    "exp": "受診を勧める前に産業医や保健師に相談し、勧め方や受診先を検討する。緊急性が高い場合は本人の同意がなくても家族に連絡することがある。主治医から病名などの情報を得るには本人の同意が必要。",
+    "publicPath": "q/ichimon/s/ichi-0279/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0280",
     "field": "limit",
-    "statement": "受診後は主治医に任せるべきであり、管理監督者がフォローする必要はない。",
+    "statement": "部下が受診した後、管理監督者は職場での配慮を検討するため、本人の同意がなくても主治医に病名や治療方針を問い合わせることができる。",
     "correctAnswer": false,
-    "exp": "受診の勧奨は、本人の不安に寄り添い、受診の目的や医療機関の特徴を丁寧に説明する。断られても関係を保ち時期をみて再度勧め、受診後も見守る。主治医への情報提供は本人の同意を得て行う。",
-    "publicPath": "q/ichimon/s/ichi-0280/index.html"
+    "exp": "受診を勧める前に産業医や保健師に相談し、勧め方や受診先を検討する。緊急性が高い場合は本人の同意がなくても家族に連絡することがある。主治医から病名などの情報を得るには本人の同意が必要。",
+    "publicPath": "q/ichimon/s/ichi-0280/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0281",
@@ -2246,7 +2526,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "衛生管理者は常時10人以上の労働者を使用する事業場に選任が義務づけられている。",
     "correctAnswer": false,
     "exp": "衛生管理者は常時50人以上の労働者を使用する事業場で選任し、少なくとも毎週1回作業場等を巡視する。人数は規模に応じて定められ、200人以下では1人以上。選任すべき事由の発生から14日以内に選任する。",
-    "publicPath": "q/ichimon/s/ichi-0281/index.html"
+    "publicPath": "q/ichimon/s/ichi-0281/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0282",
@@ -2254,7 +2535,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "衛生管理者は労働者の健康障害防止や健康保持増進のための措置を実施する役割を担う。",
     "correctAnswer": true,
     "exp": "衛生管理者は常時50人以上の労働者を使用する事業場で選任し、少なくとも毎週1回作業場等を巡視する。人数は規模に応じて定められ、200人以下では1人以上。選任すべき事由の発生から14日以内に選任する。",
-    "publicPath": "q/ichimon/s/ichi-0282/index.html"
+    "publicPath": "q/ichimon/s/ichi-0282/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0283",
@@ -2262,7 +2544,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "衛生管理者はすべて専属でなければならず、兼任は認められない。",
     "correctAnswer": false,
     "exp": "衛生管理者は常時50人以上の労働者を使用する事業場で選任し、少なくとも毎週1回作業場等を巡視する。人数は規模に応じて定められ、200人以下では1人以上。選任すべき事由の発生から14日以内に選任する。",
-    "publicPath": "q/ichimon/s/ichi-0283/index.html"
+    "publicPath": "q/ichimon/s/ichi-0283/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0284",
@@ -2270,7 +2553,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "衛生管理者は、少なくとも毎週1回作業場等を巡視しなければならない。",
     "correctAnswer": true,
     "exp": "衛生管理者は常時50人以上の労働者を使用する事業場で選任し、少なくとも毎週1回作業場等を巡視する。人数は規模に応じて定められ、200人以下では1人以上。選任すべき事由の発生から14日以内に選任する。",
-    "publicPath": "q/ichimon/s/ichi-0284/index.html"
+    "publicPath": "q/ichimon/s/ichi-0284/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0285",
@@ -2278,7 +2562,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "EAPは、相談対応のほか、管理監督者への助言や研修、職場復帰の支援なども行う。",
     "correctAnswer": true,
     "exp": "EAPは、相談対応、管理監督者への助言や研修、職場復帰の支援など、予防から事後の対応まで幅広く支援する。外部EAPは社内に相談しにくい労働者も利用しやすく、相談内容は本人の同意なく報告されない。",
-    "publicPath": "q/ichimon/s/ichi-0285/index.html"
+    "publicPath": "q/ichimon/s/ichi-0285/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0286",
@@ -2286,7 +2571,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "内部EAPとは、事業場外の専門機関が提供するサービスを指す。",
     "correctAnswer": false,
     "exp": "EAPは、相談対応、管理監督者への助言や研修、職場復帰の支援など、予防から事後の対応まで幅広く支援する。外部EAPは社内に相談しにくい労働者も利用しやすく、相談内容は本人の同意なく報告されない。",
-    "publicPath": "q/ichimon/s/ichi-0286/index.html"
+    "publicPath": "q/ichimon/s/ichi-0286/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0287",
@@ -2294,7 +2580,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "外部EAPを利用することで、社内の産業保健スタッフに相談しにくい労働者が支援を受けやすくなる利点がある。",
     "correctAnswer": true,
     "exp": "EAPは、相談対応、管理監督者への助言や研修、職場復帰の支援など、予防から事後の対応まで幅広く支援する。外部EAPは社内に相談しにくい労働者も利用しやすく、相談内容は本人の同意なく報告されない。",
-    "publicPath": "q/ichimon/s/ichi-0287/index.html"
+    "publicPath": "q/ichimon/s/ichi-0287/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0288",
@@ -2302,7 +2589,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "EAPは問題発生後の対処のみを目的としており、予防的な活用はできない。",
     "correctAnswer": false,
     "exp": "EAPは、相談対応、管理監督者への助言や研修、職場復帰の支援など、予防から事後の対応まで幅広く支援する。外部EAPは社内に相談しにくい労働者も利用しやすく、相談内容は本人の同意なく報告されない。",
-    "publicPath": "q/ichimon/s/ichi-0288/index.html"
+    "publicPath": "q/ichimon/s/ichi-0288/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0289",
@@ -2310,7 +2598,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "心療内科は主に心理的要因による身体症状（心身症）を専門とし、精神科は精神疾患全般を扱う。",
     "correctAnswer": true,
     "exp": "心療内科は心身症を主な対象とし、精神科は精神疾患を幅広く診療する。身体の症状が中心なら心療内科、精神症状が中心なら精神科を目安に案内するが、実際にはうつ病などを心療内科で診ることも多い。",
-    "publicPath": "q/ichimon/s/ichi-0289/index.html"
+    "publicPath": "q/ichimon/s/ichi-0289/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0290",
@@ -2318,7 +2607,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "うつ病は身体疾患であるため、心療内科ではなく内科を受診すべきである。",
     "correctAnswer": false,
     "exp": "心療内科は心身症を主な対象とし、精神科は精神疾患を幅広く診療する。身体の症状が中心なら心療内科、精神症状が中心なら精神科を目安に案内するが、実際にはうつ病などを心療内科で診ることも多い。",
-    "publicPath": "q/ichimon/s/ichi-0290/index.html"
+    "publicPath": "q/ichimon/s/ichi-0290/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0291",
@@ -2326,7 +2616,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神科は入院治療のみを行い、外来診療は心療内科が担当する。",
     "correctAnswer": false,
     "exp": "心療内科は心身症を主な対象とし、精神科は精神疾患を幅広く診療する。身体の症状が中心なら心療内科、精神症状が中心なら精神科を目安に案内するが、実際にはうつ病などを心療内科で診ることも多い。",
-    "publicPath": "q/ichimon/s/ichi-0291/index.html"
+    "publicPath": "q/ichimon/s/ichi-0291/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0292",
@@ -2334,7 +2625,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "実際には、うつ病などの精神疾患を心療内科で診療することも多い。",
     "correctAnswer": true,
     "exp": "心療内科は心身症を主な対象とし、精神科は精神疾患を幅広く診療する。身体の症状が中心なら心療内科、精神症状が中心なら精神科を目安に案内するが、実際にはうつ病などを心療内科で診ることも多い。",
-    "publicPath": "q/ichimon/s/ichi-0292/index.html"
+    "publicPath": "q/ichimon/s/ichi-0292/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0293",
@@ -2342,7 +2634,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "試し出勤中は正式な復職とみなされるため、給与を全額支払う義務がある。",
     "correctAnswer": false,
     "exp": "試し出勤制度等には、模擬出勤、通勤訓練、試し出勤がある。試し出勤中の作業が業務にあたる場合は労働基準法等が適用されうるため、処遇や災害時の補償などのルールを定めておく。導入は法律上の義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0293/index.html"
+    "publicPath": "q/ichimon/s/ichi-0293/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0294",
@@ -2350,7 +2643,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "試し出勤は労働者の回復状況を確認する機会となるが、実施にあたっては制度の位置づけを明確にすることが重要である。",
     "correctAnswer": true,
     "exp": "試し出勤制度等には、模擬出勤、通勤訓練、試し出勤がある。試し出勤中の作業が業務にあたる場合は労働基準法等が適用されうるため、処遇や災害時の補償などのルールを定めておく。導入は法律上の義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0294/index.html"
+    "publicPath": "q/ichimon/s/ichi-0294/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0295",
@@ -2358,7 +2652,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "試し出勤制度は法律で義務づけられており、すべての事業場で導入しなければならない。",
     "correctAnswer": false,
     "exp": "試し出勤制度等には、模擬出勤、通勤訓練、試し出勤がある。試し出勤中の作業が業務にあたる場合は労働基準法等が適用されうるため、処遇や災害時の補償などのルールを定めておく。導入は法律上の義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0295/index.html"
+    "publicPath": "q/ichimon/s/ichi-0295/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0296",
@@ -2366,39 +2661,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "通勤訓練とは、自宅から勤務先の近くまで通勤経路で移動し、一定時間過ごした後に帰宅することをいう。",
     "correctAnswer": true,
     "exp": "試し出勤制度等には、模擬出勤、通勤訓練、試し出勤がある。試し出勤中の作業が業務にあたる場合は労働基準法等が適用されうるため、処遇や災害時の補償などのルールを定めておく。導入は法律上の義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0296/index.html"
+    "publicPath": "q/ichimon/s/ichi-0296/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0297",
     "field": "limit",
-    "statement": "職場復帰後のフォローアップは、復職後1か月間問題がなければ、その後は不要である。",
+    "statement": "職場復帰支援プランの評価と見直しは第3ステップで完了しているため、第5ステップ（職場復帰後のフォローアップ）では行わない。",
     "correctAnswer": false,
-    "exp": "職場復帰後のフォローアップでは、症状の再燃・再発の有無、治療の継続状況、勤務状況や業務遂行能力、プランの実施状況を確認し、必要に応じてプランを見直す。業務量は段階的に増やす。",
-    "publicPath": "q/ichimon/s/ichi-0297/index.html"
+    "exp": "手引きの第5ステップには、再燃・再発や新しい問題の発生等の有無の確認、勤務状況・業務遂行能力の評価、プランの実施状況の確認、治療状況の確認、プランの評価と見直し、職場環境等の改善、管理監督者・同僚等への配慮が含まれる。",
+    "publicPath": "q/ichimon/s/ichi-0297/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0298",
     "field": "limit",
-    "statement": "職場復帰後は、再発のサインに早く気づくため、定期的な面談で体調や業務の状況の確認を続けることが重要である。",
+    "statement": "職場復帰後のフォローアップでは、復職者を支える管理監督者や同僚等への配慮も検討すべき事項とされている。",
     "correctAnswer": true,
-    "exp": "職場復帰後のフォローアップでは、症状の再燃・再発の有無、治療の継続状況、勤務状況や業務遂行能力、プランの実施状況を確認し、必要に応じてプランを見直す。業務量は段階的に増やす。",
-    "publicPath": "q/ichimon/s/ichi-0298/index.html"
+    "exp": "手引きの第5ステップには、再燃・再発や新しい問題の発生等の有無の確認、勤務状況・業務遂行能力の評価、プランの実施状況の確認、治療状況の確認、プランの評価と見直し、職場環境等の改善、管理監督者・同僚等への配慮が含まれる。",
+    "publicPath": "q/ichimon/s/ichi-0298/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0299",
     "field": "limit",
-    "statement": "職場復帰支援プランは一度作成したら変更せず、計画通りに実施することが原則である。",
+    "statement": "治療の状況は主治医が把握すべき事項であるため、職場復帰後のフォローアップでは通院や服薬の継続状況を確認する必要はない。",
     "correctAnswer": false,
-    "exp": "職場復帰後のフォローアップでは、症状の再燃・再発の有無、治療の継続状況、勤務状況や業務遂行能力、プランの実施状況を確認し、必要に応じてプランを見直す。業務量は段階的に増やす。",
-    "publicPath": "q/ichimon/s/ichi-0299/index.html"
+    "exp": "手引きの第5ステップには、再燃・再発や新しい問題の発生等の有無の確認、勤務状況・業務遂行能力の評価、プランの実施状況の確認、治療状況の確認、プランの評価と見直し、職場環境等の改善、管理監督者・同僚等への配慮が含まれる。",
+    "publicPath": "q/ichimon/s/ichi-0299/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0300",
     "field": "limit",
     "statement": "職場復帰後のフォローアップでは、症状の再燃・再発の有無や、治療の継続状況を確認する。",
     "correctAnswer": true,
-    "exp": "職場復帰後のフォローアップでは、症状の再燃・再発の有無、治療の継続状況、勤務状況や業務遂行能力、プランの実施状況を確認し、必要に応じてプランを見直す。業務量は段階的に増やす。",
-    "publicPath": "q/ichimon/s/ichi-0300/index.html"
+    "exp": "手引きの第5ステップには、再燃・再発や新しい問題の発生等の有無の確認、勤務状況・業務遂行能力の評価、プランの実施状況の確認、治療状況の確認、プランの評価と見直し、職場環境等の改善、管理監督者・同僚等への配慮が含まれる。",
+    "publicPath": "q/ichimon/s/ichi-0300/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0301",
@@ -2406,7 +2706,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰を支援するためであれば、本人の同意がなくても主治医から病状を聴き取ることができる。",
     "correctAnswer": false,
     "exp": "職場復帰支援で扱う健康情報は要配慮個人情報で、主治医との情報のやりとりには本人の同意が必要。産業保健スタッフが集約・整理し、管理監督者には就業上の配慮に必要な情報に加工して提供する。",
-    "publicPath": "q/ichimon/s/ichi-0301/index.html"
+    "publicPath": "q/ichimon/s/ichi-0301/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0302",
@@ -2414,7 +2715,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "休職・復職に関する情報は、支援に関わる必要最小限の関係者の間で、慎重に共有することが求められる。",
     "correctAnswer": true,
     "exp": "職場復帰支援で扱う健康情報は要配慮個人情報で、主治医との情報のやりとりには本人の同意が必要。産業保健スタッフが集約・整理し、管理監督者には就業上の配慮に必要な情報に加工して提供する。",
-    "publicPath": "q/ichimon/s/ichi-0302/index.html"
+    "publicPath": "q/ichimon/s/ichi-0302/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0303",
@@ -2422,7 +2724,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援プランの内容は、チームの士気向上のため職場全員に公開すべきである。",
     "correctAnswer": false,
     "exp": "職場復帰支援で扱う健康情報は要配慮個人情報で、主治医との情報のやりとりには本人の同意が必要。産業保健スタッフが集約・整理し、管理監督者には就業上の配慮に必要な情報に加工して提供する。",
-    "publicPath": "q/ichimon/s/ichi-0303/index.html"
+    "publicPath": "q/ichimon/s/ichi-0303/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0304",
@@ -2430,39 +2733,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援で扱う健康情報は、産業保健スタッフが集約・整理し、必要に応じて加工して関係者に提供する。",
     "correctAnswer": true,
     "exp": "職場復帰支援で扱う健康情報は要配慮個人情報で、主治医との情報のやりとりには本人の同意が必要。産業保健スタッフが集約・整理し、管理監督者には就業上の配慮に必要な情報に加工して提供する。",
-    "publicPath": "q/ichimon/s/ichi-0304/index.html"
+    "publicPath": "q/ichimon/s/ichi-0304/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0305",
     "field": "limit",
-    "statement": "治療中の労働者には一律に軽減業務のみを与え、通常業務に関与させないことが原則である。",
+    "statement": "治療と仕事の両立支援は、事業者が健康診断の結果などから支援が必要な労働者を把握し、本人の申出を待たずに開始することが基本とされている。",
     "correctAnswer": false,
-    "exp": "治療と仕事の両立支援では、本人の意向と主治医・産業医の意見を踏まえ、就業上の措置や治療への配慮を個別に検討し、必要に応じて両立支援プランを作成する。現場の管理監督者の理解と協力が欠かせない。",
-    "publicPath": "q/ichimon/s/ichi-0305/index.html"
+    "exp": "両立支援は労働者本人の申出が端緒。労働者が勤務情報を主治医に提供して意見を求め、事業者は主治医の意見を勘案し、必要に応じて産業医等の意見を聴いて就業継続の可否や就業上の措置を判断する。",
+    "publicPath": "q/ichimon/s/ichi-0305/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0306",
     "field": "limit",
-    "statement": "治療と仕事の両立支援では、本人の意向や主治医・産業医の意見を踏まえながら、就業上の配慮を個別に検討することが重要である。",
+    "statement": "両立支援では、事業者は主治医の意見を勘案し、必要に応じて産業医等の意見を聴いたうえで、就業継続の可否や就業上の措置を判断する。",
     "correctAnswer": true,
-    "exp": "治療と仕事の両立支援では、本人の意向と主治医・産業医の意見を踏まえ、就業上の措置や治療への配慮を個別に検討し、必要に応じて両立支援プランを作成する。現場の管理監督者の理解と協力が欠かせない。",
-    "publicPath": "q/ichimon/s/ichi-0306/index.html"
+    "exp": "両立支援は労働者本人の申出が端緒。労働者が勤務情報を主治医に提供して意見を求め、事業者は主治医の意見を勘案し、必要に応じて産業医等の意見を聴いて就業継続の可否や就業上の措置を判断する。",
+    "publicPath": "q/ichimon/s/ichi-0306/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0307",
     "field": "limit",
-    "statement": "両立支援は人事部門の業務であり、現場の管理監督者が関与する必要はない。",
+    "statement": "両立支援で主治医に提供する勤務情報は、事業者が労働者を介さずに主治医へ直接送付することとされている。",
     "correctAnswer": false,
-    "exp": "治療と仕事の両立支援では、本人の意向と主治医・産業医の意見を踏まえ、就業上の措置や治療への配慮を個別に検討し、必要に応じて両立支援プランを作成する。現場の管理監督者の理解と協力が欠かせない。",
-    "publicPath": "q/ichimon/s/ichi-0307/index.html"
+    "exp": "両立支援は労働者本人の申出が端緒。労働者が勤務情報を主治医に提供して意見を求め、事業者は主治医の意見を勘案し、必要に応じて産業医等の意見を聴いて就業継続の可否や就業上の措置を判断する。",
+    "publicPath": "q/ichimon/s/ichi-0307/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0308",
     "field": "limit",
     "statement": "事業者は、必要に応じて、就業上の措置や治療への配慮の内容をまとめた両立支援プランを作成する。",
     "correctAnswer": true,
-    "exp": "治療と仕事の両立支援では、本人の意向と主治医・産業医の意見を踏まえ、就業上の措置や治療への配慮を個別に検討し、必要に応じて両立支援プランを作成する。現場の管理監督者の理解と協力が欠かせない。",
-    "publicPath": "q/ichimon/s/ichi-0308/index.html"
+    "exp": "両立支援は労働者本人の申出が端緒。労働者が勤務情報を主治医に提供して意見を求め、事業者は主治医の意見を勘案し、必要に応じて産業医等の意見を聴いて就業継続の可否や就業上の措置を判断する。",
+    "publicPath": "q/ichimon/s/ichi-0308/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0309",
@@ -2470,7 +2778,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の不調に気づいても、プライバシーに配慮し、本人から相談があるまでは声をかけずに見守ることが原則である。",
     "correctAnswer": false,
     "exp": "ラインによるケアの基本は、日常的なコミュニケーションで部下の変化に気づき、管理監督者から声をかけ、必要に応じて本人の了解を得て産業保健スタッフ等につなぐこと。不調の原因が私生活にあっても、職場としての配慮が必要となる。",
-    "publicPath": "q/ichimon/s/ichi-0309/index.html"
+    "publicPath": "q/ichimon/s/ichi-0309/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0310",
@@ -2478,7 +2787,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の不調の原因が私生活上の問題にあると判断した場合、管理監督者は職場として対応する必要はない。",
     "correctAnswer": false,
     "exp": "ラインによるケアの基本は、日常的なコミュニケーションで部下の変化に気づき、管理監督者から声をかけ、必要に応じて本人の了解を得て産業保健スタッフ等につなぐこと。不調の原因が私生活にあっても、職場としての配慮が必要となる。",
-    "publicPath": "q/ichimon/s/ichi-0310/index.html"
+    "publicPath": "q/ichimon/s/ichi-0310/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0311",
@@ -2486,7 +2796,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "日常的なコミュニケーションを通じて部下の変化に気づき、必要に応じて専門家につなぐことは、ラインによるケアの基本である。",
     "correctAnswer": true,
     "exp": "ラインによるケアの基本は、日常的なコミュニケーションで部下の変化に気づき、管理監督者から声をかけ、必要に応じて本人の了解を得て産業保健スタッフ等につなぐこと。不調の原因が私生活にあっても、職場としての配慮が必要となる。",
-    "publicPath": "q/ichimon/s/ichi-0311/index.html"
+    "publicPath": "q/ichimon/s/ichi-0311/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0312",
@@ -2494,7 +2805,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は、部下の不調に気づいたとき、本人の了解を得て産業保健スタッフ等に相談することがある。",
     "correctAnswer": true,
     "exp": "ラインによるケアの基本は、日常的なコミュニケーションで部下の変化に気づき、管理監督者から声をかけ、必要に応じて本人の了解を得て産業保健スタッフ等につなぐこと。不調の原因が私生活にあっても、職場としての配慮が必要となる。",
-    "publicPath": "q/ichimon/s/ichi-0312/index.html"
+    "publicPath": "q/ichimon/s/ichi-0312/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0313",
@@ -2502,7 +2814,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「労働者の心の健康の保持増進のための指針」は、労働安全衛生法第70条の2に基づいて定められている。",
     "correctAnswer": true,
     "exp": "「労働者の心の健康の保持増進のための指針」は労働安全衛生法第70条の2に基づき2006年に策定され、2015年の改正でストレスチェック制度に関する内容が加わった。4つのケアの継続的・計画的な実施を重視し、事業場の規模を問わず対象とする。",
-    "publicPath": "q/ichimon/s/ichi-0313/index.html"
+    "publicPath": "q/ichimon/s/ichi-0313/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0314",
@@ -2510,7 +2823,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「労働者の心の健康の保持増進のための指針」は、常時50人以上の労働者を使用する事業場のみを対象としている。",
     "correctAnswer": false,
     "exp": "「労働者の心の健康の保持増進のための指針」は労働安全衛生法第70条の2に基づき2006年に策定され、2015年の改正でストレスチェック制度に関する内容が加わった。4つのケアの継続的・計画的な実施を重視し、事業場の規模を問わず対象とする。",
-    "publicPath": "q/ichimon/s/ichi-0314/index.html"
+    "publicPath": "q/ichimon/s/ichi-0314/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0315",
@@ -2518,7 +2832,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「労働者の心の健康の保持増進のための指針」は、4つのケアが継続的かつ計画的に行われることが重要であるとしている。",
     "correctAnswer": true,
     "exp": "「労働者の心の健康の保持増進のための指針」は労働安全衛生法第70条の2に基づき2006年に策定され、2015年の改正でストレスチェック制度に関する内容が加わった。4つのケアの継続的・計画的な実施を重視し、事業場の規模を問わず対象とする。",
-    "publicPath": "q/ichimon/s/ichi-0315/index.html"
+    "publicPath": "q/ichimon/s/ichi-0315/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0316",
@@ -2526,7 +2841,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「労働者の心の健康の保持増進のための指針」は、2015年の改正で、ストレスチェック制度に関する内容が削除された。",
     "correctAnswer": false,
     "exp": "「労働者の心の健康の保持増進のための指針」は労働安全衛生法第70条の2に基づき2006年に策定され、2015年の改正でストレスチェック制度に関する内容が加わった。4つのケアの継続的・計画的な実施を重視し、事業場の規模を問わず対象とする。",
-    "publicPath": "q/ichimon/s/ichi-0316/index.html"
+    "publicPath": "q/ichimon/s/ichi-0316/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0317",
@@ -2534,7 +2850,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "研究開発業務に従事する労働者は、時間外・休日労働が月80時間を超えれば、本人の申出がなくても医師の面接指導の対象となる。",
     "correctAnswer": false,
     "exp": "一般の労働者は、月80時間超の時間外・休日労働で疲労の蓄積が認められ、申出があれば医師による面接指導の対象。研究開発業務従事者は月100時間超で申出不要。事業者は医師の意見を聴いて就業上の措置を講じ、結果の記録を5年間保存する。",
-    "publicPath": "q/ichimon/s/ichi-0317/index.html"
+    "publicPath": "q/ichimon/s/ichi-0317/index.html",
+    "level": 5
   },
   {
     "id": "ichi-0318",
@@ -2542,7 +2859,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "面接指導を実施した医師は、就業上の措置について事業者に意見を述べることができる。",
     "correctAnswer": true,
     "exp": "一般の労働者は、月80時間超の時間外・休日労働で疲労の蓄積が認められ、申出があれば医師による面接指導の対象。研究開発業務従事者は月100時間超で申出不要。事業者は医師の意見を聴いて就業上の措置を講じ、結果の記録を5年間保存する。",
-    "publicPath": "q/ichimon/s/ichi-0318/index.html"
+    "publicPath": "q/ichimon/s/ichi-0318/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0319",
@@ -2550,7 +2868,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業者は、長時間労働者に対する面接指導の結果の記録を作成し、5年間保存しなければならない。",
     "correctAnswer": true,
     "exp": "一般の労働者は、月80時間超の時間外・休日労働で疲労の蓄積が認められ、申出があれば医師による面接指導の対象。研究開発業務従事者は月100時間超で申出不要。事業者は医師の意見を聴いて就業上の措置を講じ、結果の記録を5年間保存する。",
-    "publicPath": "q/ichimon/s/ichi-0319/index.html"
+    "publicPath": "q/ichimon/s/ichi-0319/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0320",
@@ -2558,7 +2877,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業者は、面接指導を行った医師の意見を聴く必要はなく、就業上の措置は事業者が独自に判断すればよい。",
     "correctAnswer": false,
     "exp": "一般の労働者は、月80時間超の時間外・休日労働で疲労の蓄積が認められ、申出があれば医師による面接指導の対象。研究開発業務従事者は月100時間超で申出不要。事業者は医師の意見を聴いて就業上の措置を講じ、結果の記録を5年間保存する。",
-    "publicPath": "q/ichimon/s/ichi-0320/index.html"
+    "publicPath": "q/ichimon/s/ichi-0320/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0321",
@@ -2566,7 +2886,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの結果を理由とした解雇・降格・減給などの不利益な取扱いは禁止されている。",
     "correctAnswer": true,
     "exp": "ストレスチェックを受けないことや同意しないことを理由とする不利益取扱いは禁止。個人の結果を事業者に提供するには、高ストレス者であっても本人の同意が必要で、同意は結果の通知後に個別に取得する。提供された結果は事業者が5年間保存する。",
-    "publicPath": "q/ichimon/s/ichi-0321/index.html"
+    "publicPath": "q/ichimon/s/ichi-0321/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0322",
@@ -2574,7 +2895,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "実施者は、本人の同意がなくても、高ストレス者の結果に限り、事業者に提供することができる。",
     "correctAnswer": false,
     "exp": "ストレスチェックを受けないことや同意しないことを理由とする不利益取扱いは禁止。個人の結果を事業者に提供するには、高ストレス者であっても本人の同意が必要で、同意は結果の通知後に個別に取得する。提供された結果は事業者が5年間保存する。",
-    "publicPath": "q/ichimon/s/ichi-0322/index.html"
+    "publicPath": "q/ichimon/s/ichi-0322/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0323",
@@ -2582,7 +2904,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの結果を事業者に提供することへの同意は、実施前に一括して取得しておくことが望ましい。",
     "correctAnswer": false,
     "exp": "ストレスチェックを受けないことや同意しないことを理由とする不利益取扱いは禁止。個人の結果を事業者に提供するには、高ストレス者であっても本人の同意が必要で、同意は結果の通知後に個別に取得する。提供された結果は事業者が5年間保存する。",
-    "publicPath": "q/ichimon/s/ichi-0323/index.html"
+    "publicPath": "q/ichimon/s/ichi-0323/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0324",
@@ -2590,7 +2913,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "本人の同意を得て事業者に提供されたストレスチェックの結果は、事業者が5年間保存しなければならない。",
     "correctAnswer": true,
     "exp": "ストレスチェックを受けないことや同意しないことを理由とする不利益取扱いは禁止。個人の結果を事業者に提供するには、高ストレス者であっても本人の同意が必要で、同意は結果の通知後に個別に取得する。提供された結果は事業者が5年間保存する。",
-    "publicPath": "q/ichimon/s/ichi-0324/index.html"
+    "publicPath": "q/ichimon/s/ichi-0324/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0325",
@@ -2598,7 +2922,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "コルチゾールは副腎皮質から分泌されるストレスホルモンであり、長期的なストレス応答に関与する。",
     "correctAnswer": true,
     "exp": "コルチゾールは副腎皮質から分泌され、ストレス反応では視床下部−下垂体−副腎皮質系の働きで分泌が増える。アドレナリンは副腎髄質から分泌され、急性ストレスで心拍数や血圧を上昇させる。コルチゾールの慢性的な高値は免疫機能を低下させる。",
-    "publicPath": "q/ichimon/s/ichi-0325/index.html"
+    "publicPath": "q/ichimon/s/ichi-0325/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0326",
@@ -2606,7 +2931,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "アドレナリンは副腎皮質から分泌され、慢性ストレスの指標として用いられる。",
     "correctAnswer": false,
     "exp": "コルチゾールは副腎皮質から分泌され、ストレス反応では視床下部−下垂体−副腎皮質系の働きで分泌が増える。アドレナリンは副腎髄質から分泌され、急性ストレスで心拍数や血圧を上昇させる。コルチゾールの慢性的な高値は免疫機能を低下させる。",
-    "publicPath": "q/ichimon/s/ichi-0326/index.html"
+    "publicPath": "q/ichimon/s/ichi-0326/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0327",
@@ -2614,7 +2940,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "コルチゾールが慢性的に高値となっても、免疫機能には影響しない。",
     "correctAnswer": false,
     "exp": "コルチゾールは副腎皮質から分泌され、ストレス反応では視床下部−下垂体−副腎皮質系の働きで分泌が増える。アドレナリンは副腎髄質から分泌され、急性ストレスで心拍数や血圧を上昇させる。コルチゾールの慢性的な高値は免疫機能を低下させる。",
-    "publicPath": "q/ichimon/s/ichi-0327/index.html"
+    "publicPath": "q/ichimon/s/ichi-0327/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0328",
@@ -2622,7 +2949,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレス反応では、視床下部−下垂体−副腎皮質系の働きにより、コルチゾールの分泌が増える。",
     "correctAnswer": true,
     "exp": "コルチゾールは副腎皮質から分泌され、ストレス反応では視床下部−下垂体−副腎皮質系の働きで分泌が増える。アドレナリンは副腎髄質から分泌され、急性ストレスで心拍数や血圧を上昇させる。コルチゾールの慢性的な高値は免疫機能を低下させる。",
-    "publicPath": "q/ichimon/s/ichi-0328/index.html"
+    "publicPath": "q/ichimon/s/ichi-0328/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0329",
@@ -2630,7 +2958,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "パニック発作は通常数時間以上続くため、発作が起きたら長時間の安静が必要である。",
     "correctAnswer": false,
     "exp": "パニック障害は、突然の強い不安と動悸・息切れなどを伴う発作を繰り返し、予期不安を伴う。発作は通常数分から数十分でおさまり命に関わらない。広場恐怖を伴うことがある。治療はSSRIなどの薬物療法と認知行動療法が有効。",
-    "publicPath": "q/ichimon/s/ichi-0329/index.html"
+    "publicPath": "q/ichimon/s/ichi-0329/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0330",
@@ -2638,7 +2967,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "パニック障害では、突然起こる強い恐怖感・動悸・息切れなどのパニック発作を繰り返す。",
     "correctAnswer": true,
     "exp": "パニック障害は、突然の強い不安と動悸・息切れなどを伴う発作を繰り返し、予期不安を伴う。発作は通常数分から数十分でおさまり命に関わらない。広場恐怖を伴うことがある。治療はSSRIなどの薬物療法と認知行動療法が有効。",
-    "publicPath": "q/ichimon/s/ichi-0330/index.html"
+    "publicPath": "q/ichimon/s/ichi-0330/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0331",
@@ -2646,7 +2976,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "パニック障害の治療には、SSRIなどの薬物療法や認知行動療法が有効とされる。",
     "correctAnswer": true,
     "exp": "パニック障害は、突然の強い不安と動悸・息切れなどを伴う発作を繰り返し、予期不安を伴う。発作は通常数分から数十分でおさまり命に関わらない。広場恐怖を伴うことがある。治療はSSRIなどの薬物療法と認知行動療法が有効。",
-    "publicPath": "q/ichimon/s/ichi-0331/index.html"
+    "publicPath": "q/ichimon/s/ichi-0331/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0332",
@@ -2654,7 +2985,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "パニック障害では、発作が起きた場所や状況を避けるようになる広場恐怖を伴うことはない。",
     "correctAnswer": false,
     "exp": "パニック障害は、突然の強い不安と動悸・息切れなどを伴う発作を繰り返し、予期不安を伴う。発作は通常数分から数十分でおさまり命に関わらない。広場恐怖を伴うことがある。治療はSSRIなどの薬物療法と認知行動療法が有効。",
-    "publicPath": "q/ichimon/s/ichi-0332/index.html"
+    "publicPath": "q/ichimon/s/ichi-0332/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0333",
@@ -2662,7 +2994,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ADHDのある労働者には、業務の指示を口頭のみで伝え、メモや書面は用いないほうがよい。",
     "correctAnswer": false,
     "exp": "ADHDのある労働者には、作業手順のチェックリスト、口頭と書面を併用した指示、優先順位や締め切りの明確化、気が散りにくい静かな席への配置などが有効とされる。",
-    "publicPath": "q/ichimon/s/ichi-0333/index.html"
+    "publicPath": "q/ichimon/s/ichi-0333/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0334",
@@ -2670,7 +3003,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ADHDのある労働者には、作業の優先順位を明確にし、一度に複数の指示をするのではなく一つずつ伝えることが有効とされる。",
     "correctAnswer": true,
     "exp": "ADHDのある労働者には、作業手順のチェックリスト、口頭と書面を併用した指示、優先順位や締め切りの明確化、気が散りにくい静かな席への配置などが有効とされる。",
-    "publicPath": "q/ichimon/s/ichi-0334/index.html"
+    "publicPath": "q/ichimon/s/ichi-0334/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0335",
@@ -2678,7 +3012,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ADHDのある労働者には、作業手順のチェックリストを用意するなど、ミスを防ぐ工夫が有効とされる。",
     "correctAnswer": true,
     "exp": "ADHDのある労働者には、作業手順のチェックリスト、口頭と書面を併用した指示、優先順位や締め切りの明確化、気が散りにくい静かな席への配置などが有効とされる。",
-    "publicPath": "q/ichimon/s/ichi-0335/index.html"
+    "publicPath": "q/ichimon/s/ichi-0335/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0336",
@@ -2686,7 +3021,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ADHDのある労働者は、集中力を高めるため、人の出入りや話し声が多い席に配置するとよい。",
     "correctAnswer": false,
     "exp": "ADHDのある労働者には、作業手順のチェックリスト、口頭と書面を併用した指示、優先順位や締め切りの明確化、気が散りにくい静かな席への配置などが有効とされる。",
-    "publicPath": "q/ichimon/s/ichi-0336/index.html"
+    "publicPath": "q/ichimon/s/ichi-0336/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0337",
@@ -2694,7 +3030,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "集団分析の結果は経営陣のみで検討し、労働者には結果を開示しない。",
     "correctAnswer": false,
     "exp": "集団分析の結果は、個人が特定されないよう配慮して職場の管理監督者や労働者にフィードバックし、話し合いで改善策を検討する材料とする。管理監督者の人事評価には用いない。全国平均より良好な職場でも予防的に取り組む。",
-    "publicPath": "q/ichimon/s/ichi-0337/index.html"
+    "publicPath": "q/ichimon/s/ichi-0337/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0338",
@@ -2702,7 +3039,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "集団分析の結果を職場環境改善に活用する際は、高ストレスを示した集団を特定し、職場での話し合いを通じて改善策を検討する。",
     "correctAnswer": true,
     "exp": "集団分析の結果は、個人が特定されないよう配慮して職場の管理監督者や労働者にフィードバックし、話し合いで改善策を検討する材料とする。管理監督者の人事評価には用いない。全国平均より良好な職場でも予防的に取り組む。",
-    "publicPath": "q/ichimon/s/ichi-0338/index.html"
+    "publicPath": "q/ichimon/s/ichi-0338/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0339",
@@ -2710,7 +3048,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "集団分析の結果が全国平均より良好な職場では、職場環境改善に取り組む必要はない。",
     "correctAnswer": false,
     "exp": "集団分析の結果は、個人が特定されないよう配慮して職場の管理監督者や労働者にフィードバックし、話し合いで改善策を検討する材料とする。管理監督者の人事評価には用いない。全国平均より良好な職場でも予防的に取り組む。",
-    "publicPath": "q/ichimon/s/ichi-0339/index.html"
+    "publicPath": "q/ichimon/s/ichi-0339/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0340",
@@ -2718,7 +3057,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "集団分析の結果は、職場の管理監督者や労働者にフィードバックし、改善策を話し合う材料として活用できる。",
     "correctAnswer": true,
     "exp": "集団分析の結果は、個人が特定されないよう配慮して職場の管理監督者や労働者にフィードバックし、話し合いで改善策を検討する材料とする。管理監督者の人事評価には用いない。全国平均より良好な職場でも予防的に取り組む。",
-    "publicPath": "q/ichimon/s/ichi-0340/index.html"
+    "publicPath": "q/ichimon/s/ichi-0340/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0341",
@@ -2726,7 +3066,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "評価の結果を踏まえ、改善策や計画を見直して次の取り組みに反映することは、職場環境改善におけるPDCAサイクルのC（Check）に該当する活動である。",
     "correctAnswer": false,
     "exp": "PDCAサイクルのPは計画（改善策の立案）、Dは実施、Cは評価・検証、Aは見直し・改善を指す。Cは実施した改善策の効果を確かめる段階で、その結果を次のAにつなげる。",
-    "publicPath": "q/ichimon/s/ichi-0341/index.html"
+    "publicPath": "q/ichimon/s/ichi-0341/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0342",
@@ -2734,7 +3075,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレス要因の低減策や支援体制の整備計画を策定することは、職場環境改善におけるPDCAサイクルのC（Check）に該当する活動である。",
     "correctAnswer": false,
     "exp": "PDCAサイクルのPは計画（改善策の立案）、Dは実施、Cは評価・検証、Aは見直し・改善を指す。Cは実施した改善策の効果を確かめる段階で、その結果を次のAにつなげる。",
-    "publicPath": "q/ichimon/s/ichi-0342/index.html"
+    "publicPath": "q/ichimon/s/ichi-0342/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0343",
@@ -2742,7 +3084,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "改善策を実際に職場で実施することは、職場環境改善におけるPDCAサイクルのC（Check）に該当する活動である。",
     "correctAnswer": false,
     "exp": "PDCAサイクルのPは計画（改善策の立案）、Dは実施、Cは評価・検証、Aは見直し・改善を指す。Cは実施した改善策の効果を確かめる段階で、その結果を次のAにつなげる。",
-    "publicPath": "q/ichimon/s/ichi-0343/index.html"
+    "publicPath": "q/ichimon/s/ichi-0343/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0344",
@@ -2750,7 +3093,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "実施した改善策の効果を、指標を用いて検証・評価することは、職場環境改善におけるPDCAサイクルのC（Check）に該当する活動である。",
     "correctAnswer": true,
     "exp": "PDCAサイクルのPは計画（改善策の立案）、Dは実施、Cは評価・検証、Aは見直し・改善を指す。Cは実施した改善策の効果を確かめる段階で、その結果を次のAにつなげる。",
-    "publicPath": "q/ichimon/s/ichi-0344/index.html"
+    "publicPath": "q/ichimon/s/ichi-0344/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0345",
@@ -2758,7 +3102,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "遅刻の増加、ミスの増加、表情の変化など、複数のサインが重なって続く場合は、特に注意が必要である。",
     "correctAnswer": true,
     "exp": "メンタルヘルス不調のサインとして特に注意が必要なのは、いつもの状態と比べた変化（遅刻・ミスの増加、表情の変化など）が複数重なって続く場合。理由がはっきりした一時的な変化だけでは、特に注意が必要な状態とはいえない。",
-    "publicPath": "q/ichimon/s/ichi-0345/index.html"
+    "publicPath": "q/ichimon/s/ichi-0345/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0346",
@@ -2766,7 +3111,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "先月から遅刻・欠勤が増え、仕事のミスも目立ち、顔色も悪いという状態は、メンタルヘルス不調のサインとして特に注意が必要である。",
     "correctAnswer": true,
     "exp": "メンタルヘルス不調のサインとして特に注意が必要なのは、いつもの状態と比べた変化（遅刻・ミスの増加、表情の変化など）が複数重なって続く場合。理由がはっきりした一時的な変化だけでは、特に注意が必要な状態とはいえない。",
-    "publicPath": "q/ichimon/s/ichi-0346/index.html"
+    "publicPath": "q/ichimon/s/ichi-0346/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0347",
@@ -2774,7 +3120,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "新しい業務を担当した直後で慣れない作業に時間がかかっていることは、メンタルヘルス不調のサインとして特に注意が必要な状態である。",
     "correctAnswer": false,
     "exp": "メンタルヘルス不調のサインとして特に注意が必要なのは、いつもの状態と比べた変化（遅刻・ミスの増加、表情の変化など）が複数重なって続く場合。理由がはっきりした一時的な変化だけでは、特に注意が必要な状態とはいえない。",
-    "publicPath": "q/ichimon/s/ichi-0347/index.html"
+    "publicPath": "q/ichimon/s/ichi-0347/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0348",
@@ -2782,7 +3129,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "休日に家族で旅行に出かけ、週明けに少し眠そうにしていることは、メンタルヘルス不調のサインとして特に注意が必要な状態である。",
     "correctAnswer": false,
     "exp": "メンタルヘルス不調のサインとして特に注意が必要なのは、いつもの状態と比べた変化（遅刻・ミスの増加、表情の変化など）が複数重なって続く場合。理由がはっきりした一時的な変化だけでは、特に注意が必要な状態とはいえない。",
-    "publicPath": "q/ichimon/s/ichi-0348/index.html"
+    "publicPath": "q/ichimon/s/ichi-0348/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0349",
@@ -2790,7 +3138,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は立場上、ストレスを感じていることを他者に明かすべきではない。",
     "correctAnswer": false,
     "exp": "管理監督者もストレスを受けやすい立場にあり、研修では部下へのケアだけでなく自身のセルフケアも取り上げることが望ましい。事業者は管理監督者のストレス対策を支援し、高ストレスと判定された管理監督者も面接指導を申し出ることが大切。",
-    "publicPath": "q/ichimon/s/ichi-0349/index.html"
+    "publicPath": "q/ichimon/s/ichi-0349/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0350",
@@ -2798,7 +3147,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者も、自分のストレスに気づいたら、早めに上司や産業保健スタッフに相談することが重要である。",
     "correctAnswer": true,
     "exp": "管理監督者もストレスを受けやすい立場にあり、研修では部下へのケアだけでなく自身のセルフケアも取り上げることが望ましい。事業者は管理監督者のストレス対策を支援し、高ストレスと判定された管理監督者も面接指導を申し出ることが大切。",
-    "publicPath": "q/ichimon/s/ichi-0350/index.html"
+    "publicPath": "q/ichimon/s/ichi-0350/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0351",
@@ -2806,7 +3156,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は、自らが高ストレスと判定された場合でも、部下への影響を考えて面接指導を申し出るべきではない。",
     "correctAnswer": false,
     "exp": "管理監督者もストレスを受けやすい立場にあり、研修では部下へのケアだけでなく自身のセルフケアも取り上げることが望ましい。事業者は管理監督者のストレス対策を支援し、高ストレスと判定された管理監督者も面接指導を申し出ることが大切。",
-    "publicPath": "q/ichimon/s/ichi-0351/index.html"
+    "publicPath": "q/ichimon/s/ichi-0351/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0352",
@@ -2814,71 +3165,80 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者向けの研修では、部下へのケアだけでなく、管理監督者自身のセルフケアについても取り上げることが望ましい。",
     "correctAnswer": true,
     "exp": "管理監督者もストレスを受けやすい立場にあり、研修では部下へのケアだけでなく自身のセルフケアも取り上げることが望ましい。事業者は管理監督者のストレス対策を支援し、高ストレスと判定された管理監督者も面接指導を申し出ることが大切。",
-    "publicPath": "q/ichimon/s/ichi-0352/index.html"
+    "publicPath": "q/ichimon/s/ichi-0352/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0353",
     "field": "limit",
-    "statement": "部下が業務中に突然泣き出した場合は、業務に支障をきたすため、すぐに泣き止むよう指示する。",
+    "statement": "相手の言葉をそのまま繰り返す技法を「感情の反映」といい、相手の感情には触れないことが特徴である。",
     "correctAnswer": false,
-    "exp": "部下が業務中に突然泣き出した場合は、周囲の目に配慮して落ち着ける場所に移り、まず話を聴く。すぐに解決しようとせず、気持ちを受け止める。見て見ぬふりをすると不調のサインを見過ごすおそれがある。",
-    "publicPath": "q/ichimon/s/ichi-0353/index.html"
+    "exp": "感情の反映は、相手の話に含まれる気持ちを聴き手が言葉にして返し、受け止めていることを伝える技法。相手が感情を表す言葉を使っていなくても、話から汲み取れる気持ちを返す。相手の言葉の内容を返す繰り返しや、聴き手のことばで言い換えて理解を確かめる言い換えとは区別される。",
+    "publicPath": "q/ichimon/s/ichi-0353/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0354",
     "field": "limit",
-    "statement": "部下が業務中に突然泣き出した場合は、「気にしすぎだ、しっかりしろ」と励まし、気持ちを切り替えさせる。",
-    "correctAnswer": false,
-    "exp": "部下が業務中に突然泣き出した場合は、周囲の目に配慮して落ち着ける場所に移り、まず話を聴く。すぐに解決しようとせず、気持ちを受け止める。見て見ぬふりをすると不調のサインを見過ごすおそれがある。",
-    "publicPath": "q/ichimon/s/ichi-0354/index.html"
+    "statement": "「感情の反映」とは、相手の話に含まれる気持ちを聴き手が言葉にして返し、気持ちを受け止めていることを伝える技法である。",
+    "correctAnswer": true,
+    "exp": "感情の反映は、相手の話に含まれる気持ちを聴き手が言葉にして返し、受け止めていることを伝える技法。相手が感情を表す言葉を使っていなくても、話から汲み取れる気持ちを返す。相手の言葉の内容を返す繰り返しや、聴き手のことばで言い換えて理解を確かめる言い換えとは区別される。",
+    "publicPath": "q/ichimon/s/ichi-0354/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0355",
     "field": "limit",
-    "statement": "部下が業務中に突然泣き出した場合は、落ち着ける場所に移り、まずは話を聴く姿勢で寄り添う。",
+    "statement": "相手の話の要点を聴き手のことばで言い換えて返すと、聴き手の理解が正しいかを相手が確かめやすくなる。",
     "correctAnswer": true,
-    "exp": "部下が業務中に突然泣き出した場合は、周囲の目に配慮して落ち着ける場所に移り、まず話を聴く。すぐに解決しようとせず、気持ちを受け止める。見て見ぬふりをすると不調のサインを見過ごすおそれがある。",
-    "publicPath": "q/ichimon/s/ichi-0355/index.html"
+    "exp": "感情の反映は、相手の話に含まれる気持ちを聴き手が言葉にして返し、受け止めていることを伝える技法。相手が感情を表す言葉を使っていなくても、話から汲み取れる気持ちを返す。相手の言葉の内容を返す繰り返しや、聴き手のことばで言い換えて理解を確かめる言い換えとは区別される。",
+    "publicPath": "q/ichimon/s/ichi-0355/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0356",
     "field": "limit",
-    "statement": "部下に感情的な反応がみられた場合は、すぐに解決しようとせず、まず気持ちを受け止めることが大切である。",
-    "correctAnswer": true,
-    "exp": "部下が業務中に突然泣き出した場合は、周囲の目に配慮して落ち着ける場所に移り、まず話を聴く。すぐに解決しようとせず、気持ちを受け止める。見て見ぬふりをすると不調のサインを見過ごすおそれがある。",
-    "publicPath": "q/ichimon/s/ichi-0356/index.html"
+    "statement": "「感情の反映」は、相手が感情を表す言葉を使ったときだけ用いる技法であり、言葉に表れていない気持ちを汲み取って返すことはしない。",
+    "correctAnswer": false,
+    "exp": "感情の反映は、相手の話に含まれる気持ちを聴き手が言葉にして返し、受け止めていることを伝える技法。相手が感情を表す言葉を使っていなくても、話から汲み取れる気持ちを返す。相手の言葉の内容を返す繰り返しや、聴き手のことばで言い換えて理解を確かめる言い換えとは区別される。",
+    "publicPath": "q/ichimon/s/ichi-0356/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0357",
     "field": "limit",
-    "statement": "相談しやすい職場にするため、管理監督者は日頃から挨拶や声かけを積極的に行い、部下との関係を良好に保つ。",
+    "statement": "指針では、家族による気づきや支援を促すため、労働者の家族に対しても相談窓口などの情報を提供することが望ましいとされている。",
     "correctAnswer": true,
-    "exp": "相談しやすい職場には、日頃の挨拶や声かけ、批判せずに共感的に聴く姿勢が大切。相談内容は原則として本人の同意なく伝えないが、命に関わる場合などの例外はあらかじめ伝えておく。何でも報告すると伝えると相談をためらわせる。",
-    "publicPath": "q/ichimon/s/ichi-0357/index.html"
+    "exp": "指針は、労働者・管理監督者・家族等からの相談に対応できる体制の整備と、家族による気づきや支援を促すための家族への情報提供を求めている。相談窓口を利用した事実もプライバシーとして守る。",
+    "publicPath": "q/ichimon/s/ichi-0357/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0358",
     "field": "limit",
-    "statement": "相談しやすい職場にするため、相談された内容は何でも上司や人事部門に報告することを、あらかじめ部下に伝えておく。",
+    "statement": "労働者が相談窓口を利用した事実は、健康状態を把握するうえで重要な情報であるため、管理監督者に自動的に知らされる仕組みが望ましい。",
     "correctAnswer": false,
-    "exp": "相談しやすい職場には、日頃の挨拶や声かけ、批判せずに共感的に聴く姿勢が大切。相談内容は原則として本人の同意なく伝えないが、命に関わる場合などの例外はあらかじめ伝えておく。何でも報告すると伝えると相談をためらわせる。",
-    "publicPath": "q/ichimon/s/ichi-0358/index.html"
+    "exp": "指針は、労働者・管理監督者・家族等からの相談に対応できる体制の整備と、家族による気づきや支援を促すための家族への情報提供を求めている。相談窓口を利用した事実もプライバシーとして守る。",
+    "publicPath": "q/ichimon/s/ichi-0358/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0359",
     "field": "limit",
-    "statement": "相談しやすい職場にするため、プライバシーに配慮した相談場所を確保する。",
+    "statement": "事業者は、労働者が自発的に相談しやすいよう、事業場内外の相談窓口を整備し、その利用方法を周知する。",
     "correctAnswer": true,
-    "exp": "相談しやすい職場には、日頃の挨拶や声かけ、批判せずに共感的に聴く姿勢が大切。相談内容は原則として本人の同意なく伝えないが、命に関わる場合などの例外はあらかじめ伝えておく。何でも報告すると伝えると相談をためらわせる。",
-    "publicPath": "q/ichimon/s/ichi-0359/index.html"
+    "exp": "指針は、労働者・管理監督者・家族等からの相談に対応できる体制の整備と、家族による気づきや支援を促すための家族への情報提供を求めている。相談窓口を利用した事実もプライバシーとして守る。",
+    "publicPath": "q/ichimon/s/ichi-0359/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0360",
     "field": "limit",
     "statement": "相談しやすくするため、相談内容は命に関わる場合でも誰にも伝えないと、部下に約束しておく。",
     "correctAnswer": false,
-    "exp": "相談しやすい職場には、日頃の挨拶や声かけ、批判せずに共感的に聴く姿勢が大切。相談内容は原則として本人の同意なく伝えないが、命に関わる場合などの例外はあらかじめ伝えておく。何でも報告すると伝えると相談をためらわせる。",
-    "publicPath": "q/ichimon/s/ichi-0360/index.html"
+    "exp": "指針は、労働者・管理監督者・家族等からの相談に対応できる体制の整備と、家族による気づきや支援を促すための家族への情報提供を求めている。相談窓口を利用した事実もプライバシーとして守る。",
+    "publicPath": "q/ichimon/s/ichi-0360/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0361",
@@ -2886,7 +3246,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "保健師は医師（産業医）の指示がなければ、労働者と面談することができない。",
     "correctAnswer": false,
     "exp": "保健師は、ストレスチェックの実施者となることができ、健康相談や保健指導、職場復帰の支援などを通じてメンタルヘルス対策に関わる。長時間労働者への面接指導は医師が行う。保健師の選任は法律上の義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0361/index.html"
+    "publicPath": "q/ichimon/s/ichi-0361/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0362",
@@ -2894,7 +3255,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "保健師は健康相談・保健指導・職場巡視等を通じてメンタルヘルス対策に関与する。",
     "correctAnswer": true,
     "exp": "保健師は、ストレスチェックの実施者となることができ、健康相談や保健指導、職場復帰の支援などを通じてメンタルヘルス対策に関わる。長時間労働者への面接指導は医師が行う。保健師の選任は法律上の義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0362/index.html"
+    "publicPath": "q/ichimon/s/ichi-0362/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0363",
@@ -2902,7 +3264,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "保健師の主な役割は身体的な健康管理のみであり、メンタルヘルスは担当しない。",
     "correctAnswer": false,
     "exp": "保健師は、ストレスチェックの実施者となることができ、健康相談や保健指導、職場復帰の支援などを通じてメンタルヘルス対策に関わる。長時間労働者への面接指導は医師が行う。保健師の選任は法律上の義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0363/index.html"
+    "publicPath": "q/ichimon/s/ichi-0363/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0364",
@@ -2910,7 +3273,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "保健師は、ストレスチェックの実施者となることができる。",
     "correctAnswer": true,
     "exp": "保健師は、ストレスチェックの実施者となることができ、健康相談や保健指導、職場復帰の支援などを通じてメンタルヘルス対策に関わる。長時間労働者への面接指導は医師が行う。保健師の選任は法律上の義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0364/index.html"
+    "publicPath": "q/ichimon/s/ichi-0364/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0365",
@@ -2918,7 +3282,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "主治医は職場復帰の可否を最終的に決定する権限を持つ。",
     "correctAnswer": false,
     "exp": "主治医は労働者の診断と治療、産業医は職場の状況を踏まえた就業上の措置への意見を主な役割とする。意見が異なる場合は事業者が両者の意見を参考に判断する。両者の間の情報のやりとりには本人の同意が必要。",
-    "publicPath": "q/ichimon/s/ichi-0365/index.html"
+    "publicPath": "q/ichimon/s/ichi-0365/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0366",
@@ -2926,7 +3291,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医が主治医から労働者の情報の提供を受ける際は、本人の同意を得ることが原則である。",
     "correctAnswer": true,
     "exp": "主治医は労働者の診断と治療、産業医は職場の状況を踏まえた就業上の措置への意見を主な役割とする。意見が異なる場合は事業者が両者の意見を参考に判断する。両者の間の情報のやりとりには本人の同意が必要。",
-    "publicPath": "q/ichimon/s/ichi-0366/index.html"
+    "publicPath": "q/ichimon/s/ichi-0366/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0367",
@@ -2934,7 +3300,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "主治医は治療が主な役割であり、産業医は職場の観点から就業上の措置について助言する。",
     "correctAnswer": true,
     "exp": "主治医は労働者の診断と治療、産業医は職場の状況を踏まえた就業上の措置への意見を主な役割とする。意見が異なる場合は事業者が両者の意見を参考に判断する。両者の間の情報のやりとりには本人の同意が必要。",
-    "publicPath": "q/ichimon/s/ichi-0367/index.html"
+    "publicPath": "q/ichimon/s/ichi-0367/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0368",
@@ -2942,71 +3309,80 @@ window.ICHIMONDOU_ROWS = [
     "statement": "主治医と産業医の意見が異なる場合、主治医の意見が常に優先される。",
     "correctAnswer": false,
     "exp": "主治医は労働者の診断と治療、産業医は職場の状況を踏まえた就業上の措置への意見を主な役割とする。意見が異なる場合は事業者が両者の意見を参考に判断する。両者の間の情報のやりとりには本人の同意が必要。",
-    "publicPath": "q/ichimon/s/ichi-0368/index.html"
+    "publicPath": "q/ichimon/s/ichi-0368/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0369",
     "field": "limit",
-    "statement": "この手引きは大企業のみが活用するものであり、中小企業には適用されない。",
+    "statement": "職場復帰支援の手引きの基本的な記述は、長期の治療を要する心の健康問題を想定しており、比較的短期に寛解するものは想定していない。",
     "correctAnswer": false,
-    "exp": "職場復帰支援の手引きは厚生労働省が作成し、職場復帰支援の流れを5つのステップで示す。罰則つきの義務ではない。原則として元の慣れた職場へ復帰させ、可否は主治医や産業医の意見を踏まえて事業者が判断する。",
-    "publicPath": "q/ichimon/s/ichi-0369/index.html"
+    "exp": "手引きの対象は心の健康問題で休業した全ての労働者で、第3ステップ以降は医学的に業務に復帰するのに問題がない程度に回復した労働者が対象。基本的な記述は、治療によって比較的短期に寛解するものを想定している。",
+    "publicPath": "q/ichimon/s/ichi-0369/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0370",
     "field": "limit",
-    "statement": "この手引きは厚生労働省が作成したものであり、職場復帰支援の流れを5つのステップで示している。",
+    "statement": "職場復帰支援の手引きの第3ステップ以降は、医学的に業務に復帰するのに問題がない程度に回復した労働者を対象としている。",
     "correctAnswer": true,
-    "exp": "職場復帰支援の手引きは厚生労働省が作成し、職場復帰支援の流れを5つのステップで示す。罰則つきの義務ではない。原則として元の慣れた職場へ復帰させ、可否は主治医や産業医の意見を踏まえて事業者が判断する。",
-    "publicPath": "q/ichimon/s/ichi-0370/index.html"
+    "exp": "手引きの対象は心の健康問題で休業した全ての労働者で、第3ステップ以降は医学的に業務に復帰するのに問題がない程度に回復した労働者が対象。基本的な記述は、治療によって比較的短期に寛解するものを想定している。",
+    "publicPath": "q/ichimon/s/ichi-0370/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0371",
     "field": "limit",
-    "statement": "この手引きでは、職場復帰の判断は主治医が単独で行うべきとされている。",
+    "statement": "職場復帰支援の手引きの対象は、業務上の理由により心の健康問題が生じて休業した労働者に限られている。",
     "correctAnswer": false,
-    "exp": "職場復帰支援の手引きは厚生労働省が作成し、職場復帰支援の流れを5つのステップで示す。罰則つきの義務ではない。原則として元の慣れた職場へ復帰させ、可否は主治医や産業医の意見を踏まえて事業者が判断する。",
-    "publicPath": "q/ichimon/s/ichi-0371/index.html"
+    "exp": "手引きの対象は心の健康問題で休業した全ての労働者で、第3ステップ以降は医学的に業務に復帰するのに問題がない程度に回復した労働者が対象。基本的な記述は、治療によって比較的短期に寛解するものを想定している。",
+    "publicPath": "q/ichimon/s/ichi-0371/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0372",
     "field": "limit",
     "statement": "職場復帰支援の手引きでは、原則として元の慣れた職場へ復帰させることが望ましいとされている。",
     "correctAnswer": true,
-    "exp": "職場復帰支援の手引きは厚生労働省が作成し、職場復帰支援の流れを5つのステップで示す。罰則つきの義務ではない。原則として元の慣れた職場へ復帰させ、可否は主治医や産業医の意見を踏まえて事業者が判断する。",
-    "publicPath": "q/ichimon/s/ichi-0372/index.html"
+    "exp": "手引きの対象は心の健康問題で休業した全ての労働者で、第3ステップ以降は医学的に業務に復帰するのに問題がない程度に回復した労働者が対象。基本的な記述は、治療によって比較的短期に寛解するものを想定している。",
+    "publicPath": "q/ichimon/s/ichi-0372/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0373",
     "field": "limit",
-    "statement": "職場復帰後の再燃・再発の危険は、復職直後の1週間だけ高く、その後は急速に低下する。",
+    "statement": "「再発」とは症状が十分に回復する前に再び悪化することをいい、「再燃」とはいったん回復した後に再び発症することをいう。",
     "correctAnswer": false,
-    "exp": "うつ病などは再発しやすく、復職後しばらくは再燃・再発が起こりやすいため、定期的な面談で体調の変化を確認し、治療の継続を見守る。服薬の継続や中止は主治医が判断する。",
-    "publicPath": "q/ichimon/s/ichi-0373/index.html"
+    "exp": "再燃は症状が十分に回復する前に再び悪化すること、再発はいったん回復した後に再び発症すること。うつ病は再発しやすく、改善後も主治医の判断に基づいて一定期間服薬を続けることが重要。フォローアップ期間の後もサインに気づけば対応する。",
+    "publicPath": "q/ichimon/s/ichi-0373/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0374",
     "field": "limit",
-    "statement": "職場復帰後しばらくは再燃・再発が起こりやすいため、定期的な面談で体調の変化を確認する。",
+    "statement": "症状が十分に回復する前に再び悪化することを「再燃」という。",
     "correctAnswer": true,
-    "exp": "うつ病などは再発しやすく、復職後しばらくは再燃・再発が起こりやすいため、定期的な面談で体調の変化を確認し、治療の継続を見守る。服薬の継続や中止は主治医が判断する。",
-    "publicPath": "q/ichimon/s/ichi-0374/index.html"
+    "exp": "再燃は症状が十分に回復する前に再び悪化すること、再発はいったん回復した後に再び発症すること。うつ病は再発しやすく、改善後も主治医の判断に基づいて一定期間服薬を続けることが重要。フォローアップ期間の後もサインに気づけば対応する。",
+    "publicPath": "q/ichimon/s/ichi-0374/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0375",
     "field": "limit",
-    "statement": "再発リスクは復職から1年以上経過してから高まる傾向がある。",
+    "statement": "職場復帰支援プランで定めたフォローアップの期間が終了した後は、再燃・再発のサインに気づいても、職場として対応する必要はない。",
     "correctAnswer": false,
-    "exp": "うつ病などは再発しやすく、復職後しばらくは再燃・再発が起こりやすいため、定期的な面談で体調の変化を確認し、治療の継続を見守る。服薬の継続や中止は主治医が判断する。",
-    "publicPath": "q/ichimon/s/ichi-0375/index.html"
+    "exp": "再燃は症状が十分に回復する前に再び悪化すること、再発はいったん回復した後に再び発症すること。うつ病は再発しやすく、改善後も主治医の判断に基づいて一定期間服薬を続けることが重要。フォローアップ期間の後もサインに気づけば対応する。",
+    "publicPath": "q/ichimon/s/ichi-0375/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0376",
     "field": "limit",
-    "statement": "うつ病は再発しやすい病気であるため、復職後も治療の継続を見守ることが重要である。",
+    "statement": "うつ病は再発しやすい病気であり、症状が改善した後も、主治医の判断に基づいて服薬を一定期間続けることが重要とされる。",
     "correctAnswer": true,
-    "exp": "うつ病などは再発しやすく、復職後しばらくは再燃・再発が起こりやすいため、定期的な面談で体調の変化を確認し、治療の継続を見守る。服薬の継続や中止は主治医が判断する。",
-    "publicPath": "q/ichimon/s/ichi-0376/index.html"
+    "exp": "再燃は症状が十分に回復する前に再び悪化すること、再発はいったん回復した後に再び発症すること。うつ病は再発しやすく、改善後も主治医の判断に基づいて一定期間服薬を続けることが重要。フォローアップ期間の後もサインに気づけば対応する。",
+    "publicPath": "q/ichimon/s/ichi-0376/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0377",
@@ -3014,7 +3390,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "不法行為責任が成立するには、加害者の故意または過失、損害の発生、行為と損害との因果関係などが必要である。",
     "correctAnswer": true,
     "exp": "不法行為責任（民法709条）は、故意または過失、権利・法益の侵害、損害の発生、因果関係で成立する。使用者責任（民法715条）が成立しても行為者本人の責任は残る。安全配慮義務違反は債務不履行（民法415条）と不法行為の両面から請求できる。",
-    "publicPath": "q/ichimon/s/ichi-0377/index.html"
+    "publicPath": "q/ichimon/s/ichi-0377/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0378",
@@ -3022,7 +3399,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "不法行為責任は、加害者に故意がある場合に限り成立する。",
     "correctAnswer": false,
     "exp": "不法行為責任（民法709条）は、故意または過失、権利・法益の侵害、損害の発生、因果関係で成立する。使用者責任（民法715条）が成立しても行為者本人の責任は残る。安全配慮義務違反は債務不履行（民法415条）と不法行為の両面から請求できる。",
-    "publicPath": "q/ichimon/s/ichi-0378/index.html"
+    "publicPath": "q/ichimon/s/ichi-0378/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0379",
@@ -3030,7 +3408,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "使用者責任が成立する場合、加害行為をした従業員本人は不法行為責任を負わない。",
     "correctAnswer": false,
     "exp": "不法行為責任（民法709条）は、故意または過失、権利・法益の侵害、損害の発生、因果関係で成立する。使用者責任（民法715条）が成立しても行為者本人の責任は残る。安全配慮義務違反は債務不履行（民法415条）と不法行為の両面から請求できる。",
-    "publicPath": "q/ichimon/s/ichi-0379/index.html"
+    "publicPath": "q/ichimon/s/ichi-0379/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0380",
@@ -3038,7 +3417,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務違反に基づく損害賠償は、債務不履行責任としても不法行為責任としても請求することができる。",
     "correctAnswer": true,
     "exp": "不法行為責任（民法709条）は、故意または過失、権利・法益の侵害、損害の発生、因果関係で成立する。使用者責任（民法715条）が成立しても行為者本人の責任は残る。安全配慮義務違反は債務不履行（民法415条）と不法行為の両面から請求できる。",
-    "publicPath": "q/ichimon/s/ichi-0380/index.html"
+    "publicPath": "q/ichimon/s/ichi-0380/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0381",
@@ -3046,7 +3426,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "民間の事業者による合理的配慮の提供は、現在も努力義務にとどまっている。",
     "correctAnswer": false,
     "exp": "合理的配慮は、障害者と事業者の対話を通じて個別に決める。事業者に過重な負担が生じない範囲での提供が求められ、精神障害・発達障害も対象。2024年4月から、民間事業者による提供も法的義務となった。",
-    "publicPath": "q/ichimon/s/ichi-0381/index.html"
+    "publicPath": "q/ichimon/s/ichi-0381/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0382",
@@ -3054,7 +3435,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "合理的配慮の提供にあたっては、事業者に過重な負担が生じない範囲で対応することが求められる。",
     "correctAnswer": true,
     "exp": "合理的配慮は、障害者と事業者の対話を通じて個別に決める。事業者に過重な負担が生じない範囲での提供が求められ、精神障害・発達障害も対象。2024年4月から、民間事業者による提供も法的義務となった。",
-    "publicPath": "q/ichimon/s/ichi-0382/index.html"
+    "publicPath": "q/ichimon/s/ichi-0382/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0383",
@@ -3062,7 +3444,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "合理的配慮は障害者から意思の表明があった場合に提供するものであり、事業者が事前に環境の整備に努めることは求められていない。",
     "correctAnswer": false,
     "exp": "合理的配慮は、障害者と事業者の対話を通じて個別に決める。事業者に過重な負担が生じない範囲での提供が求められ、精神障害・発達障害も対象。2024年4月から、民間事業者による提供も法的義務となった。",
-    "publicPath": "q/ichimon/s/ichi-0383/index.html"
+    "publicPath": "q/ichimon/s/ichi-0383/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0384",
@@ -3070,7 +3453,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "合理的配慮の内容は、障害者と事業者との建設的な対話によって決めるものではなく、事業者が一方的に決定するものとされている。",
     "correctAnswer": false,
     "exp": "合理的配慮は、障害者と事業者の対話を通じて個別に決める。事業者に過重な負担が生じない範囲での提供が求められ、精神障害・発達障害も対象。2024年4月から、民間事業者による提供も法的義務となった。",
-    "publicPath": "q/ichimon/s/ichi-0384/index.html"
+    "publicPath": "q/ichimon/s/ichi-0384/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0385",
@@ -3078,7 +3462,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "テレワークでは物理的な移動がないため、ストレスは発生しない。",
     "correctAnswer": false,
     "exp": "テレワークでは、孤立感やコミュニケーション不足、仕事と生活の境界のあいまいさがストレス要因となる。テレワークを行う労働者もストレスチェックの対象で、事業者は労働時間を適正に把握し、作業環境についても助言する。",
-    "publicPath": "q/ichimon/s/ichi-0385/index.html"
+    "publicPath": "q/ichimon/s/ichi-0385/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0386",
@@ -3086,7 +3471,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "上司や同僚とのコミュニケーション機会の減少による孤立感や、仕事と家庭の境界の曖昧さが、テレワークのストレス要因となりうる。",
     "correctAnswer": true,
     "exp": "テレワークでは、孤立感やコミュニケーション不足、仕事と生活の境界のあいまいさがストレス要因となる。テレワークを行う労働者もストレスチェックの対象で、事業者は労働時間を適正に把握し、作業環境についても助言する。",
-    "publicPath": "q/ichimon/s/ichi-0386/index.html"
+    "publicPath": "q/ichimon/s/ichi-0386/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0387",
@@ -3094,7 +3480,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "テレワークを行っている労働者は、労働安全衛生法に基づくストレスチェックの対象外となる。",
     "correctAnswer": false,
     "exp": "テレワークでは、孤立感やコミュニケーション不足、仕事と生活の境界のあいまいさがストレス要因となる。テレワークを行う労働者もストレスチェックの対象で、事業者は労働時間を適正に把握し、作業環境についても助言する。",
-    "publicPath": "q/ichimon/s/ichi-0387/index.html"
+    "publicPath": "q/ichimon/s/ichi-0387/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0388",
@@ -3102,7 +3489,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "テレワークを行う労働者についても、事業者は労働時間を適正に把握する必要がある。",
     "correctAnswer": true,
     "exp": "テレワークでは、孤立感やコミュニケーション不足、仕事と生活の境界のあいまいさがストレス要因となる。テレワークを行う労働者もストレスチェックの対象で、事業者は労働時間を適正に把握し、作業環境についても助言する。",
-    "publicPath": "q/ichimon/s/ichi-0388/index.html"
+    "publicPath": "q/ichimon/s/ichi-0388/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0389",
@@ -3110,7 +3498,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "自律訓練法は薬物療法の一種であり、医師の処方が必要である。",
     "correctAnswer": false,
     "exp": "自律訓練法はシュルツが考案したリラクセーション法で、重感・温感などの公式を心の中で繰り返して心身をリラックスさせる。習得には継続的な練習が必要で、終えるときは手足の曲げ伸ばしや深呼吸などの消去動作を行う。",
-    "publicPath": "q/ichimon/s/ichi-0389/index.html"
+    "publicPath": "q/ichimon/s/ichi-0389/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0390",
@@ -3118,7 +3507,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "自律訓練法は、決まった言語公式を繰り返すことで、リラクセーション状態を誘導する技法である。",
     "correctAnswer": true,
     "exp": "自律訓練法はシュルツが考案したリラクセーション法で、重感・温感などの公式を心の中で繰り返して心身をリラックスさせる。習得には継続的な練習が必要で、終えるときは手足の曲げ伸ばしや深呼吸などの消去動作を行う。",
-    "publicPath": "q/ichimon/s/ichi-0390/index.html"
+    "publicPath": "q/ichimon/s/ichi-0390/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0391",
@@ -3126,7 +3516,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "自律訓練法はトレーニングを必要とせず、誰でも即座に習得できる。",
     "correctAnswer": false,
     "exp": "自律訓練法はシュルツが考案したリラクセーション法で、重感・温感などの公式を心の中で繰り返して心身をリラックスさせる。習得には継続的な練習が必要で、終えるときは手足の曲げ伸ばしや深呼吸などの消去動作を行う。",
-    "publicPath": "q/ichimon/s/ichi-0391/index.html"
+    "publicPath": "q/ichimon/s/ichi-0391/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0392",
@@ -3134,7 +3525,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "自律訓練法を終えるときは、手足の曲げ伸ばしや深呼吸などの消去動作を行う。",
     "correctAnswer": true,
     "exp": "自律訓練法はシュルツが考案したリラクセーション法で、重感・温感などの公式を心の中で繰り返して心身をリラックスさせる。習得には継続的な練習が必要で、終えるときは手足の曲げ伸ばしや深呼吸などの消去動作を行う。",
-    "publicPath": "q/ichimon/s/ichi-0392/index.html"
+    "publicPath": "q/ichimon/s/ichi-0392/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0393",
@@ -3142,7 +3534,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "要約とは相談者の話を評価し、良い点と悪い点をまとめて伝えることである。",
     "correctAnswer": false,
     "exp": "要約は、話が一区切りついたところで、相談者が話した内容の要点を整理して伝え、理解を確認する技法。相談者は理解してもらえたと感じ、自分の話を整理しやすくなる。評価や結論への誘導ではない。",
-    "publicPath": "q/ichimon/s/ichi-0393/index.html"
+    "publicPath": "q/ichimon/s/ichi-0393/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0394",
@@ -3150,7 +3543,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "相談場面での「要約」とは、話が一区切りついたところで、相談者が話した内容の要点を整理して伝え、理解を確認する技法である。",
     "correctAnswer": true,
     "exp": "要約は、話が一区切りついたところで、相談者が話した内容の要点を整理して伝え、理解を確認する技法。相談者は理解してもらえたと感じ、自分の話を整理しやすくなる。評価や結論への誘導ではない。",
-    "publicPath": "q/ichimon/s/ichi-0394/index.html"
+    "publicPath": "q/ichimon/s/ichi-0394/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0395",
@@ -3158,7 +3552,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "要約は会話の冒頭に行うもので、その後は要約せずに傾聴を続ける。",
     "correctAnswer": false,
     "exp": "要約は、話が一区切りついたところで、相談者が話した内容の要点を整理して伝え、理解を確認する技法。相談者は理解してもらえたと感じ、自分の話を整理しやすくなる。評価や結論への誘導ではない。",
-    "publicPath": "q/ichimon/s/ichi-0395/index.html"
+    "publicPath": "q/ichimon/s/ichi-0395/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0396",
@@ -3166,7 +3561,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "要約を行うことで、相談者自身が自分の話を整理しやすくなる。",
     "correctAnswer": true,
     "exp": "要約は、話が一区切りついたところで、相談者が話した内容の要点を整理して伝え、理解を確認する技法。相談者は理解してもらえたと感じ、自分の話を整理しやすくなる。評価や結論への誘導ではない。",
-    "publicPath": "q/ichimon/s/ichi-0396/index.html"
+    "publicPath": "q/ichimon/s/ichi-0396/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0397",
@@ -3174,7 +3570,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神保健福祉センターは、精神保健福祉法に基づき、都道府県や政令指定都市に設置される。",
     "correctAnswer": true,
     "exp": "精神保健福祉センターは、精神保健福祉法に基づき都道府県や政令指定都市に設置され、心の健康に関する相談、普及啓発、関係機関への技術的な支援などを行う。医療機関ではなく、紹介がなくても相談できる。",
-    "publicPath": "q/ichimon/s/ichi-0397/index.html"
+    "publicPath": "q/ichimon/s/ichi-0397/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0398",
@@ -3182,7 +3579,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神保健福祉センターは、各都道府県・政令指定都市に設置され、精神保健福祉に関する相談・支援・普及啓発等を行っている。",
     "correctAnswer": true,
     "exp": "精神保健福祉センターは、精神保健福祉法に基づき都道府県や政令指定都市に設置され、心の健康に関する相談、普及啓発、関係機関への技術的な支援などを行う。医療機関ではなく、紹介がなくても相談できる。",
-    "publicPath": "q/ichimon/s/ichi-0398/index.html"
+    "publicPath": "q/ichimon/s/ichi-0398/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0399",
@@ -3190,7 +3588,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神保健福祉センターは医療機関であり、薬物療法を中心に治療を提供する。",
     "correctAnswer": false,
     "exp": "精神保健福祉センターは、精神保健福祉法に基づき都道府県や政令指定都市に設置され、心の健康に関する相談、普及啓発、関係機関への技術的な支援などを行う。医療機関ではなく、紹介がなくても相談できる。",
-    "publicPath": "q/ichimon/s/ichi-0399/index.html"
+    "publicPath": "q/ichimon/s/ichi-0399/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0400",
@@ -3198,7 +3597,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神保健福祉センターへの相談には、主治医の紹介状が必要である。",
     "correctAnswer": false,
     "exp": "精神保健福祉センターは、精神保健福祉法に基づき都道府県や政令指定都市に設置され、心の健康に関する相談、普及啓発、関係機関への技術的な支援などを行う。医療機関ではなく、紹介がなくても相談できる。",
-    "publicPath": "q/ichimon/s/ichi-0400/index.html"
+    "publicPath": "q/ichimon/s/ichi-0400/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0401",
@@ -3206,7 +3606,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "プレゼンティーイズムとは、心身の不調により欠勤・休職している状態を指す。",
     "correctAnswer": false,
     "exp": "プレゼンティーイズムは、出勤しているが心身の不調で生産性が低下している状態。欠勤・休職はアブセンティーイズム。プレゼンティーイズムによる損失の方が大きいとする研究もあり、自己評価の質問紙などで測定され、健康施策の指標にも用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0401/index.html"
+    "publicPath": "q/ichimon/s/ichi-0401/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0402",
@@ -3214,7 +3615,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "プレゼンティーイズムとは、出勤しているが心身の不調により生産性が低下している状態を指す。",
     "correctAnswer": true,
     "exp": "プレゼンティーイズムは、出勤しているが心身の不調で生産性が低下している状態。欠勤・休職はアブセンティーイズム。プレゼンティーイズムによる損失の方が大きいとする研究もあり、自己評価の質問紙などで測定され、健康施策の指標にも用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0402/index.html"
+    "publicPath": "q/ichimon/s/ichi-0402/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0403",
@@ -3222,7 +3624,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "プレゼンティーイズムによる損失は、アブセンティーイズムによる損失より大きいとする研究もある。",
     "correctAnswer": true,
     "exp": "プレゼンティーイズムは、出勤しているが心身の不調で生産性が低下している状態。欠勤・休職はアブセンティーイズム。プレゼンティーイズムによる損失の方が大きいとする研究もあり、自己評価の質問紙などで測定され、健康施策の指標にも用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0403/index.html"
+    "publicPath": "q/ichimon/s/ichi-0403/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0404",
@@ -3230,7 +3633,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "プレゼンティーイズムは自己評価による質問紙では測定できないため、企業の健康施策の指標として用いることはできない。",
     "correctAnswer": false,
     "exp": "プレゼンティーイズムは、出勤しているが心身の不調で生産性が低下している状態。欠勤・休職はアブセンティーイズム。プレゼンティーイズムによる損失の方が大きいとする研究もあり、自己評価の質問紙などで測定され、健康施策の指標にも用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0404/index.html"
+    "publicPath": "q/ichimon/s/ichi-0404/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0405",
@@ -3238,7 +3642,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "健康経営は、従業員の健康保持・増進の取り組みを、将来の収益性を高める投資と捉えて経営的な視点から実践するものである。",
     "correctAnswer": true,
     "exp": "メンタルヘルス対策の効果は、欠勤・休職の減少だけでなく、生産性や職場の活性化にも及ぶ。健康経営は、健康保持・増進の取り組みを将来の収益性を高める投資と捉えて実践する考え方で、健康経営銘柄は上場会社の中から選定される。",
-    "publicPath": "q/ichimon/s/ichi-0405/index.html"
+    "publicPath": "q/ichimon/s/ichi-0405/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0406",
@@ -3246,7 +3651,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス対策は、優秀な人材の定着や採用力の向上に寄与する。",
     "correctAnswer": true,
     "exp": "メンタルヘルス対策の効果は、欠勤・休職の減少だけでなく、生産性や職場の活性化にも及ぶ。健康経営は、健康保持・増進の取り組みを将来の収益性を高める投資と捉えて実践する考え方で、健康経営銘柄は上場会社の中から選定される。",
-    "publicPath": "q/ichimon/s/ichi-0406/index.html"
+    "publicPath": "q/ichimon/s/ichi-0406/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0407",
@@ -3254,7 +3660,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス対策の効果は欠勤や休職の減少として現れる部分に限られ、生産性や職場の活性化への効果は期待できない。",
     "correctAnswer": false,
     "exp": "メンタルヘルス対策の効果は、欠勤・休職の減少だけでなく、生産性や職場の活性化にも及ぶ。健康経営は、健康保持・増進の取り組みを将来の収益性を高める投資と捉えて実践する考え方で、健康経営銘柄は上場会社の中から選定される。",
-    "publicPath": "q/ichimon/s/ichi-0407/index.html"
+    "publicPath": "q/ichimon/s/ichi-0407/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0408",
@@ -3262,7 +3669,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "健康経営銘柄は、上場していない中小企業の中から選定される。",
     "correctAnswer": false,
     "exp": "メンタルヘルス対策の効果は、欠勤・休職の減少だけでなく、生産性や職場の活性化にも及ぶ。健康経営は、健康保持・増進の取り組みを将来の収益性を高める投資と捉えて実践する考え方で、健康経営銘柄は上場会社の中から選定される。",
-    "publicPath": "q/ichimon/s/ichi-0408/index.html"
+    "publicPath": "q/ichimon/s/ichi-0408/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0409",
@@ -3270,7 +3678,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業場内産業保健スタッフ等は、セルフケアおよびラインによるケアが効果的に実施されるよう、労働者や管理監督者を支援する。",
     "correctAnswer": true,
     "exp": "事業場内産業保健スタッフ等は、セルフケアとラインによるケアが効果的に行われるよう労働者や管理監督者を支援し、事業場外資源とのネットワークの窓口にもなる。産業医等、衛生管理者等、保健師等、心の健康づくり専門スタッフ、人事労務管理スタッフ、事業場内メンタルヘルス推進担当者が含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0409/index.html"
+    "publicPath": "q/ichimon/s/ichi-0409/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0410",
@@ -3278,7 +3687,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医・保健師・衛生管理者等が労働者や管理監督者を支援し、職場環境の改善にも関与することは、事業場内産業保健スタッフ等によるケアにあたる。",
     "correctAnswer": true,
     "exp": "事業場内産業保健スタッフ等は、セルフケアとラインによるケアが効果的に行われるよう労働者や管理監督者を支援し、事業場外資源とのネットワークの窓口にもなる。産業医等、衛生管理者等、保健師等、心の健康づくり専門スタッフ、人事労務管理スタッフ、事業場内メンタルヘルス推進担当者が含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0410/index.html"
+    "publicPath": "q/ichimon/s/ichi-0410/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0411",
@@ -3286,7 +3696,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業場内産業保健スタッフ等によるケアは、事業場外資源とは連携せず、事業場内だけで完結させるものとされている。",
     "correctAnswer": false,
     "exp": "事業場内産業保健スタッフ等は、セルフケアとラインによるケアが効果的に行われるよう労働者や管理監督者を支援し、事業場外資源とのネットワークの窓口にもなる。産業医等、衛生管理者等、保健師等、心の健康づくり専門スタッフ、人事労務管理スタッフ、事業場内メンタルヘルス推進担当者が含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0411/index.html"
+    "publicPath": "q/ichimon/s/ichi-0411/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0412",
@@ -3294,7 +3705,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業場内産業保健スタッフ等には、人事労務管理スタッフは含まれない。",
     "correctAnswer": false,
     "exp": "事業場内産業保健スタッフ等は、セルフケアとラインによるケアが効果的に行われるよう労働者や管理監督者を支援し、事業場外資源とのネットワークの窓口にもなる。産業医等、衛生管理者等、保健師等、心の健康づくり専門スタッフ、人事労務管理スタッフ、事業場内メンタルヘルス推進担当者が含まれる。",
-    "publicPath": "q/ichimon/s/ichi-0412/index.html"
+    "publicPath": "q/ichimon/s/ichi-0412/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0413",
@@ -3302,7 +3714,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の不調に気づいたら、まず精神科を受診するよう業務命令を出し、受診の結果を報告させる。",
     "correctAnswer": false,
     "exp": "部下の不調に気づいたら、まず声をかけて話を聴き、本人の了解を得て産業保健スタッフ等と連携する。声をかけるときは、遅刻・欠勤やミスの増加など職場で把握できる事実に基づく。本人が「大丈夫」と答えても、その後の見守りを続ける。",
-    "publicPath": "q/ichimon/s/ichi-0413/index.html"
+    "publicPath": "q/ichimon/s/ichi-0413/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0414",
@@ -3310,7 +3723,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "声をかけた部下が「大丈夫です」と答えた場合は、その言葉を尊重し、以後は様子を確認する必要はない。",
     "correctAnswer": false,
     "exp": "部下の不調に気づいたら、まず声をかけて話を聴き、本人の了解を得て産業保健スタッフ等と連携する。声をかけるときは、遅刻・欠勤やミスの増加など職場で把握できる事実に基づく。本人が「大丈夫」と答えても、その後の見守りを続ける。",
-    "publicPath": "q/ichimon/s/ichi-0414/index.html"
+    "publicPath": "q/ichimon/s/ichi-0414/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0415",
@@ -3318,7 +3732,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の不調に気づいたら、声をかけて話を聴き、必要に応じて本人の了解を得て産業保健スタッフ等と連携する。",
     "correctAnswer": true,
     "exp": "部下の不調に気づいたら、まず声をかけて話を聴き、本人の了解を得て産業保健スタッフ等と連携する。声をかけるときは、遅刻・欠勤やミスの増加など職場で把握できる事実に基づく。本人が「大丈夫」と答えても、その後の見守りを続ける。",
-    "publicPath": "q/ichimon/s/ichi-0415/index.html"
+    "publicPath": "q/ichimon/s/ichi-0415/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0416",
@@ -3326,7 +3741,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の不調に気づいて声をかけるときは、遅刻・欠勤やミスの増加など、職場で把握できる事実に基づいて伝えるとよい。",
     "correctAnswer": true,
     "exp": "部下の不調に気づいたら、まず声をかけて話を聴き、本人の了解を得て産業保健スタッフ等と連携する。声をかけるときは、遅刻・欠勤やミスの増加など職場で把握できる事実に基づく。本人が「大丈夫」と答えても、その後の見守りを続ける。",
-    "publicPath": "q/ichimon/s/ichi-0416/index.html"
+    "publicPath": "q/ichimon/s/ichi-0416/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0417",
@@ -3334,7 +3750,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業主は、パワーハラスメントを行ってはならない旨の方針を明確化し、労働者に周知・啓発しなければならない。",
     "correctAnswer": true,
     "exp": "労働施策総合推進法により、パワーハラスメント防止のための雇用管理上の措置は事業主の義務（中小企業も2022年4月から義務）。方針の明確化・周知、相談体制の整備、事実確認後の行為者への措置と被害者への配慮、プライバシー保護などを一連の過程で行う。",
-    "publicPath": "q/ichimon/s/ichi-0417/index.html"
+    "publicPath": "q/ichimon/s/ichi-0417/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0418",
@@ -3342,7 +3759,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "パワーハラスメント防止のための雇用管理上の措置は、中小企業については現在も努力義務にとどまっている。",
     "correctAnswer": false,
     "exp": "労働施策総合推進法により、パワーハラスメント防止のための雇用管理上の措置は事業主の義務（中小企業も2022年4月から義務）。方針の明確化・周知、相談体制の整備、事実確認後の行為者への措置と被害者への配慮、プライバシー保護などを一連の過程で行う。",
-    "publicPath": "q/ichimon/s/ichi-0418/index.html"
+    "publicPath": "q/ichimon/s/ichi-0418/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0419",
@@ -3350,7 +3768,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ハラスメントの事実関係を確認できた場合には、行為者に対する措置と、被害者に対する配慮のための措置を適正に行う必要がある。",
     "correctAnswer": true,
     "exp": "労働施策総合推進法により、パワーハラスメント防止のための雇用管理上の措置は事業主の義務（中小企業も2022年4月から義務）。方針の明確化・周知、相談体制の整備、事実確認後の行為者への措置と被害者への配慮、プライバシー保護などを一連の過程で行う。",
-    "publicPath": "q/ichimon/s/ichi-0419/index.html"
+    "publicPath": "q/ichimon/s/ichi-0419/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0420",
@@ -3358,7 +3777,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "相談者や行為者のプライバシーは相談窓口で対応する場合に限って保護すればよく、事実関係の確認の過程では配慮する必要はない。",
     "correctAnswer": false,
     "exp": "労働施策総合推進法により、パワーハラスメント防止のための雇用管理上の措置は事業主の義務（中小企業も2022年4月から義務）。方針の明確化・周知、相談体制の整備、事実確認後の行為者への措置と被害者への配慮、プライバシー保護などを一連の過程で行う。",
-    "publicPath": "q/ichimon/s/ichi-0420/index.html"
+    "publicPath": "q/ichimon/s/ichi-0420/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0421",
@@ -3366,7 +3786,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業者は、労働基準法上の管理監督者については、労働時間の状況を把握する必要はない。",
     "correctAnswer": false,
     "exp": "労働基準法上の管理監督者には労働時間・休憩・休日の規定は適用されないが、深夜業の割増賃金と年次有給休暇の規定は適用される。時間外労働の上限規制も適用されない。事業者は、管理監督者を含めて労働時間の状況を把握しなければならない（労働安全衛生法）。",
-    "publicPath": "q/ichimon/s/ichi-0421/index.html"
+    "publicPath": "q/ichimon/s/ichi-0421/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0422",
@@ -3374,7 +3795,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働基準法上の管理監督者であっても、深夜業（午後10時〜午前5時）の割増賃金の規定は適用される。",
     "correctAnswer": true,
     "exp": "労働基準法上の管理監督者には労働時間・休憩・休日の規定は適用されないが、深夜業の割増賃金と年次有給休暇の規定は適用される。時間外労働の上限規制も適用されない。事業者は、管理監督者を含めて労働時間の状況を把握しなければならない（労働安全衛生法）。",
-    "publicPath": "q/ichimon/s/ichi-0422/index.html"
+    "publicPath": "q/ichimon/s/ichi-0422/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0423",
@@ -3382,7 +3804,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働基準法上の管理監督者にも、年次有給休暇の規定は適用される。",
     "correctAnswer": true,
     "exp": "労働基準法上の管理監督者には労働時間・休憩・休日の規定は適用されないが、深夜業の割増賃金と年次有給休暇の規定は適用される。時間外労働の上限規制も適用されない。事業者は、管理監督者を含めて労働時間の状況を把握しなければならない（労働安全衛生法）。",
-    "publicPath": "q/ichimon/s/ichi-0423/index.html"
+    "publicPath": "q/ichimon/s/ichi-0423/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0424",
@@ -3390,7 +3813,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働基準法上の管理監督者には、時間外労働の上限規制が適用される。",
     "correctAnswer": false,
     "exp": "労働基準法上の管理監督者には労働時間・休憩・休日の規定は適用されないが、深夜業の割増賃金と年次有給休暇の規定は適用される。時間外労働の上限規制も適用されない。事業者は、管理監督者を含めて労働時間の状況を把握しなければならない（労働安全衛生法）。",
-    "publicPath": "q/ichimon/s/ichi-0424/index.html"
+    "publicPath": "q/ichimon/s/ichi-0424/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0425",
@@ -3398,7 +3822,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「心の健康づくり計画」で定める事項には、事業者がメンタルヘルスケアを積極的に推進する旨の表明が含まれる。",
     "correctAnswer": true,
     "exp": "心の健康づくり計画は衛生委員会等で調査審議して策定する。定める事項は、メンタルヘルスケアを積極的に推進する旨の表明、体制の整備、問題点の把握とメンタルヘルスケアの実施、人材の確保と事業場外資源の活用、健康情報の保護、実施状況の評価と計画の見直しなどで、ストレスチェック制度に関する事項に限られない。",
-    "publicPath": "q/ichimon/s/ichi-0425/index.html"
+    "publicPath": "q/ichimon/s/ichi-0425/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0426",
@@ -3406,7 +3831,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「心の健康づくり計画」で定める事項には、労働者の健康情報の保護が含まれる。",
     "correctAnswer": true,
     "exp": "心の健康づくり計画は衛生委員会等で調査審議して策定する。定める事項は、メンタルヘルスケアを積極的に推進する旨の表明、体制の整備、問題点の把握とメンタルヘルスケアの実施、人材の確保と事業場外資源の活用、健康情報の保護、実施状況の評価と計画の見直しなどで、ストレスチェック制度に関する事項に限られない。",
-    "publicPath": "q/ichimon/s/ichi-0426/index.html"
+    "publicPath": "q/ichimon/s/ichi-0426/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0427",
@@ -3414,7 +3840,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「心の健康づくり計画」の策定は、衛生委員会等での調査審議を経ずに、事業者が単独で行うこととされている。",
     "correctAnswer": false,
     "exp": "心の健康づくり計画は衛生委員会等で調査審議して策定する。定める事項は、メンタルヘルスケアを積極的に推進する旨の表明、体制の整備、問題点の把握とメンタルヘルスケアの実施、人材の確保と事業場外資源の活用、健康情報の保護、実施状況の評価と計画の見直しなどで、ストレスチェック制度に関する事項に限られない。",
-    "publicPath": "q/ichimon/s/ichi-0427/index.html"
+    "publicPath": "q/ichimon/s/ichi-0427/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0428",
@@ -3422,7 +3849,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「心の健康づくり計画」で定める事項は、ストレスチェック制度の実施に関する事項に限られる。",
     "correctAnswer": false,
     "exp": "心の健康づくり計画は衛生委員会等で調査審議して策定する。定める事項は、メンタルヘルスケアを積極的に推進する旨の表明、体制の整備、問題点の把握とメンタルヘルスケアの実施、人材の確保と事業場外資源の活用、健康情報の保護、実施状況の評価と計画の見直しなどで、ストレスチェック制度に関する事項に限られない。",
-    "publicPath": "q/ichimon/s/ichi-0428/index.html"
+    "publicPath": "q/ichimon/s/ichi-0428/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0429",
@@ -3430,7 +3858,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "使用者は、労働契約に伴い、労働者がその生命、身体等の安全を確保しつつ労働できるよう、必要な配慮をする義務を負う。",
     "correctAnswer": true,
     "exp": "労働契約法第5条は、使用者が、労働者の生命・身体等の安全を確保しつつ労働できるよう必要な配慮をするものと定める。具体的な措置は列挙されず状況に応じて判断される。違反しても刑事罰はなく、民事上の損害賠償責任が問われる。",
-    "publicPath": "q/ichimon/s/ichi-0429/index.html"
+    "publicPath": "q/ichimon/s/ichi-0429/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0430",
@@ -3438,7 +3867,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働契約法第5条は、労働者に対して自己の健康管理を義務づける規定である。",
     "correctAnswer": false,
     "exp": "労働契約法第5条は、使用者が、労働者の生命・身体等の安全を確保しつつ労働できるよう必要な配慮をするものと定める。具体的な措置は列挙されず状況に応じて判断される。違反しても刑事罰はなく、民事上の損害賠償責任が問われる。",
-    "publicPath": "q/ichimon/s/ichi-0430/index.html"
+    "publicPath": "q/ichimon/s/ichi-0430/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0431",
@@ -3446,7 +3876,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働契約法第5条は、使用者が講ずべき具体的な措置の内容を詳細に列挙して定めている。",
     "correctAnswer": false,
     "exp": "労働契約法第5条は、使用者が、労働者の生命・身体等の安全を確保しつつ労働できるよう必要な配慮をするものと定める。具体的な措置は列挙されず状況に応じて判断される。違反しても刑事罰はなく、民事上の損害賠償責任が問われる。",
-    "publicPath": "q/ichimon/s/ichi-0431/index.html"
+    "publicPath": "q/ichimon/s/ichi-0431/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0432",
@@ -3454,7 +3885,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働契約法第5条の安全配慮義務に違反しても刑事罰はなく、民事上の損害賠償責任が問われる。",
     "correctAnswer": true,
     "exp": "労働契約法第5条は、使用者が、労働者の生命・身体等の安全を確保しつつ労働できるよう必要な配慮をするものと定める。具体的な措置は列挙されず状況に応じて判断される。違反しても刑事罰はなく、民事上の損害賠償責任が問われる。",
-    "publicPath": "q/ichimon/s/ichi-0432/index.html"
+    "publicPath": "q/ichimon/s/ichi-0432/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0433",
@@ -3462,7 +3894,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "スティグマとは周囲の人が持つ偏見のみを指し、本人自身の受け止め方は含まれない。",
     "correctAnswer": false,
     "exp": "スティグマには、周囲の人の偏見だけでなく、本人自身が偏見を内面化した「自己スティグマ」もあり、受診や相談をためらわせる。正しい知識の普及や教育研修が偏見の軽減に有効。",
-    "publicPath": "q/ichimon/s/ichi-0433/index.html"
+    "publicPath": "q/ichimon/s/ichi-0433/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0434",
@@ -3470,7 +3903,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "スティグマにより、本人が症状を隠したり、受診を遅らせたりすることがある。",
     "correctAnswer": true,
     "exp": "スティグマには、周囲の人の偏見だけでなく、本人自身が偏見を内面化した「自己スティグマ」もあり、受診や相談をためらわせる。正しい知識の普及や教育研修が偏見の軽減に有効。",
-    "publicPath": "q/ichimon/s/ichi-0434/index.html"
+    "publicPath": "q/ichimon/s/ichi-0434/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0435",
@@ -3478,7 +3912,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神疾患に対する偏見を本人自身が持つ「自己スティグマ」が、受診や相談をためらわせることがある。",
     "correctAnswer": true,
     "exp": "スティグマには、周囲の人の偏見だけでなく、本人自身が偏見を内面化した「自己スティグマ」もあり、受診や相談をためらわせる。正しい知識の普及や教育研修が偏見の軽減に有効。",
-    "publicPath": "q/ichimon/s/ichi-0435/index.html"
+    "publicPath": "q/ichimon/s/ichi-0435/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0436",
@@ -3486,7 +3921,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス不調について正しい知識を普及しても、偏見の軽減にはつながらないとされる。",
     "correctAnswer": false,
     "exp": "スティグマには、周囲の人の偏見だけでなく、本人自身が偏見を内面化した「自己スティグマ」もあり、受診や相談をためらわせる。正しい知識の普及や教育研修が偏見の軽減に有効。",
-    "publicPath": "q/ichimon/s/ichi-0436/index.html"
+    "publicPath": "q/ichimon/s/ichi-0436/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0437",
@@ -3494,7 +3930,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルスの教育研修は管理監督者を対象に行えば十分であり、一般の労働者にセルフケアの研修を行う必要はない。",
     "correctAnswer": false,
     "exp": "指針は、労働者・管理監督者・事業場内産業保健スタッフ等のそれぞれに、立場に応じた教育研修・情報提供を行うことを求めている。一般の労働者にはセルフケア、管理監督者にはラインによるケアの研修を行う。管理監督者向けの研修は病名の判断ではなく、気づき・傾聴・つなぎ方が中心。",
-    "publicPath": "q/ichimon/s/ichi-0437/index.html"
+    "publicPath": "q/ichimon/s/ichi-0437/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0438",
@@ -3502,7 +3939,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「誰でもメンタルヘルス不調になりうる」という認識を職場全体で共有し、相談しやすい環境をつくることが大切である。",
     "correctAnswer": true,
     "exp": "指針は、労働者・管理監督者・事業場内産業保健スタッフ等のそれぞれに、立場に応じた教育研修・情報提供を行うことを求めている。一般の労働者にはセルフケア、管理監督者にはラインによるケアの研修を行う。管理監督者向けの研修は病名の判断ではなく、気づき・傾聴・つなぎ方が中心。",
-    "publicPath": "q/ichimon/s/ichi-0438/index.html"
+    "publicPath": "q/ichimon/s/ichi-0438/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0439",
@@ -3510,7 +3948,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者向けの研修では、部下の病名を判断できるよう、精神疾患の診断基準を詳しく教えることが重要である。",
     "correctAnswer": false,
     "exp": "指針は、労働者・管理監督者・事業場内産業保健スタッフ等のそれぞれに、立場に応じた教育研修・情報提供を行うことを求めている。一般の労働者にはセルフケア、管理監督者にはラインによるケアの研修を行う。管理監督者向けの研修は病名の判断ではなく、気づき・傾聴・つなぎ方が中心。",
-    "publicPath": "q/ichimon/s/ichi-0439/index.html"
+    "publicPath": "q/ichimon/s/ichi-0439/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0440",
@@ -3518,7 +3957,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "指針では、労働者・管理監督者・事業場内産業保健スタッフ等のそれぞれに、立場に応じた教育研修・情報提供を行うことが求められている。",
     "correctAnswer": true,
     "exp": "指針は、労働者・管理監督者・事業場内産業保健スタッフ等のそれぞれに、立場に応じた教育研修・情報提供を行うことを求めている。一般の労働者にはセルフケア、管理監督者にはラインによるケアの研修を行う。管理監督者向けの研修は病名の判断ではなく、気づき・傾聴・つなぎ方が中心。",
-    "publicPath": "q/ichimon/s/ichi-0440/index.html"
+    "publicPath": "q/ichimon/s/ichi-0440/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0441",
@@ -3526,7 +3966,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "うつ病に伴って生じる不眠や頭痛などの身体症状は、心身症に含まれる。",
     "correctAnswer": false,
     "exp": "心身症は、身体疾患のうち発症や経過に心理社会的因子が密接に関与し、器質的または機能的な障害が認められる病態。胃・十二指腸潰瘍、過敏性腸症候群、気管支ぜんそくなどが代表例。うつ病などの精神疾患に伴う身体症状は含まれない。",
-    "publicPath": "q/ichimon/s/ichi-0441/index.html"
+    "publicPath": "q/ichimon/s/ichi-0441/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0442",
@@ -3534,7 +3975,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "心身症とは、身体疾患のなかで、その発症や経過に心理社会的因子が密接に関与する病態を指す。",
     "correctAnswer": true,
     "exp": "心身症は、身体疾患のうち発症や経過に心理社会的因子が密接に関与し、器質的または機能的な障害が認められる病態。胃・十二指腸潰瘍、過敏性腸症候群、気管支ぜんそくなどが代表例。うつ病などの精神疾患に伴う身体症状は含まれない。",
-    "publicPath": "q/ichimon/s/ichi-0442/index.html"
+    "publicPath": "q/ichimon/s/ichi-0442/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0443",
@@ -3542,7 +3984,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "心身症では器質的な異常は認められず、機能的な障害のみが生じる。",
     "correctAnswer": false,
     "exp": "心身症は、身体疾患のうち発症や経過に心理社会的因子が密接に関与し、器質的または機能的な障害が認められる病態。胃・十二指腸潰瘍、過敏性腸症候群、気管支ぜんそくなどが代表例。うつ病などの精神疾患に伴う身体症状は含まれない。",
-    "publicPath": "q/ichimon/s/ichi-0443/index.html"
+    "publicPath": "q/ichimon/s/ichi-0443/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0444",
@@ -3550,7 +3993,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "胃潰瘍や過敏性腸症候群は、心理社会的な因子が発症や経過に関与する心身症の代表例とされる。",
     "correctAnswer": true,
     "exp": "心身症は、身体疾患のうち発症や経過に心理社会的因子が密接に関与し、器質的または機能的な障害が認められる病態。胃・十二指腸潰瘍、過敏性腸症候群、気管支ぜんそくなどが代表例。うつ病などの精神疾患に伴う身体症状は含まれない。",
-    "publicPath": "q/ichimon/s/ichi-0444/index.html"
+    "publicPath": "q/ichimon/s/ichi-0444/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0445",
@@ -3558,7 +4002,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害者保健福祉手帳の交付を申請するには、精神疾患の初診日から3か月以上経過していることが必要である。",
     "correctAnswer": false,
     "exp": "精神障害者保健福祉手帳は1級から3級までで、有効期間は2年。更新には改めて認定を受ける。申請は精神疾患の初診日から6か月以上経過した時点から可能。事業主への申告義務はない。手帳の所持者は法定雇用率の算定対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0445/index.html"
+    "publicPath": "q/ichimon/s/ichi-0445/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0446",
@@ -3566,7 +4011,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害者保健福祉手帳を持つ労働者を雇用している場合、障害者雇用率に算入することができる。",
     "correctAnswer": true,
     "exp": "精神障害者保健福祉手帳は1級から3級までで、有効期間は2年。更新には改めて認定を受ける。申請は精神疾患の初診日から6か月以上経過した時点から可能。事業主への申告義務はない。手帳の所持者は法定雇用率の算定対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0446/index.html"
+    "publicPath": "q/ichimon/s/ichi-0446/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0447",
@@ -3574,7 +4020,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害者保健福祉手帳の交付を受けた労働者は、そのことを事業主に必ず申告しなければならない。",
     "correctAnswer": false,
     "exp": "精神障害者保健福祉手帳は1級から3級までで、有効期間は2年。更新には改めて認定を受ける。申請は精神疾患の初診日から6か月以上経過した時点から可能。事業主への申告義務はない。手帳の所持者は法定雇用率の算定対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0447/index.html"
+    "publicPath": "q/ichimon/s/ichi-0447/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0448",
@@ -3582,7 +4029,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害者保健福祉手帳の有効期間は2年であり、更新するには改めて認定を受ける必要がある。",
     "correctAnswer": true,
     "exp": "精神障害者保健福祉手帳は1級から3級までで、有効期間は2年。更新には改めて認定を受ける。申請は精神疾患の初診日から6か月以上経過した時点から可能。事業主への申告義務はない。手帳の所持者は法定雇用率の算定対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0448/index.html"
+    "publicPath": "q/ichimon/s/ichi-0448/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0449",
@@ -3590,7 +4038,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "参加型職場環境改善では、改善策は専門家のみが決定し、現場の労働者は実施のみを担う。",
     "correctAnswer": false,
     "exp": "参加型職場環境改善は、職場の労働者がグループで討議し、良好な取り組み事例を参考にしながら、実行可能な改善策を自ら選んで実施する方法。当事者が関わるため定着しやすく、管理監督者も参加して進める。",
-    "publicPath": "q/ichimon/s/ichi-0449/index.html"
+    "publicPath": "q/ichimon/s/ichi-0449/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0450",
@@ -3598,7 +4047,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "参加型職場環境改善では、労働者自身が職場の問題を話し合い、改善策を主体的に検討・実施するため、改善策が定着しやすい。",
     "correctAnswer": true,
     "exp": "参加型職場環境改善は、職場の労働者がグループで討議し、良好な取り組み事例を参考にしながら、実行可能な改善策を自ら選んで実施する方法。当事者が関わるため定着しやすく、管理監督者も参加して進める。",
-    "publicPath": "q/ichimon/s/ichi-0450/index.html"
+    "publicPath": "q/ichimon/s/ichi-0450/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0451",
@@ -3606,7 +4056,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "参加型職場環境改善は大企業にのみ適用可能であり、小規模な職場では実施できない。",
     "correctAnswer": false,
     "exp": "参加型職場環境改善は、職場の労働者がグループで討議し、良好な取り組み事例を参考にしながら、実行可能な改善策を自ら選んで実施する方法。当事者が関わるため定着しやすく、管理監督者も参加して進める。",
-    "publicPath": "q/ichimon/s/ichi-0451/index.html"
+    "publicPath": "q/ichimon/s/ichi-0451/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0452",
@@ -3614,7 +4065,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "参加型職場環境改善では、良好な取り組み事例を参考にしながら、実行可能な改善策を職場で選ぶことが効果的である。",
     "correctAnswer": true,
     "exp": "参加型職場環境改善は、職場の労働者がグループで討議し、良好な取り組み事例を参考にしながら、実行可能な改善策を自ら選んで実施する方法。当事者が関わるため定着しやすく、管理監督者も参加して進める。",
-    "publicPath": "q/ichimon/s/ichi-0452/index.html"
+    "publicPath": "q/ichimon/s/ichi-0452/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0453",
@@ -3622,7 +4074,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "改善前後のストレスチェックの集団分析結果を比較することで、改善の効果を評価する手がかりが得られる。",
     "correctAnswer": true,
     "exp": "改善前後の集団分析の結果を比較すると、改善の効果を評価する手がかりになる。比較の際は、回答者の構成や業務量の変化など他の要因も考慮し、結果が悪化しても直ちに効果がないと判断せず、ほかの指標と合わせて検討する。",
-    "publicPath": "q/ichimon/s/ichi-0453/index.html"
+    "publicPath": "q/ichimon/s/ichi-0453/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0454",
@@ -3630,7 +4083,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの集団分析は、改善効果の評価には使用できない。",
     "correctAnswer": false,
     "exp": "改善前後の集団分析の結果を比較すると、改善の効果を評価する手がかりになる。比較の際は、回答者の構成や業務量の変化など他の要因も考慮し、結果が悪化しても直ちに効果がないと判断せず、ほかの指標と合わせて検討する。",
-    "publicPath": "q/ichimon/s/ichi-0454/index.html"
+    "publicPath": "q/ichimon/s/ichi-0454/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0455",
@@ -3638,7 +4092,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "改善後の集団分析の結果が改善前より悪化していれば、改善策に効果がなかったと直ちに判断してよい。",
     "correctAnswer": false,
     "exp": "改善前後の集団分析の結果を比較すると、改善の効果を評価する手がかりになる。比較の際は、回答者の構成や業務量の変化など他の要因も考慮し、結果が悪化しても直ちに効果がないと判断せず、ほかの指標と合わせて検討する。",
-    "publicPath": "q/ichimon/s/ichi-0455/index.html"
+    "publicPath": "q/ichimon/s/ichi-0455/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0456",
@@ -3646,7 +4101,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "改善前後の集団分析の結果を比較する際は、回答者の構成や業務量の変化など、結果に影響する他の要因も考慮する。",
     "correctAnswer": true,
     "exp": "改善前後の集団分析の結果を比較すると、改善の効果を評価する手がかりになる。比較の際は、回答者の構成や業務量の変化など他の要因も考慮し、結果が悪化しても直ちに効果がないと判断せず、ほかの指標と合わせて検討する。",
-    "publicPath": "q/ichimon/s/ichi-0456/index.html"
+    "publicPath": "q/ichimon/s/ichi-0456/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0457",
@@ -3654,7 +4110,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事の量－コントロール判定図は、個人の精神疾患リスクを診断するツールとして個人面談に活用する。",
     "correctAnswer": false,
     "exp": "量－コントロール判定図では、仕事の量的負担が高く、コントロールが低い職場ほど健康リスクが高いと判定される。健康リスクは全国平均を100とし、120なら健康問題が起こる可能性が20％高い。上司・同僚の支援で評価するのは職場の支援判定図。",
-    "publicPath": "q/ichimon/s/ichi-0457/index.html"
+    "publicPath": "q/ichimon/s/ichi-0457/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0458",
@@ -3662,7 +4119,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事の量－コントロール判定図は、職場（集団）のストレス状況を把握し、高ストレス職場の特定や環境改善の優先順位づけに活用する。",
     "correctAnswer": true,
     "exp": "量－コントロール判定図では、仕事の量的負担が高く、コントロールが低い職場ほど健康リスクが高いと判定される。健康リスクは全国平均を100とし、120なら健康問題が起こる可能性が20％高い。上司・同僚の支援で評価するのは職場の支援判定図。",
-    "publicPath": "q/ichimon/s/ichi-0458/index.html"
+    "publicPath": "q/ichimon/s/ichi-0458/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0459",
@@ -3670,7 +4128,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "量－コントロール判定図は、上司の支援と同僚の支援の2つの尺度から職場のストレスを評価する。",
     "correctAnswer": false,
     "exp": "量－コントロール判定図では、仕事の量的負担が高く、コントロールが低い職場ほど健康リスクが高いと判定される。健康リスクは全国平均を100とし、120なら健康問題が起こる可能性が20％高い。上司・同僚の支援で評価するのは職場の支援判定図。",
-    "publicPath": "q/ichimon/s/ichi-0459/index.html"
+    "publicPath": "q/ichimon/s/ichi-0459/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0460",
@@ -3678,7 +4137,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "量－コントロール判定図では、仕事の量的負担が高く、仕事のコントロールが低い職場ほど、健康リスクが高いと判定される。",
     "correctAnswer": true,
     "exp": "量－コントロール判定図では、仕事の量的負担が高く、コントロールが低い職場ほど健康リスクが高いと判定される。健康リスクは全国平均を100とし、120なら健康問題が起こる可能性が20％高い。上司・同僚の支援で評価するのは職場の支援判定図。",
-    "publicPath": "q/ichimon/s/ichi-0460/index.html"
+    "publicPath": "q/ichimon/s/ichi-0460/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0461",
@@ -3686,7 +4146,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "認知行動療法は、薬物療法の補助として使われることはあっても、単独での効果は認められていない。",
     "correctAnswer": false,
     "exp": "認知行動療法は、出来事の受け止め方（認知）や行動に働きかけて気分や行動の変化を図る心理療法で、うつ病や不安障害に効果がある。本人が考え方の癖に気づき柔軟な考え方を身につけることを目指し、ホームワークにも取り組む。",
-    "publicPath": "q/ichimon/s/ichi-0461/index.html"
+    "publicPath": "q/ichimon/s/ichi-0461/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0462",
@@ -3694,7 +4155,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "認知行動療法では、出来事に対する認知（受け取り方・考え方）のパターンに働きかけ、感情や行動の変化を図る。",
     "correctAnswer": true,
     "exp": "認知行動療法は、出来事の受け止め方（認知）や行動に働きかけて気分や行動の変化を図る心理療法で、うつ病や不安障害に効果がある。本人が考え方の癖に気づき柔軟な考え方を身につけることを目指し、ホームワークにも取り組む。",
-    "publicPath": "q/ichimon/s/ichi-0462/index.html"
+    "publicPath": "q/ichimon/s/ichi-0462/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0463",
@@ -3702,7 +4164,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "認知行動療法はうつ病には効果がなく、不安障害のみに有効である。",
     "correctAnswer": false,
     "exp": "認知行動療法は、出来事の受け止め方（認知）や行動に働きかけて気分や行動の変化を図る心理療法で、うつ病や不安障害に効果がある。本人が考え方の癖に気づき柔軟な考え方を身につけることを目指し、ホームワークにも取り組む。",
-    "publicPath": "q/ichimon/s/ichi-0463/index.html"
+    "publicPath": "q/ichimon/s/ichi-0463/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0464",
@@ -3710,7 +4173,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "認知行動療法では、本人が自分の考え方の癖に気づき、より柔軟な考え方を身につけることを目指す。",
     "correctAnswer": true,
     "exp": "認知行動療法は、出来事の受け止め方（認知）や行動に働きかけて気分や行動の変化を図る心理療法で、うつ病や不安障害に効果がある。本人が考え方の癖に気づき柔軟な考え方を身につけることを目指し、ホームワークにも取り組む。",
-    "publicPath": "q/ichimon/s/ichi-0464/index.html"
+    "publicPath": "q/ichimon/s/ichi-0464/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0465",
@@ -3718,7 +4182,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務量の調整や締め切りの延長など、本人の状況に応じた柔軟な業務対応を行うことは、不調の部下への適切な支援である。",
     "correctAnswer": true,
     "exp": "不調が疑われる部下への職場による支援には、業務量の調整や締め切りの延長、定期的な面談、本人の了解を得た産業医や保健師への相談の勧奨などがある。高い目標を課すことは負担を増やし不調を悪化させるおそれがある。",
-    "publicPath": "q/ichimon/s/ichi-0465/index.html"
+    "publicPath": "q/ichimon/s/ichi-0465/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0466",
@@ -3726,7 +4191,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "不調の部下には、回復を促すため、業務目標をあえて高めに設定し、達成感を得られるようにする。",
     "correctAnswer": false,
     "exp": "不調が疑われる部下への職場による支援には、業務量の調整や締め切りの延長、定期的な面談、本人の了解を得た産業医や保健師への相談の勧奨などがある。高い目標を課すことは負担を増やし不調を悪化させるおそれがある。",
-    "publicPath": "q/ichimon/s/ichi-0466/index.html"
+    "publicPath": "q/ichimon/s/ichi-0466/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0467",
@@ -3734,7 +4200,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は、定期的な面談を通じて、不調の部下の体調や仕事の状況を継続的に確認する。",
     "correctAnswer": true,
     "exp": "不調が疑われる部下への職場による支援には、業務量の調整や締め切りの延長、定期的な面談、本人の了解を得た産業医や保健師への相談の勧奨などがある。高い目標を課すことは負担を増やし不調を悪化させるおそれがある。",
-    "publicPath": "q/ichimon/s/ichi-0467/index.html"
+    "publicPath": "q/ichimon/s/ichi-0467/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0468",
@@ -3742,7 +4209,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は、必要に応じて、不調の部下に産業医や保健師への相談を勧める。",
     "correctAnswer": true,
     "exp": "不調が疑われる部下への職場による支援には、業務量の調整や締め切りの延長、定期的な面談、本人の了解を得た産業医や保健師への相談の勧奨などがある。高い目標を課すことは負担を増やし不調を悪化させるおそれがある。",
-    "publicPath": "q/ichimon/s/ichi-0468/index.html"
+    "publicPath": "q/ichimon/s/ichi-0468/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0469",
@@ -3750,7 +4218,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場の人間関係は個人の問題であり、管理監督者が介入することは越権行為である。",
     "correctAnswer": false,
     "exp": "職場の人間関係は主要なストレス要因の一つ。管理監督者は日頃から良好なコミュニケーションを促し、トラブルに気づいたら当事者の話を個別に聴いて、業務分担や席の配置の調整などで早めに対応する。人間関係も職場環境改善の対象。",
-    "publicPath": "q/ichimon/s/ichi-0469/index.html"
+    "publicPath": "q/ichimon/s/ichi-0469/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0470",
@@ -3758,7 +4227,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場の人間関係によるストレスを防ぐため、管理監督者は日頃からチームのコミュニケーションを促し、問題の早期発見に努める。",
     "correctAnswer": true,
     "exp": "職場の人間関係は主要なストレス要因の一つ。管理監督者は日頃から良好なコミュニケーションを促し、トラブルに気づいたら当事者の話を個別に聴いて、業務分担や席の配置の調整などで早めに対応する。人間関係も職場環境改善の対象。",
-    "publicPath": "q/ichimon/s/ichi-0470/index.html"
+    "publicPath": "q/ichimon/s/ichi-0470/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0471",
@@ -3766,7 +4236,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場の人間関係のトラブルは、当事者が解決するまで管理監督者は静観する。",
     "correctAnswer": false,
     "exp": "職場の人間関係は主要なストレス要因の一つ。管理監督者は日頃から良好なコミュニケーションを促し、トラブルに気づいたら当事者の話を個別に聴いて、業務分担や席の配置の調整などで早めに対応する。人間関係も職場環境改善の対象。",
-    "publicPath": "q/ichimon/s/ichi-0471/index.html"
+    "publicPath": "q/ichimon/s/ichi-0471/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0472",
@@ -3774,7 +4245,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場の人間関係のトラブルに気づいたら、当事者の話を個別に聴き、必要に応じて業務分担や席の配置を調整する。",
     "correctAnswer": true,
     "exp": "職場の人間関係は主要なストレス要因の一つ。管理監督者は日頃から良好なコミュニケーションを促し、トラブルに気づいたら当事者の話を個別に聴いて、業務分担や席の配置の調整などで早めに対応する。人間関係も職場環境改善の対象。",
-    "publicPath": "q/ichimon/s/ichi-0472/index.html"
+    "publicPath": "q/ichimon/s/ichi-0472/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0473",
@@ -3782,7 +4254,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "復職した労働者の病名や治療内容は、職場全員で共有することで支援の輪が広がる。",
     "correctAnswer": false,
     "exp": "復職者の健康情報は要配慮個人情報で、支援に直接関わる範囲で、本人の同意を得て必要最小限を共有する。本人が「話してよい」と言った場合も、伝える相手と内容を本人と確認する。異動時の引き継ぎや主治医の情報の共有も本人の同意が原則。",
-    "publicPath": "q/ichimon/s/ichi-0473/index.html"
+    "publicPath": "q/ichimon/s/ichi-0473/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0474",
@@ -3790,7 +4263,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "復職者の情報は、支援に直接関わる必要最小限の関係者の間でのみ共有し、その範囲を明確にする。",
     "correctAnswer": true,
     "exp": "復職者の健康情報は要配慮個人情報で、支援に直接関わる範囲で、本人の同意を得て必要最小限を共有する。本人が「話してよい」と言った場合も、伝える相手と内容を本人と確認する。異動時の引き継ぎや主治医の情報の共有も本人の同意が原則。",
-    "publicPath": "q/ichimon/s/ichi-0474/index.html"
+    "publicPath": "q/ichimon/s/ichi-0474/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0475",
@@ -3798,7 +4272,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "人事異動時には、新しい職場の全管理職に復職者の詳細な病歴を引き継ぐ。",
     "correctAnswer": false,
     "exp": "復職者の健康情報は要配慮個人情報で、支援に直接関わる範囲で、本人の同意を得て必要最小限を共有する。本人が「話してよい」と言った場合も、伝える相手と内容を本人と確認する。異動時の引き継ぎや主治医の情報の共有も本人の同意が原則。",
-    "publicPath": "q/ichimon/s/ichi-0475/index.html"
+    "publicPath": "q/ichimon/s/ichi-0475/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0476",
@@ -3806,7 +4281,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰した部下が「病気のことを話してよい」と言った場合でも、共有する内容と範囲を本人と確認したうえで伝える。",
     "correctAnswer": true,
     "exp": "復職者の健康情報は要配慮個人情報で、支援に直接関わる範囲で、本人の同意を得て必要最小限を共有する。本人が「話してよい」と言った場合も、伝える相手と内容を本人と確認する。異動時の引き継ぎや主治医の情報の共有も本人の同意が原則。",
-    "publicPath": "q/ichimon/s/ichi-0476/index.html"
+    "publicPath": "q/ichimon/s/ichi-0476/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0477",
@@ -3814,7 +4290,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は、部下の問題をすべて自分で解決しようとする姿勢を貫くべきである。",
     "correctAnswer": false,
     "exp": "バーンアウトは意欲や責任感の高い管理監督者にも起こり得る。予防には休息の確保と、問題を一人で抱え込まず周囲の支援を受けることが大切。部下や顧客への思いやりが薄れ冷淡になる脱人格化は兆候の一つ。",
-    "publicPath": "q/ichimon/s/ichi-0477/index.html"
+    "publicPath": "q/ichimon/s/ichi-0477/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0478",
@@ -3822,7 +4299,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は、仕事とプライベートのバランスを保ち、休息・回復の時間を意識的に確保することが大切である。",
     "correctAnswer": true,
     "exp": "バーンアウトは意欲や責任感の高い管理監督者にも起こり得る。予防には休息の確保と、問題を一人で抱え込まず周囲の支援を受けることが大切。部下や顧客への思いやりが薄れ冷淡になる脱人格化は兆候の一つ。",
-    "publicPath": "q/ichimon/s/ichi-0478/index.html"
+    "publicPath": "q/ichimon/s/ichi-0478/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0479",
@@ -3830,7 +4308,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "どんなに疲れていても、管理監督者は弱音を吐かず業務を続けることが職責である。",
     "correctAnswer": false,
     "exp": "バーンアウトは意欲や責任感の高い管理監督者にも起こり得る。予防には休息の確保と、問題を一人で抱え込まず周囲の支援を受けることが大切。部下や顧客への思いやりが薄れ冷淡になる脱人格化は兆候の一つ。",
-    "publicPath": "q/ichimon/s/ichi-0479/index.html"
+    "publicPath": "q/ichimon/s/ichi-0479/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0480",
@@ -3838,7 +4317,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下や顧客への思いやりが薄れ、冷淡な態度になることは、バーンアウトの兆候の一つとされる。",
     "correctAnswer": true,
     "exp": "バーンアウトは意欲や責任感の高い管理監督者にも起こり得る。予防には休息の確保と、問題を一人で抱え込まず周囲の支援を受けることが大切。部下や顧客への思いやりが薄れ冷淡になる脱人格化は兆候の一つ。",
-    "publicPath": "q/ichimon/s/ichi-0480/index.html"
+    "publicPath": "q/ichimon/s/ichi-0480/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0481",
@@ -3846,7 +4326,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下が「消えてしまいたい」と話したときは、業務中の発言として不適切であると指摘し、気持ちを切り替えるよう伝える。",
     "correctAnswer": false,
     "exp": "自殺の危険が差し迫っている場合は、本人を一人にせず、産業医や医療機関に速やかに連絡し、必要に応じて家族にも連絡して安全に引き継ぐ。入院の要否は医師が判断する。",
-    "publicPath": "q/ichimon/s/ichi-0481/index.html"
+    "publicPath": "q/ichimon/s/ichi-0481/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0482",
@@ -3854,7 +4335,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「消えてしまいたい」という言葉を真剣に受け止め、安全な場所で話を聴き、一人にしない。",
     "correctAnswer": true,
     "exp": "自殺の危険が差し迫っている場合は、本人を一人にせず、産業医や医療機関に速やかに連絡し、必要に応じて家族にも連絡して安全に引き継ぐ。入院の要否は医師が判断する。",
-    "publicPath": "q/ichimon/s/ichi-0482/index.html"
+    "publicPath": "q/ichimon/s/ichi-0482/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0483",
@@ -3862,7 +4344,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下が「消えてしまいたい」と話したときは、大げさにならないよう、さりげなく流して通常業務を続けさせる。",
     "correctAnswer": false,
     "exp": "自殺の危険が差し迫っている場合は、本人を一人にせず、産業医や医療機関に速やかに連絡し、必要に応じて家族にも連絡して安全に引き継ぐ。入院の要否は医師が判断する。",
-    "publicPath": "q/ichimon/s/ichi-0483/index.html"
+    "publicPath": "q/ichimon/s/ichi-0483/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0484",
@@ -3870,7 +4353,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "自殺の危険が差し迫っている場合は、本人を一人にせず、必要に応じて家族にも連絡する。",
     "correctAnswer": true,
     "exp": "自殺の危険が差し迫っている場合は、本人を一人にせず、産業医や医療機関に速やかに連絡し、必要に応じて家族にも連絡して安全に引き継ぐ。入院の要否は医師が判断する。",
-    "publicPath": "q/ichimon/s/ichi-0484/index.html"
+    "publicPath": "q/ichimon/s/ichi-0484/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0485",
@@ -3878,7 +4362,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事例性とは医学的な診断名・病状を指し、疾病性とは職場での問題行動を指す。",
     "correctAnswer": false,
     "exp": "事例性は遅刻・欠勤・ミスなど職場で客観的に把握できる問題、疾病性は症状や病名など医学的な判断に関わる事柄。管理監督者は疾病性を判断せず、事例性に基づいて声をかけ、専門家につなぐ。",
-    "publicPath": "q/ichimon/s/ichi-0485/index.html"
+    "publicPath": "q/ichimon/s/ichi-0485/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0486",
@@ -3886,7 +4371,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は疾病性（医学的判断）に基づいて対応し、事例性（職場での問題）は産業医が扱う。",
     "correctAnswer": false,
     "exp": "事例性は遅刻・欠勤・ミスなど職場で客観的に把握できる問題、疾病性は症状や病名など医学的な判断に関わる事柄。管理監督者は疾病性を判断せず、事例性に基づいて声をかけ、専門家につなぐ。",
-    "publicPath": "q/ichimon/s/ichi-0486/index.html"
+    "publicPath": "q/ichimon/s/ichi-0486/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0487",
@@ -3894,7 +4380,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事例性とは職場で顕在化している問題（遅刻・ミス等）を指し、疾病性とは医学的な病態を指す。管理監督者は事例性に基づいて対応する。",
     "correctAnswer": true,
     "exp": "事例性は遅刻・欠勤・ミスなど職場で客観的に把握できる問題、疾病性は症状や病名など医学的な判断に関わる事柄。管理監督者は疾病性を判断せず、事例性に基づいて声をかけ、専門家につなぐ。",
-    "publicPath": "q/ichimon/s/ichi-0487/index.html"
+    "publicPath": "q/ichimon/s/ichi-0487/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0488",
@@ -3902,39 +4389,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事例性は、遅刻や欠勤、仕事のミスなど、周囲が客観的に把握できる職場での問題を指す。",
     "correctAnswer": true,
     "exp": "事例性は遅刻・欠勤・ミスなど職場で客観的に把握できる問題、疾病性は症状や病名など医学的な判断に関わる事柄。管理監督者は疾病性を判断せず、事例性に基づいて声をかけ、専門家につなぐ。",
-    "publicPath": "q/ichimon/s/ichi-0488/index.html"
+    "publicPath": "q/ichimon/s/ichi-0488/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0489",
     "field": "limit",
-    "statement": "解決策を与えることで部下が感謝し、信頼関係が深まるため問題はない。",
+    "statement": "部下が自分で結論を出すまで待つことが傾聴の原則であるため、相談の場では、社内の制度や相談窓口などの情報を伝えることは控える。",
     "correctAnswer": false,
-    "exp": "管理監督者が解決策を与えすぎると、部下が自ら考えて解決する力を損ない、依存を強めるおそれがある。相談では、まず話を聴き、部下が自ら答えを見つけられるよう支えることが大切。",
-    "publicPath": "q/ichimon/s/ichi-0489/index.html"
+    "exp": "相談では、まず十分に聴いて状況や気持ちを理解し、助言は本人が選べる形で示す。社内の制度や相談窓口などの情報提供や業務量の調整は、管理監督者の重要な支援。解決策を与えすぎると依存を強めるおそれがある。",
+    "publicPath": "q/ichimon/s/ichi-0489/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0490",
     "field": "limit",
     "statement": "管理監督者が部下に解決策を与えすぎると、部下が自ら考えて解決する力を損ない、依存的になる可能性がある。",
     "correctAnswer": true,
-    "exp": "管理監督者が解決策を与えすぎると、部下が自ら考えて解決する力を損ない、依存を強めるおそれがある。相談では、まず話を聴き、部下が自ら答えを見つけられるよう支えることが大切。",
-    "publicPath": "q/ichimon/s/ichi-0490/index.html"
+    "exp": "相談では、まず十分に聴いて状況や気持ちを理解し、助言は本人が選べる形で示す。社内の制度や相談窓口などの情報提供や業務量の調整は、管理監督者の重要な支援。解決策を与えすぎると依存を強めるおそれがある。",
+    "publicPath": "q/ichimon/s/ichi-0490/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0491",
     "field": "limit",
-    "statement": "管理監督者が解決策を提示することは、プロとして当然の行為であり推奨される。",
+    "statement": "部下の悩みの原因が業務量にあると分かった場合でも、業務量の調整は人事部門の権限であるため、管理監督者は調整を検討すべきではない。",
     "correctAnswer": false,
-    "exp": "管理監督者が解決策を与えすぎると、部下が自ら考えて解決する力を損ない、依存を強めるおそれがある。相談では、まず話を聴き、部下が自ら答えを見つけられるよう支えることが大切。",
-    "publicPath": "q/ichimon/s/ichi-0491/index.html"
+    "exp": "相談では、まず十分に聴いて状況や気持ちを理解し、助言は本人が選べる形で示す。社内の制度や相談窓口などの情報提供や業務量の調整は、管理監督者の重要な支援。解決策を与えすぎると依存を強めるおそれがある。",
+    "publicPath": "q/ichimon/s/ichi-0491/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0492",
     "field": "limit",
-    "statement": "部下の相談では、まず話を聴き、部下が自ら答えを見つけられるよう支えることが大切である。",
+    "statement": "助言をする場合も、まず部下の話を十分に聴いたうえで、部下自身が選べるよう複数の選択肢を示すことが望ましい。",
     "correctAnswer": true,
-    "exp": "管理監督者が解決策を与えすぎると、部下が自ら考えて解決する力を損ない、依存を強めるおそれがある。相談では、まず話を聴き、部下が自ら答えを見つけられるよう支えることが大切。",
-    "publicPath": "q/ichimon/s/ichi-0492/index.html"
+    "exp": "相談では、まず十分に聴いて状況や気持ちを理解し、助言は本人が選べる形で示す。社内の制度や相談窓口などの情報提供や業務量の調整は、管理監督者の重要な支援。解決策を与えすぎると依存を強めるおそれがある。",
+    "publicPath": "q/ichimon/s/ichi-0492/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0493",
@@ -3942,7 +4434,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者が産業医に相談する場合、必ず本人の同意を事前に得なければならない。",
     "correctAnswer": false,
     "exp": "管理監督者は、個人が特定されない形で部下の状況を産業医に相談し、対応方法の助言を求めることができる。部下を産業医との面談につなぐときは、面談の目的を本人に説明し、同意を得ることが基本。",
-    "publicPath": "q/ichimon/s/ichi-0493/index.html"
+    "publicPath": "q/ichimon/s/ichi-0493/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0494",
@@ -3950,7 +4443,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は本人の状況を匿名で産業医に相談し、対応方法についてアドバイスを求めることができる。",
     "correctAnswer": true,
     "exp": "管理監督者は、個人が特定されない形で部下の状況を産業医に相談し、対応方法の助言を求めることができる。部下を産業医との面談につなぐときは、面談の目的を本人に説明し、同意を得ることが基本。",
-    "publicPath": "q/ichimon/s/ichi-0494/index.html"
+    "publicPath": "q/ichimon/s/ichi-0494/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0495",
@@ -3958,7 +4452,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医への相談は人事部門のみが行えるものであり、管理監督者は直接相談できない。",
     "correctAnswer": false,
     "exp": "管理監督者は、個人が特定されない形で部下の状況を産業医に相談し、対応方法の助言を求めることができる。部下を産業医との面談につなぐときは、面談の目的を本人に説明し、同意を得ることが基本。",
-    "publicPath": "q/ichimon/s/ichi-0495/index.html"
+    "publicPath": "q/ichimon/s/ichi-0495/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0496",
@@ -3966,7 +4461,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下を産業医との面談につなぐときは、面談の目的を本人に説明し、同意を得ることが基本である。",
     "correctAnswer": true,
     "exp": "管理監督者は、個人が特定されない形で部下の状況を産業医に相談し、対応方法の助言を求めることができる。部下を産業医との面談につなぐときは、面談の目的を本人に説明し、同意を得ることが基本。",
-    "publicPath": "q/ichimon/s/ichi-0496/index.html"
+    "publicPath": "q/ichimon/s/ichi-0496/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0497",
@@ -3974,7 +4470,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰を円滑に進めるため、主治医から得た情報は、関係するすべての部署・社員に広く共有する。",
     "correctAnswer": false,
     "exp": "主治医に情報提供を依頼する際は、本人の同意を得たうえで文書で依頼する。主治医には職場の状況や業務の内容を伝えたうえで意見を求め、得た情報は支援に必要な範囲の関係者にとどめて共有する。",
-    "publicPath": "q/ichimon/s/ichi-0497/index.html"
+    "publicPath": "q/ichimon/s/ichi-0497/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0498",
@@ -3982,7 +4479,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援では、本人の同意を得たうえで、支援に必要な最小限の情報を関係者間で共有する。",
     "correctAnswer": true,
     "exp": "主治医に情報提供を依頼する際は、本人の同意を得たうえで文書で依頼する。主治医には職場の状況や業務の内容を伝えたうえで意見を求め、得た情報は支援に必要な範囲の関係者にとどめて共有する。",
-    "publicPath": "q/ichimon/s/ichi-0498/index.html"
+    "publicPath": "q/ichimon/s/ichi-0498/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0499",
@@ -3990,7 +4488,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "主治医・産業医間の情報共有には、本人の同意は不要である。",
     "correctAnswer": false,
     "exp": "主治医に情報提供を依頼する際は、本人の同意を得たうえで文書で依頼する。主治医には職場の状況や業務の内容を伝えたうえで意見を求め、得た情報は支援に必要な範囲の関係者にとどめて共有する。",
-    "publicPath": "q/ichimon/s/ichi-0499/index.html"
+    "publicPath": "q/ichimon/s/ichi-0499/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0500",
@@ -3998,39 +4497,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "主治医に情報提供を依頼する際は、本人の同意を得たうえで、文書で依頼することが望ましい。",
     "correctAnswer": true,
     "exp": "主治医に情報提供を依頼する際は、本人の同意を得たうえで文書で依頼する。主治医には職場の状況や業務の内容を伝えたうえで意見を求め、得た情報は支援に必要な範囲の関係者にとどめて共有する。",
-    "publicPath": "q/ichimon/s/ichi-0500/index.html"
+    "publicPath": "q/ichimon/s/ichi-0500/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0501",
     "field": "limit",
     "statement": "部下にかかりつけ医がいる場合は、かかりつけ医に相談し、専門医を紹介してもらう方法もある。",
     "correctAnswer": true,
-    "exp": "医療機関を紹介する際は、本人の状態・希望・通いやすさ・専門性などを考慮して情報を提供する。外来での受診から始めるのが一般的で、かかりつけ医に相談して専門医を紹介してもらう方法もある。",
-    "publicPath": "q/ichimon/s/ichi-0501/index.html"
+    "exp": "精神科受診への抵抗感が強い場合は、かかりつけ医に相談して専門医を紹介してもらう方法や、産業医面談から始める方法がある。心療内科でもうつ病を診療することは多く、初診を精神科病院に限る原則はない。",
+    "publicPath": "q/ichimon/s/ichi-0501/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0502",
     "field": "limit",
-    "statement": "部下に医療機関を紹介する際は、本人の状態・希望・通いやすさなどを考慮しながら、適切な医療機関の情報を提供する。",
-    "correctAnswer": true,
-    "exp": "医療機関を紹介する際は、本人の状態・希望・通いやすさ・専門性などを考慮して情報を提供する。外来での受診から始めるのが一般的で、かかりつけ医に相談して専門医を紹介してもらう方法もある。",
-    "publicPath": "q/ichimon/s/ichi-0502/index.html"
+    "statement": "心療内科は心身症を専門とする診療科であるため、うつ病が疑われる部下を心療内科に紹介することは適切ではない。",
+    "correctAnswer": false,
+    "exp": "精神科受診への抵抗感が強い場合は、かかりつけ医に相談して専門医を紹介してもらう方法や、産業医面談から始める方法がある。心療内科でもうつ病を診療することは多く、初診を精神科病院に限る原則はない。",
+    "publicPath": "q/ichimon/s/ichi-0502/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0503",
     "field": "limit",
-    "statement": "部下に医療機関を紹介する際は、症状の程度にかかわらず、初診は必ず入院病棟のある精神科病院を選ぶ。",
+    "statement": "精神科診療所（クリニック）は入院設備を持たないため、初診は入院設備のある精神科病院を受診するよう勧めることが原則である。",
     "correctAnswer": false,
-    "exp": "医療機関を紹介する際は、本人の状態・希望・通いやすさ・専門性などを考慮して情報を提供する。外来での受診から始めるのが一般的で、かかりつけ医に相談して専門医を紹介してもらう方法もある。",
-    "publicPath": "q/ichimon/s/ichi-0503/index.html"
+    "exp": "精神科受診への抵抗感が強い場合は、かかりつけ医に相談して専門医を紹介してもらう方法や、産業医面談から始める方法がある。心療内科でもうつ病を診療することは多く、初診を精神科病院に限る原則はない。",
+    "publicPath": "q/ichimon/s/ichi-0503/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0504",
     "field": "limit",
-    "statement": "医療機関の選定は産業医が一方的に決定し、本人の意向は考慮しない。",
-    "correctAnswer": false,
-    "exp": "医療機関を紹介する際は、本人の状態・希望・通いやすさ・専門性などを考慮して情報を提供する。外来での受診から始めるのが一般的で、かかりつけ医に相談して専門医を紹介してもらう方法もある。",
-    "publicPath": "q/ichimon/s/ichi-0504/index.html"
+    "statement": "通院で治療できる状態であれば、精神科診療所（クリニック）を受診先とすることも多い。",
+    "correctAnswer": true,
+    "exp": "精神科受診への抵抗感が強い場合は、かかりつけ医に相談して専門医を紹介してもらう方法や、産業医面談から始める方法がある。心療内科でもうつ病を診療することは多く、初診を精神科病院に限る原則はない。",
+    "publicPath": "q/ichimon/s/ichi-0504/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0505",
@@ -4038,7 +4542,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "休業中は本人への連絡を一切絶ち、完全に療養に専念させる。",
     "correctAnswer": false,
     "exp": "第1ステップでは、主治医の診断書の提出により休業が始まり、傷病手当金などの経済的な保障や休業の最長期間などの情報を提供する。傷病手当金は連続する3日間の待期期間の後、4日目から支給される。",
-    "publicPath": "q/ichimon/s/ichi-0505/index.html"
+    "publicPath": "q/ichimon/s/ichi-0505/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0506",
@@ -4046,7 +4551,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "休業中の部下とも適度な連絡を保ち、傷病手当金や職場復帰の流れなど、必要な情報を提供する。",
     "correctAnswer": true,
     "exp": "第1ステップでは、主治医の診断書の提出により休業が始まり、傷病手当金などの経済的な保障や休業の最長期間などの情報を提供する。傷病手当金は連続する3日間の待期期間の後、4日目から支給される。",
-    "publicPath": "q/ichimon/s/ichi-0506/index.html"
+    "publicPath": "q/ichimon/s/ichi-0506/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0507",
@@ -4054,7 +4560,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "休業中の部下には、早期の職場復帰を促すため、業務の状況を頻繁に連絡して危機感を持たせる。",
     "correctAnswer": false,
     "exp": "第1ステップでは、主治医の診断書の提出により休業が始まり、傷病手当金などの経済的な保障や休業の最長期間などの情報を提供する。傷病手当金は連続する3日間の待期期間の後、4日目から支給される。",
-    "publicPath": "q/ichimon/s/ichi-0507/index.html"
+    "publicPath": "q/ichimon/s/ichi-0507/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0508",
@@ -4062,7 +4569,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "健康保険の傷病手当金は、連続する3日間の待期期間の後、4日目から支給される。",
     "correctAnswer": true,
     "exp": "第1ステップでは、主治医の診断書の提出により休業が始まり、傷病手当金などの経済的な保障や休業の最長期間などの情報を提供する。傷病手当金は連続する3日間の待期期間の後、4日目から支給される。",
-    "publicPath": "q/ichimon/s/ichi-0508/index.html"
+    "publicPath": "q/ichimon/s/ichi-0508/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0509",
@@ -4070,7 +4578,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "主治医から「職場復帰可能」の診断書が提出されれば、直ちに元の職場・業務に完全復帰させる。",
     "correctAnswer": false,
     "exp": "主治医による職場復帰可能の判断は、日常生活の回復の程度で行われることが多く、業務遂行能力まで回復しているとは限らない。産業医の意見も踏まえて復帰の可否を判断し、疑問があれば本人の同意を得て主治医に情報提供を依頼する。",
-    "publicPath": "q/ichimon/s/ichi-0509/index.html"
+    "publicPath": "q/ichimon/s/ichi-0509/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0510",
@@ -4078,7 +4587,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "主治医の判断は治療上の観点からであり、産業医の意見も踏まえて職場としての復帰可否を判断する。",
     "correctAnswer": true,
     "exp": "主治医による職場復帰可能の判断は、日常生活の回復の程度で行われることが多く、業務遂行能力まで回復しているとは限らない。産業医の意見も踏まえて復帰の可否を判断し、疑問があれば本人の同意を得て主治医に情報提供を依頼する。",
-    "publicPath": "q/ichimon/s/ichi-0510/index.html"
+    "publicPath": "q/ichimon/s/ichi-0510/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0511",
@@ -4086,7 +4596,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "主治医の診断書が提出された場合、産業医への相談は不要である。",
     "correctAnswer": false,
     "exp": "主治医による職場復帰可能の判断は、日常生活の回復の程度で行われることが多く、業務遂行能力まで回復しているとは限らない。産業医の意見も踏まえて復帰の可否を判断し、疑問があれば本人の同意を得て主治医に情報提供を依頼する。",
-    "publicPath": "q/ichimon/s/ichi-0511/index.html"
+    "publicPath": "q/ichimon/s/ichi-0511/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0512",
@@ -4094,7 +4605,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "主治医の診断書の内容に疑問がある場合は、本人の同意を得て、主治医に情報提供を依頼することができる。",
     "correctAnswer": true,
     "exp": "主治医による職場復帰可能の判断は、日常生活の回復の程度で行われることが多く、業務遂行能力まで回復しているとは限らない。産業医の意見も踏まえて復帰の可否を判断し、疑問があれば本人の同意を得て主治医に情報提供を依頼する。",
-    "publicPath": "q/ichimon/s/ichi-0512/index.html"
+    "publicPath": "q/ichimon/s/ichi-0512/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0513",
@@ -4102,7 +4614,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "がん治療中は就労不可能であるため、退職を勧めることが本人のためになる。",
     "correctAnswer": false,
     "exp": "がん治療は通院による外来での治療が増えている。両立支援では時間単位の年次有給休暇や時差出勤などの柔軟な勤務制度を検討する。倦怠感などの副作用は外見からわかりにくいため、本人の申し出を受けて配慮を検討する。",
-    "publicPath": "q/ichimon/s/ichi-0513/index.html"
+    "publicPath": "q/ichimon/s/ichi-0513/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0514",
@@ -4110,7 +4623,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "がん治療中の労働者の両立支援では、通院治療に対応するため、時間単位の年次有給休暇や時差出勤などの活用を検討する。",
     "correctAnswer": true,
     "exp": "がん治療は通院による外来での治療が増えている。両立支援では時間単位の年次有給休暇や時差出勤などの柔軟な勤務制度を検討する。倦怠感などの副作用は外見からわかりにくいため、本人の申し出を受けて配慮を検討する。",
-    "publicPath": "q/ichimon/s/ichi-0514/index.html"
+    "publicPath": "q/ichimon/s/ichi-0514/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0515",
@@ -4118,7 +4632,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "がんは精神疾患ではないため、産業医は関与する必要がない。",
     "correctAnswer": false,
     "exp": "がん治療は通院による外来での治療が増えている。両立支援では時間単位の年次有給休暇や時差出勤などの柔軟な勤務制度を検討する。倦怠感などの副作用は外見からわかりにくいため、本人の申し出を受けて配慮を検討する。",
-    "publicPath": "q/ichimon/s/ichi-0515/index.html"
+    "publicPath": "q/ichimon/s/ichi-0515/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0516",
@@ -4126,7 +4641,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "がん治療の副作用による倦怠感などは外見からわかりにくいため、本人の申し出を受けて配慮を検討する。",
     "correctAnswer": true,
     "exp": "がん治療は通院による外来での治療が増えている。両立支援では時間単位の年次有給休暇や時差出勤などの柔軟な勤務制度を検討する。倦怠感などの副作用は外見からわかりにくいため、本人の申し出を受けて配慮を検討する。",
-    "publicPath": "q/ichimon/s/ichi-0516/index.html"
+    "publicPath": "q/ichimon/s/ichi-0516/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0517",
@@ -4134,7 +4650,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "令和7年の労働安全衛生調査では、強いストレスとなっている事柄の内容として「仕事の量」と「仕事の失敗、責任の発生等」が最も多かった。",
     "correctAnswer": true,
     "exp": "令和7年の労働安全衛生調査では、強いストレスとなっている事柄の内容は「仕事の量」と「仕事の失敗、責任の発生等」（いずれも39.5％）が最も多く、次いで「対人関係（セクハラ・パワハラを含む）」（32.9％）だった。",
-    "publicPath": "q/ichimon/s/ichi-0517/index.html"
+    "publicPath": "q/ichimon/s/ichi-0517/index.html",
+    "level": 5
   },
   {
     "id": "ichi-0518",
@@ -4142,7 +4659,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "令和7年の労働安全衛生調査では、強いストレスとなっている事柄の内容として「雇用の安定性」が最も多かった。",
     "correctAnswer": false,
     "exp": "令和7年の労働安全衛生調査では、強いストレスとなっている事柄の内容は「仕事の量」と「仕事の失敗、責任の発生等」（いずれも39.5％）が最も多く、次いで「対人関係（セクハラ・パワハラを含む）」（32.9％）だった。",
-    "publicPath": "q/ichimon/s/ichi-0518/index.html"
+    "publicPath": "q/ichimon/s/ichi-0518/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0519",
@@ -4150,7 +4668,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "令和7年の労働安全衛生調査では、「対人関係（セクハラ・パワハラを含む）」が、強いストレスとなっている事柄の内容の上位に挙げられている。",
     "correctAnswer": true,
     "exp": "令和7年の労働安全衛生調査では、強いストレスとなっている事柄の内容は「仕事の量」と「仕事の失敗、責任の発生等」（いずれも39.5％）が最も多く、次いで「対人関係（セクハラ・パワハラを含む）」（32.9％）だった。",
-    "publicPath": "q/ichimon/s/ichi-0519/index.html"
+    "publicPath": "q/ichimon/s/ichi-0519/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0520",
@@ -4158,7 +4677,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "令和7年の労働安全衛生調査では、「顧客、取引先等からのクレーム」が、強いストレスとなっている事柄の内容として最も多かった。",
     "correctAnswer": false,
     "exp": "令和7年の労働安全衛生調査では、強いストレスとなっている事柄の内容は「仕事の量」と「仕事の失敗、責任の発生等」（いずれも39.5％）が最も多く、次いで「対人関係（セクハラ・パワハラを含む）」（32.9％）だった。",
-    "publicPath": "q/ichimon/s/ichi-0520/index.html"
+    "publicPath": "q/ichimon/s/ichi-0520/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0521",
@@ -4166,7 +4686,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業者は、時間外・休日労働を削減するための措置を講じ、労働者の健康管理を行う。",
     "correctAnswer": true,
     "exp": "過重労働による健康障害防止のための総合対策は、事業者に、時間外・休日労働の削減、年次有給休暇の取得促進、労働時間等の設定の改善、健康診断の事後措置や面接指導などの健康管理を求めている。月45時間以内でも健康管理は必要。",
-    "publicPath": "q/ichimon/s/ichi-0521/index.html"
+    "publicPath": "q/ichimon/s/ichi-0521/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0522",
@@ -4174,7 +4695,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過重労働は個人の問題であり、事業者が介入する必要はない。",
     "correctAnswer": false,
     "exp": "過重労働による健康障害防止のための総合対策は、事業者に、時間外・休日労働の削減、年次有給休暇の取得促進、労働時間等の設定の改善、健康診断の事後措置や面接指導などの健康管理を求めている。月45時間以内でも健康管理は必要。",
-    "publicPath": "q/ichimon/s/ichi-0522/index.html"
+    "publicPath": "q/ichimon/s/ichi-0522/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0523",
@@ -4182,7 +4704,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "月45時間以内の時間外労働であれば健康への影響はないため、管理は不要である。",
     "correctAnswer": false,
     "exp": "過重労働による健康障害防止のための総合対策は、事業者に、時間外・休日労働の削減、年次有給休暇の取得促進、労働時間等の設定の改善、健康診断の事後措置や面接指導などの健康管理を求めている。月45時間以内でも健康管理は必要。",
-    "publicPath": "q/ichimon/s/ichi-0523/index.html"
+    "publicPath": "q/ichimon/s/ichi-0523/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0524",
@@ -4190,7 +4713,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過重労働による健康障害防止のための総合対策では、事業者に年次有給休暇を取得しやすい環境の整備も求めている。",
     "correctAnswer": true,
     "exp": "過重労働による健康障害防止のための総合対策は、事業者に、時間外・休日労働の削減、年次有給休暇の取得促進、労働時間等の設定の改善、健康診断の事後措置や面接指導などの健康管理を求めている。月45時間以内でも健康管理は必要。",
-    "publicPath": "q/ichimon/s/ichi-0524/index.html"
+    "publicPath": "q/ichimon/s/ichi-0524/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0525",
@@ -4198,7 +4722,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "復職者の過去の病歴・入院歴の詳細な記録は、職場復帰支援プランに含める内容である。",
     "correctAnswer": false,
     "exp": "職場復帰支援プランでは、職場復帰日、管理監督者による就業上の配慮（業務量の変更、残業の制限など）、人事労務管理上の対応、産業医等の意見、フォローアップ（就業制限等の見直しの時期など）を定める。",
-    "publicPath": "q/ichimon/s/ichi-0525/index.html"
+    "publicPath": "q/ichimon/s/ichi-0525/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0526",
@@ -4206,7 +4731,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "復職後の業務内容・業務量の調整方針、フォローアップの頻度・担当者、勤務時間の変更などは、職場復帰支援プランに含める内容である。",
     "correctAnswer": true,
     "exp": "職場復帰支援プランでは、職場復帰日、管理監督者による就業上の配慮（業務量の変更、残業の制限など）、人事労務管理上の対応、産業医等の意見、フォローアップ（就業制限等の見直しの時期など）を定める。",
-    "publicPath": "q/ichimon/s/ichi-0526/index.html"
+    "publicPath": "q/ichimon/s/ichi-0526/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0527",
@@ -4214,7 +4740,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援プランでは、就業制限などの見直しを行う時期についても検討する。",
     "correctAnswer": true,
     "exp": "職場復帰支援プランでは、職場復帰日、管理監督者による就業上の配慮（業務量の変更、残業の制限など）、人事労務管理上の対応、産業医等の意見、フォローアップ（就業制限等の見直しの時期など）を定める。",
-    "publicPath": "q/ichimon/s/ichi-0527/index.html"
+    "publicPath": "q/ichimon/s/ichi-0527/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0528",
@@ -4222,7 +4749,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "復職者の給与削減計画は、職場復帰支援プランに含める内容である。",
     "correctAnswer": false,
     "exp": "職場復帰支援プランでは、職場復帰日、管理監督者による就業上の配慮（業務量の変更、残業の制限など）、人事労務管理上の対応、産業医等の意見、フォローアップ（就業制限等の見直しの時期など）を定める。",
-    "publicPath": "q/ichimon/s/ichi-0528/index.html"
+    "publicPath": "q/ichimon/s/ichi-0528/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0529",
@@ -4230,7 +4758,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務における予見可能性は、使用者が実際に健康被害の発生を認識していた場合に限って認められる。",
     "correctAnswer": false,
     "exp": "安全配慮義務違反は、予見可能性と結果回避義務違反の有無で判断される。予見可能性は実際に認識していた場合に限らず、通常の注意で認識し得た場合も含む。本人が不調を申告しなくても、不調をうかがわせる事情を把握していれば予見可能性は否定されない。",
-    "publicPath": "q/ichimon/s/ichi-0529/index.html"
+    "publicPath": "q/ichimon/s/ichi-0529/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0530",
@@ -4238,7 +4767,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "長時間労働が続く部下の健康被害は一般に予見可能であり、対策を怠った場合は安全配慮義務違反となりうる。",
     "correctAnswer": true,
     "exp": "安全配慮義務違反は、予見可能性と結果回避義務違反の有無で判断される。予見可能性は実際に認識していた場合に限らず、通常の注意で認識し得た場合も含む。本人が不調を申告しなくても、不調をうかがわせる事情を把握していれば予見可能性は否定されない。",
-    "publicPath": "q/ichimon/s/ichi-0530/index.html"
+    "publicPath": "q/ichimon/s/ichi-0530/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0531",
@@ -4246,7 +4776,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働者が自らの不調を申告しなかった場合は、使用者が不調をうかがわせる事情を把握していても、予見可能性は否定される。",
     "correctAnswer": false,
     "exp": "安全配慮義務違反は、予見可能性と結果回避義務違反の有無で判断される。予見可能性は実際に認識していた場合に限らず、通常の注意で認識し得た場合も含む。本人が不調を申告しなくても、不調をうかがわせる事情を把握していれば予見可能性は否定されない。",
-    "publicPath": "q/ichimon/s/ichi-0531/index.html"
+    "publicPath": "q/ichimon/s/ichi-0531/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0532",
@@ -4254,7 +4785,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務違反が認められるには、予見可能性に加え、結果を回避する措置を怠ったこと（結果回避義務違反）が問題となる。",
     "correctAnswer": true,
     "exp": "安全配慮義務違反は、予見可能性と結果回避義務違反の有無で判断される。予見可能性は実際に認識していた場合に限らず、通常の注意で認識し得た場合も含む。本人が不調を申告しなくても、不調をうかがわせる事情を把握していれば予見可能性は否定されない。",
-    "publicPath": "q/ichimon/s/ichi-0532/index.html"
+    "publicPath": "q/ichimon/s/ichi-0532/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0533",
@@ -4262,7 +4794,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働安全衛生法違反については、違反行為をした者だけでなく、法人である事業者も罰せられることがある。",
     "correctAnswer": true,
     "exp": "労働安全衛生法には両罰規定があり、違反行為者だけでなく法人である事業者も罰せられることがある。違反は健康被害がなくても処罰の対象となり得る。安全配慮義務違反は債務不履行と不法行為の両面から請求でき、管理監督者個人が責任を問われることもある。",
-    "publicPath": "q/ichimon/s/ichi-0533/index.html"
+    "publicPath": "q/ichimon/s/ichi-0533/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0534",
@@ -4270,7 +4803,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働安全衛生法違反があっても、労働者に実際の健康被害が生じていなければ、刑事責任を問われることはない。",
     "correctAnswer": false,
     "exp": "労働安全衛生法には両罰規定があり、違反行為者だけでなく法人である事業者も罰せられることがある。違反は健康被害がなくても処罰の対象となり得る。安全配慮義務違反は債務不履行と不法行為の両面から請求でき、管理監督者個人が責任を問われることもある。",
-    "publicPath": "q/ichimon/s/ichi-0534/index.html"
+    "publicPath": "q/ichimon/s/ichi-0534/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0535",
@@ -4278,7 +4812,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務違反については、債務不履行責任と不法行為責任のいずれによっても損害賠償を請求することができる。",
     "correctAnswer": true,
     "exp": "労働安全衛生法には両罰規定があり、違反行為者だけでなく法人である事業者も罰せられることがある。違反は健康被害がなくても処罰の対象となり得る。安全配慮義務違反は債務不履行と不法行為の両面から請求でき、管理監督者個人が責任を問われることもある。",
-    "publicPath": "q/ichimon/s/ichi-0535/index.html"
+    "publicPath": "q/ichimon/s/ichi-0535/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0536",
@@ -4286,7 +4821,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務違反による損害賠償責任を負うのは法人としての会社のみであり、管理監督者個人が責任を問われることはない。",
     "correctAnswer": false,
     "exp": "労働安全衛生法には両罰規定があり、違反行為者だけでなく法人である事業者も罰せられることがある。違反は健康被害がなくても処罰の対象となり得る。安全配慮義務違反は債務不履行と不法行為の両面から請求でき、管理監督者個人が責任を問われることもある。",
-    "publicPath": "q/ichimon/s/ichi-0536/index.html"
+    "publicPath": "q/ichimon/s/ichi-0536/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0537",
@@ -4294,7 +4830,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過労死等防止対策推進法は、事業主に対し、過労死等の防止のための罰則付きの措置義務を定めている。",
     "correctAnswer": false,
     "exp": "過労死等防止対策推進法（2014年施行）は、「過労死等」を、過重な負荷による脳・心臓疾患を原因とする死亡、強い心理的負荷による精神障害を原因とする自殺による死亡、これらの疾患と定義する。理念法で罰則はなく、毎年11月を過労死等防止啓発月間としている。",
-    "publicPath": "q/ichimon/s/ichi-0537/index.html"
+    "publicPath": "q/ichimon/s/ichi-0537/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0538",
@@ -4302,7 +4839,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過労死等防止対策推進法では、国・地方公共団体・事業主・国民それぞれに過労死等防止のための責務等が定められている。",
     "correctAnswer": true,
     "exp": "過労死等防止対策推進法（2014年施行）は、「過労死等」を、過重な負荷による脳・心臓疾患を原因とする死亡、強い心理的負荷による精神障害を原因とする自殺による死亡、これらの疾患と定義する。理念法で罰則はなく、毎年11月を過労死等防止啓発月間としている。",
-    "publicPath": "q/ichimon/s/ichi-0538/index.html"
+    "publicPath": "q/ichimon/s/ichi-0538/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0539",
@@ -4310,7 +4848,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過労死等防止対策推進法の「過労死等」は死亡に限られ、死亡に至らない脳・心臓疾患や精神障害は含まれない。",
     "correctAnswer": false,
     "exp": "過労死等防止対策推進法（2014年施行）は、「過労死等」を、過重な負荷による脳・心臓疾患を原因とする死亡、強い心理的負荷による精神障害を原因とする自殺による死亡、これらの疾患と定義する。理念法で罰則はなく、毎年11月を過労死等防止啓発月間としている。",
-    "publicPath": "q/ichimon/s/ichi-0539/index.html"
+    "publicPath": "q/ichimon/s/ichi-0539/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0540",
@@ -4318,7 +4857,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過労死等防止対策推進法では、毎年11月を過労死等防止啓発月間と定めている。",
     "correctAnswer": true,
     "exp": "過労死等防止対策推進法（2014年施行）は、「過労死等」を、過重な負荷による脳・心臓疾患を原因とする死亡、強い心理的負荷による精神障害を原因とする自殺による死亡、これらの疾患と定義する。理念法で罰則はなく、毎年11月を過労死等防止啓発月間としている。",
-    "publicPath": "q/ichimon/s/ichi-0540/index.html"
+    "publicPath": "q/ichimon/s/ichi-0540/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0541",
@@ -4326,7 +4866,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "脳・心臓疾患の認定基準では、時間外・休日労働が2〜6か月平均で月80時間を超えれば、必ず発症するとされている。",
     "correctAnswer": false,
     "exp": "脳・心臓疾患の認定基準で月80時間超が目安とされるのは、医学的に発症との関連性が強いと評価されているため。2021年9月の改正で、目安に達しない場合でも、労働時間以外の負荷要因を含めて総合的に評価することが明確にされた。必ず発症するという意味ではない。",
-    "publicPath": "q/ichimon/s/ichi-0541/index.html"
+    "publicPath": "q/ichimon/s/ichi-0541/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0542",
@@ -4334,7 +4875,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過労死の労災認定で「2〜6か月平均で月80時間超」の時間外・休日労働が目安とされるのは、この水準の長時間労働と脳・心臓疾患の発症との関連が医学的に認められているためである。",
     "correctAnswer": true,
     "exp": "脳・心臓疾患の認定基準で月80時間超が目安とされるのは、医学的に発症との関連性が強いと評価されているため。2021年9月の改正で、目安に達しない場合でも、労働時間以外の負荷要因を含めて総合的に評価することが明確にされた。必ず発症するという意味ではない。",
-    "publicPath": "q/ichimon/s/ichi-0542/index.html"
+    "publicPath": "q/ichimon/s/ichi-0542/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0543",
@@ -4342,7 +4884,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "2021年の脳・心臓疾患の認定基準の改正では、労働時間が目安に達しない場合でも、労働時間以外の負荷要因を含めて総合的に評価することが明確にされた。",
     "correctAnswer": true,
     "exp": "脳・心臓疾患の認定基準で月80時間超が目安とされるのは、医学的に発症との関連性が強いと評価されているため。2021年9月の改正で、目安に達しない場合でも、労働時間以外の負荷要因を含めて総合的に評価することが明確にされた。必ず発症するという意味ではない。",
-    "publicPath": "q/ichimon/s/ichi-0543/index.html"
+    "publicPath": "q/ichimon/s/ichi-0543/index.html",
+    "level": 5
   },
   {
     "id": "ichi-0544",
@@ -4350,7 +4893,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "脳・心臓疾患の労災認定では、時間外・休日労働が目安に達しない場合、業務と発症との関連性が認められることはない。",
     "correctAnswer": false,
     "exp": "脳・心臓疾患の認定基準で月80時間超が目安とされるのは、医学的に発症との関連性が強いと評価されているため。2021年9月の改正で、目安に達しない場合でも、労働時間以外の負荷要因を含めて総合的に評価することが明確にされた。必ず発症するという意味ではない。",
-    "publicPath": "q/ichimon/s/ichi-0544/index.html"
+    "publicPath": "q/ichimon/s/ichi-0544/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0545",
@@ -4358,7 +4902,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス対策は個々の企業の内部の問題であり、自殺対策などの国の施策とは関係がない。",
     "correctAnswer": false,
     "exp": "精神疾患は医療計画で五大疾病の一つとされている。自殺対策基本法は、すべての事業主に、国等の自殺対策への協力と、雇用する労働者の心の健康の保持を図るための措置に努めることを求めている。",
-    "publicPath": "q/ichimon/s/ichi-0545/index.html"
+    "publicPath": "q/ichimon/s/ichi-0545/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0546",
@@ -4366,7 +4911,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働者の心の健康を守ることは、持続可能な社会や労働市場の形成に貢献する。",
     "correctAnswer": true,
     "exp": "精神疾患は医療計画で五大疾病の一つとされている。自殺対策基本法は、すべての事業主に、国等の自殺対策への協力と、雇用する労働者の心の健康の保持を図るための措置に努めることを求めている。",
-    "publicPath": "q/ichimon/s/ichi-0546/index.html"
+    "publicPath": "q/ichimon/s/ichi-0546/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0547",
@@ -4374,7 +4920,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "自殺対策基本法の事業主の責務は、国や地方公共団体などの公的機関である事業主に限って適用される。",
     "correctAnswer": false,
     "exp": "精神疾患は医療計画で五大疾病の一つとされている。自殺対策基本法は、すべての事業主に、国等の自殺対策への協力と、雇用する労働者の心の健康の保持を図るための措置に努めることを求めている。",
-    "publicPath": "q/ichimon/s/ichi-0547/index.html"
+    "publicPath": "q/ichimon/s/ichi-0547/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0548",
@@ -4382,7 +4929,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "自殺対策基本法では、事業主は、雇用する労働者の心の健康の保持を図るため必要な措置を講ずるよう努めるものとされている。",
     "correctAnswer": true,
     "exp": "精神疾患は医療計画で五大疾病の一つとされている。自殺対策基本法は、すべての事業主に、国等の自殺対策への協力と、雇用する労働者の心の健康の保持を図るための措置に努めることを求めている。",
-    "publicPath": "q/ichimon/s/ichi-0548/index.html"
+    "publicPath": "q/ichimon/s/ichi-0548/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0549",
@@ -4390,7 +4938,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "衛生委員会の付議事項には、労働者の精神的健康の保持増進を図るための対策の樹立に関することが含まれる。",
     "correctAnswer": true,
     "exp": "衛生委員会は常時50人以上の事業場で設置義務があり、毎月1回以上開催する。付議事項には労働者の精神的健康の保持増進を図るための対策の樹立が含まれる。議長以外の委員の半数は、過半数労働組合（過半数代表者）の推薦に基づき指名する。議事の概要は労働者に周知する。",
-    "publicPath": "q/ichimon/s/ichi-0549/index.html"
+    "publicPath": "q/ichimon/s/ichi-0549/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0550",
@@ -4398,7 +4947,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "衛生委員会は、心の健康づくり計画の策定・実施・評価について調査審議し、事業者に意見を述べる役割を担う。",
     "correctAnswer": true,
     "exp": "衛生委員会は常時50人以上の事業場で設置義務があり、毎月1回以上開催する。付議事項には労働者の精神的健康の保持増進を図るための対策の樹立が含まれる。議長以外の委員の半数は、過半数労働組合（過半数代表者）の推薦に基づき指名する。議事の概要は労働者に周知する。",
-    "publicPath": "q/ichimon/s/ichi-0550/index.html"
+    "publicPath": "q/ichimon/s/ichi-0550/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0551",
@@ -4406,7 +4956,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "衛生委員会は、3か月に1回以上開催すればよい。",
     "correctAnswer": false,
     "exp": "衛生委員会は常時50人以上の事業場で設置義務があり、毎月1回以上開催する。付議事項には労働者の精神的健康の保持増進を図るための対策の樹立が含まれる。議長以外の委員の半数は、過半数労働組合（過半数代表者）の推薦に基づき指名する。議事の概要は労働者に周知する。",
-    "publicPath": "q/ichimon/s/ichi-0551/index.html"
+    "publicPath": "q/ichimon/s/ichi-0551/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0552",
@@ -4414,7 +4965,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "衛生委員会の委員は、すべて事業者が自由に指名することができ、労働者側の推薦に基づく必要はない。",
     "correctAnswer": false,
     "exp": "衛生委員会は常時50人以上の事業場で設置義務があり、毎月1回以上開催する。付議事項には労働者の精神的健康の保持増進を図るための対策の樹立が含まれる。議長以外の委員の半数は、過半数労働組合（過半数代表者）の推薦に基づき指名する。議事の概要は労働者に周知する。",
-    "publicPath": "q/ichimon/s/ichi-0552/index.html"
+    "publicPath": "q/ichimon/s/ichi-0552/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0553",
@@ -4422,7 +4974,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェック制度の実施規程には、実施時期・対象者・実施者・高ストレス者への対応方法などを定める。",
     "correctAnswer": true,
     "exp": "ストレスチェック制度の実施方法は、衛生委員会等で調査審議したうえで事業者が規程として定め、労働者に周知する。規程には実施者・実施時期・高ストレス者の選定基準・面接指導の方法などを定める。選定基準は実施者の意見と衛生委員会の審議を踏まえて決める。",
-    "publicPath": "q/ichimon/s/ichi-0553/index.html"
+    "publicPath": "q/ichimon/s/ichi-0553/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0554",
@@ -4430,7 +4983,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェック制度の実施規程は事業者内部の管理資料であるため、労働者に周知する必要はない。",
     "correctAnswer": false,
     "exp": "ストレスチェック制度の実施方法は、衛生委員会等で調査審議したうえで事業者が規程として定め、労働者に周知する。規程には実施者・実施時期・高ストレス者の選定基準・面接指導の方法などを定める。選定基準は実施者の意見と衛生委員会の審議を踏まえて決める。",
-    "publicPath": "q/ichimon/s/ichi-0554/index.html"
+    "publicPath": "q/ichimon/s/ichi-0554/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0555",
@@ -4438,7 +4992,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェック制度の実施方法などは、衛生委員会等で調査審議したうえで、事業者が規程として定める。",
     "correctAnswer": true,
     "exp": "ストレスチェック制度の実施方法は、衛生委員会等で調査審議したうえで事業者が規程として定め、労働者に周知する。規程には実施者・実施時期・高ストレス者の選定基準・面接指導の方法などを定める。選定基準は実施者の意見と衛生委員会の審議を踏まえて決める。",
-    "publicPath": "q/ichimon/s/ichi-0555/index.html"
+    "publicPath": "q/ichimon/s/ichi-0555/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0556",
@@ -4446,7 +5001,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "高ストレス者の選定基準は、実施者の意見を聴かずに事業者が単独で定めることとされている。",
     "correctAnswer": false,
     "exp": "ストレスチェック制度の実施方法は、衛生委員会等で調査審議したうえで事業者が規程として定め、労働者に周知する。規程には実施者・実施時期・高ストレス者の選定基準・面接指導の方法などを定める。選定基準は実施者の意見と衛生委員会の審議を踏まえて決める。",
-    "publicPath": "q/ichimon/s/ichi-0556/index.html"
+    "publicPath": "q/ichimon/s/ichi-0556/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0557",
@@ -4454,7 +5010,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境の改善は、ストレスチェックの集団分析の結果が出るまでは着手しないことが原則である。",
     "correctAnswer": false,
     "exp": "職場環境等は、日常の観察・ストレスチェックの集団分析・面談など複数の方法で継続的に把握する。改善の対象は、作業環境・作業方法・労働時間・人間関係・組織体制などと幅広い。改善策は労働者の意見を聞きながら検討する。",
-    "publicPath": "q/ichimon/s/ichi-0557/index.html"
+    "publicPath": "q/ichimon/s/ichi-0557/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0558",
@@ -4462,7 +5019,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "日常的な観察・ストレスチェックの集団分析・部下との面談等を通じて職場のストレス状況を継続的に把握し、改善に取り組むことが大切である。",
     "correctAnswer": true,
     "exp": "職場環境等は、日常の観察・ストレスチェックの集団分析・面談など複数の方法で継続的に把握する。改善の対象は、作業環境・作業方法・労働時間・人間関係・組織体制などと幅広い。改善策は労働者の意見を聞きながら検討する。",
-    "publicPath": "q/ichimon/s/ichi-0558/index.html"
+    "publicPath": "q/ichimon/s/ichi-0558/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0559",
@@ -4470,7 +5028,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境等の改善の対象は、照明や騒音などの物理的な作業環境に限られ、仕事の進め方や職場の人間関係は含まれない。",
     "correctAnswer": false,
     "exp": "職場環境等は、日常の観察・ストレスチェックの集団分析・面談など複数の方法で継続的に把握する。改善の対象は、作業環境・作業方法・労働時間・人間関係・組織体制などと幅広い。改善策は労働者の意見を聞きながら検討する。",
-    "publicPath": "q/ichimon/s/ichi-0559/index.html"
+    "publicPath": "q/ichimon/s/ichi-0559/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0560",
@@ -4478,7 +5037,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境の改善では、労働者の意見を聞きながら、実行可能な改善策を検討することが効果的である。",
     "correctAnswer": true,
     "exp": "職場環境等は、日常の観察・ストレスチェックの集団分析・面談など複数の方法で継続的に把握する。改善の対象は、作業環境・作業方法・労働時間・人間関係・組織体制などと幅広い。改善策は労働者の意見を聞きながら検討する。",
-    "publicPath": "q/ichimon/s/ichi-0560/index.html"
+    "publicPath": "q/ichimon/s/ichi-0560/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0561",
@@ -4486,7 +5046,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ラインによるケアにおける管理監督者の役割には、部下のメンタルヘルス不調を自ら診断・治療することが含まれる。",
     "correctAnswer": false,
     "exp": "ラインによるケアは、日常の職務管理の中で、職場環境等の把握と改善や部下からの相談への対応を行う。対象は不調の診断を受けた部下に限られない。診断・治療や健康診断の実施は管理監督者の役割ではなく、早い段階で産業保健スタッフ等と連携する。",
-    "publicPath": "q/ichimon/s/ichi-0561/index.html"
+    "publicPath": "q/ichimon/s/ichi-0561/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0562",
@@ -4494,7 +5055,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ラインによるケアにおける管理監督者の重要な役割は、日常の職務管理の中でメンタルヘルスに配慮し、不調の早期発見・対応と職場環境の改善を担うことである。",
     "correctAnswer": true,
     "exp": "ラインによるケアは、日常の職務管理の中で、職場環境等の把握と改善や部下からの相談への対応を行う。対象は不調の診断を受けた部下に限られない。診断・治療や健康診断の実施は管理監督者の役割ではなく、早い段階で産業保健スタッフ等と連携する。",
-    "publicPath": "q/ichimon/s/ichi-0562/index.html"
+    "publicPath": "q/ichimon/s/ichi-0562/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0563",
@@ -4502,7 +5064,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ラインによるケアの対象は、メンタルヘルス不調の診断を受けた部下に限られる。",
     "correctAnswer": false,
     "exp": "ラインによるケアは、日常の職務管理の中で、職場環境等の把握と改善や部下からの相談への対応を行う。対象は不調の診断を受けた部下に限られない。診断・治療や健康診断の実施は管理監督者の役割ではなく、早い段階で産業保健スタッフ等と連携する。",
-    "publicPath": "q/ichimon/s/ichi-0563/index.html"
+    "publicPath": "q/ichimon/s/ichi-0563/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0564",
@@ -4510,7 +5073,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ラインによるケアでは、職場環境等の把握と改善に加え、部下からの相談への対応も管理監督者の役割とされている。",
     "correctAnswer": true,
     "exp": "ラインによるケアは、日常の職務管理の中で、職場環境等の把握と改善や部下からの相談への対応を行う。対象は不調の診断を受けた部下に限られない。診断・治療や健康診断の実施は管理監督者の役割ではなく、早い段階で産業保健スタッフ等と連携する。",
-    "publicPath": "q/ichimon/s/ichi-0564/index.html"
+    "publicPath": "q/ichimon/s/ichi-0564/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0565",
@@ -4518,7 +5082,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "NIOSHの職業性ストレスモデルでは、年齢や性格などの個人的要因が「緩衝要因」に分類されている。",
     "correctAnswer": false,
     "exp": "NIOSHの職業性ストレスモデルでは、緩衝要因は上司・同僚・家族からの社会的支援。年齢や性格は個人的要因、家族からの要求は仕事以外の要因、仕事の量的負担や対人関係の葛藤は仕事のストレス要因に分類される。",
-    "publicPath": "q/ichimon/s/ichi-0565/index.html"
+    "publicPath": "q/ichimon/s/ichi-0565/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0566",
@@ -4526,7 +5091,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "上司・同僚・家族からの社会的支援は、職業性ストレスモデルにおける「緩衝要因」にあたる。",
     "correctAnswer": true,
     "exp": "NIOSHの職業性ストレスモデルでは、緩衝要因は上司・同僚・家族からの社会的支援。年齢や性格は個人的要因、家族からの要求は仕事以外の要因、仕事の量的負担や対人関係の葛藤は仕事のストレス要因に分類される。",
-    "publicPath": "q/ichimon/s/ichi-0566/index.html"
+    "publicPath": "q/ichimon/s/ichi-0566/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0567",
@@ -4534,7 +5100,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "NIOSHの職業性ストレスモデルでは、家族からの要求などの仕事以外の要因が「緩衝要因」に分類されている。",
     "correctAnswer": false,
     "exp": "NIOSHの職業性ストレスモデルでは、緩衝要因は上司・同僚・家族からの社会的支援。年齢や性格は個人的要因、家族からの要求は仕事以外の要因、仕事の量的負担や対人関係の葛藤は仕事のストレス要因に分類される。",
-    "publicPath": "q/ichimon/s/ichi-0567/index.html"
+    "publicPath": "q/ichimon/s/ichi-0567/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0568",
@@ -4542,7 +5109,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "NIOSHの職業性ストレスモデルでは、仕事の量的負担や対人関係の葛藤は「仕事のストレス要因」に分類されている。",
     "correctAnswer": true,
     "exp": "NIOSHの職業性ストレスモデルでは、緩衝要因は上司・同僚・家族からの社会的支援。年齢や性格は個人的要因、家族からの要求は仕事以外の要因、仕事の量的負担や対人関係の葛藤は仕事のストレス要因に分類される。",
-    "publicPath": "q/ichimon/s/ichi-0568/index.html"
+    "publicPath": "q/ichimon/s/ichi-0568/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0569",
@@ -4550,7 +5118,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事の進め方を自分で決められる裁量の大きさは、「仕事の要求度」にあたる。",
     "correctAnswer": false,
     "exp": "仕事の要求度－コントロール－支援モデルでは、要求度は業務量・時間的切迫・精神的緊張など、コントロールは裁量や技能を活用・習得する機会、支援は上司・同僚からの支援を指す。",
-    "publicPath": "q/ichimon/s/ichi-0569/index.html"
+    "publicPath": "q/ichimon/s/ichi-0569/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0570",
@@ -4558,7 +5127,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務量の多さ・締め切りの厳しさ・精神的負荷の高さは、ストレス要因のうち「仕事の要求度」に含まれる。",
     "correctAnswer": true,
     "exp": "仕事の要求度－コントロール－支援モデルでは、要求度は業務量・時間的切迫・精神的緊張など、コントロールは裁量や技能を活用・習得する機会、支援は上司・同僚からの支援を指す。",
-    "publicPath": "q/ichimon/s/ichi-0570/index.html"
+    "publicPath": "q/ichimon/s/ichi-0570/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0571",
@@ -4566,7 +5136,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "上司からの支援の充実度は、ストレス要因のうち「仕事の要求度」に含まれる。",
     "correctAnswer": false,
     "exp": "仕事の要求度－コントロール－支援モデルでは、要求度は業務量・時間的切迫・精神的緊張など、コントロールは裁量や技能を活用・習得する機会、支援は上司・同僚からの支援を指す。",
-    "publicPath": "q/ichimon/s/ichi-0571/index.html"
+    "publicPath": "q/ichimon/s/ichi-0571/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0572",
@@ -4574,7 +5145,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "技能を活用したり新しい技能を習得したりする機会の多さは、仕事の「コントロール（裁量度）」の要素とされる。",
     "correctAnswer": true,
     "exp": "仕事の要求度－コントロール－支援モデルでは、要求度は業務量・時間的切迫・精神的緊張など、コントロールは裁量や技能を活用・習得する機会、支援は上司・同僚からの支援を指す。",
-    "publicPath": "q/ichimon/s/ichi-0572/index.html"
+    "publicPath": "q/ichimon/s/ichi-0572/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0573",
@@ -4582,7 +5154,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "法定雇用率を達成していない事業主に対して、行政指導や企業名の公表が行われることはない。",
     "correctAnswer": false,
     "exp": "2026年7月から民間企業の法定雇用率は2.7％、対象は常用労働者37.5人以上の事業主。国・地方公共団体は3.0％。2024年4月から、週10時間以上20時間未満の重度身体障害者・重度知的障害者・精神障害者も0.5人として算定できる。未達成には行政指導や企業名の公表がある。",
-    "publicPath": "q/ichimon/s/ichi-0573/index.html"
+    "publicPath": "q/ichimon/s/ichi-0573/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0574",
@@ -4590,7 +5163,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "2026年7月から、常用労働者37.5人以上の民間企業に法定雇用率2.7％の達成義務がある。",
     "correctAnswer": true,
     "exp": "2026年7月から民間企業の法定雇用率は2.7％、対象は常用労働者37.5人以上の事業主。国・地方公共団体は3.0％。2024年4月から、週10時間以上20時間未満の重度身体障害者・重度知的障害者・精神障害者も0.5人として算定できる。未達成には行政指導や企業名の公表がある。",
-    "publicPath": "q/ichimon/s/ichi-0574/index.html"
+    "publicPath": "q/ichimon/s/ichi-0574/index.html",
+    "level": 5
   },
   {
     "id": "ichi-0575",
@@ -4598,7 +5172,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "法定雇用率の算定では、週の所定労働時間が10時間以上20時間未満の労働者は、障害の種類を問わず算定の対象とならない。",
     "correctAnswer": false,
     "exp": "2026年7月から民間企業の法定雇用率は2.7％、対象は常用労働者37.5人以上の事業主。国・地方公共団体は3.0％。2024年4月から、週10時間以上20時間未満の重度身体障害者・重度知的障害者・精神障害者も0.5人として算定できる。未達成には行政指導や企業名の公表がある。",
-    "publicPath": "q/ichimon/s/ichi-0575/index.html"
+    "publicPath": "q/ichimon/s/ichi-0575/index.html",
+    "level": 5
   },
   {
     "id": "ichi-0576",
@@ -4606,7 +5181,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "週の所定労働時間が10時間以上20時間未満の精神障害者は、法定雇用率の算定において0.5人として数えることができる。",
     "correctAnswer": true,
     "exp": "2026年7月から民間企業の法定雇用率は2.7％、対象は常用労働者37.5人以上の事業主。国・地方公共団体は3.0％。2024年4月から、週10時間以上20時間未満の重度身体障害者・重度知的障害者・精神障害者も0.5人として算定できる。未達成には行政指導や企業名の公表がある。",
-    "publicPath": "q/ichimon/s/ichi-0576/index.html"
+    "publicPath": "q/ichimon/s/ichi-0576/index.html",
+    "level": 5
   },
   {
     "id": "ichi-0577",
@@ -4614,7 +5190,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "障害者雇用促進法では、賃金の決定や配置、昇進などで、障害者であることを理由に不当な差別的取扱いをすることが禁止されている。",
     "correctAnswer": true,
     "exp": "障害者雇用促進法は、募集・採用と採用後の待遇（賃金・配置・昇進など）の両面で、障害を理由とする不当な差別的取扱いを事業主に禁止している（法的義務）。合理的配慮の提供も、過重な負担にならない範囲で事業主の義務とされている。",
-    "publicPath": "q/ichimon/s/ichi-0577/index.html"
+    "publicPath": "q/ichimon/s/ichi-0577/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0578",
@@ -4622,7 +5199,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "民間の事業主にとって、障害者に対する差別の禁止は努力義務にとどまる。",
     "correctAnswer": false,
     "exp": "障害者雇用促進法は、募集・採用と採用後の待遇（賃金・配置・昇進など）の両面で、障害を理由とする不当な差別的取扱いを事業主に禁止している（法的義務）。合理的配慮の提供も、過重な負担にならない範囲で事業主の義務とされている。",
-    "publicPath": "q/ichimon/s/ichi-0578/index.html"
+    "publicPath": "q/ichimon/s/ichi-0578/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0579",
@@ -4630,7 +5208,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "障害者雇用促進法上、合理的配慮の提供は事業主の法律上の義務ではない。",
     "correctAnswer": false,
     "exp": "障害者雇用促進法は、募集・採用と採用後の待遇（賃金・配置・昇進など）の両面で、障害を理由とする不当な差別的取扱いを事業主に禁止している（法的義務）。合理的配慮の提供も、過重な負担にならない範囲で事業主の義務とされている。",
-    "publicPath": "q/ichimon/s/ichi-0579/index.html"
+    "publicPath": "q/ichimon/s/ichi-0579/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0580",
@@ -4638,7 +5217,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "障害者雇用促進法の差別の禁止は採用後の処遇に限られ、募集・採用の段階は対象とならない。",
     "correctAnswer": false,
     "exp": "障害者雇用促進法は、募集・採用と採用後の待遇（賃金・配置・昇進など）の両面で、障害を理由とする不当な差別的取扱いを事業主に禁止している（法的義務）。合理的配慮の提供も、過重な負担にならない範囲で事業主の義務とされている。",
-    "publicPath": "q/ichimon/s/ichi-0580/index.html"
+    "publicPath": "q/ichimon/s/ichi-0580/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0581",
@@ -4646,7 +5226,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "対人関係のストレスは主観的なものであり、職場環境改善の対象にはならない。",
     "correctAnswer": false,
     "exp": "職場の対人関係のストレスは、上司・同僚・部下・顧客などとの関係で生じ、孤立も重要なストレス要因。2023年9月の改正で、顧客等からの著しい迷惑行為（カスタマーハラスメント）が精神障害の労災認定の評価対象となる出来事に加えられた。",
-    "publicPath": "q/ichimon/s/ichi-0581/index.html"
+    "publicPath": "q/ichimon/s/ichi-0581/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0582",
@@ -4654,7 +5235,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "上司・同僚・部下との関係、顧客からのクレーム、孤立感なども重要なストレス要因となる。",
     "correctAnswer": true,
     "exp": "職場の対人関係のストレスは、上司・同僚・部下・顧客などとの関係で生じ、孤立も重要なストレス要因。2023年9月の改正で、顧客等からの著しい迷惑行為（カスタマーハラスメント）が精神障害の労災認定の評価対象となる出来事に加えられた。",
-    "publicPath": "q/ichimon/s/ichi-0582/index.html"
+    "publicPath": "q/ichimon/s/ichi-0582/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0583",
@@ -4662,7 +5244,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場の対人関係のストレスは上司と部下の間でのみ生じ、同僚間では生じない。",
     "correctAnswer": false,
     "exp": "職場の対人関係のストレスは、上司・同僚・部下・顧客などとの関係で生じ、孤立も重要なストレス要因。2023年9月の改正で、顧客等からの著しい迷惑行為（カスタマーハラスメント）が精神障害の労災認定の評価対象となる出来事に加えられた。",
-    "publicPath": "q/ichimon/s/ichi-0583/index.html"
+    "publicPath": "q/ichimon/s/ichi-0583/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0584",
@@ -4670,7 +5253,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "顧客等からの著しい迷惑行為（カスタマーハラスメント）は、2023年9月の改正で精神障害の労災認定の評価対象となる出来事に加えられた。",
     "correctAnswer": true,
     "exp": "職場の対人関係のストレスは、上司・同僚・部下・顧客などとの関係で生じ、孤立も重要なストレス要因。2023年9月の改正で、顧客等からの著しい迷惑行為（カスタマーハラスメント）が精神障害の労災認定の評価対象となる出来事に加えられた。",
-    "publicPath": "q/ichimon/s/ichi-0584/index.html"
+    "publicPath": "q/ichimon/s/ichi-0584/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0585",
@@ -4678,7 +5262,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "新職業性ストレス簡易調査票では、仕事の資源を作業レベル・部署レベル・事業場レベルに分けて評価できる。",
     "correctAnswer": true,
     "exp": "新職業性ストレス簡易調査票は、従来の項目に加え、ワーク・エンゲイジメントなどのポジティブな要因も評価でき、仕事の資源を作業・部署・事業場の3つのレベルで評価できる。ストレスチェックでの使用は義務ではなく、集団分析にも用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0585/index.html"
+    "publicPath": "q/ichimon/s/ichi-0585/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0586",
@@ -4686,7 +5271,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "新職業性ストレス簡易調査票には、ワーク・エンゲイジメントや職場の一体感など、ポジティブな職場要因も評価項目に加えられている。",
     "correctAnswer": true,
     "exp": "新職業性ストレス簡易調査票は、従来の項目に加え、ワーク・エンゲイジメントなどのポジティブな要因も評価でき、仕事の資源を作業・部署・事業場の3つのレベルで評価できる。ストレスチェックでの使用は義務ではなく、集団分析にも用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0586/index.html"
+    "publicPath": "q/ichimon/s/ichi-0586/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0587",
@@ -4694,7 +5280,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "新職業性ストレス簡易調査票を用いると、集団分析を行うことはできない。",
     "correctAnswer": false,
     "exp": "新職業性ストレス簡易調査票は、従来の項目に加え、ワーク・エンゲイジメントなどのポジティブな要因も評価でき、仕事の資源を作業・部署・事業場の3つのレベルで評価できる。ストレスチェックでの使用は義務ではなく、集団分析にも用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0587/index.html"
+    "publicPath": "q/ichimon/s/ichi-0587/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0588",
@@ -4702,7 +5289,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "新職業性ストレス簡易調査票は、ストレスチェック制度で使用が義務づけられている。",
     "correctAnswer": false,
     "exp": "新職業性ストレス簡易調査票は、従来の項目に加え、ワーク・エンゲイジメントなどのポジティブな要因も評価でき、仕事の資源を作業・部署・事業場の3つのレベルで評価できる。ストレスチェックでの使用は義務ではなく、集団分析にも用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0588/index.html"
+    "publicPath": "q/ichimon/s/ichi-0588/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0589",
@@ -4710,7 +5298,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善では、費用がかかる改善策を優先して実施することで、取り組みの本気度を示す。",
     "correctAnswer": false,
     "exp": "職場環境改善の優先順位は、集団分析や職場での話し合いをもとに、効果が期待でき実行しやすいものから決める。費用が大きい対策ほど効果が大きいとは限らない。全員一致を待たず、話し合いで合意を形成しながら進める。",
-    "publicPath": "q/ichimon/s/ichi-0589/index.html"
+    "publicPath": "q/ichimon/s/ichi-0589/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0590",
@@ -4718,7 +5307,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善の優先順位は、集団分析や職場での話し合いから課題を特定し、着手しやすいものから取り組むとよい。",
     "correctAnswer": true,
     "exp": "職場環境改善の優先順位は、集団分析や職場での話し合いをもとに、効果が期待でき実行しやすいものから決める。費用が大きい対策ほど効果が大きいとは限らない。全員一致を待たず、話し合いで合意を形成しながら進める。",
-    "publicPath": "q/ichimon/s/ichi-0590/index.html"
+    "publicPath": "q/ichimon/s/ichi-0590/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0591",
@@ -4726,7 +5316,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善では、全員の意見が一致した改善策のみを実施し、一部でも反対意見があれば見送る。",
     "correctAnswer": false,
     "exp": "職場環境改善の優先順位は、集団分析や職場での話し合いをもとに、効果が期待でき実行しやすいものから決める。費用が大きい対策ほど効果が大きいとは限らない。全員一致を待たず、話し合いで合意を形成しながら進める。",
-    "publicPath": "q/ichimon/s/ichi-0591/index.html"
+    "publicPath": "q/ichimon/s/ichi-0591/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0592",
@@ -4734,7 +5325,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善では、効果が期待でき、かつ実行しやすい改善策から優先して取り組むことが勧められる。",
     "correctAnswer": true,
     "exp": "職場環境改善の優先順位は、集団分析や職場での話し合いをもとに、効果が期待でき実行しやすいものから決める。費用が大きい対策ほど効果が大きいとは限らない。全員一致を待たず、話し合いで合意を形成しながら進める。",
-    "publicPath": "q/ichimon/s/ichi-0592/index.html"
+    "publicPath": "q/ichimon/s/ichi-0592/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0593",
@@ -4742,7 +5334,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルスアクションチェックリストは、職場の問題点を網羅的に解消するため、挙げられた改善項目をすべて実施することが前提とされている。",
     "correctAnswer": false,
     "exp": "「職場環境改善のためのヒント集（メンタルヘルスアクションチェックリスト）」は、良好な取り組み事例をもとにまとめられ、労働者や管理監督者が話し合って、職場で実行できる改善策を選ぶ参加型の改善に用いる。すべての項目の実施を前提とせず、優先度の高いものを選んで取り組む。職場を採点するための評価尺度ではない。",
-    "publicPath": "q/ichimon/s/ichi-0593/index.html"
+    "publicPath": "q/ichimon/s/ichi-0593/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0594",
@@ -4750,7 +5343,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルスアクションチェックリストは、職場の労働者や管理監督者が、良好な取り組み事例を参考に、実行できる改善策を話し合って選ぶために用いる。",
     "correctAnswer": true,
     "exp": "「職場環境改善のためのヒント集（メンタルヘルスアクションチェックリスト）」は、良好な取り組み事例をもとにまとめられ、労働者や管理監督者が話し合って、職場で実行できる改善策を選ぶ参加型の改善に用いる。すべての項目の実施を前提とせず、優先度の高いものを選んで取り組む。職場を採点するための評価尺度ではない。",
-    "publicPath": "q/ichimon/s/ichi-0594/index.html"
+    "publicPath": "q/ichimon/s/ichi-0594/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0595",
@@ -4758,7 +5352,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルスアクションチェックリストは、専門家が職場を採点し、点数の低い職場から改善を命じるための評価尺度である。",
     "correctAnswer": false,
     "exp": "「職場環境改善のためのヒント集（メンタルヘルスアクションチェックリスト）」は、良好な取り組み事例をもとにまとめられ、労働者や管理監督者が話し合って、職場で実行できる改善策を選ぶ参加型の改善に用いる。すべての項目の実施を前提とせず、優先度の高いものを選んで取り組む。職場を採点するための評価尺度ではない。",
-    "publicPath": "q/ichimon/s/ichi-0595/index.html"
+    "publicPath": "q/ichimon/s/ichi-0595/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0596",
@@ -4766,7 +5361,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルスアクションチェックリストは、労働者が参加して進める職場環境改善に適したツールである。",
     "correctAnswer": true,
     "exp": "「職場環境改善のためのヒント集（メンタルヘルスアクションチェックリスト）」は、良好な取り組み事例をもとにまとめられ、労働者や管理監督者が話し合って、職場で実行できる改善策を選ぶ参加型の改善に用いる。すべての項目の実施を前提とせず、優先度の高いものを選んで取り組む。職場を採点するための評価尺度ではない。",
-    "publicPath": "q/ichimon/s/ichi-0596/index.html"
+    "publicPath": "q/ichimon/s/ichi-0596/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0597",
@@ -4774,7 +5370,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "以前に比べて飲酒量や喫煙量が増えたことは、身体面のストレスサインにあたる。",
     "correctAnswer": false,
     "exp": "ストレス反応は身体面・心理面・行動面に現れる。頭痛・肩こり・胃腸の不調・不眠などは身体面、イライラや不安などは心理面、飲酒量・喫煙量の増加や遅刻・欠勤・ミスの増加は行動面のサイン。",
-    "publicPath": "q/ichimon/s/ichi-0597/index.html"
+    "publicPath": "q/ichimon/s/ichi-0597/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0598",
@@ -4782,7 +5379,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "頭痛・肩こり・胃腸の不調・不眠・疲労感の訴えが増えたことは、部下の身体面のストレスサインにあたる。",
     "correctAnswer": true,
     "exp": "ストレス反応は身体面・心理面・行動面に現れる。頭痛・肩こり・胃腸の不調・不眠などは身体面、イライラや不安などは心理面、飲酒量・喫煙量の増加や遅刻・欠勤・ミスの増加は行動面のサイン。",
-    "publicPath": "q/ichimon/s/ichi-0598/index.html"
+    "publicPath": "q/ichimon/s/ichi-0598/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0599",
@@ -4790,7 +5388,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "イライラしやすくなり、ささいなことで怒るようになったことは、身体面のストレスサインにあたる。",
     "correctAnswer": false,
     "exp": "ストレス反応は身体面・心理面・行動面に現れる。頭痛・肩こり・胃腸の不調・不眠などは身体面、イライラや不安などは心理面、飲酒量・喫煙量の増加や遅刻・欠勤・ミスの増加は行動面のサイン。",
-    "publicPath": "q/ichimon/s/ichi-0599/index.html"
+    "publicPath": "q/ichimon/s/ichi-0599/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0600",
@@ -4798,7 +5397,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "飲酒量や喫煙量の増加は、行動面のストレスサインにあたる。",
     "correctAnswer": true,
     "exp": "ストレス反応は身体面・心理面・行動面に現れる。頭痛・肩こり・胃腸の不調・不眠などは身体面、イライラや不安などは心理面、飲酒量・喫煙量の増加や遅刻・欠勤・ミスの増加は行動面のサイン。",
-    "publicPath": "q/ichimon/s/ichi-0600/index.html"
+    "publicPath": "q/ichimon/s/ichi-0600/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0601",
@@ -4806,7 +5406,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下に気になる変化があっても、本人から相談があるまで待つ。",
     "correctAnswer": false,
     "exp": "「いつもと違う様子」に気づくには、日頃から部下一人ひとりの通常の状態を把握しておくことが前提。気づいたら、本人の相談を待たず、観察した事実をもとに声をかける。病名を尋ねたり同僚に報告させたりすることは適切ではない。",
-    "publicPath": "q/ichimon/s/ichi-0601/index.html"
+    "publicPath": "q/ichimon/s/ichi-0601/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0602",
@@ -4814,7 +5415,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は、日頃から部下一人ひとりの普段の状態を把握しておき、変化に気づいたら声をかける。",
     "correctAnswer": true,
     "exp": "「いつもと違う様子」に気づくには、日頃から部下一人ひとりの通常の状態を把握しておくことが前提。気づいたら、本人の相談を待たず、観察した事実をもとに声をかける。病名を尋ねたり同僚に報告させたりすることは適切ではない。",
-    "publicPath": "q/ichimon/s/ichi-0602/index.html"
+    "publicPath": "q/ichimon/s/ichi-0602/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0603",
@@ -4822,7 +5424,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の変化に気づいて声をかけるときは、「最近疲れているように見えるが、どうか」など、観察した事実をもとに話しかける。",
     "correctAnswer": true,
     "exp": "「いつもと違う様子」に気づくには、日頃から部下一人ひとりの通常の状態を把握しておくことが前提。気づいたら、本人の相談を待たず、観察した事実をもとに声をかける。病名を尋ねたり同僚に報告させたりすることは適切ではない。",
-    "publicPath": "q/ichimon/s/ichi-0603/index.html"
+    "publicPath": "q/ichimon/s/ichi-0603/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0604",
@@ -4830,7 +5433,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の様子に変化がみられた場合は、まず病気かどうかを見極めるため、本人に病名の心当たりを尋ねる。",
     "correctAnswer": false,
     "exp": "「いつもと違う様子」に気づくには、日頃から部下一人ひとりの通常の状態を把握しておくことが前提。気づいたら、本人の相談を待たず、観察した事実をもとに声をかける。病名を尋ねたり同僚に報告させたりすることは適切ではない。",
-    "publicPath": "q/ichimon/s/ichi-0604/index.html"
+    "publicPath": "q/ichimon/s/ichi-0604/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0605",
@@ -4838,7 +5442,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "異動後は本人の自主性に任せ、管理監督者から積極的に関わらない。",
     "correctAnswer": false,
     "exp": "異動直後は環境の変化でストレスが高まりやすい。管理監督者は、業務の内容や役割、相談先を早めに明確に伝え、こまめに声をかけて状況を確認する。説明を最小限にしたり、着任直後から多くの業務を任せたりすることは負担を大きくする。",
-    "publicPath": "q/ichimon/s/ichi-0605/index.html"
+    "publicPath": "q/ichimon/s/ichi-0605/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0606",
@@ -4846,7 +5451,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "異動直後は環境変化によるストレスが高まりやすいため、こまめな声かけや面談でフォローする。",
     "correctAnswer": true,
     "exp": "異動直後は環境の変化でストレスが高まりやすい。管理監督者は、業務の内容や役割、相談先を早めに明確に伝え、こまめに声をかけて状況を確認する。説明を最小限にしたり、着任直後から多くの業務を任せたりすることは負担を大きくする。",
-    "publicPath": "q/ichimon/s/ichi-0606/index.html"
+    "publicPath": "q/ichimon/s/ichi-0606/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0607",
@@ -4854,7 +5460,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "異動後1か月は様子見とし、問題が起きてから対応すれば十分である。",
     "correctAnswer": false,
     "exp": "異動直後は環境の変化でストレスが高まりやすい。管理監督者は、業務の内容や役割、相談先を早めに明確に伝え、こまめに声をかけて状況を確認する。説明を最小限にしたり、着任直後から多くの業務を任せたりすることは負担を大きくする。",
-    "publicPath": "q/ichimon/s/ichi-0607/index.html"
+    "publicPath": "q/ichimon/s/ichi-0607/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0608",
@@ -4862,7 +5469,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "異動してきた部下には、業務の内容や役割、相談先を早めに明確に伝えることが望ましい。",
     "correctAnswer": true,
     "exp": "異動直後は環境の変化でストレスが高まりやすい。管理監督者は、業務の内容や役割、相談先を早めに明確に伝え、こまめに声をかけて状況を確認する。説明を最小限にしたり、着任直後から多くの業務を任せたりすることは負担を大きくする。",
-    "publicPath": "q/ichimon/s/ichi-0608/index.html"
+    "publicPath": "q/ichimon/s/ichi-0608/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0609",
@@ -4870,7 +5478,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "タイプA行動パターンは仕事熱心の表れであるため、特に対処は不要である。",
     "correctAnswer": false,
     "exp": "タイプA行動パターンは、競争心の強さ、時間的な切迫感、攻撃性や敵意などを特徴とし、虚血性心疾患の危険因子として知られる。特に敵意との関連が強いとされる。疲労を自覚しにくく長時間労働に陥りやすいため、過重労働に注意する。",
-    "publicPath": "q/ichimon/s/ichi-0609/index.html"
+    "publicPath": "q/ichimon/s/ichi-0609/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0610",
@@ -4878,7 +5487,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "競争心が強く常に急いでいるタイプA行動パターンは心疾患リスクと関連があり、過重労働防止の観点から注意が必要である。",
     "correctAnswer": true,
     "exp": "タイプA行動パターンは、競争心の強さ、時間的な切迫感、攻撃性や敵意などを特徴とし、虚血性心疾患の危険因子として知られる。特に敵意との関連が強いとされる。疲労を自覚しにくく長時間労働に陥りやすいため、過重労働に注意する。",
-    "publicPath": "q/ichimon/s/ichi-0610/index.html"
+    "publicPath": "q/ichimon/s/ichi-0610/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0611",
@@ -4886,7 +5496,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "タイプA行動パターンとは、マイペースでのんびりとした、競争を好まない行動傾向をいう。",
     "correctAnswer": false,
     "exp": "タイプA行動パターンは、競争心の強さ、時間的な切迫感、攻撃性や敵意などを特徴とし、虚血性心疾患の危険因子として知られる。特に敵意との関連が強いとされる。疲労を自覚しにくく長時間労働に陥りやすいため、過重労働に注意する。",
-    "publicPath": "q/ichimon/s/ichi-0611/index.html"
+    "publicPath": "q/ichimon/s/ichi-0611/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0612",
@@ -4894,7 +5505,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "タイプA行動パターンは、競争心の強さ、時間的な切迫感、攻撃性や敵意などを特徴とする。",
     "correctAnswer": true,
     "exp": "タイプA行動パターンは、競争心の強さ、時間的な切迫感、攻撃性や敵意などを特徴とし、虚血性心疾患の危険因子として知られる。特に敵意との関連が強いとされる。疲労を自覚しにくく長時間労働に陥りやすいため、過重労働に注意する。",
-    "publicPath": "q/ichimon/s/ichi-0612/index.html"
+    "publicPath": "q/ichimon/s/ichi-0612/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0613",
@@ -4902,7 +5514,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "不調が疑われる部下には、本人が不調であることを認めるまで支援を行わない。",
     "correctAnswer": false,
     "exp": "不調が疑われる部下が「大丈夫」と答えても、遅刻やミスの増加などの事実があれば、それを伝えて産業保健スタッフへの相談を勧める。業務の負担の軽減など、本人が働きやすい環境を整えながら様子を見る。",
-    "publicPath": "q/ichimon/s/ichi-0613/index.html"
+    "publicPath": "q/ichimon/s/ichi-0613/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0614",
@@ -4910,7 +5523,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "不調が疑われる部下には、業務上の負担を一時的に軽減するなど、働きやすい環境を整えながら様子を見る。",
     "correctAnswer": true,
     "exp": "不調が疑われる部下が「大丈夫」と答えても、遅刻やミスの増加などの事実があれば、それを伝えて産業保健スタッフへの相談を勧める。業務の負担の軽減など、本人が働きやすい環境を整えながら様子を見る。",
-    "publicPath": "q/ichimon/s/ichi-0614/index.html"
+    "publicPath": "q/ichimon/s/ichi-0614/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0615",
@@ -4918,7 +5532,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "不調の部下には一切仕事を与えず、休憩室で待機させる。",
     "correctAnswer": false,
     "exp": "不調が疑われる部下が「大丈夫」と答えても、遅刻やミスの増加などの事実があれば、それを伝えて産業保健スタッフへの相談を勧める。業務の負担の軽減など、本人が働きやすい環境を整えながら様子を見る。",
-    "publicPath": "q/ichimon/s/ichi-0615/index.html"
+    "publicPath": "q/ichimon/s/ichi-0615/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0616",
@@ -4926,7 +5541,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "不調が疑われる部下が「大丈夫」と答えた場合でも、気づいた事実を伝え、産業保健スタッフへの相談を勧める。",
     "correctAnswer": true,
     "exp": "不調が疑われる部下が「大丈夫」と答えても、遅刻やミスの増加などの事実があれば、それを伝えて産業保健スタッフへの相談を勧める。業務の負担の軽減など、本人が働きやすい環境を整えながら様子を見る。",
-    "publicPath": "q/ichimon/s/ichi-0616/index.html"
+    "publicPath": "q/ichimon/s/ichi-0616/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0617",
@@ -4934,7 +5550,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下が悩みを話せるよう相談に乗り共感することは、「道具的サポート」にあたる。",
     "correctAnswer": false,
     "exp": "ソーシャルサポートは、情緒的（傾聴・共感）、道具的（業務の軽減など具体的な手助けや資源の提供）、情報的（情報や助言の提供）、評価的（仕事ぶりの適切な評価）の4つに分けられる。",
-    "publicPath": "q/ichimon/s/ichi-0617/index.html"
+    "publicPath": "q/ichimon/s/ichi-0617/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0618",
@@ -4942,7 +5559,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "問題の解決に役立つ情報や知識、助言を提供することは、「情報的サポート」にあたる。",
     "correctAnswer": true,
     "exp": "ソーシャルサポートは、情緒的（傾聴・共感）、道具的（業務の軽減など具体的な手助けや資源の提供）、情報的（情報や助言の提供）、評価的（仕事ぶりの適切な評価）の4つに分けられる。",
-    "publicPath": "q/ichimon/s/ichi-0618/index.html"
+    "publicPath": "q/ichimon/s/ichi-0618/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0619",
@@ -4950,7 +5568,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務量の一時的な軽減や人員の補充など、具体的な物的・人的資源を提供することは、「道具的サポート」にあたる。",
     "correctAnswer": true,
     "exp": "ソーシャルサポートは、情緒的（傾聴・共感）、道具的（業務の軽減など具体的な手助けや資源の提供）、情報的（情報や助言の提供）、評価的（仕事ぶりの適切な評価）の4つに分けられる。",
-    "publicPath": "q/ichimon/s/ichi-0619/index.html"
+    "publicPath": "q/ichimon/s/ichi-0619/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0620",
@@ -4958,39 +5577,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の業務評価を適切に行い、フィードバックすることは、「道具的サポート」にあたる。",
     "correctAnswer": false,
     "exp": "ソーシャルサポートは、情緒的（傾聴・共感）、道具的（業務の軽減など具体的な手助けや資源の提供）、情報的（情報や助言の提供）、評価的（仕事ぶりの適切な評価）の4つに分けられる。",
-    "publicPath": "q/ichimon/s/ichi-0620/index.html"
+    "publicPath": "q/ichimon/s/ichi-0620/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0621",
     "field": "limit",
-    "statement": "相談場面では、相手が深刻にならないよう「誰にでもあることだ」と伝えることが大切である。",
+    "statement": "部下が「仕事に向いていない」と話したときは、「そんなことはない、自信を持ちなさい」とすぐに励ますことが、積極的傾聴の基本である。",
     "correctAnswer": false,
-    "exp": "相談場面では、「誰にでもあることだ」「気にしすぎだ」など悩みを軽く扱う言葉は避ける。相手が話し終えるまで最後まで聴き、感情を受け止めて共感を示し、相手の言葉を繰り返して内容を確かめる。",
-    "publicPath": "q/ichimon/s/ichi-0621/index.html"
+    "exp": "安易な励ましや否定は、相手の気持ちを受け止めないまま話を終わらせてしまう。相手の言葉と気持ちを返す応答や、「たとえばどんなときに」「いつごろから」といった、「はい」「いいえ」では答えられない開かれた質問で、話を聴き進める。",
+    "publicPath": "q/ichimon/s/ichi-0621/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0622",
     "field": "limit",
-    "statement": "部下の相談を受けるときは、「それは気にしすぎだ」「誰でもそんなことはある」と伝えて、悩みを軽く受け流すのがよい。",
-    "correctAnswer": false,
-    "exp": "相談場面では、「誰にでもあることだ」「気にしすぎだ」など悩みを軽く扱う言葉は避ける。相手が話し終えるまで最後まで聴き、感情を受け止めて共感を示し、相手の言葉を繰り返して内容を確かめる。",
-    "publicPath": "q/ichimon/s/ichi-0622/index.html"
+    "statement": "安易な励ましや否定は、相手の気持ちを受け止めないまま話を終わらせてしまうことがある。",
+    "correctAnswer": true,
+    "exp": "安易な励ましや否定は、相手の気持ちを受け止めないまま話を終わらせてしまう。相手の言葉と気持ちを返す応答や、「たとえばどんなときに」「いつごろから」といった、「はい」「いいえ」では答えられない開かれた質問で、話を聴き進める。",
+    "publicPath": "q/ichimon/s/ichi-0622/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0623",
     "field": "limit",
-    "statement": "部下の相談を受けるときは、相手が話し終えるまで、意見や助言を控えて最後まで聴く。",
+    "statement": "「たとえばどんなときにそう感じますか」という問いかけは、相手が具体的に話しやすくなる開かれた質問である。",
     "correctAnswer": true,
-    "exp": "相談場面では、「誰にでもあることだ」「気にしすぎだ」など悩みを軽く扱う言葉は避ける。相手が話し終えるまで最後まで聴き、感情を受け止めて共感を示し、相手の言葉を繰り返して内容を確かめる。",
-    "publicPath": "q/ichimon/s/ichi-0623/index.html"
+    "exp": "安易な励ましや否定は、相手の気持ちを受け止めないまま話を終わらせてしまう。相手の言葉と気持ちを返す応答や、「たとえばどんなときに」「いつごろから」といった、「はい」「いいえ」では答えられない開かれた質問で、話を聴き進める。",
+    "publicPath": "q/ichimon/s/ichi-0623/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0624",
     "field": "limit",
-    "statement": "部下の相談を受けるときは、相手の感情を受け止め、「それはつらかったですね」と共感を示す。",
-    "correctAnswer": true,
-    "exp": "相談場面では、「誰にでもあることだ」「気にしすぎだ」など悩みを軽く扱う言葉は避ける。相手が話し終えるまで最後まで聴き、感情を受け止めて共感を示し、相手の言葉を繰り返して内容を確かめる。",
-    "publicPath": "q/ichimon/s/ichi-0624/index.html"
+    "statement": "「そう感じるようになったのは、いつごろからですか」という問いかけは、「はい」「いいえ」で答える閉じられた質問にあたる。",
+    "correctAnswer": false,
+    "exp": "安易な励ましや否定は、相手の気持ちを受け止めないまま話を終わらせてしまう。相手の言葉と気持ちを返す応答や、「たとえばどんなときに」「いつごろから」といった、「はい」「いいえ」では答えられない開かれた質問で、話を聴き進める。",
+    "publicPath": "q/ichimon/s/ichi-0624/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0625",
@@ -4998,7 +5622,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "クローズド・クエスチョンは「はい/いいえ」や選択式で答えられる質問で、事実確認に有効である。",
     "correctAnswer": true,
     "exp": "開かれた質問は相手が自由に答えられ、気持ちを引き出すのに役立つ。閉じられた質問は「はい」「いいえ」で答えられ、事実の確認に適する。疲れている相手には閉じられた質問も組み合わせる。「なぜ」の多用は責める印象を与える。",
-    "publicPath": "q/ichimon/s/ichi-0625/index.html"
+    "publicPath": "q/ichimon/s/ichi-0625/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0626",
@@ -5006,7 +5631,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "オープン・クエスチョンは相手の話を遮断するため、相談場面では使用しない。",
     "correctAnswer": false,
     "exp": "開かれた質問は相手が自由に答えられ、気持ちを引き出すのに役立つ。閉じられた質問は「はい」「いいえ」で答えられ、事実の確認に適する。疲れている相手には閉じられた質問も組み合わせる。「なぜ」の多用は責める印象を与える。",
-    "publicPath": "q/ichimon/s/ichi-0626/index.html"
+    "publicPath": "q/ichimon/s/ichi-0626/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0627",
@@ -5014,7 +5640,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「最近体調はいいですか？」はオープン・クエスチョンの例である。",
     "correctAnswer": false,
     "exp": "開かれた質問は相手が自由に答えられ、気持ちを引き出すのに役立つ。閉じられた質問は「はい」「いいえ」で答えられ、事実の確認に適する。疲れている相手には閉じられた質問も組み合わせる。「なぜ」の多用は責める印象を与える。",
-    "publicPath": "q/ichimon/s/ichi-0627/index.html"
+    "publicPath": "q/ichimon/s/ichi-0627/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0628",
@@ -5022,39 +5649,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「なぜ」を重ねる質問は、相手に責められているように感じさせることがある。",
     "correctAnswer": true,
     "exp": "開かれた質問は相手が自由に答えられ、気持ちを引き出すのに役立つ。閉じられた質問は「はい」「いいえ」で答えられ、事実の確認に適する。疲れている相手には閉じられた質問も組み合わせる。「なぜ」の多用は責める印象を与える。",
-    "publicPath": "q/ichimon/s/ichi-0628/index.html"
+    "publicPath": "q/ichimon/s/ichi-0628/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0629",
     "field": "limit",
-    "statement": "メンタルヘルス不調の早期発見が重要な理由は、会社が労働者の私的な情報まで広く把握できるようになるためである。",
+    "statement": "うつ病では、気分の落ち込みが夕方から夜にかけて強くなり、朝は比較的調子がよいことが多い。",
     "correctAnswer": false,
-    "exp": "メンタルヘルス不調の早期発見・早期対応は、重症化を防ぎ、回復を早めることにつながる。対応が遅れると、長期の休業や退職につながるおそれがある。発見した情報は本人の支援のために用いる。",
-    "publicPath": "q/ichimon/s/ichi-0629/index.html"
+    "exp": "うつ病では、気分の落ち込みが朝に強く夕方にかけて軽くなる日内変動がみられることがある。興味や喜びの喪失、自責感、早朝覚醒などの睡眠障害もみられる。",
+    "publicPath": "q/ichimon/s/ichi-0629/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0630",
     "field": "limit",
-    "statement": "メンタルヘルス不調の早期発見が重要な理由は、早期に発見・対応することで重症化を防ぎ、回復期間の短縮や職場復帰の成功率の向上が期待できるためである。",
+    "statement": "うつ病では、物事への興味や喜びが失われ、以前は楽しめていた趣味などにも関心を示さなくなることがある。",
     "correctAnswer": true,
-    "exp": "メンタルヘルス不調の早期発見・早期対応は、重症化を防ぎ、回復を早めることにつながる。対応が遅れると、長期の休業や退職につながるおそれがある。発見した情報は本人の支援のために用いる。",
-    "publicPath": "q/ichimon/s/ichi-0630/index.html"
+    "exp": "うつ病では、気分の落ち込みが朝に強く夕方にかけて軽くなる日内変動がみられることがある。興味や喜びの喪失、自責感、早朝覚醒などの睡眠障害もみられる。",
+    "publicPath": "q/ichimon/s/ichi-0630/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0631",
     "field": "limit",
-    "statement": "メンタルヘルス不調の早期発見が重要な理由は、人事評価の参考情報として活用できるためである。",
+    "statement": "うつ病でみられる睡眠障害は寝つきの悪さに限られ、早朝に目が覚めて眠れなくなる早朝覚醒はみられない。",
     "correctAnswer": false,
-    "exp": "メンタルヘルス不調の早期発見・早期対応は、重症化を防ぎ、回復を早めることにつながる。対応が遅れると、長期の休業や退職につながるおそれがある。発見した情報は本人の支援のために用いる。",
-    "publicPath": "q/ichimon/s/ichi-0631/index.html"
+    "exp": "うつ病では、気分の落ち込みが朝に強く夕方にかけて軽くなる日内変動がみられることがある。興味や喜びの喪失、自責感、早朝覚醒などの睡眠障害もみられる。",
+    "publicPath": "q/ichimon/s/ichi-0631/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0632",
     "field": "limit",
-    "statement": "メンタルヘルス不調への対応が遅れると、長期の休業や退職につながるおそれがある。",
+    "statement": "うつ病では、自分には価値がない、周囲に迷惑をかけているといった、自分を過度に責める考えが強くなることがある。",
     "correctAnswer": true,
-    "exp": "メンタルヘルス不調の早期発見・早期対応は、重症化を防ぎ、回復を早めることにつながる。対応が遅れると、長期の休業や退職につながるおそれがある。発見した情報は本人の支援のために用いる。",
-    "publicPath": "q/ichimon/s/ichi-0632/index.html"
+    "exp": "うつ病では、気分の落ち込みが朝に強く夕方にかけて軽くなる日内変動がみられることがある。興味や喜びの喪失、自責感、早朝覚醒などの睡眠障害もみられる。",
+    "publicPath": "q/ichimon/s/ichi-0632/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0633",
@@ -5062,7 +5694,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仮面うつ病は気分の落ち込みが主症状であり、身体症状はほとんど現れない。",
     "correctAnswer": false,
     "exp": "仮面うつ病は、頭痛・倦怠感・胃腸症状などの身体症状が前面に出て、抑うつ気分が目立たないうつ病。内科などを受診して発見が遅れることがある。身体症状は抗うつ薬などのうつ病の治療で改善することがある。",
-    "publicPath": "q/ichimon/s/ichi-0633/index.html"
+    "publicPath": "q/ichimon/s/ichi-0633/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0634",
@@ -5070,7 +5703,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仮面うつ病では頭痛・倦怠感・胃腸症状などの身体症状が前景に出て、抑うつ気分が目立たない。",
     "correctAnswer": true,
     "exp": "仮面うつ病は、頭痛・倦怠感・胃腸症状などの身体症状が前面に出て、抑うつ気分が目立たないうつ病。内科などを受診して発見が遅れることがある。身体症状は抗うつ薬などのうつ病の治療で改善することがある。",
-    "publicPath": "q/ichimon/s/ichi-0634/index.html"
+    "publicPath": "q/ichimon/s/ichi-0634/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0635",
@@ -5078,7 +5712,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仮面うつ病は精神科でのみ診断可能であり、内科医には判断できない。",
     "correctAnswer": false,
     "exp": "仮面うつ病は、頭痛・倦怠感・胃腸症状などの身体症状が前面に出て、抑うつ気分が目立たないうつ病。内科などを受診して発見が遅れることがある。身体症状は抗うつ薬などのうつ病の治療で改善することがある。",
-    "publicPath": "q/ichimon/s/ichi-0635/index.html"
+    "publicPath": "q/ichimon/s/ichi-0635/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0636",
@@ -5086,39 +5721,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仮面うつ病の身体症状は、抗うつ薬などのうつ病の治療によって改善することがある。",
     "correctAnswer": true,
     "exp": "仮面うつ病は、頭痛・倦怠感・胃腸症状などの身体症状が前面に出て、抑うつ気分が目立たないうつ病。内科などを受診して発見が遅れることがある。身体症状は抗うつ薬などのうつ病の治療で改善することがある。",
-    "publicPath": "q/ichimon/s/ichi-0636/index.html"
+    "publicPath": "q/ichimon/s/ichi-0636/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0637",
     "field": "limit",
-    "statement": "沈黙は話が終わったサインであるため、すぐに次の話題を提示する。",
+    "statement": "「要約」は面談の最後に一度だけ行う技法であり、話の途中で行うと相手の話を遮ることになるため避ける。",
     "correctAnswer": false,
-    "exp": "面談中の沈黙は、相手が考えや気持ちを整理している時間であることが多く、急かさずに待つ。解決策を話したり、次の話題に移ったり、質問を続けたりして沈黙を埋めると、相手の話を遮ることになる。",
-    "publicPath": "q/ichimon/s/ichi-0637/index.html"
+    "exp": "面談中の沈黙は、相手が考えや気持ちを整理している時間であることが多く、関心を向けたまま待つ。要約は話の区切りごとに行える。閉じられた質問は、口数の少ない相手や疲れている相手にも答えやすい。",
+    "publicPath": "q/ichimon/s/ichi-0637/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0638",
     "field": "limit",
-    "statement": "沈黙は相手が考えている大切な時間であるため、急かさずに待つ姿勢を示す。",
+    "statement": "面談の途中で話の要点をまとめて返す「要約」は、相手が自分の話を整理する助けにもなる。",
     "correctAnswer": true,
-    "exp": "面談中の沈黙は、相手が考えや気持ちを整理している時間であることが多く、急かさずに待つ。解決策を話したり、次の話題に移ったり、質問を続けたりして沈黙を埋めると、相手の話を遮ることになる。",
-    "publicPath": "q/ichimon/s/ichi-0638/index.html"
+    "exp": "面談中の沈黙は、相手が考えや気持ちを整理している時間であることが多く、関心を向けたまま待つ。要約は話の区切りごとに行える。閉じられた質問は、口数の少ない相手や疲れている相手にも答えやすい。",
+    "publicPath": "q/ichimon/s/ichi-0638/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0639",
     "field": "limit",
-    "statement": "面談中の沈黙は、相手が考えや気持ちを整理している時間であることが多い。",
-    "correctAnswer": true,
-    "exp": "面談中の沈黙は、相手が考えや気持ちを整理している時間であることが多く、急かさずに待つ。解決策を話したり、次の話題に移ったり、質問を続けたりして沈黙を埋めると、相手の話を遮ることになる。",
-    "publicPath": "q/ichimon/s/ichi-0639/index.html"
+    "statement": "閉じられた質問は話を広げにくいため、面談では用いず、すべて開かれた質問で進めることが望ましい。",
+    "correctAnswer": false,
+    "exp": "面談中の沈黙は、相手が考えや気持ちを整理している時間であることが多く、関心を向けたまま待つ。要約は話の区切りごとに行える。閉じられた質問は、口数の少ない相手や疲れている相手にも答えやすい。",
+    "publicPath": "q/ichimon/s/ichi-0639/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0640",
     "field": "limit",
-    "statement": "面談で部下が長く沈黙したときは、沈黙を埋めるため、こちらから積極的に意見や解決策を話す。",
-    "correctAnswer": false,
-    "exp": "面談中の沈黙は、相手が考えや気持ちを整理している時間であることが多く、急かさずに待つ。解決策を話したり、次の話題に移ったり、質問を続けたりして沈黙を埋めると、相手の話を遮ることになる。",
-    "publicPath": "q/ichimon/s/ichi-0640/index.html"
+    "statement": "口数の少ない相手や疲れている相手には、「はい」「いいえ」で答えられる閉じられた質問を組み合わせることも有効である。",
+    "correctAnswer": true,
+    "exp": "面談中の沈黙は、相手が考えや気持ちを整理している時間であることが多く、関心を向けたまま待つ。要約は話の区切りごとに行える。閉じられた質問は、口数の少ない相手や疲れている相手にも答えやすい。",
+    "publicPath": "q/ichimon/s/ichi-0640/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0641",
@@ -5126,7 +5766,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下から受けた相談の内容は、すべて上司に逐一報告しなければならない。",
     "correctAnswer": false,
     "exp": "相談内容は原則として秘密を守るが、本人の生命や安全に関わる場合などは専門家や関係者との情報共有が優先される。その場合も、可能であれば本人に事前に説明し、同意を得ることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0641/index.html"
+    "publicPath": "q/ichimon/s/ichi-0641/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0642",
@@ -5134,7 +5775,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "原則として相談内容は秘密を守るが、本人の生命に関わる場合など緊急性が高い場合は専門家・関係者への情報共有を行う。",
     "correctAnswer": true,
     "exp": "相談内容は原則として秘密を守るが、本人の生命や安全に関わる場合などは専門家や関係者との情報共有が優先される。その場合も、可能であれば本人に事前に説明し、同意を得ることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0642/index.html"
+    "publicPath": "q/ichimon/s/ichi-0642/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0643",
@@ -5142,7 +5784,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下から受けた相談の内容は、本人の生命に関わる場合を含め、いかなる状況でも他者と共有してはならない。",
     "correctAnswer": false,
     "exp": "相談内容は原則として秘密を守るが、本人の生命や安全に関わる場合などは専門家や関係者との情報共有が優先される。その場合も、可能であれば本人に事前に説明し、同意を得ることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0643/index.html"
+    "publicPath": "q/ichimon/s/ichi-0643/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0644",
@@ -5150,7 +5793,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "生命に関わる場合に情報を共有するときも、可能であれば本人に事前に説明し、同意を得ることが望ましい。",
     "correctAnswer": true,
     "exp": "相談内容は原則として秘密を守るが、本人の生命や安全に関わる場合などは専門家や関係者との情報共有が優先される。その場合も、可能であれば本人に事前に説明し、同意を得ることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-0644/index.html"
+    "publicPath": "q/ichimon/s/ichi-0644/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0645",
@@ -5158,7 +5802,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下が精神科などの受診を強く拒否している場合は、それ以上関与せず放置する。",
     "correctAnswer": false,
     "exp": "精神科などの受診を拒否する部下とも関係を断たずに継続的に関わり、産業医との面談やかかりつけ医への受診など、受け入れやすい方法から提案する。強制は関係を悪化させやすい。",
-    "publicPath": "q/ichimon/s/ichi-0645/index.html"
+    "publicPath": "q/ichimon/s/ichi-0645/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0646",
@@ -5166,7 +5811,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "受診を強制することは難しいが、関係を維持しながら、かかりつけ医受診やもう少し様子を見ることを提案し、継続的に声をかける。",
     "correctAnswer": true,
     "exp": "精神科などの受診を拒否する部下とも関係を断たずに継続的に関わり、産業医との面談やかかりつけ医への受診など、受け入れやすい方法から提案する。強制は関係を悪化させやすい。",
-    "publicPath": "q/ichimon/s/ichi-0646/index.html"
+    "publicPath": "q/ichimon/s/ichi-0646/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0647",
@@ -5174,7 +5820,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下が精神科などの受診を強く拒否している場合は、会社の命令として直ちに強制的に受診させる。",
     "correctAnswer": false,
     "exp": "精神科などの受診を拒否する部下とも関係を断たずに継続的に関わり、産業医との面談やかかりつけ医への受診など、受け入れやすい方法から提案する。強制は関係を悪化させやすい。",
-    "publicPath": "q/ichimon/s/ichi-0647/index.html"
+    "publicPath": "q/ichimon/s/ichi-0647/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0648",
@@ -5182,7 +5829,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "受診を拒否する部下には、まず産業医との面談を勧めるなど、受け入れやすい方法から提案する。",
     "correctAnswer": true,
     "exp": "精神科などの受診を拒否する部下とも関係を断たずに継続的に関わり、産業医との面談やかかりつけ医への受診など、受け入れやすい方法から提案する。強制は関係を悪化させやすい。",
-    "publicPath": "q/ichimon/s/ichi-0648/index.html"
+    "publicPath": "q/ichimon/s/ichi-0648/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0649",
@@ -5190,7 +5838,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事例相談では必ず本人の実名を使い、詳細な個人情報を全て提供する。",
     "correctAnswer": false,
     "exp": "管理監督者は、個人が特定されない形であれば、本人の同意がなくても産業医に事例相談ができる。個人を特定する情報を伝える場合は本人の同意が原則。相談は不調が疑われる早い段階から行う。",
-    "publicPath": "q/ichimon/s/ichi-0649/index.html"
+    "publicPath": "q/ichimon/s/ichi-0649/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0650",
@@ -5198,7 +5847,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "個人が特定されない形で相談する場合は、事前の本人同意は必ずしも必要ではない。",
     "correctAnswer": true,
     "exp": "管理監督者は、個人が特定されない形であれば、本人の同意がなくても産業医に事例相談ができる。個人を特定する情報を伝える場合は本人の同意が原則。相談は不調が疑われる早い段階から行う。",
-    "publicPath": "q/ichimon/s/ichi-0650/index.html"
+    "publicPath": "q/ichimon/s/ichi-0650/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0651",
@@ -5206,7 +5856,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医への相談は、部下の不調が疑われる早い段階から行うことが望ましい。",
     "correctAnswer": true,
     "exp": "管理監督者は、個人が特定されない形であれば、本人の同意がなくても産業医に事例相談ができる。個人を特定する情報を伝える場合は本人の同意が原則。相談は不調が疑われる早い段階から行う。",
-    "publicPath": "q/ichimon/s/ichi-0651/index.html"
+    "publicPath": "q/ichimon/s/ichi-0651/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0652",
@@ -5214,7 +5865,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医への相談内容は、後日本人に開示しなければならない。",
     "correctAnswer": false,
     "exp": "管理監督者は、個人が特定されない形であれば、本人の同意がなくても産業医に事例相談ができる。個人を特定する情報を伝える場合は本人の同意が原則。相談は不調が疑われる早い段階から行う。",
-    "publicPath": "q/ichimon/s/ichi-0652/index.html"
+    "publicPath": "q/ichimon/s/ichi-0652/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0653",
@@ -5222,7 +5874,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医は事業者に対して健康管理上必要な措置について勧告することができ、事業者は勧告を尊重しなければならない。",
     "correctAnswer": true,
     "exp": "産業医は必要があると認めるときは事業者に健康管理等について勧告でき、事業者は尊重しなければならない。勧告を受けた事業者は衛生委員会等に報告する。産業医は勧告前に事業者の意見を求める。記録の保存期間は3年間。",
-    "publicPath": "q/ichimon/s/ichi-0653/index.html"
+    "publicPath": "q/ichimon/s/ichi-0653/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0654",
@@ -5230,7 +5883,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医の勧告は参考意見にとどまり、事業者はこれを無視しても問題ない。",
     "correctAnswer": false,
     "exp": "産業医は必要があると認めるときは事業者に健康管理等について勧告でき、事業者は尊重しなければならない。勧告を受けた事業者は衛生委員会等に報告する。産業医は勧告前に事業者の意見を求める。記録の保存期間は3年間。",
-    "publicPath": "q/ichimon/s/ichi-0654/index.html"
+    "publicPath": "q/ichimon/s/ichi-0654/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0655",
@@ -5238,7 +5892,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業者は、産業医の勧告を受けたときは、その内容等を衛生委員会等に報告しなければならない。",
     "correctAnswer": true,
     "exp": "産業医は必要があると認めるときは事業者に健康管理等について勧告でき、事業者は尊重しなければならない。勧告を受けた事業者は衛生委員会等に報告する。産業医は勧告前に事業者の意見を求める。記録の保存期間は3年間。",
-    "publicPath": "q/ichimon/s/ichi-0655/index.html"
+    "publicPath": "q/ichimon/s/ichi-0655/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0656",
@@ -5246,7 +5901,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医の勧告は労働者に直接向けられるものであり、事業者には関係しない。",
     "correctAnswer": false,
     "exp": "産業医は必要があると認めるときは事業者に健康管理等について勧告でき、事業者は尊重しなければならない。勧告を受けた事業者は衛生委員会等に報告する。産業医は勧告前に事業者の意見を求める。記録の保存期間は3年間。",
-    "publicPath": "q/ichimon/s/ichi-0656/index.html"
+    "publicPath": "q/ichimon/s/ichi-0656/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0657",
@@ -5254,7 +5910,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "社内で心の健康相談を担う人材としては、保健師・看護師・精神保健福祉士・産業カウンセラー等の資格を持つスタッフが適している。",
     "correctAnswer": true,
     "exp": "事業場内メンタルヘルス推進担当者は、衛生管理者等や常勤の保健師等から選任することが望ましい。労働者の個人情報を扱うため、解雇・昇進・異動に直接の権限を持つ監督的地位の者を選任することは適当でない。",
-    "publicPath": "q/ichimon/s/ichi-0657/index.html"
+    "publicPath": "q/ichimon/s/ichi-0657/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0658",
@@ -5262,7 +5919,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "社内で心の健康相談を担う人材としては、専門資格の有無にかかわらず、経験年数10年以上のベテラン社員が最も適している。",
     "correctAnswer": false,
     "exp": "事業場内メンタルヘルス推進担当者は、衛生管理者等や常勤の保健師等から選任することが望ましい。労働者の個人情報を扱うため、解雇・昇進・異動に直接の権限を持つ監督的地位の者を選任することは適当でない。",
-    "publicPath": "q/ichimon/s/ichi-0658/index.html"
+    "publicPath": "q/ichimon/s/ichi-0658/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0659",
@@ -5270,7 +5928,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "社内で心の健康相談を担う人材としては、職場の親睦会の幹事が最も適している。",
     "correctAnswer": false,
     "exp": "事業場内メンタルヘルス推進担当者は、衛生管理者等や常勤の保健師等から選任することが望ましい。労働者の個人情報を扱うため、解雇・昇進・異動に直接の権限を持つ監督的地位の者を選任することは適当でない。",
-    "publicPath": "q/ichimon/s/ichi-0659/index.html"
+    "publicPath": "q/ichimon/s/ichi-0659/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0660",
@@ -5278,7 +5937,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業場内メンタルヘルス推進担当者に、労働者の解雇や昇進について直接の権限を持つ者を選任することは適当でない。",
     "correctAnswer": true,
     "exp": "事業場内メンタルヘルス推進担当者は、衛生管理者等や常勤の保健師等から選任することが望ましい。労働者の個人情報を扱うため、解雇・昇進・異動に直接の権限を持つ監督的地位の者を選任することは適当でない。",
-    "publicPath": "q/ichimon/s/ichi-0660/index.html"
+    "publicPath": "q/ichimon/s/ichi-0660/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0661",
@@ -5286,7 +5946,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "常時50人以上の事業場は、選任すべき産業医の代わりに、地域産業保健センターの医師を産業医として届け出ることができる。",
     "correctAnswer": false,
     "exp": "地域産業保健センター（地さんぽ）は、労働者健康安全機構が運営する産業保健総合支援センターの地域窓口で、常時50人未満の小規模事業場を主な対象に、健康相談や長時間労働者・高ストレス者への面接指導などを無料で行う。事業者だけでなく労働者からの相談にも応じる。50人以上の事業場の産業医の選任義務を代わりに果たすものではない。",
-    "publicPath": "q/ichimon/s/ichi-0661/index.html"
+    "publicPath": "q/ichimon/s/ichi-0661/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0662",
@@ -5294,7 +5955,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "地域産業保健センターは、常時50人未満の小規模事業場を主な対象として、健康相談や長時間労働者への面接指導などを無料で行っている。",
     "correctAnswer": true,
     "exp": "地域産業保健センター（地さんぽ）は、労働者健康安全機構が運営する産業保健総合支援センターの地域窓口で、常時50人未満の小規模事業場を主な対象に、健康相談や長時間労働者・高ストレス者への面接指導などを無料で行う。事業者だけでなく労働者からの相談にも応じる。50人以上の事業場の産業医の選任義務を代わりに果たすものではない。",
-    "publicPath": "q/ichimon/s/ichi-0662/index.html"
+    "publicPath": "q/ichimon/s/ichi-0662/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0663",
@@ -5302,7 +5964,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "地域産業保健センターは各都道府県労働局に置かれ、労働基準監督官が相談に対応している。",
     "correctAnswer": false,
     "exp": "地域産業保健センター（地さんぽ）は、労働者健康安全機構が運営する産業保健総合支援センターの地域窓口で、常時50人未満の小規模事業場を主な対象に、健康相談や長時間労働者・高ストレス者への面接指導などを無料で行う。事業者だけでなく労働者からの相談にも応じる。50人以上の事業場の産業医の選任義務を代わりに果たすものではない。",
-    "publicPath": "q/ichimon/s/ichi-0663/index.html"
+    "publicPath": "q/ichimon/s/ichi-0663/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0664",
@@ -5310,7 +5973,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "地域産業保健センターは、小規模事業場の事業者だけでなく、そこで働く労働者からの健康相談にも応じている。",
     "correctAnswer": true,
     "exp": "地域産業保健センター（地さんぽ）は、労働者健康安全機構が運営する産業保健総合支援センターの地域窓口で、常時50人未満の小規模事業場を主な対象に、健康相談や長時間労働者・高ストレス者への面接指導などを無料で行う。事業者だけでなく労働者からの相談にも応じる。50人以上の事業場の産業医の選任義務を代わりに果たすものではない。",
-    "publicPath": "q/ichimon/s/ichi-0664/index.html"
+    "publicPath": "q/ichimon/s/ichi-0664/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0665",
@@ -5318,7 +5982,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「こころの耳」は民間企業が運営する有料の相談サービスである。",
     "correctAnswer": false,
     "exp": "「こころの耳」は、厚生労働省が運営する働く人のメンタルヘルスに関するポータルサイトで、電話・SNS・メールによる相談窓口を設けている。労働者本人や家族、事業者などが無料で利用でき、セルフチェックなども掲載されている。",
-    "publicPath": "q/ichimon/s/ichi-0665/index.html"
+    "publicPath": "q/ichimon/s/ichi-0665/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0666",
@@ -5326,7 +5991,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「こころの耳」は厚生労働省が運営する働く人のメンタルヘルスに関するポータルサイトであり、電話・SNS相談等も提供している。",
     "correctAnswer": true,
     "exp": "「こころの耳」は、厚生労働省が運営する働く人のメンタルヘルスに関するポータルサイトで、電話・SNS・メールによる相談窓口を設けている。労働者本人や家族、事業者などが無料で利用でき、セルフチェックなども掲載されている。",
-    "publicPath": "q/ichimon/s/ichi-0666/index.html"
+    "publicPath": "q/ichimon/s/ichi-0666/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0667",
@@ -5334,7 +6000,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「こころの耳」には、ストレスのセルフチェックなど、労働者本人が利用できる情報も掲載されている。",
     "correctAnswer": true,
     "exp": "「こころの耳」は、厚生労働省が運営する働く人のメンタルヘルスに関するポータルサイトで、電話・SNS・メールによる相談窓口を設けている。労働者本人や家族、事業者などが無料で利用でき、セルフチェックなども掲載されている。",
-    "publicPath": "q/ichimon/s/ichi-0667/index.html"
+    "publicPath": "q/ichimon/s/ichi-0667/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0668",
@@ -5342,7 +6009,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「こころの耳」では医薬品の処方も行っている。",
     "correctAnswer": false,
     "exp": "「こころの耳」は、厚生労働省が運営する働く人のメンタルヘルスに関するポータルサイトで、電話・SNS・メールによる相談窓口を設けている。労働者本人や家族、事業者などが無料で利用でき、セルフチェックなども掲載されている。",
-    "publicPath": "q/ichimon/s/ichi-0668/index.html"
+    "publicPath": "q/ichimon/s/ichi-0668/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0669",
@@ -5350,7 +6018,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "デイケアは入院患者のみを対象としたプログラムである。",
     "correctAnswer": false,
     "exp": "精神科デイケアは、精神科の医療機関が外来の患者に提供するリハビリテーションで、医師が必要と判断した患者が日中に通所し、生活リズムの回復や対人関係の練習などに取り組む。医療保険の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0669/index.html"
+    "publicPath": "q/ichimon/s/ichi-0669/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0670",
@@ -5358,7 +6027,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "デイケアは外来患者が日中に通所して生活リズムの回復・社会復帰のリハビリを行うプログラムである。",
     "correctAnswer": true,
     "exp": "精神科デイケアは、精神科の医療機関が外来の患者に提供するリハビリテーションで、医師が必要と判断した患者が日中に通所し、生活リズムの回復や対人関係の練習などに取り組む。医療保険の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0670/index.html"
+    "publicPath": "q/ichimon/s/ichi-0670/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0671",
@@ -5366,7 +6036,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神科デイケアは、医療保険の対象となるリハビリテーションである。",
     "correctAnswer": true,
     "exp": "精神科デイケアは、精神科の医療機関が外来の患者に提供するリハビリテーションで、医師が必要と判断した患者が日中に通所し、生活リズムの回復や対人関係の練習などに取り組む。医療保険の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0671/index.html"
+    "publicPath": "q/ichimon/s/ichi-0671/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0672",
@@ -5374,7 +6045,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神科デイケアは医療機関が行うものではないため、医師の判断がなくても誰でも自由に参加できる。",
     "correctAnswer": false,
     "exp": "精神科デイケアは、精神科の医療機関が外来の患者に提供するリハビリテーションで、医師が必要と判断した患者が日中に通所し、生活リズムの回復や対人関係の練習などに取り組む。医療保険の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0672/index.html"
+    "publicPath": "q/ichimon/s/ichi-0672/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0673",
@@ -5382,7 +6054,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "休職者向けのリワーク支援は、公共職業安定所（ハローワーク）のみが提供している。",
     "correctAnswer": false,
     "exp": "リワーク支援は、休職者が生活リズムの安定、集中力の回復、再発予防のための心理教育などに取り組むプログラムで、医療機関（デイケアなど）、地域障害者職業センター、EAP機関などが提供する。地域障害者職業センターの利用に障害者手帳は不要。",
-    "publicPath": "q/ichimon/s/ichi-0673/index.html"
+    "publicPath": "q/ichimon/s/ichi-0673/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0674",
@@ -5390,7 +6063,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "休職者向けのリワーク支援は、精神科病院・クリニックや地域障害者職業センター等が提供している。",
     "correctAnswer": true,
     "exp": "リワーク支援は、休職者が生活リズムの安定、集中力の回復、再発予防のための心理教育などに取り組むプログラムで、医療機関（デイケアなど）、地域障害者職業センター、EAP機関などが提供する。地域障害者職業センターの利用に障害者手帳は不要。",
-    "publicPath": "q/ichimon/s/ichi-0674/index.html"
+    "publicPath": "q/ichimon/s/ichi-0674/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0675",
@@ -5398,7 +6072,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "休職者向けのリワーク支援は、労働基準監督署が実施主体となっている。",
     "correctAnswer": false,
     "exp": "リワーク支援は、休職者が生活リズムの安定、集中力の回復、再発予防のための心理教育などに取り組むプログラムで、医療機関（デイケアなど）、地域障害者職業センター、EAP機関などが提供する。地域障害者職業センターの利用に障害者手帳は不要。",
-    "publicPath": "q/ichimon/s/ichi-0675/index.html"
+    "publicPath": "q/ichimon/s/ichi-0675/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0676",
@@ -5406,7 +6081,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "地域障害者職業センターのリワーク支援は、障害者手帳を所持していなくても利用できる。",
     "correctAnswer": true,
     "exp": "リワーク支援は、休職者が生活リズムの安定、集中力の回復、再発予防のための心理教育などに取り組むプログラムで、医療機関（デイケアなど）、地域障害者職業センター、EAP機関などが提供する。地域障害者職業センターの利用に障害者手帳は不要。",
-    "publicPath": "q/ichimon/s/ichi-0676/index.html"
+    "publicPath": "q/ichimon/s/ichi-0676/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0677",
@@ -5414,7 +6090,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業保健総合支援センター（さんぽセンター）は、労働者の解雇手続きの支援を主な業務としている。",
     "correctAnswer": false,
     "exp": "産業保健総合支援センターは、独立行政法人労働者健康安全機構が各都道府県に設置し、産業保健スタッフや事業者に相談対応、研修、情報提供を原則無料で行う。規模を問わず利用でき、行政上の権限は持たない。",
-    "publicPath": "q/ichimon/s/ichi-0677/index.html"
+    "publicPath": "q/ichimon/s/ichi-0677/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0678",
@@ -5422,7 +6099,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業保健総合支援センター（さんぽセンター）は、産業保健に関する相談・情報提供・研修や、産業保健スタッフへの専門的な支援を行う。",
     "correctAnswer": true,
     "exp": "産業保健総合支援センターは、独立行政法人労働者健康安全機構が各都道府県に設置し、産業保健スタッフや事業者に相談対応、研修、情報提供を原則無料で行う。規模を問わず利用でき、行政上の権限は持たない。",
-    "publicPath": "q/ichimon/s/ichi-0678/index.html"
+    "publicPath": "q/ichimon/s/ichi-0678/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0679",
@@ -5430,7 +6108,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業保健総合支援センター（さんぽセンター）は、労災保険の給付申請手続きの代行を主な業務としている。",
     "correctAnswer": false,
     "exp": "産業保健総合支援センターは、独立行政法人労働者健康安全機構が各都道府県に設置し、産業保健スタッフや事業者に相談対応、研修、情報提供を原則無料で行う。規模を問わず利用でき、行政上の権限は持たない。",
-    "publicPath": "q/ichimon/s/ichi-0679/index.html"
+    "publicPath": "q/ichimon/s/ichi-0679/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0680",
@@ -5438,7 +6117,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業保健総合支援センターは、独立行政法人労働者健康安全機構が運営している。",
     "correctAnswer": true,
     "exp": "産業保健総合支援センターは、独立行政法人労働者健康安全機構が各都道府県に設置し、産業保健スタッフや事業者に相談対応、研修、情報提供を原則無料で行う。規模を問わず利用でき、行政上の権限は持たない。",
-    "publicPath": "q/ichimon/s/ichi-0680/index.html"
+    "publicPath": "q/ichimon/s/ichi-0680/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0681",
@@ -5446,7 +6126,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援で主治医と産業医の意見が異なる場合は、常に主治医の意見を優先する。",
     "correctAnswer": false,
     "exp": "主治医は治療の観点、産業医は職場の状況や業務の内容を踏まえた観点から意見を述べ、事業者が両者の意見と職場の状況を踏まえて最終的に判断する。主治医と産業医の連携には本人の同意が必要。",
-    "publicPath": "q/ichimon/s/ichi-0681/index.html"
+    "publicPath": "q/ichimon/s/ichi-0681/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0682",
@@ -5454,7 +6135,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "主治医は治療の観点、産業医は職場・業務の観点からそれぞれ意見を述べ、事業者が最終判断を行う。",
     "correctAnswer": true,
     "exp": "主治医は治療の観点、産業医は職場の状況や業務の内容を踏まえた観点から意見を述べ、事業者が両者の意見と職場の状況を踏まえて最終的に判断する。主治医と産業医の連携には本人の同意が必要。",
-    "publicPath": "q/ichimon/s/ichi-0682/index.html"
+    "publicPath": "q/ichimon/s/ichi-0682/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0683",
@@ -5462,7 +6144,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医は、主治医の意見に加えて、職場の状況や業務の内容を踏まえて、就業上の措置について意見を述べる。",
     "correctAnswer": true,
     "exp": "主治医は治療の観点、産業医は職場の状況や業務の内容を踏まえた観点から意見を述べ、事業者が両者の意見と職場の状況を踏まえて最終的に判断する。主治医と産業医の連携には本人の同意が必要。",
-    "publicPath": "q/ichimon/s/ichi-0683/index.html"
+    "publicPath": "q/ichimon/s/ichi-0683/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0684",
@@ -5470,7 +6153,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "主治医と産業医の連携は本人の同意なしに行うことが推奨される。",
     "correctAnswer": false,
     "exp": "主治医は治療の観点、産業医は職場の状況や業務の内容を踏まえた観点から意見を述べ、事業者が両者の意見と職場の状況を踏まえて最終的に判断する。主治医と産業医の連携には本人の同意が必要。",
-    "publicPath": "q/ichimon/s/ichi-0684/index.html"
+    "publicPath": "q/ichimon/s/ichi-0684/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0685",
@@ -5478,7 +6162,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "復職後の業務内容・業務量の段階的な調整方針は、職場復帰支援プランの作成にあたって考慮すべき事項である。",
     "correctAnswer": true,
     "exp": "職場復帰支援プランでは、業務上のサポートの内容や方法、就業上の配慮、フォローアップの方法と就業上の配慮の見直しの時期、試し出勤制度や事業場外資源の利用などを検討する。人事評価や本人の責任は含めない。",
-    "publicPath": "q/ichimon/s/ichi-0685/index.html"
+    "publicPath": "q/ichimon/s/ichi-0685/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0686",
@@ -5486,7 +6171,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "フォローアップの頻度・担当者・期間は、職場復帰支援プランの作成にあたって考慮すべき事項である。",
     "correctAnswer": true,
     "exp": "職場復帰支援プランでは、業務上のサポートの内容や方法、就業上の配慮、フォローアップの方法と就業上の配慮の見直しの時期、試し出勤制度や事業場外資源の利用などを検討する。人事評価や本人の責任は含めない。",
-    "publicPath": "q/ichimon/s/ichi-0686/index.html"
+    "publicPath": "q/ichimon/s/ichi-0686/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0687",
@@ -5494,7 +6180,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "本人の過去の診断書や入院履歴の詳細な記録は、職場復帰支援プランに盛り込むべき事項である。",
     "correctAnswer": false,
     "exp": "職場復帰支援プランでは、業務上のサポートの内容や方法、就業上の配慮、フォローアップの方法と就業上の配慮の見直しの時期、試し出勤制度や事業場外資源の利用などを検討する。人事評価や本人の責任は含めない。",
-    "publicPath": "q/ichimon/s/ichi-0687/index.html"
+    "publicPath": "q/ichimon/s/ichi-0687/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0688",
@@ -5502,103 +6189,116 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援プランには、休業に至った原因に対する本人の責任を明記する。",
     "correctAnswer": false,
     "exp": "職場復帰支援プランでは、業務上のサポートの内容や方法、就業上の配慮、フォローアップの方法と就業上の配慮の見直しの時期、試し出勤制度や事業場外資源の利用などを検討する。人事評価や本人の責任は含めない。",
-    "publicPath": "q/ichimon/s/ichi-0688/index.html"
+    "publicPath": "q/ichimon/s/ichi-0688/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0689",
     "field": "limit",
-    "statement": "復職者には、休業のことを早く忘れさせるため、以前とまったく同じ業務・環境にすぐに戻す。",
+    "statement": "職場復帰支援の手引きでは、職場復帰は原則として休業前とは異なる職場に異動させることを前提に進めることが望ましいとされている。",
     "correctAnswer": false,
-    "exp": "再燃・再発の防止には、生活リズムや睡眠の維持、服薬の継続、ストレスへの対処などを本人と確認し、無理のないペースで業務に慣れるよう支援する。服薬の継続や中止は主治医の判断に従う。",
-    "publicPath": "q/ichimon/s/ichi-0689/index.html"
+    "exp": "手引きは職場復帰先について「まずは元の職場への復帰」を原則とする。就業上の配慮の例には、短時間勤務、軽作業や定型業務への従事、残業・深夜業務の禁止、出張制限、窓口業務や苦情処理業務等の制限などがある。ただし、同僚に比べて過度に業務を軽減されることは、かえってストレスを高めることもある。",
+    "publicPath": "q/ichimon/s/ichi-0689/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0690",
     "field": "limit",
-    "statement": "復職者の再燃・再発を防ぐため、生活リズム・睡眠・服薬の継続などを本人と確認し、無理のないペースで業務に慣れるよう支援する。",
+    "statement": "職場復帰支援の手引きでは、就業上の配慮の例として、窓口業務や苦情処理業務などの業務の制限が挙げられている。",
     "correctAnswer": true,
-    "exp": "再燃・再発の防止には、生活リズムや睡眠の維持、服薬の継続、ストレスへの対処などを本人と確認し、無理のないペースで業務に慣れるよう支援する。服薬の継続や中止は主治医の判断に従う。",
-    "publicPath": "q/ichimon/s/ichi-0690/index.html"
+    "exp": "手引きは職場復帰先について「まずは元の職場への復帰」を原則とする。就業上の配慮の例には、短時間勤務、軽作業や定型業務への従事、残業・深夜業務の禁止、出張制限、窓口業務や苦情処理業務等の制限などがある。ただし、同僚に比べて過度に業務を軽減されることは、かえってストレスを高めることもある。",
+    "publicPath": "q/ichimon/s/ichi-0690/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0691",
     "field": "limit",
-    "statement": "復職者の再発を防ぐため、業務評価を厳しくして緊張感を持たせる。",
+    "statement": "復職直後は、業務への意欲を早く取り戻せるよう、定型業務よりも新しいプロジェクトなど本人の意欲を引き出す業務を中心に割り当てる。",
     "correctAnswer": false,
-    "exp": "再燃・再発の防止には、生活リズムや睡眠の維持、服薬の継続、ストレスへの対処などを本人と確認し、無理のないペースで業務に慣れるよう支援する。服薬の継続や中止は主治医の判断に従う。",
-    "publicPath": "q/ichimon/s/ichi-0691/index.html"
+    "exp": "手引きは職場復帰先について「まずは元の職場への復帰」を原則とする。就業上の配慮の例には、短時間勤務、軽作業や定型業務への従事、残業・深夜業務の禁止、出張制限、窓口業務や苦情処理業務等の制限などがある。ただし、同僚に比べて過度に業務を軽減されることは、かえってストレスを高めることもある。",
+    "publicPath": "q/ichimon/s/ichi-0691/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0692",
     "field": "limit",
-    "statement": "復職後の服薬の継続や中止は、主治医の判断に従うことが基本である。",
+    "statement": "職場復帰支援の手引きでは、同僚に比べて過度に業務を軽減されることは、かえってストレスを高めることもあるとされている。",
     "correctAnswer": true,
-    "exp": "再燃・再発の防止には、生活リズムや睡眠の維持、服薬の継続、ストレスへの対処などを本人と確認し、無理のないペースで業務に慣れるよう支援する。服薬の継続や中止は主治医の判断に従う。",
-    "publicPath": "q/ichimon/s/ichi-0692/index.html"
+    "exp": "手引きは職場復帰先について「まずは元の職場への復帰」を原則とする。就業上の配慮の例には、短時間勤務、軽作業や定型業務への従事、残業・深夜業務の禁止、出張制限、窓口業務や苦情処理業務等の制限などがある。ただし、同僚に比べて過度に業務を軽減されることは、かえってストレスを高めることもある。",
+    "publicPath": "q/ichimon/s/ichi-0692/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0693",
     "field": "limit",
-    "statement": "復職後のフォローアップ面談では、業務の成果だけを評価し、体調には触れない。",
+    "statement": "職場復帰支援の第3ステップでは、主治医の意見は第2ステップで確認済みであるため、産業医等が主治医から改めて意見を収集することはない。",
     "correctAnswer": false,
-    "exp": "復職後のフォローアップ面談では、睡眠・食欲・通院や服薬の状況・業務の負荷感・職場での人間関係など、心身と仕事の状況を幅広く確認する。過去の経緯よりも現在の状態の把握を中心とし、管理監督者も関わる。",
-    "publicPath": "q/ichimon/s/ichi-0693/index.html"
+    "exp": "手引きの第3ステップでは、本人の職場復帰に対する意思の確認、産業医等による主治医からの意見収集、労働者の状態等の評価、職場環境等の評価を行い、職場復帰の可否を判断して職場復帰支援プランを作成する。主治医の診断書は病状の回復程度で判断していることが多く、職場で求められる業務遂行能力まで回復しているとは限らない。",
+    "publicPath": "q/ichimon/s/ichi-0693/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0694",
     "field": "limit",
-    "statement": "復職後のフォローアップ面談では、睡眠・食欲・通院状況・業務の負荷感・職場での人間関係など、心身と仕事の状況を幅広く確認する。",
+    "statement": "職場復帰支援の第3ステップの「情報の収集と評価」には、労働者の職場復帰に対する意思の確認が含まれる。",
     "correctAnswer": true,
-    "exp": "復職後のフォローアップ面談では、睡眠・食欲・通院や服薬の状況・業務の負荷感・職場での人間関係など、心身と仕事の状況を幅広く確認する。過去の経緯よりも現在の状態の把握を中心とし、管理監督者も関わる。",
-    "publicPath": "q/ichimon/s/ichi-0694/index.html"
+    "exp": "手引きの第3ステップでは、本人の職場復帰に対する意思の確認、産業医等による主治医からの意見収集、労働者の状態等の評価、職場環境等の評価を行い、職場復帰の可否を判断して職場復帰支援プランを作成する。主治医の診断書は病状の回復程度で判断していることが多く、職場で求められる業務遂行能力まで回復しているとは限らない。",
+    "publicPath": "q/ichimon/s/ichi-0694/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0695",
     "field": "limit",
-    "statement": "復職後のフォローアップ面談では、再発を防ぐため、休職に至った理由を毎回詳しく聞く。",
+    "statement": "職場復帰支援の第3ステップでは、労働者の状態のみを評価し、業務や職場の人間関係などの職場環境等の評価は行わない。",
     "correctAnswer": false,
-    "exp": "復職後のフォローアップ面談では、睡眠・食欲・通院や服薬の状況・業務の負荷感・職場での人間関係など、心身と仕事の状況を幅広く確認する。過去の経緯よりも現在の状態の把握を中心とし、管理監督者も関わる。",
-    "publicPath": "q/ichimon/s/ichi-0695/index.html"
+    "exp": "手引きの第3ステップでは、本人の職場復帰に対する意思の確認、産業医等による主治医からの意見収集、労働者の状態等の評価、職場環境等の評価を行い、職場復帰の可否を判断して職場復帰支援プランを作成する。主治医の診断書は病状の回復程度で判断していることが多く、職場で求められる業務遂行能力まで回復しているとは限らない。",
+    "publicPath": "q/ichimon/s/ichi-0695/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0696",
     "field": "limit",
-    "statement": "フォローアップ面談では、通院や服薬が継続できているかも確認する。",
+    "statement": "職場復帰支援の手引きでは、主治医の診断書の内容は、職場で求められる業務遂行能力まで回復しているか否かの判断とは限らないことに留意するとされている。",
     "correctAnswer": true,
-    "exp": "復職後のフォローアップ面談では、睡眠・食欲・通院や服薬の状況・業務の負荷感・職場での人間関係など、心身と仕事の状況を幅広く確認する。過去の経緯よりも現在の状態の把握を中心とし、管理監督者も関わる。",
-    "publicPath": "q/ichimon/s/ichi-0696/index.html"
+    "exp": "手引きの第3ステップでは、本人の職場復帰に対する意思の確認、産業医等による主治医からの意見収集、労働者の状態等の評価、職場環境等の評価を行い、職場復帰の可否を判断して職場復帰支援プランを作成する。主治医の診断書は病状の回復程度で判断していることが多く、職場で求められる業務遂行能力まで回復しているとは限らない。",
+    "publicPath": "q/ichimon/s/ichi-0696/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0697",
     "field": "limit",
-    "statement": "職場復帰した労働者は、早く職場に溶け込めるよう、復職当初から通常の業務・勤務時間で始める。",
+    "statement": "模擬出勤とは、職場復帰の判断の前に、本来の職場に短時間出勤して軽作業を行い、職場の状況を確認することをいう。",
     "correctAnswer": false,
-    "exp": "段階的な職場復帰では、復職当初は業務量や勤務時間を軽減して始め、体調や適応状況に応じて通常業務へ移行する。移行期間は一律ではなく、本人の状態や主治医・産業医の意見を踏まえて個別に判断する。",
-    "publicPath": "q/ichimon/s/ichi-0697/index.html"
+    "exp": "模擬出勤はデイケア等で勤務時間帯を過ごすこと、通勤訓練は自宅から職場の近くまで移動して一定時間過ごし帰宅すること、試し出勤は本来の職場などに試験的に出勤すること。処遇や災害時の対応などはあらかじめルールを定めておく。",
+    "publicPath": "q/ichimon/s/ichi-0697/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0698",
     "field": "limit",
-    "statement": "最初は業務量・勤務時間を軽減した状態からスタートし、体調・適応状況に応じて段階的に通常業務へ移行する。",
+    "statement": "試し出勤制度等を設ける場合は、この間の処遇や災害が発生した場合の対応などについて、あらかじめ労使間で検討し、ルールを定めておく必要がある。",
     "correctAnswer": true,
-    "exp": "段階的な職場復帰では、復職当初は業務量や勤務時間を軽減して始め、体調や適応状況に応じて通常業務へ移行する。移行期間は一律ではなく、本人の状態や主治医・産業医の意見を踏まえて個別に判断する。",
-    "publicPath": "q/ichimon/s/ichi-0698/index.html"
+    "exp": "模擬出勤はデイケア等で勤務時間帯を過ごすこと、通勤訓練は自宅から職場の近くまで移動して一定時間過ごし帰宅すること、試し出勤は本来の職場などに試験的に出勤すること。処遇や災害時の対応などはあらかじめルールを定めておく。",
+    "publicPath": "q/ichimon/s/ichi-0698/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0699",
     "field": "limit",
-    "statement": "段階的な職場復帰は本人の甘えを助長するため、最初から通常業務で対応すべきである。",
+    "statement": "通勤訓練とは、職場に出勤し、通常の勤務時間の半分程度の時間、実際の業務に従事して勤務に慣れることをいう。",
     "correctAnswer": false,
-    "exp": "段階的な職場復帰では、復職当初は業務量や勤務時間を軽減して始め、体調や適応状況に応じて通常業務へ移行する。移行期間は一律ではなく、本人の状態や主治医・産業医の意見を踏まえて個別に判断する。",
-    "publicPath": "q/ichimon/s/ichi-0699/index.html"
+    "exp": "模擬出勤はデイケア等で勤務時間帯を過ごすこと、通勤訓練は自宅から職場の近くまで移動して一定時間過ごし帰宅すること、試し出勤は本来の職場などに試験的に出勤すること。処遇や災害時の対応などはあらかじめルールを定めておく。",
+    "publicPath": "q/ichimon/s/ichi-0699/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0700",
     "field": "limit",
     "statement": "通常業務へ移行する期間は一律ではなく、本人の状態や主治医・産業医の意見を踏まえて個別に判断する。",
     "correctAnswer": true,
-    "exp": "段階的な職場復帰では、復職当初は業務量や勤務時間を軽減して始め、体調や適応状況に応じて通常業務へ移行する。移行期間は一律ではなく、本人の状態や主治医・産業医の意見を踏まえて個別に判断する。",
-    "publicPath": "q/ichimon/s/ichi-0700/index.html"
+    "exp": "模擬出勤はデイケア等で勤務時間帯を過ごすこと、通勤訓練は自宅から職場の近くまで移動して一定時間過ごし帰宅すること、試し出勤は本来の職場などに試験的に出勤すること。処遇や災害時の対応などはあらかじめルールを定めておく。",
+    "publicPath": "q/ichimon/s/ichi-0700/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0701",
@@ -5606,7 +6306,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス対策の効果は、実施した年度内に必ず数値として現れるため、単年度の評価で十分である。",
     "correctAnswer": false,
     "exp": "メンタルヘルス対策の費用対効果は、休職者の減少などの直接的な効果に加え、プレゼンティーイズムの改善も含めて評価する。代替要員の確保や離職に伴う費用も損失として考慮し、組織全体の指標で中長期的に評価する。",
-    "publicPath": "q/ichimon/s/ichi-0701/index.html"
+    "publicPath": "q/ichimon/s/ichi-0701/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0702",
@@ -5614,7 +6315,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス対策への投資は、休職コストの削減・生産性の向上・採用コストの低減などを通じて、プラスの投資効果をもたらすとする研究が多い。",
     "correctAnswer": true,
     "exp": "メンタルヘルス対策の費用対効果は、休職者の減少などの直接的な効果に加え、プレゼンティーイズムの改善も含めて評価する。代替要員の確保や離職に伴う費用も損失として考慮し、組織全体の指標で中長期的に評価する。",
-    "publicPath": "q/ichimon/s/ichi-0702/index.html"
+    "publicPath": "q/ichimon/s/ichi-0702/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0703",
@@ -5622,7 +6324,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス対策の費用対効果を評価する際は、休職者の業務を補う代替要員の確保にかかる費用は考慮しない。",
     "correctAnswer": false,
     "exp": "メンタルヘルス対策の費用対効果は、休職者の減少などの直接的な効果に加え、プレゼンティーイズムの改善も含めて評価する。代替要員の確保や離職に伴う費用も損失として考慮し、組織全体の指標で中長期的に評価する。",
-    "publicPath": "q/ichimon/s/ichi-0703/index.html"
+    "publicPath": "q/ichimon/s/ichi-0703/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0704",
@@ -5630,7 +6333,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス対策の費用対効果は、休職者の減少などの直接的な効果だけでなく、プレゼンティーイズムの改善なども含めて評価される。",
     "correctAnswer": true,
     "exp": "メンタルヘルス対策の費用対効果は、休職者の減少などの直接的な効果に加え、プレゼンティーイズムの改善も含めて評価する。代替要員の確保や離職に伴う費用も損失として考慮し、組織全体の指標で中長期的に評価する。",
-    "publicPath": "q/ichimon/s/ichi-0704/index.html"
+    "publicPath": "q/ichimon/s/ichi-0704/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0705",
@@ -5638,7 +6342,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害による労災の請求件数は、近年減少が続いている。",
     "correctAnswer": false,
     "exp": "精神障害の労災請求件数は近年増加が続き、支給決定件数を出来事別にみると、パワーハラスメントを受けたことが最も多い。強いストレスとなっている事柄がある労働者は令和7年調査で67.5％。メンタルヘルス不調は生産性の低下を通じても職場に影響する。",
-    "publicPath": "q/ichimon/s/ichi-0705/index.html"
+    "publicPath": "q/ichimon/s/ichi-0705/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0706",
@@ -5646,7 +6351,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害の労災支給決定件数を出来事別にみると、ハラスメントに関する出来事が占める割合はごくわずかである。",
     "correctAnswer": false,
     "exp": "精神障害の労災請求件数は近年増加が続き、支給決定件数を出来事別にみると、パワーハラスメントを受けたことが最も多い。強いストレスとなっている事柄がある労働者は令和7年調査で67.5％。メンタルヘルス不調は生産性の低下を通じても職場に影響する。",
-    "publicPath": "q/ichimon/s/ichi-0706/index.html"
+    "publicPath": "q/ichimon/s/ichi-0706/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0707",
@@ -5654,7 +6360,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス不調は、生産性の低下・欠勤・休職を通じて職場全体に影響を及ぼす。",
     "correctAnswer": true,
     "exp": "精神障害の労災請求件数は近年増加が続き、支給決定件数を出来事別にみると、パワーハラスメントを受けたことが最も多い。強いストレスとなっている事柄がある労働者は令和7年調査で67.5％。メンタルヘルス不調は生産性の低下を通じても職場に影響する。",
-    "publicPath": "q/ichimon/s/ichi-0707/index.html"
+    "publicPath": "q/ichimon/s/ichi-0707/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0708",
@@ -5662,7 +6369,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "強いストレスとなっている事柄がある労働者は、令和7年の労働安全衛生調査で全体の6割を超えている。",
     "correctAnswer": true,
     "exp": "精神障害の労災請求件数は近年増加が続き、支給決定件数を出来事別にみると、パワーハラスメントを受けたことが最も多い。強いストレスとなっている事柄がある労働者は令和7年調査で67.5％。メンタルヘルス不調は生産性の低下を通じても職場に影響する。",
-    "publicPath": "q/ichimon/s/ichi-0708/index.html"
+    "publicPath": "q/ichimon/s/ichi-0708/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0709",
@@ -5670,7 +6378,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "不法行為責任は、加害者と被害者の間に契約関係がある場合には成立しない。",
     "correctAnswer": false,
     "exp": "債務不履行責任（民法415条）は契約関係に基づいて生じ、不法行為責任（民法709条）は契約関係がなくても成立する。同一の事案で両方の要件を満たせば、いずれによっても請求できる。不法行為責任では上司個人が責任を負うこともある。",
-    "publicPath": "q/ichimon/s/ichi-0709/index.html"
+    "publicPath": "q/ichimon/s/ichi-0709/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0710",
@@ -5678,7 +6387,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "債務不履行責任は契約関係（雇用契約）に基づくものであり、不法行為責任は契約関係がなくても成立しうる。",
     "correctAnswer": true,
     "exp": "債務不履行責任（民法415条）は契約関係に基づいて生じ、不法行為責任（民法709条）は契約関係がなくても成立する。同一の事案で両方の要件を満たせば、いずれによっても請求できる。不法行為責任では上司個人が責任を負うこともある。",
-    "publicPath": "q/ichimon/s/ichi-0710/index.html"
+    "publicPath": "q/ichimon/s/ichi-0710/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0711",
@@ -5686,7 +6396,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "安全配慮義務違反について不法行為責任を問う場合も、責任を負うのは雇用契約を結んでいる会社に限られ、上司個人が責任を負うことはない。",
     "correctAnswer": false,
     "exp": "債務不履行責任（民法415条）は契約関係に基づいて生じ、不法行為責任（民法709条）は契約関係がなくても成立する。同一の事案で両方の要件を満たせば、いずれによっても請求できる。不法行為責任では上司個人が責任を負うこともある。",
-    "publicPath": "q/ichimon/s/ichi-0711/index.html"
+    "publicPath": "q/ichimon/s/ichi-0711/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0712",
@@ -5694,7 +6405,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "同一の事案について債務不履行責任と不法行為責任の両方の要件を満たす場合、いずれの責任に基づいても損害賠償を請求できる。",
     "correctAnswer": true,
     "exp": "債務不履行責任（民法415条）は契約関係に基づいて生じ、不法行為責任（民法709条）は契約関係がなくても成立する。同一の事案で両方の要件を満たせば、いずれによっても請求できる。不法行為責任では上司個人が責任を負うこともある。",
-    "publicPath": "q/ichimon/s/ichi-0712/index.html"
+    "publicPath": "q/ichimon/s/ichi-0712/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0713",
@@ -5702,7 +6414,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "身体的な攻撃（暴行・傷害）は、パワーハラスメントの代表的な6類型の一つである。",
     "correctAnswer": true,
     "exp": "パワーハラスメントの代表的な6類型は、身体的な攻撃、精神的な攻撃、人間関係からの切り離し、過大な要求、過小な要求、個の侵害である。業務上必要かつ相当な範囲で行われる適正な指導は、パワーハラスメントにあたらない。",
-    "publicPath": "q/ichimon/s/ichi-0713/index.html"
+    "publicPath": "q/ichimon/s/ichi-0713/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0714",
@@ -5710,7 +6423,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神的な攻撃（脅迫・名誉毀損・侮辱・ひどい暴言）は、パワーハラスメントの代表的な6類型の一つである。",
     "correctAnswer": true,
     "exp": "パワーハラスメントの代表的な6類型は、身体的な攻撃、精神的な攻撃、人間関係からの切り離し、過大な要求、過小な要求、個の侵害である。業務上必要かつ相当な範囲で行われる適正な指導は、パワーハラスメントにあたらない。",
-    "publicPath": "q/ichimon/s/ichi-0714/index.html"
+    "publicPath": "q/ichimon/s/ichi-0714/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0715",
@@ -5718,7 +6432,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務上必要かつ相当な範囲で行われる適正な指導も、パワーハラスメントの6類型の一つに含まれる。",
     "correctAnswer": false,
     "exp": "パワーハラスメントの代表的な6類型は、身体的な攻撃、精神的な攻撃、人間関係からの切り離し、過大な要求、過小な要求、個の侵害である。業務上必要かつ相当な範囲で行われる適正な指導は、パワーハラスメントにあたらない。",
-    "publicPath": "q/ichimon/s/ichi-0715/index.html"
+    "publicPath": "q/ichimon/s/ichi-0715/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0716",
@@ -5726,7 +6441,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過大な要求（業務上明らかに不要なことや不可能なことの強制）は、パワーハラスメントの6類型に含まれない。",
     "correctAnswer": false,
     "exp": "パワーハラスメントの代表的な6類型は、身体的な攻撃、精神的な攻撃、人間関係からの切り離し、過大な要求、過小な要求、個の侵害である。業務上必要かつ相当な範囲で行われる適正な指導は、パワーハラスメントにあたらない。",
-    "publicPath": "q/ichimon/s/ichi-0716/index.html"
+    "publicPath": "q/ichimon/s/ichi-0716/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0717",
@@ -5734,7 +6450,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "医師・保健師は、所定の研修を受けなくてもストレスチェックの実施者になることができる。",
     "correctAnswer": true,
     "exp": "ストレスチェックの実施者は、医師・保健師と、所定の研修を修了した歯科医師・看護師・精神保健福祉士・公認心理師。民間資格のみでは実施者になれない。外部機関に委託し、その医師等が実施者となることもできる。人事権を持つ者は実施の事務に従事できない。",
-    "publicPath": "q/ichimon/s/ichi-0717/index.html"
+    "publicPath": "q/ichimon/s/ichi-0717/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0718",
@@ -5742,7 +6459,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "医師・保健師のほか、所定の研修を受けた看護師・精神保健福祉士・公認心理師等は、ストレスチェックの実施者になることができる。",
     "correctAnswer": true,
     "exp": "ストレスチェックの実施者は、医師・保健師と、所定の研修を修了した歯科医師・看護師・精神保健福祉士・公認心理師。民間資格のみでは実施者になれない。外部機関に委託し、その医師等が実施者となることもできる。人事権を持つ者は実施の事務に従事できない。",
-    "publicPath": "q/ichimon/s/ichi-0718/index.html"
+    "publicPath": "q/ichimon/s/ichi-0718/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0719",
@@ -5750,7 +6468,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業カウンセラーや臨床心理士などの民間資格のみを持つ者は、ストレスチェックの実施者になることができる。",
     "correctAnswer": false,
     "exp": "ストレスチェックの実施者は、医師・保健師と、所定の研修を修了した歯科医師・看護師・精神保健福祉士・公認心理師。民間資格のみでは実施者になれない。外部機関に委託し、その医師等が実施者となることもできる。人事権を持つ者は実施の事務に従事できない。",
-    "publicPath": "q/ichimon/s/ichi-0719/index.html"
+    "publicPath": "q/ichimon/s/ichi-0719/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0720",
@@ -5758,7 +6477,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの実施者は事業場の産業医に限られ、外部機関の医師等が実施者となることはできない。",
     "correctAnswer": false,
     "exp": "ストレスチェックの実施者は、医師・保健師と、所定の研修を修了した歯科医師・看護師・精神保健福祉士・公認心理師。民間資格のみでは実施者になれない。外部機関に委託し、その医師等が実施者となることもできる。人事権を持つ者は実施の事務に従事できない。",
-    "publicPath": "q/ichimon/s/ichi-0720/index.html"
+    "publicPath": "q/ichimon/s/ichi-0720/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0721",
@@ -5766,7 +6486,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "勤務間インターバル制度は法律で導入が義務化されており、違反した場合は罰則がある。",
     "correctAnswer": false,
     "exp": "勤務間インターバル制度は、終業から翌日の始業までに一定の休息時間を確保する仕組みで、2019年4月施行の改正労働時間等設定改善法により事業主の努力義務とされた。休息時間の長さは法定されておらず、11時間は目安。義務化や罰則はない。",
-    "publicPath": "q/ichimon/s/ichi-0721/index.html"
+    "publicPath": "q/ichimon/s/ichi-0721/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0722",
@@ -5774,7 +6495,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "勤務間インターバル制度とは、終業から次の始業までに一定時間（例：11時間）の休息を確保する制度であり、現在は努力義務とされている。",
     "correctAnswer": true,
     "exp": "勤務間インターバル制度は、終業から翌日の始業までに一定の休息時間を確保する仕組みで、2019年4月施行の改正労働時間等設定改善法により事業主の努力義務とされた。休息時間の長さは法定されておらず、11時間は目安。義務化や罰則はない。",
-    "publicPath": "q/ichimon/s/ichi-0722/index.html"
+    "publicPath": "q/ichimon/s/ichi-0722/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0723",
@@ -5782,7 +6504,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "勤務間インターバル制度を導入する場合、確保すべき休息時間は法律で11時間以上と定められている。",
     "correctAnswer": false,
     "exp": "勤務間インターバル制度は、終業から翌日の始業までに一定の休息時間を確保する仕組みで、2019年4月施行の改正労働時間等設定改善法により事業主の努力義務とされた。休息時間の長さは法定されておらず、11時間は目安。義務化や罰則はない。",
-    "publicPath": "q/ichimon/s/ichi-0723/index.html"
+    "publicPath": "q/ichimon/s/ichi-0723/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0724",
@@ -5790,7 +6513,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "勤務間インターバル制度は、労働時間等設定改善法により事業主の努力義務とされている。",
     "correctAnswer": true,
     "exp": "勤務間インターバル制度は、終業から翌日の始業までに一定の休息時間を確保する仕組みで、2019年4月施行の改正労働時間等設定改善法により事業主の努力義務とされた。休息時間の長さは法定されておらず、11時間は目安。義務化や罰則はない。",
-    "publicPath": "q/ichimon/s/ichi-0724/index.html"
+    "publicPath": "q/ichimon/s/ichi-0724/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0725",
@@ -5798,7 +6522,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "認知的評価は、ストレス反応が発生した後に起こるプロセスである。",
     "correctAnswer": false,
     "exp": "ラザルスの理論では、出来事が脅威かどうかを判断する一次評価と、対処できるかを判断する二次評価（認知的評価）、それに続くコーピングによって、ストレス反応の強さが変わるとされる。",
-    "publicPath": "q/ichimon/s/ichi-0725/index.html"
+    "publicPath": "q/ichimon/s/ichi-0725/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0726",
@@ -5806,7 +6531,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "同じストレッサーでも、個人の認知的評価（脅威と感じるか否か）によってストレス反応の強さが異なる。",
     "correctAnswer": true,
     "exp": "ラザルスの理論では、出来事が脅威かどうかを判断する一次評価と、対処できるかを判断する二次評価（認知的評価）、それに続くコーピングによって、ストレス反応の強さが変わるとされる。",
-    "publicPath": "q/ichimon/s/ichi-0726/index.html"
+    "publicPath": "q/ichimon/s/ichi-0726/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0727",
@@ -5814,7 +6540,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ラザルスの理論では、対処できるかどうかを判断するのが一次評価、脅威かどうかを判断するのが二次評価である。",
     "correctAnswer": false,
     "exp": "ラザルスの理論では、出来事が脅威かどうかを判断する一次評価と、対処できるかを判断する二次評価（認知的評価）、それに続くコーピングによって、ストレス反応の強さが変わるとされる。",
-    "publicPath": "q/ichimon/s/ichi-0727/index.html"
+    "publicPath": "q/ichimon/s/ichi-0727/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0728",
@@ -5822,7 +6549,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ラザルスの理論では、ストレッサーが脅威かどうかを判断する一次評価と、対処できるかを判断する二次評価がある。",
     "correctAnswer": true,
     "exp": "ラザルスの理論では、出来事が脅威かどうかを判断する一次評価と、対処できるかを判断する二次評価（認知的評価）、それに続くコーピングによって、ストレス反応の強さが変わるとされる。",
-    "publicPath": "q/ichimon/s/ichi-0728/index.html"
+    "publicPath": "q/ichimon/s/ichi-0728/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0729",
@@ -5830,7 +6558,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "適応障害はストレスの原因が明確であり、原因から離れると症状が軽減しやすい。",
     "correctAnswer": true,
     "exp": "適応障害は、明確なストレス因が生じてからおおむね3か月以内に発症し、ストレス因がなくなれば通常6か月以内に改善する。治療では、業務内容や配置の調整などの環境調整が重要で、薬物療法は補助的に用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0729/index.html"
+    "publicPath": "q/ichimon/s/ichi-0729/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0730",
@@ -5838,7 +6567,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "適応障害は、ストレス因が生じてから1年以上経過した後に発症するものと定義されている。",
     "correctAnswer": false,
     "exp": "適応障害は、明確なストレス因が生じてからおおむね3か月以内に発症し、ストレス因がなくなれば通常6か月以内に改善する。治療では、業務内容や配置の調整などの環境調整が重要で、薬物療法は補助的に用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0730/index.html"
+    "publicPath": "q/ichimon/s/ichi-0730/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0731",
@@ -5846,7 +6576,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "適応障害では、ストレス因がなくなれば、通常は6か月以内に症状が改善するとされる。",
     "correctAnswer": true,
     "exp": "適応障害は、明確なストレス因が生じてからおおむね3か月以内に発症し、ストレス因がなくなれば通常6か月以内に改善する。治療では、業務内容や配置の調整などの環境調整が重要で、薬物療法は補助的に用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0731/index.html"
+    "publicPath": "q/ichimon/s/ichi-0731/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0732",
@@ -5854,7 +6585,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "適応障害の治療では、職場環境の調整は症状が完全に消えてから行うべきである。",
     "correctAnswer": false,
     "exp": "適応障害は、明確なストレス因が生じてからおおむね3か月以内に発症し、ストレス因がなくなれば通常6か月以内に改善する。治療では、業務内容や配置の調整などの環境調整が重要で、薬物療法は補助的に用いられる。",
-    "publicPath": "q/ichimon/s/ichi-0732/index.html"
+    "publicPath": "q/ichimon/s/ichi-0732/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0733",
@@ -5862,7 +6594,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "改善策によるストレス指標の変化（欠勤率・ストレスチェックの結果等）を測定することは、職場環境改善の「プロセス評価」にあたる。",
     "correctAnswer": false,
     "exp": "職場環境改善の評価には、実施状況（計画どおりか、参加率など）を評価するプロセス評価と、集団分析の結果や欠勤率などの変化を測るアウトカム評価がある。両者を組み合わせて評価する。",
-    "publicPath": "q/ichimon/s/ichi-0733/index.html"
+    "publicPath": "q/ichimon/s/ichi-0733/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0734",
@@ -5870,7 +6603,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "改善策が計画どおり実施されているか、参加率はどうかなど、実施状況を評価することは、職場環境改善の「プロセス評価」にあたる。",
     "correctAnswer": true,
     "exp": "職場環境改善の評価には、実施状況（計画どおりか、参加率など）を評価するプロセス評価と、集団分析の結果や欠勤率などの変化を測るアウトカム評価がある。両者を組み合わせて評価する。",
-    "publicPath": "q/ichimon/s/ichi-0734/index.html"
+    "publicPath": "q/ichimon/s/ichi-0734/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0735",
@@ -5878,7 +6612,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善のプロセス評価で計画どおりに実施されたことが確認できれば、アウトカム評価は行わなくてよい。",
     "correctAnswer": false,
     "exp": "職場環境改善の評価には、実施状況（計画どおりか、参加率など）を評価するプロセス評価と、集団分析の結果や欠勤率などの変化を測るアウトカム評価がある。両者を組み合わせて評価する。",
-    "publicPath": "q/ichimon/s/ichi-0735/index.html"
+    "publicPath": "q/ichimon/s/ichi-0735/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0736",
@@ -5886,7 +6621,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの集団分析の結果や欠勤率の変化を測定することは、職場環境改善の「アウトカム評価」にあたる。",
     "correctAnswer": true,
     "exp": "職場環境改善の評価には、実施状況（計画どおりか、参加率など）を評価するプロセス評価と、集団分析の結果や欠勤率などの変化を測るアウトカム評価がある。両者を組み合わせて評価する。",
-    "publicPath": "q/ichimon/s/ichi-0736/index.html"
+    "publicPath": "q/ichimon/s/ichi-0736/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0737",
@@ -5894,7 +6630,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ワーク・ライフ・バランスは個人の趣味・余暇の充実を目的とするものであり、過重労働防止とは無関係である。",
     "correctAnswer": false,
     "exp": "仕事と生活の調和（ワーク・ライフ・バランス）憲章は2007年に政府・経済界・労働界などの合意で策定され、経済的自立が可能な社会、健康で豊かな生活のための時間が確保できる社会、多様な働き方・生き方が選択できる社会を目指す。",
-    "publicPath": "q/ichimon/s/ichi-0737/index.html"
+    "publicPath": "q/ichimon/s/ichi-0737/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0738",
@@ -5902,7 +6639,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事と生活の調和を図ることで、労働者の健康維持・生産性向上・過重労働防止が相互に促進される。",
     "correctAnswer": true,
     "exp": "仕事と生活の調和（ワーク・ライフ・バランス）憲章は2007年に政府・経済界・労働界などの合意で策定され、経済的自立が可能な社会、健康で豊かな生活のための時間が確保できる社会、多様な働き方・生き方が選択できる社会を目指す。",
-    "publicPath": "q/ichimon/s/ichi-0738/index.html"
+    "publicPath": "q/ichimon/s/ichi-0738/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0739",
@@ -5910,7 +6648,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ワーク・ライフ・バランスを推進すると業務効率が低下するため、企業にとってはデメリットが大きい。",
     "correctAnswer": false,
     "exp": "仕事と生活の調和（ワーク・ライフ・バランス）憲章は2007年に政府・経済界・労働界などの合意で策定され、経済的自立が可能な社会、健康で豊かな生活のための時間が確保できる社会、多様な働き方・生き方が選択できる社会を目指す。",
-    "publicPath": "q/ichimon/s/ichi-0739/index.html"
+    "publicPath": "q/ichimon/s/ichi-0739/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0740",
@@ -5918,7 +6657,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事と生活の調和憲章は、多様な働き方・生き方が選択できる社会を、目指すべき社会の姿の一つとしている。",
     "correctAnswer": true,
     "exp": "仕事と生活の調和（ワーク・ライフ・バランス）憲章は2007年に政府・経済界・労働界などの合意で策定され、経済的自立が可能な社会、健康で豊かな生活のための時間が確保できる社会、多様な働き方・生き方が選択できる社会を目指す。",
-    "publicPath": "q/ichimon/s/ichi-0740/index.html"
+    "publicPath": "q/ichimon/s/ichi-0740/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0741",
@@ -5926,7 +6666,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "プライバシーマーク制度は医療機関のみを対象とした認証制度である。",
     "correctAnswer": false,
     "exp": "プライバシーマーク制度は、JIPDECが運営し、JIS Q 15001に基づいて個人情報を適切に取り扱う事業者を認定する任意の制度。有効期間は2年で更新の審査がある。取得しても個人情報保護法は適用される。",
-    "publicPath": "q/ichimon/s/ichi-0741/index.html"
+    "publicPath": "q/ichimon/s/ichi-0741/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0742",
@@ -5934,7 +6675,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "プライバシーマーク制度は、個人情報の適切な取り扱いができる事業者を第三者機関が認定する制度である。",
     "correctAnswer": true,
     "exp": "プライバシーマーク制度は、JIPDECが運営し、JIS Q 15001に基づいて個人情報を適切に取り扱う事業者を認定する任意の制度。有効期間は2年で更新の審査がある。取得しても個人情報保護法は適用される。",
-    "publicPath": "q/ichimon/s/ichi-0742/index.html"
+    "publicPath": "q/ichimon/s/ichi-0742/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0743",
@@ -5942,7 +6684,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "プライバシーマーク取得企業は個人情報保護法の適用が免除される。",
     "correctAnswer": false,
     "exp": "プライバシーマーク制度は、JIPDECが運営し、JIS Q 15001に基づいて個人情報を適切に取り扱う事業者を認定する任意の制度。有効期間は2年で更新の審査がある。取得しても個人情報保護法は適用される。",
-    "publicPath": "q/ichimon/s/ichi-0743/index.html"
+    "publicPath": "q/ichimon/s/ichi-0743/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0744",
@@ -5950,7 +6693,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "プライバシーマークの有効期間は2年で、継続するには更新の審査を受ける必要がある。",
     "correctAnswer": true,
     "exp": "プライバシーマーク制度は、JIPDECが運営し、JIS Q 15001に基づいて個人情報を適切に取り扱う事業者を認定する任意の制度。有効期間は2年で更新の審査がある。取得しても個人情報保護法は適用される。",
-    "publicPath": "q/ichimon/s/ichi-0744/index.html"
+    "publicPath": "q/ichimon/s/ichi-0744/index.html",
+    "level": 5
   },
   {
     "id": "ichi-0745",
@@ -5958,7 +6702,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスは我慢すれば消えるものであるため、気づく必要はない。",
     "correctAnswer": false,
     "exp": "管理監督者のセルフモニタリングでは、睡眠・食欲・気分・イライラ・飲酒量などの身体・心・行動の変化に注意を払う。自分では気づきにくい変化もあるため、家族や同僚から指摘された変化にも注意する。",
-    "publicPath": "q/ichimon/s/ichi-0745/index.html"
+    "publicPath": "q/ichimon/s/ichi-0745/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0746",
@@ -5966,7 +6711,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者のセルフモニタリングでは、自分の身体・心・行動の変化（睡眠の乱れ、イライラ、飲酒量の増加など）に注意を払い、早めにサインに気づく。",
     "correctAnswer": true,
     "exp": "管理監督者のセルフモニタリングでは、睡眠・食欲・気分・イライラ・飲酒量などの身体・心・行動の変化に注意を払う。自分では気づきにくい変化もあるため、家族や同僚から指摘された変化にも注意する。",
-    "publicPath": "q/ichimon/s/ichi-0746/index.html"
+    "publicPath": "q/ichimon/s/ichi-0746/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0747",
@@ -5974,7 +6720,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスのサインは必ず身体症状として現れるため、健康診断結果のみを確認すればよい。",
     "correctAnswer": false,
     "exp": "管理監督者のセルフモニタリングでは、睡眠・食欲・気分・イライラ・飲酒量などの身体・心・行動の変化に注意を払う。自分では気づきにくい変化もあるため、家族や同僚から指摘された変化にも注意する。",
-    "publicPath": "q/ichimon/s/ichi-0747/index.html"
+    "publicPath": "q/ichimon/s/ichi-0747/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0748",
@@ -5982,7 +6729,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスのサインは自分では気づきにくいこともあるため、家族や同僚から指摘された変化にも注意を払う。",
     "correctAnswer": true,
     "exp": "管理監督者のセルフモニタリングでは、睡眠・食欲・気分・イライラ・飲酒量などの身体・心・行動の変化に注意を払う。自分では気づきにくい変化もあるため、家族や同僚から指摘された変化にも注意する。",
-    "publicPath": "q/ichimon/s/ichi-0748/index.html"
+    "publicPath": "q/ichimon/s/ichi-0748/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0749",
@@ -5990,7 +6738,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者が話を聴くことで、部下は「理解してもらえた」と感じ、職場への安心感や信頼感が高まる。",
     "correctAnswer": true,
     "exp": "管理監督者が話を聴くことは、部下の安心感や信頼感を高め、専門家への橋渡しや相談しやすい職場づくりにつながる。ただし傾聴は治療行為ではなく、必要に応じて専門家につなぐことが重要。",
-    "publicPath": "q/ichimon/s/ichi-0749/index.html"
+    "publicPath": "q/ichimon/s/ichi-0749/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0750",
@@ -5998,7 +6747,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者が話を聴くだけで、部下のメンタルヘルス不調を完全に治療できる。",
     "correctAnswer": false,
     "exp": "管理監督者が話を聴くことは、部下の安心感や信頼感を高め、専門家への橋渡しや相談しやすい職場づくりにつながる。ただし傾聴は治療行為ではなく、必要に応じて専門家につなぐことが重要。",
-    "publicPath": "q/ichimon/s/ichi-0750/index.html"
+    "publicPath": "q/ichimon/s/ichi-0750/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0751",
@@ -6006,7 +6756,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者が話を聴いて部下の状況を把握することで、適切な支援や専門家への橋渡しが可能になる。",
     "correctAnswer": true,
     "exp": "管理監督者が話を聴くことは、部下の安心感や信頼感を高め、専門家への橋渡しや相談しやすい職場づくりにつながる。ただし傾聴は治療行為ではなく、必要に応じて専門家につなぐことが重要。",
-    "publicPath": "q/ichimon/s/ichi-0751/index.html"
+    "publicPath": "q/ichimon/s/ichi-0751/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0752",
@@ -6014,39 +6765,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者が部下の話を聴くことは、治療行為の一つとして位置づけられる。",
     "correctAnswer": false,
     "exp": "管理監督者が話を聴くことは、部下の安心感や信頼感を高め、専門家への橋渡しや相談しやすい職場づくりにつながる。ただし傾聴は治療行為ではなく、必要に応じて専門家につなぐことが重要。",
-    "publicPath": "q/ichimon/s/ichi-0752/index.html"
+    "publicPath": "q/ichimon/s/ichi-0752/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0753",
     "field": "limit",
-    "statement": "自殺未遂後は職場復帰させず、そのまま退職を促すべきである。",
+    "statement": "自殺で亡くなる人は女性のほうが多く、女性の自殺死亡率は男性より高い。",
     "correctAnswer": false,
-    "exp": "自殺未遂の後は、再び自殺を図る危険が高い時期があるため、主治医や産業医と連携し、段階的かつ慎重に職場復帰を進める。業務の調整、職場環境の整備、フォローアップの体制づくりが欠かせない。",
-    "publicPath": "q/ichimon/s/ichi-0753/index.html"
+    "exp": "自殺未遂歴は自殺の最も重要な危険因子とされる。自殺で亡くなる人は男性のほうが多く、男性の自殺死亡率は女性より高い。事故を防ぐ措置を取らない、医学的な助言を無視するといった事故傾性も危険因子の一つとされる。未遂後の職場復帰は主治医や産業医と連携して慎重に進める。",
+    "publicPath": "q/ichimon/s/ichi-0753/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0754",
     "field": "limit",
-    "statement": "自殺未遂をした部下の職場復帰では、主治医・産業医と連携しながら段階的に支援し、再発防止のための環境を整える。",
+    "statement": "自殺未遂歴は、自殺の最も重要な危険因子とされている。",
     "correctAnswer": true,
-    "exp": "自殺未遂の後は、再び自殺を図る危険が高い時期があるため、主治医や産業医と連携し、段階的かつ慎重に職場復帰を進める。業務の調整、職場環境の整備、フォローアップの体制づくりが欠かせない。",
-    "publicPath": "q/ichimon/s/ichi-0754/index.html"
+    "exp": "自殺未遂歴は自殺の最も重要な危険因子とされる。自殺で亡くなる人は男性のほうが多く、男性の自殺死亡率は女性より高い。事故を防ぐ措置を取らない、医学的な助言を無視するといった事故傾性も危険因子の一つとされる。未遂後の職場復帰は主治医や産業医と連携して慎重に進める。",
+    "publicPath": "q/ichimon/s/ichi-0754/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0755",
     "field": "limit",
-    "statement": "自殺未遂の事実は本人の名誉のため、職場内では一切触れてはならない。",
+    "statement": "事故を防ぐのに必要な措置を取らないといった「事故傾性」は本人の不注意の問題であり、自殺の危険因子とは考えられていない。",
     "correctAnswer": false,
-    "exp": "自殺未遂の後は、再び自殺を図る危険が高い時期があるため、主治医や産業医と連携し、段階的かつ慎重に職場復帰を進める。業務の調整、職場環境の整備、フォローアップの体制づくりが欠かせない。",
-    "publicPath": "q/ichimon/s/ichi-0755/index.html"
+    "exp": "自殺未遂歴は自殺の最も重要な危険因子とされる。自殺で亡くなる人は男性のほうが多く、男性の自殺死亡率は女性より高い。事故を防ぐ措置を取らない、医学的な助言を無視するといった事故傾性も危険因子の一つとされる。未遂後の職場復帰は主治医や産業医と連携して慎重に進める。",
+    "publicPath": "q/ichimon/s/ichi-0755/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0756",
     "field": "limit",
     "statement": "自殺未遂の後は再び自殺を図る危険が高い時期があるため、慎重に職場復帰を進める。",
     "correctAnswer": true,
-    "exp": "自殺未遂の後は、再び自殺を図る危険が高い時期があるため、主治医や産業医と連携し、段階的かつ慎重に職場復帰を進める。業務の調整、職場環境の整備、フォローアップの体制づくりが欠かせない。",
-    "publicPath": "q/ichimon/s/ichi-0756/index.html"
+    "exp": "自殺未遂歴は自殺の最も重要な危険因子とされる。自殺で亡くなる人は男性のほうが多く、男性の自殺死亡率は女性より高い。事故を防ぐ措置を取らない、医学的な助言を無視するといった事故傾性も危険因子の一つとされる。未遂後の職場復帰は主治医や産業医と連携して慎重に進める。",
+    "publicPath": "q/ichimon/s/ichi-0756/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0757",
@@ -6054,7 +6810,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ゲートキーパーとは、自殺念慮のある人の入院手続きを行う専門家を指す。",
     "correctAnswer": false,
     "exp": "ゲートキーパーは、自殺の危険を示すサインに気づき、声をかけ、話を聴き、専門家につなぎ、見守る人。特別な資格は不要で、自殺総合対策大綱で養成を進めることとされている。つないだ後も見守る。",
-    "publicPath": "q/ichimon/s/ichi-0757/index.html"
+    "publicPath": "q/ichimon/s/ichi-0757/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0758",
@@ -6062,7 +6819,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ゲートキーパーとは、自殺のサインに気づき、声をかけ、話を聴き、必要に応じて専門家につなぐ役割を担う人を指す。",
     "correctAnswer": true,
     "exp": "ゲートキーパーは、自殺の危険を示すサインに気づき、声をかけ、話を聴き、専門家につなぎ、見守る人。特別な資格は不要で、自殺総合対策大綱で養成を進めることとされている。つないだ後も見守る。",
-    "publicPath": "q/ichimon/s/ichi-0758/index.html"
+    "publicPath": "q/ichimon/s/ichi-0758/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0759",
@@ -6070,7 +6828,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ゲートキーパーは精神科医・心理士のみが担える役割である。",
     "correctAnswer": false,
     "exp": "ゲートキーパーは、自殺の危険を示すサインに気づき、声をかけ、話を聴き、専門家につなぎ、見守る人。特別な資格は不要で、自殺総合対策大綱で養成を進めることとされている。つないだ後も見守る。",
-    "publicPath": "q/ichimon/s/ichi-0759/index.html"
+    "publicPath": "q/ichimon/s/ichi-0759/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0760",
@@ -6078,7 +6837,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ゲートキーパーは、悩んでいる人を専門家につないだ後も、寄り添いながら見守る。",
     "correctAnswer": true,
     "exp": "ゲートキーパーは、自殺の危険を示すサインに気づき、声をかけ、話を聴き、専門家につなぎ、見守る人。特別な資格は不要で、自殺総合対策大綱で養成を進めることとされている。つないだ後も見守る。",
-    "publicPath": "q/ichimon/s/ichi-0760/index.html"
+    "publicPath": "q/ichimon/s/ichi-0760/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0761",
@@ -6086,7 +6846,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第1ステップでは、職場復帰支援プランの最終決定を行う。",
     "correctAnswer": false,
     "exp": "職場復帰支援の5つのステップは、第1病気休業開始及び休業中のケア、第2主治医による職場復帰可能の判断、第3職場復帰の可否の判断及び職場復帰支援プランの作成、第4最終的な職場復帰の決定、第5職場復帰後のフォローアップ。",
-    "publicPath": "q/ichimon/s/ichi-0761/index.html"
+    "publicPath": "q/ichimon/s/ichi-0761/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0762",
@@ -6094,7 +6855,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第2ステップでは、主治医が職場復帰可能の意見書（診断書）を作成し、提出する。",
     "correctAnswer": true,
     "exp": "職場復帰支援の5つのステップは、第1病気休業開始及び休業中のケア、第2主治医による職場復帰可能の判断、第3職場復帰の可否の判断及び職場復帰支援プランの作成、第4最終的な職場復帰の決定、第5職場復帰後のフォローアップ。",
-    "publicPath": "q/ichimon/s/ichi-0762/index.html"
+    "publicPath": "q/ichimon/s/ichi-0762/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0763",
@@ -6102,7 +6864,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第3ステップでは、職場復帰の可否の判断と職場復帰支援プランの作成を行う。",
     "correctAnswer": true,
     "exp": "職場復帰支援の5つのステップは、第1病気休業開始及び休業中のケア、第2主治医による職場復帰可能の判断、第3職場復帰の可否の判断及び職場復帰支援プランの作成、第4最終的な職場復帰の決定、第5職場復帰後のフォローアップ。",
-    "publicPath": "q/ichimon/s/ichi-0763/index.html"
+    "publicPath": "q/ichimon/s/ichi-0763/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0764",
@@ -6110,7 +6873,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第4ステップでは、病気休業の開始と休業中のケアを行う。",
     "correctAnswer": false,
     "exp": "職場復帰支援の5つのステップは、第1病気休業開始及び休業中のケア、第2主治医による職場復帰可能の判断、第3職場復帰の可否の判断及び職場復帰支援プランの作成、第4最終的な職場復帰の決定、第5職場復帰後のフォローアップ。",
-    "publicPath": "q/ichimon/s/ichi-0764/index.html"
+    "publicPath": "q/ichimon/s/ichi-0764/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0765",
@@ -6118,7 +6882,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "復職後の業務内容・業務量・勤務時間の調整方針は、職場復帰支援プランに記載すべき内容である。",
     "correctAnswer": true,
     "exp": "職場復帰支援プランには、復職後の業務内容・業務量・勤務時間の調整、フォローアップの実施方法・頻度・担当者、就業上の配慮の見直しの時期などを定める。主治医や家族への報告を義務づけることは不適切。",
-    "publicPath": "q/ichimon/s/ichi-0765/index.html"
+    "publicPath": "q/ichimon/s/ichi-0765/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0766",
@@ -6126,7 +6891,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "フォローアップの実施方法・頻度・担当者は、職場復帰支援プランに記載すべき内容である。",
     "correctAnswer": true,
     "exp": "職場復帰支援プランには、復職後の業務内容・業務量・勤務時間の調整、フォローアップの実施方法・頻度・担当者、就業上の配慮の見直しの時期などを定める。主治医や家族への報告を義務づけることは不適切。",
-    "publicPath": "q/ichimon/s/ichi-0766/index.html"
+    "publicPath": "q/ichimon/s/ichi-0766/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0767",
@@ -6134,7 +6900,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "復職者に対して主治医や家族への定期的な報告を義務づける方針は、職場復帰支援プランに記載すべき内容である。",
     "correctAnswer": false,
     "exp": "職場復帰支援プランには、復職後の業務内容・業務量・勤務時間の調整、フォローアップの実施方法・頻度・担当者、就業上の配慮の見直しの時期などを定める。主治医や家族への報告を義務づけることは不適切。",
-    "publicPath": "q/ichimon/s/ichi-0767/index.html"
+    "publicPath": "q/ichimon/s/ichi-0767/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0768",
@@ -6142,7 +6909,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援プランには、休業前の人事評価の結果を記載する。",
     "correctAnswer": false,
     "exp": "職場復帰支援プランには、復職後の業務内容・業務量・勤務時間の調整、フォローアップの実施方法・頻度・担当者、就業上の配慮の見直しの時期などを定める。主治医や家族への報告を義務づけることは不適切。",
-    "publicPath": "q/ichimon/s/ichi-0768/index.html"
+    "publicPath": "q/ichimon/s/ichi-0768/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0769",
@@ -6150,7 +6918,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "高ストレス者は、全労働者の上位10％に該当する者として、人数の割合で機械的に決めなければならない。",
     "correctAnswer": false,
     "exp": "高ストレス者は、心身のストレス反応の評価点が高い者、またはストレス反応が一定以上で仕事のストレス要因が高く周囲のサポートが低い者。全体の1割程度が目安だが割合で機械的に決めるものではない。補足的な面談も可能で、実施者は面接指導の申出を勧奨できる。",
-    "publicPath": "q/ichimon/s/ichi-0769/index.html"
+    "publicPath": "q/ichimon/s/ichi-0769/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0770",
@@ -6158,7 +6927,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの高ストレス者とは、心身のストレス反応の評価点が高い者、またはストレス反応が一定以上で、仕事のストレス要因が高く周囲のサポートが低い者をいう。",
     "correctAnswer": true,
     "exp": "高ストレス者は、心身のストレス反応の評価点が高い者、またはストレス反応が一定以上で仕事のストレス要因が高く周囲のサポートが低い者。全体の1割程度が目安だが割合で機械的に決めるものではない。補足的な面談も可能で、実施者は面接指導の申出を勧奨できる。",
-    "publicPath": "q/ichimon/s/ichi-0770/index.html"
+    "publicPath": "q/ichimon/s/ichi-0770/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0771",
@@ -6166,7 +6936,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "高ストレス者と判定された労働者に対して、実施者が面接指導の申出を勧奨することはできない。",
     "correctAnswer": false,
     "exp": "高ストレス者は、心身のストレス反応の評価点が高い者、またはストレス反応が一定以上で仕事のストレス要因が高く周囲のサポートが低い者。全体の1割程度が目安だが割合で機械的に決めるものではない。補足的な面談も可能で、実施者は面接指導の申出を勧奨できる。",
-    "publicPath": "q/ichimon/s/ichi-0771/index.html"
+    "publicPath": "q/ichimon/s/ichi-0771/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0772",
@@ -6174,7 +6945,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "高ストレス者の選定では、点数による評価に加え、実施者等が補足的に面談を行って判断する方法も認められている。",
     "correctAnswer": true,
     "exp": "高ストレス者は、心身のストレス反応の評価点が高い者、またはストレス反応が一定以上で仕事のストレス要因が高く周囲のサポートが低い者。全体の1割程度が目安だが割合で機械的に決めるものではない。補足的な面談も可能で、実施者は面接指導の申出を勧奨できる。",
-    "publicPath": "q/ichimon/s/ichi-0772/index.html"
+    "publicPath": "q/ichimon/s/ichi-0772/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0773",
@@ -6182,7 +6954,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの受検は全労働者に義務づけられており、拒否した場合は懲戒処分の対象となる。",
     "correctAnswer": false,
     "exp": "ストレスチェックの実施は事業者の義務だが、労働者に受検の義務はなく、受検の勧奨はできる。契約期間1年以上で週の所定労働時間が通常の労働者の4分の3以上の短時間労働者も対象。派遣労働者は派遣元事業者が実施する。",
-    "publicPath": "q/ichimon/s/ichi-0773/index.html"
+    "publicPath": "q/ichimon/s/ichi-0773/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0774",
@@ -6190,7 +6963,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの受検は労働者本人の意思によるものであり、事業者は受検を強制できない。",
     "correctAnswer": true,
     "exp": "ストレスチェックの実施は事業者の義務だが、労働者に受検の義務はなく、受検の勧奨はできる。契約期間1年以上で週の所定労働時間が通常の労働者の4分の3以上の短時間労働者も対象。派遣労働者は派遣元事業者が実施する。",
-    "publicPath": "q/ichimon/s/ichi-0774/index.html"
+    "publicPath": "q/ichimon/s/ichi-0774/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0775",
@@ -6198,7 +6972,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "派遣労働者に対するストレスチェックの実施義務は、派遣先事業者が負う。",
     "correctAnswer": false,
     "exp": "ストレスチェックの実施は事業者の義務だが、労働者に受検の義務はなく、受検の勧奨はできる。契約期間1年以上で週の所定労働時間が通常の労働者の4分の3以上の短時間労働者も対象。派遣労働者は派遣元事業者が実施する。",
-    "publicPath": "q/ichimon/s/ichi-0775/index.html"
+    "publicPath": "q/ichimon/s/ichi-0775/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0776",
@@ -6206,7 +6981,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "契約期間が1年以上で、週の所定労働時間が通常の労働者の4分の3以上の短時間労働者は、ストレスチェックの対象となる。",
     "correctAnswer": true,
     "exp": "ストレスチェックの実施は事業者の義務だが、労働者に受検の義務はなく、受検の勧奨はできる。契約期間1年以上で週の所定労働時間が通常の労働者の4分の3以上の短時間労働者も対象。派遣労働者は派遣元事業者が実施する。",
-    "publicPath": "q/ichimon/s/ichi-0776/index.html"
+    "publicPath": "q/ichimon/s/ichi-0776/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0777",
@@ -6214,7 +6990,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェック制度の主な目的は、メンタルヘルス不調の労働者を早期に発見する二次予防にあるとされる。",
     "correctAnswer": false,
     "exp": "一次予防は未然防止、二次予防は早期発見・早期対応、三次予防は職場復帰支援・再発防止。ストレスチェック制度の主な目的と職場環境の改善は一次予防、復職後のフォローアップは三次予防にあたる。",
-    "publicPath": "q/ichimon/s/ichi-0777/index.html"
+    "publicPath": "q/ichimon/s/ichi-0777/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0778",
@@ -6222,7 +6999,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "一次予防は発症予防・健康促進、二次予防は早期発見・早期対応、三次予防は職場復帰・再発防止を指す。",
     "correctAnswer": true,
     "exp": "一次予防は未然防止、二次予防は早期発見・早期対応、三次予防は職場復帰支援・再発防止。ストレスチェック制度の主な目的と職場環境の改善は一次予防、復職後のフォローアップは三次予防にあたる。",
-    "publicPath": "q/ichimon/s/ichi-0778/index.html"
+    "publicPath": "q/ichimon/s/ichi-0778/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0779",
@@ -6230,7 +7008,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰後のフォローアップは、二次予防にあたる取り組みである。",
     "correctAnswer": false,
     "exp": "一次予防は未然防止、二次予防は早期発見・早期対応、三次予防は職場復帰支援・再発防止。ストレスチェック制度の主な目的と職場環境の改善は一次予防、復職後のフォローアップは三次予防にあたる。",
-    "publicPath": "q/ichimon/s/ichi-0779/index.html"
+    "publicPath": "q/ichimon/s/ichi-0779/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0780",
@@ -6238,7 +7017,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境の改善は、メンタルヘルス不調を未然に防ぐ一次予防の取り組みに位置づけられる。",
     "correctAnswer": true,
     "exp": "一次予防は未然防止、二次予防は早期発見・早期対応、三次予防は職場復帰支援・再発防止。ストレスチェック制度の主な目的と職場環境の改善は一次予防、復職後のフォローアップは三次予防にあたる。",
-    "publicPath": "q/ichimon/s/ichi-0780/index.html"
+    "publicPath": "q/ichimon/s/ichi-0780/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0781",
@@ -6246,7 +7026,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "セルフケアには、ストレスやメンタルヘルスに対する正しい理解、ストレスへの気づき、ストレスへの対処が含まれる。",
     "correctAnswer": true,
     "exp": "セルフケアには、ストレスへの正しい理解・気づき・対処、ストレスチェックによる自身の状態の把握、自発的な相談が含まれる。事業者は、教育研修や情報提供によって労働者のセルフケアを支援する。",
-    "publicPath": "q/ichimon/s/ichi-0781/index.html"
+    "publicPath": "q/ichimon/s/ichi-0781/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0782",
@@ -6254,7 +7035,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックを受検して、自らのストレスの状態を把握することは、セルフケアの一つである。",
     "correctAnswer": true,
     "exp": "セルフケアには、ストレスへの正しい理解・気づき・対処、ストレスチェックによる自身の状態の把握、自発的な相談が含まれる。事業者は、教育研修や情報提供によって労働者のセルフケアを支援する。",
-    "publicPath": "q/ichimon/s/ichi-0782/index.html"
+    "publicPath": "q/ichimon/s/ichi-0782/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0783",
@@ -6262,7 +7044,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "セルフケアは労働者自身が行うものであるため、事業者がセルフケアに関する教育研修や情報提供を行う必要はない。",
     "correctAnswer": false,
     "exp": "セルフケアには、ストレスへの正しい理解・気づき・対処、ストレスチェックによる自身の状態の把握、自発的な相談が含まれる。事業者は、教育研修や情報提供によって労働者のセルフケアを支援する。",
-    "publicPath": "q/ichimon/s/ichi-0783/index.html"
+    "publicPath": "q/ichimon/s/ichi-0783/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0784",
@@ -6270,7 +7053,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "セルフケアには、自発的に管理監督者や事業場内産業保健スタッフ等に相談することは含まれない。",
     "correctAnswer": false,
     "exp": "セルフケアには、ストレスへの正しい理解・気づき・対処、ストレスチェックによる自身の状態の把握、自発的な相談が含まれる。事業者は、教育研修や情報提供によって労働者のセルフケアを支援する。",
-    "publicPath": "q/ichimon/s/ichi-0784/index.html"
+    "publicPath": "q/ichimon/s/ichi-0784/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0785",
@@ -6278,7 +7062,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "医療計画で重点的に取り組むこととされている五疾病には、精神疾患が含まれている。",
     "correctAnswer": true,
     "exp": "医療計画の五疾病は、がん・脳卒中・心筋梗塞等の心血管疾患・糖尿病・精神疾患。精神疾患は2011年に加えることが決まり、2013年度からの医療計画で五疾病の一つとなった。認知症や高血圧症は含まれない。",
-    "publicPath": "q/ichimon/s/ichi-0785/index.html"
+    "publicPath": "q/ichimon/s/ichi-0785/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0786",
@@ -6286,7 +7071,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "医療計画の五疾病には、認知症が独立した疾病として含まれている。",
     "correctAnswer": false,
     "exp": "医療計画の五疾病は、がん・脳卒中・心筋梗塞等の心血管疾患・糖尿病・精神疾患。精神疾患は2011年に加えることが決まり、2013年度からの医療計画で五疾病の一つとなった。認知症や高血圧症は含まれない。",
-    "publicPath": "q/ichimon/s/ichi-0786/index.html"
+    "publicPath": "q/ichimon/s/ichi-0786/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0787",
@@ -6294,7 +7080,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "医療計画の五疾病には、高血圧症が含まれている。",
     "correctAnswer": false,
     "exp": "医療計画の五疾病は、がん・脳卒中・心筋梗塞等の心血管疾患・糖尿病・精神疾患。精神疾患は2011年に加えることが決まり、2013年度からの医療計画で五疾病の一つとなった。認知症や高血圧症は含まれない。",
-    "publicPath": "q/ichimon/s/ichi-0787/index.html"
+    "publicPath": "q/ichimon/s/ichi-0787/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0788",
@@ -6302,7 +7089,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神疾患は、2013年度からの医療計画で五疾病の一つに位置づけられた。",
     "correctAnswer": true,
     "exp": "医療計画の五疾病は、がん・脳卒中・心筋梗塞等の心血管疾患・糖尿病・精神疾患。精神疾患は2011年に加えることが決まり、2013年度からの医療計画で五疾病の一つとなった。認知症や高血圧症は含まれない。",
-    "publicPath": "q/ichimon/s/ichi-0788/index.html"
+    "publicPath": "q/ichimon/s/ichi-0788/index.html",
+    "level": 5
   },
   {
     "id": "ichi-0789",
@@ -6310,7 +7098,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス不調による経済的損失には、休職者の業務を補う代替要員の確保にかかる費用は含まれない。",
     "correctAnswer": false,
     "exp": "メンタルヘルス不調による経済的損失には、欠勤・休職、出勤中の生産性低下（プレゼンティーイズム）、代替要員の確保、離職に伴う採用・教育の費用などが含まれる。プレゼンティーイズムによる損失は欠勤より大きいとする研究もある。",
-    "publicPath": "q/ichimon/s/ichi-0789/index.html"
+    "publicPath": "q/ichimon/s/ichi-0789/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0790",
@@ -6318,7 +7107,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "出勤していても不調により生産性が低下する「プレゼンティーイズム」による損失は、欠勤による損失より大きいとする研究もある。",
     "correctAnswer": true,
     "exp": "メンタルヘルス不調による経済的損失には、欠勤・休職、出勤中の生産性低下（プレゼンティーイズム）、代替要員の確保、離職に伴う採用・教育の費用などが含まれる。プレゼンティーイズムによる損失は欠勤より大きいとする研究もある。",
-    "publicPath": "q/ichimon/s/ichi-0790/index.html"
+    "publicPath": "q/ichimon/s/ichi-0790/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0791",
@@ -6326,7 +7116,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス不調による離職は、企業の経済的損失には含まれない。",
     "correctAnswer": false,
     "exp": "メンタルヘルス不調による経済的損失には、欠勤・休職、出勤中の生産性低下（プレゼンティーイズム）、代替要員の確保、離職に伴う採用・教育の費用などが含まれる。プレゼンティーイズムによる損失は欠勤より大きいとする研究もある。",
-    "publicPath": "q/ichimon/s/ichi-0791/index.html"
+    "publicPath": "q/ichimon/s/ichi-0791/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0792",
@@ -6334,7 +7125,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルス不調による離職は、新たな採用や教育訓練の費用を生み、企業の経済的損失につながる。",
     "correctAnswer": true,
     "exp": "メンタルヘルス不調による経済的損失には、欠勤・休職、出勤中の生産性低下（プレゼンティーイズム）、代替要員の確保、離職に伴う採用・教育の費用などが含まれる。プレゼンティーイズムによる損失は欠勤より大きいとする研究もある。",
-    "publicPath": "q/ichimon/s/ichi-0792/index.html"
+    "publicPath": "q/ichimon/s/ichi-0792/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0793",
@@ -6342,7 +7134,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働安全衛生法の基準を守っていれば、安全配慮義務を尽くしたことになり、民事上の責任を問われることはない。",
     "correctAnswer": false,
     "exp": "労働安全衛生法は事業者に措置を義務づける罰則付きの公法、労働契約法は労働契約の基本的なルールを定める私法で、第5条で安全配慮義務を定める。安衛法の基準を守っていても、個別の配慮を怠れば安全配慮義務違反となることがある。労契法第5条の違反に罰則はない。",
-    "publicPath": "q/ichimon/s/ichi-0793/index.html"
+    "publicPath": "q/ichimon/s/ichi-0793/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0794",
@@ -6350,7 +7143,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働安全衛生法は公法として行政規制・刑事罰を定め、労働契約法は私法として民事上の義務を定める。",
     "correctAnswer": true,
     "exp": "労働安全衛生法は事業者に措置を義務づける罰則付きの公法、労働契約法は労働契約の基本的なルールを定める私法で、第5条で安全配慮義務を定める。安衛法の基準を守っていても、個別の配慮を怠れば安全配慮義務違反となることがある。労契法第5条の違反に罰則はない。",
-    "publicPath": "q/ichimon/s/ichi-0794/index.html"
+    "publicPath": "q/ichimon/s/ichi-0794/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0795",
@@ -6358,7 +7152,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働契約法第5条に違反した場合は、労働基準監督官による是正勧告の対象となり、罰金が科される。",
     "correctAnswer": false,
     "exp": "労働安全衛生法は事業者に措置を義務づける罰則付きの公法、労働契約法は労働契約の基本的なルールを定める私法で、第5条で安全配慮義務を定める。安衛法の基準を守っていても、個別の配慮を怠れば安全配慮義務違反となることがある。労契法第5条の違反に罰則はない。",
-    "publicPath": "q/ichimon/s/ichi-0795/index.html"
+    "publicPath": "q/ichimon/s/ichi-0795/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0796",
@@ -6366,7 +7161,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "労働契約法は労働契約の基本的なルールを定める法律であり、第5条で使用者の安全配慮義務を定めている。",
     "correctAnswer": true,
     "exp": "労働安全衛生法は事業者に措置を義務づける罰則付きの公法、労働契約法は労働契約の基本的なルールを定める私法で、第5条で安全配慮義務を定める。安衛法の基準を守っていても、個別の配慮を怠れば安全配慮義務違反となることがある。労契法第5条の違反に罰則はない。",
-    "publicPath": "q/ichimon/s/ichi-0796/index.html"
+    "publicPath": "q/ichimon/s/ichi-0796/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0797",
@@ -6374,7 +7170,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ハラスメントの事実関係を確認できなかった場合には、再発防止に向けた措置を講じる必要はない。",
     "correctAnswer": false,
     "exp": "ハラスメントの相談には、相談者と行為者の双方から事実関係を確認し、主張に不一致があれば第三者からも聴取する。事実が確認できれば被害者への配慮と行為者への措置を行い、確認できなかった場合も再発防止の措置を講じる。",
-    "publicPath": "q/ichimon/s/ichi-0797/index.html"
+    "publicPath": "q/ichimon/s/ichi-0797/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0798",
@@ -6382,7 +7179,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ハラスメントの事実確認を行ったうえで、被害者へのケア・行為者への措置・再発防止策の実施を組織として行う。",
     "correctAnswer": true,
     "exp": "ハラスメントの相談には、相談者と行為者の双方から事実関係を確認し、主張に不一致があれば第三者からも聴取する。事実が確認できれば被害者への配慮と行為者への措置を行い、確認できなかった場合も再発防止の措置を講じる。",
-    "publicPath": "q/ichimon/s/ichi-0798/index.html"
+    "publicPath": "q/ichimon/s/ichi-0798/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0799",
@@ -6390,7 +7188,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ハラスメントの相談があった場合は、相談者と行為者の双方から事実関係を確認し、主張に不一致があれば第三者からも聴取する。",
     "correctAnswer": true,
     "exp": "ハラスメントの相談には、相談者と行為者の双方から事実関係を確認し、主張に不一致があれば第三者からも聴取する。事実が確認できれば被害者への配慮と行為者への措置を行い、確認できなかった場合も再発防止の措置を講じる。",
-    "publicPath": "q/ichimon/s/ichi-0799/index.html"
+    "publicPath": "q/ichimon/s/ichi-0799/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0800",
@@ -6398,7 +7197,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ハラスメントの相談があった場合は、事実関係を確認する前に、まず行為者を懲戒処分にすることが求められる。",
     "correctAnswer": false,
     "exp": "ハラスメントの相談には、相談者と行為者の双方から事実関係を確認し、主張に不一致があれば第三者からも聴取する。事実が確認できれば被害者への配慮と行為者への措置を行い、確認できなかった場合も再発防止の措置を講じる。",
-    "publicPath": "q/ichimon/s/ichi-0800/index.html"
+    "publicPath": "q/ichimon/s/ichi-0800/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0801",
@@ -6406,7 +7206,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "勤務間インターバル制度で休息時間を確保する方法として、翌日の始業時刻を繰り下げる方法がある。",
     "correctAnswer": true,
     "exp": "勤務間インターバル制度は、終業から翌日の始業までの休息時間を日々確保し、生活時間・睡眠時間を守ることを目的とする。休息時間を確保するため、翌日の始業時刻を繰り下げる方法がある。深夜業の禁止や総労働時間の削減を目的とするものではない。",
-    "publicPath": "q/ichimon/s/ichi-0801/index.html"
+    "publicPath": "q/ichimon/s/ichi-0801/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0802",
@@ -6414,7 +7215,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "勤務間インターバル制度は、終業から翌日の始業までに一定の休息時間を確保し、労働者の睡眠時間や生活時間を守ることを目的とする。",
     "correctAnswer": true,
     "exp": "勤務間インターバル制度は、終業から翌日の始業までの休息時間を日々確保し、生活時間・睡眠時間を守ることを目的とする。休息時間を確保するため、翌日の始業時刻を繰り下げる方法がある。深夜業の禁止や総労働時間の削減を目的とするものではない。",
-    "publicPath": "q/ichimon/s/ichi-0802/index.html"
+    "publicPath": "q/ichimon/s/ichi-0802/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0803",
@@ -6422,7 +7224,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "勤務間インターバルの休息時間は、休日を含めた1週間の合計で確保すればよいとされる。",
     "correctAnswer": false,
     "exp": "勤務間インターバル制度は、終業から翌日の始業までの休息時間を日々確保し、生活時間・睡眠時間を守ることを目的とする。休息時間を確保するため、翌日の始業時刻を繰り下げる方法がある。深夜業の禁止や総労働時間の削減を目的とするものではない。",
-    "publicPath": "q/ichimon/s/ichi-0803/index.html"
+    "publicPath": "q/ichimon/s/ichi-0803/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0804",
@@ -6430,7 +7233,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "勤務間インターバル制度は、深夜業を全面的に禁止することを目的とする制度である。",
     "correctAnswer": false,
     "exp": "勤務間インターバル制度は、終業から翌日の始業までの休息時間を日々確保し、生活時間・睡眠時間を守ることを目的とする。休息時間を確保するため、翌日の始業時刻を繰り下げる方法がある。深夜業の禁止や総労働時間の削減を目的とするものではない。",
-    "publicPath": "q/ichimon/s/ichi-0804/index.html"
+    "publicPath": "q/ichimon/s/ichi-0804/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0805",
@@ -6438,7 +7242,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務による心理的負荷評価表は、労働者本人がストレスの程度を自己採点するためのツールである。",
     "correctAnswer": false,
     "exp": "業務による心理的負荷評価表は、精神障害の労災認定で業務上の出来事の心理的負荷を「強・中・弱」で評価する。発病直前1か月おおむね160時間超の極度の長時間労働は「特別な出来事」として、それだけで「強」となる。2023年9月の改正でカスタマーハラスメントが追加された。",
-    "publicPath": "q/ichimon/s/ichi-0805/index.html"
+    "publicPath": "q/ichimon/s/ichi-0805/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0806",
@@ -6446,7 +7251,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務による心理的負荷評価表は、精神障害の労災認定に用いられるもので、業務上の出来事を「強・中・弱」の3段階で評価する。",
     "correctAnswer": true,
     "exp": "業務による心理的負荷評価表は、精神障害の労災認定で業務上の出来事の心理的負荷を「強・中・弱」で評価する。発病直前1か月おおむね160時間超の極度の長時間労働は「特別な出来事」として、それだけで「強」となる。2023年9月の改正でカスタマーハラスメントが追加された。",
-    "publicPath": "q/ichimon/s/ichi-0806/index.html"
+    "publicPath": "q/ichimon/s/ichi-0806/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0807",
@@ -6454,7 +7260,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "発病直前の1か月におおむね160時間を超える極度の長時間労働を行った場合は、それだけで心理的負荷の総合評価が「強」とされる。",
     "correctAnswer": true,
     "exp": "業務による心理的負荷評価表は、精神障害の労災認定で業務上の出来事の心理的負荷を「強・中・弱」で評価する。発病直前1か月おおむね160時間超の極度の長時間労働は「特別な出来事」として、それだけで「強」となる。2023年9月の改正でカスタマーハラスメントが追加された。",
-    "publicPath": "q/ichimon/s/ichi-0807/index.html"
+    "publicPath": "q/ichimon/s/ichi-0807/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0808",
@@ -6462,7 +7269,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "2023年9月の精神障害の労災認定基準の改正で、カスタマーハラスメントは評価の対象から除外された。",
     "correctAnswer": false,
     "exp": "業務による心理的負荷評価表は、精神障害の労災認定で業務上の出来事の心理的負荷を「強・中・弱」で評価する。発病直前1か月おおむね160時間超の極度の長時間労働は「特別な出来事」として、それだけで「強」となる。2023年9月の改正でカスタマーハラスメントが追加された。",
-    "publicPath": "q/ichimon/s/ichi-0808/index.html"
+    "publicPath": "q/ichimon/s/ichi-0808/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0809",
@@ -6470,7 +7278,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神疾患の診断方法と処方薬の知識は、管理監督者向けのラインケア研修で学ぶべき中心的な内容である。",
     "correctAnswer": false,
     "exp": "指針の管理監督者への教育研修の内容には、相談対応（話の聴き方等）、職場環境等の評価と改善、職場復帰への支援の方法、事業場内産業保健スタッフ等との連携、健康情報を含む個人情報の保護などが含まれる。精神疾患の診断方法は含まれない。",
-    "publicPath": "q/ichimon/s/ichi-0809/index.html"
+    "publicPath": "q/ichimon/s/ichi-0809/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0810",
@@ -6478,7 +7287,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルスの基礎知識、部下の変化への気づきと対応、相談対応、職場環境改善の方法は、ラインケア研修で管理監督者が学ぶべき内容である。",
     "correctAnswer": true,
     "exp": "指針の管理監督者への教育研修の内容には、相談対応（話の聴き方等）、職場環境等の評価と改善、職場復帰への支援の方法、事業場内産業保健スタッフ等との連携、健康情報を含む個人情報の保護などが含まれる。精神疾患の診断方法は含まれない。",
-    "publicPath": "q/ichimon/s/ichi-0810/index.html"
+    "publicPath": "q/ichimon/s/ichi-0810/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0811",
@@ -6486,7 +7296,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "指針に示された管理監督者への教育研修の内容には、心の健康問題により休業した者の職場復帰への支援の方法が含まれる。",
     "correctAnswer": true,
     "exp": "指針の管理監督者への教育研修の内容には、相談対応（話の聴き方等）、職場環境等の評価と改善、職場復帰への支援の方法、事業場内産業保健スタッフ等との連携、健康情報を含む個人情報の保護などが含まれる。精神疾患の診断方法は含まれない。",
-    "publicPath": "q/ichimon/s/ichi-0811/index.html"
+    "publicPath": "q/ichimon/s/ichi-0811/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0812",
@@ -6494,7 +7305,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "指針に示された管理監督者への教育研修の内容には、健康情報を含む労働者の個人情報の保護が含まれる。",
     "correctAnswer": true,
     "exp": "指針の管理監督者への教育研修の内容には、相談対応（話の聴き方等）、職場環境等の評価と改善、職場復帰への支援の方法、事業場内産業保健スタッフ等との連携、健康情報を含む個人情報の保護などが含まれる。精神疾患の診断方法は含まれない。",
-    "publicPath": "q/ichimon/s/ichi-0812/index.html"
+    "publicPath": "q/ichimon/s/ichi-0812/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0813",
@@ -6502,7 +7314,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者向けの研修のみを実施すれば、すべての従業員への対応が完了する。",
     "correctAnswer": false,
     "exp": "教育研修・情報提供は、労働者・管理監督者・事業場内産業保健スタッフ等のそれぞれに立場に応じて行う。一般の労働者にはセルフケア中心の研修を行う。研修は採用時だけでなく昇進や異動などの節目にも計画的に行う。",
-    "publicPath": "q/ichimon/s/ichi-0813/index.html"
+    "publicPath": "q/ichimon/s/ichi-0813/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0814",
@@ -6510,7 +7323,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者・一般労働者・産業保健スタッフそれぞれの立場に応じた研修・情報提供が必要である。",
     "correctAnswer": true,
     "exp": "教育研修・情報提供は、労働者・管理監督者・事業場内産業保健スタッフ等のそれぞれに立場に応じて行う。一般の労働者にはセルフケア中心の研修を行う。研修は採用時だけでなく昇進や異動などの節目にも計画的に行う。",
-    "publicPath": "q/ichimon/s/ichi-0814/index.html"
+    "publicPath": "q/ichimon/s/ichi-0814/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0815",
@@ -6518,7 +7332,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルスの教育研修は採用時に一度行えば十分であり、昇進や異動の際にあらためて行う必要はない。",
     "correctAnswer": false,
     "exp": "教育研修・情報提供は、労働者・管理監督者・事業場内産業保健スタッフ等のそれぞれに立場に応じて行う。一般の労働者にはセルフケア中心の研修を行う。研修は採用時だけでなく昇進や異動などの節目にも計画的に行う。",
-    "publicPath": "q/ichimon/s/ichi-0815/index.html"
+    "publicPath": "q/ichimon/s/ichi-0815/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0816",
@@ -6526,7 +7341,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "一般の労働者への教育研修は、ストレスへの気づき方や対処の方法などのセルフケアを中心に行う。",
     "correctAnswer": true,
     "exp": "教育研修・情報提供は、労働者・管理監督者・事業場内産業保健スタッフ等のそれぞれに立場に応じて行う。一般の労働者にはセルフケア中心の研修を行う。研修は採用時だけでなく昇進や異動などの節目にも計画的に行う。",
-    "publicPath": "q/ichimon/s/ichi-0816/index.html"
+    "publicPath": "q/ichimon/s/ichi-0816/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0817",
@@ -6534,7 +7350,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "気分転換やリラクセーションによって気持ちを落ち着かせることは、問題焦点型コーピングにあたる。",
     "correctAnswer": false,
     "exp": "問題焦点型コーピングは原因となる問題そのものへの対処、情動焦点型は生じた感情の調整（気分転換・リラクセーションなど）。情動焦点型は変えられない状況で役立つことがある。状況に応じて使い分け、学習や訓練で身につけられる。",
-    "publicPath": "q/ichimon/s/ichi-0817/index.html"
+    "publicPath": "q/ichimon/s/ichi-0817/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0818",
@@ -6542,7 +7359,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "問題焦点型コーピングとは、ストレスの原因となっている問題そのものを解決しようとする対処である。",
     "correctAnswer": true,
     "exp": "問題焦点型コーピングは原因となる問題そのものへの対処、情動焦点型は生じた感情の調整（気分転換・リラクセーションなど）。情動焦点型は変えられない状況で役立つことがある。状況に応じて使い分け、学習や訓練で身につけられる。",
-    "publicPath": "q/ichimon/s/ichi-0818/index.html"
+    "publicPath": "q/ichimon/s/ichi-0818/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0819",
@@ -6550,7 +7368,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "コーピングは個人の性格で決まるものであり、意識的に変えることはできない。",
     "correctAnswer": false,
     "exp": "問題焦点型コーピングは原因となる問題そのものへの対処、情動焦点型は生じた感情の調整（気分転換・リラクセーションなど）。情動焦点型は変えられない状況で役立つことがある。状況に応じて使い分け、学習や訓練で身につけられる。",
-    "publicPath": "q/ichimon/s/ichi-0819/index.html"
+    "publicPath": "q/ichimon/s/ichi-0819/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0820",
@@ -6558,7 +7377,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "情動焦点型コーピングは、すぐには変えられない状況で気持ちを落ち着かせるのに役立つことがある。",
     "correctAnswer": true,
     "exp": "問題焦点型コーピングは原因となる問題そのものへの対処、情動焦点型は生じた感情の調整（気分転換・リラクセーションなど）。情動焦点型は変えられない状況で役立つことがある。状況に応じて使い分け、学習や訓練で身につけられる。",
-    "publicPath": "q/ichimon/s/ichi-0820/index.html"
+    "publicPath": "q/ichimon/s/ichi-0820/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0821",
@@ -6566,7 +7386,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "高血圧や心疾患などの循環器疾患は、慢性的なストレスが引き起こす健康障害にあたる。",
     "correctAnswer": true,
     "exp": "慢性的なストレス状態ではコルチゾールの分泌が持続的に高まり、免疫機能が低下する。慢性的なストレスは、睡眠障害・うつ病、高血圧・虚血性心疾患、胃・十二指腸潰瘍・過敏性腸症候群などと関連がある。",
-    "publicPath": "q/ichimon/s/ichi-0821/index.html"
+    "publicPath": "q/ichimon/s/ichi-0821/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0822",
@@ -6574,7 +7395,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "免疫機能の低下による感染症リスクの増大は、慢性的なストレスが引き起こす健康障害にあたる。",
     "correctAnswer": true,
     "exp": "慢性的なストレス状態ではコルチゾールの分泌が持続的に高まり、免疫機能が低下する。慢性的なストレスは、睡眠障害・うつ病、高血圧・虚血性心疾患、胃・十二指腸潰瘍・過敏性腸症候群などと関連がある。",
-    "publicPath": "q/ichimon/s/ichi-0822/index.html"
+    "publicPath": "q/ichimon/s/ichi-0822/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0823",
@@ -6582,7 +7404,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "慢性的なストレス状態では、コルチゾールの分泌が持続的に抑えられ、免疫機能が高まる。",
     "correctAnswer": false,
     "exp": "慢性的なストレス状態ではコルチゾールの分泌が持続的に高まり、免疫機能が低下する。慢性的なストレスは、睡眠障害・うつ病、高血圧・虚血性心疾患、胃・十二指腸潰瘍・過敏性腸症候群などと関連がある。",
-    "publicPath": "q/ichimon/s/ichi-0823/index.html"
+    "publicPath": "q/ichimon/s/ichi-0823/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0824",
@@ -6590,7 +7413,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "胃潰瘍や過敏性腸症候群などの消化器系疾患は、慢性的なストレスと関連が深い。",
     "correctAnswer": true,
     "exp": "慢性的なストレス状態ではコルチゾールの分泌が持続的に高まり、免疫機能が低下する。慢性的なストレスは、睡眠障害・うつ病、高血圧・虚血性心疾患、胃・十二指腸潰瘍・過敏性腸症候群などと関連がある。",
-    "publicPath": "q/ichimon/s/ichi-0824/index.html"
+    "publicPath": "q/ichimon/s/ichi-0824/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0825",
@@ -6598,7 +7422,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "不調の部下には、本人の意向を確認せずにすべての業務を外すことが最も望ましい。",
     "correctAnswer": false,
     "exp": "不調の部下には、特別扱いや回避をせず普段どおりに接し、本人の意向や主治医・産業医の意見を踏まえて業務上の配慮を行う。本人の意向を確認せずにすべての業務を外すことや、公平性を理由に配慮をしないことは適切ではない。",
-    "publicPath": "q/ichimon/s/ichi-0825/index.html"
+    "publicPath": "q/ichimon/s/ichi-0825/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0826",
@@ -6606,7 +7431,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "不調の部下にも「病気だから特別扱い」ではなく一人の人として接しながら、業務上の配慮を行う。",
     "correctAnswer": true,
     "exp": "不調の部下には、特別扱いや回避をせず普段どおりに接し、本人の意向や主治医・産業医の意見を踏まえて業務上の配慮を行う。本人の意向を確認せずにすべての業務を外すことや、公平性を理由に配慮をしないことは適切ではない。",
-    "publicPath": "q/ichimon/s/ichi-0826/index.html"
+    "publicPath": "q/ichimon/s/ichi-0826/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0827",
@@ -6614,7 +7440,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "他の部下との公平性を保つため、不調の部下に対して業務上の配慮を行うことは控えるべきである。",
     "correctAnswer": false,
     "exp": "不調の部下には、特別扱いや回避をせず普段どおりに接し、本人の意向や主治医・産業医の意見を踏まえて業務上の配慮を行う。本人の意向を確認せずにすべての業務を外すことや、公平性を理由に配慮をしないことは適切ではない。",
-    "publicPath": "q/ichimon/s/ichi-0827/index.html"
+    "publicPath": "q/ichimon/s/ichi-0827/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0828",
@@ -6622,7 +7449,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "不調の部下への業務上の配慮は、本人の意向や主治医・産業医の意見を踏まえて検討する。",
     "correctAnswer": true,
     "exp": "不調の部下には、特別扱いや回避をせず普段どおりに接し、本人の意向や主治医・産業医の意見を踏まえて業務上の配慮を行う。本人の意向を確認せずにすべての業務を外すことや、公平性を理由に配慮をしないことは適切ではない。",
-    "publicPath": "q/ichimon/s/ichi-0828/index.html"
+    "publicPath": "q/ichimon/s/ichi-0828/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0829",
@@ -6630,7 +7458,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "アルコール依存症の治療の基本は節酒であり、断酒を目標とすることは適切でないとされる。",
     "correctAnswer": false,
     "exp": "アルコール依存症は「否認の病」とも呼ばれる。治療の基本は断酒で、断酒会やAAなどの自助グループが回復を支える。職場では遅刻・欠勤などの事実をもとに本人と話し、専門家への相談につなげる。",
-    "publicPath": "q/ichimon/s/ichi-0829/index.html"
+    "publicPath": "q/ichimon/s/ichi-0829/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0830",
@@ -6638,7 +7467,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "アルコール依存症は「否認の病」とも呼ばれ、本人が問題を認識しにくい特徴がある。",
     "correctAnswer": true,
     "exp": "アルコール依存症は「否認の病」とも呼ばれる。治療の基本は断酒で、断酒会やAAなどの自助グループが回復を支える。職場では遅刻・欠勤などの事実をもとに本人と話し、専門家への相談につなげる。",
-    "publicPath": "q/ichimon/s/ichi-0830/index.html"
+    "publicPath": "q/ichimon/s/ichi-0830/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0831",
@@ -6646,7 +7476,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "アルコール依存症の治療では、断酒会やAAなどの自助グループへの参加は勧められない。",
     "correctAnswer": false,
     "exp": "アルコール依存症は「否認の病」とも呼ばれる。治療の基本は断酒で、断酒会やAAなどの自助グループが回復を支える。職場では遅刻・欠勤などの事実をもとに本人と話し、専門家への相談につなげる。",
-    "publicPath": "q/ichimon/s/ichi-0831/index.html"
+    "publicPath": "q/ichimon/s/ichi-0831/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0832",
@@ -6654,7 +7485,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "飲酒の問題が疑われる部下には、遅刻や欠勤などの職場で把握できる事実をもとに話をし、専門家への相談につなげる。",
     "correctAnswer": true,
     "exp": "アルコール依存症は「否認の病」とも呼ばれる。治療の基本は断酒で、断酒会やAAなどの自助グループが回復を支える。職場では遅刻・欠勤などの事実をもとに本人と話し、専門家への相談につなげる。",
-    "publicPath": "q/ichimon/s/ichi-0832/index.html"
+    "publicPath": "q/ichimon/s/ichi-0832/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0833",
@@ -6662,7 +7494,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ASDのある人は全員、知的障害を伴う。",
     "correctAnswer": false,
     "exp": "ASDの主な特性は、社会的コミュニケーションや対人関係の困難さと、限定された興味や反復的な行動。感覚過敏がみられる人もいる。知的障害を伴うとは限らず、特性は成人後も続くことが多い。",
-    "publicPath": "q/ichimon/s/ichi-0833/index.html"
+    "publicPath": "q/ichimon/s/ichi-0833/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0834",
@@ -6670,7 +7503,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ASDの主な特性は、社会的コミュニケーションの困難さと、限定的・反復的な行動パターンである。",
     "correctAnswer": true,
     "exp": "ASDの主な特性は、社会的コミュニケーションや対人関係の困難さと、限定された興味や反復的な行動。感覚過敏がみられる人もいる。知的障害を伴うとは限らず、特性は成人後も続くことが多い。",
-    "publicPath": "q/ichimon/s/ichi-0834/index.html"
+    "publicPath": "q/ichimon/s/ichi-0834/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0835",
@@ -6678,7 +7512,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ASDの特性は成人になると自然に消失する。",
     "correctAnswer": false,
     "exp": "ASDの主な特性は、社会的コミュニケーションや対人関係の困難さと、限定された興味や反復的な行動。感覚過敏がみられる人もいる。知的障害を伴うとは限らず、特性は成人後も続くことが多い。",
-    "publicPath": "q/ichimon/s/ichi-0835/index.html"
+    "publicPath": "q/ichimon/s/ichi-0835/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0836",
@@ -6686,7 +7521,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "自閉スペクトラム症（ASD）のある人の中には、音や光などに対する感覚過敏がみられる人がいる。",
     "correctAnswer": true,
     "exp": "ASDの主な特性は、社会的コミュニケーションや対人関係の困難さと、限定された興味や反復的な行動。感覚過敏がみられる人もいる。知的障害を伴うとは限らず、特性は成人後も続くことが多い。",
-    "publicPath": "q/ichimon/s/ichi-0836/index.html"
+    "publicPath": "q/ichimon/s/ichi-0836/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0837",
@@ -6694,7 +7530,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過敏性腸症候群は、大腸の内視鏡検査で潰瘍などの器質的な異常が確認されることによって診断される。",
     "correctAnswer": false,
     "exp": "過敏性腸症候群は、腹痛や便通の異常が続くが検査で器質的な異常が認められない機能性の消化管障害で、心身症の代表例。若年者から働き盛りの世代に多く、通勤前など緊張する場面で悪化しやすい。",
-    "publicPath": "q/ichimon/s/ichi-0837/index.html"
+    "publicPath": "q/ichimon/s/ichi-0837/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0838",
@@ -6702,7 +7539,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過敏性腸症候群は、腹痛・下痢・便秘などの症状を繰り返すが器質的異常が認められず、ストレスとの関連が深い。",
     "correctAnswer": true,
     "exp": "過敏性腸症候群は、腹痛や便通の異常が続くが検査で器質的な異常が認められない機能性の消化管障害で、心身症の代表例。若年者から働き盛りの世代に多く、通勤前など緊張する場面で悪化しやすい。",
-    "publicPath": "q/ichimon/s/ichi-0838/index.html"
+    "publicPath": "q/ichimon/s/ichi-0838/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0839",
@@ -6710,7 +7548,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過敏性腸症候群は高齢者に多く、若年者や働き盛りの世代にはほとんどみられない。",
     "correctAnswer": false,
     "exp": "過敏性腸症候群は、腹痛や便通の異常が続くが検査で器質的な異常が認められない機能性の消化管障害で、心身症の代表例。若年者から働き盛りの世代に多く、通勤前など緊張する場面で悪化しやすい。",
-    "publicPath": "q/ichimon/s/ichi-0839/index.html"
+    "publicPath": "q/ichimon/s/ichi-0839/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0840",
@@ -6718,7 +7557,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過敏性腸症候群では、通勤電車に乗る前など、緊張する場面で症状が悪化することがある。",
     "correctAnswer": true,
     "exp": "過敏性腸症候群は、腹痛や便通の異常が続くが検査で器質的な異常が認められない機能性の消化管障害で、心身症の代表例。若年者から働き盛りの世代に多く、通勤前など緊張する場面で悪化しやすい。",
-    "publicPath": "q/ichimon/s/ichi-0840/index.html"
+    "publicPath": "q/ichimon/s/ichi-0840/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0841",
@@ -6726,7 +7566,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ジョブコーチは障害者本人のみを支援し、事業主や職場の同僚に助言することはない。",
     "correctAnswer": false,
     "exp": "職場適応援助者（ジョブコーチ）は職場に出向き、障害者本人には作業の進め方や職場でのコミュニケーションの支援を、事業主や同僚には障害特性に配慮した指導方法や接し方の助言を行う。知的障害・精神障害・発達障害のある人も対象で、雇入れ時だけでなく雇用後にも利用できる。",
-    "publicPath": "q/ichimon/s/ichi-0841/index.html"
+    "publicPath": "q/ichimon/s/ichi-0841/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0842",
@@ -6734,7 +7575,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ジョブコーチは職場に出向き、障害者本人の職場適応と、事業主や同僚への助言の両面から支援を行う。",
     "correctAnswer": true,
     "exp": "職場適応援助者（ジョブコーチ）は職場に出向き、障害者本人には作業の進め方や職場でのコミュニケーションの支援を、事業主や同僚には障害特性に配慮した指導方法や接し方の助言を行う。知的障害・精神障害・発達障害のある人も対象で、雇入れ時だけでなく雇用後にも利用できる。",
-    "publicPath": "q/ichimon/s/ichi-0842/index.html"
+    "publicPath": "q/ichimon/s/ichi-0842/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0843",
@@ -6742,7 +7584,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ジョブコーチ支援は就職前の段階に限って行われ、雇用された後に利用することはできない。",
     "correctAnswer": false,
     "exp": "職場適応援助者（ジョブコーチ）は職場に出向き、障害者本人には作業の進め方や職場でのコミュニケーションの支援を、事業主や同僚には障害特性に配慮した指導方法や接し方の助言を行う。知的障害・精神障害・発達障害のある人も対象で、雇入れ時だけでなく雇用後にも利用できる。",
-    "publicPath": "q/ichimon/s/ichi-0843/index.html"
+    "publicPath": "q/ichimon/s/ichi-0843/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0844",
@@ -6750,7 +7593,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ジョブコーチ支援の対象は身体障害者に限られ、精神障害者や発達障害者は対象とならない。",
     "correctAnswer": false,
     "exp": "職場適応援助者（ジョブコーチ）は職場に出向き、障害者本人には作業の進め方や職場でのコミュニケーションの支援を、事業主や同僚には障害特性に配慮した指導方法や接し方の助言を行う。知的障害・精神障害・発達障害のある人も対象で、雇入れ時だけでなく雇用後にも利用できる。",
-    "publicPath": "q/ichimon/s/ichi-0844/index.html"
+    "publicPath": "q/ichimon/s/ichi-0844/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0845",
@@ -6758,7 +7602,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務の進め方や作業の順序を自分の判断で自由に決められることは、「仕事のコントロール（裁量度）」が低い職場の特徴である。",
     "correctAnswer": false,
     "exp": "カラセックの仕事の要求度－コントロールモデルでは、要求度が高くコントロールが低い仕事が「高ストレイン」で健康リスクが最も高い。コントロールは業務の進め方などを自分で決められる度合い。社会的支援を加えて拡張したのはジョンソンら。",
-    "publicPath": "q/ichimon/s/ichi-0845/index.html"
+    "publicPath": "q/ichimon/s/ichi-0845/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0846",
@@ -6766,7 +7611,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務手順が厳密に決められていて、自分で判断・工夫する余地がほとんどないことは、「仕事のコントロール（裁量度）」が低い職場の特徴である。",
     "correctAnswer": true,
     "exp": "カラセックの仕事の要求度－コントロールモデルでは、要求度が高くコントロールが低い仕事が「高ストレイン」で健康リスクが最も高い。コントロールは業務の進め方などを自分で決められる度合い。社会的支援を加えて拡張したのはジョンソンら。",
-    "publicPath": "q/ichimon/s/ichi-0846/index.html"
+    "publicPath": "q/ichimon/s/ichi-0846/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0847",
@@ -6774,7 +7620,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事の要求度－コントロールモデルでは、要求度が高く、コントロールが低い仕事は「高ストレイン」に分類され、健康リスクが高いとされる。",
     "correctAnswer": true,
     "exp": "カラセックの仕事の要求度－コントロールモデルでは、要求度が高くコントロールが低い仕事が「高ストレイン」で健康リスクが最も高い。コントロールは業務の進め方などを自分で決められる度合い。社会的支援を加えて拡張したのはジョンソンら。",
-    "publicPath": "q/ichimon/s/ichi-0847/index.html"
+    "publicPath": "q/ichimon/s/ichi-0847/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0848",
@@ -6782,7 +7629,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事の要求度－コントロールモデルに、上司や同僚の支援の要素を加えて拡張したのは、ラザルスである。",
     "correctAnswer": false,
     "exp": "カラセックの仕事の要求度－コントロールモデルでは、要求度が高くコントロールが低い仕事が「高ストレイン」で健康リスクが最も高い。コントロールは業務の進め方などを自分で決められる度合い。社会的支援を加えて拡張したのはジョンソンら。",
-    "publicPath": "q/ichimon/s/ichi-0848/index.html"
+    "publicPath": "q/ichimon/s/ichi-0848/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0849",
@@ -6790,7 +7638,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "心理的安全性とは、失敗や懸念を率直に話しても、否定されたり罰せられたりしないと感じられる状態をいう。",
     "correctAnswer": true,
     "exp": "心理的安全性とは、失敗や懸念を率直に話しても否定されたり罰せられたりしないと感じられる状態。意見の対立がない状態とは異なる。心理的安全性の高い職場は相談がしやすく、不調の早期発見につながる。管理監督者の言動が大きく影響する。",
-    "publicPath": "q/ichimon/s/ichi-0849/index.html"
+    "publicPath": "q/ichimon/s/ichi-0849/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0850",
@@ -6798,7 +7647,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "心理的安全性が高く相談しやすい組織風土は、ストレス緩和・早期発見・回復促進に寄与する。",
     "correctAnswer": true,
     "exp": "心理的安全性とは、失敗や懸念を率直に話しても否定されたり罰せられたりしないと感じられる状態。意見の対立がない状態とは異なる。心理的安全性の高い職場は相談がしやすく、不調の早期発見につながる。管理監督者の言動が大きく影響する。",
-    "publicPath": "q/ichimon/s/ichi-0850/index.html"
+    "publicPath": "q/ichimon/s/ichi-0850/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0851",
@@ -6806,7 +7656,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "心理的安全性の高い職場とは、意見の対立がなく、厳しい指摘が行われない職場をいう。",
     "correctAnswer": false,
     "exp": "心理的安全性とは、失敗や懸念を率直に話しても否定されたり罰せられたりしないと感じられる状態。意見の対立がない状態とは異なる。心理的安全性の高い職場は相談がしやすく、不調の早期発見につながる。管理監督者の言動が大きく影響する。",
-    "publicPath": "q/ichimon/s/ichi-0851/index.html"
+    "publicPath": "q/ichimon/s/ichi-0851/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0852",
@@ -6814,7 +7665,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "組織風土の改善は経営トップのみが行えるものであり、管理監督者には変えられない。",
     "correctAnswer": false,
     "exp": "心理的安全性とは、失敗や懸念を率直に話しても否定されたり罰せられたりしないと感じられる状態。意見の対立がない状態とは異なる。心理的安全性の高い職場は相談がしやすく、不調の早期発見につながる。管理監督者の言動が大きく影響する。",
-    "publicPath": "q/ichimon/s/ichi-0852/index.html"
+    "publicPath": "q/ichimon/s/ichi-0852/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0853",
@@ -6822,7 +7674,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職業性ストレス簡易調査票は57項目からなり、仕事のストレス要因、心身のストレス反応、周囲のサポートを評価できる。",
     "correctAnswer": true,
     "exp": "職業性ストレス簡易調査票は57項目で、仕事のストレス要因・心身のストレス反応・周囲のサポートを評価する。ストレスチェックでの使用は推奨であって義務ではなく、条件を満たせば独自に項目を選ぶこともできる。結果から仕事のストレス判定図を作成すると集団ごとの特徴を把握できる。精神疾患を診断する検査ではない。",
-    "publicPath": "q/ichimon/s/ichi-0853/index.html"
+    "publicPath": "q/ichimon/s/ichi-0853/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0854",
@@ -6830,7 +7683,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェック制度では、職業性ストレス簡易調査票の使用が法令で義務づけられており、項目を独自に追加・削除することは認められていない。",
     "correctAnswer": false,
     "exp": "職業性ストレス簡易調査票は57項目で、仕事のストレス要因・心身のストレス反応・周囲のサポートを評価する。ストレスチェックでの使用は推奨であって義務ではなく、条件を満たせば独自に項目を選ぶこともできる。結果から仕事のストレス判定図を作成すると集団ごとの特徴を把握できる。精神疾患を診断する検査ではない。",
-    "publicPath": "q/ichimon/s/ichi-0854/index.html"
+    "publicPath": "q/ichimon/s/ichi-0854/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0855",
@@ -6838,7 +7692,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職業性ストレス簡易調査票の結果を用いて仕事のストレス判定図を作成すると、部署などの集団ごとのストレスの特徴を把握できる。",
     "correctAnswer": true,
     "exp": "職業性ストレス簡易調査票は57項目で、仕事のストレス要因・心身のストレス反応・周囲のサポートを評価する。ストレスチェックでの使用は推奨であって義務ではなく、条件を満たせば独自に項目を選ぶこともできる。結果から仕事のストレス判定図を作成すると集団ごとの特徴を把握できる。精神疾患を診断する検査ではない。",
-    "publicPath": "q/ichimon/s/ichi-0855/index.html"
+    "publicPath": "q/ichimon/s/ichi-0855/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0856",
@@ -6846,7 +7701,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職業性ストレス簡易調査票は、うつ病などの精神疾患の有無を判定するための診断用の検査である。",
     "correctAnswer": false,
     "exp": "職業性ストレス簡易調査票は57項目で、仕事のストレス要因・心身のストレス反応・周囲のサポートを評価する。ストレスチェックでの使用は推奨であって義務ではなく、条件を満たせば独自に項目を選ぶこともできる。結果から仕事のストレス判定図を作成すると集団ごとの特徴を把握できる。精神疾患を診断する検査ではない。",
-    "publicPath": "q/ichimon/s/ichi-0856/index.html"
+    "publicPath": "q/ichimon/s/ichi-0856/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0857",
@@ -6854,7 +7710,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "株価・配当金・営業利益は、職場環境改善の評価指標として適している。",
     "correctAnswer": false,
     "exp": "職場環境改善の評価は、ストレスチェックの集団分析の結果、欠勤率、休職者数、離職率など複数の指標を組み合わせて多面的に行う。評価の指標は、改善計画を立てる段階であらかじめ決めておく。",
-    "publicPath": "q/ichimon/s/ichi-0857/index.html"
+    "publicPath": "q/ichimon/s/ichi-0857/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0858",
@@ -6862,7 +7719,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェック結果の変化・欠勤率・離職率・生産性指標などは、職場環境改善の評価指標として活用できる。",
     "correctAnswer": true,
     "exp": "職場環境改善の評価は、ストレスチェックの集団分析の結果、欠勤率、休職者数、離職率など複数の指標を組み合わせて多面的に行う。評価の指標は、改善計画を立てる段階であらかじめ決めておく。",
-    "publicPath": "q/ichimon/s/ichi-0858/index.html"
+    "publicPath": "q/ichimon/s/ichi-0858/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0859",
@@ -6870,7 +7728,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善の評価指標は、改善策を実施した後に、よい結果が出たものを選んで決めればよい。",
     "correctAnswer": false,
     "exp": "職場環境改善の評価は、ストレスチェックの集団分析の結果、欠勤率、休職者数、離職率など複数の指標を組み合わせて多面的に行う。評価の指標は、改善計画を立てる段階であらかじめ決めておく。",
-    "publicPath": "q/ichimon/s/ichi-0859/index.html"
+    "publicPath": "q/ichimon/s/ichi-0859/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0860",
@@ -6878,7 +7737,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善の評価指標は、改善計画を立てる段階であらかじめ決めておくことが望ましい。",
     "correctAnswer": true,
     "exp": "職場環境改善の評価は、ストレスチェックの集団分析の結果、欠勤率、休職者数、離職率など複数の指標を組み合わせて多面的に行う。評価の指標は、改善計画を立てる段階であらかじめ決めておく。",
-    "publicPath": "q/ichimon/s/ichi-0860/index.html"
+    "publicPath": "q/ichimon/s/ichi-0860/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0861",
@@ -6886,7 +7746,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "改善計画は一度立案したら変更せず、計画通りに実行することが最優先である。",
     "correctAnswer": false,
     "exp": "職場環境改善計画では、実施する内容、担当者、期限、評価の方法を具体的に定める。日常業務の中でできる小さな改善も含め、労働者の参加を図って立案し、実施状況に応じてPDCAサイクルで見直す。",
-    "publicPath": "q/ichimon/s/ichi-0861/index.html"
+    "publicPath": "q/ichimon/s/ichi-0861/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0862",
@@ -6894,7 +7755,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善計画は、実現可能性・優先度・具体的な実施方法・評価指標・担当者を明確にして立案する。",
     "correctAnswer": true,
     "exp": "職場環境改善計画では、実施する内容、担当者、期限、評価の方法を具体的に定める。日常業務の中でできる小さな改善も含め、労働者の参加を図って立案し、実施状況に応じてPDCAサイクルで見直す。",
-    "publicPath": "q/ichimon/s/ichi-0862/index.html"
+    "publicPath": "q/ichimon/s/ichi-0862/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0863",
@@ -6902,7 +7764,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "改善計画は管理監督者が単独で立案し、部下には計画完成後に通知する。",
     "correctAnswer": false,
     "exp": "職場環境改善計画では、実施する内容、担当者、期限、評価の方法を具体的に定める。日常業務の中でできる小さな改善も含め、労働者の参加を図って立案し、実施状況に応じてPDCAサイクルで見直す。",
-    "publicPath": "q/ichimon/s/ichi-0863/index.html"
+    "publicPath": "q/ichimon/s/ichi-0863/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0864",
@@ -6910,7 +7773,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善計画には、費用をかけずに日常業務の中でできる小さな改善も含めることが望ましい。",
     "correctAnswer": true,
     "exp": "職場環境改善計画では、実施する内容、担当者、期限、評価の方法を具体的に定める。日常業務の中でできる小さな改善も含め、労働者の参加を図って立案し、実施状況に応じてPDCAサイクルで見直す。",
-    "publicPath": "q/ichimon/s/ichi-0864/index.html"
+    "publicPath": "q/ichimon/s/ichi-0864/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0865",
@@ -6918,7 +7782,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "動悸やめまいは、心理面のストレスサインにあたる。",
     "correctAnswer": false,
     "exp": "ストレスによるサインは、身体面（頭痛・肩こり・動悸・めまい・不眠など）、心理面（気分の落ち込み・不安感・イライラなど）、行動面（飲酒量や喫煙量の増加、ミスや事故、遅刻や欠勤の増加など）に現れる。",
-    "publicPath": "q/ichimon/s/ichi-0865/index.html"
+    "publicPath": "q/ichimon/s/ichi-0865/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0866",
@@ -6926,7 +7791,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "飲酒量や喫煙量の増加、遅刻・欠勤の増加は、「行動面」のストレスサインにあたる。",
     "correctAnswer": true,
     "exp": "ストレスによるサインは、身体面（頭痛・肩こり・動悸・めまい・不眠など）、心理面（気分の落ち込み・不安感・イライラなど）、行動面（飲酒量や喫煙量の増加、ミスや事故、遅刻や欠勤の増加など）に現れる。",
-    "publicPath": "q/ichimon/s/ichi-0866/index.html"
+    "publicPath": "q/ichimon/s/ichi-0866/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0867",
@@ -6934,7 +7800,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "頭痛・肩こり・不眠は、「行動面」のストレスサインにあたる。",
     "correctAnswer": false,
     "exp": "ストレスによるサインは、身体面（頭痛・肩こり・動悸・めまい・不眠など）、心理面（気分の落ち込み・不安感・イライラなど）、行動面（飲酒量や喫煙量の増加、ミスや事故、遅刻や欠勤の増加など）に現れる。",
-    "publicPath": "q/ichimon/s/ichi-0867/index.html"
+    "publicPath": "q/ichimon/s/ichi-0867/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0868",
@@ -6942,7 +7809,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "仕事でのミスや事故、ヒヤリハットの増加は、行動面のストレスサインにあたる。",
     "correctAnswer": true,
     "exp": "ストレスによるサインは、身体面（頭痛・肩こり・動悸・めまい・不眠など）、心理面（気分の落ち込み・不安感・イライラなど）、行動面（飲酒量や喫煙量の増加、ミスや事故、遅刻や欠勤の増加など）に現れる。",
-    "publicPath": "q/ichimon/s/ichi-0868/index.html"
+    "publicPath": "q/ichimon/s/ichi-0868/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0869",
@@ -6950,7 +7818,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "役割ストレスを防ぐため、業務分担はあえて曖昧にし、柔軟に対応できるようにする。",
     "correctAnswer": false,
     "exp": "役割ストレスには、矛盾する指示を受ける役割葛藤、役割や責任の範囲がはっきりしない役割のあいまいさ、業務の量や責任が過大な役割過重がある。管理監督者は役割・責任の範囲・優先順位を明確に伝え、指示の矛盾を調整する。",
-    "publicPath": "q/ichimon/s/ichi-0869/index.html"
+    "publicPath": "q/ichimon/s/ichi-0869/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0870",
@@ -6958,7 +7827,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "役割ストレスを防ぐため、管理監督者は業務の役割・責任の範囲・優先順位を明確に伝える。",
     "correctAnswer": true,
     "exp": "役割ストレスには、矛盾する指示を受ける役割葛藤、役割や責任の範囲がはっきりしない役割のあいまいさ、業務の量や責任が過大な役割過重がある。管理監督者は役割・責任の範囲・優先順位を明確に伝え、指示の矛盾を調整する。",
-    "publicPath": "q/ichimon/s/ichi-0870/index.html"
+    "publicPath": "q/ichimon/s/ichi-0870/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0871",
@@ -6966,7 +7836,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "複数の上司から矛盾する指示を受けている状態は、「役割のあいまいさ」と呼ばれる。",
     "correctAnswer": false,
     "exp": "役割ストレスには、矛盾する指示を受ける役割葛藤、役割や責任の範囲がはっきりしない役割のあいまいさ、業務の量や責任が過大な役割過重がある。管理監督者は役割・責任の範囲・優先順位を明確に伝え、指示の矛盾を調整する。",
-    "publicPath": "q/ichimon/s/ichi-0871/index.html"
+    "publicPath": "q/ichimon/s/ichi-0871/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0872",
@@ -6974,7 +7845,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「役割のあいまいさ」とは、自分に期待されている役割や責任の範囲がはっきりしない状態をいう。",
     "correctAnswer": true,
     "exp": "役割ストレスには、矛盾する指示を受ける役割葛藤、役割や責任の範囲がはっきりしない役割のあいまいさ、業務の量や責任が過大な役割過重がある。管理監督者は役割・責任の範囲・優先順位を明確に伝え、指示の矛盾を調整する。",
-    "publicPath": "q/ichimon/s/ichi-0872/index.html"
+    "publicPath": "q/ichimon/s/ichi-0872/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0873",
@@ -6982,7 +7854,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "マインドフルネスとは過去の失敗を振り返り、反省を深めることである。",
     "correctAnswer": false,
     "exp": "マインドフルネスとは、今この瞬間の体験に意図的に注意を向け、評価をせずに観察すること。カバット・ジンのマインドフルネスストレス低減法（MBSR）や、うつ病の再発予防を目的としたマインドフルネス認知療法（MBCT）がある。宗教的信念は不要。",
-    "publicPath": "q/ichimon/s/ichi-0873/index.html"
+    "publicPath": "q/ichimon/s/ichi-0873/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0874",
@@ -6990,7 +7863,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "マインドフルネスとは今この瞬間の体験に意図的に注意を向け、評価せずに観察する実践である。",
     "correctAnswer": true,
     "exp": "マインドフルネスとは、今この瞬間の体験に意図的に注意を向け、評価をせずに観察すること。カバット・ジンのマインドフルネスストレス低減法（MBSR）や、うつ病の再発予防を目的としたマインドフルネス認知療法（MBCT）がある。宗教的信念は不要。",
-    "publicPath": "q/ichimon/s/ichi-0874/index.html"
+    "publicPath": "q/ichimon/s/ichi-0874/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0875",
@@ -6998,7 +7872,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "マインドフルネスは瞑想の一種であり、宗教的信念がないと効果がない。",
     "correctAnswer": false,
     "exp": "マインドフルネスとは、今この瞬間の体験に意図的に注意を向け、評価をせずに観察すること。カバット・ジンのマインドフルネスストレス低減法（MBSR）や、うつ病の再発予防を目的としたマインドフルネス認知療法（MBCT）がある。宗教的信念は不要。",
-    "publicPath": "q/ichimon/s/ichi-0875/index.html"
+    "publicPath": "q/ichimon/s/ichi-0875/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0876",
@@ -7006,7 +7881,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "マインドフルネス認知療法（MBCT）は、うつ病の再発予防を目的として開発された。",
     "correctAnswer": true,
     "exp": "マインドフルネスとは、今この瞬間の体験に意図的に注意を向け、評価をせずに観察すること。カバット・ジンのマインドフルネスストレス低減法（MBSR）や、うつ病の再発予防を目的としたマインドフルネス認知療法（MBCT）がある。宗教的信念は不要。",
-    "publicPath": "q/ichimon/s/ichi-0876/index.html"
+    "publicPath": "q/ichimon/s/ichi-0876/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0877",
@@ -7014,7 +7890,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "一人で問題を抱え込み、誰にも相談しないことは、「ソーシャルサポートの希求」型のコーピングにあたる。",
     "correctAnswer": false,
     "exp": "ソーシャルサポートの希求は、周囲や専門家に悩みを打ち明け、助言や手助けを求める対処。ラザルスらは、対処を、問題そのものの解決を図る問題焦点型と、情動の調整を図る情動焦点型に分けている。",
-    "publicPath": "q/ichimon/s/ichi-0877/index.html"
+    "publicPath": "q/ichimon/s/ichi-0877/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0878",
@@ -7022,7 +7899,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "上司・同僚・家族・専門家に悩みを打ち明けたり助けを求めたりすることは、「ソーシャルサポートの希求」型のコーピングにあたる。",
     "correctAnswer": true,
     "exp": "ソーシャルサポートの希求は、周囲や専門家に悩みを打ち明け、助言や手助けを求める対処。ラザルスらは、対処を、問題そのものの解決を図る問題焦点型と、情動の調整を図る情動焦点型に分けている。",
-    "publicPath": "q/ichimon/s/ichi-0878/index.html"
+    "publicPath": "q/ichimon/s/ichi-0878/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0879",
@@ -7030,7 +7908,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "問題から目を背けて娯楽に没頭することは、「ソーシャルサポートの希求」型のコーピングにあたる。",
     "correctAnswer": false,
     "exp": "ソーシャルサポートの希求は、周囲や専門家に悩みを打ち明け、助言や手助けを求める対処。ラザルスらは、対処を、問題そのものの解決を図る問題焦点型と、情動の調整を図る情動焦点型に分けている。",
-    "publicPath": "q/ichimon/s/ichi-0879/index.html"
+    "publicPath": "q/ichimon/s/ichi-0879/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0880",
@@ -7038,7 +7917,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスへの対処には、問題そのものの解決を図る問題焦点型と、情動の調整を図る情動焦点型がある。",
     "correctAnswer": true,
     "exp": "ソーシャルサポートの希求は、周囲や専門家に悩みを打ち明け、助言や手助けを求める対処。ラザルスらは、対処を、問題そのものの解決を図る問題焦点型と、情動の調整を図る情動焦点型に分けている。",
-    "publicPath": "q/ichimon/s/ichi-0880/index.html"
+    "publicPath": "q/ichimon/s/ichi-0880/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0881",
@@ -7046,7 +7926,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "裁量労働制が適用される労働者には安全配慮義務は適用されない。",
     "correctAnswer": false,
     "exp": "裁量労働制の適用者についても、事業者は労働時間の状況を把握し、要件を満たせば医師による面接指導を行う。深夜・休日労働の割増賃金は適用される。2024年4月から、専門業務型裁量労働制の適用にも本人の同意が必要となった。",
-    "publicPath": "q/ichimon/s/ichi-0881/index.html"
+    "publicPath": "q/ichimon/s/ichi-0881/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0882",
@@ -7054,7 +7935,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "裁量労働制適用者であっても健康確保措置（健康診断・面接指導等）を行う義務がある。",
     "correctAnswer": true,
     "exp": "裁量労働制の適用者についても、事業者は労働時間の状況を把握し、要件を満たせば医師による面接指導を行う。深夜・休日労働の割増賃金は適用される。2024年4月から、専門業務型裁量労働制の適用にも本人の同意が必要となった。",
-    "publicPath": "q/ichimon/s/ichi-0882/index.html"
+    "publicPath": "q/ichimon/s/ichi-0882/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0883",
@@ -7062,7 +7944,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "裁量労働制では労働時間管理が不要であるため、過重労働は問題にならない。",
     "correctAnswer": false,
     "exp": "裁量労働制の適用者についても、事業者は労働時間の状況を把握し、要件を満たせば医師による面接指導を行う。深夜・休日労働の割増賃金は適用される。2024年4月から、専門業務型裁量労働制の適用にも本人の同意が必要となった。",
-    "publicPath": "q/ichimon/s/ichi-0883/index.html"
+    "publicPath": "q/ichimon/s/ichi-0883/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0884",
@@ -7070,7 +7953,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "2024年4月から、専門業務型裁量労働制を適用する際にも、本人の同意を得ることが必要となった。",
     "correctAnswer": true,
     "exp": "裁量労働制の適用者についても、事業者は労働時間の状況を把握し、要件を満たせば医師による面接指導を行う。深夜・休日労働の割増賃金は適用される。2024年4月から、専門業務型裁量労働制の適用にも本人の同意が必要となった。",
-    "publicPath": "q/ichimon/s/ichi-0884/index.html"
+    "publicPath": "q/ichimon/s/ichi-0884/index.html",
+    "level": 5
   },
   {
     "id": "ichi-0885",
@@ -7078,7 +7962,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の休職を同僚に伝える際は、正確な情報共有のため、病名や症状を詳しく説明する。",
     "correctAnswer": false,
     "exp": "休職者について同僚に伝える内容は、事前に本人と相談して決め、「療養のため休んでいる」など必要最小限にとどめる。病名や症状は本人の同意なく伝えない。何も伝えないと同僚の不信や混乱を招くおそれがある。",
-    "publicPath": "q/ichimon/s/ichi-0885/index.html"
+    "publicPath": "q/ichimon/s/ichi-0885/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0886",
@@ -7086,7 +7971,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の休職を同僚に伝える際は、本人の同意を得たうえで、「療養のため休んでいる」など必要最小限の情報にとどめる。",
     "correctAnswer": true,
     "exp": "休職者について同僚に伝える内容は、事前に本人と相談して決め、「療養のため休んでいる」など必要最小限にとどめる。病名や症状は本人の同意なく伝えない。何も伝えないと同僚の不信や混乱を招くおそれがある。",
-    "publicPath": "q/ichimon/s/ichi-0886/index.html"
+    "publicPath": "q/ichimon/s/ichi-0886/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0887",
@@ -7094,7 +7980,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の休職を同僚に伝える際は、同僚の不安を解消するため、主治医から得た情報をすべて伝える。",
     "correctAnswer": false,
     "exp": "休職者について同僚に伝える内容は、事前に本人と相談して決め、「療養のため休んでいる」など必要最小限にとどめる。病名や症状は本人の同意なく伝えない。何も伝えないと同僚の不信や混乱を招くおそれがある。",
-    "publicPath": "q/ichimon/s/ichi-0887/index.html"
+    "publicPath": "q/ichimon/s/ichi-0887/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0888",
@@ -7102,7 +7989,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "休職者について同僚に伝える内容は、事前に本人と相談して決めることが望ましい。",
     "correctAnswer": true,
     "exp": "休職者について同僚に伝える内容は、事前に本人と相談して決め、「療養のため休んでいる」など必要最小限にとどめる。病名や症状は本人の同意なく伝えない。何も伝えないと同僚の不信や混乱を招くおそれがある。",
-    "publicPath": "q/ichimon/s/ichi-0888/index.html"
+    "publicPath": "q/ichimon/s/ichi-0888/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0889",
@@ -7110,7 +7998,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "バーンアウトは、仕事への意欲が低い状態が続くことで、徐々に至るものである。",
     "correctAnswer": false,
     "exp": "バーンアウトは、意欲や使命感の高い人が長期間のストレスで心身のエネルギーを使い果たした状態。情緒的消耗感・脱人格化・個人的達成感の低下の3つの側面から捉えられ、回復にも時間がかかる。",
-    "publicPath": "q/ichimon/s/ichi-0889/index.html"
+    "publicPath": "q/ichimon/s/ichi-0889/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0890",
@@ -7118,7 +8007,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "バーンアウトは、高い使命感や責任感から長期間頑張り続け、心身のエネルギーを使い果たすことで至ることが多い。",
     "correctAnswer": true,
     "exp": "バーンアウトは、意欲や使命感の高い人が長期間のストレスで心身のエネルギーを使い果たした状態。情緒的消耗感・脱人格化・個人的達成感の低下の3つの側面から捉えられ、回復にも時間がかかる。",
-    "publicPath": "q/ichimon/s/ichi-0890/index.html"
+    "publicPath": "q/ichimon/s/ichi-0890/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0891",
@@ -7126,7 +8016,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "バーンアウトは、情緒的消耗感・脱人格化・個人的達成感の低下の3つの側面から捉えられる。",
     "correctAnswer": true,
     "exp": "バーンアウトは、意欲や使命感の高い人が長期間のストレスで心身のエネルギーを使い果たした状態。情緒的消耗感・脱人格化・個人的達成感の低下の3つの側面から捉えられ、回復にも時間がかかる。",
-    "publicPath": "q/ichimon/s/ichi-0891/index.html"
+    "publicPath": "q/ichimon/s/ichi-0891/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0892",
@@ -7134,7 +8025,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "バーンアウトは一時的な疲労であり、1〜2日の休息で回復する。",
     "correctAnswer": false,
     "exp": "バーンアウトは、意欲や使命感の高い人が長期間のストレスで心身のエネルギーを使い果たした状態。情緒的消耗感・脱人格化・個人的達成感の低下の3つの側面から捉えられ、回復にも時間がかかる。",
-    "publicPath": "q/ichimon/s/ichi-0892/index.html"
+    "publicPath": "q/ichimon/s/ichi-0892/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0893",
@@ -7142,7 +8034,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務量を一時的に減らすことは、「情報的サポート」の具体例である。",
     "correctAnswer": false,
     "exp": "ソーシャルサポートは上司・同僚・家族・友人などからの支援で、ストレス要因がストレス反応につながるのを和らげる緩衝要因として働く。種類には、情緒的・道具的・情報的・評価的サポートがある。",
-    "publicPath": "q/ichimon/s/ichi-0893/index.html"
+    "publicPath": "q/ichimon/s/ichi-0893/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0894",
@@ -7150,7 +8043,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "悩みを聞いて共感することは、「情報的サポート」の具体例である。",
     "correctAnswer": false,
     "exp": "ソーシャルサポートは上司・同僚・家族・友人などからの支援で、ストレス要因がストレス反応につながるのを和らげる緩衝要因として働く。種類には、情緒的・道具的・情報的・評価的サポートがある。",
-    "publicPath": "q/ichimon/s/ichi-0894/index.html"
+    "publicPath": "q/ichimon/s/ichi-0894/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0895",
@@ -7158,7 +8052,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業医面談やEAPなどの利用方法を教えることは、「情報的サポート」の具体例である。",
     "correctAnswer": true,
     "exp": "ソーシャルサポートは上司・同僚・家族・友人などからの支援で、ストレス要因がストレス反応につながるのを和らげる緩衝要因として働く。種類には、情緒的・道具的・情報的・評価的サポートがある。",
-    "publicPath": "q/ichimon/s/ichi-0895/index.html"
+    "publicPath": "q/ichimon/s/ichi-0895/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0896",
@@ -7166,39 +8061,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ソーシャルサポートは、ストレス要因がストレス反応につながるのを和らげる緩衝要因として働く。",
     "correctAnswer": true,
     "exp": "ソーシャルサポートは上司・同僚・家族・友人などからの支援で、ストレス要因がストレス反応につながるのを和らげる緩衝要因として働く。種類には、情緒的・道具的・情報的・評価的サポートがある。",
-    "publicPath": "q/ichimon/s/ichi-0896/index.html"
+    "publicPath": "q/ichimon/s/ichi-0896/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0897",
     "field": "limit",
-    "statement": "相談場面で非言語コミュニケーションが重要な理由は、言語情報よりも非言語情報の方が必ず正確であるためである。",
+    "statement": "面談では、相手と真正面に向き合って座り、話している間は視線を外さずに見つめ続けることが最も望ましい。",
     "correctAnswer": false,
-    "exp": "表情・視線・うなずき・姿勢・声の調子などの非言語の情報は、聴く姿勢や共感を伝えるうえで重要。言葉と態度が食い違う場合、相手は態度や表情のほうを強く受け取りやすいため、言葉と態度を一致させる。",
-    "publicPath": "q/ichimon/s/ichi-0897/index.html"
+    "exp": "相談場面では、表情・視線・姿勢・声の調子などの非言語的な情報からも気持ちを読み取る。真正面より斜めに座るほうが緊張を和らげやすく、うなずきや相づちは話を促す。声の大きさや速さは相手に合わせる。",
+    "publicPath": "q/ichimon/s/ichi-0897/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0898",
     "field": "limit",
-    "statement": "相談場面で非言語コミュニケーションが重要な理由は、表情・視線・姿勢・声のトーン等の非言語メッセージが、傾聴の姿勢や共感を伝えるうえで重要な役割を果たすためである。",
+    "statement": "相談場面でのうなずきや相づちは、聴いていることを相手に伝え、話を促す働きがある。",
     "correctAnswer": true,
-    "exp": "表情・視線・うなずき・姿勢・声の調子などの非言語の情報は、聴く姿勢や共感を伝えるうえで重要。言葉と態度が食い違う場合、相手は態度や表情のほうを強く受け取りやすいため、言葉と態度を一致させる。",
-    "publicPath": "q/ichimon/s/ichi-0898/index.html"
+    "exp": "相談場面では、表情・視線・姿勢・声の調子などの非言語的な情報からも気持ちを読み取る。真正面より斜めに座るほうが緊張を和らげやすく、うなずきや相づちは話を促す。声の大きさや速さは相手に合わせる。",
+    "publicPath": "q/ichimon/s/ichi-0898/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0899",
     "field": "limit",
-    "statement": "非言語コミュニケーションは意識的にコントロールできないため、相談場面では考慮する必要はない。",
+    "statement": "相談場面での聴き手の声の大きさや話す速さは、相手の状態に合わせる必要はなく、一定に保つことが望ましい。",
     "correctAnswer": false,
-    "exp": "表情・視線・うなずき・姿勢・声の調子などの非言語の情報は、聴く姿勢や共感を伝えるうえで重要。言葉と態度が食い違う場合、相手は態度や表情のほうを強く受け取りやすいため、言葉と態度を一致させる。",
-    "publicPath": "q/ichimon/s/ichi-0899/index.html"
+    "exp": "相談場面では、表情・視線・姿勢・声の調子などの非言語的な情報からも気持ちを読み取る。真正面より斜めに座るほうが緊張を和らげやすく、うなずきや相づちは話を促す。声の大きさや速さは相手に合わせる。",
+    "publicPath": "q/ichimon/s/ichi-0899/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0900",
     "field": "limit",
     "statement": "言葉と態度が食い違う場合、相手は態度や表情のほうを強く受け取りやすい。",
     "correctAnswer": true,
-    "exp": "表情・視線・うなずき・姿勢・声の調子などの非言語の情報は、聴く姿勢や共感を伝えるうえで重要。言葉と態度が食い違う場合、相手は態度や表情のほうを強く受け取りやすいため、言葉と態度を一致させる。",
-    "publicPath": "q/ichimon/s/ichi-0900/index.html"
+    "exp": "相談場面では、表情・視線・姿勢・声の調子などの非言語的な情報からも気持ちを読み取る。真正面より斜めに座るほうが緊張を和らげやすく、うなずきや相づちは話を促す。声の大きさや速さは相手に合わせる。",
+    "publicPath": "q/ichimon/s/ichi-0900/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0901",
@@ -7206,7 +8106,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事例性に基づく対応は医療的判断を含むため、専門家の知識が必要である。",
     "correctAnswer": false,
     "exp": "事例性に基づく対応は、遅刻やミスの増加など客観的な事実に基づくため、医学的な知識がなくても管理監督者が対応できる。声をかける際は病名に触れず、事実を伝え、プライバシーにも配慮する。",
-    "publicPath": "q/ichimon/s/ichi-0901/index.html"
+    "publicPath": "q/ichimon/s/ichi-0901/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0902",
@@ -7214,7 +8115,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事例性に基づく対応は、「遅刻が増えた」「ミスが多い」等の客観的な事実をもとにするため、医学的知識がなくても管理監督者が適切に対応できる。",
     "correctAnswer": true,
     "exp": "事例性に基づく対応は、遅刻やミスの増加など客観的な事実に基づくため、医学的な知識がなくても管理監督者が対応できる。声をかける際は病名に触れず、事実を伝え、プライバシーにも配慮する。",
-    "publicPath": "q/ichimon/s/ichi-0902/index.html"
+    "publicPath": "q/ichimon/s/ichi-0902/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0903",
@@ -7222,7 +8124,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事例性に基づく対応は、疾病性（診断名）が確定してから行うものである。",
     "correctAnswer": false,
     "exp": "事例性に基づく対応は、遅刻やミスの増加など客観的な事実に基づくため、医学的な知識がなくても管理監督者が対応できる。声をかける際は病名に触れず、事実を伝え、プライバシーにも配慮する。",
-    "publicPath": "q/ichimon/s/ichi-0903/index.html"
+    "publicPath": "q/ichimon/s/ichi-0903/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0904",
@@ -7230,71 +8133,80 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事例性に基づいて部下に声をかけるときは、病名には触れず、遅刻の増加などの事実を伝える。",
     "correctAnswer": true,
     "exp": "事例性に基づく対応は、遅刻やミスの増加など客観的な事実に基づくため、医学的な知識がなくても管理監督者が対応できる。声をかける際は病名に触れず、事実を伝え、プライバシーにも配慮する。",
-    "publicPath": "q/ichimon/s/ichi-0904/index.html"
+    "publicPath": "q/ichimon/s/ichi-0904/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0905",
     "field": "limit",
-    "statement": "部下の不調を早期に発見するには、健康診断の数値だけを確認すればよい。",
+    "statement": "家族への連絡は本人の同意を得ることが原則であるため、自殺の危険が差し迫っている場合でも、本人の同意が得られるまでは連絡を控える。",
     "correctAnswer": false,
-    "exp": "メンタルヘルス不調の早期発見では、ふだんの様子と比べた変化に気づくことが大切。業務の質や量、出勤状況、表情や言動などを継続的に観察する。健康診断や年1回のストレスチェックだけでは不十分。",
-    "publicPath": "q/ichimon/s/ichi-0905/index.html"
+    "exp": "家族は睡眠や食欲、家庭での言動など職場で把握しにくい情報を持っていることがあり、本人の同意を得て協力を求める。自殺の危険が差し迫っている場合などは同意がなくても連絡する。家族への情報提供にも本人の同意が必要。",
+    "publicPath": "q/ichimon/s/ichi-0905/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0906",
     "field": "limit",
-    "statement": "部下の不調を早期に発見するには、業務の質や量、出勤状況、会話の様子、表情や言動の変化など、複数の側面を継続的に観察する。",
+    "statement": "家族は、睡眠や食欲、家庭での言動など職場では把握しにくい情報を持っていることがあり、本人の同意を得て協力を求めることが有効な場合がある。",
     "correctAnswer": true,
-    "exp": "メンタルヘルス不調の早期発見では、ふだんの様子と比べた変化に気づくことが大切。業務の質や量、出勤状況、表情や言動などを継続的に観察する。健康診断や年1回のストレスチェックだけでは不十分。",
-    "publicPath": "q/ichimon/s/ichi-0906/index.html"
+    "exp": "家族は睡眠や食欲、家庭での言動など職場で把握しにくい情報を持っていることがあり、本人の同意を得て協力を求める。自殺の危険が差し迫っている場合などは同意がなくても連絡する。家族への情報提供にも本人の同意が必要。",
+    "publicPath": "q/ichimon/s/ichi-0906/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0907",
     "field": "limit",
-    "statement": "部下の不調を早期に発見するため、部下の私生活を調査してストレス要因を特定する。",
+    "statement": "家族から部下の不調について相談があった場合は、本人の同意を得ずに、職場での勤務状況や人事評価の内容を伝えてよい。",
     "correctAnswer": false,
-    "exp": "メンタルヘルス不調の早期発見では、ふだんの様子と比べた変化に気づくことが大切。業務の質や量、出勤状況、表情や言動などを継続的に観察する。健康診断や年1回のストレスチェックだけでは不十分。",
-    "publicPath": "q/ichimon/s/ichi-0907/index.html"
+    "exp": "家族は睡眠や食欲、家庭での言動など職場で把握しにくい情報を持っていることがあり、本人の同意を得て協力を求める。自殺の危険が差し迫っている場合などは同意がなくても連絡する。家族への情報提供にも本人の同意が必要。",
+    "publicPath": "q/ichimon/s/ichi-0907/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0908",
     "field": "limit",
-    "statement": "部下の変化に気づくには、その部下のふだんの様子と比べることが大切である。",
+    "statement": "家族への連絡は本人の同意を得ることが原則であるが、自殺の危険が差し迫っている場合などは例外となる。",
     "correctAnswer": true,
-    "exp": "メンタルヘルス不調の早期発見では、ふだんの様子と比べた変化に気づくことが大切。業務の質や量、出勤状況、表情や言動などを継続的に観察する。健康診断や年1回のストレスチェックだけでは不十分。",
-    "publicPath": "q/ichimon/s/ichi-0908/index.html"
+    "exp": "家族は睡眠や食欲、家庭での言動など職場で把握しにくい情報を持っていることがあり、本人の同意を得て協力を求める。自殺の危険が差し迫っている場合などは同意がなくても連絡する。家族への情報提供にも本人の同意が必要。",
+    "publicPath": "q/ichimon/s/ichi-0908/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0909",
     "field": "limit",
-    "statement": "部下が安心して相談できるよう、管理監督者は相談内容をどのような場合でも決して他者に伝えないと約束するべきである。",
+    "statement": "職場復帰支援で健康情報を第三者へ提供することへの同意は、手続きを簡素にするため、入社時などにあらかじめ包括的に得ておくことが望ましいとされている。",
     "correctAnswer": false,
-    "exp": "相談しやすい職場の基盤は、失敗や弱みを見せても否定されない心理的安全性と、相談しても不利益を受けないという信頼感。守秘は原則だが、生命に関わる場合など緊急時は必要な範囲で産業医等と共有するため、「どのような場合でも伝えない」とは約束できない。話を十分に聴く前に解決策を示すことは避ける。",
-    "publicPath": "q/ichimon/s/ichi-0909/index.html"
+    "exp": "手引きでは、健康情報は本人の承諾を得て本人から提出を受けることが望ましく、同意は個別に明示で得る。周囲の気づき情報は提供者にとっても個人情報。疾患名は特に慎重に扱い、産業医等の部署で一元管理し加工して提供する。",
+    "publicPath": "q/ichimon/s/ichi-0909/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0910",
     "field": "limit",
-    "statement": "相談しやすい職場に必要な要素として、失敗や弱みを見せても否定されない心理的安全性と、相談しても不利益が生じないという信頼感が挙げられる。",
+    "statement": "職場復帰支援の手引きでは、周囲から寄せられた「気づき情報」は、提供者にとっても個人情報であり、慎重な取扱いが必要とされている。",
     "correctAnswer": true,
-    "exp": "相談しやすい職場の基盤は、失敗や弱みを見せても否定されない心理的安全性と、相談しても不利益を受けないという信頼感。守秘は原則だが、生命に関わる場合など緊急時は必要な範囲で産業医等と共有するため、「どのような場合でも伝えない」とは約束できない。話を十分に聴く前に解決策を示すことは避ける。",
-    "publicPath": "q/ichimon/s/ichi-0910/index.html"
+    "exp": "手引きでは、健康情報は本人の承諾を得て本人から提出を受けることが望ましく、同意は個別に明示で得る。周囲の気づき情報は提供者にとっても個人情報。疾患名は特に慎重に扱い、産業医等の部署で一元管理し加工して提供する。",
+    "publicPath": "q/ichimon/s/ichi-0910/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0911",
     "field": "limit",
-    "statement": "相談を受けた管理監督者は、部下の信頼に応えるため、話を十分に聴く前であっても、まず解決策を示すことを優先するべきである。",
+    "statement": "職場復帰支援で主治医や家族から健康情報を収集する場合は、労働者本人を介さずに事業者が直接収集することが望ましいとされている。",
     "correctAnswer": false,
-    "exp": "相談しやすい職場の基盤は、失敗や弱みを見せても否定されない心理的安全性と、相談しても不利益を受けないという信頼感。守秘は原則だが、生命に関わる場合など緊急時は必要な範囲で産業医等と共有するため、「どのような場合でも伝えない」とは約束できない。話を十分に聴く前に解決策を示すことは避ける。",
-    "publicPath": "q/ichimon/s/ichi-0911/index.html"
+    "exp": "手引きでは、健康情報は本人の承諾を得て本人から提出を受けることが望ましく、同意は個別に明示で得る。周囲の気づき情報は提供者にとっても個人情報。疾患名は特に慎重に扱い、産業医等の部署で一元管理し加工して提供する。",
+    "publicPath": "q/ichimon/s/ichi-0911/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0912",
     "field": "limit",
     "statement": "部下の生命に関わるおそれがある場合には、管理監督者が相談内容を必要な範囲で産業医等と共有することがある。",
     "correctAnswer": true,
-    "exp": "相談しやすい職場の基盤は、失敗や弱みを見せても否定されない心理的安全性と、相談しても不利益を受けないという信頼感。守秘は原則だが、生命に関わる場合など緊急時は必要な範囲で産業医等と共有するため、「どのような場合でも伝えない」とは約束できない。話を十分に聴く前に解決策を示すことは避ける。",
-    "publicPath": "q/ichimon/s/ichi-0912/index.html"
+    "exp": "手引きでは、健康情報は本人の承諾を得て本人から提出を受けることが望ましく、同意は個別に明示で得る。周囲の気づき情報は提供者にとっても個人情報。疾患名は特に慎重に扱い、産業医等の部署で一元管理し加工して提供する。",
+    "publicPath": "q/ichimon/s/ichi-0912/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0913",
@@ -7302,7 +8214,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "共感的理解とは、相手の感情に完全に同化し、自分も同じ感情を持つことである。",
     "correctAnswer": false,
     "exp": "共感的理解は、相手の立場で気持ちを理解しようとしながら、自分を見失わずに関わること。同情や同意とは異なる。ロジャーズはカウンセラーの態度として、自己一致、無条件の肯定的関心、共感的理解を示した。",
-    "publicPath": "q/ichimon/s/ichi-0913/index.html"
+    "publicPath": "q/ichimon/s/ichi-0913/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0914",
@@ -7310,7 +8223,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "共感的理解とは、相手の立場や感情を理解しようとしながら、自分は客観性を保って関わることである。",
     "correctAnswer": true,
     "exp": "共感的理解は、相手の立場で気持ちを理解しようとしながら、自分を見失わずに関わること。同情や同意とは異なる。ロジャーズはカウンセラーの態度として、自己一致、無条件の肯定的関心、共感的理解を示した。",
-    "publicPath": "q/ichimon/s/ichi-0914/index.html"
+    "publicPath": "q/ichimon/s/ichi-0914/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0915",
@@ -7318,7 +8232,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "共感的理解とは、相手の話に同意・賛成することである。",
     "correctAnswer": false,
     "exp": "共感的理解は、相手の立場で気持ちを理解しようとしながら、自分を見失わずに関わること。同情や同意とは異なる。ロジャーズはカウンセラーの態度として、自己一致、無条件の肯定的関心、共感的理解を示した。",
-    "publicPath": "q/ichimon/s/ichi-0915/index.html"
+    "publicPath": "q/ichimon/s/ichi-0915/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0916",
@@ -7326,7 +8241,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ロジャーズは、カウンセラーの態度として、自己一致、無条件の肯定的関心、共感的理解を示した。",
     "correctAnswer": true,
     "exp": "共感的理解は、相手の立場で気持ちを理解しようとしながら、自分を見失わずに関わること。同情や同意とは異なる。ロジャーズはカウンセラーの態度として、自己一致、無条件の肯定的関心、共感的理解を示した。",
-    "publicPath": "q/ichimon/s/ichi-0916/index.html"
+    "publicPath": "q/ichimon/s/ichi-0916/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0917",
@@ -7334,7 +8250,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業績が向上し、新しい目標を次々に立てていることは、自殺の警告サインとして典型的なものである。",
     "correctAnswer": false,
     "exp": "「死にたい」「消えてしまいたい」などの発言、大切な物を人に譲るなどの身辺整理、思い悩んでいた人の急な落ち着きは、自殺の危険を示すサイン。過去の自殺未遂歴は自殺の危険を高める重要な要因。",
-    "publicPath": "q/ichimon/s/ichi-0917/index.html"
+    "publicPath": "q/ichimon/s/ichi-0917/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0918",
@@ -7342,7 +8259,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「死にたい」「消えたい」という発言、大切なものを人に譲る、思い悩んでいた人が突然落ち着くといった変化は、自殺の警告サインとなりうる。",
     "correctAnswer": true,
     "exp": "「死にたい」「消えてしまいたい」などの発言、大切な物を人に譲るなどの身辺整理、思い悩んでいた人の急な落ち着きは、自殺の危険を示すサイン。過去の自殺未遂歴は自殺の危険を高める重要な要因。",
-    "publicPath": "q/ichimon/s/ichi-0918/index.html"
+    "publicPath": "q/ichimon/s/ichi-0918/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0919",
@@ -7350,7 +8268,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "残業が増え、以前より仕事熱心になっていることは、自殺の警告サインとして典型的なものである。",
     "correctAnswer": false,
     "exp": "「死にたい」「消えてしまいたい」などの発言、大切な物を人に譲るなどの身辺整理、思い悩んでいた人の急な落ち着きは、自殺の危険を示すサイン。過去の自殺未遂歴は自殺の危険を高める重要な要因。",
-    "publicPath": "q/ichimon/s/ichi-0919/index.html"
+    "publicPath": "q/ichimon/s/ichi-0919/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0920",
@@ -7358,39 +8277,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過去の自殺未遂歴は、自殺の危険を高める要因の一つである。",
     "correctAnswer": true,
     "exp": "「死にたい」「消えてしまいたい」などの発言、大切な物を人に譲るなどの身辺整理、思い悩んでいた人の急な落ち着きは、自殺の危険を示すサイン。過去の自殺未遂歴は自殺の危険を高める重要な要因。",
-    "publicPath": "q/ichimon/s/ichi-0920/index.html"
+    "publicPath": "q/ichimon/s/ichi-0920/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0921",
     "field": "limit",
-    "statement": "部下を産業医との面談につなぐ際は、管理監督者が産業医に詳しい病状を報告し、本人には知らせずに産業医から連絡させる。",
+    "statement": "職場復帰支援の手引きでは、主治医との連携や医療的な判断において中心的な役割を担うのは、人事労務管理スタッフとされている。",
     "correctAnswer": false,
-    "exp": "部下を産業医面談につなぐときは、管理監督者が本人に面談の目的や利点を説明して勧め、本人の意向を確認しながら日程などを調整する。問題が深刻になる前の早い段階から活用する。",
-    "publicPath": "q/ichimon/s/ichi-0921/index.html"
+    "exp": "手引きでは、管理監督者は職場環境等の問題点を把握・改善して就業上の配慮を履行し、復帰後の状態を観察する。産業医等は主治医との連携や医療的な判断で中心的な役割を担う。小規模事業場では衛生推進者等が事業場外資源を活用して担当する。",
+    "publicPath": "q/ichimon/s/ichi-0921/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0922",
     "field": "limit",
-    "statement": "部下を産業医との面談につなぐ際は、管理監督者が本人に面談を勧め、本人の意向を確認しながら日程などを調整する。",
+    "statement": "職場復帰支援の手引きでは、管理監督者は、事業場内産業保健スタッフ等と協力しながら職場環境等の改善を図ることで、就業上の配慮を履行するとされている。",
     "correctAnswer": true,
-    "exp": "部下を産業医面談につなぐときは、管理監督者が本人に面談の目的や利点を説明して勧め、本人の意向を確認しながら日程などを調整する。問題が深刻になる前の早い段階から活用する。",
-    "publicPath": "q/ichimon/s/ichi-0922/index.html"
+    "exp": "手引きでは、管理監督者は職場環境等の問題点を把握・改善して就業上の配慮を履行し、復帰後の状態を観察する。産業医等は主治医との連携や医療的な判断で中心的な役割を担う。小規模事業場では衛生推進者等が事業場外資源を活用して担当する。",
+    "publicPath": "q/ichimon/s/ichi-0922/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0923",
     "field": "limit",
-    "statement": "部下を産業医との面談につなぐ際は、本人の同意を得ずに、産業医の診察を命じる通知を出す。",
+    "statement": "常時50人未満の小規模事業場では、職場復帰支援に関する業務は、地域産業保健センターなどの事業場外資源のみが担うこととされている。",
     "correctAnswer": false,
-    "exp": "部下を産業医面談につなぐときは、管理監督者が本人に面談の目的や利点を説明して勧め、本人の意向を確認しながら日程などを調整する。問題が深刻になる前の早い段階から活用する。",
-    "publicPath": "q/ichimon/s/ichi-0923/index.html"
+    "exp": "手引きでは、管理監督者は職場環境等の問題点を把握・改善して就業上の配慮を履行し、復帰後の状態を観察する。産業医等は主治医との連携や医療的な判断で中心的な役割を担う。小規模事業場では衛生推進者等が事業場外資源を活用して担当する。",
+    "publicPath": "q/ichimon/s/ichi-0923/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0924",
     "field": "limit",
-    "statement": "部下に産業医面談を勧める際は、面談の目的や利点を本人に説明する。",
+    "statement": "職場復帰支援の手引きでは、産業医等は、主治医との連携を密にし、情報交換や医療的な判断において専門的立場から中心的な役割を担うとされている。",
     "correctAnswer": true,
-    "exp": "部下を産業医面談につなぐときは、管理監督者が本人に面談の目的や利点を説明して勧め、本人の意向を確認しながら日程などを調整する。問題が深刻になる前の早い段階から活用する。",
-    "publicPath": "q/ichimon/s/ichi-0924/index.html"
+    "exp": "手引きでは、管理監督者は職場環境等の問題点を把握・改善して就業上の配慮を履行し、復帰後の状態を観察する。産業医等は主治医との連携や医療的な判断で中心的な役割を担う。小規模事業場では衛生推進者等が事業場外資源を活用して担当する。",
+    "publicPath": "q/ichimon/s/ichi-0924/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0925",
@@ -7398,7 +8322,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業カウンセラーは精神科医と同等の診断・治療を行う資格を持つ。",
     "correctAnswer": false,
     "exp": "産業カウンセラーは、一般社団法人日本産業カウンセラー協会が認定する民間資格で、労働者の相談やカウンセリング、職場復帰の支援などを通じてメンタルヘルス対策を支える。診断・治療は行わず、選任の義務もない。",
-    "publicPath": "q/ichimon/s/ichi-0925/index.html"
+    "publicPath": "q/ichimon/s/ichi-0925/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0926",
@@ -7406,7 +8331,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業カウンセラーは労働者の心理的問題への相談支援・カウンセリングを行い、職場のメンタルヘルス対策を支援する。",
     "correctAnswer": true,
     "exp": "産業カウンセラーは、一般社団法人日本産業カウンセラー協会が認定する民間資格で、労働者の相談やカウンセリング、職場復帰の支援などを通じてメンタルヘルス対策を支える。診断・治療は行わず、選任の義務もない。",
-    "publicPath": "q/ichimon/s/ichi-0926/index.html"
+    "publicPath": "q/ichimon/s/ichi-0926/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0927",
@@ -7414,7 +8340,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業カウンセラーは衛生管理者の業務を代行する役割を担う。",
     "correctAnswer": false,
     "exp": "産業カウンセラーは、一般社団法人日本産業カウンセラー協会が認定する民間資格で、労働者の相談やカウンセリング、職場復帰の支援などを通じてメンタルヘルス対策を支える。診断・治療は行わず、選任の義務もない。",
-    "publicPath": "q/ichimon/s/ichi-0927/index.html"
+    "publicPath": "q/ichimon/s/ichi-0927/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0928",
@@ -7422,7 +8349,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業カウンセラーは、一般社団法人日本産業カウンセラー協会が認定する民間資格である。",
     "correctAnswer": true,
     "exp": "産業カウンセラーは、一般社団法人日本産業カウンセラー協会が認定する民間資格で、労働者の相談やカウンセリング、職場復帰の支援などを通じてメンタルヘルス対策を支える。診断・治療は行わず、選任の義務もない。",
-    "publicPath": "q/ichimon/s/ichi-0928/index.html"
+    "publicPath": "q/ichimon/s/ichi-0928/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0929",
@@ -7430,7 +8358,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "公認心理師は医師の資格を持つ者が取得できる称号である。",
     "correctAnswer": false,
     "exp": "公認心理師は、2017年施行の公認心理師法に基づく国家資格で、秘密保持義務を負い、支援を要する者に主治の医師があるときはその指示を受けなければならない。医師ではないため、診断や処方はできない。",
-    "publicPath": "q/ichimon/s/ichi-0929/index.html"
+    "publicPath": "q/ichimon/s/ichi-0929/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0930",
@@ -7438,7 +8367,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "公認心理師は2017年施行の公認心理師法に基づく国家資格であり、心理的支援の専門家として職場でも活躍している。",
     "correctAnswer": true,
     "exp": "公認心理師は、2017年施行の公認心理師法に基づく国家資格で、秘密保持義務を負い、支援を要する者に主治の医師があるときはその指示を受けなければならない。医師ではないため、診断や処方はできない。",
-    "publicPath": "q/ichimon/s/ichi-0930/index.html"
+    "publicPath": "q/ichimon/s/ichi-0930/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0931",
@@ -7446,7 +8376,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "公認心理師は精神科での処方権を持つ。",
     "correctAnswer": false,
     "exp": "公認心理師は、2017年施行の公認心理師法に基づく国家資格で、秘密保持義務を負い、支援を要する者に主治の医師があるときはその指示を受けなければならない。医師ではないため、診断や処方はできない。",
-    "publicPath": "q/ichimon/s/ichi-0931/index.html"
+    "publicPath": "q/ichimon/s/ichi-0931/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0932",
@@ -7454,7 +8385,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "公認心理師は、業務に関して知り得た人の秘密を、正当な理由なく漏らしてはならない。",
     "correctAnswer": true,
     "exp": "公認心理師は、2017年施行の公認心理師法に基づく国家資格で、秘密保持義務を負い、支援を要する者に主治の医師があるときはその指示を受けなければならない。医師ではないため、診断や処方はできない。",
-    "publicPath": "q/ichimon/s/ichi-0932/index.html"
+    "publicPath": "q/ichimon/s/ichi-0932/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0933",
@@ -7462,7 +8394,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「働く人の悩みホットライン」は、企業の人事部門が運営する社内相談窓口である。",
     "correctAnswer": false,
     "exp": "「働く人の悩みホットライン」は、一般社団法人日本産業カウンセラー協会が運営する電話相談で、産業カウンセラーが対応し、働く人の悩みを匿名で相談できる。診断や処方は行わない。",
-    "publicPath": "q/ichimon/s/ichi-0933/index.html"
+    "publicPath": "q/ichimon/s/ichi-0933/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0934",
@@ -7470,7 +8403,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「働く人の悩みホットライン」は、産業カウンセラーが対応する電話相談サービスで、働く人のメンタルヘルスに関する悩みを匿名で相談できる。",
     "correctAnswer": true,
     "exp": "「働く人の悩みホットライン」は、一般社団法人日本産業カウンセラー協会が運営する電話相談で、産業カウンセラーが対応し、働く人の悩みを匿名で相談できる。診断や処方は行わない。",
-    "publicPath": "q/ichimon/s/ichi-0934/index.html"
+    "publicPath": "q/ichimon/s/ichi-0934/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0935",
@@ -7478,7 +8412,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「働く人の悩みホットライン」は、精神科医が直接対応し、診断・処方も行う電話サービスである。",
     "correctAnswer": false,
     "exp": "「働く人の悩みホットライン」は、一般社団法人日本産業カウンセラー協会が運営する電話相談で、産業カウンセラーが対応し、働く人の悩みを匿名で相談できる。診断や処方は行わない。",
-    "publicPath": "q/ichimon/s/ichi-0935/index.html"
+    "publicPath": "q/ichimon/s/ichi-0935/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0936",
@@ -7486,7 +8421,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「働く人の悩みホットライン」は、一般社団法人日本産業カウンセラー協会が運営している。",
     "correctAnswer": true,
     "exp": "「働く人の悩みホットライン」は、一般社団法人日本産業カウンセラー協会が運営する電話相談で、産業カウンセラーが対応し、働く人の悩みを匿名で相談できる。診断や処方は行わない。",
-    "publicPath": "q/ichimon/s/ichi-0936/index.html"
+    "publicPath": "q/ichimon/s/ichi-0936/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0937",
@@ -7494,7 +8430,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "障害者就業・生活支援センターは、障害者の入院治療を専門とする医療施設である。",
     "correctAnswer": false,
     "exp": "障害者就業・生活支援センターは、障害のある人の就業面と生活面を一体的に支援し、企業への職場定着の支援も行う。休職者向けのリワーク支援を行っているのは地域障害者職業センター。",
-    "publicPath": "q/ichimon/s/ichi-0937/index.html"
+    "publicPath": "q/ichimon/s/ichi-0937/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0938",
@@ -7502,7 +8439,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "障害者就業・生活支援センターは、障害者の就業面と生活面を一体的に支援し、職場定着の支援も行う機関である。",
     "correctAnswer": true,
     "exp": "障害者就業・生活支援センターは、障害のある人の就業面と生活面を一体的に支援し、企業への職場定着の支援も行う。休職者向けのリワーク支援を行っているのは地域障害者職業センター。",
-    "publicPath": "q/ichimon/s/ichi-0938/index.html"
+    "publicPath": "q/ichimon/s/ichi-0938/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0939",
@@ -7510,7 +8448,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "障害者就業・生活支援センターは、障害者の採用を代行する人材紹介会社である。",
     "correctAnswer": false,
     "exp": "障害者就業・生活支援センターは、障害のある人の就業面と生活面を一体的に支援し、企業への職場定着の支援も行う。休職者向けのリワーク支援を行っているのは地域障害者職業センター。",
-    "publicPath": "q/ichimon/s/ichi-0939/index.html"
+    "publicPath": "q/ichimon/s/ichi-0939/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0940",
@@ -7518,39 +8457,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "地域障害者職業センターでは、休職者向けのリワーク支援を行っている。",
     "correctAnswer": true,
     "exp": "障害者就業・生活支援センターは、障害のある人の就業面と生活面を一体的に支援し、企業への職場定着の支援も行う。休職者向けのリワーク支援を行っているのは地域障害者職業センター。",
-    "publicPath": "q/ichimon/s/ichi-0940/index.html"
+    "publicPath": "q/ichimon/s/ichi-0940/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0941",
     "field": "limit",
-    "statement": "うつ病が疑われる部下に受診を勧める際は、「精神科の受診は恥ずかしいことではなく、早めの治療が回復につながる」と伝える。",
+    "statement": "「自殺予防の十箇条」には、原因不明の身体の不調が長引くことがサインの一つとして挙げられている。",
     "correctAnswer": true,
-    "exp": "うつ病が疑われる部下に受診を勧めるときは、精神科の受診は特別なことではなく、早めの治療が回復につながると前向きに伝え、本人の不安や偏見を和らげる。受診の事実を会社に報告する義務はない。",
-    "publicPath": "q/ichimon/s/ichi-0941/index.html"
+    "exp": "自殺予防の十箇条には、うつ病の症状、原因不明の身体の不調が長引く、酒量が増す、仕事の負担が急に増える・大きな失敗をする・職を失う、自殺を口にする、自殺未遂に及ぶなどが含まれる。サインを数多く認める場合は、早い段階で専門家に受診させる。",
+    "publicPath": "q/ichimon/s/ichi-0941/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0942",
     "field": "limit",
-    "statement": "うつ病が疑われる部下に受診を勧める際は、「精神科に行くと、入院させられる可能性が高い」と伝える。",
+    "statement": "「自殺予防の十箇条」のサインのうち一つでも認めた場合は、ただちに入院の手続きをとる必要があるとされている。",
     "correctAnswer": false,
-    "exp": "うつ病が疑われる部下に受診を勧めるときは、精神科の受診は特別なことではなく、早めの治療が回復につながると前向きに伝え、本人の不安や偏見を和らげる。受診の事実を会社に報告する義務はない。",
-    "publicPath": "q/ichimon/s/ichi-0942/index.html"
+    "exp": "自殺予防の十箇条には、うつ病の症状、原因不明の身体の不調が長引く、酒量が増す、仕事の負担が急に増える・大きな失敗をする・職を失う、自殺を口にする、自殺未遂に及ぶなどが含まれる。サインを数多く認める場合は、早い段階で専門家に受診させる。",
+    "publicPath": "q/ichimon/s/ichi-0942/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0943",
     "field": "limit",
-    "statement": "受診を勧める際は、受診をためらう本人の不安や偏見を和らげる説明を心がける。",
+    "statement": "「自殺予防の十箇条」のサインを数多く認める場合は自殺の危険が迫っており、早い段階で専門家に受診させることが求められている。",
     "correctAnswer": true,
-    "exp": "うつ病が疑われる部下に受診を勧めるときは、精神科の受診は特別なことではなく、早めの治療が回復につながると前向きに伝え、本人の不安や偏見を和らげる。受診の事実を会社に報告する義務はない。",
-    "publicPath": "q/ichimon/s/ichi-0943/index.html"
+    "exp": "自殺予防の十箇条には、うつ病の症状、原因不明の身体の不調が長引く、酒量が増す、仕事の負担が急に増える・大きな失敗をする・職を失う、自殺を口にする、自殺未遂に及ぶなどが含まれる。サインを数多く認める場合は、早い段階で専門家に受診させる。",
+    "publicPath": "q/ichimon/s/ichi-0943/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0944",
     "field": "limit",
-    "statement": "うつ病が疑われる部下に受診を勧める際は、「精神科の受診は会社に報告する義務があるので、受診前に必ず許可を取るように」と伝える。",
+    "statement": "仕事の負担が急に増えることや大きな失敗をすることは、本人の能力の問題として扱われ、「自殺予防の十箇条」のサインには含まれない。",
     "correctAnswer": false,
-    "exp": "うつ病が疑われる部下に受診を勧めるときは、精神科の受診は特別なことではなく、早めの治療が回復につながると前向きに伝え、本人の不安や偏見を和らげる。受診の事実を会社に報告する義務はない。",
-    "publicPath": "q/ichimon/s/ichi-0944/index.html"
+    "exp": "自殺予防の十箇条には、うつ病の症状、原因不明の身体の不調が長引く、酒量が増す、仕事の負担が急に増える・大きな失敗をする・職を失う、自殺を口にする、自殺未遂に及ぶなどが含まれる。サインを数多く認める場合は、早い段階で専門家に受診させる。",
+    "publicPath": "q/ichimon/s/ichi-0944/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0945",
@@ -7558,7 +8502,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神科訪問看護は、主治医の指示がなくても、看護師の判断だけで開始することができる。",
     "correctAnswer": false,
     "exp": "精神科訪問看護は、在宅で療養する精神疾患の患者に、服薬の確認、精神症状の観察、日常生活や家族への支援などを行う。主治医の指示に基づいて行われ、医療保険の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0945/index.html"
+    "publicPath": "q/ichimon/s/ichi-0945/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0946",
@@ -7566,7 +8511,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神科訪問看護は、在宅で療養する精神疾患の患者に、服薬の管理、生活の支援、家族への支援などを行う。",
     "correctAnswer": true,
     "exp": "精神科訪問看護は、在宅で療養する精神疾患の患者に、服薬の確認、精神症状の観察、日常生活や家族への支援などを行う。主治医の指示に基づいて行われ、医療保険の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0946/index.html"
+    "publicPath": "q/ichimon/s/ichi-0946/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0947",
@@ -7574,7 +8520,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神科訪問看護は、主治医の指示に基づいて行われる。",
     "correctAnswer": true,
     "exp": "精神科訪問看護は、在宅で療養する精神疾患の患者に、服薬の確認、精神症状の観察、日常生活や家族への支援などを行う。主治医の指示に基づいて行われ、医療保険の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0947/index.html"
+    "publicPath": "q/ichimon/s/ichi-0947/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0948",
@@ -7582,71 +8529,80 @@ window.ICHIMONDOU_ROWS = [
     "statement": "訪問看護は身体疾患のみを対象とし、精神疾患は除外されている。",
     "correctAnswer": false,
     "exp": "精神科訪問看護は、在宅で療養する精神疾患の患者に、服薬の確認、精神症状の観察、日常生活や家族への支援などを行う。主治医の指示に基づいて行われ、医療保険の対象となる。",
-    "publicPath": "q/ichimon/s/ichi-0948/index.html"
+    "publicPath": "q/ichimon/s/ichi-0948/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0949",
     "field": "limit",
-    "statement": "管理監督者は産業保健チームの一員ではなく、チームとは別に独立して活動する。",
+    "statement": "指針でいう心の健康づくり専門スタッフとは、精神科医や心療内科医などの医師に限られ、心理職は含まれない。",
     "correctAnswer": false,
-    "exp": "管理監督者は、日常の観察や部下との関わりで得た情報を産業保健スタッフと共有し、連携の起点となる産業保健チームの一員。部下の健康に関する情報は、原則として本人の同意を得て、必要な範囲で伝える。",
-    "publicPath": "q/ichimon/s/ichi-0949/index.html"
+    "exp": "指針では、人事労務管理スタッフは労働条件の改善や適正な配置に配慮する。心の健康づくり専門スタッフには精神科・心療内科等の医師のほか心理職等も含まれる。推進担当者に解雇や昇進の権限を持つ者を選ぶことは適当でない。",
+    "publicPath": "q/ichimon/s/ichi-0949/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0950",
     "field": "limit",
-    "statement": "管理監督者は、日常的な職場観察や部下との関係づくりを通じて得た情報を産業保健スタッフに共有し、連携の起点となる。",
+    "statement": "指針では、人事労務管理スタッフは、労働時間等の労働条件の改善や、労働者の適正な配置に配慮する役割を担うとされている。",
     "correctAnswer": true,
-    "exp": "管理監督者は、日常の観察や部下との関わりで得た情報を産業保健スタッフと共有し、連携の起点となる産業保健チームの一員。部下の健康に関する情報は、原則として本人の同意を得て、必要な範囲で伝える。",
-    "publicPath": "q/ichimon/s/ichi-0950/index.html"
+    "exp": "指針では、人事労務管理スタッフは労働条件の改善や適正な配置に配慮する。心の健康づくり専門スタッフには精神科・心療内科等の医師のほか心理職等も含まれる。推進担当者に解雇や昇進の権限を持つ者を選ぶことは適当でない。",
+    "publicPath": "q/ichimon/s/ichi-0950/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0951",
     "field": "limit",
-    "statement": "管理監督者は産業保健スタッフの指示に従うだけでよく、主体的な関与は不要である。",
+    "statement": "事業場内メンタルヘルス推進担当者は、労働者が相談しやすいよう、解雇や昇進に直接の権限を持つ者から選任することが望ましい。",
     "correctAnswer": false,
-    "exp": "管理監督者は、日常の観察や部下との関わりで得た情報を産業保健スタッフと共有し、連携の起点となる産業保健チームの一員。部下の健康に関する情報は、原則として本人の同意を得て、必要な範囲で伝える。",
-    "publicPath": "q/ichimon/s/ichi-0951/index.html"
+    "exp": "指針では、人事労務管理スタッフは労働条件の改善や適正な配置に配慮する。心の健康づくり専門スタッフには精神科・心療内科等の医師のほか心理職等も含まれる。推進担当者に解雇や昇進の権限を持つ者を選ぶことは適当でない。",
+    "publicPath": "q/ichimon/s/ichi-0951/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0952",
     "field": "limit",
     "statement": "管理監督者が部下の健康に関する情報を産業保健スタッフに伝える際は、原則として本人の同意を得る。",
     "correctAnswer": true,
-    "exp": "管理監督者は、日常の観察や部下との関わりで得た情報を産業保健スタッフと共有し、連携の起点となる産業保健チームの一員。部下の健康に関する情報は、原則として本人の同意を得て、必要な範囲で伝える。",
-    "publicPath": "q/ichimon/s/ichi-0952/index.html"
+    "exp": "指針では、人事労務管理スタッフは労働条件の改善や適正な配置に配慮する。心の健康づくり専門スタッフには精神科・心療内科等の医師のほか心理職等も含まれる。推進担当者に解雇や昇進の権限を持つ者を選ぶことは適当でない。",
+    "publicPath": "q/ichimon/s/ichi-0952/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0953",
     "field": "limit",
-    "statement": "職場復帰支援において、管理監督者は主治医の診断内容を確認し、必要に応じて修正する役割を担う。",
+    "statement": "職場復帰支援の第4ステップでは、産業医等が「職場復帰に関する意見書」を作成し、その意見書をもって産業医等が最終的な職場復帰を決定する。",
     "correctAnswer": false,
-    "exp": "職場復帰支援における管理監督者は、職場の環境を整え、職場復帰支援プランに沿って業務の調整や定期的な面談などのフォローアップを行う。復職者の変化に気づいたら、産業保健スタッフと連携して対応する。",
-    "publicPath": "q/ichimon/s/ichi-0953/index.html"
+    "exp": "手引きの第4ステップでは、労働者の状態の最終確認を行い、産業医等の意見書等をもとに事業者が最終的な職場復帰の決定を行う。就業上の配慮は必要な範囲にとどめ、その内容は労働者を通じて主治医に的確に伝わるようにする。",
+    "publicPath": "q/ichimon/s/ichi-0953/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0954",
     "field": "limit",
-    "statement": "職場復帰支援において、管理監督者は復職者が安心して職場に戻れるよう環境を整え、職場復帰支援プランに沿ったフォローアップを行う。",
+    "statement": "職場復帰支援の第4ステップでは、疾患の再燃・再発の有無や、回復過程における症状の動揺の様子など、労働者の状態の最終確認を行う。",
     "correctAnswer": true,
-    "exp": "職場復帰支援における管理監督者は、職場の環境を整え、職場復帰支援プランに沿って業務の調整や定期的な面談などのフォローアップを行う。復職者の変化に気づいたら、産業保健スタッフと連携して対応する。",
-    "publicPath": "q/ichimon/s/ichi-0954/index.html"
+    "exp": "手引きの第4ステップでは、労働者の状態の最終確認を行い、産業医等の意見書等をもとに事業者が最終的な職場復帰の決定を行う。就業上の配慮は必要な範囲にとどめ、その内容は労働者を通じて主治医に的確に伝わるようにする。",
+    "publicPath": "q/ichimon/s/ichi-0954/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0955",
     "field": "limit",
-    "statement": "職場復帰支援は人事部門と産業医だけが担うもので、管理監督者は通常の業務管理に専念すればよい。",
+    "statement": "職場復帰時の就業上の配慮は、再発を確実に防ぐため、円滑な職場復帰に必要な範囲を超えても、できるだけ手厚く講じることが望ましい。",
     "correctAnswer": false,
-    "exp": "職場復帰支援における管理監督者は、職場の環境を整え、職場復帰支援プランに沿って業務の調整や定期的な面談などのフォローアップを行う。復職者の変化に気づいたら、産業保健スタッフと連携して対応する。",
-    "publicPath": "q/ichimon/s/ichi-0955/index.html"
+    "exp": "手引きの第4ステップでは、労働者の状態の最終確認を行い、産業医等の意見書等をもとに事業者が最終的な職場復帰の決定を行う。就業上の配慮は必要な範囲にとどめ、その内容は労働者を通じて主治医に的確に伝わるようにする。",
+    "publicPath": "q/ichimon/s/ichi-0955/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0956",
     "field": "limit",
-    "statement": "管理監督者は、復職者の業務の状況や体調の変化に気づいた場合、産業保健スタッフと連携して対応する。",
+    "statement": "職場復帰についての事業場の対応や就業上の配慮の内容は、労働者を通じて主治医に的確に伝わるようにすることが重要とされている。",
     "correctAnswer": true,
-    "exp": "職場復帰支援における管理監督者は、職場の環境を整え、職場復帰支援プランに沿って業務の調整や定期的な面談などのフォローアップを行う。復職者の変化に気づいたら、産業保健スタッフと連携して対応する。",
-    "publicPath": "q/ichimon/s/ichi-0956/index.html"
+    "exp": "手引きの第4ステップでは、労働者の状態の最終確認を行い、産業医等の意見書等をもとに事業者が最終的な職場復帰の決定を行う。就業上の配慮は必要な範囲にとどめ、その内容は労働者を通じて主治医に的確に伝わるようにする。",
+    "publicPath": "q/ichimon/s/ichi-0956/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0957",
@@ -7654,7 +8610,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "時間単位の年休は医療目的には使用できない。",
     "correctAnswer": false,
     "exp": "時間単位の年次有給休暇は、労使協定を締結して導入し、1年に5日分を限度に取得できる。計画的付与の対象にはできない。通院や検査などの治療に活用でき、治療と仕事の両立に役立つ。",
-    "publicPath": "q/ichimon/s/ichi-0957/index.html"
+    "publicPath": "q/ichimon/s/ichi-0957/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0958",
@@ -7662,7 +8619,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "時間単位の年次有給休暇は、通院・検査・副作用からの回復などのために1時間単位で取得でき、治療と仕事の両立に役立つ。",
     "correctAnswer": true,
     "exp": "時間単位の年次有給休暇は、労使協定を締結して導入し、1年に5日分を限度に取得できる。計画的付与の対象にはできない。通院や検査などの治療に活用でき、治療と仕事の両立に役立つ。",
-    "publicPath": "q/ichimon/s/ichi-0958/index.html"
+    "publicPath": "q/ichimon/s/ichi-0958/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0959",
@@ -7670,7 +8628,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "時間単位の年休は法律上すべての企業で義務づけられている。",
     "correctAnswer": false,
     "exp": "時間単位の年次有給休暇は、労使協定を締結して導入し、1年に5日分を限度に取得できる。計画的付与の対象にはできない。通院や検査などの治療に活用でき、治療と仕事の両立に役立つ。",
-    "publicPath": "q/ichimon/s/ichi-0959/index.html"
+    "publicPath": "q/ichimon/s/ichi-0959/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0960",
@@ -7678,7 +8637,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "時間単位の年次有給休暇を導入するには労使協定の締結が必要で、取得できるのは1年に5日分が限度である。",
     "correctAnswer": true,
     "exp": "時間単位の年次有給休暇は、労使協定を締結して導入し、1年に5日分を限度に取得できる。計画的付与の対象にはできない。通院や検査などの治療に活用でき、治療と仕事の両立に役立つ。",
-    "publicPath": "q/ichimon/s/ichi-0960/index.html"
+    "publicPath": "q/ichimon/s/ichi-0960/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0961",
@@ -7686,7 +8646,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "短時間勤務制度は育児・介護目的のみに使用でき、疾病治療には適用されない。",
     "correctAnswer": false,
     "exp": "短時間勤務制度は、病気の治療中の労働者が体調の回復を図りながら働き続けるための支援にも活用できる。3歳未満の子の養育のための短時間勤務は育児・介護休業法で義務とされるが、治療のためのものは法律上の義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0961/index.html"
+    "publicPath": "q/ichimon/s/ichi-0961/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0962",
@@ -7694,7 +8655,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "疾病治療中の労働者に対して短時間勤務制度を活用することで、体力・体調の回復を支援しながら就業継続を可能にする。",
     "correctAnswer": true,
     "exp": "短時間勤務制度は、病気の治療中の労働者が体調の回復を図りながら働き続けるための支援にも活用できる。3歳未満の子の養育のための短時間勤務は育児・介護休業法で義務とされるが、治療のためのものは法律上の義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0962/index.html"
+    "publicPath": "q/ichimon/s/ichi-0962/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0963",
@@ -7702,7 +8664,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "3歳に満たない子を養育する労働者のための短時間勤務制度は、育児・介護休業法により、原則として事業主に義務づけられている。",
     "correctAnswer": true,
     "exp": "短時間勤務制度は、病気の治療中の労働者が体調の回復を図りながら働き続けるための支援にも活用できる。3歳未満の子の養育のための短時間勤務は育児・介護休業法で義務とされるが、治療のためのものは法律上の義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0963/index.html"
+    "publicPath": "q/ichimon/s/ichi-0963/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0964",
@@ -7710,71 +8673,80 @@ window.ICHIMONDOU_ROWS = [
     "statement": "治療と仕事の両立のための短時間勤務制度の導入は、すべての事業主に法律で義務づけられている。",
     "correctAnswer": false,
     "exp": "短時間勤務制度は、病気の治療中の労働者が体調の回復を図りながら働き続けるための支援にも活用できる。3歳未満の子の養育のための短時間勤務は育児・介護休業法で義務とされるが、治療のためのものは法律上の義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-0964/index.html"
+    "publicPath": "q/ichimon/s/ichi-0964/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0965",
     "field": "limit",
-    "statement": "復職後に業務へ積極的に取り組み、発言が増えたことは、再発のサインとして注意すべき変化である。",
+    "statement": "職場復帰後の勤務状況や業務遂行能力の評価は、本人の自己評価を尊重するため、管理監督者の意見は含めずに行うこととされている。",
     "correctAnswer": false,
-    "exp": "復職後の再発のサインには、睡眠の乱れの再燃、遅刻や欠勤の増加、表情や言動の変化、服薬の自己中断、休業前と同様のストレス要因への直面などがある。服薬の自己中断は再発の危険を高める。",
-    "publicPath": "q/ichimon/s/ichi-0965/index.html"
+    "exp": "手引きでは、フォローアップに期間の目安を定め、主治医と連携して病態や病状に応じて柔軟に設定する。業務遂行能力は本人と管理監督者の意見を合わせて客観的に評価する。フォローアップ期間を終えた後も、再燃・再発の予防に留意する。",
+    "publicPath": "q/ichimon/s/ichi-0965/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0966",
     "field": "limit",
-    "statement": "復職後の睡眠の乱れの再発、欠勤の増加、表情の変化、休業前と同様のストレス要因への直面は、再発のサインとして注意すべき変化である。",
+    "statement": "心の健康問題は再燃・再発することも少なくないため、フォローアップの期間を終えた後も、再発の予防に留意する必要がある。",
     "correctAnswer": true,
-    "exp": "復職後の再発のサインには、睡眠の乱れの再燃、遅刻や欠勤の増加、表情や言動の変化、服薬の自己中断、休業前と同様のストレス要因への直面などがある。服薬の自己中断は再発の危険を高める。",
-    "publicPath": "q/ichimon/s/ichi-0966/index.html"
+    "exp": "手引きでは、フォローアップに期間の目安を定め、主治医と連携して病態や病状に応じて柔軟に設定する。業務遂行能力は本人と管理監督者の意見を合わせて客観的に評価する。フォローアップ期間を終えた後も、再燃・再発の予防に留意する。",
+    "publicPath": "q/ichimon/s/ichi-0966/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0967",
     "field": "limit",
-    "statement": "復職後に体重が増え、食欲が回復したことは、再発のサインとして注意すべき変化である。",
+    "statement": "職場復帰後に突発的な休業が想定を超えて生じた場合は、管理監督者の判断で職場復帰支援プランを終了し、再度の休業を命じることとされている。",
     "correctAnswer": false,
-    "exp": "復職後の再発のサインには、睡眠の乱れの再燃、遅刻や欠勤の増加、表情や言動の変化、服薬の自己中断、休業前と同様のストレス要因への直面などがある。服薬の自己中断は再発の危険を高める。",
-    "publicPath": "q/ichimon/s/ichi-0967/index.html"
+    "exp": "手引きでは、フォローアップに期間の目安を定め、主治医と連携して病態や病状に応じて柔軟に設定する。業務遂行能力は本人と管理監督者の意見を合わせて客観的に評価する。フォローアップ期間を終えた後も、再燃・再発の予防に留意する。",
+    "publicPath": "q/ichimon/s/ichi-0967/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0968",
     "field": "limit",
     "statement": "復職者が自己判断で服薬をやめていることは、再発の危険を高める変化として注意する。",
     "correctAnswer": true,
-    "exp": "復職後の再発のサインには、睡眠の乱れの再燃、遅刻や欠勤の増加、表情や言動の変化、服薬の自己中断、休業前と同様のストレス要因への直面などがある。服薬の自己中断は再発の危険を高める。",
-    "publicPath": "q/ichimon/s/ichi-0968/index.html"
+    "exp": "手引きでは、フォローアップに期間の目安を定め、主治医と連携して病態や病状に応じて柔軟に設定する。業務遂行能力は本人と管理監督者の意見を合わせて客観的に評価する。フォローアップ期間を終えた後も、再燃・再発の予防に留意する。",
+    "publicPath": "q/ichimon/s/ichi-0968/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0969",
     "field": "limit",
-    "statement": "復職者を受け入れる際は、同僚には復職を知らせず、突然出勤させる。",
+    "statement": "休業を開始する労働者には、療養に専念させるため、休業中の事務手続きや職場復帰支援の手順の説明は、職場復帰の直前まで行わないこととされている。",
     "correctAnswer": false,
-    "exp": "復職者の受け入れにあたっては、同僚に伝える内容について事前に本人の意向を確認し、プライバシーに配慮した範囲で説明する。業務分担や席の配置を調整し、相談しやすい雰囲気をつくる。",
-    "publicPath": "q/ichimon/s/ichi-0969/index.html"
+    "exp": "手引きの第1ステップでは、病気休業診断書に療養期間の見込みを明記してもらい、休業開始時に事務手続きや職場復帰支援の手順を説明する。休業者との接触は、必要な連絡事項などを除き主治医と連絡をとったうえで行う。",
+    "publicPath": "q/ichimon/s/ichi-0969/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0970",
     "field": "limit",
-    "statement": "復職者を受け入れる際は、プライバシーに配慮した範囲での同僚への説明や業務分担の調整など、受け入れ体制を事前に整える。",
+    "statement": "病気休業診断書には、職場復帰の準備を計画的に行えるよう、必要な療養期間の見込みを明記してもらうことが望ましいとされている。",
     "correctAnswer": true,
-    "exp": "復職者の受け入れにあたっては、同僚に伝える内容について事前に本人の意向を確認し、プライバシーに配慮した範囲で説明する。業務分担や席の配置を調整し、相談しやすい雰囲気をつくる。",
-    "publicPath": "q/ichimon/s/ichi-0970/index.html"
+    "exp": "手引きの第1ステップでは、病気休業診断書に療養期間の見込みを明記してもらい、休業開始時に事務手続きや職場復帰支援の手順を説明する。休業者との接触は、必要な連絡事項などを除き主治医と連絡をとったうえで行う。",
+    "publicPath": "q/ichimon/s/ichi-0970/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0971",
     "field": "limit",
     "statement": "復職者の受け入れにあたっては、同僚に伝える内容について事前に本人の意向を確認する。",
     "correctAnswer": true,
-    "exp": "復職者の受け入れにあたっては、同僚に伝える内容について事前に本人の意向を確認し、プライバシーに配慮した範囲で説明する。業務分担や席の配置を調整し、相談しやすい雰囲気をつくる。",
-    "publicPath": "q/ichimon/s/ichi-0971/index.html"
+    "exp": "手引きの第1ステップでは、病気休業診断書に療養期間の見込みを明記してもらい、休業開始時に事務手続きや職場復帰支援の手順を説明する。休業者との接触は、必要な連絡事項などを除き主治医と連絡をとったうえで行う。",
+    "publicPath": "q/ichimon/s/ichi-0971/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0972",
     "field": "limit",
-    "statement": "復職者を受け入れる際は、同僚全員に病名や治療内容を詳しく説明し、配慮を求める。",
+    "statement": "休業中の労働者との接触は、主治医と連絡をとる必要はなく、管理監督者の判断で適宜行えばよいとされている。",
     "correctAnswer": false,
-    "exp": "復職者の受け入れにあたっては、同僚に伝える内容について事前に本人の意向を確認し、プライバシーに配慮した範囲で説明する。業務分担や席の配置を調整し、相談しやすい雰囲気をつくる。",
-    "publicPath": "q/ichimon/s/ichi-0972/index.html"
+    "exp": "手引きの第1ステップでは、病気休業診断書に療養期間の見込みを明記してもらい、休業開始時に事務手続きや職場復帰支援の手順を説明する。休業者との接触は、必要な連絡事項などを除き主治医と連絡をとったうえで行う。",
+    "publicPath": "q/ichimon/s/ichi-0972/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0973",
@@ -7782,7 +8754,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "実施者は、全労働者のストレスチェックの結果を事業者に報告する義務がある。",
     "correctAnswer": false,
     "exp": "個人の結果を事業者に提供するには、結果の通知後に個別に本人の同意を得る。高ストレス者が面接指導の申出をした場合は、それをもって提供に同意したとみなすことができる。集団分析の結果は、10人以上の単位なら同意なく提供できる。",
-    "publicPath": "q/ichimon/s/ichi-0973/index.html"
+    "publicPath": "q/ichimon/s/ichi-0973/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0974",
@@ -7790,7 +8763,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "実施者は、本人の同意なく事業者に個人のストレスチェックの結果を提供してはならない。",
     "correctAnswer": true,
     "exp": "個人の結果を事業者に提供するには、結果の通知後に個別に本人の同意を得る。高ストレス者が面接指導の申出をした場合は、それをもって提供に同意したとみなすことができる。集団分析の結果は、10人以上の単位なら同意なく提供できる。",
-    "publicPath": "q/ichimon/s/ichi-0974/index.html"
+    "publicPath": "q/ichimon/s/ichi-0974/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0975",
@@ -7798,7 +8772,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "高ストレス者が面接指導の申出をした場合は、その申出をもってストレスチェックの結果の事業者への提供に同意したものとみなすことができる。",
     "correctAnswer": true,
     "exp": "個人の結果を事業者に提供するには、結果の通知後に個別に本人の同意を得る。高ストレス者が面接指導の申出をした場合は、それをもって提供に同意したとみなすことができる。集団分析の結果は、10人以上の単位なら同意なく提供できる。",
-    "publicPath": "q/ichimon/s/ichi-0975/index.html"
+    "publicPath": "q/ichimon/s/ichi-0975/index.html",
+    "level": 4
   },
   {
     "id": "ichi-0976",
@@ -7806,7 +8781,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの結果は、人事評価に積極的に活用すべきである。",
     "correctAnswer": false,
     "exp": "個人の結果を事業者に提供するには、結果の通知後に個別に本人の同意を得る。高ストレス者が面接指導の申出をした場合は、それをもって提供に同意したとみなすことができる。集団分析の結果は、10人以上の単位なら同意なく提供できる。",
-    "publicPath": "q/ichimon/s/ichi-0976/index.html"
+    "publicPath": "q/ichimon/s/ichi-0976/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0977",
@@ -7814,7 +8790,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "事業場内メンタルヘルス推進担当者は、4つのケアにおける「事業場外資源」にあたる。",
     "correctAnswer": false,
     "exp": "事業場内産業保健スタッフ等には、産業医等・衛生管理者等・保健師等・心の健康づくり専門スタッフ・人事労務管理スタッフ・事業場内メンタルヘルス推進担当者が含まれる。精神保健福祉センター、産業保健総合支援センター、地域産業保健センター、医療機関、外部EAP機関などは事業場外資源。",
-    "publicPath": "q/ichimon/s/ichi-0977/index.html"
+    "publicPath": "q/ichimon/s/ichi-0977/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0978",
@@ -7822,7 +8799,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "外部のEAP機関や精神保健福祉センター、産業保健総合支援センターは、4つのケアにおける「事業場外資源」にあたる。",
     "correctAnswer": true,
     "exp": "事業場内産業保健スタッフ等には、産業医等・衛生管理者等・保健師等・心の健康づくり専門スタッフ・人事労務管理スタッフ・事業場内メンタルヘルス推進担当者が含まれる。精神保健福祉センター、産業保健総合支援センター、地域産業保健センター、医療機関、外部EAP機関などは事業場外資源。",
-    "publicPath": "q/ichimon/s/ichi-0978/index.html"
+    "publicPath": "q/ichimon/s/ichi-0978/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0979",
@@ -7830,7 +8808,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "衛生管理者は、4つのケアにおける「事業場外資源」にあたる。",
     "correctAnswer": false,
     "exp": "事業場内産業保健スタッフ等には、産業医等・衛生管理者等・保健師等・心の健康づくり専門スタッフ・人事労務管理スタッフ・事業場内メンタルヘルス推進担当者が含まれる。精神保健福祉センター、産業保健総合支援センター、地域産業保健センター、医療機関、外部EAP機関などは事業場外資源。",
-    "publicPath": "q/ichimon/s/ichi-0979/index.html"
+    "publicPath": "q/ichimon/s/ichi-0979/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0980",
@@ -7838,7 +8817,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "地域産業保健センターは、4つのケアにおける「事業場外資源」にあたる。",
     "correctAnswer": true,
     "exp": "事業場内産業保健スタッフ等には、産業医等・衛生管理者等・保健師等・心の健康づくり専門スタッフ・人事労務管理スタッフ・事業場内メンタルヘルス推進担当者が含まれる。精神保健福祉センター、産業保健総合支援センター、地域産業保健センター、医療機関、外部EAP機関などは事業場外資源。",
-    "publicPath": "q/ichimon/s/ichi-0980/index.html"
+    "publicPath": "q/ichimon/s/ichi-0980/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0981",
@@ -7846,7 +8826,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "使用者責任は、使用者が直接損害を与えた場合にのみ成立する。",
     "correctAnswer": false,
     "exp": "使用者責任（民法715条）は、被用者が事業の執行について第三者に加えた損害を使用者が賠償する責任で、ハラスメントにも適用され得る。被用者本人の不法行為責任と並存する。条文上は相当の注意をした場合の免責規定があるが、実際に認められることはまれ。",
-    "publicPath": "q/ichimon/s/ichi-0981/index.html"
+    "publicPath": "q/ichimon/s/ichi-0981/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0982",
@@ -7854,7 +8835,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "使用者は、被用者が事業の執行について他人に損害を与えた場合、その損害を賠償する責任を負う。",
     "correctAnswer": true,
     "exp": "使用者責任（民法715条）は、被用者が事業の執行について第三者に加えた損害を使用者が賠償する責任で、ハラスメントにも適用され得る。被用者本人の不法行為責任と並存する。条文上は相当の注意をした場合の免責規定があるが、実際に認められることはまれ。",
-    "publicPath": "q/ichimon/s/ichi-0982/index.html"
+    "publicPath": "q/ichimon/s/ichi-0982/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0983",
@@ -7862,7 +8844,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "使用者責任が成立すれば、加害者である被用者は一切責任を負わない。",
     "correctAnswer": false,
     "exp": "使用者責任（民法715条）は、被用者が事業の執行について第三者に加えた損害を使用者が賠償する責任で、ハラスメントにも適用され得る。被用者本人の不法行為責任と並存する。条文上は相当の注意をした場合の免責規定があるが、実際に認められることはまれ。",
-    "publicPath": "q/ichimon/s/ichi-0983/index.html"
+    "publicPath": "q/ichimon/s/ichi-0983/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0984",
@@ -7870,7 +8853,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場のハラスメントにより被害者に損害が生じた場合、会社が使用者責任を問われることがある。",
     "correctAnswer": true,
     "exp": "使用者責任（民法715条）は、被用者が事業の執行について第三者に加えた損害を使用者が賠償する責任で、ハラスメントにも適用され得る。被用者本人の不法行為責任と並存する。条文上は相当の注意をした場合の免責規定があるが、実際に認められることはまれ。",
-    "publicPath": "q/ichimon/s/ichi-0984/index.html"
+    "publicPath": "q/ichimon/s/ichi-0984/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0985",
@@ -7878,7 +8862,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "マタニティハラスメントや育児休業等に関するハラスメントは、女性労働者のみが被害者となりうる。",
     "correctAnswer": false,
     "exp": "妊娠・出産等に関するハラスメントの防止措置は男女雇用機会均等法、育児休業等に関するハラスメントの防止措置は育児・介護休業法で事業主に義務づけられている。男性の育児休業に関するハラスメントも対象。業務上の必要性に基づく言動はハラスメントにあたらない。",
-    "publicPath": "q/ichimon/s/ichi-0985/index.html"
+    "publicPath": "q/ichimon/s/ichi-0985/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0986",
@@ -7886,7 +8871,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "マタニティハラスメントには、妊娠・出産・育児休業等を理由とした不利益な取扱いや、就業環境を害する言動が含まれる。",
     "correctAnswer": true,
     "exp": "妊娠・出産等に関するハラスメントの防止措置は男女雇用機会均等法、育児休業等に関するハラスメントの防止措置は育児・介護休業法で事業主に義務づけられている。男性の育児休業に関するハラスメントも対象。業務上の必要性に基づく言動はハラスメントにあたらない。",
-    "publicPath": "q/ichimon/s/ichi-0986/index.html"
+    "publicPath": "q/ichimon/s/ichi-0986/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0987",
@@ -7894,7 +8880,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "妊娠・出産等に関するハラスメント防止のための事業主の措置義務は、努力義務にとどまる。",
     "correctAnswer": false,
     "exp": "妊娠・出産等に関するハラスメントの防止措置は男女雇用機会均等法、育児休業等に関するハラスメントの防止措置は育児・介護休業法で事業主に義務づけられている。男性の育児休業に関するハラスメントも対象。業務上の必要性に基づく言動はハラスメントにあたらない。",
-    "publicPath": "q/ichimon/s/ichi-0987/index.html"
+    "publicPath": "q/ichimon/s/ichi-0987/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0988",
@@ -7902,7 +8889,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務分担の見直しなど、業務上の必要性に基づく言動は、妊娠・出産等に関するハラスメントにはあたらない。",
     "correctAnswer": true,
     "exp": "妊娠・出産等に関するハラスメントの防止措置は男女雇用機会均等法、育児休業等に関するハラスメントの防止措置は育児・介護休業法で事業主に義務づけられている。男性の育児休業に関するハラスメントも対象。業務上の必要性に基づく言動はハラスメントにあたらない。",
-    "publicPath": "q/ichimon/s/ichi-0988/index.html"
+    "publicPath": "q/ichimon/s/ichi-0988/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0989",
@@ -7910,7 +8898,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者は業務上の配慮として、不調が疑われる部下の業務量・業務内容・勤務形態などを、本人の状態に応じて調整できる。",
     "correctAnswer": true,
     "exp": "不調が疑われる部下には、本人の意向を確認しながら、業務量・業務内容・勤務時間などを調整する。診断書がなくても配慮は行え、必要に応じて産業保健スタッフの意見も聴く。周囲への説明は本人の了解を得て必要最小限にとどめる。",
-    "publicPath": "q/ichimon/s/ichi-0989/index.html"
+    "publicPath": "q/ichimon/s/ichi-0989/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0990",
@@ -7918,7 +8907,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務上の配慮は医学的な判断を要するため、主治医の診断書が提出されるまでは一切行ってはならない。",
     "correctAnswer": false,
     "exp": "不調が疑われる部下には、本人の意向を確認しながら、業務量・業務内容・勤務時間などを調整する。診断書がなくても配慮は行え、必要に応じて産業保健スタッフの意見も聴く。周囲への説明は本人の了解を得て必要最小限にとどめる。",
-    "publicPath": "q/ichimon/s/ichi-0990/index.html"
+    "publicPath": "q/ichimon/s/ichi-0990/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0991",
@@ -7926,7 +8916,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務上の配慮を行う際は、本人の意向は確認せず、管理監督者の判断で決めることが原則である。",
     "correctAnswer": false,
     "exp": "不調が疑われる部下には、本人の意向を確認しながら、業務量・業務内容・勤務時間などを調整する。診断書がなくても配慮は行え、必要に応じて産業保健スタッフの意見も聴く。周囲への説明は本人の了解を得て必要最小限にとどめる。",
-    "publicPath": "q/ichimon/s/ichi-0991/index.html"
+    "publicPath": "q/ichimon/s/ichi-0991/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0992",
@@ -7934,7 +8925,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務上の配慮を行う際は、本人の意向を確認し、必要に応じて産業保健スタッフの意見も聴く。",
     "correctAnswer": true,
     "exp": "不調が疑われる部下には、本人の意向を確認しながら、業務量・業務内容・勤務時間などを調整する。診断書がなくても配慮は行え、必要に応じて産業保健スタッフの意見も聴く。周囲への説明は本人の了解を得て必要最小限にとどめる。",
-    "publicPath": "q/ichimon/s/ichi-0992/index.html"
+    "publicPath": "q/ichimon/s/ichi-0992/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0993",
@@ -7942,7 +8934,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "メンタルヘルスケアの評価は、休職者数などの結果（アウトカム）の指標だけで行い、研修の実施状況などの取り組みの過程は評価の対象としない。",
     "correctAnswer": false,
     "exp": "推進状況は、集団分析結果・休職者数・相談件数・研修の実施率など複数の指標を組み合わせ、過程と結果の両面から定期的に評価して計画の見直しにつなげる。相談件数の増加は窓口の利用しやすさを反映している場合もあるため、他の指標と合わせて解釈する。",
-    "publicPath": "q/ichimon/s/ichi-0993/index.html"
+    "publicPath": "q/ichimon/s/ichi-0993/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0994",
@@ -7950,7 +8943,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの集団分析結果、休職者数、相談件数、研修の実施率などは、メンタルヘルスケアの推進状況を評価・見直しする際に参照すべき情報である。",
     "correctAnswer": true,
     "exp": "推進状況は、集団分析結果・休職者数・相談件数・研修の実施率など複数の指標を組み合わせ、過程と結果の両面から定期的に評価して計画の見直しにつなげる。相談件数の増加は窓口の利用しやすさを反映している場合もあるため、他の指標と合わせて解釈する。",
-    "publicPath": "q/ichimon/s/ichi-0994/index.html"
+    "publicPath": "q/ichimon/s/ichi-0994/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0995",
@@ -7958,7 +8952,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "相談窓口の利用件数が増えた場合は、職場の状況が悪化したことを示すものと判断し、相談窓口の周知を控えるべきである。",
     "correctAnswer": false,
     "exp": "推進状況は、集団分析結果・休職者数・相談件数・研修の実施率など複数の指標を組み合わせ、過程と結果の両面から定期的に評価して計画の見直しにつなげる。相談件数の増加は窓口の利用しやすさを反映している場合もあるため、他の指標と合わせて解釈する。",
-    "publicPath": "q/ichimon/s/ichi-0995/index.html"
+    "publicPath": "q/ichimon/s/ichi-0995/index.html",
+    "level": 1
   },
   {
     "id": "ichi-0996",
@@ -7966,7 +8961,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "相談窓口の利用件数の増加は、窓口の周知が進み利用しやすくなった結果である場合もあるため、他の指標と合わせて解釈する必要がある。",
     "correctAnswer": true,
     "exp": "推進状況は、集団分析結果・休職者数・相談件数・研修の実施率など複数の指標を組み合わせ、過程と結果の両面から定期的に評価して計画の見直しにつなげる。相談件数の増加は窓口の利用しやすさを反映している場合もあるため、他の指標と合わせて解釈する。",
-    "publicPath": "q/ichimon/s/ichi-0996/index.html"
+    "publicPath": "q/ichimon/s/ichi-0996/index.html",
+    "level": 2
   },
   {
     "id": "ichi-0997",
@@ -7974,7 +8970,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務起因性の認定は、業務が疾病の唯一の原因である場合に限られる。",
     "correctAnswer": false,
     "exp": "精神障害の労災認定は、発病前おおむね6か月の業務による強い心理的負荷があり、業務以外の心理的負荷や個体側要因による発病とは認められない場合に業務上と判断される。判断は労働基準監督署が行う。2023年の改正で、既往の精神障害の悪化も一定の条件で認められることが明確にされた。",
-    "publicPath": "q/ichimon/s/ichi-0997/index.html"
+    "publicPath": "q/ichimon/s/ichi-0997/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0998",
@@ -7982,7 +8979,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務上の出来事が発症の有力な原因のひとつであることが認められれば、業務起因性が認定される場合がある。",
     "correctAnswer": true,
     "exp": "精神障害の労災認定は、発病前おおむね6か月の業務による強い心理的負荷があり、業務以外の心理的負荷や個体側要因による発病とは認められない場合に業務上と判断される。判断は労働基準監督署が行う。2023年の改正で、既往の精神障害の悪化も一定の条件で認められることが明確にされた。",
-    "publicPath": "q/ichimon/s/ichi-0998/index.html"
+    "publicPath": "q/ichimon/s/ichi-0998/index.html",
+    "level": 3
   },
   {
     "id": "ichi-0999",
@@ -7990,7 +8988,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "すでに発病していた精神障害が悪化した場合は、どのような業務上の出来事があっても労災と認められることはない。",
     "correctAnswer": false,
     "exp": "精神障害の労災認定は、発病前おおむね6か月の業務による強い心理的負荷があり、業務以外の心理的負荷や個体側要因による発病とは認められない場合に業務上と判断される。判断は労働基準監督署が行う。2023年の改正で、既往の精神障害の悪化も一定の条件で認められることが明確にされた。",
-    "publicPath": "q/ichimon/s/ichi-0999/index.html"
+    "publicPath": "q/ichimon/s/ichi-0999/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1000",
@@ -7998,7 +8997,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害の労災認定では、業務以外の心理的負荷や個体側要因も考慮して判断される。",
     "correctAnswer": true,
     "exp": "精神障害の労災認定は、発病前おおむね6か月の業務による強い心理的負荷があり、業務以外の心理的負荷や個体側要因による発病とは認められない場合に業務上と判断される。判断は労働基準監督署が行う。2023年の改正で、既往の精神障害の悪化も一定の条件で認められることが明確にされた。",
-    "publicPath": "q/ichimon/s/ichi-1000/index.html"
+    "publicPath": "q/ichimon/s/ichi-1000/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1001",
@@ -8006,7 +9006,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ワーク・エンゲイジメントが高い状態は、仕事に強迫的にのめり込むワーカホリズムと同じ状態である。",
     "correctAnswer": false,
     "exp": "ワーク・エンゲイジメントは、活力・熱意・没頭で特徴づけられる、仕事に関連するポジティブで充実した心理状態。強迫的に働くワーカホリズムとは異なる。仕事の要求度－資源モデルでは、仕事の資源（支援・裁量・成長の機会など）によって高まるとされる。",
-    "publicPath": "q/ichimon/s/ichi-1001/index.html"
+    "publicPath": "q/ichimon/s/ichi-1001/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1002",
@@ -8014,7 +9015,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "上司・同僚からの支援、成長の機会、業務の自律性、目標の明確さは、ワーク・エンゲイジメントを高める仕事の資源にあたる。",
     "correctAnswer": true,
     "exp": "ワーク・エンゲイジメントは、活力・熱意・没頭で特徴づけられる、仕事に関連するポジティブで充実した心理状態。強迫的に働くワーカホリズムとは異なる。仕事の要求度－資源モデルでは、仕事の資源（支援・裁量・成長の機会など）によって高まるとされる。",
-    "publicPath": "q/ichimon/s/ichi-1002/index.html"
+    "publicPath": "q/ichimon/s/ichi-1002/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1003",
@@ -8022,7 +9024,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ワーク・エンゲイジメントは、活力・熱意・没頭によって特徴づけられる、仕事に関連するポジティブで充実した心理状態である。",
     "correctAnswer": true,
     "exp": "ワーク・エンゲイジメントは、活力・熱意・没頭で特徴づけられる、仕事に関連するポジティブで充実した心理状態。強迫的に働くワーカホリズムとは異なる。仕事の要求度－資源モデルでは、仕事の資源（支援・裁量・成長の機会など）によって高まるとされる。",
-    "publicPath": "q/ichimon/s/ichi-1003/index.html"
+    "publicPath": "q/ichimon/s/ichi-1003/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1004",
@@ -8030,7 +9033,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "残業の事実上の義務化と有給休暇の取得制限は、ワーク・エンゲイジメントを高める仕事の資源にあたる。",
     "correctAnswer": false,
     "exp": "ワーク・エンゲイジメントは、活力・熱意・没頭で特徴づけられる、仕事に関連するポジティブで充実した心理状態。強迫的に働くワーカホリズムとは異なる。仕事の要求度－資源モデルでは、仕事の資源（支援・裁量・成長の機会など）によって高まるとされる。",
-    "publicPath": "q/ichimon/s/ichi-1004/index.html"
+    "publicPath": "q/ichimon/s/ichi-1004/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1005",
@@ -8038,7 +9042,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "同じストレッサーに対してはすべての人が同じ反応を示すため、ストレス反応に個人差は存在しない。",
     "correctAnswer": false,
     "exp": "ストレス反応の個人差は、認知的評価・コーピング・社会的支援・性格や経験などの違いによって生じる。社会的支援はストレス反応を和らげる方向に働く。タイプA行動パターンは虚血性心疾患のリスクが高いとされる。",
-    "publicPath": "q/ichimon/s/ichi-1005/index.html"
+    "publicPath": "q/ichimon/s/ichi-1005/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1006",
@@ -8046,7 +9051,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "認知的評価・コーピングスキル・社会的支援・個人的要因（性格・経験等）の違いによって、ストレス反応に個人差が生じる。",
     "correctAnswer": true,
     "exp": "ストレス反応の個人差は、認知的評価・コーピング・社会的支援・性格や経験などの違いによって生じる。社会的支援はストレス反応を和らげる方向に働く。タイプA行動パターンは虚血性心疾患のリスクが高いとされる。",
-    "publicPath": "q/ichimon/s/ichi-1006/index.html"
+    "publicPath": "q/ichimon/s/ichi-1006/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1007",
@@ -8054,7 +9060,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "タイプA行動パターンの人は、ストレスを感じにくく、心疾患のリスクが低いとされる。",
     "correctAnswer": false,
     "exp": "ストレス反応の個人差は、認知的評価・コーピング・社会的支援・性格や経験などの違いによって生じる。社会的支援はストレス反応を和らげる方向に働く。タイプA行動パターンは虚血性心疾患のリスクが高いとされる。",
-    "publicPath": "q/ichimon/s/ichi-1007/index.html"
+    "publicPath": "q/ichimon/s/ichi-1007/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1008",
@@ -8062,7 +9069,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "周囲からの社会的支援は、ストレス反応を和らげる方向に働く。",
     "correctAnswer": true,
     "exp": "ストレス反応の個人差は、認知的評価・コーピング・社会的支援・性格や経験などの違いによって生じる。社会的支援はストレス反応を和らげる方向に働く。タイプA行動パターンは虚血性心疾患のリスクが高いとされる。",
-    "publicPath": "q/ichimon/s/ichi-1008/index.html"
+    "publicPath": "q/ichimon/s/ichi-1008/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1009",
@@ -8070,7 +9078,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "睡眠障害はメンタルヘルス不調の結果としてのみ生じ、その原因にはなりえない。",
     "correctAnswer": false,
     "exp": "睡眠障害はうつ病などの症状として現れ、慢性的な睡眠不足はメンタルヘルス不調のリスクを高める。うつ病では入眠困難のほか早朝覚醒がみられる。寝酒は眠りを浅くし、休日の寝だめは睡眠のリズムを乱す。",
-    "publicPath": "q/ichimon/s/ichi-1009/index.html"
+    "publicPath": "q/ichimon/s/ichi-1009/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1010",
@@ -8078,7 +9087,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "睡眠障害はうつ病等のメンタルヘルス不調の症状でもあり、睡眠不足がメンタルヘルス不調のリスクを高める双方向の関係がある。",
     "correctAnswer": true,
     "exp": "睡眠障害はうつ病などの症状として現れ、慢性的な睡眠不足はメンタルヘルス不調のリスクを高める。うつ病では入眠困難のほか早朝覚醒がみられる。寝酒は眠りを浅くし、休日の寝だめは睡眠のリズムを乱す。",
-    "publicPath": "q/ichimon/s/ichi-1010/index.html"
+    "publicPath": "q/ichimon/s/ichi-1010/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1011",
@@ -8086,7 +9096,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "寝る前の飲酒は眠りを深くするため、睡眠障害の改善に有効とされる。",
     "correctAnswer": false,
     "exp": "睡眠障害はうつ病などの症状として現れ、慢性的な睡眠不足はメンタルヘルス不調のリスクを高める。うつ病では入眠困難のほか早朝覚醒がみられる。寝酒は眠りを浅くし、休日の寝だめは睡眠のリズムを乱す。",
-    "publicPath": "q/ichimon/s/ichi-1011/index.html"
+    "publicPath": "q/ichimon/s/ichi-1011/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1012",
@@ -8094,7 +9105,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "うつ病に伴う睡眠障害として、早朝に目が覚めて再び眠れなくなる早朝覚醒がみられることがある。",
     "correctAnswer": true,
     "exp": "睡眠障害はうつ病などの症状として現れ、慢性的な睡眠不足はメンタルヘルス不調のリスクを高める。うつ病では入眠困難のほか早朝覚醒がみられる。寝酒は眠りを浅くし、休日の寝だめは睡眠のリズムを乱す。",
-    "publicPath": "q/ichimon/s/ichi-1012/index.html"
+    "publicPath": "q/ichimon/s/ichi-1012/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1013",
@@ -8102,7 +9114,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「うつ病は誰でもなりうる疾患である」という考え方は、うつ病に対する誤った偏見（スティグマ）にあたる。",
     "correctAnswer": false,
     "exp": "「うつ病は怠けや甘えである」は典型的なスティグマ（偏見）。「誰でもなりうる疾患」「適切な治療で回復できる」「励ましが逆効果の場合がある」は正しい認識で、偏見ではない。スティグマの解消が早期の相談・受診につながる。",
-    "publicPath": "q/ichimon/s/ichi-1013/index.html"
+    "publicPath": "q/ichimon/s/ichi-1013/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1014",
@@ -8110,7 +9123,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「うつ病は怠けや甘えである」という考え方は、うつ病に対する誤った偏見（スティグマ）にあたる。",
     "correctAnswer": true,
     "exp": "「うつ病は怠けや甘えである」は典型的なスティグマ（偏見）。「誰でもなりうる疾患」「適切な治療で回復できる」「励ましが逆効果の場合がある」は正しい認識で、偏見ではない。スティグマの解消が早期の相談・受診につながる。",
-    "publicPath": "q/ichimon/s/ichi-1014/index.html"
+    "publicPath": "q/ichimon/s/ichi-1014/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1015",
@@ -8118,7 +9132,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「うつ病は適切な治療で回復できる」という考え方は、うつ病に対する誤った偏見（スティグマ）にあたる。",
     "correctAnswer": false,
     "exp": "「うつ病は怠けや甘えである」は典型的なスティグマ（偏見）。「誰でもなりうる疾患」「適切な治療で回復できる」「励ましが逆効果の場合がある」は正しい認識で、偏見ではない。スティグマの解消が早期の相談・受診につながる。",
-    "publicPath": "q/ichimon/s/ichi-1015/index.html"
+    "publicPath": "q/ichimon/s/ichi-1015/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1016",
@@ -8126,7 +9141,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "「うつ病の人に励ましの言葉をかけることは逆効果の場合がある」という考え方は、うつ病に対する誤った偏見（スティグマ）にあたる。",
     "correctAnswer": false,
     "exp": "「うつ病は怠けや甘えである」は典型的なスティグマ（偏見）。「誰でもなりうる疾患」「適切な治療で回復できる」「励ましが逆効果の場合がある」は正しい認識で、偏見ではない。スティグマの解消が早期の相談・受診につながる。",
-    "publicPath": "q/ichimon/s/ichi-1016/index.html"
+    "publicPath": "q/ichimon/s/ichi-1016/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1017",
@@ -8134,7 +9150,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害者保健福祉手帳は1〜3級に分類され、1級が最も障害が重い。",
     "correctAnswer": true,
     "exp": "精神障害者保健福祉手帳は本人が申請し、医師の診断書などをもとに都道府県知事（指定都市の市長）が等級を判定する。等級は1〜3級で1級が最も重い。等級にかかわらず法定雇用率の算定対象となる。",
-    "publicPath": "q/ichimon/s/ichi-1017/index.html"
+    "publicPath": "q/ichimon/s/ichi-1017/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1018",
@@ -8142,7 +9159,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害者保健福祉手帳は、障害の程度により1級から5級までに分類される。",
     "correctAnswer": false,
     "exp": "精神障害者保健福祉手帳は本人が申請し、医師の診断書などをもとに都道府県知事（指定都市の市長）が等級を判定する。等級は1〜3級で1級が最も重い。等級にかかわらず法定雇用率の算定対象となる。",
-    "publicPath": "q/ichimon/s/ichi-1018/index.html"
+    "publicPath": "q/ichimon/s/ichi-1018/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1019",
@@ -8150,7 +9168,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害者保健福祉手帳を持つ労働者でも、等級が3級であれば法定雇用率の算定対象とはならない。",
     "correctAnswer": false,
     "exp": "精神障害者保健福祉手帳は本人が申請し、医師の診断書などをもとに都道府県知事（指定都市の市長）が等級を判定する。等級は1〜3級で1級が最も重い。等級にかかわらず法定雇用率の算定対象となる。",
-    "publicPath": "q/ichimon/s/ichi-1019/index.html"
+    "publicPath": "q/ichimon/s/ichi-1019/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1020",
@@ -8158,7 +9177,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神障害者保健福祉手帳の等級は、医師の診断書などをもとに、都道府県知事（指定都市の市長）が判定する。",
     "correctAnswer": true,
     "exp": "精神障害者保健福祉手帳は本人が申請し、医師の診断書などをもとに都道府県知事（指定都市の市長）が等級を判定する。等級は1〜3級で1級が最も重い。等級にかかわらず法定雇用率の算定対象となる。",
-    "publicPath": "q/ichimon/s/ichi-1020/index.html"
+    "publicPath": "q/ichimon/s/ichi-1020/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1021",
@@ -8166,7 +9186,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場の物理的環境（騒音・照明・温度・有害物質等）はメンタルヘルスとは無関係である。",
     "correctAnswer": false,
     "exp": "騒音、照明、温度、換気、有害物質などの物理的環境は、身体と心理の両面に影響するストレス要因で、職場環境改善の対象となる。職業性ストレス簡易調査票にも、作業環境に関する項目が含まれている。",
-    "publicPath": "q/ichimon/s/ichi-1021/index.html"
+    "publicPath": "q/ichimon/s/ichi-1021/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1022",
@@ -8174,7 +9195,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "騒音・過度な照明・不適切な温湿度・有害物質曝露等はストレス要因となり、身体的・精神的健康に影響を与える。",
     "correctAnswer": true,
     "exp": "騒音、照明、温度、換気、有害物質などの物理的環境は、身体と心理の両面に影響するストレス要因で、職場環境改善の対象となる。職業性ストレス簡易調査票にも、作業環境に関する項目が含まれている。",
-    "publicPath": "q/ichimon/s/ichi-1022/index.html"
+    "publicPath": "q/ichimon/s/ichi-1022/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1023",
@@ -8182,7 +9204,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "物理的環境の改善はコストがかかるため、メンタルヘルス対策には含めない。",
     "correctAnswer": false,
     "exp": "騒音、照明、温度、換気、有害物質などの物理的環境は、身体と心理の両面に影響するストレス要因で、職場環境改善の対象となる。職業性ストレス簡易調査票にも、作業環境に関する項目が含まれている。",
-    "publicPath": "q/ichimon/s/ichi-1023/index.html"
+    "publicPath": "q/ichimon/s/ichi-1023/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1024",
@@ -8190,7 +9213,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職業性ストレス簡易調査票には、騒音・照明・温度・換気などの作業環境に関する項目が含まれている。",
     "correctAnswer": true,
     "exp": "騒音、照明、温度、換気、有害物質などの物理的環境は、身体と心理の両面に影響するストレス要因で、職場環境改善の対象となる。職業性ストレス簡易調査票にも、作業環境に関する項目が含まれている。",
-    "publicPath": "q/ichimon/s/ichi-1024/index.html"
+    "publicPath": "q/ichimon/s/ichi-1024/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1025",
@@ -8198,7 +9222,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの数値データの集計は、職場環境等の把握における「定性的評価」の方法である。",
     "correctAnswer": false,
     "exp": "職場環境等の把握には、職場巡視・インタビュー・面談などの定性的な方法と、ストレスチェックの集団分析や欠勤率・離職率の集計などの定量的な方法がある。両者を組み合わせることで多面的に把握できる。",
-    "publicPath": "q/ichimon/s/ichi-1025/index.html"
+    "publicPath": "q/ichimon/s/ichi-1025/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1026",
@@ -8206,7 +9231,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場巡視・グループインタビュー・個別面談などによる質的な情報収集は、職場環境等の把握における「定性的評価」の方法である。",
     "correctAnswer": true,
     "exp": "職場環境等の把握には、職場巡視・インタビュー・面談などの定性的な方法と、ストレスチェックの集団分析や欠勤率・離職率の集計などの定量的な方法がある。両者を組み合わせることで多面的に把握できる。",
-    "publicPath": "q/ichimon/s/ichi-1026/index.html"
+    "publicPath": "q/ichimon/s/ichi-1026/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1027",
@@ -8214,7 +9240,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "欠勤率・離職率の統計分析は、職場環境等の把握における「定性的評価」の方法である。",
     "correctAnswer": false,
     "exp": "職場環境等の把握には、職場巡視・インタビュー・面談などの定性的な方法と、ストレスチェックの集団分析や欠勤率・離職率の集計などの定量的な方法がある。両者を組み合わせることで多面的に把握できる。",
-    "publicPath": "q/ichimon/s/ichi-1027/index.html"
+    "publicPath": "q/ichimon/s/ichi-1027/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1028",
@@ -8222,7 +9249,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境等の把握では、定量的な方法と定性的な方法を組み合わせることで、職場の状況を多面的に把握できる。",
     "correctAnswer": true,
     "exp": "職場環境等の把握には、職場巡視・インタビュー・面談などの定性的な方法と、ストレスチェックの集団分析や欠勤率・離職率の集計などの定量的な方法がある。両者を組み合わせることで多面的に把握できる。",
-    "publicPath": "q/ichimon/s/ichi-1028/index.html"
+    "publicPath": "q/ichimon/s/ichi-1028/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1029",
@@ -8230,7 +9258,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "コミュニケーションの改善は生産性には無関係だが、職場の雰囲気をよくする効果がある。",
     "correctAnswer": false,
     "exp": "日頃からの双方向のコミュニケーションは、上司や同僚の支援を高め、ストレスの緩和や不調の早期発見、相談しやすい職場づくりにつながる。部下との面談は、問題が起きたときだけでなく定期的に行う。",
-    "publicPath": "q/ichimon/s/ichi-1029/index.html"
+    "publicPath": "q/ichimon/s/ichi-1029/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1030",
@@ -8238,7 +9267,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "良好なコミュニケーションは社会的支援を高め、ストレス緩和・早期発見・職場の一体感醸成につながる。",
     "correctAnswer": true,
     "exp": "日頃からの双方向のコミュニケーションは、上司や同僚の支援を高め、ストレスの緩和や不調の早期発見、相談しやすい職場づくりにつながる。部下との面談は、問題が起きたときだけでなく定期的に行う。",
-    "publicPath": "q/ichimon/s/ichi-1030/index.html"
+    "publicPath": "q/ichimon/s/ichi-1030/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1031",
@@ -8246,7 +9276,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "コミュニケーション改善は個人の努力であり、組織としての取り組みは不要である。",
     "correctAnswer": false,
     "exp": "日頃からの双方向のコミュニケーションは、上司や同僚の支援を高め、ストレスの緩和や不調の早期発見、相談しやすい職場づくりにつながる。部下との面談は、問題が起きたときだけでなく定期的に行う。",
-    "publicPath": "q/ichimon/s/ichi-1031/index.html"
+    "publicPath": "q/ichimon/s/ichi-1031/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1032",
@@ -8254,7 +9285,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下との定期的な面談など、日常的な双方向のコミュニケーションは、相談しやすい職場づくりにつながる。",
     "correctAnswer": true,
     "exp": "日頃からの双方向のコミュニケーションは、上司や同僚の支援を高め、ストレスの緩和や不調の早期発見、相談しやすい職場づくりにつながる。部下との面談は、問題が起きたときだけでなく定期的に行う。",
-    "publicPath": "q/ichimon/s/ichi-1032/index.html"
+    "publicPath": "q/ichimon/s/ichi-1032/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1033",
@@ -8262,7 +9294,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "一度大きな改善を行えば、その後の継続的な取り組みは不要である。",
     "correctAnswer": false,
     "exp": "職場環境改善は、評価の結果を次の計画に反映させ、PDCAサイクルを繰り返して継続的に進める。評価には職場の管理監督者や労働者も関与し、効果のあった取り組みは継続する。",
-    "publicPath": "q/ichimon/s/ichi-1033/index.html"
+    "publicPath": "q/ichimon/s/ichi-1033/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1034",
@@ -8270,7 +9303,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善では、PDCAサイクルを繰り返し、評価結果を次の計画に反映させながら継続的に改善する。",
     "correctAnswer": true,
     "exp": "職場環境改善は、評価の結果を次の計画に反映させ、PDCAサイクルを繰り返して継続的に進める。評価には職場の管理監督者や労働者も関与し、効果のあった取り組みは継続する。",
-    "publicPath": "q/ichimon/s/ichi-1034/index.html"
+    "publicPath": "q/ichimon/s/ichi-1034/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1035",
@@ -8278,7 +9312,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善の改善策は、新鮮さを保つため、毎年すべて入れ替える。",
     "correctAnswer": false,
     "exp": "職場環境改善は、評価の結果を次の計画に反映させ、PDCAサイクルを繰り返して継続的に進める。評価には職場の管理監督者や労働者も関与し、効果のあった取り組みは継続する。",
-    "publicPath": "q/ichimon/s/ichi-1035/index.html"
+    "publicPath": "q/ichimon/s/ichi-1035/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1036",
@@ -8286,7 +9321,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場環境改善の評価には、職場の管理監督者や労働者も関与することが望ましい。",
     "correctAnswer": true,
     "exp": "職場環境改善は、評価の結果を次の計画に反映させ、PDCAサイクルを繰り返して継続的に進める。評価には職場の管理監督者や労働者も関与し、効果のあった取り組みは継続する。",
-    "publicPath": "q/ichimon/s/ichi-1036/index.html"
+    "publicPath": "q/ichimon/s/ichi-1036/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1037",
@@ -8294,7 +9330,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下のストレスサインに気づいたら、「最近うつ病になってない？病院に行った方がいい」と直接伝える。",
     "correctAnswer": false,
     "exp": "ストレスサインに気づいたときの最初の声かけは、観察した事実をもとに自然に行う。周囲に人がいない場所を選ぶなどプライバシーに配慮し、本人の相談を待たずに声をかける。管理監督者が病名を挙げることは避ける。",
-    "publicPath": "q/ichimon/s/ichi-1037/index.html"
+    "publicPath": "q/ichimon/s/ichi-1037/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1038",
@@ -8302,7 +9339,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下のストレスサインに気づいたら、「最近少し元気がないように見えるけど、何かあった？」と自然に声をかける。",
     "correctAnswer": true,
     "exp": "ストレスサインに気づいたときの最初の声かけは、観察した事実をもとに自然に行う。周囲に人がいない場所を選ぶなどプライバシーに配慮し、本人の相談を待たずに声をかける。管理監督者が病名を挙げることは避ける。",
-    "publicPath": "q/ichimon/s/ichi-1038/index.html"
+    "publicPath": "q/ichimon/s/ichi-1038/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1039",
@@ -8310,7 +9348,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下のストレスサインに気づいても、本人から相談があるまで何もしない。",
     "correctAnswer": false,
     "exp": "ストレスサインに気づいたときの最初の声かけは、観察した事実をもとに自然に行う。周囲に人がいない場所を選ぶなどプライバシーに配慮し、本人の相談を待たずに声をかける。管理監督者が病名を挙げることは避ける。",
-    "publicPath": "q/ichimon/s/ichi-1039/index.html"
+    "publicPath": "q/ichimon/s/ichi-1039/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1040",
@@ -8318,7 +9357,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下に声をかけるときは、周囲に人がいない場所を選ぶなど、プライバシーに配慮する。",
     "correctAnswer": true,
     "exp": "ストレスサインに気づいたときの最初の声かけは、観察した事実をもとに自然に行う。周囲に人がいない場所を選ぶなどプライバシーに配慮し、本人の相談を待たずに声をかける。管理監督者が病名を挙げることは避ける。",
-    "publicPath": "q/ichimon/s/ichi-1040/index.html"
+    "publicPath": "q/ichimon/s/ichi-1040/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1041",
@@ -8326,7 +9366,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "上司からの過度な叱責・批判が続いている状況は、職場の人間関係によるストレス要因となる。",
     "correctAnswer": true,
     "exp": "同僚からの無視や孤立、上司からの人格を否定する叱責、顧客からの著しい迷惑行為などはストレス要因となる。上司や同僚からの支援は、職業性ストレス簡易調査票では「周囲のサポート」の領域で評価され、ストレスを和らげる要因である。",
-    "publicPath": "q/ichimon/s/ichi-1041/index.html"
+    "publicPath": "q/ichimon/s/ichi-1041/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1042",
@@ -8334,7 +9375,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "同僚との良好な協力関係のもとで業務が進んでいる状況は、職場の人間関係によるストレス要因となる。",
     "correctAnswer": false,
     "exp": "同僚からの無視や孤立、上司からの人格を否定する叱責、顧客からの著しい迷惑行為などはストレス要因となる。上司や同僚からの支援は、職業性ストレス簡易調査票では「周囲のサポート」の領域で評価され、ストレスを和らげる要因である。",
-    "publicPath": "q/ichimon/s/ichi-1042/index.html"
+    "publicPath": "q/ichimon/s/ichi-1042/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1043",
@@ -8342,7 +9384,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "同僚から無視され、孤立させられている状況は、職場の人間関係によるストレス要因となる。",
     "correctAnswer": true,
     "exp": "同僚からの無視や孤立、上司からの人格を否定する叱責、顧客からの著しい迷惑行為などはストレス要因となる。上司や同僚からの支援は、職業性ストレス簡易調査票では「周囲のサポート」の領域で評価され、ストレスを和らげる要因である。",
-    "publicPath": "q/ichimon/s/ichi-1043/index.html"
+    "publicPath": "q/ichimon/s/ichi-1043/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1044",
@@ -8350,7 +9393,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "上司や同僚からの支援は、職業性ストレス簡易調査票では「仕事のストレス要因」の領域に含まれる。",
     "correctAnswer": false,
     "exp": "同僚からの無視や孤立、上司からの人格を否定する叱責、顧客からの著しい迷惑行為などはストレス要因となる。上司や同僚からの支援は、職業性ストレス簡易調査票では「周囲のサポート」の領域で評価され、ストレスを和らげる要因である。",
-    "publicPath": "q/ichimon/s/ichi-1044/index.html"
+    "publicPath": "q/ichimon/s/ichi-1044/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1045",
@@ -8358,7 +9402,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過度な飲酒・喫煙・過食は、職場でも活用できるリラクセーション法である。",
     "correctAnswer": false,
     "exp": "リラクセーション法には、呼吸法、自律訓練法、漸進的筋弛緩法、マインドフルネスなどがある。呼吸法では腹式呼吸で息をゆっくり長く吐く。日頃から練習しておき、効果は心身の両面に現れる。",
-    "publicPath": "q/ichimon/s/ichi-1045/index.html"
+    "publicPath": "q/ichimon/s/ichi-1045/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1046",
@@ -8366,7 +9411,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "自律訓練法・漸進的筋弛緩法・呼吸法・マインドフルネスは、職場でも活用できるリラクセーション法である。",
     "correctAnswer": true,
     "exp": "リラクセーション法には、呼吸法、自律訓練法、漸進的筋弛緩法、マインドフルネスなどがある。呼吸法では腹式呼吸で息をゆっくり長く吐く。日頃から練習しておき、効果は心身の両面に現れる。",
-    "publicPath": "q/ichimon/s/ichi-1046/index.html"
+    "publicPath": "q/ichimon/s/ichi-1046/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1047",
@@ -8374,7 +9420,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "長時間のゲームやSNSへの没頭は、職場でも活用できるリラクセーション法である。",
     "correctAnswer": false,
     "exp": "リラクセーション法には、呼吸法、自律訓練法、漸進的筋弛緩法、マインドフルネスなどがある。呼吸法では腹式呼吸で息をゆっくり長く吐く。日頃から練習しておき、効果は心身の両面に現れる。",
-    "publicPath": "q/ichimon/s/ichi-1047/index.html"
+    "publicPath": "q/ichimon/s/ichi-1047/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1048",
@@ -8382,7 +9429,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "呼吸法では、腹式呼吸で息をゆっくりと長く吐くことを意識すると、リラックスしやすい。",
     "correctAnswer": true,
     "exp": "リラクセーション法には、呼吸法、自律訓練法、漸進的筋弛緩法、マインドフルネスなどがある。呼吸法では腹式呼吸で息をゆっくり長く吐く。日頃から練習しておき、効果は心身の両面に現れる。",
-    "publicPath": "q/ichimon/s/ichi-1048/index.html"
+    "publicPath": "q/ichimon/s/ichi-1048/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1049",
@@ -8390,7 +9438,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "特別条項を結べば時間外労働に上限はなく、どれだけでも残業させることができる。",
     "correctAnswer": false,
     "exp": "時間外労働の上限は原則月45時間・年360時間。特別条項を設けても、年720時間以内、休日労働を含めて単月100時間未満・2〜6か月平均80時間以内、月45時間超は年6か月まで。違反には罰則がある。",
-    "publicPath": "q/ichimon/s/ichi-1049/index.html"
+    "publicPath": "q/ichimon/s/ichi-1049/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1050",
@@ -8398,7 +9447,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "特別条項を適用しても、年720時間・月100時間未満・2〜6か月平均80時間以内の上限がある。",
     "correctAnswer": true,
     "exp": "時間外労働の上限は原則月45時間・年360時間。特別条項を設けても、年720時間以内、休日労働を含めて単月100時間未満・2〜6か月平均80時間以内、月45時間超は年6か月まで。違反には罰則がある。",
-    "publicPath": "q/ichimon/s/ichi-1050/index.html"
+    "publicPath": "q/ichimon/s/ichi-1050/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1051",
@@ -8406,7 +9456,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "36協定に特別条項を設ければ、月45時間を超える時間外労働を年に何回でも行わせることができる。",
     "correctAnswer": false,
     "exp": "時間外労働の上限は原則月45時間・年360時間。特別条項を設けても、年720時間以内、休日労働を含めて単月100時間未満・2〜6か月平均80時間以内、月45時間超は年6か月まで。違反には罰則がある。",
-    "publicPath": "q/ichimon/s/ichi-1051/index.html"
+    "publicPath": "q/ichimon/s/ichi-1051/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1052",
@@ -8414,7 +9465,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "時間外労働の上限規制に違反した場合は、罰則の対象となる。",
     "correctAnswer": true,
     "exp": "時間外労働の上限は原則月45時間・年360時間。特別条項を設けても、年720時間以内、休日労働を含めて単月100時間未満・2〜6か月平均80時間以内、月45時間超は年6か月まで。違反には罰則がある。",
-    "publicPath": "q/ichimon/s/ichi-1052/index.html"
+    "publicPath": "q/ichimon/s/ichi-1052/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1053",
@@ -8422,7 +9474,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "評価的サポートとは、業務マニュアルや参考資料を提供することである。",
     "correctAnswer": false,
     "exp": "評価的サポートは、仕事ぶりや成果を適切に評価し、認めたり改善点を伝えたりする支援。業務マニュアルや資料の提供は情報的、業務の代行は道具的、傾聴と共感は情緒的サポートにあたる。",
-    "publicPath": "q/ichimon/s/ichi-1053/index.html"
+    "publicPath": "q/ichimon/s/ichi-1053/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1054",
@@ -8430,7 +9483,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の業務成果を認め、「よくできた」とフィードバックすることは、評価的サポートにあたる。",
     "correctAnswer": true,
     "exp": "評価的サポートは、仕事ぶりや成果を適切に評価し、認めたり改善点を伝えたりする支援。業務マニュアルや資料の提供は情報的、業務の代行は道具的、傾聴と共感は情緒的サポートにあたる。",
-    "publicPath": "q/ichimon/s/ichi-1054/index.html"
+    "publicPath": "q/ichimon/s/ichi-1054/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1055",
@@ -8438,7 +9492,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "評価的サポートとは、業務の一部を代わりに行うことである。",
     "correctAnswer": false,
     "exp": "評価的サポートは、仕事ぶりや成果を適切に評価し、認めたり改善点を伝えたりする支援。業務マニュアルや資料の提供は情報的、業務の代行は道具的、傾聴と共感は情緒的サポートにあたる。",
-    "publicPath": "q/ichimon/s/ichi-1055/index.html"
+    "publicPath": "q/ichimon/s/ichi-1055/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1056",
@@ -8446,7 +9501,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務マニュアルや参考資料を提供することは、情報的サポートにあたる。",
     "correctAnswer": true,
     "exp": "評価的サポートは、仕事ぶりや成果を適切に評価し、認めたり改善点を伝えたりする支援。業務マニュアルや資料の提供は情報的、業務の代行は道具的、傾聴と共感は情緒的サポートにあたる。",
-    "publicPath": "q/ichimon/s/ichi-1056/index.html"
+    "publicPath": "q/ichimon/s/ichi-1056/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1057",
@@ -8454,7 +9510,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "健康情報は通常の個人情報と同様に扱えばよく、特別な保護は不要である。",
     "correctAnswer": false,
     "exp": "要配慮個人情報（病歴、健康診断の結果、ストレスチェックの結果など）を取得するには、法令に基づく場合などを除き本人の同意が必要で、オプトアウトによる第三者提供は認められない。医療機関に限らず一般の事業者にも適用される。",
-    "publicPath": "q/ichimon/s/ichi-1057/index.html"
+    "publicPath": "q/ichimon/s/ichi-1057/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1058",
@@ -8462,7 +9519,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "病歴・健康診断結果・ストレスチェック結果等の健康情報は要配慮個人情報に該当し、取得・利用・提供に特別な配慮が必要である。",
     "correctAnswer": true,
     "exp": "要配慮個人情報（病歴、健康診断の結果、ストレスチェックの結果など）を取得するには、法令に基づく場合などを除き本人の同意が必要で、オプトアウトによる第三者提供は認められない。医療機関に限らず一般の事業者にも適用される。",
-    "publicPath": "q/ichimon/s/ichi-1058/index.html"
+    "publicPath": "q/ichimon/s/ichi-1058/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1059",
@@ -8470,7 +9528,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "要配慮個人情報は、本人の同意を得ずに、オプトアウトの手続きにより第三者に提供することができる。",
     "correctAnswer": false,
     "exp": "要配慮個人情報（病歴、健康診断の結果、ストレスチェックの結果など）を取得するには、法令に基づく場合などを除き本人の同意が必要で、オプトアウトによる第三者提供は認められない。医療機関に限らず一般の事業者にも適用される。",
-    "publicPath": "q/ichimon/s/ichi-1059/index.html"
+    "publicPath": "q/ichimon/s/ichi-1059/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1060",
@@ -8478,7 +9537,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "要配慮個人情報を取得するには、法令に基づく場合などを除き、あらかじめ本人の同意を得る必要がある。",
     "correctAnswer": true,
     "exp": "要配慮個人情報（病歴、健康診断の結果、ストレスチェックの結果など）を取得するには、法令に基づく場合などを除き本人の同意が必要で、オプトアウトによる第三者提供は認められない。医療機関に限らず一般の事業者にも適用される。",
-    "publicPath": "q/ichimon/s/ichi-1060/index.html"
+    "publicPath": "q/ichimon/s/ichi-1060/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1061",
@@ -8486,7 +9546,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者が専門家に相談することは、マネジメント能力の欠如を示すものである。",
     "correctAnswer": false,
     "exp": "管理監督者も一人の労働者として、自分の健康について産業医や保健師に相談することが重要。相談内容は本人の同意なく人事部門に報告されない。相談をためらわない姿勢は、部下が相談しやすい雰囲気づくりにもつながる。",
-    "publicPath": "q/ichimon/s/ichi-1061/index.html"
+    "publicPath": "q/ichimon/s/ichi-1061/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1062",
@@ -8494,7 +9555,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者も労働者のひとりとして、自身の健康について専門家に相談することは適切で重要なことである。",
     "correctAnswer": true,
     "exp": "管理監督者も一人の労働者として、自分の健康について産業医や保健師に相談することが重要。相談内容は本人の同意なく人事部門に報告されない。相談をためらわない姿勢は、部下が相談しやすい雰囲気づくりにもつながる。",
-    "publicPath": "q/ichimon/s/ichi-1062/index.html"
+    "publicPath": "q/ichimon/s/ichi-1062/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1063",
@@ -8502,7 +9564,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者の相談内容は人事部門に自動的に報告される。",
     "correctAnswer": false,
     "exp": "管理監督者も一人の労働者として、自分の健康について産業医や保健師に相談することが重要。相談内容は本人の同意なく人事部門に報告されない。相談をためらわない姿勢は、部下が相談しやすい雰囲気づくりにもつながる。",
-    "publicPath": "q/ichimon/s/ichi-1063/index.html"
+    "publicPath": "q/ichimon/s/ichi-1063/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1064",
@@ -8510,7 +9573,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者が相談をためらわない姿勢は、部下が相談しやすい職場の雰囲気づくりにもつながる。",
     "correctAnswer": true,
     "exp": "管理監督者も一人の労働者として、自分の健康について産業医や保健師に相談することが重要。相談内容は本人の同意なく人事部門に報告されない。相談をためらわない姿勢は、部下が相談しやすい雰囲気づくりにもつながる。",
-    "publicPath": "q/ichimon/s/ichi-1064/index.html"
+    "publicPath": "q/ichimon/s/ichi-1064/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1065",
@@ -8518,7 +9582,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ジョハリの窓は、自分と他者の認識の違いを4つの領域で示したモデルである。",
     "correctAnswer": true,
     "exp": "ジョハリの窓は、開放（自分も他者も知る）、盲点（自分は気づかず他者は知る）、秘密（自分は知り他者は知らない）、未知（自分も他者も知らない）の4領域で示すモデル。自己開示とフィードバックで開放の窓が広がる。",
-    "publicPath": "q/ichimon/s/ichi-1065/index.html"
+    "publicPath": "q/ichimon/s/ichi-1065/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1066",
@@ -8526,7 +9591,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ジョハリの窓は、職場の物理的環境を4象限で評価するツールである。",
     "correctAnswer": false,
     "exp": "ジョハリの窓は、開放（自分も他者も知る）、盲点（自分は気づかず他者は知る）、秘密（自分は知り他者は知らない）、未知（自分も他者も知らない）の4領域で示すモデル。自己開示とフィードバックで開放の窓が広がる。",
-    "publicPath": "q/ichimon/s/ichi-1066/index.html"
+    "publicPath": "q/ichimon/s/ichi-1066/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1067",
@@ -8534,7 +9600,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ジョハリの窓は、ストレスの強度を数値化するモデルである。",
     "correctAnswer": false,
     "exp": "ジョハリの窓は、開放（自分も他者も知る）、盲点（自分は気づかず他者は知る）、秘密（自分は知り他者は知らない）、未知（自分も他者も知らない）の4領域で示すモデル。自己開示とフィードバックで開放の窓が広がる。",
-    "publicPath": "q/ichimon/s/ichi-1067/index.html"
+    "publicPath": "q/ichimon/s/ichi-1067/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1068",
@@ -8542,167 +9609,188 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ジョハリの窓では、他者からのフィードバックを受けることで「盲点の窓」が小さくなる。",
     "correctAnswer": true,
     "exp": "ジョハリの窓は、開放（自分も他者も知る）、盲点（自分は気づかず他者は知る）、秘密（自分は知り他者は知らない）、未知（自分も他者も知らない）の4領域で示すモデル。自己開示とフィードバックで開放の窓が広がる。",
-    "publicPath": "q/ichimon/s/ichi-1068/index.html"
+    "publicPath": "q/ichimon/s/ichi-1068/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1069",
     "field": "limit",
-    "statement": "部下にストレスのサインが一つでも見つかれば、すぐにメンタルヘルス不調と判断できる。",
+    "statement": "自殺予防はプリベンション（事前対応）とインターベンション（危機介入）の2段階からなり、自殺が起きた後の対応は含まれない。",
     "correctAnswer": false,
-    "exp": "遅刻、ミスの増加、表情の変化など、ふだんと比べた変化が複数重なる場合は特に注意が必要。管理監督者は病気かどうかを判断するのではなく、変化の事実をもとに声をかける。",
-    "publicPath": "q/ichimon/s/ichi-1069/index.html"
+    "exp": "自殺予防はプリベンション（事前対応）、インターベンション（危機介入）、ポストベンション（事後対応）の3段階に分類される。職場でのポストベンションでは、正確な情報を時機を逸せず伝え、起こり得る反応を説明し、動揺しているハイリスクの人をケアする。",
+    "publicPath": "q/ichimon/s/ichi-1069/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1070",
     "field": "limit",
-    "statement": "遅刻・ミス増加・表情の変化など複数のサインが重なる場合は、特に注意が必要なシグナルである。",
+    "statement": "職場でのポストベンション（事後対応）では、動揺を最小限にする方法で、正確な情報を時機を逸することなく伝えることが原則とされている。",
     "correctAnswer": true,
-    "exp": "遅刻、ミスの増加、表情の変化など、ふだんと比べた変化が複数重なる場合は特に注意が必要。管理監督者は病気かどうかを判断するのではなく、変化の事実をもとに声をかける。",
-    "publicPath": "q/ichimon/s/ichi-1070/index.html"
+    "exp": "自殺予防はプリベンション（事前対応）、インターベンション（危機介入）、ポストベンション（事後対応）の3段階に分類される。職場でのポストベンションでは、正確な情報を時機を逸せず伝え、起こり得る反応を説明し、動揺しているハイリスクの人をケアする。",
+    "publicPath": "q/ichimon/s/ichi-1070/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1071",
     "field": "limit",
     "statement": "部下の変化に気づいた管理監督者は、病気かどうかを判断するのではなく、変化の事実をもとに声をかける。",
     "correctAnswer": true,
-    "exp": "遅刻、ミスの増加、表情の変化など、ふだんと比べた変化が複数重なる場合は特に注意が必要。管理監督者は病気かどうかを判断するのではなく、変化の事実をもとに声をかける。",
-    "publicPath": "q/ichimon/s/ichi-1071/index.html"
+    "exp": "自殺予防はプリベンション（事前対応）、インターベンション（危機介入）、ポストベンション（事後対応）の3段階に分類される。職場でのポストベンションでは、正確な情報を時機を逸せず伝え、起こり得る反応を説明し、動揺しているハイリスクの人をケアする。",
+    "publicPath": "q/ichimon/s/ichi-1071/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1072",
     "field": "limit",
-    "statement": "1か月以上継続しなければサインとは言えない。",
+    "statement": "職場でのポストベンションでは、動揺を抑えるため、亡くなった同僚について話題にすることを控え、職場には事実を伝えないことが原則とされる。",
     "correctAnswer": false,
-    "exp": "遅刻、ミスの増加、表情の変化など、ふだんと比べた変化が複数重なる場合は特に注意が必要。管理監督者は病気かどうかを判断するのではなく、変化の事実をもとに声をかける。",
-    "publicPath": "q/ichimon/s/ichi-1072/index.html"
+    "exp": "自殺予防はプリベンション（事前対応）、インターベンション（危機介入）、ポストベンション（事後対応）の3段階に分類される。職場でのポストベンションでは、正確な情報を時機を逸せず伝え、起こり得る反応を説明し、動揺しているハイリスクの人をケアする。",
+    "publicPath": "q/ichimon/s/ichi-1072/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1073",
     "field": "limit",
-    "statement": "管理監督者は十分に話を聴けば、どんな問題も解決できる。",
+    "statement": "部下の了解を得ていない段階では、個人が特定されない形であっても、管理監督者が産業保健スタッフ等に事例として相談することは認められない。",
     "correctAnswer": false,
-    "exp": "管理監督者の傾聴には限界があり、専門的な支援が必要なときは速やかに専門家につなぐ。つないだ後も見守りや業務の調整などの関わりは続ける。相談を受けた管理監督者自身の負担も一人で抱え込まない。",
-    "publicPath": "q/ichimon/s/ichi-1073/index.html"
+    "exp": "部下を専門家につなぐ際は、遅刻やミスの増加などの事例性の情報を本人の了解を得て伝える。つないだ後も管理監督者は観察と声かけを続ける。個人が特定されない形であれば、了解前でも事例として相談できる。",
+    "publicPath": "q/ichimon/s/ichi-1073/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1074",
     "field": "limit",
-    "statement": "管理監督者の傾聴には限界があり、専門的な治療・支援が必要な場合は速やかに専門家につなぐことが重要である。",
+    "statement": "部下を産業保健スタッフ等につなぐ際は、遅刻やミスの増加などの事例性の情報を、本人の了解を得て伝えると、専門家が判断しやすい。",
     "correctAnswer": true,
-    "exp": "管理監督者の傾聴には限界があり、専門的な支援が必要なときは速やかに専門家につなぐ。つないだ後も見守りや業務の調整などの関わりは続ける。相談を受けた管理監督者自身の負担も一人で抱え込まない。",
-    "publicPath": "q/ichimon/s/ichi-1074/index.html"
+    "exp": "部下を専門家につなぐ際は、遅刻やミスの増加などの事例性の情報を本人の了解を得て伝える。つないだ後も管理監督者は観察と声かけを続ける。個人が特定されない形であれば、了解前でも事例として相談できる。",
+    "publicPath": "q/ichimon/s/ichi-1074/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1075",
     "field": "limit",
-    "statement": "管理監督者は、話を聴くことの限界を感じたら、その時点で部下との関わりを断つべきである。",
+    "statement": "部下を産業保健スタッフ等につないだ後は、管理監督者は職場での観察や声かけを控える。",
     "correctAnswer": false,
-    "exp": "管理監督者の傾聴には限界があり、専門的な支援が必要なときは速やかに専門家につなぐ。つないだ後も見守りや業務の調整などの関わりは続ける。相談を受けた管理監督者自身の負担も一人で抱え込まない。",
-    "publicPath": "q/ichimon/s/ichi-1075/index.html"
+    "exp": "部下を専門家につなぐ際は、遅刻やミスの増加などの事例性の情報を本人の了解を得て伝える。つないだ後も管理監督者は観察と声かけを続ける。個人が特定されない形であれば、了解前でも事例として相談できる。",
+    "publicPath": "q/ichimon/s/ichi-1075/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1076",
     "field": "limit",
     "statement": "相談を受けた管理監督者自身が強い負担を感じた場合も、一人で抱え込まずに産業保健スタッフに相談する。",
     "correctAnswer": true,
-    "exp": "管理監督者の傾聴には限界があり、専門的な支援が必要なときは速やかに専門家につなぐ。つないだ後も見守りや業務の調整などの関わりは続ける。相談を受けた管理監督者自身の負担も一人で抱え込まない。",
-    "publicPath": "q/ichimon/s/ichi-1076/index.html"
+    "exp": "部下を専門家につなぐ際は、遅刻やミスの増加などの事例性の情報を本人の了解を得て伝える。つないだ後も管理監督者は観察と声かけを続ける。個人が特定されない形であれば、了解前でも事例として相談できる。",
+    "publicPath": "q/ichimon/s/ichi-1076/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1077",
     "field": "limit",
-    "statement": "部下との相談面談は、透明性を確保するため、他の社員が見聞きできる共用の場所で行う。",
+    "statement": "抗うつ薬の効果は、一般に服用を始めた翌日には十分に現れるため、数日たっても効果がなければ中止を検討する。",
     "correctAnswer": false,
-    "exp": "相談の面談は、プライバシーが守られる個室などで行い、日時は本人の都合も聞いて決める。真正面で向き合うより斜めに座るほうが、相手の緊張を和らげやすいとされる。",
-    "publicPath": "q/ichimon/s/ichi-1077/index.html"
+    "exp": "抗うつ薬は効果が十分に現れるまでに数週間程度かかり、飲み始めに吐き気などの副作用が先に出ることがある。うつ病の治療は、休養・薬物療法・精神療法を組み合わせて行われる。",
+    "publicPath": "q/ichimon/s/ichi-1077/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1078",
     "field": "limit",
-    "statement": "部下との相談面談は、プライバシーが確保された個室など、他の人に見聞きされない静かな場所で行う。",
+    "statement": "抗うつ薬では、効果が十分に現れる前の飲み始めの時期に、吐き気などの副作用が先に出ることがある。",
     "correctAnswer": true,
-    "exp": "相談の面談は、プライバシーが守られる個室などで行い、日時は本人の都合も聞いて決める。真正面で向き合うより斜めに座るほうが、相手の緊張を和らげやすいとされる。",
-    "publicPath": "q/ichimon/s/ichi-1078/index.html"
+    "exp": "抗うつ薬は効果が十分に現れるまでに数週間程度かかり、飲み始めに吐き気などの副作用が先に出ることがある。うつ病の治療は、休養・薬物療法・精神療法を組み合わせて行われる。",
+    "publicPath": "q/ichimon/s/ichi-1078/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1079",
     "field": "limit",
-    "statement": "部下との相談は、業務中に立ち話で短時間に済ませる。",
+    "statement": "うつ病の精神療法は、薬物療法の効果がみられない場合に限って行われ、薬物療法と併用されることはない。",
     "correctAnswer": false,
-    "exp": "相談の面談は、プライバシーが守られる個室などで行い、日時は本人の都合も聞いて決める。真正面で向き合うより斜めに座るほうが、相手の緊張を和らげやすいとされる。",
-    "publicPath": "q/ichimon/s/ichi-1079/index.html"
+    "exp": "抗うつ薬は効果が十分に現れるまでに数週間程度かかり、飲み始めに吐き気などの副作用が先に出ることがある。うつ病の治療は、休養・薬物療法・精神療法を組み合わせて行われる。",
+    "publicPath": "q/ichimon/s/ichi-1079/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1080",
     "field": "limit",
     "statement": "面談では、真正面で向き合うより斜めに座るほうが、相手の緊張を和らげやすいとされる。",
     "correctAnswer": true,
-    "exp": "相談の面談は、プライバシーが守られる個室などで行い、日時は本人の都合も聞いて決める。真正面で向き合うより斜めに座るほうが、相手の緊張を和らげやすいとされる。",
-    "publicPath": "q/ichimon/s/ichi-1080/index.html"
+    "exp": "抗うつ薬は効果が十分に現れるまでに数週間程度かかり、飲み始めに吐き気などの副作用が先に出ることがある。うつ病の治療は、休養・薬物療法・精神療法を組み合わせて行われる。",
+    "publicPath": "q/ichimon/s/ichi-1080/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1081",
     "field": "limit",
-    "statement": "自殺の危険が迫った危機の場面では、まず本人の自殺念慮の原因を徹底的に分析し、根本的な解決策を示す。",
+    "statement": "危機介入では、自殺を考えているかを尋ねることはよいが、自殺の方法や時期などの具体的な計画まで確かめることは避けるべきである。",
     "correctAnswer": false,
-    "exp": "危機介入では、本人を一人にしない、危険な物から遠ざけるなど安全の確保を最優先し、速やかに産業医や専門家、必要に応じて救急に連絡する。原因の分析はその場で行うことではない。",
-    "publicPath": "q/ichimon/s/ichi-1081/index.html"
+    "exp": "危機介入では、本人を一人にせず、危険な物を遠ざけるなどして安全を確保し、家族や専門家と連携する。危険の程度を判断するため、方法や時期などの具体的な計画を確かめることも重要。急に落ち着いた様子にも注意する。",
+    "publicPath": "q/ichimon/s/ichi-1081/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1082",
     "field": "limit",
-    "statement": "自殺の危険が迫った危機の場面では、本人の安全確保（一人にしない、安全な場所へ移る）を最優先し、速やかに産業医・専門家・救急に連絡する。",
+    "statement": "自殺の危険の程度を判断するうえで、自殺の方法や時期を具体的に考えているかを確かめることは重要とされる。",
     "correctAnswer": true,
-    "exp": "危機介入では、本人を一人にしない、危険な物から遠ざけるなど安全の確保を最優先し、速やかに産業医や専門家、必要に応じて救急に連絡する。原因の分析はその場で行うことではない。",
-    "publicPath": "q/ichimon/s/ichi-1082/index.html"
+    "exp": "危機介入では、本人を一人にせず、危険な物を遠ざけるなどして安全を確保し、家族や専門家と連携する。危険の程度を判断するため、方法や時期などの具体的な計画を確かめることも重要。急に落ち着いた様子にも注意する。",
+    "publicPath": "q/ichimon/s/ichi-1082/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1083",
     "field": "limit",
-    "statement": "自殺の危険が迫った危機の場面でも、本人が「大丈夫」と言えば、それ以上の介入は不要である。",
+    "statement": "思い悩んでいた部下が急に落ち着いた様子を見せた場合は、危機を脱したと判断して見守りを終えてよい。",
     "correctAnswer": false,
-    "exp": "危機介入では、本人を一人にしない、危険な物から遠ざけるなど安全の確保を最優先し、速やかに産業医や専門家、必要に応じて救急に連絡する。原因の分析はその場で行うことではない。",
-    "publicPath": "q/ichimon/s/ichi-1083/index.html"
+    "exp": "危機介入では、本人を一人にせず、危険な物を遠ざけるなどして安全を確保し、家族や専門家と連携する。危険の程度を判断するため、方法や時期などの具体的な計画を確かめることも重要。急に落ち着いた様子にも注意する。",
+    "publicPath": "q/ichimon/s/ichi-1083/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1084",
     "field": "limit",
     "statement": "危機介入では、本人を一人にせず、危険な物から遠ざけるなど、安全の確保を図る。",
     "correctAnswer": true,
-    "exp": "危機介入では、本人を一人にしない、危険な物から遠ざけるなど安全の確保を最優先し、速やかに産業医や専門家、必要に応じて救急に連絡する。原因の分析はその場で行うことではない。",
-    "publicPath": "q/ichimon/s/ichi-1084/index.html"
+    "exp": "危機介入では、本人を一人にせず、危険な物を遠ざけるなどして安全を確保し、家族や専門家と連携する。危険の程度を判断するため、方法や時期などの具体的な計画を確かめることも重要。急に落ち着いた様子にも注意する。",
+    "publicPath": "q/ichimon/s/ichi-1084/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1085",
     "field": "limit",
-    "statement": "かかりつけ医は精神疾患の専門家であるため、精神科より適切な治療ができる。",
+    "statement": "地域産業保健センターは、常時50人以上の事業場を対象に、選任義務のある産業医の業務を代行するサービスを提供している。",
     "correctAnswer": false,
-    "exp": "精神科や心療内科への受診に抵抗がある場合、まず身近なかかりつけ医に相談すると受診のハードルが下がる。かかりつけ医は専門医ではないが、必要に応じて精神科や心療内科を紹介できる。",
-    "publicPath": "q/ichimon/s/ichi-1085/index.html"
+    "exp": "地域障害者職業センターは休職中の労働者のリワーク支援を行う。地域産業保健センターは主に50人未満の小規模事業場が対象。精神保健福祉センターは心の健康相談にも応じる。",
+    "publicPath": "q/ichimon/s/ichi-1085/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1086",
     "field": "limit",
-    "statement": "精神科や心療内科の受診に抵抗がある場合、まずかかりつけ医に相談することで受診しやすくなる。",
+    "statement": "地域障害者職業センターでは、うつ病などで休職している労働者を対象に、職場復帰支援（リワーク支援）を行っている。",
     "correctAnswer": true,
-    "exp": "精神科や心療内科への受診に抵抗がある場合、まず身近なかかりつけ医に相談すると受診のハードルが下がる。かかりつけ医は専門医ではないが、必要に応じて精神科や心療内科を紹介できる。",
-    "publicPath": "q/ichimon/s/ichi-1086/index.html"
+    "exp": "地域障害者職業センターは休職中の労働者のリワーク支援を行う。地域産業保健センターは主に50人未満の小規模事業場が対象。精神保健福祉センターは心の健康相談にも応じる。",
+    "publicPath": "q/ichimon/s/ichi-1086/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1087",
     "field": "limit",
-    "statement": "かかりつけ医への相談は無意味であり、最初から精神科を受診すべきである。",
+    "statement": "精神保健福祉センターは、産業保健スタッフ向けの研修を主な業務としており、労働者個人からの心の健康相談には応じていない。",
     "correctAnswer": false,
-    "exp": "精神科や心療内科への受診に抵抗がある場合、まず身近なかかりつけ医に相談すると受診のハードルが下がる。かかりつけ医は専門医ではないが、必要に応じて精神科や心療内科を紹介できる。",
-    "publicPath": "q/ichimon/s/ichi-1087/index.html"
+    "exp": "地域障害者職業センターは休職中の労働者のリワーク支援を行う。地域産業保健センターは主に50人未満の小規模事業場が対象。精神保健福祉センターは心の健康相談にも応じる。",
+    "publicPath": "q/ichimon/s/ichi-1087/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1088",
     "field": "limit",
     "statement": "かかりつけ医から、必要に応じて精神科や心療内科を紹介してもらうことができる。",
     "correctAnswer": true,
-    "exp": "精神科や心療内科への受診に抵抗がある場合、まず身近なかかりつけ医に相談すると受診のハードルが下がる。かかりつけ医は専門医ではないが、必要に応じて精神科や心療内科を紹介できる。",
-    "publicPath": "q/ichimon/s/ichi-1088/index.html"
+    "exp": "地域障害者職業センターは休職中の労働者のリワーク支援を行う。地域産業保健センターは主に50人未満の小規模事業場が対象。精神保健福祉センターは心の健康相談にも応じる。",
+    "publicPath": "q/ichimon/s/ichi-1088/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1089",
@@ -8710,7 +9798,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業保健スタッフは事業者から求められた場合、すべての相談内容を報告する義務がある。",
     "correctAnswer": false,
     "exp": "産業保健スタッフは守秘義務を負い、相談内容を本人の同意なく事業者や管理監督者を含む第三者に提供することは原則として禁止される。健康診断・面接指導・ストレスチェックの実施の事務に従事した者には、労働安全衛生法で守秘義務が課されている。",
-    "publicPath": "q/ichimon/s/ichi-1089/index.html"
+    "publicPath": "q/ichimon/s/ichi-1089/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1090",
@@ -8718,7 +9807,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業保健スタッフには職業上の守秘義務があり、相談内容を本人の同意なく第三者に提供することは原則禁止される。",
     "correctAnswer": true,
     "exp": "産業保健スタッフは守秘義務を負い、相談内容を本人の同意なく事業者や管理監督者を含む第三者に提供することは原則として禁止される。健康診断・面接指導・ストレスチェックの実施の事務に従事した者には、労働安全衛生法で守秘義務が課されている。",
-    "publicPath": "q/ichimon/s/ichi-1090/index.html"
+    "publicPath": "q/ichimon/s/ichi-1090/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1091",
@@ -8726,7 +9816,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "産業保健スタッフの守秘義務は管理監督者からの問い合わせには適用されない。",
     "correctAnswer": false,
     "exp": "産業保健スタッフは守秘義務を負い、相談内容を本人の同意なく事業者や管理監督者を含む第三者に提供することは原則として禁止される。健康診断・面接指導・ストレスチェックの実施の事務に従事した者には、労働安全衛生法で守秘義務が課されている。",
-    "publicPath": "q/ichimon/s/ichi-1091/index.html"
+    "publicPath": "q/ichimon/s/ichi-1091/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1092",
@@ -8734,7 +9825,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックや面接指導の実施の事務に従事した者には、労働安全衛生法により守秘義務が課されている。",
     "correctAnswer": true,
     "exp": "産業保健スタッフは守秘義務を負い、相談内容を本人の同意なく事業者や管理監督者を含む第三者に提供することは原則として禁止される。健康診断・面接指導・ストレスチェックの実施の事務に従事した者には、労働安全衛生法で守秘義務が課されている。",
-    "publicPath": "q/ichimon/s/ichi-1092/index.html"
+    "publicPath": "q/ichimon/s/ichi-1092/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1093",
@@ -8742,7 +9834,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "外部EAPは事業場内のスタッフが提供するサービスである。",
     "correctAnswer": false,
     "exp": "外部EAPは、事業場外の専門機関が提供し、社内に知られずに相談しやすい。費用は通常事業者が負担し、診断や処方は行わない。導入の際は、事業場内の産業保健スタッフとの連携の方法を決めておく。",
-    "publicPath": "q/ichimon/s/ichi-1093/index.html"
+    "publicPath": "q/ichimon/s/ichi-1093/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1094",
@@ -8750,7 +9843,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "外部EAPは事業場外の専門機関が提供し、社内に知られずに相談できる匿名性の高さが利点のひとつである。",
     "correctAnswer": true,
     "exp": "外部EAPは、事業場外の専門機関が提供し、社内に知られずに相談しやすい。費用は通常事業者が負担し、診断や処方は行わない。導入の際は、事業場内の産業保健スタッフとの連携の方法を決めておく。",
-    "publicPath": "q/ichimon/s/ichi-1094/index.html"
+    "publicPath": "q/ichimon/s/ichi-1094/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1095",
@@ -8758,7 +9852,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "外部EAPを導入する際は、事業場内の産業保健スタッフとの連携の方法を決めておくことが望ましい。",
     "correctAnswer": true,
     "exp": "外部EAPは、事業場外の専門機関が提供し、社内に知られずに相談しやすい。費用は通常事業者が負担し、診断や処方は行わない。導入の際は、事業場内の産業保健スタッフとの連携の方法を決めておく。",
-    "publicPath": "q/ichimon/s/ichi-1095/index.html"
+    "publicPath": "q/ichimon/s/ichi-1095/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1096",
@@ -8766,7 +9861,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "外部EAPの費用は全額労働者本人が負担する。",
     "correctAnswer": false,
     "exp": "外部EAPは、事業場外の専門機関が提供し、社内に知られずに相談しやすい。費用は通常事業者が負担し、診断や処方は行わない。導入の際は、事業場内の産業保健スタッフとの連携の方法を決めておく。",
-    "publicPath": "q/ichimon/s/ichi-1096/index.html"
+    "publicPath": "q/ichimon/s/ichi-1096/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1097",
@@ -8774,7 +9870,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "うつ病と診断されたすべての患者に入院治療が必要である。",
     "correctAnswer": false,
     "exp": "精神保健福祉法に基づく入院には、本人の同意による任意入院、指定医の判定と家族等の同意による医療保護入院、指定医2名の診察結果の一致と都道府県知事の権限による措置入院がある。精神科の治療は外来が中心。",
-    "publicPath": "q/ichimon/s/ichi-1097/index.html"
+    "publicPath": "q/ichimon/s/ichi-1097/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1098",
@@ -8782,7 +9879,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神科の入院は、自傷他害の危険が高い場合や、外来治療で改善しない場合などに検討される。",
     "correctAnswer": true,
     "exp": "精神保健福祉法に基づく入院には、本人の同意による任意入院、指定医の判定と家族等の同意による医療保護入院、指定医2名の診察結果の一致と都道府県知事の権限による措置入院がある。精神科の治療は外来が中心。",
-    "publicPath": "q/ichimon/s/ichi-1098/index.html"
+    "publicPath": "q/ichimon/s/ichi-1098/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1099",
@@ -8790,7 +9888,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "精神科の治療はすべて入院が前提である。",
     "correctAnswer": false,
     "exp": "精神保健福祉法に基づく入院には、本人の同意による任意入院、指定医の判定と家族等の同意による医療保護入院、指定医2名の診察結果の一致と都道府県知事の権限による措置入院がある。精神科の治療は外来が中心。",
-    "publicPath": "q/ichimon/s/ichi-1099/index.html"
+    "publicPath": "q/ichimon/s/ichi-1099/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1100",
@@ -8798,71 +9897,80 @@ window.ICHIMONDOU_ROWS = [
     "statement": "措置入院は、自傷他害のおそれがあると2名以上の精神保健指定医の診察結果が一致した場合に、都道府県知事の権限で行われる。",
     "correctAnswer": true,
     "exp": "精神保健福祉法に基づく入院には、本人の同意による任意入院、指定医の判定と家族等の同意による医療保護入院、指定医2名の診察結果の一致と都道府県知事の権限による措置入院がある。精神科の治療は外来が中心。",
-    "publicPath": "q/ichimon/s/ichi-1100/index.html"
+    "publicPath": "q/ichimon/s/ichi-1100/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1101",
     "field": "limit",
-    "statement": "情報提供依頼書は本人の同意なく主治医に送付できる。",
+    "statement": "主治医との連携は、職場復帰を急ぐ必要がある場合には、当該労働者への説明と同意を得る前に開始してよいとされている。",
     "correctAnswer": false,
-    "exp": "主治医への情報提供依頼書は、本人の同意を得たうえで、業務の内容や職場の環境などの情報を添えて送付し、主治医が職場の実情を理解して意見を述べられるようにする。職場復帰支援の手引きに様式例が示されている。",
-    "publicPath": "q/ichimon/s/ichi-1101/index.html"
+    "exp": "手引きでは、主治医との連携は事前に本人に説明して同意を得て行い、主治医には関係者の役割や事業場の規則、本人に求められる業務を十分に説明する。必要な情報は最小限で疾患名は必ずしも含まず、費用負担は事前に主治医と取り決める。",
+    "publicPath": "q/ichimon/s/ichi-1101/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1102",
     "field": "limit",
     "statement": "主治医に情報提供依頼書を送る際は、本人の同意を得たうえで、業務内容や職場環境などの情報を添える。",
     "correctAnswer": true,
-    "exp": "主治医への情報提供依頼書は、本人の同意を得たうえで、業務の内容や職場の環境などの情報を添えて送付し、主治医が職場の実情を理解して意見を述べられるようにする。職場復帰支援の手引きに様式例が示されている。",
-    "publicPath": "q/ichimon/s/ichi-1102/index.html"
+    "exp": "手引きでは、主治医との連携は事前に本人に説明して同意を得て行い、主治医には関係者の役割や事業場の規則、本人に求められる業務を十分に説明する。必要な情報は最小限で疾患名は必ずしも含まず、費用負担は事前に主治医と取り決める。",
+    "publicPath": "q/ichimon/s/ichi-1102/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1103",
     "field": "limit",
-    "statement": "情報提供依頼書の内容は事業者が一方的に決定すればよい。",
+    "statement": "主治医から提供を受ける情報には、職場での配慮を適切に行うため、具体的な疾患名を必ず含めてもらう必要があるとされている。",
     "correctAnswer": false,
-    "exp": "主治医への情報提供依頼書は、本人の同意を得たうえで、業務の内容や職場の環境などの情報を添えて送付し、主治医が職場の実情を理解して意見を述べられるようにする。職場復帰支援の手引きに様式例が示されている。",
-    "publicPath": "q/ichimon/s/ichi-1103/index.html"
+    "exp": "手引きでは、主治医との連携は事前に本人に説明して同意を得て行い、主治医には関係者の役割や事業場の規則、本人に求められる業務を十分に説明する。必要な情報は最小限で疾患名は必ずしも含まず、費用負担は事前に主治医と取り決める。",
+    "publicPath": "q/ichimon/s/ichi-1103/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1104",
     "field": "limit",
-    "statement": "職場復帰支援の手引きには、主治医への情報提供依頼書の様式例が示されている。",
+    "statement": "主治医に情報提供を依頼する場合の費用負担については、事前に主治医との間で取り決めておく必要があるとされている。",
     "correctAnswer": true,
-    "exp": "主治医への情報提供依頼書は、本人の同意を得たうえで、業務の内容や職場の環境などの情報を添えて送付し、主治医が職場の実情を理解して意見を述べられるようにする。職場復帰支援の手引きに様式例が示されている。",
-    "publicPath": "q/ichimon/s/ichi-1104/index.html"
+    "exp": "手引きでは、主治医との連携は事前に本人に説明して同意を得て行い、主治医には関係者の役割や事業場の規則、本人に求められる業務を十分に説明する。必要な情報は最小限で疾患名は必ずしも含まず、費用負担は事前に主治医と取り決める。",
+    "publicPath": "q/ichimon/s/ichi-1104/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1105",
     "field": "limit",
-    "statement": "職場復帰後の業務負荷は、体調の回復を確認しながら、無理のないペースで徐々に通常業務の水準に近づける。",
+    "statement": "職場復帰支援の手引きでは、短時間勤務を採用する場合、始業時間を遅らせるのではなく終業時間を早める方が望ましいとされている。",
     "correctAnswer": true,
-    "exp": "職場復帰後の業務負荷は、体調の回復を確認しながら、無理のないペースで通常業務の水準に近づける。復職の当初は、時間外労働や出張などを制限する就業上の配慮を行うことが多い。移行期間は個別に判断する。",
-    "publicPath": "q/ichimon/s/ichi-1105/index.html"
+    "exp": "手引きでは、職場復帰後は労働負荷を軽減し、段階的に元へ戻す配慮が重要とされる。うつ病などは回復過程にも波がある。短時間勤務は、生活リズムの観点から始業時間を遅らせるより終業時間を早める方が望ましい。",
+    "publicPath": "q/ichimon/s/ichi-1105/index.html",
+    "level": 5
   },
   {
     "id": "ichi-1106",
     "field": "limit",
-    "statement": "職場復帰後は、2週間で完全に通常業務に戻すことが標準的な進め方である。",
+    "statement": "うつ病などは、職場復帰の時点では症状が安定しているため、回復の過程で状態に波がみられることはない。",
     "correctAnswer": false,
-    "exp": "職場復帰後の業務負荷は、体調の回復を確認しながら、無理のないペースで通常業務の水準に近づける。復職の当初は、時間外労働や出張などを制限する就業上の配慮を行うことが多い。移行期間は個別に判断する。",
-    "publicPath": "q/ichimon/s/ichi-1106/index.html"
+    "exp": "手引きでは、職場復帰後は労働負荷を軽減し、段階的に元へ戻す配慮が重要とされる。うつ病などは回復過程にも波がある。短時間勤務は、生活リズムの観点から始業時間を遅らせるより終業時間を早める方が望ましい。",
+    "publicPath": "q/ichimon/s/ichi-1106/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1107",
     "field": "limit",
     "statement": "職場復帰の当初は、時間外労働や出張などを制限する就業上の配慮を行うことが多い。",
     "correctAnswer": true,
-    "exp": "職場復帰後の業務負荷は、体調の回復を確認しながら、無理のないペースで通常業務の水準に近づける。復職の当初は、時間外労働や出張などを制限する就業上の配慮を行うことが多い。移行期間は個別に判断する。",
-    "publicPath": "q/ichimon/s/ichi-1107/index.html"
+    "exp": "手引きでは、職場復帰後は労働負荷を軽減し、段階的に元へ戻す配慮が重要とされる。うつ病などは回復過程にも波がある。短時間勤務は、生活リズムの観点から始業時間を遅らせるより終業時間を早める方が望ましい。",
+    "publicPath": "q/ichimon/s/ichi-1107/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1108",
     "field": "limit",
-    "statement": "段階的な業務移行は復職者の自立心を損なうため、最初から通常業務で対応する。",
+    "statement": "職場復帰の当初は、例外なくフレックスタイム制度などの特段の措置をとるべきであり、本来の勤務時間で就労させることは避けるべきとされている。",
     "correctAnswer": false,
-    "exp": "職場復帰後の業務負荷は、体調の回復を確認しながら、無理のないペースで通常業務の水準に近づける。復職の当初は、時間外労働や出張などを制限する就業上の配慮を行うことが多い。移行期間は個別に判断する。",
-    "publicPath": "q/ichimon/s/ichi-1108/index.html"
+    "exp": "手引きでは、職場復帰後は労働負荷を軽減し、段階的に元へ戻す配慮が重要とされる。うつ病などは回復過程にも波がある。短時間勤務は、生活リズムの観点から始業時間を遅らせるより終業時間を早める方が望ましい。",
+    "publicPath": "q/ichimon/s/ichi-1108/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1109",
@@ -8870,7 +9978,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務上の病気やけがで休業した場合も、健康保険の傷病手当金の支給対象となる。",
     "correctAnswer": false,
     "exp": "傷病手当金は業務外の病気・けがが対象（業務上・通勤によるものは労災保険）。連続3日間の待期期間のあと、4日目以降の休業した日について、標準報酬日額のおおむね3分の2が、支給開始日から通算して1年6か月まで支給される。",
-    "publicPath": "q/ichimon/s/ichi-1109/index.html"
+    "publicPath": "q/ichimon/s/ichi-1109/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1110",
@@ -8878,7 +9987,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "傷病手当金は、連続して3日間休んだあと、4日目以降の休業した日について支給される。",
     "correctAnswer": true,
     "exp": "傷病手当金は業務外の病気・けがが対象（業務上・通勤によるものは労災保険）。連続3日間の待期期間のあと、4日目以降の休業した日について、標準報酬日額のおおむね3分の2が、支給開始日から通算して1年6か月まで支給される。",
-    "publicPath": "q/ichimon/s/ichi-1110/index.html"
+    "publicPath": "q/ichimon/s/ichi-1110/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1111",
@@ -8886,7 +9996,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "傷病手当金の支給額は、休業1日につき、標準報酬日額のおおむね2分の1に相当する額である。",
     "correctAnswer": false,
     "exp": "傷病手当金は業務外の病気・けがが対象（業務上・通勤によるものは労災保険）。連続3日間の待期期間のあと、4日目以降の休業した日について、標準報酬日額のおおむね3分の2が、支給開始日から通算して1年6か月まで支給される。",
-    "publicPath": "q/ichimon/s/ichi-1111/index.html"
+    "publicPath": "q/ichimon/s/ichi-1111/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1112",
@@ -8894,7 +10005,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "傷病手当金の支給期間は、支給開始日から通算して1年6か月である。",
     "correctAnswer": true,
     "exp": "傷病手当金は業務外の病気・けがが対象（業務上・通勤によるものは労災保険）。連続3日間の待期期間のあと、4日目以降の休業した日について、標準報酬日額のおおむね3分の2が、支給開始日から通算して1年6か月まで支給される。",
-    "publicPath": "q/ichimon/s/ichi-1112/index.html"
+    "publicPath": "q/ichimon/s/ichi-1112/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1113",
@@ -8902,7 +10014,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第4ステップ（最終的な職場復帰の決定）では、復職者の家族構成と経済状況を確認する。",
     "correctAnswer": false,
     "exp": "第4ステップでは、労働者の状態の最終確認、産業医による就業上の配慮等に関する意見書の作成を経て、事業者が最終的な職場復帰を決定する。事業場の対応や就業上の配慮の内容が、労働者を通じて主治医に伝わるようにする。",
-    "publicPath": "q/ichimon/s/ichi-1113/index.html"
+    "publicPath": "q/ichimon/s/ichi-1113/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1114",
@@ -8910,7 +10023,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第4ステップ（最終的な職場復帰の決定）では、産業医の意見、職場復帰支援プランの内容、就業上の配慮事項、フォローアップ体制を確認する。",
     "correctAnswer": true,
     "exp": "第4ステップでは、労働者の状態の最終確認、産業医による就業上の配慮等に関する意見書の作成を経て、事業者が最終的な職場復帰を決定する。事業場の対応や就業上の配慮の内容が、労働者を通じて主治医に伝わるようにする。",
-    "publicPath": "q/ichimon/s/ichi-1114/index.html"
+    "publicPath": "q/ichimon/s/ichi-1114/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1115",
@@ -8918,7 +10032,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第4ステップ（最終的な職場復帰の決定）では、復職者の過去の職場でのトラブル歴を確認する。",
     "correctAnswer": false,
     "exp": "第4ステップでは、労働者の状態の最終確認、産業医による就業上の配慮等に関する意見書の作成を経て、事業者が最終的な職場復帰を決定する。事業場の対応や就業上の配慮の内容が、労働者を通じて主治医に伝わるようにする。",
-    "publicPath": "q/ichimon/s/ichi-1115/index.html"
+    "publicPath": "q/ichimon/s/ichi-1115/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1116",
@@ -8926,39 +10041,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "第4ステップでは、事業場の対応や就業上の配慮の内容が、労働者を通じて主治医に的確に伝わるようにする。",
     "correctAnswer": true,
     "exp": "第4ステップでは、労働者の状態の最終確認、産業医による就業上の配慮等に関する意見書の作成を経て、事業者が最終的な職場復帰を決定する。事業場の対応や就業上の配慮の内容が、労働者を通じて主治医に伝わるようにする。",
-    "publicPath": "q/ichimon/s/ichi-1116/index.html"
+    "publicPath": "q/ichimon/s/ichi-1116/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1117",
     "field": "limit",
-    "statement": "復職者について同僚に説明する際は、全員に病名や治療内容を詳しく説明し、特別な配慮を求める。",
+    "statement": "「まずは元の職場への復帰」が原則であるため、異動を誘因として発症した場合でも、発症した現在の職場に戻すことが望ましいとされている。",
     "correctAnswer": false,
-    "exp": "復職者について同僚に説明する際は、事前に本人の意向を確認し、必要最小限の説明にとどめる。何も伝えないと職場の混乱を招く。同僚には、特別扱いをしすぎず自然に接するよう伝えることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-1117/index.html"
+    "exp": "手引きは、新しい環境への適応には時間と心理的負担を要し再燃・再発に結びつく可能性があることから「まずは元の職場への復帰」を原則とする。異動を誘因とした発症や、危険を伴う業務の場合などは、配置転換・異動を検討する。",
+    "publicPath": "q/ichimon/s/ichi-1117/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1118",
     "field": "limit",
     "statement": "復職者について同僚に説明する際は、本人の意向を確認し、「体調が回復して戻ってきた」など必要最小限の説明にとどめる。",
     "correctAnswer": true,
-    "exp": "復職者について同僚に説明する際は、事前に本人の意向を確認し、必要最小限の説明にとどめる。何も伝えないと職場の混乱を招く。同僚には、特別扱いをしすぎず自然に接するよう伝えることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-1118/index.html"
+    "exp": "手引きは、新しい環境への適応には時間と心理的負担を要し再燃・再発に結びつく可能性があることから「まずは元の職場への復帰」を原則とする。異動を誘因とした発症や、危険を伴う業務の場合などは、配置転換・異動を検討する。",
+    "publicPath": "q/ichimon/s/ichi-1118/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1119",
     "field": "limit",
-    "statement": "復職者については、同僚に一切説明せず、何も知らせない。",
+    "statement": "「まずは元の職場への復帰」が原則とされるのは、元の職場であれば就業上の配慮が不要になるためである。",
     "correctAnswer": false,
-    "exp": "復職者について同僚に説明する際は、事前に本人の意向を確認し、必要最小限の説明にとどめる。何も伝えないと職場の混乱を招く。同僚には、特別扱いをしすぎず自然に接するよう伝えることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-1119/index.html"
+    "exp": "手引きは、新しい環境への適応には時間と心理的負担を要し再燃・再発に結びつく可能性があることから「まずは元の職場への復帰」を原則とする。異動を誘因とした発症や、危険を伴う業務の場合などは、配置転換・異動を検討する。",
+    "publicPath": "q/ichimon/s/ichi-1119/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1120",
     "field": "limit",
-    "statement": "復職者を迎える同僚には、特別扱いをしすぎず、自然に接するよう伝えることが望ましい。",
+    "statement": "「まずは元の職場への復帰」が原則とされるのは、より好ましい職場への異動であっても、新しい環境への適応には時間と心理的負担を要するためである。",
     "correctAnswer": true,
-    "exp": "復職者について同僚に説明する際は、事前に本人の意向を確認し、必要最小限の説明にとどめる。何も伝えないと職場の混乱を招く。同僚には、特別扱いをしすぎず自然に接するよう伝えることが望ましい。",
-    "publicPath": "q/ichimon/s/ichi-1120/index.html"
+    "exp": "手引きは、新しい環境への適応には時間と心理的負担を要し再燃・再発に結びつく可能性があることから「まずは元の職場への復帰」を原則とする。異動を誘因とした発症や、危険を伴う業務の場合などは、配置転換・異動を検討する。",
+    "publicPath": "q/ichimon/s/ichi-1120/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1121",
@@ -8966,7 +10086,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過労死等防止啓発月間は10月である。",
     "correctAnswer": false,
     "exp": "過労死等防止啓発月間は毎年11月。この期間にシンポジウム・相談窓口の周知等が集中的に行われる。過労死等防止対策推進法（2014年）に基づく取り組み。",
-    "publicPath": "q/ichimon/s/ichi-1121/index.html"
+    "publicPath": "q/ichimon/s/ichi-1121/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1122",
@@ -8974,7 +10095,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過労死等防止啓発月間は12月である。",
     "correctAnswer": false,
     "exp": "過労死等防止啓発月間は毎年11月。この期間にシンポジウム・相談窓口の周知等が集中的に行われる。過労死等防止対策推進法（2014年）に基づく取り組み。",
-    "publicPath": "q/ichimon/s/ichi-1122/index.html"
+    "publicPath": "q/ichimon/s/ichi-1122/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1123",
@@ -8982,7 +10104,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過労死等防止啓発月間は11月である。",
     "correctAnswer": true,
     "exp": "過労死等防止啓発月間は毎年11月。この期間にシンポジウム・相談窓口の周知等が集中的に行われる。過労死等防止対策推進法（2014年）に基づく取り組み。",
-    "publicPath": "q/ichimon/s/ichi-1123/index.html"
+    "publicPath": "q/ichimon/s/ichi-1123/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1124",
@@ -8990,7 +10113,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "過労死等防止啓発月間は3月である。",
     "correctAnswer": false,
     "exp": "過労死等防止啓発月間は毎年11月。この期間にシンポジウム・相談窓口の周知等が集中的に行われる。過労死等防止対策推進法（2014年）に基づく取り組み。",
-    "publicPath": "q/ichimon/s/ichi-1124/index.html"
+    "publicPath": "q/ichimon/s/ichi-1124/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1125",
@@ -8998,7 +10122,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "自分のストレス状態を客観的に把握し、ストレスへの対処法を身につけることは、セルフケアにあたる。",
     "correctAnswer": true,
     "exp": "セルフケアは、不調が現れる前から日常的に行う予防の取り組みで、ストレスへの気づき・対処に加え、自発的な相談も含まれる。ストレスチェックの結果は、労働者自身のセルフケアにも役立てられる。",
-    "publicPath": "q/ichimon/s/ichi-1125/index.html"
+    "publicPath": "q/ichimon/s/ichi-1125/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1126",
@@ -9006,7 +10131,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "セルフケアは心身の不調が現れてから行うものであり、健康なうちから取り組む必要はない。",
     "correctAnswer": false,
     "exp": "セルフケアは、不調が現れる前から日常的に行う予防の取り組みで、ストレスへの気づき・対処に加え、自発的な相談も含まれる。ストレスチェックの結果は、労働者自身のセルフケアにも役立てられる。",
-    "publicPath": "q/ichimon/s/ichi-1126/index.html"
+    "publicPath": "q/ichimon/s/ichi-1126/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1127",
@@ -9014,7 +10140,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "セルフケアでは、ストレスを感じても周囲に相談せず、自分ひとりで解決することが重視される。",
     "correctAnswer": false,
     "exp": "セルフケアは、不調が現れる前から日常的に行う予防の取り組みで、ストレスへの気づき・対処に加え、自発的な相談も含まれる。ストレスチェックの結果は、労働者自身のセルフケアにも役立てられる。",
-    "publicPath": "q/ichimon/s/ichi-1127/index.html"
+    "publicPath": "q/ichimon/s/ichi-1127/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1128",
@@ -9022,7 +10149,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "ストレスチェックの結果は、労働者自身がストレスの状態に気づき、セルフケアに役立てることができる。",
     "correctAnswer": true,
     "exp": "セルフケアは、不調が現れる前から日常的に行う予防の取り組みで、ストレスへの気づき・対処に加え、自発的な相談も含まれる。ストレスチェックの結果は、労働者自身のセルフケアにも役立てられる。",
-    "publicPath": "q/ichimon/s/ichi-1128/index.html"
+    "publicPath": "q/ichimon/s/ichi-1128/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1129",
@@ -9030,7 +10158,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "バーンアウトは、仕事への意欲が高い人には起こらない。",
     "correctAnswer": false,
     "exp": "バーンアウトの主な症状は、情緒的消耗感、脱人格化（相手への冷淡な態度）、個人的達成感の低下。対人援助職など人と深く関わる仕事に多く、意欲が高く熱心に働いていた人が陥りやすい。",
-    "publicPath": "q/ichimon/s/ichi-1129/index.html"
+    "publicPath": "q/ichimon/s/ichi-1129/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1130",
@@ -9038,7 +10167,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "バーンアウトでは、情緒的消耗感・脱人格化・個人的達成感の低下の3つが主要な症状とされる。",
     "correctAnswer": true,
     "exp": "バーンアウトの主な症状は、情緒的消耗感、脱人格化（相手への冷淡な態度）、個人的達成感の低下。対人援助職など人と深く関わる仕事に多く、意欲が高く熱心に働いていた人が陥りやすい。",
-    "publicPath": "q/ichimon/s/ichi-1130/index.html"
+    "publicPath": "q/ichimon/s/ichi-1130/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1131",
@@ -9046,7 +10176,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "バーンアウトでいう脱人格化とは、自分の能力に自信が持てなくなり、仕事の達成感が得られなくなる状態をいう。",
     "correctAnswer": false,
     "exp": "バーンアウトの主な症状は、情緒的消耗感、脱人格化（相手への冷淡な態度）、個人的達成感の低下。対人援助職など人と深く関わる仕事に多く、意欲が高く熱心に働いていた人が陥りやすい。",
-    "publicPath": "q/ichimon/s/ichi-1131/index.html"
+    "publicPath": "q/ichimon/s/ichi-1131/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1132",
@@ -9054,7 +10185,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "バーンアウトは、対人援助職など、人と深く関わる仕事に就く人に多くみられるとされる。",
     "correctAnswer": true,
     "exp": "バーンアウトの主な症状は、情緒的消耗感、脱人格化（相手への冷淡な態度）、個人的達成感の低下。対人援助職など人と深く関わる仕事に多く、意欲が高く熱心に働いていた人が陥りやすい。",
-    "publicPath": "q/ichimon/s/ichi-1132/index.html"
+    "publicPath": "q/ichimon/s/ichi-1132/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1133",
@@ -9062,7 +10194,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "急性のストレスでは、筋肉への血流が増え、身体が「闘争か逃走か」に備えた状態になる。",
     "correctAnswer": true,
     "exp": "急性のストレスでは交感神経系が優位になり、アドレナリンの分泌が増えて、心拍数・血圧の上昇、筋肉への血流増加、瞳孔の散大が起こり、身体が「闘争か逃走か」に備える。消化管の働きは抑えられ、唾液の分泌は減る。",
-    "publicPath": "q/ichimon/s/ichi-1133/index.html"
+    "publicPath": "q/ichimon/s/ichi-1133/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1134",
@@ -9070,7 +10203,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "急性のストレス反応では、心拍数や血圧が上昇し、アドレナリンの分泌が増える。",
     "correctAnswer": true,
     "exp": "急性のストレスでは交感神経系が優位になり、アドレナリンの分泌が増えて、心拍数・血圧の上昇、筋肉への血流増加、瞳孔の散大が起こり、身体が「闘争か逃走か」に備える。消化管の働きは抑えられ、唾液の分泌は減る。",
-    "publicPath": "q/ichimon/s/ichi-1134/index.html"
+    "publicPath": "q/ichimon/s/ichi-1134/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1135",
@@ -9078,7 +10212,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "急性のストレスでは、消化管の働きが活発になり、唾液の分泌が増える。",
     "correctAnswer": false,
     "exp": "急性のストレスでは交感神経系が優位になり、アドレナリンの分泌が増えて、心拍数・血圧の上昇、筋肉への血流増加、瞳孔の散大が起こり、身体が「闘争か逃走か」に備える。消化管の働きは抑えられ、唾液の分泌は減る。",
-    "publicPath": "q/ichimon/s/ichi-1135/index.html"
+    "publicPath": "q/ichimon/s/ichi-1135/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1136",
@@ -9086,7 +10221,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "急性のストレスでは、瞳孔が縮小し、呼吸がゆっくりと深くなる。",
     "correctAnswer": false,
     "exp": "急性のストレスでは交感神経系が優位になり、アドレナリンの分泌が増えて、心拍数・血圧の上昇、筋肉への血流増加、瞳孔の散大が起こり、身体が「闘争か逃走か」に備える。消化管の働きは抑えられ、唾液の分泌は減る。",
-    "publicPath": "q/ichimon/s/ichi-1136/index.html"
+    "publicPath": "q/ichimon/s/ichi-1136/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1137",
@@ -9094,7 +10230,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "交替勤務・夜勤は身体的な問題のみであり、精神的健康への影響はない。",
     "correctAnswer": false,
     "exp": "交替勤務や夜勤では、概日リズムの乱れ、睡眠の問題、家族や社会との生活時間のずれが、メンタルヘルスに影響しうる。勤務は正方向に回すほうがよいとされ、深夜業に常時従事する労働者の健康診断は6か月以内ごとに1回行う。",
-    "publicPath": "q/ichimon/s/ichi-1137/index.html"
+    "publicPath": "q/ichimon/s/ichi-1137/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1138",
@@ -9102,7 +10239,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "交替勤務や夜勤では、概日リズムの乱れ・睡眠障害・社会的孤立感がメンタルヘルスの危険要因となりうる。",
     "correctAnswer": true,
     "exp": "交替勤務や夜勤では、概日リズムの乱れ、睡眠の問題、家族や社会との生活時間のずれが、メンタルヘルスに影響しうる。勤務は正方向に回すほうがよいとされ、深夜業に常時従事する労働者の健康診断は6か月以内ごとに1回行う。",
-    "publicPath": "q/ichimon/s/ichi-1138/index.html"
+    "publicPath": "q/ichimon/s/ichi-1138/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1139",
@@ -9110,7 +10248,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "夜勤手当が支給されるため、夜勤者のストレスは少ない。",
     "correctAnswer": false,
     "exp": "交替勤務や夜勤では、概日リズムの乱れ、睡眠の問題、家族や社会との生活時間のずれが、メンタルヘルスに影響しうる。勤務は正方向に回すほうがよいとされ、深夜業に常時従事する労働者の健康診断は6か月以内ごとに1回行う。",
-    "publicPath": "q/ichimon/s/ichi-1139/index.html"
+    "publicPath": "q/ichimon/s/ichi-1139/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1140",
@@ -9118,7 +10257,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "深夜業を含む業務に常時従事する労働者には、6か月以内ごとに1回、定期に健康診断を行う必要がある。",
     "correctAnswer": true,
     "exp": "交替勤務や夜勤では、概日リズムの乱れ、睡眠の問題、家族や社会との生活時間のずれが、メンタルヘルスに影響しうる。勤務は正方向に回すほうがよいとされ、深夜業に常時従事する労働者の健康診断は6か月以内ごとに1回行う。",
-    "publicPath": "q/ichimon/s/ichi-1140/index.html"
+    "publicPath": "q/ichimon/s/ichi-1140/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1141",
@@ -9126,7 +10266,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職業性ストレス簡易調査票は、個人の精神疾患を診断する目的で使用する。",
     "correctAnswer": false,
     "exp": "職業性ストレス簡易調査票は57項目で、仕事のストレス要因・心身のストレス反応・周囲のサポートの3領域を評価する。ストレスチェック制度で推奨され、集団分析にも活用されるが、診断のための検査ではなく、使用も義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-1141/index.html"
+    "publicPath": "q/ichimon/s/ichi-1141/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1142",
@@ -9134,7 +10275,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職業性ストレス簡易調査票は、ストレスチェックの実施や、集団分析を通じた職場環境改善の基礎データとして活用する。",
     "correctAnswer": true,
     "exp": "職業性ストレス簡易調査票は57項目で、仕事のストレス要因・心身のストレス反応・周囲のサポートの3領域を評価する。ストレスチェック制度で推奨され、集団分析にも活用されるが、診断のための検査ではなく、使用も義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-1142/index.html"
+    "publicPath": "q/ichimon/s/ichi-1142/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1143",
@@ -9142,7 +10284,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職業性ストレス簡易調査票は、57項目で構成されている。",
     "correctAnswer": true,
     "exp": "職業性ストレス簡易調査票は57項目で、仕事のストレス要因・心身のストレス反応・周囲のサポートの3領域を評価する。ストレスチェック制度で推奨され、集団分析にも活用されるが、診断のための検査ではなく、使用も義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-1143/index.html"
+    "publicPath": "q/ichimon/s/ichi-1143/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1144",
@@ -9150,7 +10293,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職業性ストレス簡易調査票は、採用選考における応募者の性格評価に使用する。",
     "correctAnswer": false,
     "exp": "職業性ストレス簡易調査票は57項目で、仕事のストレス要因・心身のストレス反応・周囲のサポートの3領域を評価する。ストレスチェック制度で推奨され、集団分析にも活用されるが、診断のための検査ではなく、使用も義務ではない。",
-    "publicPath": "q/ichimon/s/ichi-1144/index.html"
+    "publicPath": "q/ichimon/s/ichi-1144/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1145",
@@ -9158,7 +10302,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "新しい業務を担当して最初の1週間にミスが増えたことは、メンタルヘルス不調のサインとして特に注意が必要な業務パフォーマンスの低下である。",
     "correctAnswer": false,
     "exp": "以前はこなせていた業務でのミスの急増や集中力の低下は、不調のサインとなりうる。管理監督者は事実を伝えて話を聴き、必要に応じて産業保健スタッフにつなぐ。注意不足と決めつけたり、病名を挙げたりしない。",
-    "publicPath": "q/ichimon/s/ichi-1145/index.html"
+    "publicPath": "q/ichimon/s/ichi-1145/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1146",
@@ -9166,7 +10311,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "以前は問題なくこなせていた業務でミスが急増し、集中力や判断力の低下が目立つようになったことは、メンタルヘルス不調のサインとなりうる。",
     "correctAnswer": true,
     "exp": "以前はこなせていた業務でのミスの急増や集中力の低下は、不調のサインとなりうる。管理監督者は事実を伝えて話を聴き、必要に応じて産業保健スタッフにつなぐ。注意不足と決めつけたり、病名を挙げたりしない。",
-    "publicPath": "q/ichimon/s/ichi-1146/index.html"
+    "publicPath": "q/ichimon/s/ichi-1146/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1147",
@@ -9174,7 +10320,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "繁忙期に周囲と同様に一時的に業務量が増え、対応が追いつかない状態は、メンタルヘルス不調のサインとして特に注意が必要な業務パフォーマンスの低下である。",
     "correctAnswer": false,
     "exp": "以前はこなせていた業務でのミスの急増や集中力の低下は、不調のサインとなりうる。管理監督者は事実を伝えて話を聴き、必要に応じて産業保健スタッフにつなぐ。注意不足と決めつけたり、病名を挙げたりしない。",
-    "publicPath": "q/ichimon/s/ichi-1147/index.html"
+    "publicPath": "q/ichimon/s/ichi-1147/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1148",
@@ -9182,7 +10329,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "以前はこなせていた業務でミスが急増した部下には、事実を伝えて話を聴き、必要に応じて産業保健スタッフにつなぐ。",
     "correctAnswer": true,
     "exp": "以前はこなせていた業務でのミスの急増や集中力の低下は、不調のサインとなりうる。管理監督者は事実を伝えて話を聴き、必要に応じて産業保健スタッフにつなぐ。注意不足と決めつけたり、病名を挙げたりしない。",
-    "publicPath": "q/ichimon/s/ichi-1148/index.html"
+    "publicPath": "q/ichimon/s/ichi-1148/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1149",
@@ -9190,7 +10338,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "漸進的筋弛緩法は特定の薬物を使用するリラクセーション法である。",
     "correctAnswer": false,
     "exp": "漸進的筋弛緩法は、ジェイコブソンが考案したリラクセーション法で、筋肉に力を入れて緊張させた後に力を抜いて弛緩させ、ゆるんだ感覚を味わう。全身の筋肉に順に行い、緊張させるときは痛みを感じない程度に力を入れる。",
-    "publicPath": "q/ichimon/s/ichi-1149/index.html"
+    "publicPath": "q/ichimon/s/ichi-1149/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1150",
@@ -9198,7 +10347,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "漸進的筋弛緩法は、身体の各部位の筋肉を意図的に緊張させてから弛緩させ、全身のリラクセーションを図る技法である。",
     "correctAnswer": true,
     "exp": "漸進的筋弛緩法は、ジェイコブソンが考案したリラクセーション法で、筋肉に力を入れて緊張させた後に力を抜いて弛緩させ、ゆるんだ感覚を味わう。全身の筋肉に順に行い、緊張させるときは痛みを感じない程度に力を入れる。",
-    "publicPath": "q/ichimon/s/ichi-1150/index.html"
+    "publicPath": "q/ichimon/s/ichi-1150/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1151",
@@ -9206,7 +10356,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "漸進的筋弛緩法は、ジェイコブソンによって考案された。",
     "correctAnswer": true,
     "exp": "漸進的筋弛緩法は、ジェイコブソンが考案したリラクセーション法で、筋肉に力を入れて緊張させた後に力を抜いて弛緩させ、ゆるんだ感覚を味わう。全身の筋肉に順に行い、緊張させるときは痛みを感じない程度に力を入れる。",
-    "publicPath": "q/ichimon/s/ichi-1151/index.html"
+    "publicPath": "q/ichimon/s/ichi-1151/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1152",
@@ -9214,71 +10365,80 @@ window.ICHIMONDOU_ROWS = [
     "statement": "漸進的筋弛緩法で筋肉を緊張させるときは、痛みを感じるほど最大限に力を入れることが望ましい。",
     "correctAnswer": false,
     "exp": "漸進的筋弛緩法は、ジェイコブソンが考案したリラクセーション法で、筋肉に力を入れて緊張させた後に力を抜いて弛緩させ、ゆるんだ感覚を味わう。全身の筋肉に順に行い、緊張させるときは痛みを感じない程度に力を入れる。",
-    "publicPath": "q/ichimon/s/ichi-1152/index.html"
+    "publicPath": "q/ichimon/s/ichi-1152/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1153",
     "field": "limit",
-    "statement": "部下が話すのをためらっているときは、「早く話してください、時間がありません」と急かす。",
+    "statement": "試し出勤制度等は、労働者の職場復帰を円滑にする目的のほか、職場の人員不足を一時的に補う目的で運用することも認められている。",
     "correctAnswer": false,
-    "exp": "話すことをためらっている部下には、「無理に話さなくて大丈夫」と伝えて安心感を与える。急かす、追及する、打ち切るといった対応は逆効果。話したくなったときにいつでも相談できることを伝えておく。",
-    "publicPath": "q/ichimon/s/ichi-1153/index.html"
+    "exp": "試し出勤制度等は、より早い段階で職場復帰を試み、高い職場復帰率をもたらすことが期待される。事業場の都合でなく労働者の円滑な職場復帰のために運用し、期間は必要な範囲に限る。主治医からも支障がないとの判断を受ける。",
+    "publicPath": "q/ichimon/s/ichi-1153/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1154",
     "field": "limit",
-    "statement": "部下が話すのをためらっているときは、「無理に話さなくていいですよ、ゆっくりで大丈夫です」と声をかけ、安心感を与える。",
+    "statement": "試し出勤制度等の運用にあたっては、主治医からも、試し出勤等を行うことが本人の療養を進めるうえで支障とならないとの判断を受けることが必要とされている。",
     "correctAnswer": true,
-    "exp": "話すことをためらっている部下には、「無理に話さなくて大丈夫」と伝えて安心感を与える。急かす、追及する、打ち切るといった対応は逆効果。話したくなったときにいつでも相談できることを伝えておく。",
-    "publicPath": "q/ichimon/s/ichi-1154/index.html"
+    "exp": "試し出勤制度等は、より早い段階で職場復帰を試み、高い職場復帰率をもたらすことが期待される。事業場の都合でなく労働者の円滑な職場復帰のために運用し、期間は必要な範囲に限る。主治医からも支障がないとの判断を受ける。",
+    "publicPath": "q/ichimon/s/ichi-1154/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1155",
     "field": "limit",
-    "statement": "部下が話すのをためらっているときは、話をしないなら面談を打ち切る。",
+    "statement": "試し出勤は職場復帰の判断等を目的とするため、判断に慎重を期して、できるだけ長期間にわたって実施することが望ましいとされている。",
     "correctAnswer": false,
-    "exp": "話すことをためらっている部下には、「無理に話さなくて大丈夫」と伝えて安心感を与える。急かす、追及する、打ち切るといった対応は逆効果。話したくなったときにいつでも相談できることを伝えておく。",
-    "publicPath": "q/ichimon/s/ichi-1155/index.html"
+    "exp": "試し出勤制度等は、より早い段階で職場復帰を試み、高い職場復帰率をもたらすことが期待される。事業場の都合でなく労働者の円滑な職場復帰のために運用し、期間は必要な範囲に限る。主治医からも支障がないとの判断を受ける。",
+    "publicPath": "q/ichimon/s/ichi-1155/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1156",
     "field": "limit",
-    "statement": "話すことをためらう部下には、話したくなったときにいつでも相談できることを伝えておく。",
+    "statement": "試し出勤は、その目的を達成するために必要な時間帯・態様、時期・期間等に限るべきとされている。",
     "correctAnswer": true,
-    "exp": "話すことをためらっている部下には、「無理に話さなくて大丈夫」と伝えて安心感を与える。急かす、追及する、打ち切るといった対応は逆効果。話したくなったときにいつでも相談できることを伝えておく。",
-    "publicPath": "q/ichimon/s/ichi-1156/index.html"
+    "exp": "試し出勤制度等は、より早い段階で職場復帰を試み、高い職場復帰率をもたらすことが期待される。事業場の都合でなく労働者の円滑な職場復帰のために運用し、期間は必要な範囲に限る。主治医からも支障がないとの判断を受ける。",
+    "publicPath": "q/ichimon/s/ichi-1156/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1157",
     "field": "limit",
-    "statement": "管理監督者が日頃から部下に関心を持って関わることは、部下が不調を打ち明けやすい関係づくりにつながる。",
+    "statement": "職場復帰支援の手引きでは、職場復帰の判断基準の例として、昼間の眠気がないことや、業務遂行に必要な注意力・集中力が回復していることが挙げられている。",
     "correctAnswer": true,
-    "exp": "見えにくいメンタルヘルス不調に対して、管理監督者は日頃から声かけや観察を意識的に行い、相談しやすい関係をつくる。監視ではなく、関心を持って関わる姿勢が、不調を打ち明けやすい関係につながる。",
-    "publicPath": "q/ichimon/s/ichi-1157/index.html"
+    "exp": "手引きは判断基準の例として、意欲、一人での通勤、勤務の継続、疲労の翌日までの回復、睡眠覚醒リズム、昼間の眠気がないこと、注意力・集中力の回復などを挙げる。定型的な基準はなく、完全な回復を前提とせず総合的に判断する。",
+    "publicPath": "q/ichimon/s/ichi-1157/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1158",
     "field": "limit",
-    "statement": "見えにくいメンタルヘルス不調に気づくため、管理監督者は日頃から声かけ・観察・会話を意識的に行い、相談しやすい関係をつくる。",
-    "correctAnswer": true,
-    "exp": "見えにくいメンタルヘルス不調に対して、管理監督者は日頃から声かけや観察を意識的に行い、相談しやすい関係をつくる。監視ではなく、関心を持って関わる姿勢が、不調を打ち明けやすい関係につながる。",
-    "publicPath": "q/ichimon/s/ichi-1158/index.html"
+    "statement": "職場復帰の可否は、業務遂行能力が病前のレベルまで完全に回復していることを確認したうえで判断することとされている。",
+    "correctAnswer": false,
+    "exp": "手引きは判断基準の例として、意欲、一人での通勤、勤務の継続、疲労の翌日までの回復、睡眠覚醒リズム、昼間の眠気がないこと、注意力・集中力の回復などを挙げる。定型的な基準はなく、完全な回復を前提とせず総合的に判断する。",
+    "publicPath": "q/ichimon/s/ichi-1158/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1159",
     "field": "limit",
-    "statement": "見えにくいため管理監督者には対応が不可能であり、専門家に任せる。",
+    "statement": "職場復帰支援の手引きには、全国一律に適用できる定型的な職場復帰の判断基準が示されている。",
     "correctAnswer": false,
-    "exp": "見えにくいメンタルヘルス不調に対して、管理監督者は日頃から声かけや観察を意識的に行い、相談しやすい関係をつくる。監視ではなく、関心を持って関わる姿勢が、不調を打ち明けやすい関係につながる。",
-    "publicPath": "q/ichimon/s/ichi-1159/index.html"
+    "exp": "手引きは判断基準の例として、意欲、一人での通勤、勤務の継続、疲労の翌日までの回復、睡眠覚醒リズム、昼間の眠気がないこと、注意力・集中力の回復などを挙げる。定型的な基準はなく、完全な回復を前提とせず総合的に判断する。",
+    "publicPath": "q/ichimon/s/ichi-1159/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1160",
     "field": "limit",
-    "statement": "見えにくいメンタルヘルス不調に気づくため、気になる部下を毎日監視し、行動を記録する。",
-    "correctAnswer": false,
-    "exp": "見えにくいメンタルヘルス不調に対して、管理監督者は日頃から声かけや観察を意識的に行い、相談しやすい関係をつくる。監視ではなく、関心を持って関わる姿勢が、不調を打ち明けやすい関係につながる。",
-    "publicPath": "q/ichimon/s/ichi-1160/index.html"
+    "statement": "職場復帰の可否は、業務遂行能力がまだ病前のレベルまで完全に改善していないことも考慮し、職場の受け入れ制度や態勢と組み合わせて判断する。",
+    "correctAnswer": true,
+    "exp": "手引きは判断基準の例として、意欲、一人での通勤、勤務の継続、疲労の翌日までの回復、睡眠覚醒リズム、昼間の眠気がないこと、注意力・集中力の回復などを挙げる。定型的な基準はなく、完全な回復を前提とせず総合的に判断する。",
+    "publicPath": "q/ichimon/s/ichi-1160/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1161",
@@ -9286,7 +10446,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の家庭の詳細な状況や経済状態は、管理監督者が産業保健スタッフとの連携において提供すべき情報である。",
     "correctAnswer": false,
     "exp": "管理監督者が産業保健スタッフに提供する情報は、業務の状況、パフォーマンスの変化、勤怠の状況など、職場で把握できる事例性の情報が中心。病名の推測や私生活の詳細は伝えない。",
-    "publicPath": "q/ichimon/s/ichi-1161/index.html"
+    "publicPath": "q/ichimon/s/ichi-1161/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1162",
@@ -9294,7 +10455,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場での具体的な業務状況、パフォーマンスの変化、勤怠状況などの事例性に関する情報は、管理監督者が産業保健スタッフとの連携において提供できる情報である。",
     "correctAnswer": true,
     "exp": "管理監督者が産業保健スタッフに提供する情報は、業務の状況、パフォーマンスの変化、勤怠の状況など、職場で把握できる事例性の情報が中心。病名の推測や私生活の詳細は伝えない。",
-    "publicPath": "q/ichimon/s/ichi-1162/index.html"
+    "publicPath": "q/ichimon/s/ichi-1162/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1163",
@@ -9302,7 +10464,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "部下の交友関係や私生活の詳細は、管理監督者が産業保健スタッフとの連携において提供すべき情報である。",
     "correctAnswer": false,
     "exp": "管理監督者が産業保健スタッフに提供する情報は、業務の状況、パフォーマンスの変化、勤怠の状況など、職場で把握できる事例性の情報が中心。病名の推測や私生活の詳細は伝えない。",
-    "publicPath": "q/ichimon/s/ichi-1163/index.html"
+    "publicPath": "q/ichimon/s/ichi-1163/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1164",
@@ -9310,39 +10473,44 @@ window.ICHIMONDOU_ROWS = [
     "statement": "管理監督者が産業保健スタッフに伝える情報は、職場で把握できる事例性の情報が中心となる。",
     "correctAnswer": true,
     "exp": "管理監督者が産業保健スタッフに提供する情報は、業務の状況、パフォーマンスの変化、勤怠の状況など、職場で把握できる事例性の情報が中心。病名の推測や私生活の詳細は伝えない。",
-    "publicPath": "q/ichimon/s/ichi-1164/index.html"
+    "publicPath": "q/ichimon/s/ichi-1164/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1165",
     "field": "limit",
-    "statement": "自助グループは医師の指導のもとで行う医療行為の一種である。",
+    "statement": "管理監督者が部下の飲酒の問題を隠したり、遅刻を代わりに取り繕ったりすることは、本人の回復を助ける適切な支援とされる。",
     "correctAnswer": false,
-    "exp": "自助グループは、同じ問題や経験を持つ人どうしが集まり、経験の共有や支え合いを通じて回復を図る活動。アルコール依存症ではAAや断酒会が知られる。医療行為ではなく、治療の代わりにもならない。",
-    "publicPath": "q/ichimon/s/ichi-1165/index.html"
+    "exp": "アルコール依存症の回復の基本は断酒の継続で、断酒会やAAなどの自助グループが回復を支える。周囲が問題を隠したり取り繕ったりすると、かえって飲酒を続けやすくする。抗酒薬は飲酒時に不快な反応を起こして断酒を助ける薬。",
+    "publicPath": "q/ichimon/s/ichi-1165/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1166",
     "field": "limit",
     "statement": "自助グループは、同じ問題や経験を持つ人が集まり、経験の共有や支え合いによって孤立感の解消を図る活動である。",
     "correctAnswer": true,
-    "exp": "自助グループは、同じ問題や経験を持つ人どうしが集まり、経験の共有や支え合いを通じて回復を図る活動。アルコール依存症ではAAや断酒会が知られる。医療行為ではなく、治療の代わりにもならない。",
-    "publicPath": "q/ichimon/s/ichi-1166/index.html"
+    "exp": "アルコール依存症の回復の基本は断酒の継続で、断酒会やAAなどの自助グループが回復を支える。周囲が問題を隠したり取り繕ったりすると、かえって飲酒を続けやすくする。抗酒薬は飲酒時に不快な反応を起こして断酒を助ける薬。",
+    "publicPath": "q/ichimon/s/ichi-1166/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1167",
     "field": "limit",
-    "statement": "自助グループは専門的治療の代替として、医療機関の受診を不要にする。",
+    "statement": "抗酒薬は飲酒の欲求そのものをなくす薬であるため、服用していれば自助グループへの参加などは必要なくなる。",
     "correctAnswer": false,
-    "exp": "自助グループは、同じ問題や経験を持つ人どうしが集まり、経験の共有や支え合いを通じて回復を図る活動。アルコール依存症ではAAや断酒会が知られる。医療行為ではなく、治療の代わりにもならない。",
-    "publicPath": "q/ichimon/s/ichi-1167/index.html"
+    "exp": "アルコール依存症の回復の基本は断酒の継続で、断酒会やAAなどの自助グループが回復を支える。周囲が問題を隠したり取り繕ったりすると、かえって飲酒を続けやすくする。抗酒薬は飲酒時に不快な反応を起こして断酒を助ける薬。",
+    "publicPath": "q/ichimon/s/ichi-1167/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1168",
     "field": "limit",
     "statement": "アルコール依存症の自助グループとして、AA（アルコホーリクス・アノニマス）や断酒会が知られている。",
     "correctAnswer": true,
-    "exp": "自助グループは、同じ問題や経験を持つ人どうしが集まり、経験の共有や支え合いを通じて回復を図る活動。アルコール依存症ではAAや断酒会が知られる。医療行為ではなく、治療の代わりにもならない。",
-    "publicPath": "q/ichimon/s/ichi-1168/index.html"
+    "exp": "アルコール依存症の回復の基本は断酒の継続で、断酒会やAAなどの自助グループが回復を支える。周囲が問題を隠したり取り繕ったりすると、かえって飲酒を続けやすくする。抗酒薬は飲酒時に不快な反応を起こして断酒を助ける薬。",
+    "publicPath": "q/ichimon/s/ichi-1168/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1169",
@@ -9350,7 +10518,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "就業規則に定める休職期間の上限を超えた場合は、自動的に退職となるため職場復帰支援は不要になる。",
     "correctAnswer": false,
     "exp": "私傷病による休職制度は法律上の義務ではなく、休職期間の上限などは就業規則等で定める。業務上の疾病による療養のための休業期間とその後30日間は、労働基準法により原則として解雇が制限される。",
-    "publicPath": "q/ichimon/s/ichi-1169/index.html"
+    "publicPath": "q/ichimon/s/ichi-1169/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1170",
@@ -9358,7 +10527,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "休職期間の上限に近づいた場合も、職場復帰の可能性を丁寧に検討し、可能な限り復職支援を継続することが望ましい。",
     "correctAnswer": true,
     "exp": "私傷病による休職制度は法律上の義務ではなく、休職期間の上限などは就業規則等で定める。業務上の疾病による療養のための休業期間とその後30日間は、労働基準法により原則として解雇が制限される。",
-    "publicPath": "q/ichimon/s/ichi-1170/index.html"
+    "publicPath": "q/ichimon/s/ichi-1170/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1171",
@@ -9366,7 +10536,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "休職期間の上限は法律で一律に定められている。",
     "correctAnswer": false,
     "exp": "私傷病による休職制度は法律上の義務ではなく、休職期間の上限などは就業規則等で定める。業務上の疾病による療養のための休業期間とその後30日間は、労働基準法により原則として解雇が制限される。",
-    "publicPath": "q/ichimon/s/ichi-1171/index.html"
+    "publicPath": "q/ichimon/s/ichi-1171/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1172",
@@ -9374,7 +10545,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "業務上の疾病による療養のために休業する期間とその後30日間は、原則として解雇が制限される。",
     "correctAnswer": true,
     "exp": "私傷病による休職制度は法律上の義務ではなく、休職期間の上限などは就業規則等で定める。業務上の疾病による療養のための休業期間とその後30日間は、労働基準法により原則として解雇が制限される。",
-    "publicPath": "q/ichimon/s/ichi-1172/index.html"
+    "publicPath": "q/ichimon/s/ichi-1172/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1173",
@@ -9382,7 +10554,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第3ステップ（職場復帰の可否の判断）では、復職者の趣味と特技を確認する。",
     "correctAnswer": false,
     "exp": "職場復帰の可否の判断基準の例には、十分な意欲、通勤時間帯に一人で安全に通勤できる、決まった勤務日・時間に就労を継続できる、疲労が翌日までに回復する、睡眠覚醒リズムが整っている、注意力・集中力の回復などがある。",
-    "publicPath": "q/ichimon/s/ichi-1173/index.html"
+    "publicPath": "q/ichimon/s/ichi-1173/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1174",
@@ -9390,7 +10563,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第3ステップ（職場復帰の可否の判断）では、病状の回復の程度、業務遂行能力、職場環境の整備状況、支援体制を確認する。",
     "correctAnswer": true,
     "exp": "職場復帰の可否の判断基準の例には、十分な意欲、通勤時間帯に一人で安全に通勤できる、決まった勤務日・時間に就労を継続できる、疲労が翌日までに回復する、睡眠覚醒リズムが整っている、注意力・集中力の回復などがある。",
-    "publicPath": "q/ichimon/s/ichi-1174/index.html"
+    "publicPath": "q/ichimon/s/ichi-1174/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1175",
@@ -9398,7 +10572,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰支援の第3ステップ（職場復帰の可否の判断）では、復職後の昇給額を確認する。",
     "correctAnswer": false,
     "exp": "職場復帰の可否の判断基準の例には、十分な意欲、通勤時間帯に一人で安全に通勤できる、決まった勤務日・時間に就労を継続できる、疲労が翌日までに回復する、睡眠覚醒リズムが整っている、注意力・集中力の回復などがある。",
-    "publicPath": "q/ichimon/s/ichi-1175/index.html"
+    "publicPath": "q/ichimon/s/ichi-1175/index.html",
+    "level": 1
   },
   {
     "id": "ichi-1176",
@@ -9406,135 +10581,152 @@ window.ICHIMONDOU_ROWS = [
     "statement": "職場復帰の可否の判断基準の例として、通勤時間帯に一人で安全に通勤ができることが挙げられている。",
     "correctAnswer": true,
     "exp": "職場復帰の可否の判断基準の例には、十分な意欲、通勤時間帯に一人で安全に通勤できる、決まった勤務日・時間に就労を継続できる、疲労が翌日までに回復する、睡眠覚醒リズムが整っている、注意力・集中力の回復などがある。",
-    "publicPath": "q/ichimon/s/ichi-1176/index.html"
+    "publicPath": "q/ichimon/s/ichi-1176/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1177",
     "field": "limit",
-    "statement": "フォローアップ面談は年1回で十分である。",
+    "statement": "職場復帰支援プランは、本人の意欲を尊重するため、本人の希望のみに基づいて決定することが円滑な職場復帰につながるとされている。",
     "correctAnswer": false,
-    "exp": "職場復帰後のフォローアップ面談は、復職直後は間隔を短くし、安定してきたら間隔を広げるなど、状態に応じて柔軟に設定する。面談の頻度や担当者は、職場復帰支援プランで定めておく。",
-    "publicPath": "q/ichimon/s/ichi-1177/index.html"
+    "exp": "手引きでは、職場復帰支援プランは段階を設定して各段階で求められる水準も明記し、本人の希望のみで決めず総合的に判断する。フォローアップでは就業制限等を見直すタイミングや、配慮が不要となる時期の見通しも検討する。",
+    "publicPath": "q/ichimon/s/ichi-1177/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1178",
     "field": "limit",
-    "statement": "職場復帰後のフォローアップ面談は、復職直後は間隔を短くし、安定してきたら広げるなど、状態に応じて設定する。",
+    "statement": "職場復帰支援プランでは、各段階ごとに求められる水準（定時勤務が可能、顧客との折衝が可能など）も明記するとされている。",
     "correctAnswer": true,
-    "exp": "職場復帰後のフォローアップ面談は、復職直後は間隔を短くし、安定してきたら間隔を広げるなど、状態に応じて柔軟に設定する。面談の頻度や担当者は、職場復帰支援プランで定めておく。",
-    "publicPath": "q/ichimon/s/ichi-1178/index.html"
+    "exp": "手引きでは、職場復帰支援プランは段階を設定して各段階で求められる水準も明記し、本人の希望のみで決めず総合的に判断する。フォローアップでは就業制限等を見直すタイミングや、配慮が不要となる時期の見通しも検討する。",
+    "publicPath": "q/ichimon/s/ichi-1178/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1179",
     "field": "limit",
-    "statement": "フォローアップ面談は本人から申し出があった場合のみ実施する。",
+    "statement": "職場復帰支援プランで検討するフォローアップには、全ての就業上の配慮や医学的観察が不要となる時期についての見通しは含まれない。",
     "correctAnswer": false,
-    "exp": "職場復帰後のフォローアップ面談は、復職直後は間隔を短くし、安定してきたら間隔を広げるなど、状態に応じて柔軟に設定する。面談の頻度や担当者は、職場復帰支援プランで定めておく。",
-    "publicPath": "q/ichimon/s/ichi-1179/index.html"
+    "exp": "手引きでは、職場復帰支援プランは段階を設定して各段階で求められる水準も明記し、本人の希望のみで決めず総合的に判断する。フォローアップでは就業制限等を見直すタイミングや、配慮が不要となる時期の見通しも検討する。",
+    "publicPath": "q/ichimon/s/ichi-1179/index.html",
+    "level": 5
   },
   {
     "id": "ichi-1180",
     "field": "limit",
     "statement": "フォローアップ面談の頻度や担当者は、職場復帰支援プランで定めておく。",
     "correctAnswer": true,
-    "exp": "職場復帰後のフォローアップ面談は、復職直後は間隔を短くし、安定してきたら間隔を広げるなど、状態に応じて柔軟に設定する。面談の頻度や担当者は、職場復帰支援プランで定めておく。",
-    "publicPath": "q/ichimon/s/ichi-1180/index.html"
+    "exp": "手引きでは、職場復帰支援プランは段階を設定して各段階で求められる水準も明記し、本人の希望のみで決めず総合的に判断する。フォローアップでは就業制限等を見直すタイミングや、配慮が不要となる時期の見通しも検討する。",
+    "publicPath": "q/ichimon/s/ichi-1180/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1181",
     "field": "limit",
-    "statement": "がん治療中は業務遂行が困難であるため、治療が終了するまで業務から外す。",
+    "statement": "治療と仕事の両立支援のためのガイドラインの対象となる疾病はがんに限られ、脳卒中や心疾患、糖尿病などは対象とされていない。",
     "correctAnswer": false,
-    "exp": "がんの治療と仕事の両立支援では、主治医や産業医と連携し、治療の予定や副作用による体調の変化に応じて勤務を柔軟に調整する。病名を職場に伝えるかどうかは本人の意思に委ねられる。",
-    "publicPath": "q/ichimon/s/ichi-1181/index.html"
+    "exp": "両立支援ガイドラインでは、就業による疾病の増悪を防ぐ措置が前提とされる。対象はがん、脳卒中、心疾患、糖尿病、肝炎、難病など反復・継続して治療が必要な疾病。本人の取組や、医療ソーシャルワーカー・両立支援コーディネーターなど関係者の連携も重要。",
+    "publicPath": "q/ichimon/s/ichi-1181/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1182",
     "field": "limit",
-    "statement": "がん治療中の労働者の両立支援では、主治医・産業医と連携し、治療の予定や副作用の状況に応じて勤務を柔軟に調整する。",
+    "statement": "治療と仕事の両立支援では、就業によって疾病が増悪することがないよう、就業上の措置等を適切に講じることが前提とされている。",
     "correctAnswer": true,
-    "exp": "がんの治療と仕事の両立支援では、主治医や産業医と連携し、治療の予定や副作用による体調の変化に応じて勤務を柔軟に調整する。病名を職場に伝えるかどうかは本人の意思に委ねられる。",
-    "publicPath": "q/ichimon/s/ichi-1182/index.html"
+    "exp": "両立支援ガイドラインでは、就業による疾病の増悪を防ぐ措置が前提とされる。対象はがん、脳卒中、心疾患、糖尿病、肝炎、難病など反復・継続して治療が必要な疾病。本人の取組や、医療ソーシャルワーカー・両立支援コーディネーターなど関係者の連携も重要。",
+    "publicPath": "q/ichimon/s/ichi-1182/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1183",
     "field": "limit",
-    "statement": "がん患者は職場に伝える義務があるため、必ず全員に病名を公表させる。",
+    "statement": "両立支援では、治療の継続や体調の管理は事業者の責任であり、労働者本人に治療の継続などの取組が求められることはない。",
     "correctAnswer": false,
-    "exp": "がんの治療と仕事の両立支援では、主治医や産業医と連携し、治療の予定や副作用による体調の変化に応じて勤務を柔軟に調整する。病名を職場に伝えるかどうかは本人の意思に委ねられる。",
-    "publicPath": "q/ichimon/s/ichi-1183/index.html"
+    "exp": "両立支援ガイドラインでは、就業による疾病の増悪を防ぐ措置が前提とされる。対象はがん、脳卒中、心疾患、糖尿病、肝炎、難病など反復・継続して治療が必要な疾病。本人の取組や、医療ソーシャルワーカー・両立支援コーディネーターなど関係者の連携も重要。",
+    "publicPath": "q/ichimon/s/ichi-1183/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1184",
     "field": "limit",
     "statement": "がんであることを職場に伝えるかどうかは、本人の意思に委ねられる。",
     "correctAnswer": true,
-    "exp": "がんの治療と仕事の両立支援では、主治医や産業医と連携し、治療の予定や副作用による体調の変化に応じて勤務を柔軟に調整する。病名を職場に伝えるかどうかは本人の意思に委ねられる。",
-    "publicPath": "q/ichimon/s/ichi-1184/index.html"
+    "exp": "両立支援ガイドラインでは、就業による疾病の増悪を防ぐ措置が前提とされる。対象はがん、脳卒中、心疾患、糖尿病、肝炎、難病など反復・継続して治療が必要な疾病。本人の取組や、医療ソーシャルワーカー・両立支援コーディネーターなど関係者の連携も重要。",
+    "publicPath": "q/ichimon/s/ichi-1184/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1185",
     "field": "limit",
-    "statement": "再発・再燃が確認された場合は、直ちに解雇の手続きを開始する。",
+    "statement": "職場復帰支援の手引きでいうクーリング期間とは、職場復帰をした労働者が再び休業する前に、療養のために必ず取得させる一定の休暇の期間をいう。",
     "correctAnswer": false,
-    "exp": "復職後に再発・再燃した場合は、サインに早く気づき、職場復帰支援プランや業務の負荷を見直し、必要に応じて再度の休業も含めて産業医や人事と連携する。本人を責めずに支援を続ける。",
-    "publicPath": "q/ichimon/s/ichi-1185/index.html"
+    "exp": "手引きでは、クーリング期間は、再び同一理由で休業する場合に前回の休業期間を算入しないために必要な、職場復帰から新たな休業までの期間をいう。休業の最長（保障）期間や満了後の雇用契約の解除は、労使で協議し、あらかじめ就業規則等に定めて周知しておくことが望ましい。",
+    "publicPath": "q/ichimon/s/ichi-1185/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1186",
     "field": "limit",
-    "statement": "復職後に再発・再燃した場合は、早めにサインを察知し、職場復帰支援プランを見直しながら、必要に応じて休業も視野に入れ、産業医や人事と連携して対応する。",
+    "statement": "クーリング期間とは、職場復帰後に同一理由で再び休業する場合に、前回の休業期間を算入しないために必要な、職場復帰から新たな休業までの期間をいう。",
     "correctAnswer": true,
-    "exp": "復職後に再発・再燃した場合は、サインに早く気づき、職場復帰支援プランや業務の負荷を見直し、必要に応じて再度の休業も含めて産業医や人事と連携する。本人を責めずに支援を続ける。",
-    "publicPath": "q/ichimon/s/ichi-1186/index.html"
+    "exp": "手引きでは、クーリング期間は、再び同一理由で休業する場合に前回の休業期間を算入しないために必要な、職場復帰から新たな休業までの期間をいう。休業の最長（保障）期間や満了後の雇用契約の解除は、労使で協議し、あらかじめ就業規則等に定めて周知しておくことが望ましい。",
+    "publicPath": "q/ichimon/s/ichi-1186/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1187",
     "field": "limit",
-    "statement": "再発した場合は本人の意欲の問題であるため、職場は関与しない。",
+    "statement": "休業の最長（保障）期間の満了後に雇用契約を解除する場合でも、あらかじめ就業規則等に定めておく必要はないとされている。",
     "correctAnswer": false,
-    "exp": "復職後に再発・再燃した場合は、サインに早く気づき、職場復帰支援プランや業務の負荷を見直し、必要に応じて再度の休業も含めて産業医や人事と連携する。本人を責めずに支援を続ける。",
-    "publicPath": "q/ichimon/s/ichi-1187/index.html"
+    "exp": "手引きでは、クーリング期間は、再び同一理由で休業する場合に前回の休業期間を算入しないために必要な、職場復帰から新たな休業までの期間をいう。休業の最長（保障）期間や満了後の雇用契約の解除は、労使で協議し、あらかじめ就業規則等に定めて周知しておくことが望ましい。",
+    "publicPath": "q/ichimon/s/ichi-1187/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1188",
     "field": "limit",
     "statement": "再発・再燃は回復の過程で起こりうるものであり、本人を責めずに支援を続けることが大切である。",
     "correctAnswer": true,
-    "exp": "復職後に再発・再燃した場合は、サインに早く気づき、職場復帰支援プランや業務の負荷を見直し、必要に応じて再度の休業も含めて産業医や人事と連携する。本人を責めずに支援を続ける。",
-    "publicPath": "q/ichimon/s/ichi-1188/index.html"
+    "exp": "手引きでは、クーリング期間は、再び同一理由で休業する場合に前回の休業期間を算入しないために必要な、職場復帰から新たな休業までの期間をいう。休業の最長（保障）期間や満了後の雇用契約の解除は、労使で協議し、あらかじめ就業規則等に定めて周知しておくことが望ましい。",
+    "publicPath": "q/ichimon/s/ichi-1188/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1189",
     "field": "limit",
-    "statement": "職場で自殺未遂を発見したときは、まず写真を撮って記録し、対応は後で検討する。",
+    "statement": "代理の相談者が本人から「誰にも言わないで」と口止めされている場合は、本人が自殺の準備をしていると分かっても、家族や上司には連絡しない。",
     "correctAnswer": false,
-    "exp": "自殺未遂の発見など職場での緊急事態では、119番通報、本人の安全の確保、上司や人事への報告を速やかに行う。発見した同僚など周囲の社員も強い衝撃を受けることがあるため、心のケアにも配慮する。",
-    "publicPath": "q/ichimon/s/ichi-1189/index.html"
+    "exp": "同僚などの自殺の危険について代理で相談に来た人の話は丁寧に聴き、本人が自ら相談に来るよう助言する。本人が自殺の準備をしている、軽い自殺未遂をした、失踪した、代理の相談者が限界を感じているときは、家族や上司に速やかに連絡する。",
+    "publicPath": "q/ichimon/s/ichi-1189/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1190",
     "field": "limit",
-    "statement": "職場で自殺未遂を発見したときは、119番への連絡と本人の安全確保、上司や人事への報告を速やかに行う。",
+    "statement": "同僚の自殺の危険について代理で相談に来た人の話は丁寧に聴き、できるだけ本人が自ら相談に来るよう助言する。",
     "correctAnswer": true,
-    "exp": "自殺未遂の発見など職場での緊急事態では、119番通報、本人の安全の確保、上司や人事への報告を速やかに行う。発見した同僚など周囲の社員も強い衝撃を受けることがあるため、心のケアにも配慮する。",
-    "publicPath": "q/ichimon/s/ichi-1190/index.html"
+    "exp": "同僚などの自殺の危険について代理で相談に来た人の話は丁寧に聴き、本人が自ら相談に来るよう助言する。本人が自殺の準備をしている、軽い自殺未遂をした、失踪した、代理の相談者が限界を感じているときは、家族や上司に速やかに連絡する。",
+    "publicPath": "q/ichimon/s/ichi-1190/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1191",
     "field": "limit",
-    "statement": "職場で自殺未遂を発見しても、本人が「大丈夫」と言えば救急を呼ばなくてよい。",
+    "statement": "同僚の自殺の危険について代理で相談に来た人が対応に限界を感じていても、本人の同意がなければ家族や上司に連絡してはならない。",
     "correctAnswer": false,
-    "exp": "自殺未遂の発見など職場での緊急事態では、119番通報、本人の安全の確保、上司や人事への報告を速やかに行う。発見した同僚など周囲の社員も強い衝撃を受けることがあるため、心のケアにも配慮する。",
-    "publicPath": "q/ichimon/s/ichi-1191/index.html"
+    "exp": "同僚などの自殺の危険について代理で相談に来た人の話は丁寧に聴き、本人が自ら相談に来るよう助言する。本人が自殺の準備をしている、軽い自殺未遂をした、失踪した、代理の相談者が限界を感じているときは、家族や上司に速やかに連絡する。",
+    "publicPath": "q/ichimon/s/ichi-1191/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1192",
     "field": "limit",
     "statement": "自殺未遂などの緊急事態の後は、発見した同僚など周囲の社員の心のケアにも配慮する。",
     "correctAnswer": true,
-    "exp": "自殺未遂の発見など職場での緊急事態では、119番通報、本人の安全の確保、上司や人事への報告を速やかに行う。発見した同僚など周囲の社員も強い衝撃を受けることがあるため、心のケアにも配慮する。",
-    "publicPath": "q/ichimon/s/ichi-1192/index.html"
+    "exp": "同僚などの自殺の危険について代理で相談に来た人の話は丁寧に聴き、本人が自ら相談に来るよう助言する。本人が自殺の準備をしている、軽い自殺未遂をした、失踪した、代理の相談者が限界を感じているときは、家族や上司に速やかに連絡する。",
+    "publicPath": "q/ichimon/s/ichi-1192/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1193",
@@ -9542,7 +10734,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "氏名・住所・電話番号は、要配慮個人情報に該当する。",
     "correctAnswer": false,
     "exp": "要配慮個人情報には、人種、信条、社会的身分、病歴、犯罪の経歴、犯罪により害を被った事実、障害、健康診断等の結果などが含まれる。本籍地や単に国籍を示す情報、職歴は該当しない。取得には原則として本人の同意が必要。",
-    "publicPath": "q/ichimon/s/ichi-1193/index.html"
+    "publicPath": "q/ichimon/s/ichi-1193/index.html",
+    "level": 2
   },
   {
     "id": "ichi-1194",
@@ -9550,7 +10743,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "病歴・障害・人種・犯罪歴等は、要配慮個人情報に該当する。",
     "correctAnswer": true,
     "exp": "要配慮個人情報には、人種、信条、社会的身分、病歴、犯罪の経歴、犯罪により害を被った事実、障害、健康診断等の結果などが含まれる。本籍地や単に国籍を示す情報、職歴は該当しない。取得には原則として本人の同意が必要。",
-    "publicPath": "q/ichimon/s/ichi-1194/index.html"
+    "publicPath": "q/ichimon/s/ichi-1194/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1195",
@@ -9558,7 +10752,8 @@ window.ICHIMONDOU_ROWS = [
     "statement": "単に国籍を示す情報は、それだけで要配慮個人情報に該当する。",
     "correctAnswer": false,
     "exp": "要配慮個人情報には、人種、信条、社会的身分、病歴、犯罪の経歴、犯罪により害を被った事実、障害、健康診断等の結果などが含まれる。本籍地や単に国籍を示す情報、職歴は該当しない。取得には原則として本人の同意が必要。",
-    "publicPath": "q/ichimon/s/ichi-1195/index.html"
+    "publicPath": "q/ichimon/s/ichi-1195/index.html",
+    "level": 4
   },
   {
     "id": "ichi-1196",
@@ -9566,38 +10761,43 @@ window.ICHIMONDOU_ROWS = [
     "statement": "健康診断の結果やストレスチェックの結果は、要配慮個人情報に該当する。",
     "correctAnswer": true,
     "exp": "要配慮個人情報には、人種、信条、社会的身分、病歴、犯罪の経歴、犯罪により害を被った事実、障害、健康診断等の結果などが含まれる。本籍地や単に国籍を示す情報、職歴は該当しない。取得には原則として本人の同意が必要。",
-    "publicPath": "q/ichimon/s/ichi-1196/index.html"
+    "publicPath": "q/ichimon/s/ichi-1196/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1197",
     "field": "limit",
-    "statement": "メンタルヘルスケアでは、多職種が関わると責任の所在が曖昧になるため、一人の専門家に任せるほうがよい。",
+    "statement": "自殺未遂の後に精神科の専門治療を受けて退院した人は、再び自殺を図るおそれはほとんどないため、特別な見守りは必要ないとされている。",
     "correctAnswer": false,
-    "exp": "産業医、保健師、心理職、人事労務担当者、管理監督者などが専門性や立場を生かして連携することで、包括的な支援ができる。共有する健康情報は、本人の同意を得て必要な範囲にとどめる。",
-    "publicPath": "q/ichimon/s/ichi-1197/index.html"
+    "exp": "自殺未遂後に職場復帰した人には、特別視せず自然に対応しつつ、業務に慣れるまでは業務軽減や責任軽減を配慮する。専門治療を受けた後も、状況が悪化すると自殺念慮が再燃することがあり、長期間の通院や薬物療法が必要なこともある。",
+    "publicPath": "q/ichimon/s/ichi-1197/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1198",
     "field": "limit",
-    "statement": "産業医・保健師・心理職・人事・管理監督者がそれぞれの専門性や立場を生かして連携することで、より効果的な支援が可能になる。",
+    "statement": "自殺未遂の後に職場復帰した人には、特別視せず自然に対応する一方で、業務に慣れるまでの間は業務軽減や責任軽減などの配慮を行う。",
     "correctAnswer": true,
-    "exp": "産業医、保健師、心理職、人事労務担当者、管理監督者などが専門性や立場を生かして連携することで、包括的な支援ができる。共有する健康情報は、本人の同意を得て必要な範囲にとどめる。",
-    "publicPath": "q/ichimon/s/ichi-1198/index.html"
+    "exp": "自殺未遂後に職場復帰した人には、特別視せず自然に対応しつつ、業務に慣れるまでは業務軽減や責任軽減を配慮する。専門治療を受けた後も、状況が悪化すると自殺念慮が再燃することがあり、長期間の通院や薬物療法が必要なこともある。",
+    "publicPath": "q/ichimon/s/ichi-1198/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1199",
     "field": "limit",
-    "statement": "多職種連携は大企業にのみ実現可能であり、中小企業では不要である。",
+    "statement": "自殺未遂の後に元気を取り戻しているように見える場合は、通院や薬物療法はすでに不要になっていることが多いとされている。",
     "correctAnswer": false,
-    "exp": "産業医、保健師、心理職、人事労務担当者、管理監督者などが専門性や立場を生かして連携することで、包括的な支援ができる。共有する健康情報は、本人の同意を得て必要な範囲にとどめる。",
-    "publicPath": "q/ichimon/s/ichi-1199/index.html"
+    "exp": "自殺未遂後に職場復帰した人には、特別視せず自然に対応しつつ、業務に慣れるまでは業務軽減や責任軽減を配慮する。専門治療を受けた後も、状況が悪化すると自殺念慮が再燃することがあり、長期間の通院や薬物療法が必要なこともある。",
+    "publicPath": "q/ichimon/s/ichi-1199/index.html",
+    "level": 3
   },
   {
     "id": "ichi-1200",
     "field": "limit",
     "statement": "多職種で連携する場合も、共有する健康情報は本人の同意を得て必要な範囲にとどめる。",
     "correctAnswer": true,
-    "exp": "産業医、保健師、心理職、人事労務担当者、管理監督者などが専門性や立場を生かして連携することで、包括的な支援ができる。共有する健康情報は、本人の同意を得て必要な範囲にとどめる。",
-    "publicPath": "q/ichimon/s/ichi-1200/index.html"
+    "exp": "自殺未遂後に職場復帰した人には、特別視せず自然に対応しつつ、業務に慣れるまでは業務軽減や責任軽減を配慮する。専門治療を受けた後も、状況が悪化すると自殺念慮が再燃することがあり、長期間の通院や薬物療法が必要なこともある。",
+    "publicPath": "q/ichimon/s/ichi-1200/index.html",
+    "level": 2
   }
 ];

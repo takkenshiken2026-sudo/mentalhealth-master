@@ -771,6 +771,14 @@ details.rich-detail summary{display:none}
 .mt-review-ans{margin:0;font-size:var(--fs-sub);line-height:1.65}
 .mt-review-ans span{display:inline-block;min-width:6.5em;font-weight:700;color:var(--text2)}
 .mt-score-link{margin:16px 0 0;font-size:var(--fs-sub)}
+.mt-score-link-locked{color:var(--text2)}
+#mode-mocktest-card.is-locked{opacity:.55;cursor:not-allowed;pointer-events:none}
+#mode-mocktest-card.is-locked .mode-purpose-v2,#mode-mocktest-card.is-locked .mode-arrow-v2{color:var(--text3)}
+.mt-locked{margin-top:18px;padding:16px;border:1px solid var(--border2);border-radius:var(--r2);background:var(--bg3)}
+.mt-locked-title{margin:0 0 6px;font-weight:700;font-size:15px;display:flex;align-items:center;gap:6px}
+.mt-locked-text{margin:0 0 12px;font-size:var(--fs-sub);color:var(--text2);line-height:1.7}
+.mt-locked-bar{height:8px;border-radius:99px;background:var(--bg4);overflow:hidden;margin-bottom:14px}
+.mt-locked-bar span{display:block;height:100%;background:var(--ink)}
 .mt-score-link a{color:var(--text);font-weight:700}
 @media(max-width:700px){
   .mt-facts>div{flex-direction:column;gap:2px}
@@ -1478,10 +1486,10 @@ body.is-solving .site-footer{display:none!important}
     },
     {
       "@type": "Question",
-      "name": "部下から「死にたい」という言葉が出たとき、管理監督者の対応として最も適切なものを一つ選びなさい。",
+      "name": "自殺の危険が疑われる部下への対応の原則とされる「TALKの原則」に関する記述として、最も適切なものを一つ選びなさい。",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "「死にたい」という言葉は深刻に受け止め、一人にせず、速やかに専門家につなぐ。生命の安全の確保は秘密の保持より優先される。"
+        "text": "TALK＝Tell（心配を伝える）・Ask（率直に尋ねる）・Listen（否定せずに聴く）・Keep safe（一人にせず安全を確保し、関係者につなぐ）。"
       }
     },
     {
@@ -1844,8 +1852,8 @@ body.is-solving .site-footer{display:none!important}
         <div class="mode-card-v2" id="mode-mocktest-card" role="button" tabindex="0" onclick="gotoPage('mocktest')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();gotoPage('mocktest');}" hidden>
           <div class="mode-num-v2">04</div>
           <div class="mode-body-v2">
-            <div class="mode-purpose-v2">合格点に届くか、本番形式で測りたい</div>
-            <div class="mode-title-v2">本番形式テスト<span class="mt-free-tag">無料</span></div>
+            <div class="mode-purpose-v2">合格点に届くか、本番形式で診断したい</div>
+            <div class="mode-title-v2"><span data-mt-title>本番形式テスト</span><span class="mt-free-tag">無料</span></div>
             <div class="mode-meta-v2" data-mt-meta></div>
           </div>
           <div class="mode-arrow-v2">›</div>
@@ -1862,7 +1870,7 @@ body.is-solving .site-footer{display:none!important}
       <nav class="breadcrumb" aria-label="パンくずリスト">
         <ol class="breadcrumb-list">
           <li class="breadcrumb-item"><a href="/" onclick="event.preventDefault();gotoPage('quiz-start')" title="トップ">トップ</a></li>
-          <li class="breadcrumb-item breadcrumb-current" aria-current="page">本番形式テスト</li>
+          <li class="breadcrumb-item breadcrumb-current" aria-current="page" data-mt-title>本番形式テスト</li>
         </ol>
       </nav>
       <div id="mt-root"></div>
@@ -8070,6 +8078,39 @@ if(document.readyState==='loading'){
     const meta=card.querySelector('[data-mt-meta]');
     if(meta) meta.textContent=CFG.questionCount+'問・'+CFG.minutes+'分・'+CFG.maxScore+'点満点で採点';
   }
+  document.querySelectorAll('[data-mt-title]').forEach(function(el){ el.textContent=CFG.title; });
+
+  // 受験の解放条件: 一問一答・過去問・実践演習の合計で unlockAnswers 問以上解いていること
+  const UNLOCK=Math.max(0,Number(CFG.unlockAnswers)||0);
+  function answeredTotal(){
+    try{ const u=getUserData(); return u&&u.answers?Object.keys(u.answers).length:0; }catch(_e){ return 0; }
+  }
+  function remainingToUnlock(){ return Math.max(0,UNLOCK-answeredTotal()); }
+  function isUnlocked(){ return remainingToUnlock()===0; }
+  function lockIcon(){ return '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="7" width="10" height="8" rx="2"/><path d="M5 7V5a3 3 0 016 0v2"/></svg>'; }
+  // トップのカードを解放状態に合わせて更新（未解放ならクリックできない）
+  function updateCard(){
+    const c=document.getElementById('mode-mocktest-card');
+    if(!c) return;
+    const purpose=c.querySelector('.mode-purpose-v2');
+    const arrow=c.querySelector('.mode-arrow-v2');
+    const rest=remainingToUnlock();
+    const locked=rest>0;
+    c.classList.toggle('is-locked',locked);
+    c.setAttribute('aria-disabled',locked?'true':'false');
+    c.tabIndex=locked?-1:0;
+    if(purpose){
+      if(locked) purpose.innerHTML=lockIcon()+' あと'+rest+'問解くと受けられます';
+      else purpose.textContent='合格点に届くか、本番形式で診断したい';
+    }
+    if(arrow) arrow.innerHTML=locked?lockIcon():'›';
+  }
+  const FIXED=!!CFG.fixedSet;
+  const SET_ID=String(CFG.setId||'default');
+
+  // 初回表示時のカード（問題データ・学習記録の読み込み後にも更新する）
+  updateCard();
+  document.addEventListener('DOMContentLoaded',function(){ setTimeout(updateCard,500); });
 
   // SPA の画面タイトル・SEO（ハッシュ #mocktest）
   try{
@@ -8108,14 +8149,33 @@ if(document.readyState==='loading'){
     qs.slice().sort((a,b)=>b.rem-a.rem).forEach(q=>{ if(left>0){ q.n++; left--; } });
     return {by,qs};
   }
+  // 固定セット用: setId から決まる乱数（同じ setId なら全員・毎回同じ並び）
+  function seededRandom(seed){
+    let h=1779033703^seed.length;
+    for(let i=0;i<seed.length;i++){ h=Math.imul(h^seed.charCodeAt(i),3432918353); h=h<<13|h>>>19; }
+    let a=h>>>0;
+    return function(){
+      a=a+0x6D2B79F5|0;
+      let t=Math.imul(a^a>>>15,1|a);
+      t=t+Math.imul(t^t>>>7,61|t)^t;
+      return ((t^t>>>14)>>>0)/4294967296;
+    };
+  }
+  function seededShuffle(arr,rnd){
+    const a=arr.slice();
+    for(let i=a.length-1;i>0;i--){ const j=Math.floor(rnd()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+    return a;
+  }
   function pickQuestions(){
     const p=pool();
     const n=Math.min(CFG.questionCount,p.length);
     const {by,qs}=fieldQuota(p,n);
     const out=[];
+    const rnd=FIXED?seededRandom(SET_ID):null;
     // 本番と同じく分野（公式テキストの章）順に並べ、分野内は問題番号順
     qs.forEach(qt=>{
-      const picked=shuffleArray(by[qt.id]).slice(0,qt.n);
+      const src=by[qt.id].slice().sort((a,b)=>String(a.id).localeCompare(String(b.id)));
+      const picked=(FIXED?seededShuffle(src,rnd):shuffleArray(src)).slice(0,qt.n);
       picked.sort((a,b)=>(a.num||0)-(b.num||0)||String(a.id).localeCompare(String(b.id)));
       out.push(...picked);
     });
@@ -8143,6 +8203,8 @@ if(document.readyState==='loading'){
     };
   }
   function history(){ const h=lsGet(HIST_KEY); return Array.isArray(h)?h:[]; }
+  // 固定セットの受験回数（この端末）
+  function attemptsOfSet(){ return history().filter(h=>h&&h.setId===SET_ID).length; }
 
   // ---- 時間 ----
   // 画面を開いている間だけ時間を数える（閉じている間・別画面にいる間は止まる）。
@@ -8180,9 +8242,30 @@ if(document.readyState==='loading'){
     el.classList.toggle('mt-clock--warn',remain<=10*60000);
   }
 
+  // ---- 画面: 未解放 ----
+  function renderLocked(){
+    document.body.classList.remove('is-solving');
+    const done=answeredTotal(), rest=remainingToUnlock();
+    root().innerHTML=`
+      <h2 class="page-title">${escapeHTML(CFG.title)}<span class="mt-free-tag">無料</span></h2>
+      <div class="page-sub">本番と同じ${CFG.questionCount}問・${CFG.minutes}分で、合格点（${CFG.passScore}点）に届くかを診断します。</div>
+      <div class="mt-locked">
+        <p class="mt-locked-title">${lockIcon()} あと${rest}問解くと受けられます</p>
+        <p class="mt-locked-text">${escapeHTML(CFG.title)}は、一問一答・過去問・実践演習で合計${UNLOCK}問以上解いた方が受けられます（現在 ${done}問）。基礎を一通り固めてから受けると、より正確に実力を測れます。</p>
+        <div class="mt-locked-bar" role="progressbar" aria-valuemin="0" aria-valuemax="${UNLOCK}" aria-valuenow="${Math.min(done,UNLOCK)}"><span style="width:${Math.min(100,Math.round(done/UNLOCK*100))}%"></span></div>
+        <div class="score-btns">
+          <button type="button" class="btn-primary" onclick="startIchimondou()">一問一答で解く</button>
+          <button type="button" class="btn-ghost" onclick="gotoPage('past-config')">過去問を解く</button>
+          <button type="button" class="btn-ghost" onclick="gotoPage('orig')">実践演習を解く</button>
+        </div>
+      </div>`;
+  }
+
   // ---- 画面: 説明 ----
   function renderIntro(){
     mt.view='intro';
+    // 未解放で、解答途中のテストも無いとき: 開始ボタンの代わりに解放条件を案内する
+    if(!isUnlocked()&&!loadSaved()){ renderLocked(); return; }
     document.body.classList.remove('is-solving');
     const saved=loadSaved();
     const p=pool();
@@ -8214,7 +8297,7 @@ if(document.readyState==='loading'){
       <h2 class="page-title">${escapeHTML(CFG.title)}<span class="mt-free-tag">無料</span></h2>
       <div class="page-sub">本番と同じ${CFG.questionCount}問・${CFG.minutes}分で、合格点（${CFG.passScore}点）に届くかを測ります。</div>
       <dl class="mt-facts">
-        <div><dt>問題数</dt><dd>${n}問（過去問${p.length}問から毎回ちがう組み合わせで出題）</dd></div>
+        <div><dt>問題数</dt><dd>${FIXED?`${n}問（過去問${p.length}問から選んだ1回分。何度受けても同じ問題です）`:`${n}問（過去問${p.length}問から毎回ちがう組み合わせで出題）`}</dd></div>
         <div><dt>分野の内訳</dt><dd>${dist}（過去問の分野の比率どおり）</dd></div>
         <div><dt>制限時間</dt><dd>${CFG.minutes}分</dd></div>
         <div><dt>配点</dt><dd>1問${Number.isInteger(pp)?pp:pp.toFixed(1)}点・${CFG.maxScore}点満点</dd></div>
@@ -8224,6 +8307,7 @@ if(document.readyState==='loading'){
         <li>解いている間は正解・解説を表示しません。採点後にまとめて確認できます。</li>
         <li>前の問題に戻って解答を変えられます。迷った問題には「見直し」の印を付けられます。</li>
         <li>途中で画面を閉じても、この端末に保存され、続きから再開できます（閉じている間は時間を数えません）。</li>
+        ${FIXED?'<li>何度受けても同じ問題です。2回目以降は、点数が実力より高く出やすくなります。</li>':''}
       </ul>
       ${resumeHtml||`<div class="score-btns"><button type="button" class="btn-primary mt-start-btn" onclick="mtStart()">テストを始める</button></div>`}
       ${histHtml}`;
@@ -8288,6 +8372,7 @@ if(document.readyState==='loading'){
     startTimer();
   }
   window.mtStart=function(){
+    if(!isUnlocked()){ renderLocked(); return; }
     const qs=pickQuestions();
     if(!qs.length){ alert('出題できる問題がありません。'); return; }
     lsDel(STATE_KEY);
@@ -8363,7 +8448,8 @@ if(document.readyState==='loading'){
     mt.result={score,correct,answered,total:n,fields,weakest:weakest?weakest.id:'',reason,usedMin,date:Date.now()};
     mt.view='result';
     lsDel(STATE_KEY);
-    const h=history(); h.push({date:mt.result.date,score,correct,total:n}); lsSet(HIST_KEY,h.slice(-20));
+    const h=history(); h.push({date:mt.result.date,score,correct,total:n,setId:SET_ID}); lsSet(HIST_KEY,h.slice(-20));
+    mt.result.attempt=FIXED?attemptsOfSet():1;
 
     // 学習記録（ダッシュボード・復習に反映）
     try{
@@ -8384,7 +8470,7 @@ if(document.readyState==='loading'){
       }
     }catch(_e){}
 
-    ga('mocktest_submit',{score,passed:score>=CFG.passScore?1:0,correct,answered,total:n,minutes_used:usedMin,reason});
+    ga('mocktest_submit',{score,passed:score>=CFG.passScore?1:0,correct,answered,total:n,minutes_used:usedMin,reason,attempt:mt.result.attempt,set_id:FIXED?SET_ID:'random'});
     document.body.classList.remove('is-solving');
     renderResult(true);
     window.scrollTo(0,0);
@@ -8411,6 +8497,9 @@ if(document.readyState==='loading'){
       lead=`合格点（${CFG.passScore}点）まで<strong>あと${gap}点（${Math.ceil(gap/pp)}問）</strong>です。`
         +(weakName?`正答率が最も低かった「${escapeHTML(weakName)}」を分野別問題集で補強し、`:'弱点の分野を分野別問題集で補強し、')
         +`本番前に<strong>予想模試3回分</strong>で${CFG.passScore}点を超えるか確かめましょう。`;
+    }else if(FIXED&&r.attempt>=2){
+      lead=`${b==='border'?'合格点付近です。':'合格圏です。'}ただし、同じ問題を解き直した点数です。`
+        +`<strong>初めて見る問題でも${CFG.passScore}点を取れるか</strong>、本番想定の予想模試3回分で確かめましょう。`;
     }else if(b==='border'){
       lead=`合格点付近です。このテストは過去問から出題しているため、解いたことのある問題も含まれます。`
         +`<strong>初めて見る問題でも${CFG.passScore}点を取れるか</strong>、本番想定の予想模試3回分で確かめましょう。`;
@@ -8479,13 +8568,14 @@ if(document.readyState==='loading'){
         <div class="mt-verdict">${verdict}</div>
         <div class="mt-score-sub">正解 ${r.correct} / ${r.total}問・未解答 ${r.total-r.answered}問・解答時間 ${r.usedMin}分</div>
         ${r.reason==='timeup'?`<div class="mt-score-sub">制限時間（${CFG.minutes}分）になったため、自動で採点しました。</div>`:''}
+        ${(FIXED&&r.attempt>=2)?`<div class="mt-score-sub">${r.attempt}回目の受験です。同じ問題のため、点数は実力より高く出やすくなります。</div>`:''}
       </div>
       <div class="section-label">分野別の正答率</div>
       <div class="mt-fields">${fieldRows}</div>
       ${ctaHtml(r)}
       <div class="score-btns mt-result-btns">
         ${wrongCount?`<button type="button" class="btn-primary" onclick="mtRetryWrong()">間違えた${wrongCount}問を復習する</button>`:''}
-        <button type="button" class="btn-ghost" onclick="mtAgain()">もう一度受ける（別の${r.total}問）</button>
+        <button type="button" class="btn-ghost" onclick="mtAgain()">${FIXED?`もう一度受ける（同じ${r.total}問）`:`もう一度受ける（別の${r.total}問）`}</button>
       </div>
       <details class="score-q-accordion mt-review">
         <summary class="score-q-accordion-summary">
@@ -8529,6 +8619,7 @@ if(document.readyState==='loading'){
     if(id!=='mocktest'&&mt.view==='result'){ mt.view='intro'; mt.result=null; }
     const r=_goto.apply(this,arguments);
     if(id==='mocktest') onShow();
+    if(id==='quiz-start') updateCard();
     return r;
   };
   document.addEventListener('visibilitychange',function(){
@@ -8561,8 +8652,14 @@ if(document.readyState==='loading'){
         const p=document.createElement('p');
         p.id='score-mocktest-link';
         p.className='mt-score-link';
-        p.innerHTML=`<a href="#mocktest" onclick="event.preventDefault();gotoPage('mocktest')">${CFG.questionCount}問・${CFG.minutes}分の${escapeHTML(CFG.title)}（無料）で、合格点に届くか測る →</a>`;
         wrap.parentNode.insertBefore(p,wrap);
+      }
+      const link=document.getElementById('score-mocktest-link');
+      if(link){
+        const rest=remainingToUnlock();
+        link.innerHTML=rest>0
+          ?`<span class="mt-score-link-locked">あと${rest}問解くと、${CFG.questionCount}問・${CFG.minutes}分の${escapeHTML(CFG.title)}（無料）が受けられます</span>`
+          :`<a href="#mocktest" onclick="event.preventDefault();gotoPage('mocktest')">${CFG.questionCount}問・${CFG.minutes}分の${escapeHTML(CFG.title)}（無料）で、合格点に届くか測る →</a>`;
       }
     }catch(_e){}
     return r;

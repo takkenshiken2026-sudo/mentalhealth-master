@@ -23,6 +23,7 @@ if str(ROOT) not in sys.path:
 
 from tools.ichimon_paths import ichimon_rel_path
 from tools.site_config import category_to_field_map
+from tools.question_levels import ichimon_level
 
 DATA_CSV = ROOT / "data" / "ichimon_questions.csv"
 OUT_JS = ROOT / "exam-site-data-ichimondou.js"
@@ -68,7 +69,7 @@ def row_to_obj(row: dict, line_no: int) -> dict:
     if not rid:
         raise ValueError(f"line {line_no}: id が空です")
     cat = norm(row.get("category"))
-    return {
+    obj = {
         "id": rid,
         "field": category_to_field(cat),
         "statement": normalize_statement(norm(row.get("question"))),
@@ -76,6 +77,11 @@ def row_to_obj(row: dict, line_no: int) -> dict:
         "exp": norm(row.get("explanation")) or "（解説は未入力です。）",
         "publicPath": public_path_from_id(rid),
     }
+    # 難易度（1〜5）。data/question_levels.csv（判定基準は docs/question-difficulty-rubric.md）
+    lv = ichimon_level(rid)
+    if lv is not None:
+        obj["level"] = lv
+    return obj
 
 
 def main() -> int:

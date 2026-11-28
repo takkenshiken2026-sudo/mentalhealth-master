@@ -715,6 +715,11 @@ def mock_test() -> dict | None:
         "minutes": minutes,
         "maxScore": max_score,
         "passScore": pass_score,
+        # true: 全員同じ問題の1回分（setId から決定）。false: 毎回ちがう組み合わせ
+        "fixedSet": bool(raw.get("fixedSet")),
+        "setId": str(raw.get("setId") or "").strip(),
+        # 受験できるようになるまでに解く問題数（一問一答・過去問・実践演習の合計）。0 なら制限なし
+        "unlockAnswers": max(0, int(raw.get("unlockAnswers") or 0)),
     }
 
 
