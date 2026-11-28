@@ -8077,7 +8077,7 @@ if(document.readyState==='loading'){
   if(card){
     card.hidden=false;
     const meta=card.querySelector('[data-mt-meta]');
-    if(meta) meta.textContent='実践演習・一問一答と同じ問題から本番形式で出題｜'+CFG.questionCount+'問・'+CFG.minutes+'分・'+CFG.maxScore+'点満点';
+    if(meta) meta.textContent='実践演習・一問一答と同じ問題｜'+CFG.questionCount+'問・'+CFG.minutes+'分・'+CFG.maxScore+'点満点';
   }
   document.querySelectorAll('[data-mt-title]').forEach(function(el){ el.textContent=CFG.title; });
 
@@ -8305,7 +8305,7 @@ if(document.readyState==='loading'){
     const done=answeredTotal(), rest=remainingToUnlock();
     root().innerHTML=`
       <h2 class="page-title">${escapeHTML(CFG.title)}<span class="mt-free-tag">無料</span></h2>
-      <div class="page-sub">実践演習・一問一答で学ぶ問題から、本番と同じ形式（4択${CFG.questionCount}問・${CFG.minutes}分）で出題し、合格点（${CFG.passScore}点）に届くかを診断します。</div>
+      <div class="page-sub">実践演習・一問一答と同じ問題を、本番と同じ形式（4択${CFG.questionCount}問・${CFG.minutes}分）で解き、合格点（${CFG.passScore}点）に届くかを診断します。</div>
       <div class="mt-locked">
         <p class="mt-locked-title">${lockIcon()} あと${rest}問解くと受けられます</p>
         <p class="mt-locked-text">${escapeHTML(CFG.title)}は、一問一答・過去問・実践演習で合計${UNLOCK}問以上解いた方が受けられます（現在 ${done}問）。基礎を一通り固めてから受けると、より正確に実力を測れます。</p>
@@ -8352,12 +8352,11 @@ if(document.readyState==='loading'){
       </div>`:'';
     root().innerHTML=`
       <h2 class="page-title">${escapeHTML(CFG.title)}<span class="mt-free-tag">無料</span></h2>
-      <div class="page-sub">実践演習・一問一答で学ぶ問題から、本番と同じ形式（4択${CFG.questionCount}問・${CFG.minutes}分）で出題し、合格点（${CFG.passScore}点）に届くかを測ります。</div>
+      <div class="page-sub">本番と同じ形式（4択${CFG.questionCount}問・${CFG.minutes}分）で、合格点（${CFG.passScore}点）に届くかを診断します。</div>
       <dl class="mt-facts">
-        <div><dt>出題元</dt><dd>実践演習・過去問と同じ4択の問題（${p.length}問）。一問一答は、これらの問題の論点を○×形式にしたものです。テストでは本番と同じ4択で出題します。</dd></div>
-        <div><dt>問題数</dt><dd>${FIXED?`${n}問（上の${p.length}問から選んだ1回分。何度受けても同じ問題です）`:`${n}問（上の${p.length}問から毎回ちがう組み合わせで出題）`}</dd></div>
-        <div><dt>分野の内訳</dt><dd>${dist}（出題元の分野の比率どおり）</dd></div>
-        ${LEVEL_MIX.length&&CFG.levelNote?`<div><dt>難易度</dt><dd>${escapeHTML(CFG.levelNote)}</dd></div>`:''}
+        <div><dt>出題元</dt><dd>実践演習・一問一答と同じ問題</dd></div>
+        <div><dt>問題数</dt><dd>${FIXED?`${n}問（全員共通）`:`${n}問（毎回ちがう組み合わせ）`}</dd></div>
+        <div><dt>分野の内訳</dt><dd>${dist}</dd></div>
         <div><dt>制限時間</dt><dd>${CFG.minutes}分</dd></div>
         <div><dt>配点</dt><dd>1問${Number.isInteger(pp)?pp:pp.toFixed(1)}点・${CFG.maxScore}点満点</dd></div>
         <div><dt>合格の目安</dt><dd>${CFG.passScore}点以上</dd></div>
@@ -8553,17 +8552,17 @@ if(document.readyState==='loading'){
     let lead='';
     if(b==='fail'){
       const gap=CFG.passScore-r.score;
-      lead=(LEVEL_MIX.length?'このテストは本番よりやや難しめの問題を多く含みます。':'')+`合格点（${CFG.passScore}点）まで<strong>あと${gap}点（${Math.ceil(gap/pp)}問）</strong>です。`
+      lead=`合格点（${CFG.passScore}点）まで<strong>あと${gap}点（${Math.ceil(gap/pp)}問）</strong>です。`
         +(weakName?`正答率が最も低かった「${escapeHTML(weakName)}」を分野別問題集で補強し、`:'弱点の分野を分野別問題集で補強し、')
         +`本番前に<strong>予想模試3回分</strong>で${CFG.passScore}点を超えるか確かめましょう。`;
     }else if(FIXED&&r.attempt>=2){
       lead=`${b==='border'?'合格点付近です。':'合格圏です。'}ただし、同じ問題を解き直した点数です。`
         +`<strong>初めて見る問題でも${CFG.passScore}点を取れるか</strong>、本番想定の予想模試3回分で確かめましょう。`;
     }else if(b==='border'){
-      lead=`合格点付近です。このテストは実践演習・過去問と同じ問題から出題しているため、解いたことのある問題も含まれます。`
+      lead=`合格点付近です。ただし、解いたことのある問題も含まれます。`
         +`<strong>初めて見る問題でも${CFG.passScore}点を取れるか</strong>、本番想定の予想模試3回分で確かめましょう。`;
     }else{
-      lead=`合格圏です。ただし、このテストには実践演習・過去問で解いたことのある問題も含まれます。`
+      lead=`合格圏です。ただし、解いたことのある問題も含まれます。`
         +`<strong>初めて見る問題でも同じ点を取れるか</strong>、本番想定の予想模試3回分で仕上げましょう。`;
     }
     const blocks=[];
@@ -8718,7 +8717,7 @@ if(document.readyState==='loading'){
         const rest=remainingToUnlock();
         link.innerHTML=rest>0
           ?`<span class="mt-score-link-locked">あと${rest}問解くと、${CFG.questionCount}問・${CFG.minutes}分の${escapeHTML(CFG.title)}（無料）が受けられます</span>`
-          :`<a href="#mocktest" onclick="event.preventDefault();gotoPage('mocktest')">実践演習・一問一答と同じ問題から本番形式（${CFG.questionCount}問・${CFG.minutes}分）で出題する${escapeHTML(CFG.title)}（無料）で、合格点に届くか測る →</a>`;
+          :`<a href="#mocktest" onclick="event.preventDefault();gotoPage('mocktest')">本番形式の${escapeHTML(CFG.title)}（無料・${CFG.questionCount}問・${CFG.minutes}分）で、合格点に届くか測る →</a>`;
       }
     }catch(_e){}
     return r;

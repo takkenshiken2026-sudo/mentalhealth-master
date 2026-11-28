@@ -722,8 +722,6 @@ def mock_test() -> dict | None:
         "unlockAnswers": max(0, int(raw.get("unlockAnswers") or 0)),
         # 難易度（★1〜5）ごとの出題数。例 {"5": 10, "4": 25, "3": 15}。空なら難易度を考えずに選ぶ
         "levelMix": _level_mix(raw.get("levelMix")),
-        # 説明画面に出す難易度の説明（levelMix を使うとき）
-        "levelNote": str(raw.get("levelNote") or "").strip(),
     }
 
 

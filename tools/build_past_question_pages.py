@@ -1031,7 +1031,7 @@ def build_q_index(pages: list[dict], base_url: str) -> str:
         print_link_html += (
             '<p class="q-mocktest-link" style="margin:0 12px 12px;font-size:.9rem">'
             '<a href="../index.html#mocktest" style="font-weight:600">'
-            f'実践演習・一問一答と同じ問題から本番形式（{_mt["questionCount"]}問・{_mt["minutes"]}分）で出題する{html.escape(_mt["title"])}（無料）で、'
+            f'本番形式の{html.escape(_mt["title"])}（無料・{_mt["questionCount"]}問・{_mt["minutes"]}分）で、'
             f'合格点（{_mt["passScore"]}点）に届くか測る →</a></p>'
         )
 
