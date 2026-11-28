@@ -8167,16 +8167,72 @@ if(document.readyState==='loading'){
     for(let i=a.length-1;i>0;i--){ const j=Math.floor(rnd()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
     return a;
   }
+  // 難易度（★1〜5）ごとの出題数の設定（levelMix）。合計が問題数と違うときは比率として扱う
+  const LEVEL_MIX=(function(){
+    const m=CFG.levelMix&&typeof CFG.levelMix==='object'?CFG.levelMix:{};
+    return Object.keys(m).map(k=>({lv:Number(k),n:Number(m[k])})).filter(x=>x.lv>=1&&x.lv<=5&&x.n>0).sort((a,b)=>b.lv-a.lv);
+  })();
+  function qLevel(q){ const v=Number(q&&q.level); return v>=1&&v<=5?v:3; }
+  // 最大剰余法で total を weights の比率に配分する
+  function apportion(total,weights){
+    const sum=weights.reduce((a,b)=>a+b,0);
+    if(!sum||total<=0) return weights.map(()=>0);
+    const ex=weights.map(w=>total*w/sum), out=ex.map(Math.floor);
+    let left=total-out.reduce((a,b)=>a+b,0);
+    ex.map((e,i)=>({i,r:e-Math.floor(e)})).sort((a,b)=>b.r-a.r).forEach(x=>{ if(left>0){ out[x.i]++; left--; } });
+    return out;
+  }
+  // 分野ごとの出題数（qs）を守りつつ、難易度ごとの出題数を levelMix に近づける。
+  // 足りない難易度は、同じ分野の次に難しい問題で補う。
+  function levelPlan(by,qs,n){
+    const targets=apportion(n,LEVEL_MIX.map(x=>x.n));
+    const plan={}; // plan[field][lv]=出題数
+    const room={};  // 分野ごとの残り枠
+    qs.forEach(qt=>{ plan[qt.id]={}; room[qt.id]=qt.n; });
+    const avail=(id,lv)=>by[id].filter(q=>qLevel(q)===lv).length-(plan[id][lv]||0);
+    LEVEL_MIX.forEach((m,i)=>{
+      let want=targets[i];
+      const share=apportion(want,qs.map(qt=>qt.n));
+      qs.forEach((qt,j)=>{
+        const k=Math.min(share[j],room[qt.id],avail(qt.id,m.lv));
+        if(k>0){ plan[qt.id][m.lv]=(plan[qt.id][m.lv]||0)+k; room[qt.id]-=k; want-=k; }
+      });
+      // 割り当てきれなかった分は、枠と問題が残っている分野へ
+      while(want>0){
+        const cand=qs.filter(qt=>room[qt.id]>0&&avail(qt.id,m.lv)>0).sort((a,b)=>room[b.id]-room[a.id])[0];
+        if(!cand) break;
+        plan[cand.id][m.lv]=(plan[cand.id][m.lv]||0)+1; room[cand.id]--; want--;
+      }
+    });
+    // 残りの枠は、その分野の難しい問題から順に埋める
+    qs.forEach(qt=>{
+      for(let lv=5;lv>=1&&room[qt.id]>0;lv--){
+        const k=Math.min(room[qt.id],avail(qt.id,lv));
+        if(k>0){ plan[qt.id][lv]=(plan[qt.id][lv]||0)+k; room[qt.id]-=k; }
+      }
+    });
+    return plan;
+  }
   function pickQuestions(){
     const p=pool();
     const n=Math.min(CFG.questionCount,p.length);
     const {by,qs}=fieldQuota(p,n);
     const out=[];
     const rnd=FIXED?seededRandom(SET_ID):null;
+    const shuffle=arr=>FIXED?seededShuffle(arr,rnd):shuffleArray(arr);
+    const plan=LEVEL_MIX.length?levelPlan(by,qs,n):null;
     // 本番と同じく分野（公式テキストの章）順に並べ、分野内は問題番号順
     qs.forEach(qt=>{
       const src=by[qt.id].slice().sort((a,b)=>String(a.id).localeCompare(String(b.id)));
-      const picked=(FIXED?seededShuffle(src,rnd):shuffleArray(src)).slice(0,qt.n);
+      let picked;
+      if(plan){
+        picked=[];
+        Object.keys(plan[qt.id]).map(Number).sort((a,b)=>b-a).forEach(lv=>{
+          picked.push(...shuffle(src.filter(q=>qLevel(q)===lv)).slice(0,plan[qt.id][lv]));
+        });
+      }else{
+        picked=shuffle(src).slice(0,qt.n);
+      }
       picked.sort((a,b)=>(a.num||0)-(b.num||0)||String(a.id).localeCompare(String(b.id)));
       out.push(...picked);
     });
@@ -8301,6 +8357,7 @@ if(document.readyState==='loading'){
         <div><dt>出題元</dt><dd>実践演習・過去問と同じ4択の問題（${p.length}問）。一問一答は、これらの問題の論点を○×形式にしたものです。テストでは本番と同じ4択で出題します。</dd></div>
         <div><dt>問題数</dt><dd>${FIXED?`${n}問（上の${p.length}問から選んだ1回分。何度受けても同じ問題です）`:`${n}問（上の${p.length}問から毎回ちがう組み合わせで出題）`}</dd></div>
         <div><dt>分野の内訳</dt><dd>${dist}（出題元の分野の比率どおり）</dd></div>
+        ${LEVEL_MIX.length&&CFG.levelNote?`<div><dt>難易度</dt><dd>${escapeHTML(CFG.levelNote)}</dd></div>`:''}
         <div><dt>制限時間</dt><dd>${CFG.minutes}分</dd></div>
         <div><dt>配点</dt><dd>1問${Number.isInteger(pp)?pp:pp.toFixed(1)}点・${CFG.maxScore}点満点</dd></div>
         <div><dt>合格の目安</dt><dd>${CFG.passScore}点以上</dd></div>
@@ -8309,6 +8366,7 @@ if(document.readyState==='loading'){
         <li>解いている間は正解・解説を表示しません。採点後にまとめて確認できます。</li>
         <li>前の問題に戻って解答を変えられます。迷った問題には「見直し」の印を付けられます。</li>
         <li>途中で画面を閉じても、この端末に保存され、続きから再開できます（閉じている間は時間を数えません）。</li>
+        ${LEVEL_MIX.length?'<li>本番よりやや難しめの問題を多く出題します。本番で確実に合格点をとるための確認として、70点を目指してください。</li>':''}
         ${FIXED?'<li>何度受けても同じ問題です。2回目以降は、点数が実力より高く出やすくなります。</li>':''}
       </ul>
       ${resumeHtml||`<div class="score-btns"><button type="button" class="btn-primary mt-start-btn" onclick="mtStart()">テストを始める</button></div>`}
@@ -8496,17 +8554,17 @@ if(document.readyState==='loading'){
     let lead='';
     if(b==='fail'){
       const gap=CFG.passScore-r.score;
-      lead=`合格点（${CFG.passScore}点）まで<strong>あと${gap}点（${Math.ceil(gap/pp)}問）</strong>です。`
+      lead=(LEVEL_MIX.length?'このテストは本番よりやや難しめの問題を多く含みます。':'')+`合格点（${CFG.passScore}点）まで<strong>あと${gap}点（${Math.ceil(gap/pp)}問）</strong>です。`
         +(weakName?`正答率が最も低かった「${escapeHTML(weakName)}」を分野別問題集で補強し、`:'弱点の分野を分野別問題集で補強し、')
         +`本番前に<strong>予想模試3回分</strong>で${CFG.passScore}点を超えるか確かめましょう。`;
     }else if(FIXED&&r.attempt>=2){
       lead=`${b==='border'?'合格点付近です。':'合格圏です。'}ただし、同じ問題を解き直した点数です。`
         +`<strong>初めて見る問題でも${CFG.passScore}点を取れるか</strong>、本番想定の予想模試3回分で確かめましょう。`;
     }else if(b==='border'){
-      lead=`合格点付近です。このテストは過去問から出題しているため、解いたことのある問題も含まれます。`
+      lead=`合格点付近です。このテストは実践演習・過去問と同じ問題から出題しているため、解いたことのある問題も含まれます。`
         +`<strong>初めて見る問題でも${CFG.passScore}点を取れるか</strong>、本番想定の予想模試3回分で確かめましょう。`;
     }else{
-      lead=`合格圏です。ただし、このテストには解いたことのある過去問も含まれます。`
+      lead=`合格圏です。ただし、このテストには実践演習・過去問で解いたことのある問題も含まれます。`
         +`<strong>初めて見る問題でも同じ点を取れるか</strong>、本番想定の予想模試3回分で仕上げましょう。`;
     }
     const blocks=[];

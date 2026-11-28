@@ -720,7 +720,27 @@ def mock_test() -> dict | None:
         "setId": str(raw.get("setId") or "").strip(),
         # 受験できるようになるまでに解く問題数（一問一答・過去問・実践演習の合計）。0 なら制限なし
         "unlockAnswers": max(0, int(raw.get("unlockAnswers") or 0)),
+        # 難易度（★1〜5）ごとの出題数。例 {"5": 10, "4": 25, "3": 15}。空なら難易度を考えずに選ぶ
+        "levelMix": _level_mix(raw.get("levelMix")),
+        # 説明画面に出す難易度の説明（levelMix を使うとき）
+        "levelNote": str(raw.get("levelNote") or "").strip(),
     }
+
+
+def _level_mix(raw: Any) -> dict[str, int]:
+    if not isinstance(raw, dict):
+        return {}
+    out: dict[str, int] = {}
+    for k, v in raw.items():
+        if str(k).startswith("_"):
+            continue
+        try:
+            lv, n = int(k), int(v)
+        except (TypeError, ValueError):
+            continue
+        if 1 <= lv <= 5 and n > 0:
+            out[str(lv)] = n
+    return out
 
 
 def top_affiliate_banner() -> dict[str, str] | None:

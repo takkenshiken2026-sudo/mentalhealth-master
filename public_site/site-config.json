@@ -394,7 +394,14 @@
     "title": "実力診断テスト",
     "fixedSet": true,
     "unlockAnswers": 100,
-    "setId": "line-2027a",
+    "setId": "line-2027b",
+    "levelMix": {
+      "_note": "難易度（data/question_levels.csv の★1〜5）ごとの出題数。合計が questionCount と違うときは比率として使う。本番（推定でおおむね★3前後）より難しめにして、弱点が見えるようにする。",
+      "5": 10,
+      "4": 25,
+      "3": 15
+    },
+    "levelNote": "本番よりやや難しめ（★3〜5の問題で構成。★4・5が7割）",
     "questionCount": 50,
     "minutes": 120,
     "maxScore": 100,
