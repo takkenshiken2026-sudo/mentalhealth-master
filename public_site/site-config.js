@@ -170,6 +170,7 @@ window.SITE_CONFIG = {
     "maxScore": 100,
     "passScore": 70,
     "fixedSet": true,
-    "setId": "line-2027a"
+    "setId": "line-2027a",
+    "unlockAnswers": 100
   }
 };
