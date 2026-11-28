@@ -15,6 +15,7 @@ grades.json の published=true の種だけを対象に、各サイトから他�
 from __future__ import annotations
 
 import html
+import re
 
 from tools.grades import published_grades
 from tools.site_config import base_path, clean_origin
@@ -44,39 +45,49 @@ def course_entries() -> list[dict]:
     return entries
 
 
+def _course_sub(label: str) -> str:
+    """「III種（セルフケアコース）」→「セルフケアコース」。括弧が無ければ空文字。"""
+    m = re.search(r"（(.+?)）", label)
+    return m.group(1) if m else ""
+
+
 def course_switcher_html() -> str:
-    """トップページ用の級切替バンド（全公開種・現在種を強調表示）。"""
+    """トップページ用の級切替（全公開種・現在種を強調表示）。
+
+    スマホでも場所を取らないよう、級を横1列の切替ボタンで並べる（各ボタンは級名＋コース名の2行）。
+    """
     entries = course_entries()
     if len(entries) < 2:
         return ""
-    pills: list[str] = []
-    for e in entries:
-        label = html.escape(e["label"])
+    seg_base = (
+        "flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;"
+        "gap:1px;padding:6px 4px;text-decoration:none;line-height:1.25;text-align:center"
+    )
+    segs: list[str] = []
+    for i, e in enumerate(entries):
+        short = html.escape(e["short_label"] or e["label"])
+        sub = html.escape(_course_sub(e["label"]))
+        sep = "" if i == 0 else "border-left:1px solid var(--accent);"
+        inner = (
+            f'<span style="font-weight:700;font-size:.9rem">{short}</span>'
+            + (f'<span style="font-size:.7rem;opacity:.85">{sub}</span>' if sub else "")
+        )
         if e["current"]:
-            pills.append(
-                '<span class="course-switch-pill course-switch-pill--current" aria-current="page" '
-                'style="padding:8px 14px;border-radius:999px;background:var(--accent);color:#fff;'
-                'font-weight:700;font-size:.9rem;white-space:nowrap">'
-                f"{label}<span style=\"opacity:.85;font-weight:600\">（閲覧中）</span></span>"
+            segs.append(
+                f'<span class="course-switch-pill course-switch-pill--current" aria-current="page" '
+                f'style="{seg_base};{sep}background:var(--accent);color:#fff">{inner}</span>'
             )
         else:
-            pills.append(
+            segs.append(
                 f'<a class="course-switch-pill" href="{html.escape(e["url"])}" '
-                'style="padding:8px 14px;border-radius:999px;border:1px solid var(--accent);'
-                'color:var(--accent);text-decoration:none;font-weight:700;font-size:.9rem;'
-                'white-space:nowrap;background:var(--bg)">'
-                f"{label}</a>"
+                f'style="{seg_base};{sep}background:var(--bg);color:var(--accent)">{inner}</a>'
             )
     return (
         "\n      <!--COURSE_SWITCH_START-->"
-        '<div class="course-switch" '
-        'style="margin:18px 0 6px;padding:14px 16px;border:1px solid var(--border);'
-        'border-radius:12px;background:var(--bg2)">'
-        '<div style="font-size:.85rem;font-weight:700;color:var(--text2);margin-bottom:10px">'
-        '対策する級（コース）を選ぶ</div>'
-        '<div style="display:flex;flex-wrap:wrap;gap:8px">'
-        + "".join(pills)
-        + "</div></div><!--COURSE_SWITCH_END-->"
+        '<nav class="course-switch" aria-label="対策する級（コース）を切り替える" '
+        'style="display:flex;margin:14px 0 8px;border:1px solid var(--accent);border-radius:10px;overflow:hidden">'
+        + "".join(segs)
+        + "</nav><!--COURSE_SWITCH_END-->"
     )
 
 
